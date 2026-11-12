@@ -1,0 +1,5 @@
+Build a minimal review tool and the exporter under review/.
+
+Review: a small local web app (single page, no build step if possible) that loads lines/draft/*.json and shows, per beat: the beat gist, the candidate lines in PT, EN and FR side by side, the cited chunks with their licence and reliability, and the verifier's per-claim verdicts. Reviewer actions: approve, edit text (stored as a new revision), reject with a reason, mark "needs source". Edits go back through the verifier. Keep an audit trail (who, when, what changed) in lines/reviews.jsonl. Show a mission coverage view: for each trigger in story/triggers.yaml, how many approved lines exist and which are missing, so I can see gaps.
+
+Export: `export --mission 3 --target json` writes lines/approved/mission-03.json containing only approved lines, the trigger vocabulary, and a credits list of sources used with licences (for CC-BY-SA attribution). Add `--target unity` producing one JSON per mission with flat keys that are easy to parse in C#, and `--target web` producing the same data for the TypeScript runtime. Include tests.

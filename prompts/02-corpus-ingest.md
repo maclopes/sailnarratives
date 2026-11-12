@@ -1,0 +1,7 @@
+Implement the corpus stage under pipeline/ingest.
+
+Input: docs/method-tagus-boats-game.md (its "Source library" section lists sources and how far to trust them), plus a folder corpus/raw/ where I will drop extra text files, PDFs and URLs lists. Also add fetchers for Wikipedia (pt, en, fr) and Wikidata for a list of titles/QIDs in corpus/seeds.yaml (boats, places such as Bugio, Cacilhas, Almada, Seixal, Horta, Torreira, Ria de Aveiro; topics such as Tagus, catraio, baleeiro, moliço).
+
+Produce corpus/chunks.jsonl, one chunk per record: id, text, language, source_title, source_url, source_type (wikipedia, wikidata, museum, book, article, user_note), licence (e.g. CC-BY-SA-4.0, copyright-cite-only, unknown), reliability (A/B/C), boats[], places[], period (year range), themes[] (work, danger, trade, daily_life, technique, heritage), claims[] (short atomic claims extracted from the chunk), conflicts[] (flag when sources disagree, e.g. 1785 vs 1875).
+
+Rules: respect robots and rate limits; never fetch from sites that block it and do not work around a block; keep the raw page and fetch date; for copyright-cite-only sources store a paraphrase-ready summary and short quote of at most 15 words, not the full text. Use an LLM behind an interface for tagging and claim extraction, with a deterministic fallback for tests. Write tests with small fixtures. Report counts per source, licence and reliability when done.

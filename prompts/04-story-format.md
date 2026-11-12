@@ -1,0 +1,5 @@
+Define the authored story format under story/ and implement its loader and validator.
+
+Convert docs/story-bible-catraio-baleeiro.md into two YAML files, story/mission-03-catraio.yaml and story/mission-04-baleeiro.yaml, plus story/cast.yaml. Each mission file has: mission number, boat, zone, setting (year, season, tone notes), thread, characters (id, voice notes, want), and beats[] with id, name (setup, complication, turn, close), trigger keys, what_happens (gist), facts_needed[] (queries for retrieval with boat, zone, period filters), concept, depth, constraints (for example "no romanticising the hunt"), and callbacks[].
+
+Write a JSON schema for the story files, a loader in Python, and a validator that reports: triggers not in a shared trigger vocabulary (create story/triggers.yaml with start, first_tack, in_irons, wind_shift, near_vessel, dock, whale_close, whale_leaves, timer_end, etc.), missing characters, beats without facts_needed, and callbacks to beats that do not exist. Add tests. Keep gist text in English and allow a `notes_pt` field.

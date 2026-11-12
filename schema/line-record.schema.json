@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Narrative line record",
+  "type": "object",
+  "required": ["id", "mission", "boat", "zone", "beat", "trigger", "character", "text", "depth", "sources", "status"],
+  "properties": {
+    "id": {"type": "string"},
+    "mission": {"type": "integer", "minimum": 1, "maximum": 8},
+    "boat": {"type": "string"},
+    "zone": {"type": "string"},
+    "beat": {"enum": ["setup", "complication", "turn", "close", "epilogue", "generic"]},
+    "trigger": {"type": "string", "description": "Game event key, e.g. start, first_tack, in_irons, wind_shift, near_vessel, dock"},
+    "character": {"type": "string"},
+    "thread": {"type": "string"},
+    "concept": {"type": "string", "description": "Sailing concept taught, e.g. bolina, cambar, orcar"},
+    "text": {
+      "type": "object",
+      "required": ["pt"],
+      "properties": {"pt": {"type": "string"}, "en": {"type": "string"}, "fr": {"type": "string"}}
+    },
+    "depth": {"enum": [1, 2], "description": "1 = in-flow line, 2 = optional curiosity card"},
+    "fictional": {"type": "boolean", "description": "true if the line is invented colour, false if every claim is sourced"},
+    "sources": {"type": "array", "items": {"type": "string"}, "description": "Chunk IDs supporting every factual claim"},
+    "callbacks": {"type": "array", "items": {"type": "string"}, "description": "IDs of earlier lines this one refers to"},
+    "status": {"enum": ["draft", "verified", "reviewed", "approved"]}
+  }
+}

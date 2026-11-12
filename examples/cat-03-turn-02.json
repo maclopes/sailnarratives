@@ -1,0 +1,17 @@
+{
+  "id": "cat-03-turn-02",
+  "mission": 3,
+  "boat": "catraio",
+  "zone": "tagus-lisbon-almada",
+  "beat": "turn",
+  "trigger": "in_irons",
+  "character": "tio-joaquim",
+  "thread": "time",
+  "concept": "cambar",
+  "text": {"pt": "(placeholder: to be generated)", "en": "(placeholder: to be generated)", "fr": "(placeholder: to be generated)"},
+  "depth": 1,
+  "fictional": false,
+  "sources": [],
+  "callbacks": ["cat-03-comp-02"],
+  "status": "draft"
+}

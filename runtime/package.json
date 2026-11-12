@@ -1,0 +1,20 @@
+{
+  "name": "@tagus/narrative-runtime",
+  "version": "0.1.0",
+  "description": "Deterministic line selector for the Tagus sailing game (no dependencies at runtime)",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "lint": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "5.6.3",
+    "vitest": "2.1.9"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}
