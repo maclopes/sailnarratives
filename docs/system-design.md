@@ -1,155 +1,130 @@
-# System design: five components
+# System design
 
-Draft, 2026-11-12. Revises the kit (CLAUDE.md and prompts 01 to 08) around five components.
+Draft 2, 2026-11-12. Replaces draft 1 (five components). Scope: this repository builds a tool
+for one author. The tool proposes drafts; the author curates them. It writes no story of its own.
 
-Scope: this repository builds a **tool** for authors. The tool bootstraps drafts (concepts,
-sources, missions) from the game and the documents, the author curates them, and the tool then
-helps write, ground, verify, review and export lines, and schedules them at runtime. The tool
-does not ship narrative of its own: every list and line it proposes is a draft until a person
-accepts it.
+## The idea in one paragraph
+
+Three knowledge bases, each built from its own evidence: what the game's **physics** can
+simulate, what **concepts** a visitor should learn, and what **history** says people did. The
+tool links them, and where all three links hold it proposes a **situation**: a historical
+practice that exercises a concept and that the game can reproduce. Activities (mini-game
+proposals), story beats and lines are derived from situations. Along the way the tool reports
+what is missing and what contradicts, as research questions.
 
 ```
- (1) Game physics model ──► (2) Concepts ◄── curated by a sailor / Museu de Marinha
-        │  signals, events,        │
-        │  challenge               │                (3) Sources (database)
-        ▼                          ▼                         │
- (5) Runtime: observe ──► challenge-aware ◄── line bank ◄── generate + verify + review
-     each physics step     scheduler                 ▲
-                                                     │
-                               (4) Missions and general concepts (bootstrap)
+  Physics (game code)      Concepts (training books + physics)      History (accounts)
+        │                          │                                      │
+        └── can show/measure? ─────┤                                      │
+                                   ├── which concept does it exercise? ───┤
+        └──────────────── can the game reproduce it? ─────────────────────┘
+                                   ▼
+                              Situations  ──►  activities, story beats, lines
+                                   │
+                                   └──►  missing and contradictory information
 ```
 
-## Which game
+## Context: museums
 
-The physics reference is the web game `TagusNavyVirtualMuseum/fragateiro` (TypeScript, Babylon.js),
-the successor to the Unity simulator (Fazenda et al., 2025) embedded on the
-TagusNavyVirtualMuseum site. Its physics (`src/physics/`) is plain TypeScript with no 3D or
-browser code, so our runtime can read the same state the game computes. We do not modify the
-game; integration later is one call per physics step (see component 5). A C# description of
-the runtime stays in scope for the Unity build.
+Visits are short, so activities last a few minutes and lines are short. Situations may simplify
+history (no tide, no crew, one boat). Each simplification is recorded, and a line may
+acknowledge it ("on the real river the tide decided when you left"), so a simplified game stays
+honest.
 
-## 1. Understanding the game physics
+## 1. The three knowledge bases
 
-File: `knowledge/game-physics.yaml`.
-
-What the simulator exposes each step (from `src/physics/types.ts` and `simulator.ts`):
-boat state (position, heading, surge u, sway v, yaw rate, heel), controls (rudder, sheets per
-sail group, mode), and a force report (true and apparent wind angle and speed, per-sail angle
-of attack and luffing, heel moment). The mission layer adds aground, collisions, distances to
-targets, other boats, whale state, timers. `SailboatSim.bestSheets()` gives the ideal trim, so
-trim error is measurable.
-
-From these we derive:
-
-- quantities: point of sail, tack side, luffing fraction, trim error, heel ratio (to the 30°
-  capsize), leeway angle, velocity made good, steerage way;
-- events (the trigger vocabulary): tack, gybe, controlled or uncontrolled gybe, enter and leave
-  irons, luffing starts and stops, heel warning, gust, wind shift, aground, collision, near
-  vessel, approach target, arrive;
-- a challenge level in [0, 1] (component 5).
-
-The game models wind only (steady or gusty with shifts). It has no current or tide, so tide and
-current are general (heritage) concepts here, not physics concepts, until the game adds them.
-
-## 2. Concepts to learn, bootstrapped from the physics and curated
-
-File: `knowledge/concepts.yaml`.
-
-Each sailing concept is tied to the physics: which signals show it, how the game can tell
-mastery from struggle (evidence), prerequisites, boats where it matters, and PT/EN/FR terms.
-Example: *caçar / folgar* is evidenced by trim error and luffing fraction; struggle is luffing
-above 50 % for 5 s while the heading is steady.
-
-Tool step `bootstrap concepts` proposes the list from three inputs: the physics model
-(component 1: each derived quantity and event suggests a concept and its evidence), the
-author's documents (for example the method doc's concept table), and the game's drills. Each
-proposal says which input it came from. Every entry starts as `status: draft`; the author
-accepts, edits, merges or rejects it in the review tool, and it becomes `curated`. Terms the
-inputs mark [to confirm] stay flagged.
-
-General (heritage) concepts live in the same file under `kind: heritage`, with no physics
-signals; the tool proposes them from the source registry (component 3) by theme, and the author
-curates them. They are what the story lines carry; the sailing concepts are what the player
-does.
-
-## 3. Sources as the database
-
-File: `knowledge/sources.yaml` (registry), then `corpus/chunks.jsonl` (prompt 02).
-
-One entry per source: type, URL, licence, reliability A/B/C, what to use it for, cautions, and
-whether it has been read, partly read, or could not be fetched. The tool can seed the registry
-by parsing a source table in the author's documents (the method doc has one); the author sets
-reliability and licence. The game's physics documentation is a source for the sailing
-concepts. Retrieval and verification only ever cite chunks from registered sources.
-
-## 4. Bootstrap of missions and general concepts
-
-File: `story/missions-bootstrap.yaml`.
-
-Tool step `bootstrap missions` reads the game's mission definitions (in fragateiro:
-`content/minigames.json` and `src/world/missions.ts`, five drills and eight mini-games) and
-writes one skeleton per mission: boat, place, goal, phases (start, legs, manoeuvres, approach,
-finish) with the challenge expected in each, the sailing concepts the mission exercises
-(matched from component 2), and empty slots for the author's cast, arc and beats. It writes no
-story text. Missions that already have an authored arc (the story bible's Catraio and
-Baleeiro) are merged in, not overwritten.
-
-## 5. Mixing narrative into play, by challenge
-
-Rule: do not talk while the player is in a difficult moment. Speak in the calm stretches, and
-talk about a difficulty after it is over.
-
-The runtime observes every physics step and keeps a challenge level from these factors, taking
-the largest (one hard thing is enough to make a moment hard):
-
-| Factor | Signal | Load |
-| --- | --- | --- |
-| Manoeuvre in progress | wind within 20° of the bow or stern while turning (tack, gybe) | 0.9 |
-| In irons | sails luffing, under 0.5 m/s, wind inside the no-go zone | 0.8 |
-| Heel | heel / capsize angle above 0.6 | 0.6 to 1.0 |
-| Close quarters | land, another boat or a target (dock, buoy, whale, boat alongside) within a few boat lengths, or time to contact under 15 s | 0.7 to 0.9 |
-| Gust or shift | wind speed up 30 % or direction moved 10° in the last 5 s | 0.5 |
-| Busy hands | rudder and sheet changes per second above a threshold | 0.5 |
-| Time pressure | last 15 s of a timed task | 0.6 |
-
-The level rises at once and falls slowly (about 3 s), so a line never starts in the second
-after a manoeuvre. A calm window is load under 0.3 for 2 s, on a steady heading, with no target
-closer than the time the line takes to read.
-
-Lines get a delivery class (new optional fields in the line schema):
-
-| Delivery | What | When it may play | Limits |
+| Base | Items | Built from | Bootstrap |
 | --- | --- | --- | --- |
-| `cue` | instruction, at most 6 words ("Folga a escota!") | up to load 0.8, only for the concept the player is failing at that moment | one per 8 s; never history |
-| `story` | the character's line for a beat (depth 1) | calm window only | must fit the window; drops after `ttl_s` |
-| `reflection` | about what just happened ("That's how you get out of irons") | first calm window after the difficulty ends | high priority, short ttl (about 20 s) |
-| `curiosity` | depth-2 card | paused, mission end, or a long calm leg, on request | never interrupts |
+| Physics | Capabilities: for each boat and wind, the states and manoeuvres the game produces (points of sail, tack, gybe, stall, heel, drift athwart in the muleta's fishing mode) and its limits (no current, no tide, no rowing) | The vendored game physics, exercised by scripted scenarios | Automatic |
+| Concepts | Sailing concepts and general concepts, with PT/EN terms, prerequisites, and evidence rules tied to physics events | Training books (PT, EN), the physics model, the author's documents | Proposed, then curated |
+| History | Practices: who, boat, place, period, conditions, sequence of actions, numbers. Each practice is supported by evidence passages from sources | Historical accounts in the source registry | Extracted as drafts, then curated |
 
-A line already showing is never cut. Lines that miss their window are dropped, not queued
-forever, so the story does not lag behind the sailing.
+A practice is the unit of history, and passages are its evidence. Several passages can support
+the same practice, or contradict each other about it.
 
-For authors this means a beat is tied to the moment after a difficulty, not during it: the
-story validator warns when a `story` line is triggered by an event that is itself high-load
-(for example `enter_irons`) and suggests the matching resolution event (`out_of_irons`). The
-story bible's Catraio turn beat is such a case. Talking right after the player solves a problem
-is also a good moment for learning, and the study can test it (talk-anytime versus
-challenge-aware timing).
+## 2. The three links
 
-## What changes in the kit
+| Link | Question | Result |
+| --- | --- | --- |
+| Concept to physics | Can the game show this concept and measure it? | An evidence rule, or a game gap (for example tide) |
+| Practice to concept | Which concept does this action exercise? | A mapping, marked as interpretation (the sources describe work, not technique) |
+| Practice to physics | Can the game reproduce what the source describes? | A scenario run with expected ranges, and a verdict: reproduces, partly, cannot (with the simplification) |
 
-- CLAUDE.md: the five components and the game reference.
-- Line schema: optional `delivery`, `max_load`, `ttl_s` (backward compatible).
-- New tool steps: `bootstrap concepts`, `bootstrap sources`, `bootstrap missions`, each writing
-  drafts for the author to curate, plus the physics observer.
-- Prompt 04: missions start from `story/missions-bootstrap.yaml`; beats name the phase and use
-  the event vocabulary in `knowledge/game-physics.yaml`.
-- Prompt 07: the selector becomes a challenge-aware scheduler on top of the observer.
-- Prompt 08: add a timing condition to the study (anytime versus challenge-aware).
+## 3. Scenarios
+
+A scenario is the runnable form of a manoeuvre or a practice: a sequence of goals (hold a
+point of sail, tack, stop alongside, drift athwart) with a boat, a wind and expected outcomes.
+It records its origin:
+
+- training-book manoeuvres: the catalogue used to test the physics observer and the concepts'
+  evidence rules;
+- historical practices: to check the game against history;
+- recorded play (later): to calibrate thresholds and timing against real visitors.
+
+## 4. Situations and what is derived from them
+
+A situation joins one practice, one or more concepts, and a feasible scenario, plus the list of
+simplifications. From it the tool proposes:
+
+- an **activity** (a mini-game proposal): goal, success rule, length within the museum budget,
+  the challenge profile and the calm windows (talk budget);
+- **story beats** from the practice: people, purpose, place, period, true details;
+- **lines**, through the kit's pipeline (retrieve, generate, verify, review).
+
+Order: concepts drive it. The prerequisite graph gives the progression, and activities are
+placed along it.
+
+## 5. Missing and contradictory information
+
+A first-class output, because filling it is most of the research work.
+
+| Kind | Example | Goes to |
+| --- | --- | --- |
+| Missing field in a practice | The catraio's rig and size are unsourced | A source search, or the historian |
+| Conflict between passages | Crew of three in one source, three to five in another; 1785 against 1875 | The historian, with both passages side by side |
+| History against physics | A practice the game boat cannot reproduce, or reproduces at implausible speed | The author: a game gap, a tuning issue or a doubtful source |
+| Concept without evidence | A concept the game cannot show or measure | A game gap, or the concept leaves scope |
+| Concept against history | Modern technique or terms applied to a historical boat | The author or a sailor |
+
+Each item becomes a research question with its evidence attached. Since one historian will
+check a particular PDF, the tool can export the questions and claims tied to that one source as
+a short review sheet.
+
+## 6. Does the tool rediscover the game's mini-games?
+
+The game already has mini-games. We ignore them while designing, and use them later as a test:
+derive activities blind, then compare.
+
+- Held out from the inputs: the game's mini-game definitions, and every document that describes
+  them (the leaflet, the mini-game parts of the method doc and of the discussion summary, the
+  story bible).
+- Inputs allowed: the physics, the training books, and the historical sources.
+- Comparison: for each existing mini-game, did the tool propose a similar activity (same
+  practice and concept), a different one for the same practice, or nothing? And what did the
+  tool propose that the game lacks?
+
+This tests whether the method is systematic, rather than tuned to what already exists.
+
+## 7. At runtime: challenge-aware timing
+
+Unchanged from draft 1. The game feeds the observer each physics step; it computes events and a
+challenge level (0 to 1); lines play only in calm windows; cues may play during difficulty;
+reflections play right after it. Delivery is mostly text, with voice as an option (voice length
+replaces reading time). Thresholds live in `runtime/src/observer/config.ts` and are documented in
+`knowledge/game-physics.yaml`.
+
+## Decisions so far
+
+- Target game: the web version (fragateiro) only.
+- Delivery: mostly text; voice later.
+- Languages: Portuguese and English first; French later.
+- One person operates the tool; a historian may check one specific PDF.
+- Concepts drive the order.
+- Situations may simplify; simplifications are recorded and may be named in dialogue.
+- Mini-games are ignored for now and used later as a blind comparison.
 
 ## Open questions
 
-- Is fragateiro (web) the target for the first study, with Unity later, or the reverse?
-- Thresholds (36° no-go, 0.3 calm, 3 s decay) are first guesses from the physics; tune them with
-  recorded play sessions.
-- Text only (toasts) or voice? Voice changes how long a line occupies the window.
-- Who curates the concepts and PT terms (a sailor, the Museu de Marinha)?
+- Recording real play in the museum (consent notice, anonymous logs).
+- When history and physics disagree, report to the fragateiro developers or only record it?
+- Which training books: titles and editions in PT and EN.
