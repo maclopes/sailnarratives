@@ -157,7 +157,7 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
     <div class="row"><button class="btn primary" id="addBtn">Add material</button><span class="hint">Materials can be added at any time; the readiness report updates.</span></div>
     <details class="linkimp" id="driveImp"><summary>Import from Google Drive</summary>
       <p class="hint">Reads the files in a Drive folder with your Google Drive connector, adds them as materials (or attaches them to matching ones) and stores their text for the next steps. Files stay in your Drive.</p>
-      <div class="row"><input type="text" id="driveFolder" placeholder="Folder link, or folder name (e.g. historia)" style="flex:1;min-width:200px"><button class="btn" id="driveList">List files</button></div>
+      <div class="row"><input type="text" id="driveFolder" placeholder="Folder link, path (My Drive\projects\…) or name" style="flex:1;min-width:200px"><button class="btn" id="driveList">List files</button></div>
       <div id="driveOut" style="margin-top:8px"></div>
     </details>
     <details class="linkimp" id="linkImp"><summary>Link check results</summary>
@@ -934,16 +934,34 @@ function bestMatch(title){
     const sc=inter/Math.min(a.size,b.size); if(sc>score){ score=sc; best=m; } }
   return score>=0.6?best:null;
 }
+const qstr=(t)=>String(t).replace(/\\/g,"\\\\").replace(/'/g,"\\'");
+async function findFolder(name, parent){
+  const r=await driveCall("search_files",{query:`title = '${qstr(name)}' and mimeType = 'application/vnd.google-apps.folder'`+(parent?` and parentId = '${qstr(parent)}'`:""), excludeContentSnippets:true, pageSize:10});
+  return r.files||[];
+}
 async function driveList(){
   const q=$("driveFolder").value.trim(); if(!q) return;
   const out=$("driveOut"); out.innerHTML=`<span class="hint">Looking for the folder…</span>`;
   try{
     let folderId=(q.match(/folders\/([\w-]+)/)||[])[1];
+    if(!folderId && /[\\\/]/.test(q)){
+      // a path such as H:\My Drive\projects\tagusnavy\historia or projects/tagusnavy/historia
+      const segs=q.split(/[\\\/]+/).map(x=>x.trim()).filter(Boolean).filter(x=>!/^[A-Za-z]:$/.test(x));
+      while(segs.length && /^(my drive|o meu disco|a minha unidade|mon drive|mi unidad)$/i.test(segs[0])) segs.shift();
+      let parent="root", ok=true;
+      for(const seg of segs){
+        const fs=await findFolder(seg, parent);
+        if(!fs.length){ ok=false; break; }
+        parent=fs[0].id;
+      }
+      if(ok && segs.length) folderId=parent;
+      else if(segs.length){ $("driveFolder").value=segs[segs.length-1]; return driveList(); }
+    }
     if(!folderId){
-      const r=await driveCall("search_files",{query:`title contains '${q.replace(/'/g,"\\'")}' and mimeType = 'application/vnd.google-apps.folder'`, excludeContentSnippets:true, pageSize:10});
+      const r=await driveCall("search_files",{query:`title contains '${qstr(q)}' and mimeType = 'application/vnd.google-apps.folder'`, excludeContentSnippets:true, pageSize:10});
       const fs=r.files||[];
       if(!fs.length){ out.innerHTML=`<span class="hint">No folder named “${esc(q)}” found. Paste the folder's link instead.</span>`; return; }
-      if(fs.length>1 && !dstate.pick){ out.innerHTML=`<div class="hint">Several folders match; pick one:</div>`+fs.map(f=>`<div><button class="btn small" data-folder="${esc(f.id)}">${esc(f.title)}</button> <a href="${esc(f.viewUrl||"#")}" target="_blank" rel="noopener" class="hint">open</a></div>`).join(""); return; }
+      if(fs.length>1){ out.innerHTML=`<div class="hint">Several folders match; pick one:</div>`+fs.map(f=>`<div><button class="btn small" data-folder="${esc(f.id)}">${esc(f.title)}</button> <a href="${esc(f.viewUrl||"#")}" target="_blank" rel="noopener" class="hint">open</a></div>`).join(""); return; }
       folderId=fs[0].id;
     }
     await listFolder(folderId);
@@ -952,7 +970,7 @@ async function driveList(){
 async function listFolder(folderId){
   const out=$("driveOut"); out.innerHTML=`<span class="hint">Listing files…</span>`;
   let files=[], token;
-  do{ const r=await driveCall("search_files",{query:`parentId = '${folderId}'`, excludeContentSnippets:true, pageSize:100, ...(token?{pageToken:token}:{})});
+  do{ const r=await driveCall("search_files",{query:`parentId = '${qstr(folderId)}'`, excludeContentSnippets:true, pageSize:100, ...(token?{pageToken:token}:{})});
       files=files.concat((r.files||[]).filter(f=>f.mimeType!=="application/vnd.google-apps.folder")); token=r.nextPageToken; if(!(r.files||[]).length) break; }while(token);
   dstate.folder=folderId;
   dstate.files=files.map(f=>{ const already=state.materials.find(m=>m.driveId===f.id); const match=already||bestMatch(f.title);
