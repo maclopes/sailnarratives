@@ -83,6 +83,9 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
 .section{margin-top:28px}
 .ai{margin-top:10px}
 .ai .finding{border-top:1px dashed var(--line)}
+.drop{border:1.5px dashed var(--line);border-radius:8px;padding:10px;display:flex;flex-direction:column;gap:6px;background:var(--sunk)}
+.drop.over{border-color:var(--accent);background:var(--accent-soft)}
+.drop input[type=file]{font:inherit;font-size:13px;color:var(--ink);max-width:100%}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:8px;font-size:14px;max-width:calc(100% - 32px)}
 @media (prefers-reduced-motion:no-preference){.form{animation:in .15s ease-out}@keyframes in{from{opacity:.4;transform:translateY(-3px)}to{opacity:1;transform:none}}}
 @media (max-width:560px){.item{flex-direction:column}.item .acts{align-self:flex-end}}
@@ -263,7 +266,7 @@ function renderForm(){
       <div class="field"><label for="f-role">Expertise</label><input type="text" id="f-role" value="${esc(m.role)}" placeholder="e.g. historian, sailor, game developer"></div>
       <div class="field"><label for="f-checks">Can check</label><select id="f-checks">${opt(CHECKS,m.checks)}</select></div>`:`
       <div class="field"><label for="f-url">Link</label><input type="url" id="f-url" value="${esc(m.url)}" placeholder="https://…"></div>
-      <div class="field"><span class="lbl">File (PDF, text)</span><div class="row"><button type="button" class="btn small" id="f-pick">Choose file…</button><span class="hint" id="f-fname">${m.fileName?"Attached: "+esc(m.fileName):"No file chosen"}</span></div><input type="file" id="f-file" accept=".pdf,.txt,.md,.csv,.json,application/pdf,text/plain" hidden><span class="hint" id="f-store">${storeHint()}</span></div>
+      <div class="field"><label for="f-file">File (PDF, text)</label><div class="drop" id="f-drop"><input type="file" id="f-file" accept=".pdf,.txt,.md,.csv,.json,application/pdf,text/plain"><span class="hint" id="f-fname">${m.fileName?"Attached: "+esc(m.fileName):"Or drag a file onto this box."}</span></div><span class="hint" id="f-store">${storeHint()}</span><span class="hint">No file window? Some Claude apps block it. Drag the file here, or send it in the chat and Claude will attach it.</span></div>
       <div class="field"><label for="f-lang">Language</label><select id="f-lang">${opt({"":"—",...LANGS},m.language)}</select></div>
       <div class="field"><label for="f-read">Read status</label><select id="f-read">${opt(READ,m.read)}</select></div>
       ${k!=="simulation"?`
@@ -274,9 +277,13 @@ function renderForm(){
     </div>
     <div class="row" style="margin-top:12px"><button class="btn primary" id="f-save">${m.id?"Save changes":"Add"}</button><button class="btn" id="f-cancel">Cancel</button><span class="hint" id="f-state"></span></div></div>`;
   $("f-kind").addEventListener("change",()=>{ readForm(); state.editing.kind=$("f-kind").value; renderForm(); });
-  if($("f-pick")){
-    $("f-pick").addEventListener("click",()=>$("f-file").click());
-    $("f-file").addEventListener("change",()=>{ const f=$("f-file").files?.[0]; state.pendingFile=f||null; $("f-fname").textContent= f? `Chosen: ${f.name} (${Math.ceil(f.size/1024)} KB)` : "No file chosen"; });
+  if($("f-drop")){
+    const pick=(f)=>{ state.pendingFile=f||null; $("f-fname").textContent= f? `Chosen: ${f.name} (${Math.ceil(f.size/1024)} KB)` : "Or drag a file onto this box."; };
+    $("f-file").addEventListener("change",()=>pick($("f-file").files?.[0]));
+    const d=$("f-drop");
+    d.addEventListener("dragover",(e)=>{ e.preventDefault(); d.classList.add("over"); });
+    d.addEventListener("dragleave",()=>d.classList.remove("over"));
+    d.addEventListener("drop",(e)=>{ e.preventDefault(); d.classList.remove("over"); pick(e.dataTransfer?.files?.[0]); });
     if(state.pendingFile) $("f-fname").textContent=`Chosen: ${state.pendingFile.name}`;
   }
   $("f-cancel").addEventListener("click",()=>{ state.editing=null; state.pendingFile=null; renderForm(); });
