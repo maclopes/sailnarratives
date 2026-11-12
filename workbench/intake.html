@@ -86,6 +86,8 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
 .drop{border:1.5px dashed var(--line);border-radius:8px;padding:10px;display:flex;flex-direction:column;gap:6px;background:var(--sunk)}
 .drop.over{border-color:var(--accent);background:var(--accent-soft)}
 .drop input[type=file]{font:inherit;font-size:13px;color:var(--ink);max-width:100%}
+.linkimp{margin-top:12px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px}
+.linkimp summary{cursor:pointer;font-weight:600;font-size:14px}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:8px;font-size:14px;max-width:calc(100% - 32px)}
 @media (prefers-reduced-motion:no-preference){.form{animation:in .15s ease-out}@keyframes in{from{opacity:.4;transform:translateY(-3px)}to{opacity:1;transform:none}}}
 @media (max-width:560px){.item{flex-direction:column}.item .acts{align-self:flex-end}}
@@ -116,7 +118,7 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
       <div class="field"><label for="p-audience">Audience</label><input type="text" id="p-audience" data-p="audience" placeholder="e.g. museum visitors, families, school groups"></div>
       <div class="field"><label for="p-minutes">Length of a visit to the game, minutes</label><input type="number" id="p-minutes" data-p="visitMinutes" min="1" max="120" placeholder="e.g. 5"></div>
       <div class="field"><label for="p-primary">Primary language</label>
-        <select id="p-primary" data-p="primaryLanguage"><option value="">Choose…</option><option value="pt">Portuguese</option><option value="en">English</option><option value="fr">French</option><option value="es">Spanish</option><option value="de">German</option><option value="it">Italian</option></select></div>
+        <select id="p-primary" data-p="primaryLanguage"></select><span class="hint">Pick the variant: terms differ between Portugal and Brazil, or the UK and the US.</span></div>
       <div class="field"><span class="lbl">Other languages</span>
         <div class="checks" id="p-langs"></div></div>
       <div class="field wide"><label for="p-goals">What visitors should learn (rough is fine)</label><textarea id="p-goals" data-p="goals" placeholder="One idea per line"></textarea></div>
@@ -129,6 +131,11 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
   <section class="panel" id="panel-materials" role="tabpanel" hidden>
     <div class="kinds" id="kindCounts"></div>
     <div class="row"><button class="btn primary" id="addBtn">Add material</button><span class="hint">Materials can be added at any time; the readiness report updates.</span></div>
+    <details class="linkimp" id="linkImp"><summary>Link check results</summary>
+      <p class="hint">Web pages cannot be checked from here. Run the link check where there is internet (see <span style="font-family:var(--f-mono)">workbench/README.md</span>), then paste its JSON report below.</p>
+      <textarea id="linkJson" placeholder='{"results":[{"url":"https://…","status":"ok"}]}'></textarea>
+      <div class="row" style="margin-top:8px"><button class="btn" id="linkApply">Apply results</button><span class="hint" id="linkState"></span></div>
+    </details>
     <div id="formHost"></div>
     <div id="groups"></div>
   </section>
@@ -163,7 +170,18 @@ const KINDS = {
   person: {label: "Person who can check", plural: "People who can check", help: "Someone who can verify part of the work: a historian for one source, a developer for the simulation, an expert for the concepts."},
 };
 const KIND_ORDER = ["simulation","reference","historical","author","existing","person"];
-const LANGS = {pt:"Portuguese",en:"English",fr:"French",es:"Spanish",de:"German",it:"Italian"};
+const LANGS = {"pt-PT":"Portuguese (Portugal)","pt-BR":"Portuguese (Brazil)",pt:"Portuguese (variant not set)","en-GB":"English (UK)","en-US":"English (US)",en:"English (variant not set)",fr:"French",es:"Spanish",de:"German",it:"Italian"};
+const PROJECT_LANGS = ["pt-PT","pt-BR","en-GB","en-US","fr","es","de","it"];
+const OTHER_LANGS = [...PROJECT_LANGS,"pt","en"];
+const base = (c)=>String(c||"").split("-")[0];
+const BASE_NAME = {pt:"Portuguese",en:"English",fr:"French",es:"Spanish",de:"German",it:"Italian"};
+const REQUIRED = {simulation:["link or file"], reference:["language","licence","reliability","link or file"], historical:["language","licence","reliability"], author:["language"], existing:[], person:["expertise","what they can check"]};
+function missing(m){
+  const has={"language":!!m.language,"licence":!!m.licence,"reliability":!!m.reliability,"link or file":!!(m.url||m.assetId),"expertise":!!m.role,"what they can check":!!m.checks};
+  return (REQUIRED[m.kind]||[]).filter(f=>!has[f]);
+}
+const LINK = {ok:["p-good","link works"], redirected:["p-good","link moved"], broken:["p-bad","link broken"], unreachable:["p-bad","link unreachable"], blocked_here:["p-info","link not checked"]};
+const isPhone = (()=>{ try{ return matchMedia("(pointer:coarse)").matches && /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent); }catch{ return false; } })();
 const LICENCES = {"":"Unknown", open:"Open licence (CC BY, CC BY-SA)", cc0:"CC0 or public domain", cite:"Copyright: cite and paraphrase only", permission:"Used with permission"};
 const RELIABILITY = {"":"Not graded", A:"A: scholarly or museum", B:"B: documented local history", C:"C: uncited (blog, page)"};
 const READ = {"":"Not read yet", full:"Read in full", partial:"Read in part", blocked:"Could not be read"};
@@ -187,7 +205,8 @@ function showTab(name){
 document.querySelectorAll(".tabs button").forEach(b=>b.addEventListener("click",()=>showTab(b.dataset.tab)));
 
 // ---------- project ----------
-for (const [code,name] of Object.entries(LANGS)){
+$("p-primary").innerHTML = `<option value="">Choose…</option>` + PROJECT_LANGS.map(c=>`<option value="${c}">${esc(LANGS[c])}</option>`).join("") + `<option value="pt">${esc(LANGS.pt)}</option><option value="en">${esc(LANGS.en)}</option>`;
+for (const code of OTHER_LANGS){ const name=LANGS[code];
   const l=document.createElement("label");
   l.innerHTML=`<input type="checkbox" id="lang-${code}" value="${code}"> ${esc(name)}`;
   $("p-langs").append(l);
@@ -195,7 +214,7 @@ for (const [code,name] of Object.entries(LANGS)){
 function renderProject(){
   const p=state.project;
   document.querySelectorAll("[data-p]").forEach(el=>{ if(document.activeElement!==el) el.value = p[el.dataset.p] ?? ""; });
-  for (const code of Object.keys(LANGS)){ const c=$("lang-"+code); c.checked=(p.otherLanguages||[]).includes(code); c.disabled = p.primaryLanguage===code; }
+  for (const code of OTHER_LANGS){ const c=$("lang-"+code); c.parentElement.hidden = (code==="pt"||code==="en") && !(p.otherLanguages||[]).includes(code); c.checked=(p.otherLanguages||[]).includes(code); c.disabled = p.primaryLanguage===code; }
 }
 let projTimer=null;
 function saveProjectSoon(){
@@ -213,7 +232,7 @@ document.querySelectorAll("[data-p]").forEach(el=>el.addEventListener("input",()
   saveProjectSoon();
 }));
 $("p-langs").addEventListener("change",()=>{
-  state.project.otherLanguages=Object.keys(LANGS).filter(c=>$("lang-"+c).checked);
+  state.project.otherLanguages=OTHER_LANGS.filter(c=>$("lang-"+c).checked);
   saveProjectSoon();
 });
 
@@ -229,7 +248,9 @@ function renderMaterials(){
   }).join("");
 }
 function itemHtml(m){
-  const pills=[];
+  const pills=[]; const miss=missing(m);
+  if(miss.length) pills.push(`<span class="pill p-warn">incomplete: needs ${esc(miss.join(", "))}</span>`);
+  if(m.link&&LINK[m.link.status]) pills.push(`<span class="pill ${LINK[m.link.status][0]}" title="checked ${esc(m.link.checkedAt||"")}">${LINK[m.link.status][1]}</span>`);
   if(m.kind==="person"){
     if(m.role) pills.push(`<span class="pill p-acc">${esc(m.role)}</span>`);
     if(m.checks) pills.push(`<span class="pill">checks ${esc(CHECKS[m.checks]||m.checks)}</span>`);
@@ -243,9 +264,10 @@ function itemHtml(m){
     if(isHeldOut(m)) pills.push(`<span class="pill p-info">held out</span>`);
   }
   const link = m.url ? `<div><a href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.url)}</a></div>` : "";
+  const arch = m.link?.archiveUrl && m.link.status!=="ok" ? `<div><a href="${esc(m.link.archiveUrl)}" target="_blank" rel="noopener">Archived copy</a></div>` : "";
   const file = m.assetId ? `<div><a href="${esc("/_blob/"+m.assetId)}" target="_blank" rel="noopener">File: ${esc(m.fileName||"attached")}</a></div>` : "";
   const confirm = state.confirmDelete===m.id;
-  return `<div class="item"><div class="main"><div class="t">${esc(m.title||"Untitled")}</div><div class="meta">${pills.join("")}</div>${link}${file}${m.notes?`<div class="notes">${esc(m.notes)}</div>`:""}</div>
+  return `<div class="item"><div class="main"><div class="t">${esc(m.title||"Untitled")}</div><div class="meta">${pills.join("")}</div>${link}${arch}${file}${m.notes?`<div class="notes">${esc(m.notes)}</div>`:""}</div>
     <div class="acts">${confirm?`<button class="btn small danger" data-del="${esc(m.id)}">Delete for good</button><button class="btn small" data-cancel>Keep</button>`
       :`<button class="btn small" data-edit="${esc(m.id)}">Edit</button><button class="btn small" data-ask="${esc(m.id)}">Delete</button>`}</div></div>`;
 }
@@ -261,12 +283,12 @@ function renderForm(){
     <div class="grid">
       <div class="field"><label for="f-kind">Kind</label><select id="f-kind">${KIND_ORDER.map(x=>`<option value="${x}"${x===k?" selected":""}>${esc(KINDS[x].label)}</option>`).join("")}</select></div>
       <div class="field"><label for="f-title">${isPerson?"Name or role":"Title"}</label><input type="text" id="f-title" value="${esc(m.title)}" placeholder="${isPerson?"e.g. historian at the museum":"Author, title, year"}"></div>
-      <div class="field wide"><div class="kindhelp">${esc(KINDS[k].help)}</div></div>
+      <div class="field wide"><div class="kindhelp">${esc(KINDS[k].help)}${REQUIRED[k].length?` <b>Needed:</b> ${esc(REQUIRED[k].join(", "))}.`:""}</div></div>
       ${isPerson?`
       <div class="field"><label for="f-role">Expertise</label><input type="text" id="f-role" value="${esc(m.role)}" placeholder="e.g. historian, sailor, game developer"></div>
       <div class="field"><label for="f-checks">Can check</label><select id="f-checks">${opt(CHECKS,m.checks)}</select></div>`:`
       <div class="field"><label for="f-url">Link</label><input type="url" id="f-url" value="${esc(m.url)}" placeholder="https://…"></div>
-      <div class="field"><label for="f-file">File (PDF, text)</label><div class="drop" id="f-drop"><input type="file" id="f-file" accept=".pdf,.txt,.md,.csv,.json,application/pdf,text/plain"><span class="hint" id="f-fname">${m.fileName?"Attached: "+esc(m.fileName):"Or drag a file onto this box."}</span></div><span class="hint" id="f-store">${storeHint()}</span><span class="hint">No file window? Some Claude apps block it. Drag the file here, or send it in the chat and Claude will attach it.</span></div>
+      <div class="field"><label for="f-file">File (PDF, text)</label>${isPhone?`<div class="kindhelp"><b>On a phone:</b> the Claude app cannot open your files. Save this entry first, then send the file in the chat and say which entry it belongs to.</div>`:""}<div class="drop" id="f-drop"><input type="file" id="f-file" accept=".pdf,.txt,.md,.csv,.json,application/pdf,text/plain"><span class="hint" id="f-fname">${m.fileName?"Attached: "+esc(m.fileName):"Or drag a file onto this box."}</span></div><span class="hint" id="f-store">${storeHint()}</span><span class="hint">No file window? Some Claude apps block it. Drag the file here, or send it in the chat and Claude will attach it.</span></div>
       <div class="field"><label for="f-lang">Language</label><select id="f-lang">${opt({"":"—",...LANGS},m.language)}</select></div>
       <div class="field"><label for="f-read">Read status</label><select id="f-read">${opt(READ,m.read)}</select></div>
       ${k!=="simulation"?`
@@ -332,6 +354,19 @@ $("groups").addEventListener("click",async(ev)=>{
   }
 });
 
+$("linkApply").addEventListener("click",async()=>{
+  let rep; try{ rep=JSON.parse($("linkJson").value); }catch{ $("linkState").textContent="That is not valid JSON."; return; }
+  const results=Array.isArray(rep?.results)?rep.results:[]; let n=0;
+  for(const r of results){
+    if(!r||!r.url||!LINK[r.status]) continue;
+    const link={status:r.status, checkedAt:rep.checkedAt||new Date().toISOString(), httpStatus:r.httpStatus??null, finalUrl:r.finalUrl||null, archiveUrl:r.archiveUrl||null};
+    for(const m of state.materials.filter(x=>x.url===r.url)){
+      try{ if(db) await db.doc("materials/"+m.id).update({link}); else m.link=link; n++; }catch(e){ $("linkState").textContent="Could not save: "+(e.message||e.code); return; }
+    }
+  }
+  $("linkState").textContent=`Updated ${n} ${n===1?"material":"materials"}.`; if(!db) renderAll();
+});
+
 // ---------- readiness (fixed, generic rules) ----------
 function readiness(){
   const p=state.project, ms=state.materials, by=(k)=>ms.filter(m=>m.kind===k);
@@ -348,6 +383,7 @@ function readiness(){
   if(!p.audience) pf.push(F("warn","No audience yet. Line length and tone depend on it."));
   if(!p.visitMinutes) pf.push(F("warn","No visit length yet. Activities are sized to it."));
   if(!p.primaryLanguage) pf.push(F("bad","No primary language. Lines are written in it first."));
+  else if((p.primaryLanguage==="pt"||p.primaryLanguage==="en")) pf.push(F("warn","The primary language has no variant (for example Portugal or Brazil). Terms differ between variants."));
   if(!(p.goals||"").trim()) pf.push(F("warn","No learning goals yet. Concepts will be proposed without a target."));
   if(!(p.simplifications||"").trim()) pf.push(F("info","No simplifications listed. Add what the simulation leaves out, so lines can name it."));
   out.push({id:"project",title:"Project",what:"Audience, length, languages and goals.",findings:pf});
@@ -359,6 +395,7 @@ function readiness(){
     sf.push(F("good",`${sims.length} simulation ${sims.length>1?"items":"item"}.`));
     if(!can("simulation")) sf.push(F("warn","Nobody listed who can confirm the adapter the tool proposes from the simulation code (a developer)."));
     if(sims.some(s=>s.read==="blocked")) sf.push(F("bad","A simulation item could not be read."));
+    const incS=sims.filter(m=>missing(m).length); if(incS.length) sf.push(F("warn",`${incS.length} incomplete: needs a link or file.`));
   }
   out.push({id:"simulation",title:"Simulation base",what:"What the simulation can show and measure.",findings:sf});
 
@@ -367,7 +404,15 @@ function readiness(){
   if(!refs.length) cf.push(F("warn","No reference books. Concepts can only come from the simulation and your documents, and their names stay drafts."));
   else {
     cf.push(F("good",`${refs.length} reference ${refs.length>1?"books":"book"}.`));
-    for(const l of langs) if(!refs.some(r=>r.language===l)) cf.push(F(l===p.primaryLanguage?"warn":"info",`No reference book in ${LANGS[l]||l}: concept terms in that language will be drafts.`));
+    for(const l of langs){
+      const same=refs.filter(r=>base(r.language)===base(l));
+      if(!same.length){ cf.push(F(l===p.primaryLanguage?"warn":"info",`No reference book in ${BASE_NAME[base(l)]||l}: concept terms in that language will be drafts.`)); continue; }
+      if(l.includes("-") && !same.some(r=>r.language===l)){
+        const vs=[...new Set(same.map(r=>LANGS[r.language]||r.language))];
+        cf.push(F("warn",`The ${BASE_NAME[base(l)]} reference books are ${vs.join(", ")}, not ${LANGS[l]}: terms may differ, so each term needs checking.`));
+      }
+    }
+    const incR=refs.filter(m=>missing(m).length); if(incR.length) cf.push(F("warn",`${incR.length} incomplete: ${incR.map(m=>m.title+" (needs "+missing(m).join(", ")+")").join("; ")}.`));
   }
   if(!(p.goals||"").trim()) cf.push(F("info","Learning goals would help rank the proposed concepts."));
   if(!can("concepts")) cf.push(F("info","Nobody listed to check the concepts (an instructor or expert)."));
@@ -385,7 +430,9 @@ function readiness(){
     const part=hist.filter(m=>m.read==="partial"||!m.read); if(part.length) hf.push(F("info",`${part.length} read in part or not yet: ${part.map(m=>m.title).join("; ")}.`));
     const blocked=hist.filter(m=>m.read==="blocked"); if(blocked.length) hf.push(F("bad",`${blocked.length} could not be read: ${blocked.map(m=>m.title).join("; ")}. Find another copy or paste the text.`));
     const C=hist.filter(m=>m.reliability==="C").length; if(C && C>=hist.length/2) hf.push(F("warn",`Half or more are grade C (${C} of ${hist.length}).`));
-    if(langs.length && !hist.some(m=>langs.includes(m.language))) hf.push(F("info","No account in the project's languages; passages will need translating."));
+    const nolang=hist.filter(m=>!m.language); if(nolang.length) hf.push(F("warn",`${nolang.length} without a language.`));
+    const dead=hist.filter(m=>m.link&&(m.link.status==="broken"||m.link.status==="unreachable")); if(dead.length) hf.push(F("warn",`${dead.length} with a dead link: ${dead.map(m=>m.title+(m.link.archiveUrl?" (archived copy exists)":"")).join("; ")}.`));
+    if(langs.length && !hist.some(m=>langs.some(l=>base(l)===base(m.language)))) hf.push(F("info","No account in the project's languages; passages will need translating."));
   }
   if(!can("source")) hf.push(F("warn","Nobody listed who can check a source (a historian). Conflicts between sources cannot be settled."));
   out.push({id:"history",title:"History base",what:"What people did, backed by passages.",findings:hf});
