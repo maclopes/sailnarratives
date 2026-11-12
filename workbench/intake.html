@@ -167,7 +167,7 @@ const READ = {"":"Not read yet", full:"Read in full", partial:"Read in part", bl
 const CHECKS = {"":"—", source:"one source", simulation:"the simulation", concepts:"the concepts", translations:"translations"};
 
 const state = {project: {}, materials: [], editing: null, confirmDelete: null, ai: null};
-let db = null, assets = null, downloads = null, sample = null, localOnly = false;
+let db = null, assets = null, downloads = null, sample = null, localOnly = false, assetsChecked = false;
 
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -224,7 +224,6 @@ function renderMaterials(){
     return `<div class="group"><div class="group-h"><div><h2>${esc(KINDS[k].plural)}</h2><p>${esc(KINDS[k].help)}</p></div><button class="btn small" data-addkind="${k}">Add</button></div>
       ${items.length? items.map(itemHtml).join("") : `<div class="empty">None yet.</div>`}</div>`;
   }).join("");
-  renderForm();
 }
 function itemHtml(m){
   const pills=[];
@@ -264,7 +263,7 @@ function renderForm(){
       <div class="field"><label for="f-role">Expertise</label><input type="text" id="f-role" value="${esc(m.role)}" placeholder="e.g. historian, sailor, game developer"></div>
       <div class="field"><label for="f-checks">Can check</label><select id="f-checks">${opt(CHECKS,m.checks)}</select></div>`:`
       <div class="field"><label for="f-url">Link</label><input type="url" id="f-url" value="${esc(m.url)}" placeholder="https://…"></div>
-      <div class="field"><label for="f-file">File (PDF, text)</label><input type="file" id="f-file"${assets?"":" disabled"}><span class="hint">${assets?(m.fileName?"Attached: "+esc(m.fileName):"Optional"):"File upload is not available in this view; add a link instead."}</span></div>
+      <div class="field"><span class="lbl">File (PDF, text)</span><div class="row"><button type="button" class="btn small" id="f-pick">Choose file…</button><span class="hint" id="f-fname">${m.fileName?"Attached: "+esc(m.fileName):"No file chosen"}</span></div><input type="file" id="f-file" accept=".pdf,.txt,.md,.csv,.json,application/pdf,text/plain" hidden><span class="hint" id="f-store">${storeHint()}</span></div>
       <div class="field"><label for="f-lang">Language</label><select id="f-lang">${opt({"":"—",...LANGS},m.language)}</select></div>
       <div class="field"><label for="f-read">Read status</label><select id="f-read">${opt(READ,m.read)}</select></div>
       ${k!=="simulation"?`
@@ -275,7 +274,12 @@ function renderForm(){
     </div>
     <div class="row" style="margin-top:12px"><button class="btn primary" id="f-save">${m.id?"Save changes":"Add"}</button><button class="btn" id="f-cancel">Cancel</button><span class="hint" id="f-state"></span></div></div>`;
   $("f-kind").addEventListener("change",()=>{ readForm(); state.editing.kind=$("f-kind").value; renderForm(); });
-  $("f-cancel").addEventListener("click",()=>{ state.editing=null; renderForm(); });
+  if($("f-pick")){
+    $("f-pick").addEventListener("click",()=>$("f-file").click());
+    $("f-file").addEventListener("change",()=>{ const f=$("f-file").files?.[0]; state.pendingFile=f||null; $("f-fname").textContent= f? `Chosen: ${f.name} (${Math.ceil(f.size/1024)} KB)` : "No file chosen"; });
+    if(state.pendingFile) $("f-fname").textContent=`Chosen: ${state.pendingFile.name}`;
+  }
+  $("f-cancel").addEventListener("click",()=>{ state.editing=null; state.pendingFile=null; renderForm(); });
   $("f-save").addEventListener("click",saveMaterial);
   host.querySelector(".form").scrollIntoView({block:"nearest"});
 }
@@ -290,23 +294,28 @@ function readForm(){
 async function saveMaterial(){
   readForm(); const m={...state.editing};
   if(!m.title){ $("f-state").textContent="Add a title first."; return; }
-  const file=$("f-file")?.files?.[0];
+  const file=state.pendingFile;
+  if(file && !assets){ $("f-state").textContent="The file cannot be stored in this view ("+storeHint()+"). Remove it or add a link instead."; return; }
   $("f-save").disabled=true;
   try{
-    if(file && assets){ $("f-state").textContent="Uploading…"; const r=await assets.upload(file); m.assetId=r.id; m.fileName=file.name; }
+    if(file){ $("f-state").textContent="Uploading "+file.name+"…";
+      try{ const r=await assets.upload(file); m.assetId=r.id; m.fileName=file.name; }
+      catch(e){ $("f-state").textContent="Upload failed ("+(e.code||"error")+"): "+(e.message||"")+" Nothing was saved."; $("f-save").disabled=false; return; } }
     const id=m.id || ("m"+Date.now().toString(36)+Math.random().toString(36).slice(2,6));
     const data={...m}; delete data.id; data.createdAt=data.createdAt||new Date().toISOString(); data.updatedAt=new Date().toISOString();
     for(const k of Object.keys(data)) if(data[k]===undefined) delete data[k];
     if(db){ await db.doc("materials/"+id).set(data); }
     else { const i=state.materials.findIndex(x=>x.id===id); const row={id,...data}; if(i>=0) state.materials[i]=row; else state.materials.push(row); }
-    state.editing=null; renderAll(); toast(m.id?"Saved":"Added");
+    state.editing=null; state.pendingFile=null; renderAll(); toast(m.id?"Saved":"Added");
   }catch(e){ $("f-state").textContent="Could not save: "+(e.message||e.code); $("f-save").disabled=false; }
 }
-$("addBtn").addEventListener("click",()=>{ state.editing={kind:"historical"}; renderForm(); });
+function storeHint(){ return assets ? "File storage available." : (assetsChecked ? "File storage is not available here: open the page on claude.ai in a web browser, signed in as an editor." : "Checking file storage…"); }
+function startEdit(m){ state.editing=m; state.pendingFile=null; renderForm(); }
+$("addBtn").addEventListener("click",()=>startEdit({kind:"historical"}));
 $("groups").addEventListener("click",async(ev)=>{
   const b=ev.target.closest("button"); if(!b) return;
-  if(b.dataset.addkind){ state.editing={kind:b.dataset.addkind}; renderForm(); }
-  else if(b.dataset.edit){ state.editing={...state.materials.find(x=>x.id===b.dataset.edit)}; renderForm(); }
+  if(b.dataset.addkind){ startEdit({kind:b.dataset.addkind}); }
+  else if(b.dataset.edit){ startEdit({...state.materials.find(x=>x.id===b.dataset.edit)}); }
   else if(b.dataset.ask){ state.confirmDelete=b.dataset.ask; renderMaterials(); }
   else if(b.hasAttribute("data-cancel")){ state.confirmDelete=null; renderMaterials(); }
   else if(b.dataset.del){
@@ -469,15 +478,16 @@ ${JSON.stringify(payload)}`;
 });
 
 // ---------- boot ----------
-function renderAll(){ renderProject(); renderMaterials(); if(!$("panel-readiness").hidden) renderReadiness(); }
+function renderAll(){ renderProject(); renderMaterials(); renderForm(); if(!$("panel-readiness").hidden) renderReadiness(); }
 renderAll();
 try{ const t=localStorage.getItem("intake.tab"); if(t) showTab(t); }catch{}
 
 (async()=>{
   const c=window.claude;
-  if(!c?.use){ localOnly=true; $("localBanner").hidden=false; setSave("Not saved (this view)"); return; }
+  if(!c?.use){ localOnly=true; assetsChecked=true; $("localBanner").hidden=false; setSave("Not saved (this view)"); if($("f-store")) $("f-store").textContent=storeHint(); return; }
   [db,assets,downloads,sample]=await Promise.all(["db","assets","downloads","sample"].map(n=>c.use(n).catch(()=>null)));
-  renderForm();
+  assetsChecked=true;
+  if($("f-store")) $("f-store").textContent=storeHint();
   if(!db){ localOnly=true; $("localBanner").hidden=false; setSave("Not saved (this view)"); return; }
   const timer=setTimeout(()=>setSave("Still connecting…"),10000);
   db.doc("project/main").onSnapshot(s=>{ clearTimeout(timer); state.project=s.exists?(s.data()||{}):{}; setSave("Saved"); renderProject(); if(!$("panel-readiness").hidden) renderReadiness(); },
