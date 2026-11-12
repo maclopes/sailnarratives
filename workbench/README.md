@@ -13,8 +13,10 @@ The tool's screens. Each is a single HTML page with no build step.
   words; a second request groups them across sources and languages. The tool then gives each
   concept statuses with fixed rules: agreed, conflicting, term clash, variant difference,
   missing term, single source, not in simulation, simulation only. The author accepts,
-  rejects, renames, and moves members between concepts. Data: texts/, candidates/,
-  concepts/current in the artifact database.
+  rejects, renames, and moves members between concepts. "Write summary" asks Claude for a
+  short reading of the table by type of concept (agreements, conflicts with a suggested next
+  step, clarifications, gaps), which can be copied or downloaded as Markdown. Data: texts/,
+  candidates/, concepts/current, summaries/concepts in the artifact database.
 
   Published as a claude.ai artifact (private; it keeps its data in the artifact's database):
   https://claude.ai/artifact/28te1trNq5pVdem1xFzUD9

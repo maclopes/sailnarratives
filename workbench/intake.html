@@ -104,6 +104,13 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
 .members td.term{font-weight:600}
 .members select{font-size:12px;padding:3px 6px;width:auto}
 .conf{font-size:13px;margin-top:6px;display:flex;gap:8px;align-items:flex-start}
+.sumtype{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-top:10px}
+.sumtype h3{font-size:16px;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.sumgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:8px 18px;margin-top:8px}
+.sumgrid h4{margin:0 0 4px;font-family:var(--f-mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase}
+.sumgrid ul{margin:0;padding-left:18px;font-size:13.5px}
+.sumgrid li{margin:3px 0}
+.overview{font-size:15px;max-width:75ch;margin:12px 0 0}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:8px;font-size:14px;max-width:calc(100% - 32px)}
 @media (prefers-reduced-motion:no-preference){.form{animation:in .15s ease-out}@keyframes in{from{opacity:.4;transform:translateY(-3px)}to{opacity:1;transform:none}}}
 @media (max-width:560px){.item{flex-direction:column}.item .acts{align-self:flex-end}}
@@ -190,6 +197,12 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
       <div class="row" style="justify-content:space-between"><h2>Concepts</h2><span class="hint" id="cMeta"></span></div>
       <div class="chips" id="cChips"></div>
       <div id="cList"></div>
+    </div>
+    <div class="section">
+      <h2>Summary of the sources</h2>
+      <p class="sub">A short reading of the concept table, by type of concept: where the sources agree, where they conflict, where one clarifies another, and what is missing. Rejected concepts are left out. Claude writes it; it is a draft to check against the table.</p>
+      <div class="row" style="margin-top:10px"><button class="btn primary" id="sumBtn">Write summary</button><button class="btn" id="sumCopy">Copy as text</button><button class="btn" id="sumDl">Download</button><span class="hint" id="sumState"></span></div>
+      <div id="sumOut"></div>
     </div>
   </section>
 </div>
@@ -813,8 +826,87 @@ $("cList").addEventListener("change",async(ev)=>{
   cstate.set.concepts=cstate.set.concepts.filter(c=>c.members.length);
   await saveSet(); toast("Moved");
 });
-function renderConcepts(){ renderCSources(); renderCTable(); }
+function renderConcepts(){ renderCSources(); renderCTable(); renderSummary(); }
 
+
+
+// ---------- summary of the sources ----------
+let summary=null;
+function conceptRows(){
+  const set=cstate.set; if(!set?.concepts?.length) return [];
+  const idx=candIndex(), clash={};
+  for(const c of set.concepts) for(const id of c.members){ const x=idx[id]; if(!x) continue; (clash[base(x.lang)+"|"+norm(x.term)] ||= new Set()).add(c.id); }
+  return set.concepts.map(c=>({c, st:statuses(c,idx,clash), ms:c.members.map(id=>idx[id]).filter(Boolean)}));
+}
+function summaryPrompt(rows, meaningLen=140){
+  const data=rows.filter(r=>r.c.decision!=="rejected").map(({c,st,ms})=>({concept:c.label, accepted:c.decision==="accepted", statuses:st,
+    conflicts:(c.conflicts||[]).map(f=>f.type+": "+f.text),
+    sources:ms.map(x=>({source:x.kind==="simulation"?"simulation":SHORT(x), lang:x.lang, term:x.term, meaning:String(x.definition).slice(0,meaningLen), numbers:(x.numbers||[]).map(n=>`${n.what}: ${n.value}${n.unit?" "+n.unit:""}`)}))}));
+  const prim=LANGS[state.project.primaryLanguage]||state.project.primaryLanguage||"the primary language";
+  return `You summarise a table of concepts gathered from several sources for a learning game about ${state.project.subject||"one subject"}, for museum visitors. The author reads this to decide what to check and with whom. Primary language: ${prim}.
+
+Each concept lists its sources (the simulation is one source), each source's term, language variant and meaning, plus statuses computed by fixed rules: agreed, conflicting, term clash (one word names different concepts), variant difference (different words in variants of one language), missing term (no term in the primary variant), single source, not in simulation, simulation only.
+
+Write a short, plain summary:
+1. Sort the concepts into 4 to 8 types that suit this subject (for example: points of sail, manoeuvres, sail handling, forces and boat behaviour, parts of the boat, navigation and safety rules, historical practices, simulation internals). Every concept goes in one type.
+2. For each type, at most 5 points in each list:
+   - agreements: what the sources agree on, naming the sources;
+   - conflicts: what differs (terms, meanings, numbers), between which sources, and one suggested next step (ask a sailor, check a source, decide as a game design choice);
+   - clarifications: where one source supplies what the others lack (a term in the primary variant, a number, a sharper definition, how the simulation shows it);
+   - gaps: concepts with a single source, not in the simulation, without a term in the primary variant, or likely out of scope for a short museum visit.
+3. An overview of 2 to 4 sentences: the main conflicts to settle first, and what is missing.
+Use the concept labels and source names as given. Do not add facts that are not in the table. Write in English; quote terms in their own language.
+Return JSON only: {"overview":"","types":[{"type":"","concepts":[""],"agreements":[""],"conflicts":[{"text":"","next":""}],"clarifications":[""],"gaps":[""]}]}
+
+Table:
+${JSON.stringify(data)}`;
+}
+function renderSummary(){
+  const out=$("sumOut");
+  if(!summary){ out.innerHTML=`<div class="empty">No summary yet. Press Write summary after a concept run.</div>`; return; }
+  const stale = cstate.set && summary.basedOn && summary.basedOn!==cstate.set.createdAt;
+  const d=summary.data||{};
+  const list=(items,fmt)=>items?.length?`<ul>${items.map(fmt).join("")}</ul>`:`<div class="hint">None.</div>`;
+  out.innerHTML=`<div class="hint" style="margin-top:8px">Written ${esc(new Date(summary.createdAt).toLocaleString())}${stale?" · <b>the concept table has changed since; write it again</b>":""}</div>
+    ${d.overview?`<p class="overview">${esc(d.overview)}</p>`:""}
+    ${(d.types||[]).map(t=>`<div class="sumtype"><h3>${esc(t.type)} <span class="hint">${(t.concepts||[]).length} concepts</span></h3>
+      <div class="hint">${esc((t.concepts||[]).join(" · "))}</div>
+      <div class="sumgrid">
+        <div><h4 style="color:var(--good)">Agreements</h4>${list(t.agreements,x=>`<li>${esc(x)}</li>`)}</div>
+        <div><h4 style="color:var(--bad)">Conflicts</h4>${list(t.conflicts,x=>`<li>${esc(x.text||x)}${x.next?`<div class="hint">Next: ${esc(x.next)}</div>`:""}</li>`)}</div>
+        <div><h4 style="color:var(--accent)">Clarifications</h4>${list(t.clarifications,x=>`<li>${esc(x)}</li>`)}</div>
+        <div><h4 style="color:var(--warn)">Gaps</h4>${list(t.gaps,x=>`<li>${esc(x)}</li>`)}</div>
+      </div></div>`).join("")}`;
+}
+function summaryText(){
+  if(!summary) return "";
+  const d=summary.data||{}, L=[];
+  L.push(`# Summary of the sources: ${state.project.name||""}`.trim(), "", `Written ${summary.createdAt}. Draft by Claude from the concept table; check against the table.`, "");
+  if(d.overview) L.push(d.overview, "");
+  for(const t of d.types||[]){
+    L.push(`## ${t.type}`, "", `Concepts: ${(t.concepts||[]).join(", ")}`, "");
+    const sec=(h,items,f)=>{ L.push(`### ${h}`); if(items?.length) items.forEach(x=>L.push("- "+f(x))); else L.push("- None."); L.push(""); };
+    sec("Agreements",t.agreements,x=>x); sec("Conflicts",t.conflicts,x=>(x.text||x)+(x.next?` (next: ${x.next})`:"")); sec("Clarifications",t.clarifications,x=>x); sec("Gaps",t.gaps,x=>x);
+  }
+  return L.join("\n");
+}
+$("sumBtn").addEventListener("click",async()=>{
+  if(!sample){ toast("Asking Claude is not available in this view."); return; }
+  const rows=conceptRows(); if(!rows.length){ $("sumState").textContent="Run Find concepts first."; return; }
+  $("sumBtn").disabled=true; $("sumState").textContent=`Reading ${rows.length} concepts…`;
+  try{
+    let prompt=summaryPrompt(rows);
+    try{ const lim=await sample.limits(); const max=lim?.maxPromptBytes||Infinity; const size=(t)=>new TextEncoder().encode(t).length;
+      for(const len of [70,30,0]){ if(size(prompt)<=max*0.9) break; prompt=summaryPrompt(rows,len); }
+      if(size(prompt)>max*0.9){ $("sumState").textContent="The concept table is too large to summarise in one request; reject the out-of-scope concepts first."; $("sumBtn").disabled=false; return; } }catch{}
+    const data=await sample.json(prompt,{modelTier:"complex"});
+    summary={data, createdAt:new Date().toISOString(), basedOn:cstate.set.createdAt};
+    await saveDoc("summaries/concepts", summary); $("sumState").textContent="Done."; renderSummary();
+  }catch(e){ $("sumState").textContent= e.code==="not_granted"?"Asking Claude is not allowed in this view.": e.code==="rate_limited"?"Too many requests; wait a minute.":"Could not write it: "+(e.message||e.code||e); }
+  $("sumBtn").disabled=false;
+});
+$("sumCopy").addEventListener("click",async()=>{ const t=summaryText(); if(!t){ toast("No summary yet."); return; } try{ await navigator.clipboard.writeText(t); toast("Copied"); }catch{ toast("Copy is not available here; use Download."); } });
+$("sumDl").addEventListener("click",async()=>{ const t=summaryText(); if(!t){ toast("No summary yet."); return; } if(!downloads){ toast("Downloads are not available here; use Copy."); return; } try{ await downloads.save({filename:"summary-of-sources.md", data:t}); }catch(e){ if(e.code!=="declined") toast("Could not save: "+(e.message||e.code)); } });
 
 // ---------- import from Google Drive ----------
 const DRIVE="Google Drive";
@@ -935,6 +1027,7 @@ try{ const t=localStorage.getItem("intake.tab"); if(t) showTab(t); }catch{}
   const cRefresh=()=>{ if(!$("panel-concepts").hidden && !cstate.running) renderConcepts(); };
   db.collection("texts").onSnapshot(s=>{ cstate.texts=Object.fromEntries(s.docs.map(d=>[d.id,d.data()])); cRefresh(); }, ()=>{});
   db.collection("candidates").onSnapshot(s=>{ cstate.cands=Object.fromEntries(s.docs.map(d=>[d.id,d.data()])); cRefresh(); }, ()=>{});
+  db.doc("summaries/concepts").onSnapshot(s=>{ summary=s.exists?s.data():null; if(!$("panel-concepts").hidden) renderSummary(); }, ()=>{});
   db.doc("concepts/current").onSnapshot(s=>{ if(!cstate.running){ cstate.set=s.exists?s.data():null; cRefresh(); } }, ()=>{});
 })();
 </script>
