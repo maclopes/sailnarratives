@@ -20,6 +20,13 @@ The tool's screens. Each is a single HTML page with no build step.
   https://claude.ai/artifact/28te1trNq5pVdem1xFzUD9
   Opened as a local file it still works, but nothing is saved.
 
+## Importing from Google Drive
+
+Materials tab, "Import from Google Drive": give a folder link or name, list its files, check
+the kind and the "Add as" column (matches to existing materials are guesses), and import. The
+page reads each file's text with your Google Drive connector (read-only: it may only search
+and read) and stores the text for the concepts and history steps. Files stay in Drive.
+
 ## Checking links
 
 The page cannot open other websites, so links are checked by a command run where there is

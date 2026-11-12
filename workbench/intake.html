@@ -148,6 +148,11 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
   <section class="panel" id="panel-materials" role="tabpanel" hidden>
     <div class="kinds" id="kindCounts"></div>
     <div class="row"><button class="btn primary" id="addBtn">Add material</button><span class="hint">Materials can be added at any time; the readiness report updates.</span></div>
+    <details class="linkimp" id="driveImp"><summary>Import from Google Drive</summary>
+      <p class="hint">Reads the files in a Drive folder with your Google Drive connector, adds them as materials (or attaches them to matching ones) and stores their text for the next steps. Files stay in your Drive.</p>
+      <div class="row"><input type="text" id="driveFolder" placeholder="Folder link, or folder name (e.g. historia)" style="flex:1;min-width:200px"><button class="btn" id="driveList">List files</button></div>
+      <div id="driveOut" style="margin-top:8px"></div>
+    </details>
     <details class="linkimp" id="linkImp"><summary>Link check results</summary>
       <p class="hint">Web pages cannot be checked from here. Run the link check where there is internet (see <span style="font-family:var(--f-mono)">workbench/README.md</span>), then paste its JSON report below.</p>
       <textarea id="linkJson" placeholder='{"results":[{"url":"https://…","status":"ok"}]}'></textarea>
@@ -207,7 +212,7 @@ const base = (c)=>String(c||"").split("-")[0];
 const BASE_NAME = {pt:"Portuguese",en:"English",fr:"French",es:"Spanish",de:"German",it:"Italian"};
 const REQUIRED = {simulation:["link or file"], reference:["language","licence","reliability","link or file"], historical:["language","licence","reliability"], author:["language"], existing:[], person:["expertise","what they can check"]};
 function missing(m){
-  const has={"language":!!m.language,"licence":!!m.licence,"reliability":!!m.reliability,"link or file":!!(m.url||m.assetId),"expertise":!!m.role,"what they can check":!!m.checks};
+  const has={"language":!!m.language,"licence":!!m.licence,"reliability":!!m.reliability,"link or file":!!(m.url||m.assetId||m.driveId),"expertise":!!m.role,"what they can check":!!m.checks};
   return (REQUIRED[m.kind]||[]).filter(f=>!has[f]);
 }
 const LINK = {ok:["p-good","link works"], redirected:["p-good","link moved"], broken:["p-bad","link broken"], unreachable:["p-bad","link unreachable"], blocked_here:["p-info","link not checked"]};
@@ -296,9 +301,10 @@ function itemHtml(m){
   }
   const link = m.url ? `<div><a href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.url)}</a></div>` : "";
   const arch = m.link?.archiveUrl && m.link.status!=="ok" ? `<div><a href="${esc(m.link.archiveUrl)}" target="_blank" rel="noopener">Archived copy</a></div>` : "";
+  const drive = m.driveUrl ? `<div><a href="${esc(m.driveUrl)}" target="_blank" rel="noopener">Google Drive copy</a></div>` : "";
   const file = m.assetId ? `<div><a href="${esc("/_blob/"+m.assetId)}" target="_blank" rel="noopener">File: ${esc(m.fileName||"attached")}</a></div>` : "";
   const confirm = state.confirmDelete===m.id;
-  return `<div class="item"><div class="main"><div class="t">${esc(m.title||"Untitled")}</div><div class="meta">${pills.join("")}</div>${link}${arch}${file}${m.notes?`<div class="notes">${esc(m.notes)}</div>`:""}</div>
+  return `<div class="item"><div class="main"><div class="t">${esc(m.title||"Untitled")}</div><div class="meta">${pills.join("")}</div>${link}${arch}${drive}${file}${m.notes?`<div class="notes">${esc(m.notes)}</div>`:""}</div>
     <div class="acts">${confirm?`<button class="btn small danger" data-del="${esc(m.id)}">Delete for good</button><button class="btn small" data-cancel>Keep</button>`
       :`<button class="btn small" data-edit="${esc(m.id)}">Edit</button><button class="btn small" data-ask="${esc(m.id)}">Delete</button>`}</div></div>`;
 }
@@ -666,6 +672,7 @@ Rules:
 - definition: your paraphrase in English, at most 25 words. Never copy sentences from the source.
 - location: the [page N], [section: ...] or [file: ...] marker the term falls under.
 - numbers: only values the source states (angles, speeds, limits), with what they measure.
+- The text may be a web page saved as PDF: ignore menus, footers, link lists and broken ligatures.
 - One item per distinct term, at most 30 items. Do not add anything that is not in the text.
 Return JSON only: {"items":[{"term":"","definition":"","location":"","numbers":[{"what":"","value":"","unit":""}]${sim?',"measured_by":""':""}}]}
 
@@ -808,6 +815,106 @@ $("cList").addEventListener("change",async(ev)=>{
 });
 function renderConcepts(){ renderCSources(); renderCTable(); }
 
+
+// ---------- import from Google Drive ----------
+const DRIVE="Google Drive";
+const dstate={files:[], folder:null, busy:false};
+let mcp=null;
+function mcpData(r){
+  if(r?.payload && typeof r.payload==="object") return r.payload;
+  if(r?.structuredContent && typeof r.structuredContent==="object") return r.structuredContent;
+  const t=(r?.content||[]).filter(b=>b.type==="text").map(b=>b.text).join("");
+  try{ return JSON.parse(t); }catch{ return {fileContent:t}; }
+}
+function mcpMsg(e){
+  return {needs_reauth:"Reconnect Google Drive in claude.ai settings, then try again.", server_not_connected:"Google Drive is not connected for your account.", not_granted:"Access to Google Drive was not allowed for this page.", consent_required:"Allow this page to use Google Drive when asked.", rate_limited:"Too many requests; wait a minute.", blocked_by_policy:"Your organisation does not allow this."}[e?.code] || (e?.message||e?.code||String(e));
+}
+async function driveCall(tool,input){ if(!mcp) throw {code:"unavailable",message:"Google Drive is not available in this view."}; return mcpData(await mcp.callTool(DRIVE,tool,input,{cache:false})); }
+const words=(t)=>new Set(norm(String(t).replace(/\.pdf$/i,"").replace(/([a-z])([A-Z])/g,"$1 $2").replace(/[_\-–|()\[\].,:;"“”’'!?]+/g," ")).split(" ").filter(w=>w.length>3));
+function bestMatch(title){
+  // ignore words common to many titles ("tejo", "barcos"); need two distinctive shared words
+  const pool=state.materials.filter(m=>m.kind!=="person"&&m.kind!=="existing");
+  const df={}; for(const m of pool) for(const w of words(m.title)) df[w]=(df[w]||0)+1;
+  const keep=(set)=>new Set([...set].filter(w=>(df[w]||0)<4));
+  const a=keep(words(title)); let best=null, score=0;
+  for(const m of pool){ const b=keep(words(m.title)); if(!a.size||!b.size) continue;
+    let inter=0; for(const w of a) if(b.has(w)) inter++; if(inter<2) continue;
+    const sc=inter/Math.min(a.size,b.size); if(sc>score){ score=sc; best=m; } }
+  return score>=0.6?best:null;
+}
+async function driveList(){
+  const q=$("driveFolder").value.trim(); if(!q) return;
+  const out=$("driveOut"); out.innerHTML=`<span class="hint">Looking for the folder…</span>`;
+  try{
+    let folderId=(q.match(/folders\/([\w-]+)/)||[])[1];
+    if(!folderId){
+      const r=await driveCall("search_files",{query:`title contains '${q.replace(/'/g,"\\'")}' and mimeType = 'application/vnd.google-apps.folder'`, excludeContentSnippets:true, pageSize:10});
+      const fs=r.files||[];
+      if(!fs.length){ out.innerHTML=`<span class="hint">No folder named “${esc(q)}” found. Paste the folder's link instead.</span>`; return; }
+      if(fs.length>1 && !dstate.pick){ out.innerHTML=`<div class="hint">Several folders match; pick one:</div>`+fs.map(f=>`<div><button class="btn small" data-folder="${esc(f.id)}">${esc(f.title)}</button> <a href="${esc(f.viewUrl||"#")}" target="_blank" rel="noopener" class="hint">open</a></div>`).join(""); return; }
+      folderId=fs[0].id;
+    }
+    await listFolder(folderId);
+  }catch(e){ out.innerHTML=`<span class="pill p-bad">error</span> ${esc(mcpMsg(e))}`; }
+}
+async function listFolder(folderId){
+  const out=$("driveOut"); out.innerHTML=`<span class="hint">Listing files…</span>`;
+  let files=[], token;
+  do{ const r=await driveCall("search_files",{query:`parentId = '${folderId}'`, excludeContentSnippets:true, pageSize:100, ...(token?{pageToken:token}:{})});
+      files=files.concat((r.files||[]).filter(f=>f.mimeType!=="application/vnd.google-apps.folder")); token=r.nextPageToken; if(!(r.files||[]).length) break; }while(token);
+  dstate.folder=folderId;
+  dstate.files=files.map(f=>{ const already=state.materials.find(m=>m.driveId===f.id); const match=already||bestMatch(f.title);
+    return {...f, use:!already, kind:"historical", target: match?match.id:"__new", already:!!already}; });
+  renderDrive();
+}
+function renderDrive(){
+  const out=$("driveOut"); if(!dstate.files.length){ out.innerHTML=`<span class="hint">The folder has no files.</span>`; return; }
+  const kindOpt=(v)=>["historical","reference","author","simulation","existing"].map(k=>`<option value="${k}"${k===v?" selected":""}>${esc(KINDS[k].label)}</option>`).join("");
+  const mats=state.materials.filter(m=>m.kind!=="person").sort((a,b)=>String(a.title).localeCompare(String(b.title)));
+  out.innerHTML=`<div style="overflow-x:auto"><table class="members"><tr><th></th><th>File</th><th>Kind</th><th>Add as</th></tr>
+    ${dstate.files.map((f,i)=>`<tr><td><input type="checkbox" data-duse="${i}"${f.use?" checked":""} aria-label="Import ${esc(f.title)}"></td>
+      <td>${esc(f.title)}<div class="hint">${f.fileSize?Math.round(f.fileSize/1024).toLocaleString()+" KB":""}${f.already?" · already imported":""}</div></td>
+      <td><select data-dkind="${i}">${kindOpt(f.kind)}</select></td>
+      <td><select data-dtarget="${i}"><option value="__new"${f.target==="__new"?" selected":""}>A new material</option>${mats.map(m=>`<option value="${esc(m.id)}"${m.id===f.target?" selected":""}>${esc(m.title.slice(0,70))}</option>`).join("")}</select></td></tr>`).join("")}</table></div>
+    <div class="row" style="margin-top:8px"><button class="btn primary" id="driveImport"${dstate.busy?" disabled":""}>Import ${dstate.files.filter(f=>f.use).length} files</button><span class="hint" id="driveState">Matches to existing materials are guesses; check the “Add as” column.</span></div>`;
+}
+async function driveImport(){
+  const todo=dstate.files.filter(f=>f.use); if(!todo.length) return;
+  dstate.busy=true; $("driveImport").disabled=true; const failed=[]; let n=0;
+  for(const f of todo){
+    $("driveState").textContent=`Reading ${f.title} (${n+1} of ${todo.length})…`;
+    try{
+      const d=await driveCall("read_file_content",{fileId:f.id});
+      let text=String(d.fileContent||"").trim(); if(text.length<50) throw {message:"no text came back (a scan?)"};
+      const MAX=200000, truncated=text.length>MAX; if(truncated) text=text.slice(0,MAX);
+      const now=new Date().toISOString(); let id=f.target;
+      if(id==="__new"){
+        id="m"+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+        const mat={kind:f.kind, title:f.title.replace(/\.pdf$/i,"").replace(/_/g," "), url:"", driveId:f.id, driveUrl:f.viewUrl||"", read:"full", describesExisting:false, notes:"Imported from Google Drive.", createdAt:now, updatedAt:now};
+        if(db) await db.doc("materials/"+id).set(mat); else state.materials.push({id,...mat});
+      } else {
+        const upd={driveId:f.id, driveUrl:f.viewUrl||"", read:"full", updatedAt:now};
+        if(db) await db.doc("materials/"+id).update(upd); else Object.assign(state.materials.find(m=>m.id===id),upd);
+      }
+      const tdoc={text, chars:text.length, method:"drive", extractedAt:now, driveId:f.id, ...(truncated?{truncated:true}:{})};
+      cstate.texts[id]=tdoc; await saveDoc("texts/"+id, tdoc);
+      f.use=false; f.already=true; f.target=id; n++;
+    }catch(e){ failed.push(`${f.title}: ${mcpMsg(e)}`); if(["needs_reauth","server_not_connected","not_granted","blocked_by_policy","unavailable"].includes(e?.code)) break; }
+  }
+  dstate.busy=false; renderDrive();
+  $("driveState").textContent=`Imported ${n} of ${todo.length}.`+(failed.length?` Problems: ${failed.join("; ")}`:"");
+  if(!db) renderAll();
+}
+$("driveList").addEventListener("click",driveList);
+$("driveOut").addEventListener("click",async(ev)=>{ const b=ev.target.closest("button"); if(!b) return;
+  if(b.dataset.folder){ try{ await listFolder(b.dataset.folder); }catch(e){ $("driveOut").textContent=mcpMsg(e); } }
+  else if(b.id==="driveImport") driveImport(); });
+$("driveOut").addEventListener("change",(ev)=>{ const t=ev.target, ds=t.dataset;
+  if(ds.duse) dstate.files[+ds.duse].use=t.checked;
+  if(ds.dkind) dstate.files[+ds.dkind].kind=t.value;
+  if(ds.dtarget) dstate.files[+ds.dtarget].target=t.value;
+  if(ds.duse) renderDrive(); });
+
 // ---------- boot ----------
 function renderAll(){ renderProject(); renderMaterials(); renderForm(); if(!$("panel-readiness").hidden) renderReadiness(); if(!$("panel-concepts").hidden) renderConcepts(); }
 renderAll();
@@ -816,7 +923,7 @@ try{ const t=localStorage.getItem("intake.tab"); if(t) showTab(t); }catch{}
 (async()=>{
   const c=window.claude;
   if(!c?.use){ localOnly=true; assetsChecked=true; $("localBanner").hidden=false; setSave("Not saved (this view)"); if($("f-store")) $("f-store").textContent=storeHint(); return; }
-  [db,assets,downloads,sample]=await Promise.all(["db","assets","downloads","sample"].map(n=>c.use(n).catch(()=>null)));
+  [db,assets,downloads,sample,mcp]=await Promise.all(["db","assets","downloads","sample","mcp"].map(n=>c.use(n).catch(()=>null)));
   assetsChecked=true;
   if($("f-store")) $("f-store").textContent=storeHint();
   if(!db){ localOnly=true; $("localBanner").hidden=false; setSave("Not saved (this view)"); return; }
