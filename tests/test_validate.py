@@ -11,7 +11,7 @@ from tagus_narrative.validate import find_schema, main, validate_files
 
 ROOT = Path(__file__).resolve().parents[1]
 SCHEMA = ROOT / "schema" / "line-record.schema.json"
-EXAMPLE = ROOT / "examples" / "cat-03-turn-02.json"
+EXAMPLE = ROOT / "domains" / "sailing" / "examples" / "cat-03-turn-02.json"
 
 
 def test_example_record_is_valid() -> None:

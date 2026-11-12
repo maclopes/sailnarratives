@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Refresh vendor/fragateiro-physics from a fragateiro checkout (read-only use of the game).
-# Usage: scripts/sync-fragateiro.sh /path/to/fragateiro
+# Refresh domains/sailing/vendor/fragateiro-physics from a fragateiro checkout (read-only use of the game).
+# Usage: domains/sailing/scripts/sync-fragateiro.sh /path/to/fragateiro
 set -euo pipefail
 src="${1:?path to a fragateiro checkout}"
 dest="$(cd "$(dirname "$0")/.." && pwd)/vendor/fragateiro-physics"

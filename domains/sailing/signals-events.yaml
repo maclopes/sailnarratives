@@ -1,4 +1,5 @@
-# Game physics model: what the runtime can observe, what it derives, and the events it emits.
+# Sailing pack: signals, derived quantities, events and difficulty factors for the generic
+# tool. Thresholds are implemented in adapter/observer/config.ts.
 # Reference game: TagusNavyVirtualMuseum/fragateiro (src/physics, src/world). Read-only: we do
 # not change the game. Thresholds are first guesses from the physics and the game's drills;
 # tune them with recorded play.

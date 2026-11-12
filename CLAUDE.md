@@ -1,17 +1,17 @@
-# Project: narrative engine for the Tagus sailing game
+# Project: a tool for grounded narrative in simulation-based learning games
 
-Goal: a toolchain that helps a researcher create, ground, verify and ship short narrative lines for a sailing game about the heritage boats of the Tagus (and the Azores whaling boat). Output is a reviewed JSON line bank (PT/EN/FR) that the game (Unity now, web later) selects from at runtime. No live LLM calls in the game.
+Goal: a generic tool that helps one author create, ground, verify and time short narrative lines
+for a simulation-based learning game in a museum. Output is a reviewed line bank (PT/EN first)
+that the game selects from at runtime. No live LLM calls in the game.
 
-Scope: build the tool, not the narrative. The tool proposes drafts (concepts, sources, mission
-skeletons, candidate lines); people curate and approve them. Do not author story content.
+Scope: build the tool, not the narrative, and keep the tool generic. Everything specific to one
+subject lives in a domain pack under domains/ (manifest: domain.yaml). The first pack is
+domains/sailing (traditional Tagus boats, the fragateiro web game, read-only). The tool proposes
+drafts; the author curates them. Do not author story content.
 
-Components (see docs/system-design.md)
-1. Game physics model: signals, derived quantities, events and a challenge level, read from the
-   game's simulator (reference: TagusNavyVirtualMuseum/fragateiro, src/physics; read-only).
-2. Concepts to learn: bootstrapped from the physics model and the author's documents, then curated.
-3. Sources: a graded, licence-aware registry that is the only database lines may cite.
-4. Bootstrap of missions and general concepts from the game's mission definitions.
-5. Challenge-aware runtime: never talk during a difficult moment; speak in calm windows.
+Design (docs/system-design.md): three knowledge bases (simulation, concepts, history), three
+links between them, situations where all three agree, and a report of missing and contradictory
+information. Runtime: lines timed by difficulty (never talk during a hard moment).
 
 Principles
 - Story first, retrieval second: characters, arcs and beats are authored in YAML; retrieval supplies true detail for each beat.
@@ -27,8 +27,9 @@ Layout (create as needed)
 - schema/        JSON schemas (line-record.schema.json is the contract)
 - pipeline/      ingest, index, retrieve, generate, verify
 - review/        review tool and exports
-- runtime/       selector library used by the game (TypeScript, no dependencies)
+- runtime/       generic runtime library used by the game (TypeScript, no dependencies)
 - tests/         unit tests and golden examples
-- docs/          method doc, story bible, discussion summary
+- docs/          generic design, plan, related work
+- domains/       domain packs (sailing first): adapter, vocabulary, vendored simulation, author documents
 
 Conventions: Python 3.11+ for the pipeline, TypeScript for runtime, pytest and vitest, type hints, small functions, README per folder. Keep the LLM and embedding providers behind interfaces so they can be swapped. Never commit API keys.

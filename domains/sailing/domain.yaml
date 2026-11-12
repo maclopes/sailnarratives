@@ -1,0 +1,38 @@
+# Domain pack manifest. The generic tool reads this to know what the domain provides.
+# A second domain needs only its own folder with a manifest like this one.
+
+id: sailing
+name: Traditional boats of the Tagus
+status: first pack, in design
+languages: {primary: pt, also: [en], later: [fr]}
+
+simulation:
+  game: TagusNavyVirtualMuseum/fragateiro (web)
+  code: vendor/fragateiro-physics      # CC0 copy, read-only; refresh with scripts/sync-fragateiro.sh
+  adapter: adapter/observer            # simulation state -> frames -> events and difficulty
+  vocabulary: signals-events.yaml      # signals, derived quantities, events, difficulty factors
+  limits: [no current, no tide, no rowing]
+
+concepts:
+  kinds: [sailing, heritage]
+  references: training books in pt and en (to be registered as sources)
+
+history:
+  unit: practice                       # who, boat, place, period, conditions, actions, quantities
+  sources: registry (to be created from docs/method-tagus-boats-game.md, "Source library")
+
+author_documents:                      # inputs written by the author
+  - docs/method-tagus-boats-game.md
+  - docs/story-bible-catraio-baleeiro.md
+  - docs/discussion-summary.md
+  - docs/leaflet/
+
+held_out_for_blind_test:               # describe the game's existing mini-games; not used as inputs
+  - docs/leaflet/
+  - docs/story-bible-catraio-baleeiro.md
+  - docs/discussion-summary.md
+  - docs/method-tagus-boats-game.md#minigame-sections
+  - game: content/minigames.json and src/world/missions.ts
+
+feedback:
+  game_developers: issue drafts for disagreements between history and the game's physics

@@ -1,0 +1,11 @@
+# Sailing pack: traditional boats of the Tagus
+
+First domain pack for the tool. Manifest: `domain.yaml`.
+
+- `adapter/observer/`: turns the game's physics state into frames, events and a difficulty level
+  (parked draft, untested).
+- `signals-events.yaml`: the vocabulary of signals, derived quantities, events and difficulty
+  factors.
+- `vendor/fragateiro-physics/`: unmodified CC0 copy of the game's physics.
+- `docs/`: the author's documents (method doc, story bible, discussion summary, leaflet).
+- `examples/`: example line records.

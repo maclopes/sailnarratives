@@ -1,15 +1,15 @@
-# sailnarratives: narrative engine for the Tagus sailing game
+# sailnarratives: a tool for grounded narrative in learning games
 
-An offline toolchain that helps a researcher create, ground, verify and ship short
-narrative lines for a sailing game about the heritage boats of the Tagus (and the Azores
-whaling boat). The output is a reviewed JSON line bank (PT/EN/FR). The game (Unity now,
-web later; see the TagusNavyVirtualMuseum repository) selects lines from it at runtime by
-sailing triggers such as a tack, being in irons or reaching the dock. The game makes no
-live LLM calls.
+A generic tool that helps one author build short, grounded and well-timed narrative for a
+simulation-based learning game in a museum. It links three kinds of evidence (what the
+simulation can do, what is to be learned, what history records), proposes situations where they
+agree, reports missing and contradictory information, and derives activities, story beats and
+lines for the author to curate. At runtime, lines are timed by difficulty.
 
-Story first, retrieval second: characters and arcs are written by hand
-(`docs/story-bible-catraio-baleeiro.md`); retrieval supplies the true detail for each beat;
-every factual claim carries source IDs; invented colour is marked fictional.
+Everything specific to a subject lives in a domain pack under `domains/`. The first pack is
+`domains/sailing`: traditional boats of the Tagus and the fragateiro web game.
+
+Design: `docs/system-design.md`. Plan: `docs/tool-plan.md`. Related work: `docs/related-work.md`.
 
 ## Pipeline stages
 
@@ -26,15 +26,15 @@ every factual claim carries source IDs; invented colour is marked fictional.
 | Runtime | `runtime/` | Deterministic TypeScript selector (and a C# description) | prompt 07 |
 | Evaluation | `tests/eval`, `docs/evaluation.md` | Faithfulness, coverage, parity, trivia score; player study protocol | prompt 08 |
 
-Implemented so far: the scaffold and the line-record validator (prompt 01).
+Implemented so far: the scaffold and the line-record validator (prompt 01). The stages below come from the original kit and will be regrouped around the design's three bases.
 
 ## Layout
 
 ```
 CLAUDE.md        project rules for Claude Code
-docs/            method doc, story bible, discussion summary, related work, leaflets
+docs/            generic design, plan and related work
+domains/         domain packs; sailing/ holds the adapter, vendored game physics and author documents
 schema/          JSON schemas; line-record.schema.json is the contract
-examples/        example line records
 prompts/         the staged build prompts 00 to 08
 corpus/          raw sources (corpus/raw/) and the chunk store
 story/           mission, cast and trigger YAML
@@ -67,7 +67,7 @@ Checks `.json` (one record or a list) and `.jsonl` files against
 `schema/line-record.schema.json` and reports errors by line id, including duplicate ids.
 
 ```bash
-make validate FILES="examples/*.json lines/draft/*.json"
+make validate FILES="domains/*/examples/*.json lines/draft/*.json"
 ```
 
 ```bash

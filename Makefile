@@ -33,9 +33,10 @@ lint-py:
 
 lint-ts:
 	cd runtime && npm run lint
+	runtime/node_modules/.bin/tsc -p domains/sailing/tsconfig.json
 
 # Validate line files: make validate FILES="lines/draft/*.json"
-FILES ?= examples/*.json
+FILES ?= domains/*/examples/*.json
 validate:
 	$(PY) -m tagus_narrative.validate $(FILES)
 

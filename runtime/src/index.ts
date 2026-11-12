@@ -1,8 +1,6 @@
-// Runtime for the Tagus sailing game: no dependencies, no LLM calls.
-// observer/: reads the physics each step and reports events and the challenge level.
-// The challenge-aware scheduler (phase 2) builds on it.
-
-export * from './observer';
+// Generic runtime: no dependencies, no LLM calls. Domain packs supply the adapter that turns
+// a simulation's state into events and a difficulty level (see domains/sailing/adapter).
+// The scheduler that times lines by difficulty will live here.
 
 export type Beat = "setup" | "complication" | "turn" | "close" | "epilogue" | "generic";
 export type Status = "draft" | "verified" | "reviewed" | "approved";

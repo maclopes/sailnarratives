@@ -1,130 +1,108 @@
 # System design
 
-Draft 2, 2026-11-12. Replaces draft 1 (five components). Scope: this repository builds a tool
-for one author. The tool proposes drafts; the author curates them. It writes no story of its own.
+Draft 3, 2026-11-12. A generic tool with domain packs; sailing on the Tagus is the first pack.
+The tool proposes drafts and one author curates them. It writes no story of its own.
 
-## The idea in one paragraph
+## What the tool does
 
-Three knowledge bases, each built from its own evidence: what the game's **physics** can
-simulate, what **concepts** a visitor should learn, and what **history** says people did. The
-tool links them, and where all three links hold it proposes a **situation**: a historical
-practice that exercises a concept and that the game can reproduce. Activities (mini-game
-proposals), story beats and lines are derived from situations. Along the way the tool reports
-what is missing and what contradicts, as research questions.
+It helps an author build short, grounded narrative for a simulation-based learning game, for
+museums. It starts from three kinds of evidence, links them, proposes situations where all three
+agree, and reports what is missing or contradictory. From situations it derives activity
+proposals, story beats and lines, and at runtime it times lines by how hard the moment is.
 
-```
-  Physics (game code)      Concepts (training books + physics)      History (accounts)
-        │                          │                                      │
-        └── can show/measure? ─────┤                                      │
-                                   ├── which concept does it exercise? ───┤
-        └──────────────── can the game reproduce it? ─────────────────────┘
-                                   ▼
-                              Situations  ──►  activities, story beats, lines
-                                   │
-                                   └──►  missing and contradictory information
-```
+Nothing in the tool is specific to one subject. Everything specific lives in a domain pack.
 
-## Context: museums
+## Generic tool and domain pack
 
-Visits are short, so activities last a few minutes and lines are short. Situations may simplify
-history (no tide, no crew, one boat). Each simplification is recorded, and a line may
-acknowledge it ("on the real river the tide decided when you left"), so a simplified game stays
-honest.
+| Part | Generic tool | Supplied by the domain pack |
+| --- | --- | --- |
+| Simulation base | Adapter interface; a rule engine that turns named signals into derived quantities, events and a difficulty level; a scenario runner | The adapter for its simulation, the vocabulary (signals, quantities, events, difficulty factors) and thresholds, the simulation's known limits |
+| Concepts base | Concept schema (terms per language, kind, prerequisites, evidence rules over events), proposal and curation | Reference books, the concept kinds it uses |
+| History base | Practice schema (actor, object, place, period, conditions, actions, quantities) with evidence passages; extraction and curation | The sources |
+| Links, situations, questions | All generic | Nothing |
+| Runtime | A scheduler that plays lines by difficulty and calm windows | Thresholds tuned for the domain |
+| Interface | Generic screens | Optional views (for sailing: polar diagram, boat track) |
+| Author documents | Read as inputs or held out | The documents themselves |
 
-## 1. The three knowledge bases
+A pack is a folder under `domains/` with a manifest, `domain.yaml`. Test of generality: a second
+domain (for example a historical mill or a steam engine simulation) should need only a new pack,
+with no change to the tool. We will not build it now, but each design choice should pass that
+thought experiment.
+
+## 1. Three knowledge bases
 
 | Base | Items | Built from | Bootstrap |
 | --- | --- | --- | --- |
-| Physics | Capabilities: for each boat and wind, the states and manoeuvres the game produces (points of sail, tack, gybe, stall, heel, drift athwart in the muleta's fishing mode) and its limits (no current, no tide, no rowing) | The vendored game physics, exercised by scripted scenarios | Automatic |
-| Concepts | Sailing concepts and general concepts, with PT/EN terms, prerequisites, and evidence rules tied to physics events | Training books (PT, EN), the physics model, the author's documents | Proposed, then curated |
-| History | Practices: who, boat, place, period, conditions, sequence of actions, numbers. Each practice is supported by evidence passages from sources | Historical accounts in the source registry | Extracted as drafts, then curated |
+| Simulation | Capabilities: what the simulation produces for each configuration, and its limits | The simulation code, exercised by scenarios | Automatic, through the adapter |
+| Concepts | What to learn: terms, prerequisites (which set the order), evidence rules | Reference books, the simulation base, author documents | Proposed, then curated |
+| History | Practices, each backed by evidence passages | Historical accounts in the source registry | Extracted as drafts, then curated |
 
-A practice is the unit of history, and passages are its evidence. Several passages can support
-the same practice, or contradict each other about it.
+A practice is the unit of history and passages are its evidence; several passages can support or
+contradict the same practice.
 
-## 2. The three links
+## 2. Three links
 
 | Link | Question | Result |
 | --- | --- | --- |
-| Concept to physics | Can the game show this concept and measure it? | An evidence rule, or a game gap (for example tide) |
-| Practice to concept | Which concept does this action exercise? | A mapping, marked as interpretation (the sources describe work, not technique) |
-| Practice to physics | Can the game reproduce what the source describes? | A scenario run with expected ranges, and a verdict: reproduces, partly, cannot (with the simplification) |
+| Concept to simulation | Can the simulation show this concept and measure it? | An evidence rule, or a simulation gap |
+| Practice to concept | Which concept does this action exercise? | A mapping, marked as interpretation |
+| Practice to simulation | Can the simulation reproduce what the source describes? | A scenario run and a verdict: reproduces, partly, cannot (with the simplification) |
 
 ## 3. Scenarios
 
-A scenario is the runnable form of a manoeuvre or a practice: a sequence of goals (hold a
-point of sail, tack, stop alongside, drift athwart) with a boat, a wind and expected outcomes.
-It records its origin:
+The runnable form of a manoeuvre or a practice: a sequence of goals with a configuration and
+expected outcomes. Origins: reference-book exercises (to test the adapter and the evidence
+rules) and historical practices (to check the simulation against history). Real play will not be
+recorded, so timing is calibrated on scenarios run by a scripted operator with skill levels and
+noise, plus the author's judgement.
 
-- training-book manoeuvres: the catalogue used to test the physics observer and the concepts'
-  evidence rules;
-- historical practices: to check the game against history;
-- recorded play (later): to calibrate thresholds and timing against real visitors.
+## 4. Situations and what is derived
 
-## 4. Situations and what is derived from them
-
-A situation joins one practice, one or more concepts, and a feasible scenario, plus the list of
-simplifications. From it the tool proposes:
-
-- an **activity** (a mini-game proposal): goal, success rule, length within the museum budget,
-  the challenge profile and the calm windows (talk budget);
-- **story beats** from the practice: people, purpose, place, period, true details;
-- **lines**, through the kit's pipeline (retrieve, generate, verify, review).
-
-Order: concepts drive it. The prerequisite graph gives the progression, and activities are
-placed along it.
+A situation joins a practice, its concepts and a feasible scenario, with its simplifications.
+Short museum visits allow simplified perspectives; each simplification is recorded and a line
+may name it. From a situation the tool proposes an activity (goal, success rule, length within
+the visit budget, difficulty profile, talk budget), story beats from the practice, and lines
+through the line pipeline (retrieve, generate, verify, review). Concepts drive the order.
 
 ## 5. Missing and contradictory information
 
-A first-class output, because filling it is most of the research work.
+| Kind | Goes to |
+| --- | --- |
+| Missing field in a practice | A source search, or the historian |
+| Conflict between passages | The historian, both passages side by side |
+| History against simulation | The game's developers, as an issue draft |
+| Concept without evidence in the simulation | The game's developers, or the concept leaves scope |
+| Concept against history (modern terms on old practice) | The author |
 
-| Kind | Example | Goes to |
-| --- | --- | --- |
-| Missing field in a practice | The catraio's rig and size are unsourced | A source search, or the historian |
-| Conflict between passages | Crew of three in one source, three to five in another; 1785 against 1875 | The historian, with both passages side by side |
-| History against physics | A practice the game boat cannot reproduce, or reproduces at implausible speed | The author: a game gap, a tuning issue or a doubtful source |
-| Concept without evidence | A concept the game cannot show or measure | A game gap, or the concept leaves scope |
-| Concept against history | Modern technique or terms applied to a historical boat | The author or a sailor |
+The tool exports a review sheet for one source (the historian will check a single PDF), and
+issue drafts for the game's developers.
 
-Each item becomes a research question with its evidence attached. Since one historian will
-check a particular PDF, the tool can export the questions and claims tied to that one source as
-a short review sheet.
+## 6. Blind test against the game's existing activities
 
-## 6. Does the tool rediscover the game's mini-games?
+The pack lists what describes the game's existing mini-games, and those inputs are held out.
+The tool derives activities blind; then we compare: same practice and concept, different
+activity for the same practice, missed, or new.
 
-The game already has mini-games. We ignore them while designing, and use them later as a test:
-derive activities blind, then compare.
+## 7. Runtime
 
-- Held out from the inputs: the game's mini-game definitions, and every document that describes
-  them (the leaflet, the mini-game parts of the method doc and of the discussion summary, the
-  story bible).
-- Inputs allowed: the physics, the training books, and the historical sources.
-- Comparison: for each existing mini-game, did the tool propose a similar activity (same
-  practice and concept), a different one for the same practice, or nothing? And what did the
-  tool propose that the game lacks?
+The game feeds the pack's adapter each step; the adapter's rules give events and a difficulty
+level; the generic scheduler plays cues during difficulty, story lines in calm windows, and
+reflections right after a difficulty ends. Delivery is mostly text, voice optional.
 
-This tests whether the method is systematic, rather than tuned to what already exists.
+## Decisions
 
-## 7. At runtime: challenge-aware timing
+- Generic tool, domain packs; sailing (fragateiro, web) is the first pack.
+- Mostly text, voice later. Portuguese and English first.
+- One operator; a historian may check one PDF.
+- Concepts drive the order. Simplifications allowed, recorded, nameable in dialogue.
+- No recording of real play.
+- Disagreements between history and the simulation are reported to the game's developers.
+- Existing mini-games held out, used for a blind comparison.
 
-Unchanged from draft 1. The game feeds the observer each physics step; it computes events and a
-challenge level (0 to 1); lines play only in calm windows; cues may play during difficulty;
-reflections play right after it. Delivery is mostly text, with voice as an option (voice length
-replaces reading time). Thresholds live in `runtime/src/observer/config.ts` and are documented in
-`knowledge/game-physics.yaml`.
+## Still to generalise
 
-## Decisions so far
-
-- Target game: the web version (fragateiro) only.
-- Delivery: mostly text; voice later.
-- Languages: Portuguese and English first; French later.
-- One person operates the tool; a historian may check one specific PDF.
-- Concepts drive the order.
-- Situations may simplify; simplifications are recorded and may be named in dialogue.
-- Mini-games are ignored for now and used later as a blind comparison.
-
-## Open questions
-
-- Recording real play in the museum (consent notice, anonymous logs).
-- When history and physics disagree, report to the fragateiro developers or only record it?
-- Which training books: titles and editions in PT and EN.
+- The line-record schema has sailing fields (`boat`, `zone`, `mission`); they become generic
+  (`entity`, `place`, `activity`) with the pack naming them.
+- The sailing adapter (`domains/sailing/adapter/observer`) mixes the generic rule engine with
+  sailing rules; it will be split into the generic engine in `runtime/` and the sailing rules in
+  the pack.
