@@ -566,7 +566,7 @@ ${JSON.stringify(payload)}`;
 // ---------- concepts ----------
 const cstate={texts:{}, cands:{}, set:null, running:false, filter:"all", use:null, pasteFor:null, renaming:null};
 const PDFJS="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/";
-const CHUNK=12000;
+const CHUNK=6000;
 const SHORT=(m)=>String(m?.title||"").split(/[,:(]/)[0].trim().slice(0,30)||"source";
 const norm=(t)=>String(t||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/["'“”‘’]/g,"").replace(/\s+/g," ").trim();
 const CSTATUS={
@@ -666,7 +666,7 @@ Rules:
 - definition: your paraphrase in English, at most 25 words. Never copy sentences from the source.
 - location: the [page N], [section: ...] or [file: ...] marker the term falls under.
 - numbers: only values the source states (angles, speeds, limits), with what they measure.
-- One item per distinct term. Do not add anything that is not in the text.
+- One item per distinct term, at most 30 items. Do not add anything that is not in the text.
 Return JSON only: {"items":[{"term":"","definition":"","location":"","numbers":[{"what":"","value":"","unit":""}]${sim?',"measured_by":""':""}}]}
 
 Text:
@@ -692,20 +692,30 @@ async function findConcepts(){
   if(cstate.set?.concepts?.length && !findConcepts.confirmed){ findConcepts.confirmed=true; $("cRun").textContent="This replaces the current concept table and its decisions. Press Find concepts again to go ahead."; return; }
   findConcepts.confirmed=false;
   cstate.running=true; renderCSources();
-  const plan=srcs.map(m=>({m,parts:chunks(cstate.texts[m.id].text)})); const total=plan.reduce((k,x)=>k+x.parts.length,0)+1; let done=0;
+  const plan=srcs.map(m=>({m,parts:chunks(cstate.texts[m.id].text)}));
+  const total=plan.reduce((k,x)=>k+x.parts.length,0)+1; let done=0; const skipped=[];
   const prog=(t)=>$("cRun").textContent=`${t} (step ${Math.min(done+1,total)} of ${total})`;
+  const fatal=(e)=>e?.code==="not_granted"||e?.code==="rate_limited"||e?.code==="unavailable";
   try{
     for(const {m,parts} of plan){
-      const items=[];
+      const chars=cstate.texts[m.id].chars;
+      // resume: keep parts already read from the same text
+      const prev=cstate.cands[m.id];
+      const raw = prev && prev.textChars===chars && prev.partsTotal===parts.length && Array.isArray(prev.raw) ? prev.raw.slice() : [];
+      const doneParts = prev && prev.textChars===chars && prev.partsTotal===parts.length && Array.isArray(prev.partsDone) ? new Set(prev.partsDone) : new Set();
       for(let i=0;i<parts.length;i++){
+        if(doneParts.has(i)){ done++; continue; }
         prog(`Reading ${SHORT(m)}${parts.length>1?`, part ${i+1} of ${parts.length}`:""}`);
-        const r=await sample.json(extractPrompt(m,parts[i],i+1,parts.length),{modelTier:"default"}); done++;
-        for(const it of (Array.isArray(r?.items)?r.items:[])) if(it&&it.term) items.push(it);
+        let r=null;
+        for(let attempt=0; attempt<2 && r===null; attempt++){
+          try{ r=await sample.json(extractPrompt(m,parts[i],i+1,parts.length),{modelTier:"default"}); }
+          catch(e){ if(fatal(e)) throw e; if(attempt===1) skipped.push(`${SHORT(m)} part ${i+1} (${e.code||e.message||"error"})`); }
+        }
+        done++;
+        if(r){ for(const it of (Array.isArray(r?.items)?r.items:[])) if(it&&it.term) raw.push({...it, _part:i}); doneParts.add(i); }
+        const doc=buildCandDoc(m, raw, chars, parts.length, [...doneParts]);
+        cstate.cands[m.id]=doc; await saveDoc("candidates/"+m.id, doc);
       }
-      const seen=new Map(); for(const it of items){ const k=norm(it.term); if(k&&!seen.has(k)) seen.set(k,it); }
-      const list=[...seen.values()].map((it,n)=>({id:`${m.id}:${n+1}`, term:String(it.term).slice(0,120), definition:String(it.definition||"").slice(0,300), location:String(it.location||"").slice(0,60), numbers:Array.isArray(it.numbers)?it.numbers.slice(0,6).map(x=>({what:String(x?.what||"").slice(0,80),value:String(x?.value??"").slice(0,30),unit:String(x?.unit||"").slice(0,20)})):[], measured_by:it.measured_by?String(it.measured_by).slice(0,200):""}));
-      const doc={sourceId:m.id, title:m.title, kind:m.kind, lang:m.language||"", items:list, runAt:new Date().toISOString()};
-      cstate.cands[m.id]=doc; await saveDoc("candidates/"+m.id, doc);
     }
     prog("Grouping the candidates across sources");
     const flat=plan.flatMap(({m})=>(cstate.cands[m.id]?.items||[]).map(x=>({id:x.id, source:SHORT(m), kind:KINDS[m.kind].label, lang:m.language||"", term:x.term, definition:x.definition, numbers:x.numbers})));
@@ -718,14 +728,19 @@ async function findConcepts(){
     for(const x of flat) if(!used.has(x.id)) concepts.push({id:"c"+(concepts.length+1), label:x.term, members:[x.id], conflicts:[], decision:"draft"});
     cstate.set={concepts, sources:plan.map(x=>x.m.id), createdAt:new Date().toISOString()};
     await saveDoc("concepts/current", cstate.set);
-    $("cRun").textContent=`Done: ${concepts.length} concepts from ${flat.length} candidates.`;
+    $("cRun").textContent=`Done: ${concepts.length} concepts from ${flat.length} candidates.`+(skipped.length?` Could not read: ${skipped.join("; ")}. Press Find concepts again to retry those parts.`:"");
   }catch(e){
-    $("cRun").textContent = e.code==="not_granted" ? "Asking Claude is not allowed in this view." : e.code==="rate_limited" ? "Too many requests just now. Wait a minute and run again." : "Stopped: "+(e.message||e.code||e);
+    $("cRun").textContent = (e.code==="not_granted" ? "Asking Claude is not allowed in this view." : e.code==="rate_limited" ? "Too many requests just now. Wait a minute and run again." : "Stopped: "+(e.message||e.code||e))+" What was read so far is kept; Find concepts continues from there.";
   }
   cstate.running=false; renderCSources(); renderCTable();
 }
 $("cFind").addEventListener("click",findConcepts);
 
+function buildCandDoc(m, raw, chars, partsTotal, partsDone){
+  const seen=new Map(); for(const it of raw){ const k=norm(it.term); if(k&&!seen.has(k)) seen.set(k,it); }
+  const items=[...seen.values()].map((it,n)=>({id:`${m.id}:${n+1}`, term:String(it.term).slice(0,120), definition:String(it.definition||"").slice(0,300), location:String(it.location||"").slice(0,60), numbers:Array.isArray(it.numbers)?it.numbers.slice(0,6).map(x=>({what:String(x?.what||"").slice(0,80),value:String(x?.value??"").slice(0,30),unit:String(x?.unit||"").slice(0,20)})):[], measured_by:it.measured_by?String(it.measured_by).slice(0,200):""}));
+  return {sourceId:m.id, title:m.title, kind:m.kind, lang:m.language||"", items, raw, textChars:chars, partsTotal, partsDone, runAt:new Date().toISOString()};
+}
 function candIndex(){
   const idx={};
   for(const d of Object.values(cstate.cands)) for(const x of d.items||[]){ const m=state.materials.find(y=>y.id===d.sourceId); idx[x.id]={...x, sourceId:d.sourceId, kind:m?.kind||d.kind, lang:m?.language||d.lang, title:m?.title||d.title}; }
