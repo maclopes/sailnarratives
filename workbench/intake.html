@@ -192,7 +192,7 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
     <p class="sub">The concepts base. Claude reads each chosen source and lists candidate concepts in the source's own words, then groups them across sources and languages. The tool marks where sources agree, where they conflict, and what is missing or cannot be shown in the simulation. Everything is a draft until you accept it.</p>
     <h2 style="margin-top:18px">Sources</h2>
     <div id="cSources"></div>
-    <div class="row" style="margin-top:12px"><button class="btn primary" id="cFind">Find concepts</button><span class="hint" id="cRun"></span></div>
+    <div class="row" style="margin-top:12px"><button class="btn primary" id="cFind">Find concepts</button><button class="btn" id="cClear">Clear the table</button><span class="hint" id="cRun"></span></div>
     <div class="section">
       <div class="row" style="justify-content:space-between"><h2>Concepts</h2><span class="hint" id="cMeta"></span></div>
       <div class="chips" id="cChips"></div>
@@ -692,6 +692,21 @@ Return JSON only: {"items":[{"term":"","definition":"","location":"","numbers":[
 Text:
 ${chunk}`;
 }
+function assignPrompt(concepts, batch, byId, meaningLen=70){
+  const meaning=(c)=>{ const x=c.members.map(id=>byId[id]).find(Boolean); return x?String(x.definition).slice(0,meaningLen):""; };
+  const known=concepts.map(c=>({id:c.id, label:c.label, meaning:meaning(c)}));
+  return `You place new candidate concepts into an existing list of concepts about ${state.project.subject||"one subject"}, for a learning game in a museum.
+
+Existing concepts (id, label, meaning):
+${JSON.stringify(known)}
+
+New candidates (id, source, kind, language variant, term as written, meaning, stated numbers):
+${JSON.stringify(batch)}
+
+For each candidate: if it means the same as an existing concept, give that concept's id. Otherwise give a short English label for a new concept; candidates in this batch that mean the same thing get the same new label. Group by meaning, never by spelling: the same word can mean different things in different sources or language variants. Historical accounts often name places, events, people, cargoes or regulations rather than skills; place them too, as new concepts when needed.
+Also report real conflicts between a candidate and the concept it joins: different numbers for the same quantity, or a different definition. A different language, variant or synonym is not a conflict.
+Return JSON only: {"assign":[{"id":"","concept":"c12"},{"id":"","new":"short label"}],"conflicts":[{"concept":"c12 or the new label","type":"number","text":""}]}`;
+}
 function alignPrompt(list){
   return `You group candidate concepts gathered from several sources about ${state.project.subject||"one subject"}, for a learning game in a museum. Each candidate has an id, its source, the source's kind and language variant, the term as written, an English definition, and any stated numbers.
 
@@ -709,8 +724,6 @@ ${JSON.stringify(list)}`;
 async function findConcepts(){
   if(!sample){ toast("Asking Claude is not available in this view."); return; }
   const srcs=conceptSources().filter(m=>usedSet().has(m.id)&&cstate.texts[m.id]?.text); if(!srcs.length) return;
-  if(cstate.set?.concepts?.length && !findConcepts.confirmed){ findConcepts.confirmed=true; $("cRun").textContent="This replaces the current concept table and its decisions. Press Find concepts again to go ahead."; return; }
-  findConcepts.confirmed=false;
   cstate.running=true; renderCSources();
   const plan=srcs.map(m=>({m,parts:chunks(cstate.texts[m.id].text)}));
   const total=plan.reduce((k,x)=>k+x.parts.length,0)+1; let done=0; const skipped=[];
@@ -737,24 +750,57 @@ async function findConcepts(){
         cstate.cands[m.id]=doc; await saveDoc("candidates/"+m.id, doc);
       }
     }
-    prog("Grouping the candidates across sources");
-    const flat=plan.flatMap(({m})=>(cstate.cands[m.id]?.items||[]).map(x=>({id:x.id, source:SHORT(m), kind:KINDS[m.kind].label, lang:m.language||"", term:x.term, definition:x.definition, numbers:x.numbers})));
-    const r=await sample.json(alignPrompt(flat),{modelTier:"complex"}); done++;
-    const valid=new Set(flat.map(x=>x.id)), used=new Set(), concepts=[];
-    for(const g of (Array.isArray(r?.concepts)?r.concepts:[])){
-      const mem=(g.members||[]).filter(id=>valid.has(id)&&!used.has(id)); mem.forEach(id=>used.add(id));
-      if(mem.length) concepts.push({id:"c"+(concepts.length+1), label:String(g.label||"").slice(0,80)||"Untitled", members:mem, conflicts:(Array.isArray(g.conflicts)?g.conflicts:[]).filter(x=>x&&x.text).slice(0,6).map(x=>({type:String(x.type||"definition"),text:String(x.text).slice(0,400)})), decision:"draft"});
+    // group in batches into the existing table (keeps the author's decisions)
+    const order={simulation:0,reference:1,author:2,historical:3};
+    const flat=plan.slice().sort((x,y)=>(order[x.m.kind]??9)-(order[y.m.kind]??9)).flatMap(({m})=>(cstate.cands[m.id]?.items||[]).map(x=>({id:x.id, source:SHORT(m), kind:KINDS[m.kind].label, lang:m.language||"", term:x.term, definition:x.definition, numbers:x.numbers})));
+    const valid=new Set(flat.map(x=>x.id)), byId=Object.fromEntries(flat.map(x=>[x.id,x]));
+    const set=cstate.set?.concepts ? JSON.parse(JSON.stringify(cstate.set)) : {concepts:[], sources:[], createdAt:new Date().toISOString()};
+    for(const c of set.concepts) c.members=c.members.filter(id=>valid.has(id));
+    set.concepts=set.concepts.filter(c=>c.members.length);
+    let next=Math.max(0,...set.concepts.map(c=>Number(String(c.id).slice(1))||0))+1;
+    const assigned=new Set(set.concepts.flatMap(c=>c.members));
+    const todo=flat.filter(x=>!assigned.has(x.id));
+    const BATCH=50, batches=Math.ceil(todo.length/BATCH);
+    let maxBytes=Infinity; try{ maxBytes=(await sample.limits())?.maxPromptBytes||Infinity; }catch{}
+    for(let bi=0; bi<batches; bi++){
+      const batch=todo.slice(bi*BATCH,(bi+1)*BATCH);
+      $("cRun").textContent=`Grouping: batch ${bi+1} of ${batches} (${set.concepts.length} concepts so far)`;
+      let prompt=assignPrompt(set.concepts, batch, byId);
+      for(const len of [35,0]){ if(new TextEncoder().encode(prompt).length<=maxBytes*0.9) break; prompt=assignPrompt(set.concepts, batch, byId, len); }
+      let r=null;
+      for(let attempt=0; attempt<2 && r===null; attempt++){
+        try{ r=await sample.json(prompt,{modelTier:"default"}); }
+        catch(e){ if(fatal(e)||attempt===1) throw e; }
+      }
+      const fresh={};
+      for(const a2 of (Array.isArray(r?.assign)?r.assign:[])){
+        if(!a2||!valid.has(a2.id)||assigned.has(a2.id)) continue;
+        let c=a2.concept?set.concepts.find(x=>x.id===a2.concept):null;
+        if(!c){ const label=String(a2.new||byId[a2.id].term).slice(0,80); c=fresh[norm(label)]; if(!c){ c={id:"c"+(next++), label, members:[], conflicts:[], decision:"draft"}; fresh[norm(label)]=c; set.concepts.push(c); } }
+        c.members.push(a2.id); assigned.add(a2.id);
+      }
+      for(const x of batch) if(!assigned.has(x.id)){ set.concepts.push({id:"c"+(next++), label:x.term, members:[x.id], conflicts:[], decision:"draft"}); assigned.add(x.id); }
+      for(const f of (Array.isArray(r?.conflicts)?r.conflicts:[])){
+        if(!f?.text) continue; const c=set.concepts.find(x=>x.id===f.concept)||fresh[norm(f.concept||"")];
+        if(c && (c.conflicts||=[]).length<6) c.conflicts.push({type:String(f.type||"definition"),text:String(f.text).slice(0,400)});
+      }
+      set.sources=[...new Set([...(set.sources||[]), ...plan.map(x=>x.m.id)])]; set.updatedAt=new Date().toISOString();
+      cstate.set=set; await saveDoc("concepts/current", set); renderCTable();
     }
-    for(const x of flat) if(!used.has(x.id)) concepts.push({id:"c"+(concepts.length+1), label:x.term, members:[x.id], conflicts:[], decision:"draft"});
-    cstate.set={concepts, sources:plan.map(x=>x.m.id), createdAt:new Date().toISOString()};
-    await saveDoc("concepts/current", cstate.set);
-    $("cRun").textContent=`Done: ${concepts.length} concepts from ${flat.length} candidates.`+(skipped.length?` Could not read: ${skipped.join("; ")}. Press Find concepts again to retry those parts.`:"");
+    if(!batches){ set.sources=[...new Set([...(set.sources||[]), ...plan.map(x=>x.m.id)])]; cstate.set=set; await saveDoc("concepts/current", set); }
+    $("cRun").textContent=`Done: ${set.concepts.length} concepts from ${flat.length} candidates (${todo.length} placed in this run).`+(skipped.length?` Could not read: ${skipped.join("; ")}. Press Find concepts again to retry those parts.`:"");
   }catch(e){
     $("cRun").textContent = (e.code==="not_granted" ? "Asking Claude is not allowed in this view." : e.code==="rate_limited" ? "Too many requests just now. Wait a minute and run again." : "Stopped: "+(e.message||e.code||e))+" What was read so far is kept; Find concepts continues from there.";
   }
   cstate.running=false; renderCSources(); renderCTable();
 }
 $("cFind").addEventListener("click",findConcepts);
+$("cClear").addEventListener("click",async()=>{
+  if(!cstate.set?.concepts?.length) return;
+  if(!$("cClear").dataset.sure){ $("cClear").dataset.sure="1"; $("cClear").textContent="Clear for good (decisions too)"; setTimeout(()=>{ delete $("cClear").dataset.sure; $("cClear").textContent="Clear the table"; },6000); return; }
+  delete $("cClear").dataset.sure; $("cClear").textContent="Clear the table";
+  cstate.set=null; try{ if(db) await db.doc("concepts/current").delete(); }catch(e){ toast("Could not clear: "+(e.message||e.code)); } renderConcepts(); toast("Table cleared; the candidates read so far are kept.");
+});
 
 function buildCandDoc(m, raw, chars, partsTotal, partsDone){
   const seen=new Map(); for(const it of raw){ const k=norm(it.term); if(k&&!seen.has(k)) seen.set(k,it); }
