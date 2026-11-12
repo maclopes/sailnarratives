@@ -1,0 +1,488 @@
+<title>Materials Intake</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a working tool, one column with three tabs (Project, Materials, Readiness); forms left-aligned, status shown as pills. */
+:root{
+  --bg:#f4f6f5; --surface:#ffffff; --sunk:#eef2f1; --ink:#17232a; --muted:#56656d; --line:#d5dcdb;
+  --accent:#1f5f7a; --accent-ink:#ffffff; --accent-soft:#e2eef2;
+  --good:#2b7a4b; --good-soft:#e1f1e6; --warn:#9a6200; --warn-soft:#fbefd4; --bad:#b03f2c; --bad-soft:#f8e2dc; --info:#4b5d9a; --info-soft:#e6e9f6;
+  --f-display:"Archivo",system-ui,sans-serif; --f-body:"IBM Plex Sans",system-ui,sans-serif; --f-mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#10171c; --surface:#172129; --sunk:#131c22; --ink:#e3e9ec; --muted:#9aa8b0; --line:#2b3942;
+  --accent:#7cc0db; --accent-ink:#0d1a20; --accent-soft:#1b3340;
+  --good:#7fcf9b; --good-soft:#1c3427; --warn:#e7b65a; --warn-soft:#382d16; --bad:#ec8b77; --bad-soft:#3b231f; --info:#a9b6ee; --info-soft:#232a45; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10171c; --surface:#172129; --sunk:#131c22; --ink:#e3e9ec; --muted:#9aa8b0; --line:#2b3942;
+  --accent:#7cc0db; --accent-ink:#0d1a20; --accent-soft:#1b3340;
+  --good:#7fcf9b; --good-soft:#1c3427; --warn:#e7b65a; --warn-soft:#382d16; --bad:#ec8b77; --bad-soft:#3b231f; --info:#a9b6ee; --info-soft:#232a45; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.5}
+.wrap{max-width:960px;margin:0 auto;padding-block:28px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);margin:0;line-height:1.2;text-wrap:balance}
+h1{font-size:28px;font-weight:800}
+h2{font-size:19px;font-weight:700}
+h3{font-size:15px;font-weight:700}
+.top{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:baseline;justify-content:space-between}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--accent)}
+.sub{color:var(--muted);margin:6px 0 0;max-width:70ch}
+.save{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+.banner{margin-top:14px;padding:10px 14px;border-radius:8px;background:var(--warn-soft);color:var(--warn);font-size:14px}
+.tabs{display:flex;gap:4px;margin-top:22px;border-bottom:1px solid var(--line);overflow-x:auto}
+.tabs button{font:inherit;font-weight:600;background:none;border:0;border-bottom:3px solid transparent;color:var(--muted);padding:10px 14px;cursor:pointer;white-space:nowrap}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.tabs .n{font-family:var(--f-mono);font-size:12px;color:var(--muted);margin-right:6px}
+.panel{padding-top:22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px 18px}
+.field{display:flex;flex-direction:column;gap:5px;min-width:0}
+.field.wide{grid-column:1/-1}
+label,.lbl{font-size:13px;font-weight:600}
+.hint{font-size:12.5px;color:var(--muted)}
+input[type=text],input[type=url],input[type=number],select,textarea{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:8px 10px;width:100%;min-width:0}
+textarea{min-height:76px;resize:vertical}
+input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.checks{display:flex;flex-wrap:wrap;gap:6px 14px}
+.checks label{font-weight:400;display:flex;gap:6px;align-items:center}
+.btn{font:inherit;font-size:14px;font-weight:600;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:6px;padding:7px 13px;cursor:pointer}
+.btn:hover{background:var(--sunk)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.danger{color:var(--bad);border-color:var(--bad)}
+.btn.small{font-size:12.5px;padding:4px 9px}
+.btn[disabled]{opacity:.55;cursor:default}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.pill{display:inline-block;font-family:var(--f-mono);font-size:11.5px;padding:1px 8px;border-radius:999px;white-space:nowrap;background:var(--sunk);color:var(--muted)}
+.p-good{background:var(--good-soft);color:var(--good)} .p-warn{background:var(--warn-soft);color:var(--warn)} .p-bad{background:var(--bad-soft);color:var(--bad)} .p-info{background:var(--info-soft);color:var(--info)} .p-acc{background:var(--accent-soft);color:var(--accent)}
+.kinds{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin-bottom:18px}
+.kind{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 12px;min-width:0}
+.kind b{font-family:var(--f-display);font-size:22px;display:block;font-variant-numeric:tabular-nums}
+.kind span{font-size:12.5px;color:var(--muted)}
+.group{margin-top:22px}
+.group-h{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:6px}
+.group-h p{margin:2px 0 0;font-size:13px;color:var(--muted)}
+.item{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin-top:6px;display:flex;gap:12px;justify-content:space-between;align-items:flex-start}
+.item .main{min-width:0;flex:1}
+.item .t{font-weight:600;overflow-wrap:anywhere}
+.item .meta{display:flex;flex-wrap:wrap;gap:5px;margin-top:5px}
+.item .notes{font-size:13px;color:var(--muted);margin-top:5px;overflow-wrap:anywhere}
+.item a{color:var(--accent);font-size:13px;overflow-wrap:anywhere}
+.item .acts{display:flex;gap:6px;flex-shrink:0}
+.empty{border:1px dashed var(--line);border-radius:8px;padding:12px 14px;color:var(--muted);font-size:13.5px;margin-top:6px}
+.form{background:var(--surface);border:1px solid var(--accent);border-radius:10px;padding:16px;margin:10px 0 4px}
+.form h3{margin-bottom:12px}
+.kindhelp{background:var(--accent-soft);color:var(--ink);border-radius:6px;padding:8px 12px;font-size:13.5px}
+.bases{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.base{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;min-width:0}
+.base-h{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.base p.what{font-size:13px;color:var(--muted);margin:4px 0 8px}
+.finding{display:flex;gap:8px;align-items:flex-start;font-size:13.5px;padding:5px 0;border-top:1px solid var(--line)}
+.finding .pill{margin-top:2px}
+.overall{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:14px}
+.overall b{font-family:var(--f-display);font-size:17px}
+pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px solid var(--line);border-radius:8px;padding:12px;overflow-x:auto;max-height:420px;margin:0}
+.section{margin-top:28px}
+.ai{margin-top:10px}
+.ai .finding{border-top:1px dashed var(--line)}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:8px;font-size:14px;max-width:calc(100% - 32px)}
+@media (prefers-reduced-motion:no-preference){.form{animation:in .15s ease-out}@keyframes in{from{opacity:.4;transform:translateY(-3px)}to{opacity:1;transform:none}}}
+@media (max-width:560px){.item{flex-direction:column}.item .acts{align-self:flex-end}}
+</style>
+
+<div class="wrap">
+  <div class="top">
+    <div>
+      <div class="eyebrow">Narrative Workbench · step 0</div>
+      <h1>Materials intake</h1>
+      <p class="sub">Tell the tool what you are working with. It records each material, then reports what the materials allow and what is missing before any work starts.</p>
+    </div>
+    <div class="save" id="saveState">Connecting…</div>
+  </div>
+  <div class="banner" id="localBanner" hidden>Saving is not available in this view, so changes last only until you close the page.</div>
+
+  <div class="tabs" role="tablist">
+    <button role="tab" id="tab-project" aria-selected="true" data-tab="project"><span class="n">1</span>Project</button>
+    <button role="tab" id="tab-materials" aria-selected="false" data-tab="materials"><span class="n">2</span>Materials</button>
+    <button role="tab" id="tab-readiness" aria-selected="false" data-tab="readiness"><span class="n">3</span>Readiness</button>
+  </div>
+
+  <!-- 1 Project -->
+  <section class="panel" id="panel-project" role="tabpanel">
+    <div class="grid">
+      <div class="field"><label for="p-name">Project name</label><input type="text" id="p-name" data-p="name" placeholder="e.g. Boats of the Tagus"></div>
+      <div class="field"><label for="p-subject">Subject (domain)</label><input type="text" id="p-subject" data-p="subject" placeholder="e.g. traditional sailing boats"></div>
+      <div class="field"><label for="p-audience">Audience</label><input type="text" id="p-audience" data-p="audience" placeholder="e.g. museum visitors, families, school groups"></div>
+      <div class="field"><label for="p-minutes">Length of a visit to the game, minutes</label><input type="number" id="p-minutes" data-p="visitMinutes" min="1" max="120" placeholder="e.g. 5"></div>
+      <div class="field"><label for="p-primary">Primary language</label>
+        <select id="p-primary" data-p="primaryLanguage"><option value="">Choose…</option><option value="pt">Portuguese</option><option value="en">English</option><option value="fr">French</option><option value="es">Spanish</option><option value="de">German</option><option value="it">Italian</option></select></div>
+      <div class="field"><span class="lbl">Other languages</span>
+        <div class="checks" id="p-langs"></div></div>
+      <div class="field wide"><label for="p-goals">What visitors should learn (rough is fine)</label><textarea id="p-goals" data-p="goals" placeholder="One idea per line"></textarea></div>
+      <div class="field wide"><label for="p-tone">Tone and constraints</label><textarea id="p-tone" data-p="tone" placeholder="e.g. do not romanticise the whale hunt"></textarea></div>
+      <div class="field wide"><label for="p-simpl">What the simulation leaves out on purpose</label><textarea id="p-simpl" data-p="simplifications" placeholder="e.g. no tide or current, no crew"></textarea><span class="hint">Simplifications are allowed for short visits. They are recorded, and a line may name them.</span></div>
+    </div>
+  </section>
+
+  <!-- 2 Materials -->
+  <section class="panel" id="panel-materials" role="tabpanel" hidden>
+    <div class="kinds" id="kindCounts"></div>
+    <div class="row"><button class="btn primary" id="addBtn">Add material</button><span class="hint">Materials can be added at any time; the readiness report updates.</span></div>
+    <div id="formHost"></div>
+    <div id="groups"></div>
+  </section>
+
+  <!-- 3 Readiness -->
+  <section class="panel" id="panel-readiness" role="tabpanel" hidden>
+    <div class="overall" id="overall"></div>
+    <div class="bases" id="bases"></div>
+    <div class="section">
+      <h2>A second look</h2>
+      <p class="sub">The checks above are fixed rules. Claude can read the same list and suggest other gaps. Its suggestions are drafts for you to judge.</p>
+      <div class="row" style="margin-top:10px"><button class="btn" id="aiBtn">Ask Claude to review the materials</button><span class="hint" id="aiState"></span></div>
+      <div class="ai" id="aiOut"></div>
+    </div>
+    <div class="section">
+      <h2>Domain pack manifest</h2>
+      <p class="sub">The intake's output: <span style="font-family:var(--f-mono)">domain.yaml</span> for the pack folder. The later steps read it.</p>
+      <div class="row" style="margin:10px 0"><button class="btn primary" id="dlBtn">Download domain.yaml</button><button class="btn" id="copyBtn">Copy</button></div>
+      <pre id="yaml"></pre>
+    </div>
+  </section>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+const KINDS = {
+  simulation: {label: "Simulation", plural: "Simulation", help: "The game's simulation code or build. Enables the simulation base: signals, events, scenarios and the timing of lines."},
+  reference: {label: "Reference book", plural: "Reference books", help: "Textbooks or manuals for the skills to learn (for sailing: training books). Enables concepts: names, definitions, order, and checks against the simulation."},
+  historical: {label: "Historical account", plural: "Historical accounts", help: "Primary or secondary sources on what people did. Enables the history base: practices backed by passages."},
+  author: {label: "Author's document", plural: "Author's documents", help: "Your own notes, plans or drafts. Used as context, or held out if they describe the game's existing activities."},
+  existing: {label: "Existing activity", plural: "Existing activities", help: "Activities the game already has. Always held out from the inputs; used later to check whether the tool finds similar ones on its own."},
+  person: {label: "Person who can check", plural: "People who can check", help: "Someone who can verify part of the work: a historian for one source, a developer for the simulation, an expert for the concepts."},
+};
+const KIND_ORDER = ["simulation","reference","historical","author","existing","person"];
+const LANGS = {pt:"Portuguese",en:"English",fr:"French",es:"Spanish",de:"German",it:"Italian"};
+const LICENCES = {"":"Unknown", open:"Open licence (CC BY, CC BY-SA)", cc0:"CC0 or public domain", cite:"Copyright: cite and paraphrase only", permission:"Used with permission"};
+const RELIABILITY = {"":"Not graded", A:"A: scholarly or museum", B:"B: documented local history", C:"C: uncited (blog, page)"};
+const READ = {"":"Not read yet", full:"Read in full", partial:"Read in part", blocked:"Could not be read"};
+const CHECKS = {"":"—", source:"one source", simulation:"the simulation", concepts:"the concepts", translations:"translations"};
+
+const state = {project: {}, materials: [], editing: null, confirmDelete: null, ai: null};
+let db = null, assets = null, downloads = null, sample = null, localOnly = false;
+
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function toast(msg){const t=$("toast");t.textContent=msg;t.hidden=false;clearTimeout(toast.h);toast.h=setTimeout(()=>t.hidden=true,2600);}
+function setSave(msg){$("saveState").textContent=msg;}
+
+// ---------- tabs ----------
+function showTab(name){
+  for (const b of document.querySelectorAll(".tabs button")) b.setAttribute("aria-selected", String(b.dataset.tab===name));
+  for (const p of ["project","materials","readiness"]) $("panel-"+p).hidden = p!==name;
+  try{localStorage.setItem("intake.tab",name);}catch{}
+  if (name==="readiness") renderReadiness();
+}
+document.querySelectorAll(".tabs button").forEach(b=>b.addEventListener("click",()=>showTab(b.dataset.tab)));
+
+// ---------- project ----------
+for (const [code,name] of Object.entries(LANGS)){
+  const l=document.createElement("label");
+  l.innerHTML=`<input type="checkbox" id="lang-${code}" value="${code}"> ${esc(name)}`;
+  $("p-langs").append(l);
+}
+function renderProject(){
+  const p=state.project;
+  document.querySelectorAll("[data-p]").forEach(el=>{ if(document.activeElement!==el) el.value = p[el.dataset.p] ?? ""; });
+  for (const code of Object.keys(LANGS)){ const c=$("lang-"+code); c.checked=(p.otherLanguages||[]).includes(code); c.disabled = p.primaryLanguage===code; }
+}
+let projTimer=null;
+function saveProjectSoon(){
+  clearTimeout(projTimer); setSave("Unsaved changes…");
+  projTimer=setTimeout(async()=>{
+    state.project.updatedAt=new Date().toISOString();
+    if(!db){ setSave("Not saved (this view)"); return; }
+    try{ await db.doc("project/main").set(state.project); setSave("Saved"); }
+    catch(e){ setSave("Could not save: "+(e.message||e.code)); }
+  },600);
+}
+document.querySelectorAll("[data-p]").forEach(el=>el.addEventListener("input",()=>{
+  const k=el.dataset.p; state.project[k]= k==="visitMinutes" ? (el.value===""?null:Number(el.value)) : el.value;
+  if(k==="primaryLanguage"){ state.project.otherLanguages=(state.project.otherLanguages||[]).filter(c=>c!==el.value); renderProject(); }
+  saveProjectSoon();
+}));
+$("p-langs").addEventListener("change",()=>{
+  state.project.otherLanguages=Object.keys(LANGS).filter(c=>$("lang-"+c).checked);
+  saveProjectSoon();
+});
+
+// ---------- materials ----------
+function counts(){ const c={}; for(const k of KIND_ORDER) c[k]=0; for(const m of state.materials) c[m.kind]=(c[m.kind]||0)+1; return c; }
+function renderMaterials(){
+  const c=counts();
+  $("kindCounts").innerHTML = KIND_ORDER.map(k=>`<div class="kind"><b>${c[k]}</b><span>${esc(KINDS[k].plural)}</span></div>`).join("");
+  $("groups").innerHTML = KIND_ORDER.map(k=>{
+    const items=state.materials.filter(m=>m.kind===k).sort((a,b)=>String(a.title).localeCompare(String(b.title)));
+    return `<div class="group"><div class="group-h"><div><h2>${esc(KINDS[k].plural)}</h2><p>${esc(KINDS[k].help)}</p></div><button class="btn small" data-addkind="${k}">Add</button></div>
+      ${items.length? items.map(itemHtml).join("") : `<div class="empty">None yet.</div>`}</div>`;
+  }).join("");
+  renderForm();
+}
+function itemHtml(m){
+  const pills=[];
+  if(m.kind==="person"){
+    if(m.role) pills.push(`<span class="pill p-acc">${esc(m.role)}</span>`);
+    if(m.checks) pills.push(`<span class="pill">checks ${esc(CHECKS[m.checks]||m.checks)}</span>`);
+  } else {
+    if(m.language) pills.push(`<span class="pill p-acc">${esc(LANGS[m.language]||m.language)}</span>`);
+    if(m.kind!=="simulation"){
+      pills.push(`<span class="pill ${m.reliability==="A"?"p-good":m.reliability==="C"?"p-warn":m.reliability?"":"p-warn"}">${m.reliability?"reliability "+esc(m.reliability):"not graded"}</span>`);
+      pills.push(`<span class="pill ${m.licence?"":"p-warn"}">${esc(m.licence?LICENCES[m.licence]:"licence unknown")}</span>`);
+    }
+    pills.push(`<span class="pill ${m.read==="full"?"p-good":m.read==="blocked"?"p-bad":"p-warn"}">${esc(READ[m.read||""])}</span>`);
+    if(isHeldOut(m)) pills.push(`<span class="pill p-info">held out</span>`);
+  }
+  const link = m.url ? `<div><a href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.url)}</a></div>` : "";
+  const file = m.assetId ? `<div><a href="${esc("/_blob/"+m.assetId)}" target="_blank" rel="noopener">File: ${esc(m.fileName||"attached")}</a></div>` : "";
+  const confirm = state.confirmDelete===m.id;
+  return `<div class="item"><div class="main"><div class="t">${esc(m.title||"Untitled")}</div><div class="meta">${pills.join("")}</div>${link}${file}${m.notes?`<div class="notes">${esc(m.notes)}</div>`:""}</div>
+    <div class="acts">${confirm?`<button class="btn small danger" data-del="${esc(m.id)}">Delete for good</button><button class="btn small" data-cancel>Keep</button>`
+      :`<button class="btn small" data-edit="${esc(m.id)}">Edit</button><button class="btn small" data-ask="${esc(m.id)}">Delete</button>`}</div></div>`;
+}
+function isHeldOut(m){ return m.kind==="existing" || !!m.describesExisting; }
+
+function renderForm(){
+  const host=$("formHost");
+  if(!state.editing){ host.innerHTML=""; return; }
+  const m=state.editing; const k=m.kind||"historical";
+  const opt=(obj,val)=>Object.entries(obj).map(([v,l])=>`<option value="${esc(v)}"${v===(val??"")?" selected":""}>${esc(l)}</option>`).join("");
+  const isPerson=k==="person";
+  host.innerHTML=`<div class="form" id="matForm"><h3>${m.id?"Edit material":"Add material"}</h3>
+    <div class="grid">
+      <div class="field"><label for="f-kind">Kind</label><select id="f-kind">${KIND_ORDER.map(x=>`<option value="${x}"${x===k?" selected":""}>${esc(KINDS[x].label)}</option>`).join("")}</select></div>
+      <div class="field"><label for="f-title">${isPerson?"Name or role":"Title"}</label><input type="text" id="f-title" value="${esc(m.title)}" placeholder="${isPerson?"e.g. historian at the museum":"Author, title, year"}"></div>
+      <div class="field wide"><div class="kindhelp">${esc(KINDS[k].help)}</div></div>
+      ${isPerson?`
+      <div class="field"><label for="f-role">Expertise</label><input type="text" id="f-role" value="${esc(m.role)}" placeholder="e.g. historian, sailor, game developer"></div>
+      <div class="field"><label for="f-checks">Can check</label><select id="f-checks">${opt(CHECKS,m.checks)}</select></div>`:`
+      <div class="field"><label for="f-url">Link</label><input type="url" id="f-url" value="${esc(m.url)}" placeholder="https://…"></div>
+      <div class="field"><label for="f-file">File (PDF, text)</label><input type="file" id="f-file"${assets?"":" disabled"}><span class="hint">${assets?(m.fileName?"Attached: "+esc(m.fileName):"Optional"):"File upload is not available in this view; add a link instead."}</span></div>
+      <div class="field"><label for="f-lang">Language</label><select id="f-lang">${opt({"":"—",...LANGS},m.language)}</select></div>
+      <div class="field"><label for="f-read">Read status</label><select id="f-read">${opt(READ,m.read)}</select></div>
+      ${k!=="simulation"?`
+      <div class="field"><label for="f-lic">Licence</label><select id="f-lic">${opt(LICENCES,m.licence)}</select></div>
+      <div class="field"><label for="f-rel">Reliability</label><select id="f-rel">${opt(RELIABILITY,m.reliability)}</select></div>`:""}
+      ${k!=="existing"?`<div class="field wide"><label style="font-weight:400;display:flex;gap:8px;align-items:center"><input type="checkbox" id="f-desc"${m.describesExisting?" checked":""}> It describes the game's existing activities (hold it out of the inputs)</label></div>`:""}`}
+      <div class="field wide"><label for="f-notes">Notes</label><textarea id="f-notes" placeholder="What it is good for, cautions, what was not read">${esc(m.notes)}</textarea></div>
+    </div>
+    <div class="row" style="margin-top:12px"><button class="btn primary" id="f-save">${m.id?"Save changes":"Add"}</button><button class="btn" id="f-cancel">Cancel</button><span class="hint" id="f-state"></span></div></div>`;
+  $("f-kind").addEventListener("change",()=>{ readForm(); state.editing.kind=$("f-kind").value; renderForm(); });
+  $("f-cancel").addEventListener("click",()=>{ state.editing=null; renderForm(); });
+  $("f-save").addEventListener("click",saveMaterial);
+  host.querySelector(".form").scrollIntoView({block:"nearest"});
+}
+function readForm(){
+  const m=state.editing, v=(id)=>$(id)?$(id).value.trim():undefined;
+  m.kind=$("f-kind").value; m.title=v("f-title"); m.notes=v("f-notes");
+  if(m.kind==="person"){ m.role=v("f-role"); m.checks=v("f-checks"); }
+  else { m.url=v("f-url"); m.language=v("f-lang"); m.read=v("f-read");
+    if($("f-lic")){ m.licence=v("f-lic"); m.reliability=v("f-rel"); }
+    m.describesExisting = $("f-desc") ? $("f-desc").checked : false; }
+}
+async function saveMaterial(){
+  readForm(); const m={...state.editing};
+  if(!m.title){ $("f-state").textContent="Add a title first."; return; }
+  const file=$("f-file")?.files?.[0];
+  $("f-save").disabled=true;
+  try{
+    if(file && assets){ $("f-state").textContent="Uploading…"; const r=await assets.upload(file); m.assetId=r.id; m.fileName=file.name; }
+    const id=m.id || ("m"+Date.now().toString(36)+Math.random().toString(36).slice(2,6));
+    const data={...m}; delete data.id; data.createdAt=data.createdAt||new Date().toISOString(); data.updatedAt=new Date().toISOString();
+    for(const k of Object.keys(data)) if(data[k]===undefined) delete data[k];
+    if(db){ await db.doc("materials/"+id).set(data); }
+    else { const i=state.materials.findIndex(x=>x.id===id); const row={id,...data}; if(i>=0) state.materials[i]=row; else state.materials.push(row); }
+    state.editing=null; renderAll(); toast(m.id?"Saved":"Added");
+  }catch(e){ $("f-state").textContent="Could not save: "+(e.message||e.code); $("f-save").disabled=false; }
+}
+$("addBtn").addEventListener("click",()=>{ state.editing={kind:"historical"}; renderForm(); });
+$("groups").addEventListener("click",async(ev)=>{
+  const b=ev.target.closest("button"); if(!b) return;
+  if(b.dataset.addkind){ state.editing={kind:b.dataset.addkind}; renderForm(); }
+  else if(b.dataset.edit){ state.editing={...state.materials.find(x=>x.id===b.dataset.edit)}; renderForm(); }
+  else if(b.dataset.ask){ state.confirmDelete=b.dataset.ask; renderMaterials(); }
+  else if(b.hasAttribute("data-cancel")){ state.confirmDelete=null; renderMaterials(); }
+  else if(b.dataset.del){
+    const id=b.dataset.del; state.confirmDelete=null;
+    try{ if(db) await db.doc("materials/"+id).delete(); else { state.materials=state.materials.filter(x=>x.id!==id); renderAll(); } toast("Deleted"); }
+    catch(e){ toast("Could not delete: "+(e.message||e.code)); }
+  }
+});
+
+// ---------- readiness (fixed, generic rules) ----------
+function readiness(){
+  const p=state.project, ms=state.materials, by=(k)=>ms.filter(m=>m.kind===k);
+  const langs=[p.primaryLanguage,...(p.otherLanguages||[])].filter(Boolean);
+  const inputs=ms.filter(m=>!isHeldOut(m) && m.kind!=="person");
+  const people=by("person");
+  const can=(what)=>people.some(x=>x.checks===what);
+  const F=(level,text)=>({level,text});
+  const out=[];
+
+  // Project
+  const pf=[];
+  if(!p.subject) pf.push(F("warn","No subject yet. The pack needs a name for its domain."));
+  if(!p.audience) pf.push(F("warn","No audience yet. Line length and tone depend on it."));
+  if(!p.visitMinutes) pf.push(F("warn","No visit length yet. Activities are sized to it."));
+  if(!p.primaryLanguage) pf.push(F("bad","No primary language. Lines are written in it first."));
+  if(!(p.goals||"").trim()) pf.push(F("warn","No learning goals yet. Concepts will be proposed without a target."));
+  if(!(p.simplifications||"").trim()) pf.push(F("info","No simplifications listed. Add what the simulation leaves out, so lines can name it."));
+  out.push({id:"project",title:"Project",what:"Audience, length, languages and goals.",findings:pf});
+
+  // Simulation
+  const sims=by("simulation"); const sf=[];
+  if(!sims.length) sf.push(F("bad","No simulation. Without it there are no events, scenarios or timing."));
+  else {
+    sf.push(F("good",`${sims.length} simulation ${sims.length>1?"items":"item"}.`));
+    if(!can("simulation")) sf.push(F("warn","Nobody listed who can confirm the adapter the tool proposes from the simulation code (a developer)."));
+    if(sims.some(s=>s.read==="blocked")) sf.push(F("bad","A simulation item could not be read."));
+  }
+  out.push({id:"simulation",title:"Simulation base",what:"What the simulation can show and measure.",findings:sf});
+
+  // Concepts
+  const refs=by("reference").filter(m=>!isHeldOut(m)); const cf=[];
+  if(!refs.length) cf.push(F("warn","No reference books. Concepts can only come from the simulation and your documents, and their names stay drafts."));
+  else {
+    cf.push(F("good",`${refs.length} reference ${refs.length>1?"books":"book"}.`));
+    for(const l of langs) if(!refs.some(r=>r.language===l)) cf.push(F(l===p.primaryLanguage?"warn":"info",`No reference book in ${LANGS[l]||l}: concept terms in that language will be drafts.`));
+  }
+  if(!(p.goals||"").trim()) cf.push(F("info","Learning goals would help rank the proposed concepts."));
+  if(!can("concepts")) cf.push(F("info","Nobody listed to check the concepts (an instructor or expert)."));
+  out.push({id:"concepts",title:"Concepts base",what:"What is to be learned, in what order.",findings:cf});
+
+  // History
+  const hist=by("historical").filter(m=>!isHeldOut(m)); const hf=[];
+  if(!hist.length) hf.push(F("bad","No historical accounts. There is nothing to ground the stories in."));
+  else {
+    hf.push(F("good",`${hist.length} historical ${hist.length>1?"accounts":"account"}.`));
+    const a=hist.filter(m=>m.reliability==="A").length, ungraded=hist.filter(m=>!m.reliability);
+    if(!a) hf.push(F("warn","None graded A (scholarly or museum). Facts will rest on weaker sources."));
+    if(ungraded.length) hf.push(F("warn",`${ungraded.length} not graded: ${ungraded.map(m=>m.title).join("; ")}.`));
+    const nolic=hist.filter(m=>!m.licence); if(nolic.length) hf.push(F("warn",`${nolic.length} with unknown licence: they will be treated as cite-and-paraphrase only.`));
+    const part=hist.filter(m=>m.read==="partial"||!m.read); if(part.length) hf.push(F("info",`${part.length} read in part or not yet: ${part.map(m=>m.title).join("; ")}.`));
+    const blocked=hist.filter(m=>m.read==="blocked"); if(blocked.length) hf.push(F("bad",`${blocked.length} could not be read: ${blocked.map(m=>m.title).join("; ")}. Find another copy or paste the text.`));
+    const C=hist.filter(m=>m.reliability==="C").length; if(C && C>=hist.length/2) hf.push(F("warn",`Half or more are grade C (${C} of ${hist.length}).`));
+    if(langs.length && !hist.some(m=>langs.includes(m.language))) hf.push(F("info","No account in the project's languages; passages will need translating."));
+  }
+  if(!can("source")) hf.push(F("warn","Nobody listed who can check a source (a historian). Conflicts between sources cannot be settled."));
+  out.push({id:"history",title:"History base",what:"What people did, backed by passages.",findings:hf});
+
+  // Held out
+  const held=ms.filter(isHeldOut); const xf=[];
+  if(!held.length) xf.push(F("info","Nothing held out. If the game already has activities, add them so the blind comparison is possible."));
+  else xf.push(F("good",`${held.length} held out of the inputs: ${held.map(m=>m.title).join("; ")}.`));
+  const authorLeft=by("author").filter(m=>!isHeldOut(m));
+  if(by("existing").length && authorLeft.length) xf.push(F("info",`Check whether these author documents mention the existing activities, and hold them out if they do: ${authorLeft.map(m=>m.title).join("; ")}.`));
+  out.push({id:"heldout",title:"Blind comparison",what:"Inputs kept out so the tool's proposals can be compared fairly.",findings:xf});
+
+  for(const b of out){ b.status = b.findings.some(f=>f.level==="bad")?"blocked":b.findings.some(f=>f.level==="warn")?"gaps":"ready"; }
+  return {bases:out, inputs:inputs.length};
+}
+const STATUS={ready:["p-good","ready"],gaps:["p-warn","usable with gaps"],blocked:["p-bad","blocked"]};
+const LEVEL={good:["p-good","ok"],warn:["p-warn","gap"],bad:["p-bad","blocks"],info:["p-info","note"]};
+function renderReadiness(){
+  const r=readiness(); const n={ready:0,gaps:0,blocked:0}; r.bases.forEach(b=>n[b.status]++);
+  $("overall").innerHTML=`<b>${r.bases.length} parts checked</b><span class="pill p-good">${n.ready} ready</span><span class="pill p-warn">${n.gaps} usable with gaps</span><span class="pill p-bad">${n.blocked} blocked</span><span class="hint">${state.materials.length} materials, ${r.inputs} used as inputs.</span>`;
+  $("bases").innerHTML=r.bases.map(b=>`<div class="base"><div class="base-h"><h3>${esc(b.title)}</h3><span class="pill ${STATUS[b.status][0]}">${STATUS[b.status][1]}</span></div><p class="what">${esc(b.what)}</p>
+    ${b.findings.map(f=>`<div class="finding"><span class="pill ${LEVEL[f.level][0]}">${LEVEL[f.level][1]}</span><span>${esc(f.text)}</span></div>`).join("")}</div>`).join("");
+  renderAi(); $("yaml").textContent=manifest();
+}
+
+// ---------- manifest ----------
+function y(v){ if(v===null||v===undefined||v==="") return '""'; if(typeof v==="number"||typeof v==="boolean") return String(v); const s=String(v); return /^[\w .,()/-]+$/.test(s)&&!/^[\d-]/.test(s)&&!/: /.test(s)? s : JSON.stringify(s); }
+function block(text,ind){ const lines=String(text||"").split(/\n/).map(s=>s.trim()).filter(Boolean); return lines.length? "\n"+lines.map(l=>`${ind}- ${y(l)}`).join("\n") : " []"; }
+function manifest(){
+  const p=state.project, ms=state.materials, r=readiness();
+  const slug=(p.subject||p.name||"domain").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")||"domain";
+  const item=(m)=>{ const f=[`title: ${y(m.title)}`]; if(m.url) f.push(`url: ${y(m.url)}`); if(m.fileName) f.push(`file: ${y(m.fileName)}`);
+    if(m.kind==="person"){ if(m.role) f.push(`expertise: ${y(m.role)}`); if(m.checks) f.push(`checks: ${y(m.checks)}`); }
+    else { if(m.language) f.push(`language: ${y(m.language)}`); if(m.kind!=="simulation"){ f.push(`licence: ${y(m.licence||"unknown")}`); f.push(`reliability: ${y(m.reliability||"ungraded")}`);} f.push(`read: ${y(m.read||"not_read")}`); }
+    if(m.notes) f.push(`notes: ${y(m.notes.replace(/\s+/g," "))}`);
+    return "    - "+f.join("\n      "); };
+  const list=(kind,filter=()=>true)=>{ const xs=ms.filter(m=>m.kind===kind&&filter(m)); return xs.length? "\n"+xs.map(item).join("\n") : " []"; };
+  const notHeld=(m)=>!isHeldOut(m);
+  return `# Domain pack manifest, written by the materials intake (${new Date().toISOString().slice(0,10)}).
+id: ${y(slug)}
+name: ${y(p.name)}
+subject: ${y(p.subject)}
+audience: ${y(p.audience)}
+visit_minutes: ${p.visitMinutes??'""'}
+languages: {primary: ${y(p.primaryLanguage)}, also: [${(p.otherLanguages||[]).map(y).join(", ")}]}
+goals:${block(p.goals,"  ")}
+tone:${block(p.tone,"  ")}
+simplifications:${block(p.simplifications,"  ")}
+
+materials:
+  simulation:${list("simulation",notHeld)}
+  reference:${list("reference",notHeld)}
+  historical:${list("historical",notHeld)}
+  author:${list("author",notHeld)}
+
+held_out_for_blind_test:${ms.filter(isHeldOut).length? "\n"+ms.filter(isHeldOut).map(item).join("\n").replace(/^    /gm,"  ") : " []"}
+
+people:${list("person")}
+
+readiness:
+${r.bases.map(b=>`  ${b.id}: ${b.status}`).join("\n")}
+`;
+}
+$("copyBtn").addEventListener("click",async()=>{ try{ await navigator.clipboard.writeText(manifest()); toast("Copied"); }catch{ const sel=getSelection(); const rg=document.createRange(); rg.selectNodeContents($("yaml")); sel.removeAllRanges(); sel.addRange(rg); toast("Selected: press Ctrl+C or ⌘C"); } });
+$("dlBtn").addEventListener("click",async()=>{ if(!downloads){ toast("Downloads are not available here; use Copy."); return; } try{ await downloads.save({filename:"domain.yaml", data:manifest()}); }catch(e){ if(e.code!=="declined") toast("Could not save the file: "+(e.message||e.code)); } });
+
+// ---------- a second look from Claude ----------
+function renderAi(){
+  const o=$("aiOut");
+  if(!state.ai){ o.innerHTML=""; return; }
+  if(state.ai.error){ o.innerHTML=`<div class="finding"><span class="pill p-bad">error</span><span>${esc(state.ai.error)}</span></div>`; return; }
+  o.innerHTML = state.ai.items.length ? state.ai.items.map(f=>`<div class="finding"><span class="pill ${f.severity==="blocks"?"p-bad":f.severity==="gap"?"p-warn":"p-info"}">${esc(f.severity||"note")}</span><span><b>${esc(f.area||"")}</b>${f.area?": ":""}${esc(f.text)}</span></div>`).join("")
+    : `<div class="finding"><span class="pill p-good">ok</span><span>No further gaps suggested.</span></div>`;
+}
+$("aiBtn").addEventListener("click",async()=>{
+  if(!sample){ toast("Asking Claude is not available in this view."); return; }
+  $("aiBtn").disabled=true; $("aiState").textContent="Reading the materials…";
+  const r=readiness();
+  const payload={project:state.project, materials:state.materials.map(({id,assetId,createdAt,updatedAt,...m})=>({...m, heldOut:isHeldOut(m)})), ruleFindings:r.bases.map(b=>({base:b.title,status:b.status,findings:b.findings.map(f=>f.text)}))};
+  const prompt=`You review the materials an author has gathered before building grounded narrative for a simulation-based learning game in a museum. The tool has three knowledge bases: the simulation (what it can show and measure), concepts (what to learn, from reference books), and history (what people did, from historical accounts). Materials marked heldOut describe the game's existing activities and must not be used as inputs.
+
+Fixed rules have already produced the findings listed in ruleFindings. Do not repeat them. Suggest up to 8 further gaps, risks or contradictions that a careful researcher would notice from the titles, notes and metadata: missing kinds of source, imbalances, likely licence or reliability problems, materials that may contradict each other, questions to ask the people listed. Be specific and brief. Do not invent facts about the subject.
+
+Return JSON only: {"items":[{"area":"simulation|concepts|history|blind comparison|project","severity":"blocks|gap|note","text":"one or two sentences"}]}
+
+Data:
+${JSON.stringify(payload)}`;
+  try{
+    const res=await sample.json(prompt,{modelTier:"default"});
+    state.ai={items:Array.isArray(res?.items)?res.items.slice(0,8):[]};
+    $("aiState").textContent="Suggestions are drafts: judge each one.";
+  }catch(e){
+    state.ai= e.code==="not_granted" ? null : {error: e.code==="rate_limited"?"Too many requests just now. Try again in a minute.":(e.message||"The request failed.")};
+    $("aiState").textContent= e.code==="not_granted" ? "Not allowed in this view." : "";
+  }
+  $("aiBtn").disabled=false; renderAi();
+});
+
+// ---------- boot ----------
+function renderAll(){ renderProject(); renderMaterials(); if(!$("panel-readiness").hidden) renderReadiness(); }
+renderAll();
+try{ const t=localStorage.getItem("intake.tab"); if(t) showTab(t); }catch{}
+
+(async()=>{
+  const c=window.claude;
+  if(!c?.use){ localOnly=true; $("localBanner").hidden=false; setSave("Not saved (this view)"); return; }
+  [db,assets,downloads,sample]=await Promise.all(["db","assets","downloads","sample"].map(n=>c.use(n).catch(()=>null)));
+  renderForm();
+  if(!db){ localOnly=true; $("localBanner").hidden=false; setSave("Not saved (this view)"); return; }
+  const timer=setTimeout(()=>setSave("Still connecting…"),10000);
+  db.doc("project/main").onSnapshot(s=>{ clearTimeout(timer); state.project=s.exists?(s.data()||{}):{}; setSave("Saved"); renderProject(); if(!$("panel-readiness").hidden) renderReadiness(); },
+    e=>{ clearTimeout(timer); setSave("Could not load: "+(e.message||e.code)); });
+  db.collection("materials").onSnapshot(s=>{ clearTimeout(timer); state.materials=s.docs.map(d=>({id:d.id,...d.data()})); renderMaterials(); if(!$("panel-readiness").hidden) renderReadiness(); },
+    e=>{ clearTimeout(timer); setSave("Could not load: "+(e.message||e.code)); });
+})();
+</script>
