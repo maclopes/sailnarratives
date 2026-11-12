@@ -9,3 +9,6 @@ First domain pack for the tool. Manifest: `domain.yaml`.
 - `vendor/fragateiro-physics/`: unmodified CC0 copy of the game's physics.
 - `docs/`: the author's documents (method doc, story bible, discussion summary, leaflet).
 - `examples/`: example line records.
+- `game-world.json`: the game's ports by area, landmarks, named map places, seamarks and boats,
+  built from the fragateiro code by `scripts/build_game_world.py`. The tool compares places and
+  boats named in the sources with it, to report what the game is missing.
