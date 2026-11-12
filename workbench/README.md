@@ -18,6 +18,15 @@ The tool's screens. Each is a single HTML page with no build step.
   step, clarifications, gaps), which can be copied or downloaded as Markdown. Data: texts/,
   candidates/, concepts/current, summaries/concepts in the artifact database.
 
+  Tab 5, Game report: evaluates the game against the sources. Concepts are sorted by kind
+  (boat, place, sailing, boat part, practice, role, cargo, event, regulation, internal), then
+  boats and places are checked against the pack's game world list (area by area), sailing
+  concepts against the simulation, and historical practices against the game's activities.
+  Every finding counts its sources; a threshold hides weak ones. It drafts one issue per
+  finding for the game's developers (copy or download as Markdown) and keeps earlier reports,
+  so a new game release shows what changed. The world list comes from
+  `domains/sailing/scripts/build_game_world.py` and is stored as world/game.
+
   Published as a claude.ai artifact (private; it keeps its data in the artifact's database):
   https://claude.ai/artifact/28te1trNq5pVdem1xFzUD9
   Opened as a local file it still works, but nothing is saved.

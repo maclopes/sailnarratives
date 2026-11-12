@@ -83,6 +83,14 @@ The pack lists what describes the game's existing mini-games, and those inputs a
 The tool derives activities blind; then we compare: same practice and concept, different
 activity for the same practice, missed, or new.
 
+## 6b. Evaluating the game against the sources (a main goal)
+
+The same three bases evaluate the simulation: which boats, places, sailing behaviour and
+historical practices the sources support, and whether the game has them, each finding ranked by
+the number of sources behind it, with issue drafts for the game's developers. The pack provides a
+world list of the game (ports and named places per area, landmarks, boats, activities). Run after
+each release, the report shows what changed. See workbench/README.md (Game report).
+
 ## 7. Runtime
 
 The game feeds the pack's adapter each step; the adapter's rules give events and a difficulty

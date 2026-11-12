@@ -46,8 +46,24 @@ def main(root: Path) -> dict:
         const = re.search(r"export const (\w+)", t).group(1)
         boats.append({"name": name, "description": desc.group(2) if desc else "",
                       "home": home.group(1) if home else "tejo", "in_development": const in dev})
+    texts = {}
+    for line in (root / "content/texts/en.txt").read_text(encoding="utf-8").splitlines():
+        if "=" in line and not line.lstrip().startswith("#"):
+            k, v = line.split("=", 1)
+            texts[k.strip()] = v.strip()
+    area_names = {k.split(".", 1)[1]: v for k, v in texts.items() if re.fullmatch(r"area\.[a-z]+", k)}
+    activities = []
+    for k, v in texts.items():
+        kind = k.split(".")[0]
+        if kind in ("kind", "mini", "drill") and k.count(".") == 1 and k != "drill.n":
+            activities.append({"id": k, "type": {"kind": "mission kind", "mini": "museum mini-game", "drill": "drill"}[kind],
+                               "title": v, "description": texts.get(k + ".desc", "")})
+        elif kind in ("route", "ground") and k.count(".") == 1 and k != "route.traditionally":
+            activities.append({"id": k, "type": "transport route" if kind == "route" else "fishing ground",
+                               "title": k.split(".", 1)[1], "description": v})
     commit = subprocess.run(["git", "-C", str(root), "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip()
-    return {"game": "fragateiro", "commit": commit, "ports": areas, "extra_places": extra,
+    return {"game": "fragateiro", "commit": commit, "area_names": area_names, "map_files": {"tejo": "tagus"},
+            "activities": activities, "ports": areas, "extra_places": extra,
             "landmarks": landmarks, "boats": boats, "map_places": map_places, "seamarks": seamarks}
 
 

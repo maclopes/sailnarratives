@@ -111,6 +111,17 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
 .sumgrid ul{margin:0;padding-left:18px;font-size:13.5px}
 .sumgrid li{margin:3px 0}
 .overview{font-size:15px;max-width:75ch;margin:12px 0 0}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin-top:14px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;min-width:0}
+.tile b{font-family:var(--f-display);font-size:26px;font-variant-numeric:tabular-nums;display:block}
+.tile span{font-size:13px;color:var(--muted)}
+.tile .delta{font-family:var(--f-mono);font-size:12px}
+.rtable{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:8px}
+.rtable th,.rtable td{text-align:left;padding:6px 8px;border-top:1px solid var(--line);vertical-align:top}
+.rtable th{font-family:var(--f-mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.rtable td.n{font-variant-numeric:tabular-nums;text-align:right;width:3em}
+.issue{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin-top:6px}
+.issue pre{margin-top:6px;max-height:220px;white-space:pre-wrap}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:8px;font-size:14px;max-width:calc(100% - 32px)}
 @media (prefers-reduced-motion:no-preference){.form{animation:in .15s ease-out}@keyframes in{from{opacity:.4;transform:translateY(-3px)}to{opacity:1;transform:none}}}
 @media (max-width:560px){.item{flex-direction:column}.item .acts{align-self:flex-end}}
@@ -132,6 +143,7 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
     <button role="tab" id="tab-materials" aria-selected="false" data-tab="materials"><span class="n">2</span>Materials</button>
     <button role="tab" id="tab-readiness" aria-selected="false" data-tab="readiness"><span class="n">3</span>Readiness</button>
     <button role="tab" id="tab-concepts" aria-selected="false" data-tab="concepts"><span class="n">4</span>Concepts</button>
+    <button role="tab" id="tab-report" aria-selected="false" data-tab="report"><span class="n">5</span>Game report</button>
   </div>
 
   <!-- 1 Project -->
@@ -205,6 +217,15 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
       <div id="sumOut"></div>
     </div>
   </section>
+
+  <!-- 5 Game report -->
+  <section class="panel" id="panel-report" role="tabpanel" hidden>
+    <p class="sub">Evaluates the game against the sources: which boats, places, sailing behaviour and historical activities the sources support, and whether the game has them. Each finding counts the sources behind it. Run it again after each game release to see what changed.</p>
+    <div class="row" style="margin-top:12px"><button class="btn primary" id="rBuild">Build report</button>
+      <label class="hint" for="rMin">Findings backed by at least</label><select id="rMin" style="width:auto"><option value="1">1 source</option><option value="2" selected>2 sources</option><option value="3">3 sources</option></select>
+      <span class="hint" id="rState"></span></div>
+    <div id="rOut"></div>
+  </section>
 </div>
 <div class="toast" id="toast" hidden></div>
 
@@ -246,10 +267,11 @@ function setSave(msg){$("saveState").textContent=msg;}
 // ---------- tabs ----------
 function showTab(name){
   for (const b of document.querySelectorAll(".tabs button")) b.setAttribute("aria-selected", String(b.dataset.tab===name));
-  for (const p of ["project","materials","readiness","concepts"]) $("panel-"+p).hidden = p!==name;
+  for (const p of ["project","materials","readiness","concepts","report"]) $("panel-"+p).hidden = p!==name;
   try{localStorage.setItem("intake.tab",name);}catch{}
   if (name==="readiness") renderReadiness();
   if (name==="concepts") renderConcepts();
+  if (name==="report") renderReport();
 }
 document.querySelectorAll(".tabs button").forEach(b=>b.addEventListener("click",()=>showTab(b.dataset.tab)));
 
@@ -954,6 +976,168 @@ $("sumBtn").addEventListener("click",async()=>{
 $("sumCopy").addEventListener("click",async()=>{ const t=summaryText(); if(!t){ toast("No summary yet."); return; } try{ await navigator.clipboard.writeText(t); toast("Copied"); }catch{ toast("Copy is not available here; use Download."); } });
 $("sumDl").addEventListener("click",async()=>{ const t=summaryText(); if(!t){ toast("No summary yet."); return; } if(!downloads){ toast("Downloads are not available here; use Copy."); return; } try{ await downloads.save({filename:"summary-of-sources.md", data:t}); }catch(e){ if(e.code!=="declined") toast("Could not save: "+(e.message||e.code)); } });
 
+
+// ---------- game report ----------
+const rstate={world:null, classes:{}, acts:{}, report:null, history:[], running:false};
+const RSTAT={"in game":"p-good","port":"p-good","landmark":"p-good","on map":"p-info","sea mark only":"p-warn","in development":"p-warn","shown":"p-good","covered":"p-good","partly":"p-warn","missing":"p-bad","not shown":"p-bad","outside the game's areas":"p-bad","area unknown":"p-info","out of scope":"p-info"};
+const srcTitle=(id)=>SHORT(state.materials.find(m=>m.id===id)||{title:id});
+function areaHelp(){ const w=rstate.world; return Object.entries(w.ports).map(([a,ps])=>`${a} (${w.area_names?.[a]||a}): ${ps.join(", ")}`).join("\n"); }
+function classifyPrompt(batch){
+  return `You sort concepts gathered from sources about ${state.project.subject||"one subject"} into categories, to compare the sources with a game's simulation.
+Game areas (id, name: ports):
+${areaHelp()}
+
+Categories:
+- boat: a specific type of boat or vessel. Not generic words such as "boats" or "river craft".
+- place: a named place, body of water, quay, landmark or stretch of river. Not generic words such as "quay".
+- sailing: something a sailor does or feels: points of sail, manoeuvres, sail handling, wind, current, tide, depth, drift.
+- hull: a part of a boat, its rig or its gear.
+- practice: a work routine or activity: a fishing method, a cargo run, a ferry crossing, towing, rafting timber.
+- role: a person's job or status. cargo: goods carried. event: a dated event or period. regulation: a rule, fee, tax or licence.
+- internal: a setting or parameter of the simulation or of a software tool, not something to learn.
+- other.
+For boat and place, give "name": the usual modern name; for places, the official place name (for example "Vila Nova da Barquinha" for "porto da Barquinha").
+For place, give "area": the id of the game area it lies in, "outside" if it lies in none of them, or "unknown".
+For sailing, hull and practice concepts with sim false, give "needs": at most 6 words saying what the simulation would need to show it (for example "tide and current", "water depth", "reefing control", "rowing"), or "out of scope".
+Return JSON only: {"items":[{"id":"","category":"","name":"","area":"","needs":""}]}
+
+Concepts:
+${JSON.stringify(batch)}`;
+}
+function activityPrompt(batch){
+  const acts=rstate.world.activities.map(a=>({id:a.id, type:a.type, title:a.title, description:a.description}));
+  return `Compare historical practices with the activities a sailing game offers. Game activities:
+${JSON.stringify(acts)}
+
+For each practice decide: "covered" if a game activity lets the player do essentially this, with a fitting boat and place; "partly" if a game activity is similar but differs in boat, place or how it is done; "missing" otherwise. Give the closest game activity id (or "") and a reason of at most 15 words.
+Return JSON only: {"items":[{"id":"","status":"covered|partly|missing","activity":"","why":""}]}
+
+Practices:
+${JSON.stringify(batch)}`;
+}
+function matchPlace(name, area){
+  const w=rstate.world, k=norm(name), eq=(list)=>(list||[]).some(x=>norm(x)===k);
+  const mf=w.map_files?.[area]||area;
+  if(area && w.ports[area] && eq(w.ports[area])) return "port";
+  if(eq(w.landmarks)||eq(w.extra_places)) return "landmark";
+  if(area && w.map_places[mf] && eq(w.map_places[mf])) return "on map";
+  if(area && w.seamarks[mf] && eq(w.seamarks[mf])) return "sea mark only";
+  if(area==="outside") return "outside the game's areas";
+  if(!area||area==="unknown"){ for(const [a,ps] of Object.entries(w.ports)) if(eq(ps)) return "port"; return "area unknown"; }
+  return "missing";
+}
+function matchBoat(name){
+  const k=norm(name).replace(/s$/,""); const b=rstate.world.boats.find(b=>norm(b.name)===k || norm(b.name)===norm(name));
+  return b ? (b.in_development?"in development":"in game") : "missing";
+}
+async function saveR(path,data){ if(db) await db.doc(path).set(data); }
+async function buildReport(){
+  if(!sample){ toast("Asking Claude is not available in this view."); return; }
+  if(!rstate.world){ $("rState").textContent="The game's world list is not loaded."; return; }
+  const rows=conceptRows(); if(!rows.length){ $("rState").textContent="Run Find concepts first (Concepts tab)."; return; }
+  rstate.running=true; $("rBuild").disabled=true;
+  const fatal=(e)=>e?.code==="not_granted"||e?.code==="rate_limited"||e?.code==="unavailable";
+  const ask=async(prompt)=>{ for(let a=0;a<2;a++){ try{ return await sample.json(prompt,{modelTier:"default"}); }catch(e){ if(fatal(e)||a===1) throw e; } } };
+  try{
+    const info=rows.filter(r=>r.c.decision!=="rejected").map(r=>({c:r.c, ms:r.ms, sim:r.ms.some(x=>x.kind==="simulation"), srcs:[...new Set(r.ms.filter(x=>x.kind!=="simulation").map(x=>x.sourceId))]}));
+    // 1. sort concepts into categories (only those not sorted yet)
+    const todo=info.filter(x=>!rstate.classes[x.c.id]); const B=100;
+    for(let i=0;i<todo.length;i+=B){
+      $("rState").textContent=`Sorting concepts by kind: ${Math.min(i+B,todo.length)} of ${todo.length}…`;
+      const batch=todo.slice(i,i+B).map(x=>({id:x.c.id, label:x.c.label, terms:[...new Set(x.ms.map(m=>m.term))].slice(0,5), meaning:String(x.ms.find(m=>m.kind!=="simulation")?.definition||x.ms[0]?.definition||"").slice(0,80), sources:x.srcs.length, sim:x.sim}));
+      const r=await ask(classifyPrompt(batch));
+      for(const it of (Array.isArray(r?.items)?r.items:[])) if(it?.id) rstate.classes[it.id]={category:String(it.category||"other"), name:String(it.name||""), area:String(it.area||""), needs:String(it.needs||"")};
+      await saveR("report/classes",{byConcept:rstate.classes, updatedAt:new Date().toISOString()});
+    }
+    const cls=(x)=>rstate.classes[x.c.id]||{category:"other"};
+    // 2. boats and places, grouped by name
+    const group=(cat,keyf)=>{ const g={}; for(const x of info.filter(x=>cls(x).category===cat)){ const k=keyf(x); if(!k) continue; (g[k] ||= {xs:[]}).xs.push(x); } return Object.values(g); };
+    const boats=group("boat",x=>norm(cls(x).name||x.c.label)).map(({xs})=>{ const name=cls(xs[0]).name||xs[0].c.label; return {name, status:matchBoat(name), sources:[...new Set(xs.flatMap(x=>x.srcs))], concepts:xs.map(x=>x.c.id)}; });
+    const places=group("place",x=>norm(cls(x).name||x.c.label)+"|"+cls(x).area).map(({xs})=>{ const c0=cls(xs[0]); const name=c0.name||xs[0].c.label; return {name, area:c0.area, status:matchPlace(name,c0.area), sources:[...new Set(xs.flatMap(x=>x.srcs))], concepts:xs.map(x=>x.c.id)}; });
+    // 3. sailing behaviour and boat parts
+    const physics=info.filter(x=>["sailing","hull"].includes(cls(x).category)).map(x=>({name:x.c.label, kind:cls(x).category, status:x.sim?"shown":(/out of scope/i.test(cls(x).needs)?"out of scope":"not shown"), needs:x.sim?"":cls(x).needs, sources:x.srcs, concepts:[x.c.id]}));
+    // 4. historical practices against the game's activities
+    const prac=info.filter(x=>cls(x).category==="practice"&&x.srcs.length);
+    const P=60;
+    for(let i=0;i<prac.length;i+=P){
+      $("rState").textContent=`Comparing practices with the game's activities: ${Math.min(i+P,prac.length)} of ${prac.length}…`;
+      const batch=prac.slice(i,i+P).map(x=>({id:x.c.id, practice:x.c.label, terms:[...new Set(x.ms.map(m=>m.term))].slice(0,4), meaning:String(x.ms[0]?.definition||"").slice(0,100), sources:x.srcs.length}));
+      const r=await ask(activityPrompt(batch));
+      for(const it of (Array.isArray(r?.items)?r.items:[])) if(it?.id) rstate.acts[it.id]={status:["covered","partly","missing"].includes(it.status)?it.status:"missing", activity:String(it.activity||""), why:String(it.why||"").slice(0,160)};
+    }
+    await saveR("report/activities",{byConcept:rstate.acts, updatedAt:new Date().toISOString()});
+    const practices=prac.map(x=>({name:x.c.label, ...(rstate.acts[x.c.id]||{status:"missing",activity:"",why:""}), sources:x.srcs, concepts:[x.c.id]}));
+    // 5. conflicts on what the game depends on
+    const conflicts=info.filter(x=>(x.c.conflicts||[]).length && ["boat","place","sailing","hull","practice","event"].includes(cls(x).category)).flatMap(x=>x.c.conflicts.map(f=>({name:x.c.label, kind:cls(x).category, type:f.type, text:f.text, sources:x.srcs, concepts:[x.c.id]})));
+    const count=(xs,pred)=>xs.filter(pred).length;
+    const report={createdAt:new Date().toISOString(), game:rstate.world.game, gameCommit:rstate.world.commit, conceptsAt:cstate.set.updatedAt||cstate.set.createdAt, sources:[...new Set(info.flatMap(x=>x.srcs))].length,
+      boats, places, physics, practices, conflicts,
+      counts:{boatsIn:count(boats,b=>b.status==="in game"), boatsMissing:count(boats,b=>b.status==="missing"), placesIn:count(places,p=>["port","landmark","on map"].includes(p.status)), placesMissing:count(places,p=>["missing","outside the game's areas","sea mark only"].includes(p.status)),
+        physicsShown:count(physics,x=>x.status==="shown"), physicsNot:count(physics,x=>x.status==="not shown"), practicesCovered:count(practices,x=>x.status==="covered"), practicesPartly:count(practices,x=>x.status==="partly"), practicesMissing:count(practices,x=>x.status==="missing"), conflicts:conflicts.length}};
+    const id="r"+report.createdAt.replace(/[^0-9]/g,"").slice(0,14);
+    await saveR("reports/"+id, report); rstate.report={id,...report};
+    if(!db) rstate.history=[rstate.report,...rstate.history];
+    $("rState").textContent="Done.";
+  }catch(e){ $("rState").textContent=(e.code==="not_granted"?"Asking Claude is not allowed in this view.":e.code==="rate_limited"?"Too many requests; wait a minute.":"Stopped: "+(e.message||e.code||e))+" Sorting done so far is kept; build again to continue."; }
+  rstate.running=false; $("rBuild").disabled=false; renderReport();
+}
+function issueDrafts(r, min){
+  const idx=candIndex(), byC=Object.fromEntries((cstate.set?.concepts||[]).map(c=>[c.id,c]));
+  const ev=(f)=>{ const lines=[]; for(const cid of f.concepts||[]){ const c=byC[cid]; if(!c) continue; const ms=c.members.map(id=>idx[id]).filter(Boolean);
+      for(const m of ms.slice(0,6)) lines.push(`- ${m.kind==="simulation"?"game":srcTitle(m.sourceId)}${m.location?" ("+m.location+")":""}: "${m.term}" — ${m.definition}`); } return lines.join("\n"); };
+  const foot=`\n\n---\nDrafted by the narrative workbench from ${r.sources} sources (concept table of ${new Date(r.conceptsAt).toLocaleDateString()}). Paraphrased evidence; check the sources before filing.`;
+  const out=[];
+  for(const b of r.boats.filter(b=>b.status==="missing"&&b.sources.length>=min).sort((a,b)=>b.sources.length-a.sources.length))
+    out.push({title:`Add the ${b.name} (cited by ${b.sources.length} sources)`, body:`The ${b.name} appears in ${b.sources.length} sources but is not one of the game's boats.\n\nSources: ${b.sources.map(srcTitle).join("; ")}\n\nEvidence:\n${ev(b)}`});
+  for(const pl of r.places.filter(p=>["missing","outside the game's areas","sea mark only"].includes(p.status)&&p.sources.length>=min).sort((a,b)=>b.sources.length-a.sources.length)){
+    const what=pl.status==="outside the game's areas"?`lies outside the game's maps; consider extending a map to it`:pl.status==="sea mark only"?`is on the ${rstate.world.area_names?.[pl.area]||pl.area} map only as a sea mark; consider making it a port or a named place`:`is not on the ${rstate.world.area_names?.[pl.area]||pl.area} map as a port or named place`;
+    out.push({title:`${pl.name}: ${pl.status==="outside the game's areas"?"outside the maps":"missing"} (cited by ${pl.sources.length} sources)`, body:`${pl.name} ${what}.\n\nSources: ${pl.sources.map(srcTitle).join("; ")}\n\nEvidence:\n${ev(pl)}`});
+  }
+  const needs={}; for(const x of r.physics.filter(x=>x.status==="not shown"&&x.sources.length>=min)){ const k=norm(x.needs||"unspecified"); (needs[k] ||= {needs:x.needs||"unspecified", xs:[]}).xs.push(x); }
+  for(const g of Object.values(needs).sort((a,b)=>b.xs.length-a.xs.length))
+    out.push({title:`Simulate ${g.needs} (needed by ${g.xs.length} concept${g.xs.length>1?"s":""})`, body:`The sources describe ${g.xs.map(x=>x.name).join(", ")}, which the simulation cannot show without ${g.needs}.\n\nEvidence:\n${g.xs.map(ev).join("\n")}`});
+  for(const x of r.practices.filter(x=>x.status!=="covered"&&x.sources.length>=min).sort((a,b)=>b.sources.length-a.sources.length))
+    out.push({title:`Activity: ${x.name} (${x.status==="partly"?"partly covered":"missing"}, ${x.sources.length} sources)`, body:`${x.status==="partly"?`Closest game activity: ${x.activity}. `:""}${x.why}\n\nSources: ${x.sources.map(srcTitle).join("; ")}\n\nEvidence:\n${ev(x)}`});
+  for(const f of r.conflicts.filter(f=>f.sources.length>=Math.min(min,2)))
+    out.push({title:`Check ${f.name}: sources disagree (${f.type})`, body:`${f.text}\n\nEvidence:\n${ev(f)}`});
+  return out.map(o=>({...o, body:o.body+foot}));
+}
+function renderReport(){
+  const out=$("rOut"); const r=rstate.report;
+  if(!rstate.world){ out.innerHTML=`<div class="empty" style="margin-top:12px">The game's world list (ports, places, boats, activities) is not loaded.</div>`; return; }
+  if(!r){ out.innerHTML=`<div class="empty" style="margin-top:12px">No report yet. Press Build report. It uses the concept table from the Concepts tab and ${rstate.world.game} at commit ${esc(String(rstate.world.commit).slice(0,7))}.</div>`; return; }
+  const min=Number($("rMin").value)||1, prev=rstate.history.find(h=>h.id!==r.id && h.createdAt<r.createdAt);
+  const d=(k,good)=>{ if(!prev) return ""; const v=r.counts[k]-(prev.counts?.[k]??0); if(!v) return `<span class="delta hint">±0</span>`; return `<span class="delta" style="color:var(--${(v>0)===good?"good":"bad"})">${v>0?"+":""}${v}</span>`; };
+  const tile=(n,label,k,good,extra="")=>`<div class="tile"><b>${n}</b><span>${label}</span> ${k?d(k,good):""}${extra}</div>`;
+  const c=r.counts;
+  const tbl=(rows,cols)=>rows.length?`<div style="overflow-x:auto"><table class="rtable"><tr>${cols.map(x=>`<th>${x[0]}</th>`).join("")}</tr>${rows.map(row=>`<tr>${cols.map(x=>x[1](row)).join("")}</tr>`).join("")}</table></div>`:`<div class="hint">Nothing with at least ${min} source${min>1?"s":""}.</div>`;
+  const st=(s2)=>`<td><span class="pill ${RSTAT[s2]||""}">${esc(s2)}</span></td>`, nsrc=(x)=>`<td class="n" title="${esc(x.sources.map(srcTitle).join("; "))}">${x.sources.length}</td>`;
+  const by=(xs)=>xs.filter(x=>x.sources.length>=min).sort((a,b)=>b.sources.length-a.sources.length);
+  const issues=issueDrafts(r,min);
+  out.innerHTML=`<div class="hint" style="margin-top:10px">Built ${esc(new Date(r.createdAt).toLocaleString())} · ${esc(r.game)} ${esc(String(r.gameCommit).slice(0,7))} · ${r.sources} sources${prev?` · compared with the report of ${esc(new Date(prev.createdAt).toLocaleString())}`:""}</div>
+    <div class="tiles">
+      ${tile(c.boatsIn,"boats in the game","boatsIn",true)}${tile(c.boatsMissing,"boats in the sources, missing","boatsMissing",false)}
+      ${tile(c.placesIn,"places in the game","placesIn",true)}${tile(c.placesMissing,"places missing or outside the maps","placesMissing",false)}
+      ${tile(c.physicsShown,"sailing concepts shown","physicsShown",true)}${tile(c.physicsNot,"sailing concepts not shown","physicsNot",false)}
+      ${tile(c.practicesCovered,`practices covered · ${c.practicesPartly} partly`,"practicesCovered",true)}${tile(c.practicesMissing,"practices with no activity","practicesMissing",false)}
+      ${tile(c.conflicts,"conflicts between sources","conflicts",false)}
+    </div>
+    <div class="section"><h2>Boats</h2>${tbl(by(r.boats),[["Boat",x=>`<td>${esc(x.name)}</td>`],["Sources",nsrc],["In the game",x=>st(x.status)]])}</div>
+    <div class="section"><h2>Places</h2>${tbl(by(r.places),[["Place",x=>`<td>${esc(x.name)}</td>`],["Area",x=>`<td class="hint">${esc(rstate.world.area_names?.[x.area]||x.area||"")}</td>`],["Sources",nsrc],["In the game",x=>st(x.status)]])}</div>
+    <div class="section"><h2>Sailing and the boat</h2>${tbl(by(r.physics),[["Concept",x=>`<td>${esc(x.name)}<div class="hint">${esc(x.kind==="hull"?"boat part or gear":"sailing")}</div></td>`],["Sources",nsrc],["Simulation",x=>st(x.status)],["Would need",x=>`<td class="hint">${esc(x.needs||"")}</td>`]])}</div>
+    <div class="section"><h2>Historical practices and the game's activities</h2>${tbl(by(r.practices),[["Practice",x=>`<td>${esc(x.name)}</td>`],["Sources",nsrc],["In the game",x=>st(x.status)],["Closest activity",x=>`<td class="hint">${esc(x.activity||"")}${x.why?`<div>${esc(x.why)}</div>`:""}</td>`]])}</div>
+    <div class="section"><h2>Conflicts between sources</h2>${tbl(r.conflicts.filter(f=>f.sources.length>=Math.min(min,2)),[["Concept",x=>`<td>${esc(x.name)}</td>`],["Type",x=>`<td><span class="pill p-bad">${esc(x.type)}</span></td>`],["What differs",x=>`<td>${esc(x.text)}</td>`]])}</div>
+    <div class="section"><h2>Issue drafts for the game's developers</h2><p class="sub">One draft per finding with at least ${min} source${min>1?"s":""}, with the evidence paraphrased and the sources named. Review before filing.</p>
+      <div class="row" style="margin-top:8px"><button class="btn" id="rCopy">Copy all (${issues.length})</button><button class="btn" id="rDl">Download</button></div>
+      ${issues.slice(0,60).map(i=>`<details class="issue"><summary><b>${esc(i.title)}</b></summary><pre>${esc(i.body)}</pre></details>`).join("")}${issues.length>60?`<div class="hint">${issues.length-60} more in the download.</div>`:""}</div>
+    ${rstate.history.length>1?`<div class="section"><h2>Earlier reports</h2>${tbl(rstate.history,[["Built",x=>`<td>${esc(new Date(x.createdAt).toLocaleString())}</td>`],["Game",x=>`<td class="hint">${esc(String(x.gameCommit).slice(0,7))}</td>`],["Boats in / missing",x=>`<td>${x.counts.boatsIn} / ${x.counts.boatsMissing}</td>`],["Places in / missing",x=>`<td>${x.counts.placesIn} / ${x.counts.placesMissing}</td>`],["Sailing shown / not",x=>`<td>${x.counts.physicsShown} / ${x.counts.physicsNot}</td>`],["Practices covered / missing",x=>`<td>${x.counts.practicesCovered} / ${x.counts.practicesMissing}</td>`]].map(([h,f])=>[h,(x)=>f({...x, sources:[]})]))}</div>`:""}`;
+  const text=()=>`# Game report: ${r.game} (${String(r.gameCommit).slice(0,7)})\n\nBuilt ${r.createdAt} from ${r.sources} sources.\n\n`+issues.map(i=>`## ${i.title}\n\n${i.body}\n`).join("\n");
+  $("rCopy").onclick=async()=>{ try{ await navigator.clipboard.writeText(text()); toast("Copied"); }catch{ toast("Copy is not available here; use Download."); } };
+  $("rDl").onclick=async()=>{ if(!downloads){ toast("Downloads are not available here; use Copy."); return; } try{ await downloads.save({filename:"game-report.md", data:text()}); }catch(e){ if(e.code!=="declined") toast("Could not save: "+(e.message||e.code)); } };
+}
+$("rBuild").addEventListener("click",buildReport);
+$("rMin").addEventListener("change",renderReport);
+
 // ---------- import from Google Drive ----------
 const DRIVE="Google Drive";
 const dstate={files:[], folder:null, busy:false};
@@ -1091,6 +1275,11 @@ try{ const t=localStorage.getItem("intake.tab"); if(t) showTab(t); }catch{}
   const cRefresh=()=>{ if(!$("panel-concepts").hidden && !cstate.running) renderConcepts(); };
   db.collection("texts").onSnapshot(s=>{ cstate.texts=Object.fromEntries(s.docs.map(d=>[d.id,d.data()])); cRefresh(); }, ()=>{});
   db.collection("candidates").onSnapshot(s=>{ cstate.cands=Object.fromEntries(s.docs.map(d=>[d.id,d.data()])); cRefresh(); }, ()=>{});
+  const rRefresh=()=>{ if(!$("panel-report").hidden && !rstate.running) renderReport(); };
+  db.doc("world/game").onSnapshot(s=>{ rstate.world=s.exists?s.data():null; rRefresh(); }, ()=>{});
+  db.doc("report/classes").onSnapshot(s=>{ if(!rstate.running) rstate.classes=s.exists?(s.data().byConcept||{}):{}; }, ()=>{});
+  db.doc("report/activities").onSnapshot(s=>{ if(!rstate.running) rstate.acts=s.exists?(s.data().byConcept||{}):{}; }, ()=>{});
+  db.collection("reports").orderBy("createdAt","desc").limit(10).onSnapshot(s=>{ rstate.history=s.docs.map(d=>({id:d.id,...d.data()})); if(!rstate.running) rstate.report=rstate.history[0]||rstate.report; rRefresh(); }, ()=>{});
   db.doc("summaries/concepts").onSnapshot(s=>{ summary=s.exists?s.data():null; if(!$("panel-concepts").hidden) renderSummary(); }, ()=>{});
   db.doc("concepts/current").onSnapshot(s=>{ if(!cstate.running){ cstate.set=s.exists?s.data():null; cRefresh(); } }, ()=>{});
 })();

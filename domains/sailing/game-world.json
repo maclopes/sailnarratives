@@ -1,6 +1,314 @@
 {
  "game": "fragateiro",
  "commit": "20490724d579e76e1be610bbafaa14829922a7e3",
+ "area_names": {
+  "tejo": "Tagus",
+  "arcachon": "Arcachon",
+  "aveiro": "Ria de Aveiro",
+  "pasaia": "Pasaia",
+  "azores": "Azores",
+  "madeira": "Madeira",
+  "medio": "Middle Tagus"
+ },
+ "map_files": {
+  "tejo": "tagus"
+ },
+ "activities": [
+  {
+   "id": "kind.regatta",
+   "type": "mission kind",
+   "title": "Regatta",
+   "description": "Round the buoys against the clock."
+  },
+  {
+   "id": "kind.transport",
+   "type": "mission kind",
+   "title": "Transport",
+   "description": "Carry passengers or cargo from one port to another."
+  },
+  {
+   "id": "kind.fishing",
+   "type": "mission kind",
+   "title": "Fishing",
+   "description": "Drift sideways with the Muleta and drag its net through the shoals."
+  },
+  {
+   "id": "kind.free",
+   "type": "mission kind",
+   "title": "Free sailing",
+   "description": "Any boat, anywhere, no clock."
+  },
+  {
+   "id": "route.lisboa-almada",
+   "type": "transport route",
+   "title": "lisboa-almada",
+   "description": "Passengers across the river, as the catraios did every day."
+  },
+  {
+   "id": "route.moita-lisboa",
+   "type": "transport route",
+   "title": "moita-lisboa",
+   "description": "Cargo from the south bank to the city."
+  },
+  {
+   "id": "route.sarilhos-barreiro",
+   "type": "transport route",
+   "title": "sarilhos-barreiro",
+   "description": "From the boatyards of Sarilhos to the quays of Barreiro."
+  },
+  {
+   "id": "route.vfx-lisboa",
+   "type": "transport route",
+   "title": "vfx-lisboa",
+   "description": "Down the river from the lezírias: a long haul."
+  },
+  {
+   "id": "ground.seixal",
+   "type": "fishing ground",
+   "title": "seixal",
+   "description": "Off Seixal"
+  },
+  {
+   "id": "ground.barra",
+   "type": "fishing ground",
+   "title": "barra",
+   "description": "The river mouth (Trafaria)"
+  },
+  {
+   "id": "ground.cascais",
+   "type": "fishing ground",
+   "title": "cascais",
+   "description": "Cascais bay"
+  },
+  {
+   "id": "route.arcachon-capferret",
+   "type": "transport route",
+   "title": "arcachon-capferret",
+   "description": "Across the bay to the Cap Ferret jetty."
+  },
+  {
+   "id": "route.gujan-andernos",
+   "type": "transport route",
+   "title": "gujan-andernos",
+   "description": "From the oyster ports of Gujan to the north shore."
+  },
+  {
+   "id": "route.arcachon-ileoiseaux",
+   "type": "transport route",
+   "title": "arcachon-ileoiseaux",
+   "description": "Out to the Île aux Oiseaux and its stilt huts."
+  },
+  {
+   "id": "route.torreira-aveiro",
+   "type": "transport route",
+   "title": "torreira-aveiro",
+   "description": "Down the lagoon to the canals of Aveiro."
+  },
+  {
+   "id": "route.sjacinto-costanova",
+   "type": "transport route",
+   "title": "sjacinto-costanova",
+   "description": "Across the Barra channel to the striped houses of Costa Nova."
+  },
+  {
+   "id": "route.pasaia-donostia",
+   "type": "transport route",
+   "title": "pasaia-donostia",
+   "description": "Out of the narrow harbour and along the cliffs to La Concha."
+  },
+  {
+   "id": "route.hondarribia-sjdl",
+   "type": "transport route",
+   "title": "hondarribia-sjdl",
+   "description": "Round Cabo Higuer and across the border to Saint-Jean-de-Luz."
+  },
+  {
+   "id": "route.pasaia-hondarribia",
+   "type": "transport route",
+   "title": "pasaia-hondarribia",
+   "description": "Along the foot of Jaizkibel to the mouth of the Bidasoa."
+  },
+  {
+   "id": "kind.cleanup",
+   "type": "mission kind",
+   "title": "Clean-up",
+   "description": "Pick up the rubbish floating off a port, against the clock."
+  },
+  {
+   "id": "kind.supply",
+   "type": "mission kind",
+   "title": "Supply run",
+   "description": "Take goods out to a fishing boat at sea and bring its fish home."
+  },
+  {
+   "id": "route.moita-gaio",
+   "type": "transport route",
+   "title": "moita-gaio",
+   "description": "A short race out of the Moita creek to the quay at Gaio."
+  },
+  {
+   "id": "route.sarilhos-boia",
+   "type": "transport route",
+   "title": "sarilhos-boia",
+   "description": "A sprint from Sarilhos Pequenos to a buoy 2 km to the north."
+  },
+  {
+   "id": "route.almada-lisboa-busy",
+   "type": "transport route",
+   "title": "almada-lisboa-busy",
+   "description": "Across the busiest stretch of the river: many boats about, gusts and the wind swinging. Every collision costs 15 s."
+  },
+  {
+   "id": "route.horta-madalena",
+   "type": "transport route",
+   "title": "horta-madalena",
+   "description": "Across the channel from Faial to Pico, as the ferries and whaleboats did."
+  },
+  {
+   "id": "route.horta-sroque",
+   "type": "transport route",
+   "title": "horta-sroque",
+   "description": "From Horta round Pico to the whaling port of São Roque."
+  },
+  {
+   "id": "route.sroque-velas",
+   "type": "transport route",
+   "title": "sroque-velas",
+   "description": "Across the channel from Pico to São Jorge."
+  },
+  {
+   "id": "route.santacruz-slourenco",
+   "type": "transport route",
+   "title": "santacruz-slourenco",
+   "description": "Along the south coast to the bay at the tip of the island."
+  },
+  {
+   "id": "route.portocruz-slourenco",
+   "type": "transport route",
+   "title": "portocruz-slourenco",
+   "description": "Along the steep north coast and round the point."
+  },
+  {
+   "id": "route.machico-santacruz",
+   "type": "transport route",
+   "title": "machico-santacruz",
+   "description": "A short hop down the coast."
+  },
+  {
+   "id": "kind.whaling",
+   "type": "mission kind",
+   "title": "Whaling",
+   "description": "Sail out after a sperm whale, as the Azorean whalers did: come up on it from astern."
+  },
+  {
+   "id": "route.barquinha-almourol",
+   "type": "transport route",
+   "title": "barquinha-almourol",
+   "description": "Up the river to the castle of Almourol on its island."
+  },
+  {
+   "id": "route.tancos-constancia",
+   "type": "transport route",
+   "title": "tancos-constancia",
+   "description": "Past Almourol to Constância, where the Zêzere meets the Tagus."
+  },
+  {
+   "id": "route.constancia-abrantes",
+   "type": "transport route",
+   "title": "constancia-abrantes",
+   "description": "A long run up the river to Abrantes."
+  },
+  {
+   "id": "mini.downwind",
+   "type": "museum mini-game",
+   "title": "Downwind with the Falua",
+   "description": "Run before the wind to the mark: let the sheets out."
+  },
+  {
+   "id": "mini.upwind",
+   "type": "museum mini-game",
+   "title": "Upwind with the Falua",
+   "description": "Reach a mark straight upwind: haul in and tack back and forth."
+  },
+  {
+   "id": "mini.passengers",
+   "type": "museum mini-game",
+   "title": "Passengers with the Catraio",
+   "description": "Carry people across the river from Lisbon to Almada."
+  },
+  {
+   "id": "mini.whales",
+   "type": "museum mini-game",
+   "title": "Whale watching with the Baleeiro",
+   "description": "In the Azores, come quietly up behind a sperm whale without scaring it."
+  },
+  {
+   "id": "mini.seaweed",
+   "type": "museum mini-game",
+   "title": "Seaweed with the Moliceiro",
+   "description": "Gather the floating seaweed (moliço) in the Ria de Aveiro."
+  },
+  {
+   "id": "mini.busy",
+   "type": "museum mini-game",
+   "title": "Cargo with the Fragata",
+   "description": "Cross the busiest part of the Tagus among many boats, gusts and shifting wind."
+  },
+  {
+   "id": "mini.fishing",
+   "type": "museum mini-game",
+   "title": "Fishing with the Muleta",
+   "description": "Drift sideways over the shoals with the net out."
+  },
+  {
+   "id": "mini.supplies",
+   "type": "museum mini-game",
+   "title": "Supplies with the Canoa",
+   "description": "Take bread, water and ice to a Muleta at sea and bring back its fish."
+  },
+  {
+   "id": "mini.free",
+   "type": "museum mini-game",
+   "title": "Free sailing",
+   "description": "Any boat, in any area, from any port, no clock."
+  },
+  {
+   "id": "drill.hold",
+   "type": "drill",
+   "title": "Hold the course",
+   "description": "Keep a beam reach heading for 30 s."
+  },
+  {
+   "id": "drill.gybe",
+   "type": "drill",
+   "title": "Run and gybe",
+   "description": "2 controlled gybes, no capsize."
+  },
+  {
+   "id": "drill.tack",
+   "type": "drill",
+   "title": "Run and tack",
+   "description": "2 controlled tacks, no capsize."
+  },
+  {
+   "id": "drill.slalom",
+   "type": "drill",
+   "title": "Tack through the buoys",
+   "description": "4 tacks within 2:00."
+  },
+  {
+   "id": "drill.anchor",
+   "type": "drill",
+   "title": "Anchor approach",
+   "description": "Stop within 1 boat length of the anchor spot."
+  },
+  {
+   "id": "drill.wildGybe",
+   "type": "drill",
+   "title": "Uncontrolled gybe: haul the sheet in before the stern crosses the wind",
+   "description": ""
+  }
+ ],
  "ports": {
   "tejo": [
    "Cascais",
