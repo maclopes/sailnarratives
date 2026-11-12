@@ -1,6 +1,8 @@
-// Runtime selector for the Tagus sailing game.
-// Implemented in prompt 07 (createNarrator, onTrigger, heard, reset, requestCuriosity).
-// For now this only exports the line-record type shared with the pipeline.
+// Runtime for the Tagus sailing game: no dependencies, no LLM calls.
+// observer/: reads the physics each step and reports events and the challenge level.
+// The challenge-aware scheduler (phase 2) builds on it.
+
+export * from './observer';
 
 export type Beat = "setup" | "complication" | "turn" | "close" | "epilogue" | "generic";
 export type Status = "draft" | "verified" | "reviewed" | "approved";
