@@ -8,6 +8,14 @@ The tool's screens. Each is a single HTML page with no build step.
   Gives a readiness report per knowledge base from fixed, generic rules, an optional second look
   by Claude (drafts), and exports the domain pack manifest (`domain.yaml`).
 
+  Tab 4, Concepts: the concepts base. For each chosen source with text (extracted from an
+  attached PDF in the page, or pasted), Claude lists candidate concepts in the source's own
+  words; a second request groups them across sources and languages. The tool then gives each
+  concept statuses with fixed rules: agreed, conflicting, term clash, variant difference,
+  missing term, single source, not in simulation, simulation only. The author accepts,
+  rejects, renames, and moves members between concepts. Data: texts/, candidates/,
+  concepts/current in the artifact database.
+
   Published as a claude.ai artifact (private; it keeps its data in the artifact's database):
   https://claude.ai/artifact/28te1trNq5pVdem1xFzUD9
   Opened as a local file it still works, but nothing is saved.

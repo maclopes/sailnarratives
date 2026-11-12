@@ -88,6 +88,22 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
 .drop input[type=file]{font:inherit;font-size:13px;color:var(--ink);max-width:100%}
 .linkimp{margin-top:12px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 12px}
 .linkimp summary{cursor:pointer;font-weight:600;font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.chip{font:inherit;font-size:12.5px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:3px 10px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.src{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin-top:6px}
+.src-h{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:space-between}
+.src-h label{display:flex;gap:8px;align-items:center;font-weight:600;min-width:0;overflow-wrap:anywhere}
+.concept{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-top:8px}
+.concept.rejected{opacity:.6}
+.concept-h{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:space-between}
+.concept-h h3{font-size:16px}
+.members{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+.members th,.members td{text-align:left;padding:6px 8px;border-top:1px solid var(--line);vertical-align:top}
+.members th{font-family:var(--f-mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.members td.term{font-weight:600}
+.members select{font-size:12px;padding:3px 6px;width:auto}
+.conf{font-size:13px;margin-top:6px;display:flex;gap:8px;align-items:flex-start}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:8px;font-size:14px;max-width:calc(100% - 32px)}
 @media (prefers-reduced-motion:no-preference){.form{animation:in .15s ease-out}@keyframes in{from{opacity:.4;transform:translateY(-3px)}to{opacity:1;transform:none}}}
 @media (max-width:560px){.item{flex-direction:column}.item .acts{align-self:flex-end}}
@@ -108,6 +124,7 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
     <button role="tab" id="tab-project" aria-selected="true" data-tab="project"><span class="n">1</span>Project</button>
     <button role="tab" id="tab-materials" aria-selected="false" data-tab="materials"><span class="n">2</span>Materials</button>
     <button role="tab" id="tab-readiness" aria-selected="false" data-tab="readiness"><span class="n">3</span>Readiness</button>
+    <button role="tab" id="tab-concepts" aria-selected="false" data-tab="concepts"><span class="n">4</span>Concepts</button>
   </div>
 
   <!-- 1 Project -->
@@ -157,6 +174,19 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
       <pre id="yaml"></pre>
     </div>
   </section>
+
+  <!-- 4 Concepts -->
+  <section class="panel" id="panel-concepts" role="tabpanel" hidden>
+    <p class="sub">The concepts base. Claude reads each chosen source and lists candidate concepts in the source's own words, then groups them across sources and languages. The tool marks where sources agree, where they conflict, and what is missing or cannot be shown in the simulation. Everything is a draft until you accept it.</p>
+    <h2 style="margin-top:18px">Sources</h2>
+    <div id="cSources"></div>
+    <div class="row" style="margin-top:12px"><button class="btn primary" id="cFind">Find concepts</button><span class="hint" id="cRun"></span></div>
+    <div class="section">
+      <div class="row" style="justify-content:space-between"><h2>Concepts</h2><span class="hint" id="cMeta"></span></div>
+      <div class="chips" id="cChips"></div>
+      <div id="cList"></div>
+    </div>
+  </section>
 </div>
 <div class="toast" id="toast" hidden></div>
 
@@ -198,9 +228,10 @@ function setSave(msg){$("saveState").textContent=msg;}
 // ---------- tabs ----------
 function showTab(name){
   for (const b of document.querySelectorAll(".tabs button")) b.setAttribute("aria-selected", String(b.dataset.tab===name));
-  for (const p of ["project","materials","readiness"]) $("panel-"+p).hidden = p!==name;
+  for (const p of ["project","materials","readiness","concepts"]) $("panel-"+p).hidden = p!==name;
   try{localStorage.setItem("intake.tab",name);}catch{}
   if (name==="readiness") renderReadiness();
+  if (name==="concepts") renderConcepts();
 }
 document.querySelectorAll(".tabs button").forEach(b=>b.addEventListener("click",()=>showTab(b.dataset.tab)));
 
@@ -531,8 +562,239 @@ ${JSON.stringify(payload)}`;
   $("aiBtn").disabled=false; renderAi();
 });
 
+
+// ---------- concepts ----------
+const cstate={texts:{}, cands:{}, set:null, running:false, filter:"all", use:null, pasteFor:null, renaming:null};
+const PDFJS="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/";
+const CHUNK=12000;
+const SHORT=(m)=>String(m?.title||"").split(/[,:(]/)[0].trim().slice(0,30)||"source";
+const norm=(t)=>String(t||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/["'“”‘’]/g,"").replace(/\s+/g," ").trim();
+const CSTATUS={
+  "agreed":["p-good","Sources agree and the simulation shows it."],
+  "conflicting":["p-bad","Sources disagree on the definition or a number."],
+  "term clash":["p-bad","The same word names different concepts in different sources."],
+  "variant difference":["p-warn","Different words in different variants of one language (e.g. Portugal and Brazil)."],
+  "missing term":["p-warn","No term in the project's primary language variant."],
+  "single source":["p-warn","Only one source supports it."],
+  "not in simulation":["p-info","Sources teach it, but the simulation does not show or measure it."],
+  "simulation only":["p-info","The simulation does it, but no source names or explains it."],
+};
+const CORDER=Object.keys(CSTATUS);
+
+async function saveDoc(path,data){ if(db) await db.doc(path).set(data); }
+function conceptSources(){
+  return state.materials.filter(m=>["simulation","reference","historical","author"].includes(m.kind) && (!isHeldOut(m) || cstate.texts[m.id]?.excerpt));
+}
+function usedSet(){
+  if(!cstate.use) return new Set(conceptSources().filter(m=>cstate.texts[m.id]?.text).map(m=>m.id));
+  return cstate.use;
+}
+function loadScript(src){ return new Promise((res,rej)=>{ const el=document.createElement("script"); el.src=src; el.onload=res; el.onerror=()=>rej(new Error("could not load the PDF reader")); document.head.append(el); }); }
+async function pdfLib(){
+  if(!window.pdfjsLib){ await loadScript(PDFJS+"pdf.min.js"); await loadScript(PDFJS+"pdf.worker.min.js"); }
+  window.pdfjsLib.GlobalWorkerOptions.workerSrc=PDFJS+"pdf.worker.min.js";
+  return window.pdfjsLib;
+}
+async function extractPdf(m){
+  const lib=await pdfLib();
+  const res=await fetch("/_blob/"+m.assetId); if(!res.ok) throw new Error("could not open the file ("+res.status+")");
+  const doc=await lib.getDocument({data:await res.arrayBuffer()}).promise; const parts=[];
+  for(let i=1;i<=doc.numPages;i++){
+    const tc=await (await doc.getPage(i)).getTextContent(); const lines=[]; let y=null, line="";
+    for(const it of tc.items){ const ny=it.transform?.[5]; if(y!==null && Math.abs(ny-y)>2){ lines.push(line); line=""; } line+=it.str; y=ny; }
+    lines.push(line); parts.push(`[page ${i}]\n`+lines.map(x=>x.replace(/\s+/g," ").trim()).filter(Boolean).join("\n"));
+  }
+  return parts.join("\n\n");
+}
+async function setText(m,text,method,extra={}){
+  const doc={text, chars:text.length, method, extractedAt:new Date().toISOString(), ...extra};
+  cstate.texts[m.id]=doc; await saveDoc("texts/"+m.id, doc); renderConcepts();
+}
+function chunks(text){
+  const parts=String(text).split(/(?=\[page \d+\])|(?=\[section: )|(?=\[file: )/); const out=[]; let cur="";
+  for(const p of parts){
+    if(cur && (cur+p).length>CHUNK){ out.push(cur); cur=""; }
+    if(p.length>CHUNK){ for(let i=0;i<p.length;i+=CHUNK) out.push(p.slice(i,i+CHUNK)); } else cur+=p;
+  }
+  if(cur.trim()) out.push(cur); return out;
+}
+
+function renderCSources(){
+  const all=conceptSources(); const use=usedSet();
+  const withText=all.filter(m=>cstate.texts[m.id]?.text), without=all.filter(m=>!cstate.texts[m.id]?.text);
+  const row=(m)=>{ const t=cstate.texts[m.id];
+    const isPdf=m.assetId && /\.pdf$/i.test(m.fileName||"");
+    return `<div class="src"><div class="src-h"><label><input type="checkbox" data-use="${esc(m.id)}"${use.has(m.id)?" checked":""}${t?.text?"":" disabled"}> ${esc(m.title)}</label>
+      <div class="row"><span class="pill p-acc">${esc(KINDS[m.kind].label)}</span>${m.language?`<span class="pill">${esc(LANGS[m.language]||m.language)}</span>`:""}
+      ${t?.text?`<span class="pill p-good">${t.chars.toLocaleString()} characters</span>`:`<span class="pill p-warn">no text yet</span>`}
+      ${isPdf?`<button class="btn small" data-pdf="${esc(m.id)}">${t?.text?"Extract again":"Extract text"}</button>`:""}
+      <button class="btn small" data-paste="${esc(m.id)}">Paste text</button></div></div>
+      ${t?.excerpt?`<div class="hint" style="margin-top:4px">Excerpt only: ${esc(t.excerptNote||"")}</div>`:""}
+      ${cstate.pasteFor===m.id?`<div style="margin-top:8px"><textarea id="pasteBox" placeholder="Paste the source's text. Mark pages as [page 3] if you can."></textarea><div class="row" style="margin-top:6px"><button class="btn small primary" data-pastesave="${esc(m.id)}">Save text</button><button class="btn small" data-pastecancel>Cancel</button></div></div>`:""}
+    </div>`; };
+  $("cSources").innerHTML = (withText.length?withText.map(row).join(""):`<div class="empty">No source has text yet. Extract it from an attached PDF, or paste it.</div>`)
+    + (without.length?`<details style="margin-top:8px"><summary class="hint" style="cursor:pointer">${without.length} more sources without text</summary>${without.map(row).join("")}</details>`:"");
+  const n=all.filter(m=>use.has(m.id)&&cstate.texts[m.id]?.text);
+  const steps=n.reduce((k,m)=>k+chunks(cstate.texts[m.id].text).length,0)+(n.length?1:0);
+  if(!cstate.running) $("cRun").textContent = n.length? `${n.length} sources chosen: about ${steps} requests to Claude; this can take a few minutes.` : "Choose at least one source with text.";
+  $("cFind").disabled = cstate.running || !n.length;
+}
+$("cSources").addEventListener("click",async(ev)=>{
+  const b=ev.target.closest("button"); if(!b) return;
+  const m=state.materials.find(x=>x.id===(b.dataset.pdf||b.dataset.paste||b.dataset.pastesave));
+  if(b.dataset.pdf){ b.disabled=true; b.textContent="Reading the PDF…";
+    try{ const text=await extractPdf(m); if(text.replace(/\[page \d+\]/g,"").trim().length<50) throw new Error("the PDF has no text layer (a scan?); paste the text instead"); await setText(m,text,"pdf"); toast("Text extracted"); }
+    catch(e){ toast("Could not extract: "+(e.message||e)); renderConcepts(); } }
+  else if(b.dataset.paste){ cstate.pasteFor=b.dataset.paste; renderConcepts(); $("pasteBox")?.focus(); }
+  else if(b.dataset.pastesave){ const text=$("pasteBox").value.trim(); if(text.length<20){ toast("Paste some text first."); return; } cstate.pasteFor=null; await setText(m,text,"paste"); toast("Text saved"); }
+  else if(b.hasAttribute("data-pastecancel")){ cstate.pasteFor=null; renderConcepts(); }
+});
+$("cSources").addEventListener("change",(ev)=>{
+  const id=ev.target.dataset?.use; if(!id) return;
+  const u=new Set(usedSet()); if(ev.target.checked) u.add(id); else u.delete(id); cstate.use=u; renderCSources();
+});
+
+function extractPrompt(m,chunk,i,n){
+  const sim=m.kind==="simulation"; const subj=state.project.subject||"the subject";
+  return `You help build learning content for a simulation-based game in a museum. Subject: ${subj}.
+Read part ${i} of ${n} of one source and list the concepts a visitor could learn from it${sim?" that the simulation shows, measures or lets the player control":""}.
+Source: "${m.title}" (kind: ${KINDS[m.kind].label}; language: ${LANGS[m.language]||m.language||"unknown"}).
+
+Rules:
+- A concept is a skill, manoeuvre, force, condition or state, or a part or term needed to explain one. Keep everything on the subject; the author decides scope later.${sim?"\n- This is the simulation's own description. A concept here is something the player does or experiences that the simulation computes, detects or controls (events, derived quantities, controls, stated limits). In measured_by, say which signal, event or control shows it.":""}
+- term: exactly as written in the source, in the source's language.
+- definition: your paraphrase in English, at most 25 words. Never copy sentences from the source.
+- location: the [page N], [section: ...] or [file: ...] marker the term falls under.
+- numbers: only values the source states (angles, speeds, limits), with what they measure.
+- One item per distinct term. Do not add anything that is not in the text.
+Return JSON only: {"items":[{"term":"","definition":"","location":"","numbers":[{"what":"","value":"","unit":""}]${sim?',"measured_by":""':""}}]}
+
+Text:
+${chunk}`;
+}
+function alignPrompt(list){
+  return `You group candidate concepts gathered from several sources about ${state.project.subject||"one subject"}, for a learning game in a museum. Each candidate has an id, its source, the source's kind and language variant, the term as written, an English definition, and any stated numbers.
+
+Group candidates that mean the same concept, across sources and languages.
+- Every candidate id must appear in exactly one group. Single-member groups are fine.
+- Group by meaning, using the definitions, never by spelling: the same word can mean different things in different sources or language variants. Keep those in separate groups.
+- label: a short English name for the concept.
+- conflicts: real disagreements inside a group only. "definition": the sources describe it differently. "number": different values for the same quantity; give each value with its source. "term": different words for the same meaning within one language variant. Do not report the normal difference between languages or between variants of a language; the tool checks those itself.
+Return JSON only: {"concepts":[{"label":"","members":["id"],"conflicts":[{"type":"definition","text":""}]}]}
+
+Candidates:
+${JSON.stringify(list)}`;
+}
+
+async function findConcepts(){
+  if(!sample){ toast("Asking Claude is not available in this view."); return; }
+  const srcs=conceptSources().filter(m=>usedSet().has(m.id)&&cstate.texts[m.id]?.text); if(!srcs.length) return;
+  if(cstate.set?.concepts?.length && !findConcepts.confirmed){ findConcepts.confirmed=true; $("cRun").textContent="This replaces the current concept table and its decisions. Press Find concepts again to go ahead."; return; }
+  findConcepts.confirmed=false;
+  cstate.running=true; renderCSources();
+  const plan=srcs.map(m=>({m,parts:chunks(cstate.texts[m.id].text)})); const total=plan.reduce((k,x)=>k+x.parts.length,0)+1; let done=0;
+  const prog=(t)=>$("cRun").textContent=`${t} (step ${Math.min(done+1,total)} of ${total})`;
+  try{
+    for(const {m,parts} of plan){
+      const items=[];
+      for(let i=0;i<parts.length;i++){
+        prog(`Reading ${SHORT(m)}${parts.length>1?`, part ${i+1} of ${parts.length}`:""}`);
+        const r=await sample.json(extractPrompt(m,parts[i],i+1,parts.length),{modelTier:"default"}); done++;
+        for(const it of (Array.isArray(r?.items)?r.items:[])) if(it&&it.term) items.push(it);
+      }
+      const seen=new Map(); for(const it of items){ const k=norm(it.term); if(k&&!seen.has(k)) seen.set(k,it); }
+      const list=[...seen.values()].map((it,n)=>({id:`${m.id}:${n+1}`, term:String(it.term).slice(0,120), definition:String(it.definition||"").slice(0,300), location:String(it.location||"").slice(0,60), numbers:Array.isArray(it.numbers)?it.numbers.slice(0,6).map(x=>({what:String(x?.what||"").slice(0,80),value:String(x?.value??"").slice(0,30),unit:String(x?.unit||"").slice(0,20)})):[], measured_by:it.measured_by?String(it.measured_by).slice(0,200):""}));
+      const doc={sourceId:m.id, title:m.title, kind:m.kind, lang:m.language||"", items:list, runAt:new Date().toISOString()};
+      cstate.cands[m.id]=doc; await saveDoc("candidates/"+m.id, doc);
+    }
+    prog("Grouping the candidates across sources");
+    const flat=plan.flatMap(({m})=>(cstate.cands[m.id]?.items||[]).map(x=>({id:x.id, source:SHORT(m), kind:KINDS[m.kind].label, lang:m.language||"", term:x.term, definition:x.definition, numbers:x.numbers})));
+    const r=await sample.json(alignPrompt(flat),{modelTier:"complex"}); done++;
+    const valid=new Set(flat.map(x=>x.id)), used=new Set(), concepts=[];
+    for(const g of (Array.isArray(r?.concepts)?r.concepts:[])){
+      const mem=(g.members||[]).filter(id=>valid.has(id)&&!used.has(id)); mem.forEach(id=>used.add(id));
+      if(mem.length) concepts.push({id:"c"+(concepts.length+1), label:String(g.label||"").slice(0,80)||"Untitled", members:mem, conflicts:(Array.isArray(g.conflicts)?g.conflicts:[]).filter(x=>x&&x.text).slice(0,6).map(x=>({type:String(x.type||"definition"),text:String(x.text).slice(0,400)})), decision:"draft"});
+    }
+    for(const x of flat) if(!used.has(x.id)) concepts.push({id:"c"+(concepts.length+1), label:x.term, members:[x.id], conflicts:[], decision:"draft"});
+    cstate.set={concepts, sources:plan.map(x=>x.m.id), createdAt:new Date().toISOString()};
+    await saveDoc("concepts/current", cstate.set);
+    $("cRun").textContent=`Done: ${concepts.length} concepts from ${flat.length} candidates.`;
+  }catch(e){
+    $("cRun").textContent = e.code==="not_granted" ? "Asking Claude is not allowed in this view." : e.code==="rate_limited" ? "Too many requests just now. Wait a minute and run again." : "Stopped: "+(e.message||e.code||e);
+  }
+  cstate.running=false; renderCSources(); renderCTable();
+}
+$("cFind").addEventListener("click",findConcepts);
+
+function candIndex(){
+  const idx={};
+  for(const d of Object.values(cstate.cands)) for(const x of d.items||[]){ const m=state.materials.find(y=>y.id===d.sourceId); idx[x.id]={...x, sourceId:d.sourceId, kind:m?.kind||d.kind, lang:m?.language||d.lang, title:m?.title||d.title}; }
+  return idx;
+}
+function statuses(c,idx,clash){
+  const ms=c.members.map(id=>idx[id]).filter(Boolean); const st=[];
+  const hasSim=ms.some(x=>x.kind==="simulation"); const others=ms.filter(x=>x.kind!=="simulation");
+  if((c.conflicts||[]).length) st.push("conflicting");
+  if(ms.some(x=>(clash[base(x.lang)+"|"+norm(x.term)]||new Set()).size>1)) st.push("term clash");
+  const byBase={}; for(const x of others){ if(!x.lang||!x.lang.includes("-")) continue; ((byBase[base(x.lang)] ||= {})[x.lang] ||= new Set()).add(norm(x.term)); }
+  for(const b in byBase){ const sets=Object.values(byBase[b]); if(sets.length>1 && ![...sets[0]].some(t=>sets.slice(1).every(s2=>s2.has(t)))){ st.push("variant difference"); break; } }
+  const prim=state.project.primaryLanguage;
+  if(prim && others.length && !others.some(x=>x.lang===prim)) st.push("missing term");
+  if(!hasSim && others.length) st.push("not in simulation");
+  if(hasSim && !others.length) st.push("simulation only");
+  if(others.length && new Set(ms.map(x=>x.sourceId)).size===1) st.push("single source");
+  if(!st.length) st.push("agreed");
+  return st;
+}
+function renderCTable(){
+  const set=cstate.set, idx=candIndex();
+  if(!set?.concepts?.length){ $("cChips").innerHTML=""; $("cMeta").textContent=""; $("cList").innerHTML=`<div class="empty">No concepts yet. Choose sources above and press Find concepts.</div>`; return; }
+  const clash={}; for(const c of set.concepts) for(const id of c.members){ const x=idx[id]; if(!x) continue; (clash[base(x.lang)+"|"+norm(x.term)] ||= new Set()).add(c.id); }
+  const rows=set.concepts.map(c=>({c, st:statuses(c,idx,clash)}));
+  const count={}; for(const r of rows) for(const s2 of r.st) count[s2]=(count[s2]||0)+1;
+  const acc=set.concepts.filter(c=>c.decision==="accepted").length, rej=set.concepts.filter(c=>c.decision==="rejected").length;
+  $("cMeta").textContent=`${set.concepts.length} concepts · ${acc} accepted · ${rej} rejected · from ${set.sources.length} sources, ${new Date(set.createdAt).toLocaleString()}`;
+  $("cChips").innerHTML=[["all","All",set.concepts.length],...CORDER.filter(k=>count[k]).map(k=>[k,k,count[k]])].map(([k,l,n])=>`<button class="chip" data-filter="${esc(k)}" aria-pressed="${cstate.filter===k}" title="${esc(CSTATUS[k]?.[1]||"")}">${esc(l)} · ${n}</button>`).join("");
+  const shown=rows.filter(r=>cstate.filter==="all"||r.st.includes(cstate.filter));
+  const options=set.concepts.map(c=>`<option value="${esc(c.id)}">${esc(c.label)}</option>`).join("");
+  $("cList").innerHTML=shown.map(({c,st})=>{
+    const ms=c.members.map(id=>idx[id]).filter(Boolean).sort((a,b)=>(a.kind==="simulation"?-1:0)-(b.kind==="simulation"?-1:0));
+    return `<div class="concept${c.decision==="rejected"?" rejected":""}"><div class="concept-h">
+      ${cstate.renaming===c.id?`<div class="row"><input type="text" id="renameBox" value="${esc(c.label)}" style="width:auto"><button class="btn small primary" data-renamesave="${esc(c.id)}">Save</button></div>`:`<h3>${esc(c.label)}</h3>`}
+      <div class="row">${st.map(x=>`<span class="pill ${CSTATUS[x][0]}" title="${esc(CSTATUS[x][1])}">${esc(x)}</span>`).join("")}
+      ${c.decision!=="draft"?`<span class="pill ${c.decision==="accepted"?"p-good":"p-bad"}">${esc(c.decision)}</span>`:""}</div></div>
+      ${(c.conflicts||[]).map(f=>`<div class="conf"><span class="pill p-bad">${esc(f.type)}</span><span>${esc(f.text)}</span></div>`).join("")}
+      <div style="overflow-x:auto"><table class="members"><tr><th>Source</th><th>Term</th><th>Meaning (paraphrase)</th><th>Where</th><th></th></tr>
+      ${ms.map(x=>`<tr><td><span class="pill ${x.kind==="simulation"?"p-acc":""}">${esc(x.kind==="simulation"?"simulation":SHORT(x))}</span>${x.lang?`<div class="hint">${esc(x.lang)}</div>`:""}</td>
+        <td class="term">${esc(x.term)}</td>
+        <td>${esc(x.definition)}${(x.numbers||[]).length?`<div class="hint">${x.numbers.map(n=>esc(`${n.what}: ${n.value}${n.unit?" "+n.unit:""}`)).join(" · ")}</div>`:""}${x.measured_by?`<div class="hint">shown by: ${esc(x.measured_by)}</div>`:""}</td>
+        <td class="hint">${esc(x.location)}</td>
+        <td><select data-move="${esc(x.id)}" aria-label="Move to another concept"><option value="">Move to…</option><option value="__new">A new concept</option>${options}</select></td></tr>`).join("")}</table></div>
+      <div class="row" style="margin-top:8px"><button class="btn small${c.decision==="accepted"?" primary":""}" data-decide="accepted" data-cid="${esc(c.id)}">Accept</button><button class="btn small" data-decide="rejected" data-cid="${esc(c.id)}">Reject</button>${c.decision!=="draft"?`<button class="btn small" data-decide="draft" data-cid="${esc(c.id)}">Back to draft</button>`:""}<button class="btn small" data-rename="${esc(c.id)}">Rename</button></div>
+    </div>`; }).join("") || `<div class="empty">No concept has this status.</div>`;
+}
+async function saveSet(){ try{ await saveDoc("concepts/current", cstate.set); }catch(e){ toast("Could not save: "+(e.message||e.code)); } renderCTable(); }
+$("cChips").addEventListener("click",(ev)=>{ const b=ev.target.closest("[data-filter]"); if(!b) return; cstate.filter=b.dataset.filter; renderCTable(); });
+$("cList").addEventListener("click",async(ev)=>{
+  const b=ev.target.closest("button"); if(!b||!cstate.set) return;
+  const c=cstate.set.concepts.find(x=>x.id===(b.dataset.cid||b.dataset.rename||b.dataset.renamesave));
+  if(b.dataset.decide){ c.decision=b.dataset.decide; await saveSet(); }
+  else if(b.dataset.rename){ cstate.renaming=c.id; renderCTable(); $("renameBox")?.focus(); }
+  else if(b.dataset.renamesave){ const v=$("renameBox").value.trim(); if(v) c.label=v.slice(0,80); cstate.renaming=null; await saveSet(); }
+});
+$("cList").addEventListener("change",async(ev)=>{
+  const id=ev.target.dataset?.move; const to=ev.target.value; if(!id||!to||!cstate.set) return;
+  const from=cstate.set.concepts.find(c=>c.members.includes(id)); if(!from||from.id===to) return;
+  from.members=from.members.filter(x=>x!==id);
+  if(to==="__new"){ const idx=candIndex(); const n=Math.max(0,...cstate.set.concepts.map(c=>Number(String(c.id).slice(1))||0))+1; cstate.set.concepts.push({id:"c"+n, label:idx[id]?.term||"New concept", members:[id], conflicts:[], decision:"draft"}); }
+  else cstate.set.concepts.find(c=>c.id===to).members.push(id);
+  cstate.set.concepts=cstate.set.concepts.filter(c=>c.members.length);
+  await saveSet(); toast("Moved");
+});
+function renderConcepts(){ renderCSources(); renderCTable(); }
+
 // ---------- boot ----------
-function renderAll(){ renderProject(); renderMaterials(); renderForm(); if(!$("panel-readiness").hidden) renderReadiness(); }
+function renderAll(){ renderProject(); renderMaterials(); renderForm(); if(!$("panel-readiness").hidden) renderReadiness(); if(!$("panel-concepts").hidden) renderConcepts(); }
 renderAll();
 try{ const t=localStorage.getItem("intake.tab"); if(t) showTab(t); }catch{}
 
@@ -546,7 +808,11 @@ try{ const t=localStorage.getItem("intake.tab"); if(t) showTab(t); }catch{}
   const timer=setTimeout(()=>setSave("Still connecting…"),10000);
   db.doc("project/main").onSnapshot(s=>{ clearTimeout(timer); state.project=s.exists?(s.data()||{}):{}; setSave("Saved"); renderProject(); if(!$("panel-readiness").hidden) renderReadiness(); },
     e=>{ clearTimeout(timer); setSave("Could not load: "+(e.message||e.code)); });
-  db.collection("materials").onSnapshot(s=>{ clearTimeout(timer); state.materials=s.docs.map(d=>({id:d.id,...d.data()})); renderMaterials(); if(!$("panel-readiness").hidden) renderReadiness(); },
+  db.collection("materials").onSnapshot(s=>{ clearTimeout(timer); state.materials=s.docs.map(d=>({id:d.id,...d.data()})); renderMaterials(); if(!$("panel-readiness").hidden) renderReadiness(); if(!$("panel-concepts").hidden) renderConcepts(); },
     e=>{ clearTimeout(timer); setSave("Could not load: "+(e.message||e.code)); });
+  const cRefresh=()=>{ if(!$("panel-concepts").hidden && !cstate.running) renderConcepts(); };
+  db.collection("texts").onSnapshot(s=>{ cstate.texts=Object.fromEntries(s.docs.map(d=>[d.id,d.data()])); cRefresh(); }, ()=>{});
+  db.collection("candidates").onSnapshot(s=>{ cstate.cands=Object.fromEntries(s.docs.map(d=>[d.id,d.data()])); cRefresh(); }, ()=>{});
+  db.doc("concepts/current").onSnapshot(s=>{ if(!cstate.running){ cstate.set=s.exists?s.data():null; cRefresh(); } }, ()=>{});
 })();
 </script>
