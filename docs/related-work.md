@@ -122,6 +122,36 @@ Suggested framing: "grounded, salience-based narration for learning in a physics
 simulation", with the A/B (and C) study as the main evidence. Add prior knowledge as a
 covariate, since narrative effects depend on it.
 
+## Originality by component (see system-design.md)
+
+Second scan, focused on the five components. Same caveat: snippets and abstracts, not a
+systematic review.
+
+| Component | Closest prior work | What is new here | Strength of the claim |
+| --- | --- | --- | --- |
+| 1. Physics model as the source of triggers | Valve's response system matches lines to world facts; stealth assessment logs game events as evidence. Shute's group notes that game logs are rarely designed for this. | The trigger vocabulary and the evidence come from the sailing physics itself (point of sail, luffing, heel, tack and gybe detection), read from a simulator built to be inspected. | Moderate: the idea of events from game state is old; deriving them from a physical model is a clean, defensible variant. |
+| 2. Concepts bootstrapped from the physics, then curated | Evidence-centred design and stealth assessment (Shute; DeepStealth, Min et al.) start from a hand-made competency model and link telemetry to it. I found no work that proposes the concepts from a simulator's quantities. | Proposing concepts and their evidence rules from the physics model, with a curation step. | Moderate to strong, if presented as a semi-automatic step with a human in the loop. Check knowledge-component discovery and Q-matrix work before claiming it. |
+| 3. Sources as a graded, licence-aware database | RAG heritage systems (MuseRAG++, Playable Archives, digital personae) keep provenance at answer time. FActScore-style checking. | Per-chunk reliability and licence, conflicts kept flagged, and provenance shipped with each line into the game and its credits. | Weak alone (good practice); strong as part of the whole tool. |
+| 4. Bootstrap of missions and general concepts | LLM quest and plot tools (GamePlot, GENEVA, Orchid-Creator, GenQuest, World-Gen to Quest-Line) generate stories from a description. None grounds them in cited sources or reads an existing game's missions. | Skeletons read from the game's own mission definitions, joined to curated concepts and sources, with the author writing the story. | Moderate: the novelty is in grounding and in where the skeleton comes from, not in generating quests. |
+| 5. Challenge-aware timing of narration | Interruption research: breakpoints are the least disruptive moments (InterruptMe; task-boundary studies); prompts during events raise load. In-car systems defer speech by driver workload (patents US 8886397, US 10319253; Kim et al. flow control). Hint-timing studies in educational games (eye tracking; feedback timing review). | Applying workload-aware deferral to narrative in a learning game, with load estimated from the physics instead of sensors, and the reflection class that speaks right after a difficulty is solved. | Strongest technical contribution. Driver-workload scheduling is the closest analogue and should be cited; I found no game or learning work that schedules story by a physics-based load estimate. |
+
+Overall: the most defensible originality is the combination of 1, 2 and 5. The physics of the
+simulation drives both what is learned (concepts and evidence) and when the story speaks
+(challenge-aware scheduling), and the stories are grounded in graded sources. The study that
+follows from it adds a timing factor next to the narrative factor: talk anytime versus
+challenge-aware, and story arcs versus fact cards.
+
+Further sources from this scan:
+
+- InterruptMe: https://www.researchgate.net/publication/288446635_InterruptMe_Designing_intelligent_prompting_mechanisms_for_pervasive_applications
+- Adaptive feedback and cognitive load in AR: https://www.cambridge.org/core/journals/design-science/article/designing-adaptive-feedback-systems-for-managing-cognitive-load-in-augmented-reality/B2F5BA55D92F60D587BFDB9EE776BE22
+- Feedback messages in serious games, review: https://www.researchgate.net/publication/309588469_Designing_Effective_Feedback_Messages_in_Serious_Games_and_Simulations_A_Research_Review
+- Attention to adaptive hints in educational games (eye tracking): https://www.sciencedirect.com/science/article/pii/S1560429226001514
+- Scheduling driver interface tasks by workload: https://patents.google.com/patent/US8886397B2/en ; cognitive workload awareness: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/10319253
+- Kim, Park and Lee, flow control of driver-vehicle interactions: https://kimauk.github.io/file/paper/ICTC20_FlowControl.pdf
+- Stealth assessment (Shute): https://myweb.fsu.edu/vshute/pdf/sa_handbook.pdf ; DeepStealth: https://intellimedia.ncsu.edu/wp-content/uploads/sites/42/min-aied-2015.pdf ; design chapter: https://myweb.fsu.edu/vshute/pdf/design.pdf
+- GamePlot: https://arxiv.org/pdf/2411.02714 ; GENEVA: https://arxiv.org/pdf/2311.09213 ; Orchid-Creator: https://dl.acm.org/doi/10.1145/3772318.3791426 ; GenQuest: https://arxiv.org/html/2510.04498v1
+
 ## To do
 
 - [ ] Read in full: MuseRAG++, Playable Archives, Structured Knowledge Trees, the LLM-NPC
@@ -129,3 +159,6 @@ covariate, since narrative effects depend on it.
 - [ ] Systematic search for sailing or maritime heritage serious games with evaluations
 - [ ] Search for studies of event-triggered (not conversational) educational narration
 - [ ] Check the curiosity-driven content selection literature in games beyond Pique
+- [ ] Knowledge-component discovery and Q-matrix learning from logs (for component 2)
+- [ ] Interruptibility and breakpoint detection in games and simulators (for component 5)
+- [ ] Find and cite Fazenda et al. (2025), the Unity simulator paper (not found by web search)

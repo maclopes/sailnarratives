@@ -1,0 +1,113 @@
+# Game physics model: what the runtime can observe, what it derives, and the events it emits.
+# Reference game: TagusNavyVirtualMuseum/fragateiro (src/physics, src/world). Read-only: we do
+# not change the game. Thresholds are first guesses from the physics and the game's drills;
+# tune them with recorded play.
+
+version: 0.1
+game: fragateiro
+units: SI (m, m/s, rad internally; degrees where the field name ends in _deg)
+
+# Raw signals, read each physics step (120 Hz in the game; sampling at 10 Hz is enough).
+signals:
+  heading:          {from: BoatState.heading, unit: rad, note: "compass, 0 = north, clockwise"}
+  u:                {from: BoatState.u, unit: m/s, note: "forward speed through the water"}
+  v:                {from: BoatState.v, unit: m/s, note: "sideways speed (to starboard)"}
+  yaw_rate:         {from: BoatState.r, unit: rad/s}
+  heel:             {from: BoatState.heel, unit: rad}
+  rudder:           {from: Controls.rudder, unit: "-1..1"}
+  sheets:           {from: Controls.sheets, unit: "0 in .. 1 eased, per sail group"}
+  mode:             {from: Controls.mode, note: "e.g. muleta regular / lateral fishing"}
+  twa_deg:          {from: ForceReport.trueWindAngleDeg, note: "+ = wind from starboard"}
+  awa_deg:          {from: ForceReport.apparentWindAngleDeg}
+  aws:              {from: ForceReport.apparentWindSpeed, unit: m/s}
+  true_wind:        {from: WindField.at(t, x, y), note: "from-direction and speed; gusty wind shifts"}
+  sail_luffing:     {from: "ForceReport.sails[].luffing", note: "per active sail"}
+  sail_alpha_deg:   {from: "ForceReport.sails[].alphaDeg"}
+  best_sheets:      {from: SailboatSim.bestSheets(), note: "ideal trim, used by the easy level"}
+  level:            {from: mission level, values: [easy, medium, hard]}
+  aground:          {from: "games/sailing/main.ts aground flag"}
+  collision:        {from: "mission collision handling"}
+  other_boats:      {from: "traffic positions and velocities"}
+  target:           {from: "mission target: port, buoy, mark, boat at anchor, whale, shoal, seaweed"}
+  timer:            {from: "mission clock and limit"}
+
+# Quantities derived from the signals.
+derived:
+  speed_kn:         "hypot(u, v) / 0.5144"
+  point_of_sail:
+    from: "abs(twa_deg)"
+    bands:  # degrees off the bow; the physics gives no drive inside about 36°
+      in_irons:     [0, 36]
+      close_hauled: [36, 60]
+      close_reach:  [60, 80]
+      beam_reach:   [80, 100]
+      broad_reach:  [100, 150]
+      running:      [150, 180]
+  tack_side:        "starboard tack if twa_deg > 0 else port tack"
+  luffing_fraction: "share of active sails luffing"
+  trim_error:       "mean abs(sheet - best_sheet) over sail groups (0 = ideal)"
+  heel_ratio:       "abs(heel) / capsize_heel (30°)"
+  leeway_deg:       "atan2(v, u) in degrees"
+  vmg_upwind:       "speed * cos(twa) for upwind tasks"
+  steerage:         "u > 0.8 m/s (below it the rudder barely works)"
+  control_activity: "rate of change of rudder and sheets, per second, smoothed over 2 s"
+  distance_to_target: "metres"
+  time_to_contact:  "seconds to the nearest land, boat or target at the current closing speed"
+
+# Events: the trigger vocabulary for the line bank. side_margin follows src/world/drills.ts.
+events:
+  start:            {when: "mission starts"}
+  tack:             {when: "tack_side changes with the wind passing the bow", side_margin_deg: 20}
+  gybe:             {when: "tack_side changes with the wind passing the stern", side_margin_deg: 20}
+  gybe_controlled:  {when: "gybe with sheets at most 0.5 as the stern crosses", from: drillRules.gybeSheetMax}
+  gybe_uncontrolled: {when: "gybe with sheets above 0.5"}
+  enter_irons:      {when: "point_of_sail in_irons and u < 0.5 m/s for 3 s"}
+  out_of_irons:     {when: "after enter_irons: abs(twa_deg) > 45 and u > 0.8 m/s"}
+  luffing_start:    {when: "luffing_fraction > 0.5 for 5 s on a steady heading"}
+  luffing_stop:     {when: "luffing_fraction < 0.2 for 3 s after luffing_start"}
+  heel_warning:     {when: "heel_ratio > 0.7"}
+  capsize:          {when: "heel_ratio >= 1"}
+  gust:             {when: "true wind speed up 30 % within 5 s"}
+  wind_shift:       {when: "true wind direction moves 10° within 5 s"}
+  point_of_sail_change: {when: "point_of_sail band changes and holds 5 s"}
+  steady_leg:       {when: "heading within 10° and point_of_sail unchanged for 20 s"}
+  near_vessel:      {when: "another boat within 3 boat lengths or time_to_contact < 15 s"}
+  collision:        {when: "collision reported by the mission"}
+  aground:          {when: "aground flag set"}
+  refloat:          {when: "aground flag cleared"}
+  approach_target:  {when: "distance_to_target under the mission's approach distance"}
+  arrive:           {when: "mission goal reached (dock, mark, buoy rounded, alongside, catch)"}
+  timer_warning:    {when: "15 s left on a timed task"}
+  timer_end:        {when: "time limit reached"}
+  mission_end:      {when: "mission over, any outcome"}
+  # mission-specific, from src/world/whaling.ts, fishing.ts, challenges.ts
+  whale_surface:    {when: "whale surfaces"}
+  whale_close:      {when: "within 22 m of the whale from astern"}
+  whale_sounds:     {when: "whale sees the boat and dives"}
+  whale_leaves:     {when: "whale dives after breathing, or mission ends"}
+  net_out:          {when: "muleta switches to lateral fishing"}
+  catch:            {when: "fish caught over a shoal"}
+  alongside:        {when: "within 35 m of the boat at anchor and under 1.5 kn"}
+  pickup:           {when: "seaweed or rubbish picked up"}
+
+# Challenge (cognitive load) estimate, 0..1: the largest active factor.
+challenge:
+  combine: max
+  rise: instant
+  decay_seconds: 3
+  factors:
+    manoeuvre:       {when: "wind within 20° of bow or stern and abs(yaw_rate) > 3°/s", load: 0.9}
+    in_irons:        {when: "between enter_irons and out_of_irons", load: 0.8}
+    heel:            {when: "heel_ratio > 0.6", load: "0.6 + (heel_ratio - 0.6)"}
+    close_quarters:  {when: "time_to_contact < 15 s or within 3 boat lengths of land, boat or target", load: [0.7, 0.9]}
+    approach:        {when: "distance_to_target under the mission's approach distance", load: 0.7}
+    aground:         {when: "aground", load: 0.8}
+    gust_or_shift:   {when: "gust or wind_shift in the last 5 s", load: 0.5}
+    busy_hands:      {when: "control_activity above threshold", load: 0.5}
+    luffing:         {when: "luffing_fraction > 0.5", load: 0.4}
+    time_pressure:   {when: "last 15 s of a timed task", load: 0.6}
+  calm_window:
+    max_load: 0.3
+    min_seconds: 2
+    also: "steady heading and no target closer than the reading time of the line"
+  reading_time: "1.5 s + words / 3 words per second (text); replace with audio length for voice"
