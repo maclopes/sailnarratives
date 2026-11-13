@@ -977,7 +977,7 @@ async function linkConcepts(onlyNew){
       for(let a=0;a<2&&r===null;a++){ try{ r=await sample.json(linkPrompt(simList,batch),{modelTier:"default"}); }catch(e){ if(fatal(e)||a===1) throw e; } }
       const now=new Date().toISOString();
       for(const it of (Array.isArray(r?.items)?r.items:[])){
-        const c=cstate.set.concepts.find(x=>x.id===it?.id); if(!c) continue;
+        const cidm=String(it?.id||"").match(/\bc\d+\b/); const c=cidm&&cstate.set.concepts.find(x=>x.id===cidm[0]); if(!c) continue;
         c.simLinks=(Array.isArray(it.sim)?it.sim:[]).filter(id=>simSet.has(id)&&!c.members.includes(id)).slice(0,6);
         if(Array.isArray(it.keep) && (c.conflicts||[]).length) c.conflicts=c.conflicts.filter((f,k)=>it.keep.includes(k));
         if(it.numbers && String(it.numbers).trim() && !(c.conflicts||[]).some(f=>f.type==="number"&&f.source==="game")) (c.conflicts ||= []).push({type:"number", text:String(it.numbers).slice(0,300), source:"game"});
@@ -1224,7 +1224,7 @@ async function linkPractices(onlyNew){
       $("hRun").textContent=`Linking practices to concepts: ${Math.min(i+B,todo.length)} of ${todo.length}…`;
       const batch=todo.slice(i,i+B).map(p=>({id:p.id, label:p.label, boat:p.boats.slice(0,2).join(", "), action:String(idx[p.members[0]]?.action||"").slice(0,120)}));
       const r=await sample.json(hLinkPrompt(concepts,batch),{modelTier:"default"}); const now=new Date().toISOString();
-      for(const it of (Array.isArray(r?.items)?r.items:[])){ const p=hstate.set.practices.find(x=>x.id===it?.id); if(!p) continue; p.concepts=(it.concepts||[]).filter(id=>valid.has(id)).slice(0,6); p.linkNote=String(it.note||"").slice(0,120); p.linkedAt=now; }
+      for(const it of (Array.isArray(r?.items)?r.items:[])){ const pm=String(it?.id||"").match(/\bp\d+\b/); const p=pm&&hstate.set.practices.find(x=>x.id===pm[0]); if(!p) continue; p.concepts=[...new Set((it.concepts||[]).map(v=>(String(v).match(/\bc\d+\b/)||[""])[0]))].filter(id=>valid.has(id)).slice(0,6); p.linkNote=String(it.note||"").slice(0,120); p.linkedAt=now; }
       hstate.set.updatedAt=now; await saveDoc("practices/current", hstate.set); renderHTable();
     }
     $("hRun").textContent=`Linked ${todo.length} practices to concepts.`;
@@ -1374,7 +1374,10 @@ async function proposeActivities(){
   const fatal=(e)=>e?.code==="not_granted"||e?.code==="rate_limited"||e?.code==="unavailable";
   const ask=async(prompt)=>{ for(let a=0;a<2;a++){ try{ return await sample.json(prompt,{modelTier:"default"}); }catch(e){ if(fatal(e)||a===1) throw e; } } };
   try{
-    const out=[], skipped=[]; const B=15;
+    const out=[], skipped=[]; const B=15; let unmatched=0;
+    // Claude sometimes writes "p8 Some label" or "c12: label" instead of the bare id
+    const pid=(v)=>{ const m=String(v||"").match(/\bp\d+\b/); return m?m[0]:""; };
+    const cid=(v)=>{ const m=String(v||"").match(/\bc\d+\b/); return m?m[0]:""; };
     for(let i=0;i<prac.length;i+=B){
       $("sRun").textContent=`Proposing activities: practices ${i+1}–${Math.min(i+B,prac.length)} of ${prac.length}…`;
       const batch=prac.slice(i,i+B).map(p=>{ const ms=p.members.map(id=>hidx[id]).filter(Boolean);
@@ -1382,18 +1385,18 @@ async function proposeActivities(){
           actions:ms.slice(0,3).map(x=>x.action), conditions:[...new Set(ms.map(x=>x.conditions).filter(Boolean))].slice(0,3), cargo:[...new Set(ms.map(x=>x.cargo).filter(Boolean))].slice(0,3),
           linkedConcepts:(p.concepts||[]).map(id=>({id, label:cById[id]?.label||id, shown:isShown.has(id)}))}; });
       const r=await ask(proposePrompt(batch, shown));
-      for(const a of (Array.isArray(r?.activities)?r.activities:[])){ if(!a?.practice||!prac.some(p=>p.id===a.practice)) continue;
+      for(const a of (Array.isArray(r?.activities)?r.activities:[])){ if(a) a.practice=pid(a.practice); if(!a?.practice||!prac.some(p=>p.id===a.practice)){ unmatched++; continue; }
         out.push({id:"s"+(out.length+1), practice:a.practice, title:String(a.title||"").slice(0,80), goal:String(a.goal||"").slice(0,240), success:String(a.success||"").slice(0,240), boat:String(a.boat||""), boatNote:String(a.boatNote||"").slice(0,200),
-          area:String(a.area||""), route:String(a.route||"").slice(0,120), concepts:(Array.isArray(a.concepts)?a.concepts:[]).filter(id=>cById[id]).slice(0,8), minutes:Math.max(1,Math.min(6,Number(a.minutes)||3)), level:[1,2,3].includes(Number(a.level))?Number(a.level):2,
+          area:String(a.area||""), route:String(a.route||"").slice(0,120), concepts:[...new Set((Array.isArray(a.concepts)?a.concepts:[]).map(cid))].filter(id=>cById[id]).slice(0,8), minutes:Math.max(1,Math.min(6,Number(a.minutes)||3)), level:[1,2,3].includes(Number(a.level))?Number(a.level):2,
           simplifications:(Array.isArray(a.simplifications)?a.simplifications:[]).map(x=>String(x).slice(0,120)).slice(0,6), needs:String(a.needs||"").slice(0,120), feasibility:FEAS[a.feasibility]?a.feasibility:"simplified", premise:String(a.premise||"").slice(0,240), decision:"draft"}); }
-      for(const k of (Array.isArray(r?.skipped)?r.skipped:[])) if(k?.practice) skipped.push({practice:k.practice, why:String(k.why||"").slice(0,160)});
+      for(const k of (Array.isArray(r?.skipped)?r.skipped:[])) if(k?.practice) skipped.push({practice:pid(k.practice)||String(k.practice).slice(0,40), why:String(k.why||"").slice(0,160)});
     }
     // boats: check against the game's list
     for(const a of out){ a.boatInGame=matchBoat(a.boat)!=="missing"; }
     sstate.set={activities:out, skipped, createdAt:new Date().toISOString(), basis:{practicesAt:hstate.set.updatedAt||hstate.set.createdAt, conceptsAt:cstate.set?.updatedAt||cstate.set?.createdAt, shownConcepts:shown.length,
       inputs:"history practices, concepts and their game links, the game's boats, areas and ports; not the game's activities"}};
     await saveDoc("situations/current", sstate.set);
-    $("sRun").textContent=`Proposed ${out.length} activities from ${prac.length} practices (${skipped.length} skipped).`;
+    $("sRun").textContent=`Proposed ${out.length} activities from ${prac.length} practices (${skipped.length} skipped).`+(unmatched?` ${unmatched} proposals named no known practice and were left out.`:"");
   }catch(e){ $("sRun").textContent=(e.code==="not_granted"?"Asking Claude is not allowed in this view.":e.code==="rate_limited"?"Too many requests; wait a minute.":"Stopped: "+(e.message||e.code||e)); }
   sstate.running=false; $("sPropose").disabled=false; renderSituations();
 }
@@ -1404,8 +1407,10 @@ async function compareBlind(){
   $("sCompare").disabled=true; $("sRun").textContent="Comparing with the game's activities…";
   try{
     const r=await sample.json(comparePrompt(props,games),{modelTier:"complex"});
-    const g=(Array.isArray(r?.games)?r.games:[]).filter(x=>games.some(y=>y.id===x.id)).map(x=>({id:x.id, proposal:props.some(p=>p.id===x.proposal)?x.proposal:"", match:MATCH[x.match]?x.match:"none", why:String(x.why||"").slice(0,200)}));
-    const pr=(Array.isArray(r?.proposals)?r.proposals:[]).filter(x=>props.some(y=>y.id===x.id)).map(x=>({id:x.id, game:String(x.game||""), match:MATCH[x.match]?x.match:"new", why:String(x.why||"").slice(0,200)}));
+    const sid=(v)=>{ const m=String(v||"").match(/\bs\d+\b/); return m?m[0]:""; };
+    const gid=(v)=>{ const v2=String(v||""); return games.find(y=>y.id===v2)?.id || games.find(y=>v2.includes(y.id))?.id || ""; };
+    const g=(Array.isArray(r?.games)?r.games:[]).map(x=>({...x, id:gid(x.id), proposal:sid(x.proposal)})).filter(x=>x.id).map(x=>({id:x.id, proposal:props.some(p=>p.id===x.proposal)?x.proposal:"", match:MATCH[x.match]?x.match:"none", why:String(x.why||"").slice(0,200)}));
+    const pr=(Array.isArray(r?.proposals)?r.proposals:[]).map(x=>({...x, id:sid(x.id)})).filter(x=>props.some(y=>y.id===x.id)).map(x=>({id:x.id, game:String(x.game||""), match:MATCH[x.match]?x.match:"new", why:String(x.why||"").slice(0,200)}));
     sstate.blind={games:g, proposals:pr, createdAt:new Date().toISOString(), situationsAt:sstate.set.createdAt};
     await saveDoc("situations/blind", sstate.blind); $("sRun").textContent="Comparison done.";
   }catch(e){ $("sRun").textContent=e.code==="rate_limited"?"Too many requests; wait a minute.":"Could not compare: "+(e.message||e.code||e); }
