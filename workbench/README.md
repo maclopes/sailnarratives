@@ -42,7 +42,19 @@ The tool's screens. Each is a single HTML page with no build step.
   them into issue drafts. Uses processed records only; no source is read again.
   Data: situations/current, situations/blind.
 
-  Tab 7, Game report: evaluates the game against the sources. Concepts are sorted by kind
+  Tab 7, Narrative: for each of the game's mini-games, gathers the evidence behind it (the
+  practice its blind-comparison match came from, other practices with its boat, and their
+  concepts, each with source and location), proposes a cast (fictional, per activity) and 4-6
+  beats (trigger = a game moment, delivery = cue, story, reflection or curiosity), starting from
+  the author's story bible where it covers the mini-game. Writes two candidate lines per beat in
+  European Portuguese and English using only the beat's evidence, with a glossary that prefers
+  European terms; checks every claim in a separate request, plus word limits, numbers found in
+  the evidence and PT/EN number parity (term warnings are separate). The author edits (re-check),
+  approves or rejects; Export line bank writes verified and approved lines in the kit's
+  line-record shape with delivery, sources and credits. Data: narrative/<mini-game>,
+  world/events (the pack's game moments), texts/m-auth-bible.
+
+  Tab 8, Game report: evaluates the game against the sources. Concepts are sorted by kind
   (boat, place, sailing, boat part, practice, role, cargo, event, regulation, internal), then
   boats and places are checked against the pack's game world list (area by area), sailing
   concepts against the simulation, and historical practices (from the History tab when it has run) against the game's activities.

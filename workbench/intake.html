@@ -145,7 +145,8 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
     <button role="tab" id="tab-concepts" aria-selected="false" data-tab="concepts"><span class="n">4</span>Concepts</button>
     <button role="tab" id="tab-history" aria-selected="false" data-tab="history"><span class="n">5</span>History</button>
     <button role="tab" id="tab-situations" aria-selected="false" data-tab="situations"><span class="n">6</span>Situations</button>
-    <button role="tab" id="tab-report" aria-selected="false" data-tab="report"><span class="n">7</span>Game report</button>
+    <button role="tab" id="tab-narrative" aria-selected="false" data-tab="narrative"><span class="n">7</span>Narrative</button>
+    <button role="tab" id="tab-report" aria-selected="false" data-tab="report"><span class="n">8</span>Game report</button>
   </div>
 
   <!-- 1 Project -->
@@ -247,7 +248,15 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
     <div class="section"><div class="row" style="justify-content:space-between"><h2>Proposed activities</h2><span class="hint" id="sMeta"></span></div><div class="chips" id="sChips"></div><div id="sList"></div></div>
   </section>
 
-  <!-- 7 Game report -->
+  <!-- 7 Narrative -->
+  <section class="panel" id="panel-narrative" role="tabpanel" hidden>
+    <p class="sub">Narrative for the game's mini-games, one at a time. The tool gathers the evidence behind each mini-game (its practices and concepts, with sources and pages), proposes a cast and beats (from your story bible where it covers the mini-game), writes candidate lines in European Portuguese and English that may use only that evidence, and checks every claim. You edit, approve or reject; approved lines export as a line bank for the game. Characters are invented and marked fictional; facts come only from the evidence.</p>
+    <div class="row" style="margin-top:12px"><select id="nGame" style="width:auto;max-width:100%"></select>
+      <button class="btn primary" id="nPlan">Plan cast and beats</button><button class="btn" id="nWrite">Write lines</button><button class="btn" id="nCheck">Check lines</button><button class="btn" id="nExport">Export line bank</button><span class="hint" id="nRun"></span></div>
+    <div id="nOut"></div>
+  </section>
+
+  <!-- 8 Game report -->
   <section class="panel" id="panel-report" role="tabpanel" hidden>
     <p class="sub">Evaluates the game against the sources: which boats, places, sailing behaviour and historical activities the sources support, and whether the game has them. Each finding counts the sources behind it. Run it again after each game release to see what changed.</p>
     <div class="row" style="margin-top:12px"><button class="btn primary" id="rBuild">Build report</button>
@@ -296,13 +305,14 @@ function setSave(msg){$("saveState").textContent=msg;}
 // ---------- tabs ----------
 function showTab(name){
   for (const b of document.querySelectorAll(".tabs button")) b.setAttribute("aria-selected", String(b.dataset.tab===name));
-  for (const p of ["project","materials","readiness","concepts","history","situations","report"]) $("panel-"+p).hidden = p!==name;
+  for (const p of ["project","materials","readiness","concepts","history","situations","narrative","report"]) $("panel-"+p).hidden = p!==name;
   try{localStorage.setItem("intake.tab",name);}catch{}
   if (name==="readiness") renderReadiness();
   if (name==="concepts") renderConcepts();
   if (name==="report") renderReport();
   if (name==="history") renderHistory();
   if (name==="situations") renderSituations();
+  if (name==="narrative") renderNarrative();
 }
 document.querySelectorAll(".tabs button").forEach(b=>b.addEventListener("click",()=>showTab(b.dataset.tab)));
 
@@ -1490,6 +1500,199 @@ $("sList").addEventListener("click",async(ev)=>{ const x=ev.target.closest("[dat
 $("sCopy").addEventListener("click",async()=>{ const t=situationsText(); if(!t){ toast("No proposals yet."); return; } try{ await navigator.clipboard.writeText(t); toast("Copied"); }catch{ toast("Copy is not available here; use Download."); } });
 $("sDl").addEventListener("click",async()=>{ const t=situationsText(); if(!t){ toast("No proposals yet."); return; } if(!downloads){ toast("Downloads are not available here; use Copy."); return; } try{ await downloads.save({filename:"proposed-activities.md", data:t}); }catch(e){ if(e.code!=="declined") toast("Could not save: "+(e.message||e.code)); } });
 
+
+// ---------- narrative for the game's mini-games ----------
+const nstate={docs:{}, events:null, game:"", running:false, editing:null};
+const WORDS={cue:6, story:35, reflection:25, curiosity:60};
+const nKey=(id)=>String(id).replace(/[^a-z0-9]+/gi,"-");
+function miniGames(){ return (rstate.world?.activities||[]).filter(a=>a.type==="museum mini-game"&&(a.boats||[]).length); }
+function evidenceFor(g){
+  const hidx=hIndex(), idx=candIndex(), boat=norm(g.boats[0]||"");
+  const ev=[], add=(origin,sourceId,location,text,numbers)=>{ if(!text) return; ev.push({id:"e"+(ev.length+1), origin, sourceId, source:srcTitle(sourceId), location:location||"", text:String(text).slice(0,260), numbers:(numbers||[]).map(n=>`${n.what}: ${n.value}${n.unit?" "+n.unit:""}`)}); };
+  const prs=[], seen=new Set(), pById=Object.fromEntries((hstate.set?.practices||[]).map(p=>[p.id,p]));
+  const bl=sstate.blind?.games?.find(x=>x.id===g.id), act=bl?.proposal&&sstate.set?.activities?.find(a=>a.id===bl.proposal);
+  if(act&&pById[act.practice]){ prs.push(pById[act.practice]); seen.add(act.practice); }
+  const nsrc=(p)=>new Set(p.members.map(id=>hidx[id]?.sourceId).filter(Boolean)).size;
+  for(const p of (hstate.set?.practices||[]).filter(p=>p.decision!=="rejected"&&!seen.has(p.id)&&(p.boats||[]).some(b=>norm(b).includes(boat))).sort((a,b)=>nsrc(b)-nsrc(a)).slice(0,5)) prs.push(p);
+  for(const p of prs) for(const id of p.members.slice(0,6)){ const x=hidx[id]; if(x) add(id,x.sourceId,x.location,[x.action,x.who&&"who: "+x.who,x.place&&"place: "+x.place,x.period&&"when: "+x.period,x.cargo&&"cargo: "+x.cargo].filter(Boolean).join(" · "),x.numbers); }
+  const cids=[...new Set([...(act?.concepts||[]), ...prs.flatMap(p=>p.concepts||[])])].slice(0,10);
+  const cById=Object.fromEntries((cstate.set?.concepts||[]).map(c=>[c.id,c]));
+  for(const cid of cids){ const c=cById[cid]; if(!c) continue; for(const id of c.members.filter(id=>idx[id]&&idx[id].kind!=="simulation").slice(0,2)){ const x=idx[id]; add(id,x.sourceId,x.location,`${c.label}: “${x.term}” (${x.lang||""}) — ${x.definition}`,x.numbers); } }
+  return {evidence:ev.slice(0,45), practices:prs.map(p=>p.id), concepts:cids, proposal:act?.id||"", match:bl?.match||""};
+}
+function glossary(){
+  const idx=candIndex(), prim=state.project.primaryLanguage||"pt-PT", out=[];
+  for(const c of (cstate.set?.concepts||[]).filter(c=>c.decision!=="rejected"&&c.scope!=="out")){
+    const ms=c.members.map(id=>idx[id]).filter(Boolean); const use=[...new Set(ms.filter(x=>x.lang===prim).map(x=>x.term))], avoid=[...new Set(ms.filter(x=>x.lang&&x.lang!==prim&&base(x.lang)===base(prim)).map(x=>x.term))].filter(t=>!use.some(u=>norm(u)===norm(t)));
+    if(use.length&&(ms.some(x=>x.kind==="simulation")||(c.simLinks||[]).length||avoid.length)) out.push({concept:c.label, use:use.slice(0,3), avoid:avoid.slice(0,3)}); }
+  return out.slice(0,50);
+}
+function bibleFor(g){ const t=cstate.texts["m-auth-bible"]?.text||""; if(!t) return ""; const b=norm(g.boats[0]||""); return norm(t).includes(b)?t:""; }
+function planPrompt(g, E, bible){
+  const p=state.project, ev=nstate.events;
+  const roles=[...new Set(E.evidence.map(e=>(e.text.match(/who: ([^·]+)/)||[])[1]).filter(Boolean).map(x=>x.trim()))].slice(0,12);
+  return `You help an author plan the narrative for one activity of a sailing game in a museum about ${p.subject||"one subject"} (visits of about ${p.visitMinutes||5} minutes, audience: ${p.audience||"visitors"}). Plan only: do not write the lines.
+Tone and constraints: ${(p.tone||"none given").replace(/\n/g,"; ")}.
+
+Activity: ${g.title}. ${g.description} Boat: ${g.boats.join(", ")}. Place: ${JSON.stringify(g.places||[])}.
+
+${bible?`Author's story bible (characters, tone and arcs; its facts are proposals and are NOT evidence):\n${bible}\n`:"The author's story bible does not cover this activity.\n"}
+Evidence: the only facts the lines may later use (id, source, location, text):
+${E.evidence.map(e=>`${e.id} [${e.source}${e.location?", "+e.location:""}] ${e.text}${e.numbers.length?" ("+e.numbers.join("; ")+")":""}`).join("\n")}
+
+Roles named in the evidence: ${roles.join("; ")||"none"}
+Game moments that can trigger a beat (id: when): ${ev.events.map(x=>`${x.id}: ${x.when}`).join("; ")}
+Delivery: ${Object.entries(ev.delivery).map(([k,v])=>`${k}: ${v}`).join("; ")}
+
+Rules:
+- 1 to 3 characters, invented and labelled fictional, whose trade and world come from the evidence (cite evidence ids for their role). Characters belong to this activity only.
+- 4 to 6 beats in the order setup, complication, turn, close, plus at most one curiosity card. The sailing difficulty is the complication.
+- Never put a story line on a difficult moment: a difficult moment gets at most a cue, and the story continues as a reflection after it is solved.
+- Each beat: trigger (a game moment id), delivery, character id, gist (one sentence of what happens), concept (the sailing concept the player practises then, if any), evidence (ids the line may draw on; at least one for story, reflection and curiosity beats, unless the beat is pure character).
+- If the story bible covers this activity, start from its cast and beats and adapt them to the evidence and the game moments; say what you changed in notes.
+Return JSON only: {"cast":[{"id":"k1","name":"","role":"","voice":"","want":"","evidence":["e1"]}],"beats":[{"id":"b1","part":"setup","trigger":"","delivery":"story","character":"k1","gist":"","concept":"","evidence":["e1"]}],"notes":""}`;
+}
+function linesPrompt(d, g){
+  const E=Object.fromEntries(d.evidence.map(e=>[e.id,e])), cast=Object.fromEntries(d.cast.map(k=>[k.id,k])), gl=glossary();
+  return `Write candidate lines for the beats of one activity of a museum sailing game (${g.title}; boat: ${g.boats.join(", ")}).
+Characters (fictional): ${d.cast.map(k=>`${k.id} ${k.name}, ${k.role}; voice: ${k.voice}; wants: ${k.want}`).join(" | ")}
+European Portuguese terms to use (use) and to avoid (Brazilian or other variants):
+${gl.map(x=>`${x.concept}: use ${x.use.join(" / ")}${x.avoid.length?"; avoid "+x.avoid.join(" / "):""}`).join("\n")}
+
+Beats (id, part, trigger, delivery, character, gist, concept, evidence):
+${d.beats.map(b=>`${b.id} | ${b.part} | ${b.trigger} | ${b.delivery} | ${cast[b.character]?.name||"narrator"} | ${b.gist} | ${b.concept||""} | ${(b.evidence||[]).map(id=>E[id]?`${id}: ${E[id].text}${E[id].numbers.length?" ("+E[id].numbers.join("; ")+")":""}`:"").filter(Boolean).join(" || ")||"none"}`).join("\n")}
+
+For each beat write 2 candidates. Each has:
+- pt: European Portuguese; en: English with the same meaning, numbers and names.
+- Length: at most ${Object.entries(WORDS).map(([k,v])=>`${v} words for ${k}`).join(", ")}.
+- Use only facts in that beat's evidence. Names of characters, feelings and small actions are colour: they must not state checkable facts. No dates, numbers, places or boat details unless they are in the evidence.
+- Sailing instruction is the character reacting to what the player just did, never a lecture. A cue is an instruction only.
+- claims: every factual statement in the line, each with the evidence ids that support it. fictional: true when the line states no fact from the evidence.
+- Refer to beats and evidence by their bare ids ("b2", "e5").
+Return JSON only: {"lines":[{"beat":"b1","pt":"","en":"","claims":[{"claim":"","evidence":["e1"]}],"fictional":false}]}`;
+}
+function checkPrompt(items){
+  return `Check each line of a museum game against its evidence, independently of whoever wrote it. For every factual statement in the line (in either language), say whether the listed evidence supports it: "supported", "unsupported" (the evidence does not say it) or "contradicted" (the evidence says otherwise). Character names, feelings and small actions are not factual statements. Refer to lines by their bare ids.
+Return JSON only: {"checks":[{"line":"l1","claims":[{"claim":"","verdict":"supported","evidence":["e1"]}]}]}
+
+Lines:
+${items.map(x=>`${x.id}\nPT: ${x.pt}\nEN: ${x.en}\nEvidence:\n${x.ev.map(e=>`${e.id}: ${e.text}${e.numbers.length?" ("+e.numbers.join("; ")+")":""}`).join("\n")||"none"}`).join("\n\n")}`;
+}
+const idOf=(v,pfx)=>{ const m=String(v||"").match(new RegExp("\\b"+pfx+"\\d+\\b")); return m?m[0]:""; };
+const curDoc=()=>nstate.docs[nKey(nstate.game)];
+async function saveN(d){ d.updatedAt=new Date().toISOString(); nstate.docs[nKey(nstate.game)]=d; try{ await saveDoc("narrative/"+nKey(nstate.game), d); }catch(e){ toast("Could not save: "+(e.message||e.code)); } }
+async function planNarrative(){
+  const g=miniGames().find(a=>a.id===nstate.game); if(!g||!sample) return;
+  if(curDoc()?.lines?.some(l=>l.status==="approved") && !planNarrative.sure){ planNarrative.sure=true; $("nRun").textContent="This replaces the cast, beats and lines of this mini-game, approved lines included. Press again to go ahead."; return; }
+  planNarrative.sure=false; nstate.running=true; $("nRun").textContent="Gathering evidence and planning…";
+  try{
+    const E=evidenceFor(g), bible=bibleFor(g);
+    const r=await sample.json(planPrompt(g,E,bible),{modelTier:"complex"});
+    const eids=new Set(E.evidence.map(e=>e.id)), evs=nstate.events.events.map(x=>x.id);
+    const cast=(Array.isArray(r?.cast)?r.cast:[]).slice(0,3).map((k,i)=>({id:idOf(k.id,"k")||"k"+(i+1), name:String(k.name||"").slice(0,60), role:String(k.role||"").slice(0,120), voice:String(k.voice||"").slice(0,160), want:String(k.want||"").slice(0,160), evidence:(k.evidence||[]).map(v=>idOf(v,"e")).filter(v=>eids.has(v)), fictional:true}));
+    const beats=(Array.isArray(r?.beats)?r.beats:[]).slice(0,7).map((b,i)=>({id:"b"+(i+1), part:["setup","complication","turn","close","curiosity"].includes(b.part)?b.part:"setup", trigger:evs.includes(b.trigger)?b.trigger:(evs.find(x=>String(b.trigger||"").includes(x))||"start"), delivery:WORDS[b.delivery]?b.delivery:"story", character:idOf(b.character,"k")||cast[0]?.id||"", gist:String(b.gist||"").slice(0,300), concept:String(b.concept||"").slice(0,80), evidence:(b.evidence||[]).map(v=>idOf(v,"e")).filter(v=>eids.has(v))}));
+    await saveN({game:g.id, title:g.title, evidence:E.evidence, basis:{practices:E.practices, concepts:E.concepts, proposal:E.proposal, match:E.match, bible:!!bible}, cast, beats, lines:[], notes:String(r?.notes||"").slice(0,600), createdAt:new Date().toISOString()});
+    $("nRun").textContent=`Planned ${cast.length} characters and ${beats.length} beats from ${E.evidence.length} evidence records${bible?" and your story bible":""}.`;
+  }catch(e){ $("nRun").textContent=e.code==="rate_limited"?"Too many requests; wait a minute.":"Could not plan: "+(e.message||e.code||e); }
+  nstate.running=false; renderNarrative();
+}
+function glossaryWarnings(l){
+  const out=[]; for(const gx of glossary()) for(const a of gx.avoid) if(a.length>3 && new RegExp("(^|[^\\p{L}])"+a.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"($|[^\\p{L}])","iu").test(l.pt)) out.push(`uses “${a}”; the European Portuguese term for ${gx.concept} is ${gx.use.join(" / ")}`);
+  return out;
+}
+function mechChecks(l, d){
+  const ev=(d.beats.find(b=>b.id===l.beat)?.evidence||[]).map(id=>d.evidence.find(e=>e.id===id)).filter(Boolean);
+  const evText=ev.map(e=>e.text+" "+e.numbers.join(" ")).join(" "), b=d.beats.find(x=>x.id===l.beat), max=WORDS[b?.delivery]||35, out=[];
+  const words=(t)=>String(t||"").trim().split(/\s+/).filter(Boolean).length;
+  if(words(l.pt)>max) out.push(`PT has ${words(l.pt)} words (max ${max})`);
+  if(words(l.en)>max+3) out.push(`EN has ${words(l.en)} words (max about ${max})`);
+  // compare numbers without thousands separators ("1,490" = "1.490" = "1490")
+  const nums=(t)=>(String(t).match(/\d[\d.,]*\d|\d/g)||[]).map(n=>n.replace(/[.,](?=\d{3}\b)/g,"").replace(",","."));
+  const evNums=new Set(nums(evText));
+  for(const n of new Set([...nums(l.pt),...nums(l.en)])) if(!evNums.has(n)) out.push(`number ${n} is not in the evidence`);
+  const npt=nums(l.pt).sort().join(), nen=nums(l.en).sort().join(); if(npt!==nen) out.push("PT and EN numbers differ");
+  return out;
+}
+async function writeLines(){
+  const d=curDoc(), g=miniGames().find(a=>a.id===nstate.game); if(!d||!sample) { $("nRun").textContent="Plan cast and beats first."; return; }
+  nstate.running=true; $("nRun").textContent="Writing candidate lines…";
+  try{
+    const r=await sample.json(linesPrompt(d,g),{modelTier:"complex"}); const eids=new Set(d.evidence.map(e=>e.id));
+    const keep=d.lines.filter(l=>l.status==="approved"); let n=Math.max(0,...d.lines.map(l=>Number(String(l.id).slice(1))||0))+1;
+    const fresh=(Array.isArray(r?.lines)?r.lines:[]).map(l=>({id:"l"+(n++), beat:idOf(l.beat,"b"), pt:String(l.pt||"").slice(0,500), en:String(l.en||"").slice(0,500), claims:(Array.isArray(l.claims)?l.claims:[]).slice(0,6).map(c=>({claim:String(c.claim||"").slice(0,200), evidence:(c.evidence||[]).map(v=>idOf(v,"e")).filter(v=>eids.has(v))})), fictional:!!l.fictional, status:"draft"})).filter(l=>d.beats.some(b=>b.id===l.beat)&&l.pt);
+    d.lines=[...keep,...fresh]; await saveN(d); $("nRun").textContent=`Wrote ${fresh.length} candidate lines. Press Check lines.`;
+  }catch(e){ $("nRun").textContent=e.code==="rate_limited"?"Too many requests; wait a minute.":"Could not write: "+(e.message||e.code||e); }
+  nstate.running=false; renderNarrative();
+}
+async function checkLines(onlyUnchecked){
+  const d=curDoc(); if(!d?.lines?.length||!sample){ $("nRun").textContent="Write lines first."; return; }
+  const todo=d.lines.filter(l=>l.status!=="rejected"&&!(onlyUnchecked&&l.check)); if(!todo.length){ $("nRun").textContent="All lines are checked."; return; }
+  nstate.running=true; $("nRun").textContent=`Checking ${todo.length} lines against their evidence…`;
+  try{
+    const items=todo.map(l=>({id:l.id, pt:l.pt, en:l.en, ev:(d.beats.find(b=>b.id===l.beat)?.evidence||[]).map(id=>d.evidence.find(e=>e.id===id)).filter(Boolean)}));
+    const r=await sample.json(checkPrompt(items),{modelTier:"default"});
+    for(const c of (Array.isArray(r?.checks)?r.checks:[])){ const l=d.lines.find(x=>x.id===idOf(c.line,"l")); if(!l) continue;
+      const claims=(Array.isArray(c.claims)?c.claims:[]).map(x=>({claim:String(x.claim||"").slice(0,200), verdict:["supported","unsupported","contradicted"].includes(x.verdict)?x.verdict:"unsupported", evidence:(x.evidence||[]).map(v=>idOf(v,"e"))}));
+      const mech=mechChecks(l,d), warn=glossaryWarnings(l); const bad=claims.filter(x=>x.verdict!=="supported");
+      l.check={claims, mech, warn, at:new Date().toISOString()}; if(l.status!=="approved") l.status=(!bad.length&&!mech.length)?"verified":"needs work"; }
+    await saveN(d); $("nRun").textContent="Checked.";
+  }catch(e){ $("nRun").textContent=e.code==="rate_limited"?"Too many requests; wait a minute.":"Could not check: "+(e.message||e.code||e); }
+  nstate.running=false; renderNarrative();
+}
+function exportBank(){
+  const d=curDoc(), g=miniGames().find(a=>a.id===nstate.game); if(!d) return null;
+  const order=miniGames().map(a=>a.id), cast=Object.fromEntries(d.cast.map(k=>[k.id,k])), place=(g.places||[])[0]||{};
+  const lines=d.lines.filter(l=>l.status==="approved"||l.status==="verified").map(l=>{ const b=d.beats.find(x=>x.id===l.beat)||{};
+    const ev=[...new Set([...(l.claims||[]).flatMap(c=>c.evidence), ...(b.evidence||[])])].map(id=>d.evidence.find(e=>e.id===id)).filter(Boolean);
+    return {id:`${nKey(g.id)}-${l.beat}-${l.id}`, mission:order.indexOf(g.id)+1, boat:g.boats[0], zone:[place.area,place.from||place.at,place.to].filter(Boolean).join(":"), beat:b.part==="curiosity"?"epilogue":b.part, trigger:b.trigger, delivery:b.delivery, character:cast[b.character]?.name||"", concept:b.concept||undefined,
+      text:{pt:l.pt, en:l.en}, depth:b.delivery==="curiosity"?2:1, fictional:!!l.fictional, sources:ev.map(e=>e.origin), status:l.status==="approved"?"approved":"verified"}; });
+  const used=[...new Set(lines.flatMap(l=>l.sources))].map(o=>d.evidence.find(e=>e.origin===o)).filter(Boolean);
+  return {game:g.id, title:g.title, exportedAt:new Date().toISOString(), triggers:[...new Set(lines.map(l=>l.trigger))], lines, credits:[...new Set(used.map(e=>e.source))], evidence:used.map(e=>({id:e.origin, source:e.source, location:e.location, paraphrase:e.text}))};
+}
+function renderNarrative(){
+  const games=miniGames(); const sel=$("nGame");
+  if(!nstate.game&&games.length) nstate.game=games[0].id;
+  sel.innerHTML=games.map(g=>`<option value="${esc(g.id)}"${g.id===nstate.game?" selected":""}>${esc(g.title)}${nstate.docs[nKey(g.id)]?" ✓":""}</option>`).join("");
+  const out=$("nOut"), g=games.find(a=>a.id===nstate.game);
+  if(!rstate.world||!nstate.events){ out.innerHTML=`<div class="empty" style="margin-top:12px">The game's world list or event list is not loaded.</div>`; return; }
+  if(!g){ out.innerHTML=""; return; }
+  const d=curDoc(), E=d?null:evidenceFor(g);
+  const bl=sstate.blind?.games?.find(x=>x.id===g.id);
+  if(!d){ out.innerHTML=`<div class="empty" style="margin-top:12px"><b>${esc(g.title)}</b>: ${esc(g.description)}<br>${E.evidence.length?"":`<b>No evidence for this mini-game:</b> none of the sources read so far covers the ${esc(g.boats.join(", "))} or ${esc(rstate.world.area_names?.[(g.places||[])[0]?.area]||"its area")}. Lines planned now can only be pure character (marked fictional); add sources on it to ground them.<br>`}Boat: ${esc(g.boats.join(", "))} · ${E.evidence.length} evidence records from ${E.practices.length} practices and ${E.concepts.length} concepts${bl?` · blind comparison: ${esc(bl.match)}`:""}${bibleFor(g)?" · your story bible covers it":""}.<br>Press Plan cast and beats.</div>`; return; }
+  const cast=Object.fromEntries(d.cast.map(k=>[k.id,k])), evs=nstate.events.events.map(x=>x.id);
+  const st={draft:"p-info",verified:"p-good","needs work":"p-warn",approved:"p-good",rejected:"p-bad"};
+  out.innerHTML=`<div class="hint" style="margin-top:10px">${d.evidence.length} evidence records · ${d.basis.bible?"from your story bible and the evidence":"from the evidence"} · planned ${esc(new Date(d.createdAt).toLocaleString())}${d.notes?` · notes: ${esc(d.notes)}`:""}</div>
+    <div class="section"><h2>Cast <span class="hint">(fictional)</span></h2>${d.cast.map(k=>`<div class="src"><b>${esc(k.name)}</b> — ${esc(k.role)}<div class="hint">Voice: ${esc(k.voice)} · Wants: ${esc(k.want)}${k.evidence.length?` · role from ${esc(k.evidence.map(id=>d.evidence.find(e=>e.id===id)?.source).filter(Boolean).join("; "))}`:""}</div></div>`).join("")}</div>
+    <div class="section"><h2>Beats and lines</h2>${d.beats.map(b=>{ const ls=d.lines.filter(l=>l.beat===b.id);
+      return `<div class="concept"><div class="concept-h"><h3>${esc(b.part)}: ${esc(b.gist)}</h3><div class="row"><span class="pill p-acc">${esc(b.trigger)}</span><span class="pill">${esc(b.delivery)} · ≤${WORDS[b.delivery]} words</span><span class="pill">${esc(cast[b.character]?.name||"")}</span>${b.concept?`<span class="pill p-info">${esc(b.concept)}</span>`:""}</div></div>
+        <div class="row" style="margin-top:6px"><label class="hint">Trigger <select data-btrig="${b.id}">${evs.map(x=>`<option${x===b.trigger?" selected":""}>${esc(x)}</option>`).join("")}</select></label><label class="hint">Delivery <select data-bdel="${b.id}">${Object.keys(WORDS).map(x=>`<option${x===b.delivery?" selected":""}>${x}</option>`).join("")}</select></label></div>
+        ${b.evidence.length?`<details style="margin-top:6px"><summary class="hint" style="cursor:pointer">Evidence this beat may use (${b.evidence.length})</summary><ul>${b.evidence.map(id=>{ const e=d.evidence.find(x=>x.id===id); return e?`<li class="hint">${esc(id)} · ${esc(e.source)}${e.location?" ("+esc(e.location)+")":""}: ${esc(e.text)}</li>`:""; }).join("")}</ul></details>`:`<div class="hint">No evidence: lines must be pure character.</div>`}
+        ${ls.map(l=>`<div class="issue"><div class="row" style="justify-content:space-between"><span class="pill ${st[l.status]||""}">${esc(l.status)}</span>${l.fictional?`<span class="pill">fictional</span>`:""}</div>
+          ${nstate.editing===l.id?`<label class="hint">PT</label><textarea id="nEditPt">${esc(l.pt)}</textarea><label class="hint">EN</label><textarea id="nEditEn">${esc(l.en)}</textarea><div class="row" style="margin-top:6px"><button class="btn small primary" data-lsave="${l.id}">Save and check again</button><button class="btn small" data-lcancel>Cancel</button></div>`
+            :`<div style="margin-top:4px"><b>PT</b> ${esc(l.pt)}</div><div><b>EN</b> ${esc(l.en)}</div>`}
+          ${l.check?`<div class="hint" style="margin-top:4px">${(l.check.claims||[]).map(c=>`<span class="pill ${c.verdict==="supported"?"p-good":"p-bad"}">${esc(c.verdict)}</span> ${esc(c.claim)}${c.evidence?.length?" ("+esc(c.evidence.join(", "))+")":""}`).join("<br>")}${(l.check.mech||[]).map(m=>`<br><span class="pill p-bad">check</span> ${esc(m)}`).join("")}${(l.check.warn||[]).map(m=>`<br><span class="pill p-warn">term</span> ${esc(m)}`).join("")}</div>`:`<div class="hint">Not checked yet.</div>`}
+          <div class="row" style="margin-top:6px"><button class="btn small${l.status==="approved"?" primary":""}" data-lapprove="${l.id}">Approve</button><button class="btn small" data-ledit="${l.id}">Edit</button><button class="btn small" data-lreject="${l.id}">Reject</button></div></div>`).join("")}
+      </div>`; }).join("")}</div>`;
+}
+$("nGame").addEventListener("change",()=>{ nstate.game=$("nGame").value; nstate.editing=null; renderNarrative(); });
+$("nPlan").addEventListener("click",planNarrative);
+$("nWrite").addEventListener("click",writeLines);
+$("nCheck").addEventListener("click",()=>checkLines(false));
+$("nExport").addEventListener("click",async()=>{ const bank=exportBank(); if(!bank){ toast("Plan and write lines first."); return; } if(!bank.lines.length){ toast("No verified or approved lines yet."); return; }
+  const t=JSON.stringify(bank,null,1);
+  if(downloads){ try{ await downloads.save({filename:`line-bank-${nKey(bank.game)}.json`, data:t}); return; }catch(e){ if(e.code==="declined") return; } }
+  try{ await navigator.clipboard.writeText(t); toast("Copied the line bank"); }catch{ toast("Could not export here."); } });
+$("nOut").addEventListener("change",async(ev)=>{ const d=curDoc(); if(!d) return; const t=ev.target;
+  if(t.dataset.btrig){ d.beats.find(b=>b.id===t.dataset.btrig).trigger=t.value; await saveN(d); renderNarrative(); }
+  if(t.dataset.bdel){ d.beats.find(b=>b.id===t.dataset.bdel).delivery=t.value; d.lines.filter(l=>l.beat===t.dataset.bdel&&l.status!=="approved").forEach(l=>{ l.check=null; l.status="draft"; }); await saveN(d); renderNarrative(); } });
+$("nOut").addEventListener("click",async(ev)=>{ const d=curDoc(); const b=ev.target.closest("button"); if(!d||!b) return;
+  const l=d.lines.find(x=>x.id===(b.dataset.lapprove||b.dataset.lreject||b.dataset.ledit||b.dataset.lsave));
+  if(b.dataset.lapprove){ l.status="approved"; await saveN(d); renderNarrative(); }
+  else if(b.dataset.lreject){ l.status="rejected"; await saveN(d); renderNarrative(); }
+  else if(b.dataset.ledit){ nstate.editing=l.id; renderNarrative(); }
+  else if(b.hasAttribute("data-lcancel")){ nstate.editing=null; renderNarrative(); }
+  else if(b.dataset.lsave){ l.pt=$("nEditPt").value.trim(); l.en=$("nEditEn").value.trim(); l.check=null; l.status="draft"; nstate.editing=null; await saveN(d); await checkLines(true); } });
+
 // ---------- game report ----------
 const rstate={world:null, classes:{}, acts:{}, report:null, history:[], running:false};
 const RSTAT={"in game":"p-good","port":"p-good","landmark":"p-good","on map":"p-info","sea mark only":"p-warn","in development":"p-warn","shown":"p-good","covered":"p-good","partly":"p-warn","missing":"p-bad","not shown":"p-bad","outside the game's areas":"p-bad","area unknown":"p-info","out of scope":"p-info"};
@@ -1819,6 +2022,9 @@ try{ const t=localStorage.getItem("intake.tab"); if(t) showTab(t); }catch{}
   const hRefresh=()=>{ if(!$("panel-history").hidden && !hstate.running) renderHistory(); };
   db.collection("practiceCands").onSnapshot(s=>{ if(!hstate.running){ hstate.cands=Object.fromEntries(s.docs.map(d=>[d.id,d.data()])); hRefresh(); } }, ()=>{});
   db.doc("practices/current").onSnapshot(s=>{ if(!hstate.running){ hstate.set=s.exists?s.data():null; hRefresh(); } }, ()=>{});
+  const nRefresh=()=>{ if(!$("panel-narrative").hidden && !nstate.running && !nstate.editing) renderNarrative(); };
+  db.doc("world/events").onSnapshot(s=>{ nstate.events=s.exists?s.data():null; nRefresh(); }, ()=>{});
+  db.collection("narrative").onSnapshot(s=>{ if(!nstate.running){ nstate.docs=Object.fromEntries(s.docs.map(d=>[d.id,d.data()])); nRefresh(); } }, ()=>{});
   const sRefresh=()=>{ if(!$("panel-situations").hidden && !sstate.running) renderSituations(); };
   db.doc("situations/current").onSnapshot(s=>{ if(!sstate.running){ sstate.set=s.exists?s.data():null; sRefresh(); } }, ()=>{});
   db.doc("situations/blind").onSnapshot(s=>{ sstate.blind=s.exists?s.data():null; sRefresh(); }, ()=>{});

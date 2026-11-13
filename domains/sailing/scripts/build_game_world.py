@@ -61,6 +61,13 @@ def main(root: Path) -> dict:
         elif kind in ("route", "ground") and k.count(".") == 1 and k != "route.traditionally":
             activities.append({"id": k, "type": "transport route" if kind == "route" else "fishing ground",
                                "title": k.split(".", 1)[1], "description": v})
+    mg = json.loads((root / "content/minigames.json").read_text(encoding="utf-8"))
+    for g in mg.get("minigames", []):
+        for a in activities:
+            if a["id"] == "mini." + g["id"]:
+                a["boats"] = g.get("boats", [])
+                a["places"] = [{k: v for k, v in pl.items() if k in ("area", "from", "to", "at")} for pl in g.get("places", [])]
+                a["kind"] = g.get("type", "")
     commit = subprocess.run(["git", "-C", str(root), "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip()
     return {"game": "fragateiro", "commit": commit, "area_names": area_names, "map_files": {"tejo": "tagus"},
             "activities": activities, "ports": areas, "extra_places": extra,

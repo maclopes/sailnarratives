@@ -222,49 +222,131 @@
    "id": "mini.downwind",
    "type": "museum mini-game",
    "title": "Downwind with the Falua",
-   "description": "Run before the wind to the mark: let the sheets out."
+   "description": "Run before the wind to the mark: let the sheets out.",
+   "boats": [
+    "falua"
+   ],
+   "places": [
+    {
+     "area": "tejo",
+     "from": "Lisboa"
+    }
+   ],
+   "kind": "run"
   },
   {
    "id": "mini.upwind",
    "type": "museum mini-game",
    "title": "Upwind with the Falua",
-   "description": "Reach a mark straight upwind: haul in and tack back and forth."
+   "description": "Reach a mark straight upwind: haul in and tack back and forth.",
+   "boats": [
+    "falua"
+   ],
+   "places": [
+    {
+     "area": "tejo",
+     "from": "Lisboa"
+    }
+   ],
+   "kind": "run"
   },
   {
    "id": "mini.passengers",
    "type": "museum mini-game",
    "title": "Passengers with the Catraio",
-   "description": "Carry people across the river from Lisbon to Almada."
+   "description": "Carry people across the river from Lisbon to Almada.",
+   "boats": [
+    "catraio"
+   ],
+   "places": [
+    {
+     "area": "tejo",
+     "from": "Lisboa",
+     "to": "Almada"
+    }
+   ],
+   "kind": "transport"
   },
   {
    "id": "mini.whales",
    "type": "museum mini-game",
    "title": "Whale watching with the Baleeiro",
-   "description": "In the Azores, come quietly up behind a sperm whale without scaring it."
+   "description": "In the Azores, come quietly up behind a sperm whale without scaring it.",
+   "boats": [
+    "baleeiro"
+   ],
+   "places": [
+    {
+     "area": "azores",
+     "from": "Horta"
+    }
+   ],
+   "kind": "whales"
   },
   {
    "id": "mini.seaweed",
    "type": "museum mini-game",
    "title": "Seaweed with the Moliceiro",
-   "description": "Gather the floating seaweed (moliço) in the Ria de Aveiro."
+   "description": "Gather the floating seaweed (moliço) in the Ria de Aveiro.",
+   "boats": [
+    "moliceiro"
+   ],
+   "places": [
+    {
+     "area": "aveiro",
+     "at": "Torreira"
+    }
+   ],
+   "kind": "seaweed"
   },
   {
    "id": "mini.busy",
    "type": "museum mini-game",
    "title": "Cargo with the Fragata",
-   "description": "Cross the busiest part of the Tagus among many boats, gusts and shifting wind."
+   "description": "Cross the busiest part of the Tagus among many boats, gusts and shifting wind.",
+   "boats": [
+    "fragata"
+   ],
+   "places": [
+    {
+     "area": "tejo",
+     "from": "Almada",
+     "to": "Lisboa"
+    }
+   ],
+   "kind": "transport"
   },
   {
    "id": "mini.fishing",
    "type": "museum mini-game",
    "title": "Fishing with the Muleta",
-   "description": "Drift sideways over the shoals with the net out."
+   "description": "Drift sideways over the shoals with the net out.",
+   "boats": [
+    "muleta"
+   ],
+   "places": [
+    {
+     "area": "tejo",
+     "at": "Seixal"
+    }
+   ],
+   "kind": "fishing"
   },
   {
    "id": "mini.supplies",
    "type": "museum mini-game",
    "title": "Supplies with the Canoa",
-   "description": "Take bread, water and ice to a Muleta at sea and bring back its fish."
+   "description": "Take bread, water and ice to a Muleta at sea and bring back its fish.",
+   "boats": [
+    "canoa"
+   ],
+   "places": [
+    {
+     "area": "tejo",
+     "from": "Trafaria"
+    }
+   ],
+   "kind": "supply"
   },
   {
    "id": "mini.free",
