@@ -15,6 +15,7 @@ landmarks:
   - {name: Farol do Bugio, area: tejo, year: null, status: unknown}
   - {name: Farol da Gibalta, area: tejo, year: null, status: unknown}
   - {name: Farol do Alfeite, area: tejo, year: null, status: unknown}
+  - {name: Moinho, area: tejo, year: null, status: unknown, note: "a windmill in Lisbon, added to the game in November 2026"}
   - {name: Phare du Cap-Ferret, area: arcachon, year: null, status: unknown}
   - {name: Jetée Thiers, area: arcachon, year: null, status: unknown}
   - {name: Cabanes tchanquées, area: arcachon, year: null, status: unknown}

@@ -17,8 +17,9 @@ is made until this plan is agreed.
 
 ```
 sailnarratives (the tool)                     fragateiro (the game)
-  Narrative tab ── export ──► line bank files ──► content/narrative/<mini-game>.json
-  voice step (later) ──────► audio files ─────► content/narrative/audio/<lang>/<line>.ogg
+  Narrative tab ── export ──► line bank files ──► content/narrative/from-tool/lines/<mini-game>.json
+  voice step (later) ──────► audio files ─────► content/narrative/from-tool/audio/<lang>/<line>.ogg
+  game report, world list ◄── world, moments ◄─── content/narrative/from-game/{world,moments}.json
   runtime/ (TypeScript, no dependencies) ──────► imported by games/sailing/main.ts
       observer: physics → game moments + difficulty
       scheduler: which line, when, by whom
@@ -26,9 +27,11 @@ sailnarratives (the tool)                     fragateiro (the game)
 
 ### 1. Line bank files (content)
 
-One JSON file per mini-game and narrator variant, written by the tool's export:
-`content/narrative/<mini-game>.<variant>.json` (variant: `historical-1925`, `guide`), plus
-`content/narrative/index.json` listing them. Each line: id, beat part, trigger (a game moment,
+The game and the tool exchange files through one folder in the game, `content/narrative/`,
+whose README is the contract (who owns each file, versions, checks), with JSON schemas in
+`content/narrative/schema/`. One JSON file per mini-game, written by the tool's export:
+`content/narrative/from-tool/lines/<mini-game>.json` (with its narrator variant inside:
+`historical-1925`, `guide`), plus `from-tool/index.json` listing them. Each line: id, beat part, trigger (a game moment,
 or `near_place:<name>`), delivery (cue, story, reflection, curiosity, leg pool), character,
 text per language (pt, en; fr later), optional audio per language with its duration, fictional
 flag, evidence ids, and a credits list of sources. The game's tests check that every trigger is
@@ -142,5 +145,6 @@ only as a fallback for the home edition when audio files are missing.
   default.
 - French: translate the line bank now or later?
 - Narrator per edition: historical in the museum, present-day guide at home, or a choice?
-- The game has new areas and lighthouses since the tool's world list was built; rebuild it
-  before the next game report.
+- The world list is still built by this tool (`domains/sailing/scripts/build_game_world.py`)
+  and copied to the game's `content/narrative/from-game/world.json`; the game should
+  generate it itself at each release.
