@@ -1580,7 +1580,9 @@ ${items.map(x=>`${x.id}\nPT: ${x.pt}\nEN: ${x.en}\nEvidence:\n${x.ev.map(e=>`${e
 }
 const idOf=(v,pfx)=>{ const m=String(v||"").match(new RegExp("\\b"+pfx+"\\d+\\b")); return m?m[0]:""; };
 const curDoc=()=>nstate.docs[nKey(nstate.game)];
-async function saveN(d){ d.updatedAt=new Date().toISOString(); nstate.docs[nKey(nstate.game)]=d; try{ await saveDoc("narrative/"+nKey(nstate.game), d); }catch(e){ toast("Could not save: "+(e.message||e.code)); } }
+async function saveN(d){ d.updatedAt=new Date().toISOString(); nstate.docs[nKey(nstate.game)]=d;
+  try{ await saveDoc("narrative/"+nKey(nstate.game), JSON.parse(JSON.stringify(d))); return true; }
+  catch(e){ $("nRun").textContent="Could not save: "+(e.message||e.code); toast("Could not save: "+(e.message||e.code)); return false; } }
 async function planNarrative(){
   const g=miniGames().find(a=>a.id===nstate.game); if(!g||!sample) return;
   if(curDoc()?.lines?.some(l=>l.status==="approved") && !planNarrative.sure){ planNarrative.sure=true; $("nRun").textContent="This replaces the cast, beats and lines of this mini-game, approved lines included. Press again to go ahead."; return; }
@@ -1619,8 +1621,14 @@ async function writeLines(){
   try{
     const r=await sample.json(linesPrompt(d,g),{modelTier:"complex"}); const eids=new Set(d.evidence.map(e=>e.id));
     const keep=d.lines.filter(l=>l.status==="approved"); let n=Math.max(0,...d.lines.map(l=>Number(String(l.id).slice(1))||0))+1;
-    const fresh=(Array.isArray(r?.lines)?r.lines:[]).map(l=>({id:"l"+(n++), beat:idOf(l.beat,"b"), pt:String(l.pt||"").slice(0,500), en:String(l.en||"").slice(0,500), claims:(Array.isArray(l.claims)?l.claims:[]).slice(0,6).map(c=>({claim:String(c.claim||"").slice(0,200), evidence:(c.evidence||[]).map(v=>idOf(v,"e")).filter(v=>eids.has(v))})), fictional:!!l.fictional, status:"draft"})).filter(l=>d.beats.some(b=>b.id===l.beat)&&l.pt);
-    d.lines=[...keep,...fresh]; await saveN(d); $("nRun").textContent=`Wrote ${fresh.length} candidate lines. Press Check lines.`;
+    // flatten: {lines:[...]}, {beats:[{beat, candidates:[...]}]}, a bare array, nested text:{pt,en}, PT/EN keys
+    const flat=[]; const take=(x,beat)=>{ if(!x||typeof x!=="object") return; if(Array.isArray(x.candidates)||Array.isArray(x.lines)){ (x.candidates||x.lines).forEach(c=>take(c, x.beat||x.id||beat)); return; }
+      const pt=x.pt??x.PT??x.text?.pt??x.text_pt??x.portuguese, en=x.en??x.EN??x.text?.en??x.text_en??x.english; if(pt) flat.push({...x, beat:x.beat||beat, pt, en}); };
+    (Array.isArray(r)?r:(Array.isArray(r?.lines)?r.lines:(Array.isArray(r?.beats)?r.beats:[]))).forEach(x=>take(x));
+    const fresh=flat.map(l=>({id:"l"+(n++), beat:idOf(l.beat,"b"), pt:String(l.pt||"").slice(0,500), en:String(l.en||"").slice(0,500), claims:(Array.isArray(l.claims)?l.claims:[]).slice(0,6).map(c=>({claim:String(c.claim||"").slice(0,200), evidence:(c.evidence||[]).map(v=>idOf(v,"e")).filter(v=>eids.has(v))})), fictional:!!l.fictional, status:"draft"})).filter(l=>d.beats.some(b=>b.id===l.beat)&&l.pt);
+    d.lines=[...keep,...fresh]; d.lastWrite={received:flat.length, kept:fresh.length, at:new Date().toISOString()};
+    const ok=await saveN(d);
+    $("nRun").textContent=!fresh.length?`Claude's answer had no usable lines (${flat.length} found). Press Write lines again.`:ok?`Wrote ${fresh.length} candidate lines${flat.length>fresh.length?` (${flat.length-fresh.length} named no known beat)`:""}. Press Check lines.`:`Wrote ${fresh.length} lines but could not save them; see the message above.`;
   }catch(e){ $("nRun").textContent=e.code==="rate_limited"?"Too many requests; wait a minute.":"Could not write: "+(e.message||e.code||e); }
   nstate.running=false; renderNarrative();
 }
@@ -1635,7 +1643,8 @@ async function checkLines(onlyUnchecked){
       const claims=(Array.isArray(c.claims)?c.claims:[]).map(x=>({claim:String(x.claim||"").slice(0,200), verdict:["supported","unsupported","contradicted"].includes(x.verdict)?x.verdict:"unsupported", evidence:(x.evidence||[]).map(v=>idOf(v,"e"))}));
       const mech=mechChecks(l,d), warn=glossaryWarnings(l); const bad=claims.filter(x=>x.verdict!=="supported");
       l.check={claims, mech, warn, at:new Date().toISOString()}; if(l.status!=="approved") l.status=(!bad.length&&!mech.length)?"verified":"needs work"; }
-    await saveN(d); $("nRun").textContent="Checked.";
+    const got=new Set((Array.isArray(r?.checks)?r.checks:[]).map(c=>idOf(c.line,"l")));
+    await saveN(d); $("nRun").textContent=`Checked ${todo.filter(l=>got.has(l.id)).length} of ${todo.length} lines`+(todo.length>got.size?"; press Check lines again for the rest.":".");
   }catch(e){ $("nRun").textContent=e.code==="rate_limited"?"Too many requests; wait a minute.":"Could not check: "+(e.message||e.code||e); }
   nstate.running=false; renderNarrative();
 }
@@ -2024,7 +2033,9 @@ try{ const t=localStorage.getItem("intake.tab"); if(t) showTab(t); }catch{}
   db.doc("practices/current").onSnapshot(s=>{ if(!hstate.running){ hstate.set=s.exists?s.data():null; hRefresh(); } }, ()=>{});
   const nRefresh=()=>{ if(!$("panel-narrative").hidden && !nstate.running && !nstate.editing) renderNarrative(); };
   db.doc("world/events").onSnapshot(s=>{ nstate.events=s.exists?s.data():null; nRefresh(); }, ()=>{});
-  db.collection("narrative").onSnapshot(s=>{ if(!nstate.running){ nstate.docs=Object.fromEntries(s.docs.map(d=>[d.id,d.data()])); nRefresh(); } }, ()=>{});
+  db.collection("narrative").onSnapshot(s=>{ if(nstate.running) return;
+    for(const doc of s.docs){ const inc=doc.data(), cur=nstate.docs[doc.id]; if(!cur || String(inc.updatedAt||"")>=String(cur.updatedAt||"")) nstate.docs[doc.id]=inc; }
+    nRefresh(); }, ()=>{});
   const sRefresh=()=>{ if(!$("panel-situations").hidden && !sstate.running) renderSituations(); };
   db.doc("situations/current").onSnapshot(s=>{ if(!sstate.running){ sstate.set=s.exists?s.data():null; sRefresh(); } }, ()=>{});
   db.doc("situations/blind").onSnapshot(s=>{ sstate.blind=s.exists?s.data():null; sRefresh(); }, ()=>{});
