@@ -302,7 +302,7 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":
 function toast(msg){const t=$("toast");t.textContent=msg;t.hidden=false;clearTimeout(toast.h);toast.h=setTimeout(()=>t.hidden=true,2600);}
 function setSave(msg){$("saveState").textContent=msg;}
 
-const BUILD="2026-11-13 · version 20";
+const BUILD="2026-11-13 · version 21";
 $("buildTag").textContent=BUILD;
 // ---------- tabs ----------
 function showTab(name){
@@ -2021,6 +2021,8 @@ $("driveOut").addEventListener("change",(ev)=>{ const t=ev.target, ds=t.dataset;
   if(ds.dtarget) dstate.files[+ds.dtarget].target=t.value;
   if(ds.duse) renderDrive(); });
 
+// Records from the database are read-only; work on an editable copy.
+const own=(x)=>x==null?x:JSON.parse(JSON.stringify(x));
 // ---------- boot ----------
 function renderAll(){ renderProject(); renderMaterials(); renderForm(); if(!$("panel-readiness").hidden) renderReadiness(); if(!$("panel-concepts").hidden) renderConcepts(); if(!$("panel-history").hidden) renderHistory(); }
 renderAll();
@@ -2034,33 +2036,33 @@ try{ const t=localStorage.getItem("intake.tab"); if(t) showTab(t); }catch{}
   if($("f-store")) $("f-store").textContent=storeHint();
   if(!db){ localOnly=true; $("localBanner").hidden=false; setSave("Not saved (this view)"); return; }
   const timer=setTimeout(()=>setSave("Still connecting…"),10000);
-  db.doc("project/main").onSnapshot(s=>{ clearTimeout(timer); state.project=s.exists?(s.data()||{}):{}; setSave("Saved"); renderProject(); if(!$("panel-readiness").hidden) renderReadiness(); },
+  db.doc("project/main").onSnapshot(s=>{ clearTimeout(timer); state.project=s.exists?(own(s.data())||{}):{}; setSave("Saved"); renderProject(); if(!$("panel-readiness").hidden) renderReadiness(); },
     e=>{ clearTimeout(timer); setSave("Could not load: "+(e.message||e.code)); });
-  db.collection("materials").onSnapshot(s=>{ clearTimeout(timer); state.materials=s.docs.map(d=>({id:d.id,...d.data()})); renderMaterials(); if(!$("panel-readiness").hidden) renderReadiness(); if(!$("panel-concepts").hidden) renderConcepts(); },
+  db.collection("materials").onSnapshot(s=>{ clearTimeout(timer); state.materials=s.docs.map(d=>({id:d.id,...own(d.data())})); renderMaterials(); if(!$("panel-readiness").hidden) renderReadiness(); if(!$("panel-concepts").hidden) renderConcepts(); },
     e=>{ clearTimeout(timer); setSave("Could not load: "+(e.message||e.code)); });
   const cRefresh=()=>{ if(!$("panel-concepts").hidden && !cstate.running) renderConcepts(); };
-  db.collection("texts").onSnapshot(s=>{ cstate.texts=Object.fromEntries(s.docs.map(d=>[d.id,d.data()])); cRefresh(); }, ()=>{});
-  db.collection("candidates").onSnapshot(s=>{ cstate.cands=Object.fromEntries(s.docs.map(d=>[d.id,d.data()])); cRefresh(); }, ()=>{});
+  db.collection("texts").onSnapshot(s=>{ cstate.texts=Object.fromEntries(s.docs.map(d=>[d.id,own(d.data())])); cRefresh(); }, ()=>{});
+  db.collection("candidates").onSnapshot(s=>{ cstate.cands=Object.fromEntries(s.docs.map(d=>[d.id,own(d.data())])); cRefresh(); }, ()=>{});
   const hRefresh=()=>{ if(!$("panel-history").hidden && !hstate.running) renderHistory(); };
-  db.collection("practiceCands").onSnapshot(s=>{ if(!hstate.running){ hstate.cands=Object.fromEntries(s.docs.map(d=>[d.id,d.data()])); hRefresh(); } }, ()=>{});
-  db.doc("practices/current").onSnapshot(s=>{ if(!hstate.running){ hstate.set=s.exists?s.data():null; hRefresh(); } }, ()=>{});
+  db.collection("practiceCands").onSnapshot(s=>{ if(!hstate.running){ hstate.cands=Object.fromEntries(s.docs.map(d=>[d.id,own(d.data())])); hRefresh(); } }, ()=>{});
+  db.doc("practices/current").onSnapshot(s=>{ if(!hstate.running){ hstate.set=s.exists?own(s.data()):null; hRefresh(); } }, ()=>{});
   const nRefresh=()=>{ if(!$("panel-narrative").hidden && !nstate.running && !nstate.editing) renderNarrative(); };
-  db.doc("world/events").onSnapshot(s=>{ nstate.events=s.exists?s.data():null; nRefresh(); }, ()=>{});
+  db.doc("world/events").onSnapshot(s=>{ nstate.events=s.exists?own(s.data()):null; nRefresh(); }, ()=>{});
   db.collection("narrativeLines").onSnapshot(s=>{ if(nstate.running) return;
-    for(const doc of s.docs){ const inc=doc.data(), cur=nstate.lines[doc.id]; if(!cur || String(inc.updatedAt||"")>=String(cur.updatedAt||"")) nstate.lines[doc.id]=inc; }
+    for(const doc of s.docs){ const inc=own(doc.data()), cur=nstate.lines[doc.id]; if(!cur || String(inc.updatedAt||"")>=String(cur.updatedAt||"")) nstate.lines[doc.id]=inc; }
     nRefresh(); }, ()=>{});
   db.collection("narrative").onSnapshot(s=>{ if(nstate.running) return;
-    for(const doc of s.docs){ const inc=doc.data(), cur=nstate.docs[doc.id]; if(!cur || String(inc.updatedAt||"")>=String(cur.updatedAt||"")) nstate.docs[doc.id]=inc; }
+    for(const doc of s.docs){ const inc=own(doc.data()), cur=nstate.docs[doc.id]; if(!cur || String(inc.updatedAt||"")>=String(cur.updatedAt||"")) nstate.docs[doc.id]=inc; }
     nRefresh(); }, ()=>{});
   const sRefresh=()=>{ if(!$("panel-situations").hidden && !sstate.running) renderSituations(); };
-  db.doc("situations/current").onSnapshot(s=>{ if(!sstate.running){ sstate.set=s.exists?s.data():null; sRefresh(); } }, ()=>{});
-  db.doc("situations/blind").onSnapshot(s=>{ sstate.blind=s.exists?s.data():null; sRefresh(); }, ()=>{});
+  db.doc("situations/current").onSnapshot(s=>{ if(!sstate.running){ sstate.set=s.exists?own(s.data()):null; sRefresh(); } }, ()=>{});
+  db.doc("situations/blind").onSnapshot(s=>{ sstate.blind=s.exists?own(s.data()):null; sRefresh(); }, ()=>{});
   const rRefresh=()=>{ if(!$("panel-report").hidden && !rstate.running) renderReport(); };
-  db.doc("world/game").onSnapshot(s=>{ rstate.world=s.exists?s.data():null; rRefresh(); }, ()=>{});
-  db.doc("report/classes").onSnapshot(s=>{ if(!rstate.running) rstate.classes=s.exists?(s.data().byConcept||{}):{}; }, ()=>{});
-  db.doc("report/activities").onSnapshot(s=>{ if(!rstate.running) rstate.acts=s.exists?(s.data().byConcept||{}):{}; }, ()=>{});
-  db.collection("reports").orderBy("createdAt","desc").limit(10).onSnapshot(s=>{ rstate.history=s.docs.map(d=>({id:d.id,...d.data()})); if(!rstate.running) rstate.report=rstate.history[0]||rstate.report; rRefresh(); }, ()=>{});
-  db.doc("summaries/concepts").onSnapshot(s=>{ summary=s.exists?s.data():null; if(!$("panel-concepts").hidden) renderSummary(); }, ()=>{});
-  db.doc("concepts/current").onSnapshot(s=>{ if(!cstate.running){ cstate.set=s.exists?s.data():null; cRefresh(); } }, ()=>{});
+  db.doc("world/game").onSnapshot(s=>{ rstate.world=s.exists?own(s.data()):null; rRefresh(); }, ()=>{});
+  db.doc("report/classes").onSnapshot(s=>{ if(!rstate.running) rstate.classes=s.exists?(own(s.data()).byConcept||{}):{}; }, ()=>{});
+  db.doc("report/activities").onSnapshot(s=>{ if(!rstate.running) rstate.acts=s.exists?(own(s.data()).byConcept||{}):{}; }, ()=>{});
+  db.collection("reports").orderBy("createdAt","desc").limit(10).onSnapshot(s=>{ rstate.history=s.docs.map(d=>({id:d.id,...own(d.data())})); if(!rstate.running) rstate.report=rstate.history[0]||rstate.report; rRefresh(); }, ()=>{});
+  db.doc("summaries/concepts").onSnapshot(s=>{ summary=s.exists?own(s.data()):null; if(!$("panel-concepts").hidden) renderSummary(); }, ()=>{});
+  db.doc("concepts/current").onSnapshot(s=>{ if(!cstate.running){ cstate.set=s.exists?own(s.data()):null; cRefresh(); } }, ()=>{});
 })();
 </script>
