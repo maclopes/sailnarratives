@@ -204,7 +204,7 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
     <p class="sub">The concepts base. Claude reads each chosen source and lists candidate concepts in the source's own words, then groups them across sources and languages. The tool marks where sources agree, where they conflict, and what is missing or cannot be shown in the simulation. Everything is a draft until you accept it.</p>
     <h2 style="margin-top:18px">Sources</h2>
     <div id="cSources"></div>
-    <div class="row" style="margin-top:12px"><button class="btn primary" id="cFind">Find concepts</button><button class="btn" id="cClear">Clear the table</button><span class="hint" id="cRun"></span></div>
+    <div class="row" style="margin-top:12px"><button class="btn primary" id="cFind">Find concepts</button><button class="btn" id="cLink">Check against the game</button><button class="btn" id="cClear">Clear the table</button><span class="hint" id="cRun"></span></div>
     <div class="section">
       <div class="row" style="justify-content:space-between"><h2>Concepts</h2><span class="hint" id="cMeta"></span></div>
       <div class="chips" id="cChips"></div>
@@ -619,6 +619,7 @@ const CSTATUS={
   "single source":["p-warn","Only one source supports it."],
   "not in simulation":["p-info","Sources teach it, but the simulation does not show or measure it."],
   "simulation only":["p-info","The simulation does it, but no source names or explains it."],
+  "out of scope":["p-info","Proposed as out of scope for a short museum visit (accept the concept to keep it)."],
 };
 const CORDER=Object.keys(CSTATUS);
 
@@ -726,7 +727,7 @@ New candidates (id, source, kind, language variant, term as written, meaning, st
 ${JSON.stringify(batch)}
 
 For each candidate: if it means the same as an existing concept, give that concept's id. Otherwise give a short English label for a new concept; candidates in this batch that mean the same thing get the same new label. Group by meaning, never by spelling: the same word can mean different things in different sources or language variants. Historical accounts often name places, events, people, cargoes or regulations rather than skills; place them too, as new concepts when needed.
-Also report real conflicts between a candidate and the concept it joins: different numbers for the same quantity, or a different definition. A different language, variant or synonym is not a conflict.
+Also report real conflicts between a candidate and the concept it joins: different numbers for the same quantity, or a different definition. A different language, variant or synonym (even two words for the same thing in one source) is not a conflict, and neither is a simulation describing how it models something, unless its values or behaviour contradict the source.
 Return JSON only: {"assign":[{"id":"","concept":"c12"},{"id":"","new":"short label"}],"conflicts":[{"concept":"c12 or the new label","type":"number","text":""}]}`;
 }
 function alignPrompt(list){
@@ -736,7 +737,7 @@ Group candidates that mean the same concept, across sources and languages.
 - Every candidate id must appear in exactly one group. Single-member groups are fine.
 - Group by meaning, using the definitions, never by spelling: the same word can mean different things in different sources or language variants. Keep those in separate groups.
 - label: a short English name for the concept.
-- conflicts: real disagreements inside a group only. "definition": the sources describe it differently. "number": different values for the same quantity; give each value with its source. "term": different words for the same meaning within one language variant. Do not report the normal difference between languages or between variants of a language; the tool checks those itself.
+- conflicts: real disagreements inside a group only. "definition": the sources describe it differently. "number": different values for the same quantity; give each value with its source. "term": different words for the same meaning within one language variant. Do not report the normal difference between languages or between variants of a language, two words for the same thing in one source, or a simulation describing how it models something; the tool checks those itself.
 Return JSON only: {"concepts":[{"label":"","members":["id"],"conflicts":[{"type":"definition","text":""}]}]}
 
 Candidates:
@@ -815,6 +816,7 @@ async function findConcepts(){
     $("cRun").textContent = (e.code==="not_granted" ? "Asking Claude is not allowed in this view." : e.code==="rate_limited" ? "Too many requests just now. Wait a minute and run again." : "Stopped: "+(e.message||e.code||e))+" What was read so far is kept; Find concepts continues from there.";
   }
   cstate.running=false; renderCSources(); renderCTable();
+  if(cstate.set?.concepts?.some(c=>!c.linkedAt)) await linkConcepts(true);
 }
 $("cFind").addEventListener("click",findConcepts);
 $("cClear").addEventListener("click",async()=>{
@@ -826,7 +828,7 @@ $("cClear").addEventListener("click",async()=>{
 
 function buildCandDoc(m, raw, chars, partsTotal, partsDone){
   const seen=new Map(); for(const it of raw){ const k=norm(it.term); if(k&&!seen.has(k)) seen.set(k,it); }
-  const items=[...seen.values()].map((it,n)=>({id:`${m.id}:${n+1}`, term:String(it.term).slice(0,120), definition:String(it.definition||"").slice(0,300), location:String(it.location||"").slice(0,60), numbers:Array.isArray(it.numbers)?it.numbers.slice(0,6).map(x=>({what:String(x?.what||"").slice(0,80),value:String(x?.value??"").slice(0,30),unit:String(x?.unit||"").slice(0,20)})):[], measured_by:it.measured_by?String(it.measured_by).slice(0,200):""}));
+  const items=[...seen.values()].map((it,n)=>({id:`${m.id}:${Number(chars).toString(36)}:${n+1}`, term:String(it.term).slice(0,120), definition:String(it.definition||"").slice(0,300), location:String(it.location||"").slice(0,60), numbers:Array.isArray(it.numbers)?it.numbers.slice(0,6).map(x=>({what:String(x?.what||"").slice(0,80),value:String(x?.value??"").slice(0,30),unit:String(x?.unit||"").slice(0,20)})):[], measured_by:it.measured_by?String(it.measured_by).slice(0,200):""}));
   return {sourceId:m.id, title:m.title, kind:m.kind, lang:m.language||"", items, raw, textChars:chars, partsTotal, partsDone, runAt:new Date().toISOString()};
 }
 function candIndex(){
@@ -836,7 +838,7 @@ function candIndex(){
 }
 function statuses(c,idx,clash){
   const ms=c.members.map(id=>idx[id]).filter(Boolean); const st=[];
-  const hasSim=ms.some(x=>x.kind==="simulation"); const others=ms.filter(x=>x.kind!=="simulation");
+  const hasSim=ms.some(x=>x.kind==="simulation")||(c.simLinks||[]).some(id=>idx[id]); const others=ms.filter(x=>x.kind!=="simulation");
   if((c.conflicts||[]).length) st.push("conflicting");
   if(ms.some(x=>(clash[base(x.lang)+"|"+norm(x.term)]||new Set()).size>1)) st.push("term clash");
   const byBase={}; for(const x of others){ if(!x.lang||!x.lang.includes("-")) continue; ((byBase[base(x.lang)] ||= {})[x.lang] ||= new Set()).add(norm(x.term)); }
@@ -847,6 +849,7 @@ function statuses(c,idx,clash){
   if(hasSim && !others.length) st.push("simulation only");
   if(others.length && new Set(ms.map(x=>x.sourceId)).size===1) st.push("single source");
   if(!st.length) st.push("agreed");
+  if(c.scope==="out" && c.decision!=="accepted") st.push("out of scope");
   return st;
 }
 function renderCTable(){
@@ -866,6 +869,8 @@ function renderCTable(){
       ${cstate.renaming===c.id?`<div class="row"><input type="text" id="renameBox" value="${esc(c.label)}" style="width:auto"><button class="btn small primary" data-renamesave="${esc(c.id)}">Save</button></div>`:`<h3>${esc(c.label)}</h3>`}
       <div class="row">${st.map(x=>`<span class="pill ${CSTATUS[x][0]}" title="${esc(CSTATUS[x][1])}">${esc(x)}</span>`).join("")}
       ${c.decision!=="draft"?`<span class="pill ${c.decision==="accepted"?"p-good":"p-bad"}">${esc(c.decision)}</span>`:""}</div></div>
+      ${c.scope?`<div class="hint" style="margin-top:4px">Scope: <b>${esc(c.scope==="out"?"out of scope":c.scope)}</b>${c.scopeWhy?" · "+esc(c.scopeWhy):""}</div>`:""}
+      ${(c.simLinks||[]).length?`<div class="hint">Shown in the game by: ${esc(c.simLinks.map(id=>idx[id]?.term).filter(Boolean).join(", "))}</div>`:""}
       ${(c.conflicts||[]).map(f=>`<div class="conf"><span class="pill p-bad">${esc(f.type)}</span><span>${esc(f.text)}</span></div>`).join("")}
       <div style="overflow-x:auto"><table class="members"><tr><th>Source</th><th>Term</th><th>Meaning (paraphrase)</th><th>Where</th><th></th></tr>
       ${ms.map(x=>`<tr><td><span class="pill ${x.kind==="simulation"?"p-acc":""}">${esc(x.kind==="simulation"?"simulation":SHORT(x))}</span>${x.lang?`<div class="hint">${esc(x.lang)}</div>`:""}</td>
@@ -898,6 +903,64 @@ function renderConcepts(){ renderCSources(); renderCTable(); renderSummary(); }
 
 
 
+
+// ---------- link concepts to the simulation, propose scope, prune conflict noise ----------
+function linkPrompt(simList, batch){
+  const p=state.project;
+  return `You check concepts gathered from sources about ${p.subject||"one subject"} against a game's simulation, for a short museum visit (${p.visitMinutes||"a few"} minutes, audience: ${p.audience||"visitors"}).
+Learning goals: ${(p.goals||"not given").replace(/\n/g,"; ")}. The simulation leaves out: ${(p.simplifications||"not given").replace(/\n/g,"; ")}.
+
+The simulation's own concepts (id, term, how it is shown or measured, stated numbers):
+${JSON.stringify(simList)}
+
+For each concept below:
+- sim: ids of simulation concepts that show or measure it. Link only when the simulation really lets the player see or do it (for example "sheeting in" is shown by the sheet control and sail luffing). Empty if none.
+- numbers: if a number stated for the concept disagrees with the simulation's number for the same quantity (for example the closest angle to the wind), describe it in one sentence naming both values; otherwise "".
+- scope: "core" if it serves the learning goals and a visitor can meet it in the game or its stories; "maybe" if useful context; "out" if it does not fit a short museum visit on this subject (for example modern yacht fittings, safety drills, unrelated topics). why: at most 10 words.
+- keep: the indices of the listed conflicts that are real disagreements. Drop ones that are only two words for the same thing in one source, the difference between languages or variants, or a simulation describing how it models something.
+Return JSON only: {"items":[{"id":"","sim":[],"numbers":"","scope":"core","why":"","keep":[0]}]}
+
+Concepts:
+${JSON.stringify(batch)}`;
+}
+async function linkConcepts(onlyNew){
+  if(!sample){ toast("Asking Claude is not available in this view."); return; }
+  if(!cstate.set?.concepts?.length){ $("cRun").textContent="Find concepts first."; return; }
+  const idx=candIndex();
+  const simIds=Object.keys(idx).filter(id=>idx[id].kind==="simulation");
+  if(!simIds.length){ $("cRun").textContent="No simulation source has been read; include it in Find concepts."; return; }
+  const simList=simIds.map(id=>({id, term:idx[id].term, shown_by:idx[id].measured_by||idx[id].definition.slice(0,80), numbers:(idx[id].numbers||[]).map(n=>`${n.what}: ${n.value}${n.unit?" "+n.unit:""}`)}));
+  const simSet=new Set(simIds);
+  const todo=cstate.set.concepts.filter(c=>!(onlyNew&&c.linkedAt) && c.members.some(id=>idx[id]&&idx[id].kind!=="simulation"));
+  if(!todo.length){ if(!onlyNew) $("cRun").textContent="Nothing to check."; return; }
+  cstate.running=true; $("cLink").disabled=true; $("cFind").disabled=true;
+  const fatal=(e)=>e?.code==="not_granted"||e?.code==="rate_limited"||e?.code==="unavailable";
+  const B=60; let done=0;
+  try{
+    for(let i=0;i<todo.length;i+=B){
+      $("cRun").textContent=`Checking against the game: ${Math.min(i+B,todo.length)} of ${todo.length} concepts…`;
+      const batch=todo.slice(i,i+B).map(c=>{ const ms=c.members.map(id=>idx[id]).filter(x=>x&&x.kind!=="simulation");
+        return {id:c.id, label:c.label, terms:[...new Set(ms.map(m=>m.term))].slice(0,5), meaning:String(ms[0]?.definition||"").slice(0,90),
+          numbers:ms.flatMap(m=>(m.numbers||[]).map(n=>`${n.what}: ${n.value}${n.unit?" "+n.unit:""}`)).slice(0,6), conflicts:(c.conflicts||[]).map(f=>f.type+": "+f.text.slice(0,140))}; });
+      let r=null;
+      for(let a=0;a<2&&r===null;a++){ try{ r=await sample.json(linkPrompt(simList,batch),{modelTier:"default"}); }catch(e){ if(fatal(e)||a===1) throw e; } }
+      const now=new Date().toISOString();
+      for(const it of (Array.isArray(r?.items)?r.items:[])){
+        const c=cstate.set.concepts.find(x=>x.id===it?.id); if(!c) continue;
+        c.simLinks=(Array.isArray(it.sim)?it.sim:[]).filter(id=>simSet.has(id)&&!c.members.includes(id)).slice(0,6);
+        if(Array.isArray(it.keep) && (c.conflicts||[]).length) c.conflicts=c.conflicts.filter((f,k)=>it.keep.includes(k));
+        if(it.numbers && String(it.numbers).trim() && !(c.conflicts||[]).some(f=>f.type==="number"&&f.source==="game")) (c.conflicts ||= []).push({type:"number", text:String(it.numbers).slice(0,300), source:"game"});
+        if(["core","maybe","out"].includes(it.scope)){ c.scope=it.scope; c.scopeWhy=String(it.why||"").slice(0,100); }
+        c.linkedAt=now; done++;
+      }
+      cstate.set.updatedAt=now; await saveDoc("concepts/current", cstate.set); renderCTable();
+    }
+    $("cRun").textContent=`Checked ${done} concepts against the game.`;
+  }catch(e){ $("cRun").textContent=(e.code==="not_granted"?"Asking Claude is not allowed in this view.":e.code==="rate_limited"?"Too many requests; wait a minute.":"Stopped: "+(e.message||e.code||e))+" Checks so far are saved; press Check against the game to continue."; }
+  cstate.running=false; $("cLink").disabled=false; renderCSources();
+}
+$("cLink").addEventListener("click",()=>linkConcepts(true));
+
 // ---------- summary of the sources ----------
 let summary=null;
 function conceptRows(){
@@ -907,7 +970,7 @@ function conceptRows(){
   return set.concepts.map(c=>({c, st:statuses(c,idx,clash), ms:c.members.map(id=>idx[id]).filter(Boolean)}));
 }
 function summaryPrompt(rows, meaningLen=140){
-  const data=rows.filter(r=>r.c.decision!=="rejected").map(({c,st,ms})=>({concept:c.label, accepted:c.decision==="accepted", statuses:st,
+  const data=rows.filter(r=>r.c.decision!=="rejected" && !(r.c.scope==="out" && r.c.decision!=="accepted")).map(({c,st,ms})=>({concept:c.label, accepted:c.decision==="accepted", statuses:st,
     conflicts:(c.conflicts||[]).map(f=>f.type+": "+f.text),
     sources:ms.map(x=>({source:x.kind==="simulation"?"simulation":SHORT(x), lang:x.lang, term:x.term, meaning:String(x.definition).slice(0,meaningLen), numbers:(x.numbers||[]).map(n=>`${n.what}: ${n.value}${n.unit?" "+n.unit:""}`)}))}));
   const prim=LANGS[state.project.primaryLanguage]||state.project.primaryLanguage||"the primary language";
@@ -1039,7 +1102,7 @@ async function buildReport(){
   const fatal=(e)=>e?.code==="not_granted"||e?.code==="rate_limited"||e?.code==="unavailable";
   const ask=async(prompt)=>{ for(let a=0;a<2;a++){ try{ return await sample.json(prompt,{modelTier:"default"}); }catch(e){ if(fatal(e)||a===1) throw e; } } };
   try{
-    const info=rows.filter(r=>r.c.decision!=="rejected").map(r=>({c:r.c, ms:r.ms, sim:r.ms.some(x=>x.kind==="simulation"), srcs:[...new Set(r.ms.filter(x=>x.kind!=="simulation").map(x=>x.sourceId))]}));
+    const info=rows.filter(r=>r.c.decision!=="rejected" && !(r.c.scope==="out" && r.c.decision!=="accepted")).map(r=>({c:r.c, ms:r.ms, sim:r.ms.some(x=>x.kind==="simulation")||(r.c.simLinks||[]).length>0, srcs:[...new Set(r.ms.filter(x=>x.kind!=="simulation").map(x=>x.sourceId))]}));
     // 1. sort concepts into categories (only those not sorted yet)
     const todo=info.filter(x=>!rstate.classes[x.c.id]); const B=100;
     for(let i=0;i<todo.length;i+=B){
