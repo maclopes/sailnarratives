@@ -253,6 +253,10 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
     <p class="sub">Narrative for the game's mini-games, one at a time. The tool gathers the evidence behind each mini-game (its practices and concepts, with sources and pages), proposes a cast and beats (from your story bible where it covers the mini-game), writes candidate lines in European Portuguese and English that may use only that evidence, and checks every claim. You edit, approve or reject; approved lines export as a line bank for the game. Characters are invented and marked fictional; facts come only from the evidence.</p>
     <div class="row" style="margin-top:12px"><select id="nGame" style="width:auto;max-width:100%"></select>
       <button class="btn primary" id="nPlan">Plan cast and beats</button><button class="btn" id="nWrite">Write lines</button><button class="btn" id="nCheck">Check lines</button><button class="btn" id="nExport">Export line bank</button><span class="hint" id="nRun"></span></div>
+    <div class="row" style="margin-top:8px" id="nSet"><label class="hint">Narrator <select id="nMode" style="width:auto"><option value="historical">In character, historical</option><option value="guide">Present-day guide</option></select></label>
+      <label class="hint">Period <input type="text" id="nPeriod" placeholder="e.g. 1925" style="width:7em"></label>
+      <label class="hint">Talk <select id="nTalk" style="width:auto"><option value="quiet">Quiet</option><option value="normal">Normal</option><option value="chatty">Chatty</option></select></label>
+      <span class="hint">Set these before planning.</span></div>
     <div id="nOut"></div>
   </section>
 
@@ -302,7 +306,7 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":
 function toast(msg){const t=$("toast");t.textContent=msg;t.hidden=false;clearTimeout(toast.h);toast.h=setTimeout(()=>t.hidden=true,2600);}
 function setSave(msg){$("saveState").textContent=msg;}
 
-const BUILD="2026-11-13 · version 21";
+const BUILD="2026-11-13 · version 22";
 $("buildTag").textContent=BUILD;
 // ---------- tabs ----------
 function showTab(name){
@@ -1504,7 +1508,21 @@ $("sDl").addEventListener("click",async()=>{ const t=situationsText(); if(!t){ t
 
 
 // ---------- narrative for the game's mini-games ----------
-const nstate={docs:{}, lines:{}, events:null, game:"", running:false, editing:null};
+const nstate={docs:{}, lines:{}, settings:{}, events:null, game:"", running:false, editing:null};
+const POOL={quiet:2, normal:3, chatty:5};
+function nSettings(id){ return {mode:"historical", period:"", talk:"normal", ...(nstate.settings[nKey(id||nstate.game)]||{})}; }
+const yearOf=(t)=>{ const m=String(t||"").match(/\b(1[0-9]{3}|20[0-9]{2})\b/); return m?Number(m[0]):null; };
+function landmarksIn(g){ const area=(g.places||[])[0]?.area; return (rstate.world?.landmark_info||[]).filter(l=>l.area===area); }
+function outOfPeriod(g){ const st=nSettings(g.id), y=yearOf(st.period); if(st.mode!=="historical"||!y) return []; return landmarksIn(g).filter(l=>l.year&&l.year>y); }
+function placesFor(g, evidence){
+  const w=rstate.world, area=(g.places||[])[0]?.area, st=nSettings(g.id), y=yearOf(st.period);
+  const named=new Set(evidence.flatMap(e=>((e.text.match(/place: ([^·]+)/)||[])[1]||"").split(/[,;]/).map(x=>x.trim()).filter(Boolean)));
+  const out=[];
+  for(const pn of (w.ports?.[area]||[])) out.push({name:pn, kind:"port", inEvidence:[...named].some(n=>norm(n)===norm(pn))});
+  for(const l of landmarksIn(g)){ if(st.mode==="historical"&&y&&l.year&&l.year>y) continue; out.push({name:l.name, kind:"landmark", year:l.year||"unknown", inEvidence:[...named].some(n=>norm(n)===norm(l.name))}); }
+  for(const n of named) if(!out.some(o=>norm(o.name)===norm(n))) out.push({name:n, kind:"place in the sources", inEvidence:true});
+  return out.slice(0,40);
+}
 const WORDS={cue:6, story:35, reflection:25, curiosity:60};
 const nKey=(id)=>String(id).replace(/[^a-z0-9]+/gi,"-");
 function miniGames(){ return (rstate.world?.activities||[]).filter(a=>a.type==="museum mini-game"&&(a.boats||[]).length); }
@@ -1546,9 +1564,15 @@ Roles named in the evidence: ${roles.join("; ")||"none"}
 Game moments that can trigger a beat (id: when): ${ev.events.map(x=>`${x.id}: ${x.when}`).join("; ")}
 Delivery: ${Object.entries(ev.delivery).map(([k,v])=>`${k}: ${v}`).join("; ")}
 
+Narrator: ${nSettings(g.id).mode==="guide"?"a present-day guide (fictional) taking visitors out today: may point at today's landmarks for orientation and speaks of the past in the past tense":`in character, in the period ${nSettings(g.id).period||"chosen from the evidence"}: nothing that did not exist then may be mentioned`}.
+How much they talk: ${nSettings(g.id).talk} (quiet: no leg beats and at most 1 place beat; normal: 1 leg beat and 1 or 2 place beats; chatty: 2 or 3 leg beats and 3 to 5 place beats). The legs are slow: a talkative skipper fills them.
+Places the boat may pass (name, kind, year, mentioned in the evidence?): ${JSON.stringify(placesFor(g,E.evidence))}
+
 Rules:
-- 1 to 3 characters, invented and labelled fictional, whose trade and world come from the evidence (cite evidence ids for their role). Characters belong to this activity only.
-- 4 to 6 beats in the order setup, complication, turn, close, plus at most one curiosity card. The sailing difficulty is the complication.
+- 1 to 3 characters, invented and labelled fictional, whose trade and world come from the evidence (cite evidence ids for their role). Characters belong to this activity only${nSettings(g.id).mode==="guide"?"; the guide is one of them":""}.
+- 4 to 6 story beats in the order setup, complication, turn, close, plus at most one curiosity card. The sailing difficulty is the complication.
+- Leg beats (part "leg", trigger "steady_leg", delivery "story"): talk for the long calm stretches: the work, the river, the people, small curiosities from the evidence. Each leg beat will get a pool of lines played one after another.
+- Place beats (part "place", trigger "near_place:<name>" with a name from the places list, delivery "story" or "curiosity"): what the character says passing that place, only from evidence that mentions it; choose places the evidence covers.
 - Never put a story line on a difficult moment: a difficult moment gets at most a cue, and the story continues as a reflection after it is solved.
 - Each beat: trigger (a game moment id), delivery, character id, gist (one sentence of what happens), concept (the sailing concept the player practises then, if any), evidence (ids the line may draw on; at least one for story, reflection and curiosity beats, unless the beat is pure character).
 - If the story bible covers this activity, start from its cast and beats and adapt them to the evidence and the game moments; say what you changed in notes.
@@ -1562,9 +1586,10 @@ European Portuguese terms to use (use) and to avoid (Brazilian or other variants
 ${gl.map(x=>`${x.concept}: use ${x.use.join(" / ")}${x.avoid.length?"; avoid "+x.avoid.join(" / "):""}`).join("\n")}
 
 Beats (id, part, trigger, delivery, character, gist, concept, evidence):
-${d.beats.map(b=>`${b.id} | ${b.part} | ${b.trigger} | ${b.delivery} | ${cast[b.character]?.name||"narrator"} | ${b.gist} | ${b.concept||""} | ${(b.evidence||[]).map(id=>E[id]?`${id}: ${E[id].text}${E[id].numbers.length?" ("+E[id].numbers.join("; ")+")":""}`:"").filter(Boolean).join(" || ")||"none"}`).join("\n")}
+${d.beats.map(b=>`${b.id} | ${b.part}${b.part==="leg"?" (pool)":""} | ${b.trigger} | ${b.delivery} | ${cast[b.character]?.name||"narrator"} | ${b.gist} | ${b.concept||""} | ${(b.evidence||[]).map(id=>E[id]?`${id}: ${E[id].text}${E[id].numbers.length?" ("+E[id].numbers.join("; ")+")":""}`:"").filter(Boolean).join(" || ")||"none"}`).join("\n")}
 
-For each beat write 2 candidates. Each has:
+Narrator: ${nSettings(g.id).mode==="guide"?"a present-day guide: today's landmarks may be named for orientation only; history is told in the past tense":`in character in ${nSettings(g.id).period||"the period of the evidence"}: never mention anything that did not exist then${outOfPeriod(g).length?` (for example ${outOfPeriod(g).map(l=>l.name).join(", ")})`:""}`}. Talk: ${nSettings(g.id).talk}.
+For beats with part "leg" write ${POOL[nSettings(g.id).talk]||3} different lines (a pool played one after another on calm stretches; vary the topic: the work, the boat, the river, people, a curiosity). For every other beat write 2 candidates. Each line has:
 - pt: European Portuguese; en: English with the same meaning, numbers and names.
 - Length: at most ${Object.entries(WORDS).map(([k,v])=>`${v} words for ${k}`).join(", ")}.
 - Use only facts in that beat's evidence. Names of characters, feelings and small actions are colour: they must not state checkable facts. No dates, numbers, places or boat details unless they are in the evidence.
@@ -1602,9 +1627,10 @@ async function planNarrative(){
     const r=await sample.json(planPrompt(g,E,bible),{modelTier:"complex"});
     const eids=new Set(E.evidence.map(e=>e.id)), evs=nstate.events.events.map(x=>x.id);
     const cast=(Array.isArray(r?.cast)?r.cast:[]).slice(0,3).map((k,i)=>({id:idOf(k.id,"k")||"k"+(i+1), name:String(k.name||"").slice(0,60), role:String(k.role||"").slice(0,120), voice:String(k.voice||"").slice(0,160), want:String(k.want||"").slice(0,160), evidence:(k.evidence||[]).map(v=>idOf(v,"e")).filter(v=>eids.has(v)), fictional:true}));
-    const beats=(Array.isArray(r?.beats)?r.beats:[]).slice(0,7).map((b,i)=>({id:"b"+(i+1), part:["setup","complication","turn","close","curiosity"].includes(b.part)?b.part:"setup", trigger:evs.includes(b.trigger)?b.trigger:(evs.find(x=>String(b.trigger||"").includes(x))||"start"), delivery:WORDS[b.delivery]?b.delivery:"story", character:idOf(b.character,"k")||cast[0]?.id||"", gist:String(b.gist||"").slice(0,300), concept:String(b.concept||"").slice(0,80), evidence:(b.evidence||[]).map(v=>idOf(v,"e")).filter(v=>eids.has(v))}));
+    const trig=(t)=>{ t=String(t||""); if(/^near_place:/.test(t)) return t.slice(0,90); return evs.includes(t)?t:(evs.find(x=>t.includes(x))||"start"); };
+    const beats=(Array.isArray(r?.beats)?r.beats:[]).slice(0,16).map((b,i)=>({id:"b"+(i+1), part:["setup","complication","turn","close","curiosity","leg","place"].includes(b.part)?b.part:"setup", trigger:trig(b.trigger), delivery:WORDS[b.delivery]?b.delivery:"story", character:idOf(b.character,"k")||cast[0]?.id||"", gist:String(b.gist||"").slice(0,300), concept:String(b.concept||"").slice(0,80), evidence:(b.evidence||[]).map(v=>idOf(v,"e")).filter(v=>eids.has(v))}));
     nstate.lines[nKey(g.id)]={lines:[], updatedAt:new Date().toISOString()}; if(db) await db.doc("narrativeLines/"+nKey(g.id)).set(nstate.lines[nKey(g.id)]);
-    await saveN({game:g.id, title:g.title, evidence:E.evidence, basis:{practices:E.practices, concepts:E.concepts, proposal:E.proposal, match:E.match, bible:!!bible}, cast, beats, lines:[], notes:String(r?.notes||"").slice(0,600), createdAt:new Date().toISOString()});
+    await saveN({game:g.id, title:g.title, settings:nSettings(g.id), evidence:E.evidence, basis:{practices:E.practices, concepts:E.concepts, proposal:E.proposal, match:E.match, bible:!!bible}, cast, beats, lines:[], notes:String(r?.notes||"").slice(0,600), createdAt:new Date().toISOString()});
     $("nRun").textContent=`Planned ${cast.length} characters and ${beats.length} beats from ${E.evidence.length} evidence records${bible?" and your story bible":""}.`;
   }catch(e){ $("nRun").textContent=e.code==="rate_limited"?"Too many requests; wait a minute.":"Could not plan: "+(e.message||e.code||e); }
   nstate.running=false; renderNarrative();
@@ -1624,6 +1650,8 @@ function mechChecks(l, d){
   const evNums=new Set(nums(evText));
   for(const n of new Set([...nums(l.pt),...nums(l.en)])) if(!evNums.has(n)) out.push(`number ${n} is not in the evidence`);
   const npt=nums(l.pt).sort().join(), nen=nums(l.en).sort().join(); if(npt!==nen) out.push("PT and EN numbers differ");
+  const g=miniGames().find(a=>a.id===d.game);
+  if(g) for(const lm of outOfPeriod(g)) if(norm(l.pt+" "+l.en).includes(norm(lm.name))) out.push(`mentions ${lm.name}, built ${lm.year}, after the period ${nSettings(g.id).period}`);
   return out;
 }
 async function writeLines(){
@@ -1668,26 +1696,29 @@ function exportBank(){
     return {id:`${nKey(g.id)}-${l.beat}-${l.id}`, mission:order.indexOf(g.id)+1, boat:g.boats[0], zone:[place.area,place.from||place.at,place.to].filter(Boolean).join(":"), beat:b.part==="curiosity"?"epilogue":b.part, trigger:b.trigger, delivery:b.delivery, character:cast[b.character]?.name||"", concept:b.concept||undefined,
       text:{pt:l.pt, en:l.en}, depth:b.delivery==="curiosity"?2:1, fictional:!!l.fictional, sources:ev.map(e=>e.origin), status:l.status==="approved"?"approved":"verified"}; });
   const used=[...new Set(lines.flatMap(l=>l.sources))].map(o=>d.evidence.find(e=>e.origin===o)).filter(Boolean);
-  return {game:g.id, title:g.title, exportedAt:new Date().toISOString(), triggers:[...new Set(lines.map(l=>l.trigger))], lines, credits:[...new Set(used.map(e=>e.source))], evidence:used.map(e=>({id:e.origin, source:e.source, location:e.location, paraphrase:e.text}))};
+  return {game:g.id, title:g.title, narrator:nSettings(g.id), exportedAt:new Date().toISOString(), triggers:[...new Set(lines.map(l=>l.trigger))], lines, credits:[...new Set(used.map(e=>e.source))], evidence:used.map(e=>({id:e.origin, source:e.source, location:e.location, paraphrase:e.text}))};
 }
 function renderNarrative(){
   const games=miniGames(); const sel=$("nGame");
   if(!nstate.game&&games.length) nstate.game=games[0].id;
   sel.innerHTML=games.map(g=>`<option value="${esc(g.id)}"${g.id===nstate.game?" selected":""}>${esc(g.title)}${nstate.docs[nKey(g.id)]?" ✓":""}</option>`).join("");
   const out=$("nOut"), g=games.find(a=>a.id===nstate.game);
+  if(g){ const st=nSettings(g.id); $("nMode").value=st.mode; if(document.activeElement!==$("nPeriod")) $("nPeriod").value=st.period; $("nTalk").value=st.talk; }
+  const oop=g?outOfPeriod(g):[];
+  const oopHtml=oop.length?`<div class="banner" style="margin-top:10px">In a historical setting of ${esc(nSettings(g.id).period)}, the game's map shows landmarks that did not exist yet: ${esc(oop.map(l=>`${l.name} (${l.year})`).join(", "))}. A historical edition should hide them. Years are author data marked “to verify” (domains/sailing/landmarks.yaml).</div>`:"";
   if(!rstate.world||!nstate.events){ out.innerHTML=`<div class="empty" style="margin-top:12px">The game's world list or event list is not loaded.</div>`; return; }
   if(!g){ out.innerHTML=""; return; }
   const d=curDoc(), E=d?null:evidenceFor(g);
   const bl=sstate.blind?.games?.find(x=>x.id===g.id);
-  if(!d){ out.innerHTML=`<div class="empty" style="margin-top:12px"><b>${esc(g.title)}</b>: ${esc(g.description)}<br>${E.evidence.length?"":`<b>No evidence for this mini-game:</b> none of the sources read so far covers the ${esc(g.boats.join(", "))} or ${esc(rstate.world.area_names?.[(g.places||[])[0]?.area]||"its area")}. Lines planned now can only be pure character (marked fictional); add sources on it to ground them.<br>`}Boat: ${esc(g.boats.join(", "))} · ${E.evidence.length} evidence records from ${E.practices.length} practices and ${E.concepts.length} concepts${bl?` · blind comparison: ${esc(bl.match)}`:""}${bibleFor(g)?" · your story bible covers it":""}.<br>Press Plan cast and beats.</div>`; return; }
+  if(!d){ out.innerHTML=oopHtml+`<div class="empty" style="margin-top:12px"><b>${esc(g.title)}</b>: ${esc(g.description)}<br>${E.evidence.length?"":`<b>No evidence for this mini-game:</b> none of the sources read so far covers the ${esc(g.boats.join(", "))} or ${esc(rstate.world.area_names?.[(g.places||[])[0]?.area]||"its area")}. Lines planned now can only be pure character (marked fictional); add sources on it to ground them.<br>`}Boat: ${esc(g.boats.join(", "))} · ${E.evidence.length} evidence records from ${E.practices.length} practices and ${E.concepts.length} concepts${bl?` · blind comparison: ${esc(bl.match)}`:""}${bibleFor(g)?" · your story bible covers it":""}.<br>Press Plan cast and beats.</div>`; return; }
   const cast=Object.fromEntries(d.cast.map(k=>[k.id,k])), evs=nstate.events.events.map(x=>x.id);
   const st={draft:"p-info",verified:"p-good","needs work":"p-warn",approved:"p-good",rejected:"p-bad"};
   const LW=nstate.lines[nKey(g.id)]?.lastWrite;
-  out.innerHTML=`<div class="hint" style="margin-top:10px">${d.lines.length} lines stored${LW?` (last writing: ${LW.kept} of ${LW.received} kept)`:""} · ${d.evidence.length} evidence records · ${d.basis.bible?"from your story bible and the evidence":"from the evidence"} · planned ${esc(new Date(d.createdAt).toLocaleString())}${d.notes?` · notes: ${esc(d.notes)}`:""}</div>
+  out.innerHTML=oopHtml+`<div class="hint" style="margin-top:10px">${d.settings?`${esc(d.settings.mode==="guide"?"present-day guide":"in character")}${d.settings.period?", "+esc(d.settings.period):""}, ${esc(d.settings.talk)} talk · `:""}${d.lines.length} lines stored${LW?` (last writing: ${LW.kept} of ${LW.received} kept)`:""} · ${d.evidence.length} evidence records · ${d.basis.bible?"from your story bible and the evidence":"from the evidence"} · planned ${esc(new Date(d.createdAt).toLocaleString())}${d.notes?` · notes: ${esc(d.notes)}`:""}</div>
     <div class="section"><h2>Cast <span class="hint">(fictional)</span></h2>${d.cast.map(k=>`<div class="src"><b>${esc(k.name)}</b> — ${esc(k.role)}<div class="hint">Voice: ${esc(k.voice)} · Wants: ${esc(k.want)}${k.evidence.length?` · role from ${esc(k.evidence.map(id=>d.evidence.find(e=>e.id===id)?.source).filter(Boolean).join("; "))}`:""}</div></div>`).join("")}</div>
     <div class="section"><h2>Beats and lines</h2>${d.beats.map(b=>{ const ls=d.lines.filter(l=>l.beat===b.id);
-      return `<div class="concept"><div class="concept-h"><h3>${esc(b.part)}: ${esc(b.gist)}</h3><div class="row"><span class="pill p-acc">${esc(b.trigger)}</span><span class="pill">${esc(b.delivery)} · ≤${WORDS[b.delivery]} words</span><span class="pill">${esc(cast[b.character]?.name||"")}</span>${b.concept?`<span class="pill p-info">${esc(b.concept)}</span>`:""}</div></div>
-        <div class="row" style="margin-top:6px"><label class="hint">Trigger <select data-btrig="${b.id}">${evs.map(x=>`<option${x===b.trigger?" selected":""}>${esc(x)}</option>`).join("")}</select></label><label class="hint">Delivery <select data-bdel="${b.id}">${Object.keys(WORDS).map(x=>`<option${x===b.delivery?" selected":""}>${x}</option>`).join("")}</select></label></div>
+      return `<div class="concept"><div class="concept-h"><h3>${esc(b.part==="leg"?"leg (pool)":b.part)}: ${esc(b.gist)}</h3><div class="row"><span class="pill p-acc">${esc(b.trigger)}</span><span class="pill">${esc(b.delivery)} · ≤${WORDS[b.delivery]} words</span><span class="pill">${esc(cast[b.character]?.name||"")}</span>${b.concept?`<span class="pill p-info">${esc(b.concept)}</span>`:""}</div></div>
+        <div class="row" style="margin-top:6px"><label class="hint">Trigger <select data-btrig="${b.id}">${[...new Set([b.trigger,...evs])].map(x=>`<option${x===b.trigger?" selected":""}>${esc(x)}</option>`).join("")}</select></label><label class="hint">Delivery <select data-bdel="${b.id}">${Object.keys(WORDS).map(x=>`<option${x===b.delivery?" selected":""}>${x}</option>`).join("")}</select></label></div>
         ${b.evidence.length?`<details style="margin-top:6px"><summary class="hint" style="cursor:pointer">Evidence this beat may use (${b.evidence.length})</summary><ul>${b.evidence.map(id=>{ const e=d.evidence.find(x=>x.id===id); return e?`<li class="hint">${esc(id)} · ${esc(e.source)}${e.location?" ("+esc(e.location)+")":""}: ${esc(e.text)}</li>`:""; }).join("")}</ul></details>`:`<div class="hint">No evidence: lines must be pure character.</div>`}
         ${ls.map(l=>`<div class="issue"><div class="row" style="justify-content:space-between"><span class="pill ${st[l.status]||""}">${esc(l.status)}</span>${l.fictional?`<span class="pill">fictional</span>`:""}</div>
           ${nstate.editing===l.id?`<label class="hint">PT</label><textarea id="nEditPt">${esc(l.pt)}</textarea><label class="hint">EN</label><textarea id="nEditEn">${esc(l.en)}</textarea><div class="row" style="margin-top:6px"><button class="btn small primary" data-lsave="${l.id}">Save and check again</button><button class="btn small" data-lcancel>Cancel</button></div>`
@@ -1697,6 +1728,9 @@ function renderNarrative(){
       </div>`; }).join("")}</div>`;
 }
 $("nGame").addEventListener("change",()=>{ nstate.game=$("nGame").value; nstate.editing=null; renderNarrative(); });
+async function saveSettings(){ const k=nKey(nstate.game); nstate.settings[k]={mode:$("nMode").value, period:$("nPeriod").value.trim().slice(0,40), talk:$("nTalk").value, updatedAt:new Date().toISOString()};
+  try{ if(db) await db.doc("narrativeSettings/"+k).set(nstate.settings[k]); }catch(e){ toast("Could not save: "+(e.message||e.code)); } renderNarrative(); }
+$("nMode").addEventListener("change",saveSettings); $("nTalk").addEventListener("change",saveSettings); $("nPeriod").addEventListener("change",saveSettings);
 $("nPlan").addEventListener("click",planNarrative);
 $("nWrite").addEventListener("click",writeLines);
 $("nCheck").addEventListener("click",()=>checkLines(false));
@@ -1832,10 +1866,11 @@ async function buildReport(){
     const practices=prac.map(x=>({name:x.name, ...(rstate.acts[x.key]||{status:"missing",activity:"",why:""}), sources:x.srcs, concepts:x.concepts||[], ...(x.evidence?{evidence:x.evidence}:{})}));
     // 5. conflicts on what the game depends on
     const conflicts=info.filter(x=>(x.c.conflicts||[]).length && ["boat","place","sailing","hull","practice","event"].includes(cls(x).category)).flatMap(x=>x.c.conflicts.map(f=>({name:x.c.label, kind:cls(x).category, type:f.type, text:f.text, sources:x.srcs, concepts:[x.c.id]})));
+    const anachronisms=miniGames().map(g=>({g, l:outOfPeriod(g)})).filter(x=>x.l.length).map(x=>({game:x.g.title, period:nSettings(x.g.id).period, landmarks:x.l.map(l=>`${l.name} (${l.year})`)}));
     const additions=gameAdditions().map(e=>({feature:e.feature, full:e.full, improves:e.acts.length-e.full, sources:e.sources, acts:e.acts.map(a=>a.title)}));
     const count=(xs,pred)=>xs.filter(pred).length;
     const report={createdAt:new Date().toISOString(), game:rstate.world.game, gameCommit:rstate.world.commit, conceptsAt:cstate.set.updatedAt||cstate.set.createdAt, sources:[...new Set(info.flatMap(x=>x.srcs))].length,
-      boats, places, physics, practices, conflicts, additions,
+      boats, places, physics, practices, conflicts, additions, anachronisms,
       counts:{boatsIn:count(boats,b=>b.status==="in game"), boatsMissing:count(boats,b=>b.status==="missing"), placesIn:count(places,p=>["port","landmark","on map"].includes(p.status)), placesMissing:count(places,p=>["missing","outside the game's areas","sea mark only"].includes(p.status)),
         physicsShown:count(physics,x=>x.status==="shown"), physicsNot:count(physics,x=>x.status==="not shown"), practicesCovered:count(practices,x=>x.status==="covered"), practicesPartly:count(practices,x=>x.status==="partly"), practicesMissing:count(practices,x=>x.status==="missing"), conflicts:conflicts.length}};
     const id="r"+report.createdAt.replace(/[^0-9]/g,"").slice(0,14);
@@ -1862,6 +1897,8 @@ function issueDrafts(r, min){
     out.push({title:`Simulate ${g.needs} (needed by ${g.xs.length} concept${g.xs.length>1?"s":""})`, body:`The sources describe ${g.xs.map(x=>x.name).join(", ")}, which the simulation cannot show without ${g.needs}.\n\nEvidence:\n${g.xs.map(ev).join("\n")}`});
   for(const x of r.practices.filter(x=>x.status!=="covered"&&x.sources.length>=min).sort((a,b)=>b.sources.length-a.sources.length))
     out.push({title:`Activity: ${x.name} (${x.status==="partly"?"partly covered":"missing"}, ${x.sources.length} sources)`, body:`${x.status==="partly"?`Closest game activity: ${x.activity}. `:""}${x.why}\n\nSources: ${x.sources.map(srcTitle).join("; ")}\n\nEvidence:\n${ev(x)}`});
+  for(const x of (r.anachronisms||[]))
+    out.push({title:`${x.game}: hide ${x.landmarks.length} landmark${x.landmarks.length>1?"s":""} in a historical edition (${x.period})`, body:`The narrative for "${x.game}" is set in ${x.period}, but the game's map shows landmarks completed later: ${x.landmarks.join(", ")}. A historical edition should hide them, or the narrative should use a present-day guide. Years are author data marked "to verify" (domains/sailing/landmarks.yaml).`});
   for(const e of (r.additions||[]).filter(e=>e.sources.length>=min))
     out.push({title:`Add ${e.feature}: would unlock ${e.full} and improve ${e.improves} activities`, body:`Activities proposed from the historical sources need ${e.feature}:\n${e.acts.map(t=>"- "+t).join("\n")}\n\nSources behind them: ${e.sources.map(srcTitle).join("; ")}`});
   for(const f of r.conflicts.filter(f=>f.sources.length>=Math.min(min,2)))
@@ -2048,6 +2085,7 @@ try{ const t=localStorage.getItem("intake.tab"); if(t) showTab(t); }catch{}
   db.doc("practices/current").onSnapshot(s=>{ if(!hstate.running){ hstate.set=s.exists?own(s.data()):null; hRefresh(); } }, ()=>{});
   const nRefresh=()=>{ if(!$("panel-narrative").hidden && !nstate.running && !nstate.editing) renderNarrative(); };
   db.doc("world/events").onSnapshot(s=>{ nstate.events=s.exists?own(s.data()):null; nRefresh(); }, ()=>{});
+  db.collection("narrativeSettings").onSnapshot(s=>{ for(const doc of s.docs) nstate.settings[doc.id]=own(doc.data()); nRefresh(); }, ()=>{});
   db.collection("narrativeLines").onSnapshot(s=>{ if(nstate.running) return;
     for(const doc of s.docs){ const inc=own(doc.data()), cur=nstate.lines[doc.id]; if(!cur || String(inc.updatedAt||"")>=String(cur.updatedAt||"")) nstate.lines[doc.id]=inc; }
     nRefresh(); }, ()=>{});

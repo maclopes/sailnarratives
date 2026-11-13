@@ -68,9 +68,14 @@ def main(root: Path) -> dict:
                 a["boats"] = g.get("boats", [])
                 a["places"] = [{k: v for k, v in pl.items() if k in ("area", "from", "to", "at")} for pl in g.get("places", [])]
                 a["kind"] = g.get("type", "")
+    lm_file = Path(__file__).resolve().parent.parent / "landmarks.yaml"
+    landmark_info = []
+    if lm_file.exists():
+        import yaml
+        landmark_info = (yaml.safe_load(lm_file.read_text(encoding="utf-8")) or {}).get("landmarks", [])
     commit = subprocess.run(["git", "-C", str(root), "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip()
     return {"game": "fragateiro", "commit": commit, "area_names": area_names, "map_files": {"tejo": "tagus"},
-            "activities": activities, "ports": areas, "extra_places": extra,
+            "activities": activities, "landmark_info": landmark_info, "ports": areas, "extra_places": extra,
             "landmarks": landmarks, "boats": boats, "map_places": map_places, "seamarks": seamarks}
 
 

@@ -54,6 +54,14 @@ The tool's screens. Each is a single HTML page with no build step.
   line-record shape with delivery, sources and credits. Data: narrative/<mini-game>,
   world/events (the pack's game moments), texts/m-auth-bible.
 
+  Narrative settings per mini-game: narrator (in character in a historical period, or a
+  present-day guide), period, and talk (quiet, normal, chatty). Chatty adds leg beats (a pool
+  of lines for the long calm stretches, played in turn on steady_leg) and place beats
+  (near_place:<name>, only for places the evidence mentions). In a historical setting, the
+  landmarks the game shows that were built after the period are listed (author data in
+  domains/sailing/landmarks.yaml, marked "to verify"), lines that mention them fail the check,
+  and the game report drafts an issue to hide them in a historical edition.
+
   Tab 8, Game report: evaluates the game against the sources. Concepts are sorted by kind
   (boat, place, sailing, boat part, practice, role, cargo, event, regulation, internal), then
   boats and places are checked against the pack's game world list (area by area), sailing

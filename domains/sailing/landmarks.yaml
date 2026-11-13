@@ -1,0 +1,20 @@
+# Landmarks shown by the game, with the year they were completed, for checking a historical
+# setting against the game's scenery. Author data, not taken from the sources: every year is
+# "to verify" until checked. Leave "year" empty when unsure. Area ids as in game-world.json.
+landmarks:
+  - {name: Ponte 25 de Abril, area: tejo, year: 1966, status: to verify}
+  - {name: Cristo Rei, area: tejo, year: 1959, status: to verify}
+  - {name: Ponte Vasco da Gama, area: tejo, year: 1998, status: to verify}
+  - {name: Torre Vasco da Gama, area: tejo, year: 1998, status: to verify}
+  - {name: Padrão dos Descobrimentos, area: tejo, year: 1960, status: to verify, note: "a temporary version stood in 1940"}
+  - {name: Ponte Marechal Carmona, area: tejo, year: 1951, status: to verify, note: "also in the method doc's source library (1951 Vila Franca bridge)"}
+  - {name: Torre de Belém, area: tejo, year: 1519, status: to verify}
+  - {name: Castelo de São Jorge, area: tejo, year: null, status: medieval}
+  - {name: Farol de Santa Marta, area: tejo, year: 1868, status: to verify}
+  - {name: Farol do Cabo Espichel, area: tejo, year: 1790, status: to verify}
+  - {name: Farol do Bugio, area: tejo, year: null, status: unknown}
+  - {name: Farol da Gibalta, area: tejo, year: null, status: unknown}
+  - {name: Farol do Alfeite, area: tejo, year: null, status: unknown}
+  - {name: Phare du Cap-Ferret, area: arcachon, year: null, status: unknown}
+  - {name: Jetée Thiers, area: arcachon, year: null, status: unknown}
+  - {name: Cabanes tchanquées, area: arcachon, year: null, status: unknown}
