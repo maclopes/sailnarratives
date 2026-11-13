@@ -18,10 +18,19 @@ The tool's screens. Each is a single HTML page with no build step.
   step, clarifications, gaps), which can be copied or downloaded as Markdown. Data: texts/,
   candidates/, concepts/current, summaries/concepts in the artifact database.
 
-  Tab 5, Game report: evaluates the game against the sources. Concepts are sorted by kind
+  Tab 5, History: the history base. Claude reads each chosen historical source (licence shown;
+  copyrighted or unknown-licence sources are flagged before sending) for practices, rules and
+  events: who, boat, place, period, cargo, gear, conditions, numbers, location, as English
+  paraphrase. They are grouped across sources in batches (decisions kept, resumable), with
+  statuses: agreed, conflicting (date, number, account), single source, no boat, no place, no
+  period, no concept. Each practice is linked to the concepts it exercises (an interpretation).
+  A review sheet for one source lists every claim taken from it with its location and the
+  questions raised, for a historian to mark. Data: practiceCands/, practices/current.
+
+  Tab 6, Game report: evaluates the game against the sources. Concepts are sorted by kind
   (boat, place, sailing, boat part, practice, role, cargo, event, regulation, internal), then
   boats and places are checked against the pack's game world list (area by area), sailing
-  concepts against the simulation, and historical practices against the game's activities.
+  concepts against the simulation, and historical practices (from the History tab when it has run) against the game's activities.
   Every finding counts its sources; a threshold hides weak ones. It drafts one issue per
   finding for the game's developers (copy or download as Markdown) and keeps earlier reports,
   so a new game release shows what changed. The world list comes from

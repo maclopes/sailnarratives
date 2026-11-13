@@ -143,7 +143,8 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
     <button role="tab" id="tab-materials" aria-selected="false" data-tab="materials"><span class="n">2</span>Materials</button>
     <button role="tab" id="tab-readiness" aria-selected="false" data-tab="readiness"><span class="n">3</span>Readiness</button>
     <button role="tab" id="tab-concepts" aria-selected="false" data-tab="concepts"><span class="n">4</span>Concepts</button>
-    <button role="tab" id="tab-report" aria-selected="false" data-tab="report"><span class="n">5</span>Game report</button>
+    <button role="tab" id="tab-history" aria-selected="false" data-tab="history"><span class="n">5</span>History</button>
+    <button role="tab" id="tab-report" aria-selected="false" data-tab="report"><span class="n">6</span>Game report</button>
   </div>
 
   <!-- 1 Project -->
@@ -218,7 +219,26 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
     </div>
   </section>
 
-  <!-- 5 Game report -->
+  <!-- 5 History -->
+  <section class="panel" id="panel-history" role="tabpanel" hidden>
+    <p class="sub">The history base. Claude reads each chosen historical source for practices and events: who did what, with which boat, where, when, under which rule, paraphrased with its page. They are grouped across sources; the tool flags missing and contradictory facts, links each practice to the concepts it exercises, and writes a review sheet for one source. Everything is a draft until you accept it.</p>
+    <h2 style="margin-top:18px">Sources</h2>
+    <div id="hSources"></div>
+    <div class="row" style="margin-top:12px"><button class="btn primary" id="hFind">Find practices</button><button class="btn" id="hLink">Link to concepts</button><span class="hint" id="hRun"></span></div>
+    <div class="section">
+      <div class="row" style="justify-content:space-between"><h2>Practices and events</h2><span class="hint" id="hMeta"></span></div>
+      <div class="chips" id="hChips"></div>
+      <div id="hList"></div>
+    </div>
+    <div class="section">
+      <h2>Review sheet for one source</h2>
+      <p class="sub">For a historian checking one document: every claim the tool took from it, in paraphrase with its page, and the questions where other sources disagree or facts are missing.</p>
+      <div class="row" style="margin-top:8px"><select id="hSheetSrc" style="width:auto;max-width:100%"></select><button class="btn" id="hSheetCopy">Copy</button><button class="btn" id="hSheetDl">Download</button></div>
+      <pre id="hSheet" style="margin-top:8px"></pre>
+    </div>
+  </section>
+
+  <!-- 6 Game report -->
   <section class="panel" id="panel-report" role="tabpanel" hidden>
     <p class="sub">Evaluates the game against the sources: which boats, places, sailing behaviour and historical activities the sources support, and whether the game has them. Each finding counts the sources behind it. Run it again after each game release to see what changed.</p>
     <div class="row" style="margin-top:12px"><button class="btn primary" id="rBuild">Build report</button>
@@ -267,11 +287,12 @@ function setSave(msg){$("saveState").textContent=msg;}
 // ---------- tabs ----------
 function showTab(name){
   for (const b of document.querySelectorAll(".tabs button")) b.setAttribute("aria-selected", String(b.dataset.tab===name));
-  for (const p of ["project","materials","readiness","concepts","report"]) $("panel-"+p).hidden = p!==name;
+  for (const p of ["project","materials","readiness","concepts","history","report"]) $("panel-"+p).hidden = p!==name;
   try{localStorage.setItem("intake.tab",name);}catch{}
   if (name==="readiness") renderReadiness();
   if (name==="concepts") renderConcepts();
   if (name==="report") renderReport();
+  if (name==="history") renderHistory();
 }
 document.querySelectorAll(".tabs button").forEach(b=>b.addEventListener("click",()=>showTab(b.dataset.tab)));
 
@@ -1040,6 +1061,247 @@ $("sumCopy").addEventListener("click",async()=>{ const t=summaryText(); if(!t){ 
 $("sumDl").addEventListener("click",async()=>{ const t=summaryText(); if(!t){ toast("No summary yet."); return; } if(!downloads){ toast("Downloads are not available here; use Copy."); return; } try{ await downloads.save({filename:"summary-of-sources.md", data:t}); }catch(e){ if(e.code!=="declined") toast("Could not save: "+(e.message||e.code)); } });
 
 
+
+// ---------- history: practices and events ----------
+const hstate={cands:{}, set:null, running:false, filter:"all", use:null, renaming:null};
+const HSTATUS={
+  "agreed":["p-good","Two or more sources describe it and do not disagree."],
+  "conflicting":["p-bad","Sources disagree on a date, a number or the account."],
+  "single source":["p-warn","Only one source describes it."],
+  "no boat":["p-warn","No source names the boat."],
+  "no place":["p-warn","No source names the place."],
+  "no period":["p-warn","No source gives a date or period."],
+  "no concept":["p-info","Not linked to any concept yet."],
+};
+const LIC_OK=(m)=>m.licence==="open"||m.licence==="cc0"||m.licence==="permission";
+function historySources(){ return state.materials.filter(m=>m.kind==="historical" && !isHeldOut(m) && cstate.texts[m.id]?.text); }
+function hUsed(){ return hstate.use || new Set(historySources().map(m=>m.id)); }
+function renderHSources(){
+  const all=historySources(), use=hUsed();
+  $("hSources").innerHTML = all.length ? all.map(m=>{ const t=cstate.texts[m.id], c=hstate.cands[m.id], done=c&&c.textChars===t.chars&&c.partsDone?.length===c.partsTotal;
+    return `<div class="src"><div class="src-h"><label><input type="checkbox" data-huse="${esc(m.id)}"${use.has(m.id)?" checked":""}> ${esc(m.title)}</label>
+      <div class="row"><span class="pill ${LIC_OK(m)?"p-good":"p-warn"}">${esc(LIC_OK(m)?LICENCES[m.licence]:(m.licence?LICENCES[m.licence]:"licence unknown"))}</span>
+      <span class="pill">${t.chars.toLocaleString()} characters</span>${done?`<span class="pill p-good">${c.items.length} items read</span>`:c?`<span class="pill p-warn">${c.partsDone?.length||0} of ${c.partsTotal} parts read</span>`:""}</div></div></div>`; }).join("")
+    : `<div class="empty">No historical source has text yet. Import them in Materials (Google Drive) or paste their text in Concepts.</div>`;
+  const chosen=all.filter(m=>use.has(m.id)), risky=chosen.filter(m=>!LIC_OK(m));
+  const steps=chosen.reduce((k,m)=>{ const c=hstate.cands[m.id], t=cstate.texts[m.id]; const n=chunks(t.text).length; return k+(c&&c.textChars===t.chars?Math.max(0,n-(c.partsDone?.length||0)):n); },0);
+  if(!hstate.running) $("hRun").textContent = chosen.length ? `${chosen.length} sources chosen, about ${steps} requests to read.`+(risky.length?` ${risky.length} are copyrighted or of unknown licence: their text will be sent to Claude.`:"") : "Choose at least one source.";
+  $("hFind").disabled=hstate.running||!chosen.length;
+}
+$("hSources").addEventListener("change",(ev)=>{ const id=ev.target.dataset?.huse; if(!id) return; const u=new Set(hUsed()); if(ev.target.checked) u.add(id); else u.delete(id); hstate.use=u; renderHSources(); });
+
+function practicePrompt(m,chunk,i,n){
+  return `You read part ${i} of ${n} of a historical source about ${state.project.subject||"one subject"}, to build a museum game. List what people did with boats and the river: practices, rules and events.
+Source: "${m.title}" (language: ${LANGS[m.language]||m.language||"unknown"}).
+
+Rules:
+- One item per distinct practice or event: a work routine (a fishing method, a cargo run, a ferry crossing, towing, building or repairing boats), a rule (a regulation, fee or licence), a dated event (a ban, a survey, a new service), or a description of a boat or place without action.
+- action: your English paraphrase, at most 25 words. Never copy sentences.
+- who, boat, place, period, cargo, gear, conditions: as the text states them, names in the source's own words; "" when the text does not say. period: a year, a range or a century, as stated.
+- numbers: only values the text states (crew, tonnes, km, hours, prices, counts), with what they measure.
+- kind: "practice", "rule", "event" or "description".
+- location: the [page N] marker or a short heading.
+- The text may be a web page saved as PDF: ignore menus, footers, link lists and broken ligatures.
+- At most 25 items. Do not add anything that is not in the text.
+Return JSON only: {"items":[{"kind":"","action":"","who":"","boat":"","place":"","period":"","cargo":"","gear":"","conditions":"","numbers":[{"what":"","value":"","unit":""}],"location":""}]}
+
+Text:
+${chunk}`;
+}
+function hAssignPrompt(practices, batch){
+  const known=practices.map(p=>({id:p.id, label:p.label, boat:p.boats.slice(0,2).join(", "), place:p.places.slice(0,2).join(", "), period:p.periods.slice(0,2).join(", ")}));
+  return `You group descriptions of historical practices and events about ${state.project.subject||"one subject"}, gathered from several sources.
+
+Existing practices (id, label, boat, place, period):
+${JSON.stringify(known)}
+
+New items (id, source, kind, action, who, boat, place, period, numbers):
+${JSON.stringify(batch)}
+
+For each item: if it describes the same practice or event as an existing one (the same activity by the same kind of people or boat; places and periods may differ), give that practice's id. Otherwise give a short English label for a new practice; items in this batch describing the same thing get the same label.
+Report real disagreements between an item and the practice it joins: "date" (different dates for the same event), "number" (different values for the same quantity; give both with their sources), "description" (accounts that cannot both be true). More detail, or the same practice in another period, is not a conflict.
+Return JSON only: {"assign":[{"id":"","practice":"p12"},{"id":"","new":"short label"}],"conflicts":[{"practice":"p12 or the new label","type":"date","text":""}]}`;
+}
+function hLinkPrompt(concepts, batch){
+  return `Link historical practices to the concepts a visitor could learn from them, for a sailing game about ${state.project.subject||"one subject"}.
+Concepts (id, label):
+${JSON.stringify(concepts)}
+
+For each practice, give the ids of the concepts it exercises or shows (a manoeuvre, a point of sail, a boat part, a type of boat, a place), at most 6, and a note of at most 12 words on how. This is an interpretation: sources describe work, not technique, so link only what the practice clearly involves.
+Return JSON only: {"items":[{"id":"","concepts":[],"note":""}]}
+
+Practices:
+${JSON.stringify(batch)}`;
+}
+function buildPracDoc(m, raw, chars, partsTotal, partsDone){
+  const seen=new Map(); for(const it of raw){ const k=norm([it.kind,it.boat,it.place,String(it.action).slice(0,50)].join("|")); if(!seen.has(k)) seen.set(k,it); }
+  const S=(v,n)=>String(v??"").slice(0,n);
+  const items=[...seen.values()].map((it,n)=>({id:`${m.id}:${Number(chars).toString(36)}:p${n+1}`, kind:S(it.kind,12)||"practice", action:S(it.action,300), who:S(it.who,80), boat:S(it.boat,60), place:S(it.place,80), period:S(it.period,40), cargo:S(it.cargo,80), gear:S(it.gear,80), conditions:S(it.conditions,100), numbers:Array.isArray(it.numbers)?it.numbers.slice(0,6).map(x=>({what:S(x?.what,80),value:S(x?.value,30),unit:S(x?.unit,20)})):[], location:S(it.location,60)}));
+  const doc={sourceId:m.id, title:m.title, items, textChars:chars, partsTotal, partsDone, runAt:new Date().toISOString()};
+  // keep each record under the database's 256 KB document limit
+  const size=()=>new TextEncoder().encode(JSON.stringify(doc)).length;
+  if(size()>230000){ for(const it of doc.items){ it.action=it.action.slice(0,160); it.gear=""; it.conditions=it.conditions.slice(0,40); } doc.shortened=true; }
+  while(size()>230000 && doc.items.length){ doc.items.pop(); doc.truncated=true; }
+  return doc;
+}
+function hIndex(){ const idx={}; for(const d of Object.values(hstate.cands)) for(const x of d.items||[]) idx[x.id]={...x, sourceId:d.sourceId}; return idx; }
+function mergeFields(p, idx){
+  const ms=p.members.map(id=>idx[id]).filter(Boolean); const uniq=(f)=>[...new Set(ms.map(x=>x[f]).filter(Boolean))];
+  p.boats=uniq("boat").slice(0,6); p.places=uniq("place").slice(0,6); p.periods=uniq("period").slice(0,6);
+  const kinds={}; ms.forEach(x=>kinds[x.kind]=(kinds[x.kind]||0)+1); p.kind=Object.entries(kinds).sort((a,b)=>b[1]-a[1])[0]?.[0]||"practice";
+}
+async function findPractices(){
+  if(!sample){ toast("Asking Claude is not available in this view."); return; }
+  const srcs=historySources().filter(m=>hUsed().has(m.id)); if(!srcs.length) return;
+  hstate.running=true; renderHSources();
+  const fatal=(e)=>e?.code==="not_granted"||e?.code==="rate_limited"||e?.code==="unavailable"; const skipped=[];
+  const ask=async(prompt)=>{ for(let a=0;a<2;a++){ try{ return await sample.json(prompt,{modelTier:"default"}); }catch(e){ if(fatal(e)||a===1) throw e; } } };
+  try{
+    for(const m of srcs){
+      const t=cstate.texts[m.id], parts=chunks(t.text), prev=hstate.cands[m.id];
+      const same=prev&&prev.textChars===t.chars&&prev.partsTotal===parts.length;
+      const raw=same&&Array.isArray(prev.items)?prev.items.slice():[], doneParts=same&&Array.isArray(prev.partsDone)?new Set(prev.partsDone):new Set();
+      for(let i=0;i<parts.length;i++){
+        if(doneParts.has(i)) continue;
+        $("hRun").textContent=`Reading ${SHORT(m)}, part ${i+1} of ${parts.length}…`;
+        let r=null; try{ r=await ask(practicePrompt(m,parts[i],i+1,parts.length)); }catch(e){ if(fatal(e)) throw e; skipped.push(`${SHORT(m)} part ${i+1}`); }
+        if(r){ for(const it of (Array.isArray(r?.items)?r.items:[])) if(it&&it.action) raw.push(it); doneParts.add(i); }
+        const doc=buildPracDoc(m, raw, t.chars, parts.length, [...doneParts]); hstate.cands[m.id]=doc; await saveDoc("practiceCands/"+m.id, doc);
+      }
+    }
+    // group, 40 items at a time, into the existing list (keeps decisions)
+    const idx=hIndex(), valid=new Set(Object.keys(idx));
+    const set=hstate.set?.practices ? JSON.parse(JSON.stringify(hstate.set)) : {practices:[], createdAt:new Date().toISOString()};
+    for(const p of set.practices) p.members=p.members.filter(id=>valid.has(id));
+    set.practices=set.practices.filter(p=>p.members.length);
+    let next=Math.max(0,...set.practices.map(p=>Number(String(p.id).slice(1))||0))+1;
+    const assigned=new Set(set.practices.flatMap(p=>p.members));
+    const todo=Object.values(idx).filter(x=>!assigned.has(x.id) && srcs.some(m=>m.id===x.sourceId));
+    const B=40, nb=Math.ceil(todo.length/B);
+    for(let bi=0; bi<nb; bi++){
+      $("hRun").textContent=`Grouping: batch ${bi+1} of ${nb} (${set.practices.length} practices so far)`;
+      const batch=todo.slice(bi*B,(bi+1)*B).map(x=>({id:x.id, source:srcTitle(x.sourceId), kind:x.kind, action:x.action, who:x.who, boat:x.boat, place:x.place, period:x.period, numbers:x.numbers.map(n=>`${n.what}: ${n.value}${n.unit?" "+n.unit:""}`)}));
+      set.practices.forEach(p=>mergeFields(p,idx));
+      const r=await ask(hAssignPrompt(set.practices,batch)); const fresh={};
+      for(const a of (Array.isArray(r?.assign)?r.assign:[])){
+        if(!a||!valid.has(a.id)||assigned.has(a.id)) continue;
+        let p=a.practice?set.practices.find(x=>x.id===a.practice):null;
+        if(!p){ const label=String(a.new||idx[a.id].action.slice(0,60)).slice(0,90); p=fresh[norm(label)]; if(!p){ p={id:"p"+(next++), label, members:[], conflicts:[], decision:"draft", boats:[], places:[], periods:[]}; fresh[norm(label)]=p; set.practices.push(p); } }
+        p.members.push(a.id); assigned.add(a.id);
+      }
+      for(const x of batch) if(!assigned.has(x.id)){ set.practices.push({id:"p"+(next++), label:idx[x.id].action.slice(0,60), members:[x.id], conflicts:[], decision:"draft", boats:[], places:[], periods:[]}); assigned.add(x.id); }
+      for(const f of (Array.isArray(r?.conflicts)?r.conflicts:[])){ if(!f?.text) continue; const p=set.practices.find(x=>x.id===f.practice)||fresh[norm(f.practice||"")]; if(p&&(p.conflicts||=[]).length<6) p.conflicts.push({type:String(f.type||"description"),text:String(f.text).slice(0,400)}); }
+      set.practices.forEach(p=>mergeFields(p,idx)); set.updatedAt=new Date().toISOString();
+      hstate.set=set; await saveDoc("practices/current", set); renderHTable();
+    }
+    if(!nb){ set.practices.forEach(p=>mergeFields(p,idx)); hstate.set=set; await saveDoc("practices/current", set); }
+    $("hRun").textContent=`Done: ${set.practices.length} practices from ${Object.keys(idx).length} items.`+(skipped.length?` Could not read: ${skipped.join("; ")}; press Find practices again to retry.`:"");
+  }catch(e){ $("hRun").textContent=(e.code==="not_granted"?"Asking Claude is not allowed in this view.":e.code==="rate_limited"?"Too many requests; wait a minute.":"Stopped: "+(e.message||e.code||e))+" What was read is kept; Find practices continues from there."; }
+  hstate.running=false; renderHSources(); renderHTable();
+  if(hstate.set?.practices?.some(p=>!p.linkedAt) && cstate.set?.concepts?.length) await linkPractices(true);
+}
+async function linkPractices(onlyNew){
+  if(!sample||!hstate.set?.practices?.length) return;
+  if(!cstate.set?.concepts?.length){ $("hRun").textContent="Build the concept table first (Concepts tab)."; return; }
+  const concepts=cstate.set.concepts.filter(c=>c.decision!=="rejected"&&!(c.scope==="out"&&c.decision!=="accepted")).map(c=>({id:c.id,label:c.label}));
+  const valid=new Set(concepts.map(c=>c.id)), idx=hIndex();
+  const todo=hstate.set.practices.filter(p=>!(onlyNew&&p.linkedAt)&&p.decision!=="rejected");
+  hstate.running=true; $("hLink").disabled=true;
+  try{
+    const B=50;
+    for(let i=0;i<todo.length;i+=B){
+      $("hRun").textContent=`Linking practices to concepts: ${Math.min(i+B,todo.length)} of ${todo.length}…`;
+      const batch=todo.slice(i,i+B).map(p=>({id:p.id, label:p.label, boat:p.boats.slice(0,2).join(", "), action:String(idx[p.members[0]]?.action||"").slice(0,120)}));
+      const r=await sample.json(hLinkPrompt(concepts,batch),{modelTier:"default"}); const now=new Date().toISOString();
+      for(const it of (Array.isArray(r?.items)?r.items:[])){ const p=hstate.set.practices.find(x=>x.id===it?.id); if(!p) continue; p.concepts=(it.concepts||[]).filter(id=>valid.has(id)).slice(0,6); p.linkNote=String(it.note||"").slice(0,120); p.linkedAt=now; }
+      hstate.set.updatedAt=now; await saveDoc("practices/current", hstate.set); renderHTable();
+    }
+    $("hRun").textContent=`Linked ${todo.length} practices to concepts.`;
+  }catch(e){ $("hRun").textContent=(e.code==="rate_limited"?"Too many requests; wait a minute.":"Stopped: "+(e.message||e.code||e))+" Links so far are saved."; }
+  hstate.running=false; $("hLink").disabled=false;
+}
+function hStatuses(p, idx){
+  const ms=p.members.map(id=>idx[id]).filter(Boolean), st=[]; const n=new Set(ms.map(x=>x.sourceId)).size;
+  if((p.conflicts||[]).length) st.push("conflicting");
+  if(n===1) st.push("single source"); else if(!(p.conflicts||[]).length) st.push("agreed");
+  if(p.kind==="practice"&&!p.boats?.length) st.push("no boat");
+  if(p.kind!=="rule"&&!p.places?.length) st.push("no place");
+  if(!p.periods?.length) st.push("no period");
+  if(p.linkedAt&&!(p.concepts||[]).length) st.push("no concept");
+  return st;
+}
+function renderHTable(){
+  const set=hstate.set, idx=hIndex();
+  if(!set?.practices?.length){ $("hChips").innerHTML=""; $("hMeta").textContent=""; $("hList").innerHTML=`<div class="empty">No practices yet. Choose sources above and press Find practices.</div>`; renderSheetSel(); return; }
+  const rows=set.practices.map(p=>({p, st:hStatuses(p,idx), n:new Set(p.members.map(id=>idx[id]?.sourceId).filter(Boolean)).size})).sort((a,b)=>b.n-a.n);
+  const count={}; rows.forEach(r=>r.st.forEach(x=>count[x]=(count[x]||0)+1));
+  $("hMeta").textContent=`${set.practices.length} practices · ${set.practices.filter(p=>p.decision==="accepted").length} accepted · ${Object.keys(idx).length} items read`;
+  $("hChips").innerHTML=[["all","All",set.practices.length],...Object.keys(HSTATUS).filter(k=>count[k]).map(k=>[k,k,count[k]])].map(([k,l,n])=>`<button class="chip" data-hfilter="${esc(k)}" aria-pressed="${hstate.filter===k}" title="${esc(HSTATUS[k]?.[1]||"")}">${esc(l)} · ${n}</button>`).join("");
+  const cLabel=Object.fromEntries((cstate.set?.concepts||[]).map(c=>[c.id,c.label]));
+  const options=set.practices.map(p=>`<option value="${esc(p.id)}">${esc(p.label.slice(0,60))}</option>`).join("");
+  const shown=rows.filter(r=>hstate.filter==="all"||r.st.includes(hstate.filter)).slice(0,150);
+  $("hList").innerHTML=shown.map(({p,st,n})=>{ const ms=p.members.map(id=>idx[id]).filter(Boolean);
+    return `<div class="concept${p.decision==="rejected"?" rejected":""}"><div class="concept-h">
+      ${hstate.renaming===p.id?`<div class="row"><input type="text" id="hRenameBox" value="${esc(p.label)}" style="width:auto"><button class="btn small primary" data-hrenamesave="${esc(p.id)}">Save</button></div>`:`<h3>${esc(p.label)}</h3>`}
+      <div class="row"><span class="pill">${n} source${n>1?"s":""}</span><span class="pill p-acc">${esc(p.kind)}</span>${st.map(x=>`<span class="pill ${HSTATUS[x][0]}" title="${esc(HSTATUS[x][1])}">${esc(x)}</span>`).join("")}${p.decision!=="draft"?`<span class="pill ${p.decision==="accepted"?"p-good":"p-bad"}">${esc(p.decision)}</span>`:""}</div></div>
+      <div class="hint" style="margin-top:4px">${[p.boats?.length?"Boat: "+p.boats.join(", "):"", p.places?.length?"Place: "+p.places.join(", "):"", p.periods?.length?"When: "+p.periods.join(", "):""].filter(Boolean).map(esc).join(" · ")}</div>
+      ${(p.concepts||[]).length?`<div class="hint">Concepts: ${esc(p.concepts.map(id=>cLabel[id]).filter(Boolean).join(", "))}${p.linkNote?" · "+esc(p.linkNote):""}</div>`:""}
+      ${(p.conflicts||[]).map(f=>`<div class="conf"><span class="pill p-bad">${esc(f.type)}</span><span>${esc(f.text)}</span></div>`).join("")}
+      <div style="overflow-x:auto"><table class="members"><tr><th>Source</th><th>What it says (paraphrase)</th><th>Where</th><th></th></tr>
+      ${ms.map(x=>`<tr><td><span class="pill">${esc(srcTitle(x.sourceId))}</span></td><td>${esc(x.action)}${[x.who&&"who: "+x.who,x.cargo&&"cargo: "+x.cargo,x.gear&&"gear: "+x.gear,x.conditions&&"conditions: "+x.conditions].filter(Boolean).length?`<div class="hint">${esc([x.who&&"who: "+x.who,x.cargo&&"cargo: "+x.cargo,x.gear&&"gear: "+x.gear,x.conditions&&"conditions: "+x.conditions].filter(Boolean).join(" · "))}</div>`:""}${x.numbers.length?`<div class="hint">${esc(x.numbers.map(n=>`${n.what}: ${n.value}${n.unit?" "+n.unit:""}`).join(" · "))}</div>`:""}</td><td class="hint">${esc(x.location)}</td>
+        <td><select data-hmove="${esc(x.id)}" aria-label="Move to another practice"><option value="">Move to…</option><option value="__new">A new practice</option>${options}</select></td></tr>`).join("")}</table></div>
+      <div class="row" style="margin-top:8px"><button class="btn small${p.decision==="accepted"?" primary":""}" data-hdecide="accepted" data-pid="${esc(p.id)}">Accept</button><button class="btn small" data-hdecide="rejected" data-pid="${esc(p.id)}">Reject</button>${p.decision!=="draft"?`<button class="btn small" data-hdecide="draft" data-pid="${esc(p.id)}">Back to draft</button>`:""}<button class="btn small" data-hrename="${esc(p.id)}">Rename</button></div></div>`; }).join("")
+    + (rows.filter(r=>hstate.filter==="all"||r.st.includes(hstate.filter)).length>150?`<div class="hint">Showing the 150 with most sources; use the filters to see others.</div>`:"");
+  renderSheetSel();
+}
+async function saveHSet(){ try{ await saveDoc("practices/current", hstate.set); }catch(e){ toast("Could not save: "+(e.message||e.code)); } renderHTable(); }
+$("hChips").addEventListener("click",(ev)=>{ const b=ev.target.closest("[data-hfilter]"); if(!b) return; hstate.filter=b.dataset.hfilter; renderHTable(); });
+$("hList").addEventListener("click",async(ev)=>{ const b=ev.target.closest("button"); if(!b||!hstate.set) return;
+  const p=hstate.set.practices.find(x=>x.id===(b.dataset.pid||b.dataset.hrename||b.dataset.hrenamesave));
+  if(b.dataset.hdecide){ p.decision=b.dataset.hdecide; await saveHSet(); }
+  else if(b.dataset.hrename){ hstate.renaming=p.id; renderHTable(); $("hRenameBox")?.focus(); }
+  else if(b.dataset.hrenamesave){ const v=$("hRenameBox").value.trim(); if(v) p.label=v.slice(0,90); hstate.renaming=null; await saveHSet(); } });
+$("hList").addEventListener("change",async(ev)=>{ const id=ev.target.dataset?.hmove, to=ev.target.value; if(!id||!to||!hstate.set) return;
+  const idx=hIndex(), from=hstate.set.practices.find(p=>p.members.includes(id)); if(!from||from.id===to) return;
+  from.members=from.members.filter(x=>x!==id);
+  if(to==="__new"){ const n=Math.max(0,...hstate.set.practices.map(p=>Number(String(p.id).slice(1))||0))+1; hstate.set.practices.push({id:"p"+n, label:idx[id]?.action.slice(0,60)||"New practice", members:[id], conflicts:[], decision:"draft", boats:[], places:[], periods:[]}); }
+  else hstate.set.practices.find(p=>p.id===to).members.push(id);
+  hstate.set.practices=hstate.set.practices.filter(p=>p.members.length); hstate.set.practices.forEach(p=>mergeFields(p,idx)); await saveHSet(); toast("Moved"); });
+$("hFind").addEventListener("click",findPractices);
+$("hLink").addEventListener("click",()=>linkPractices(false));
+
+// review sheet for one source
+function renderSheetSel(){
+  const sel=$("hSheetSrc"), cur=sel.value, ids=Object.keys(hstate.cands).filter(id=>hstate.cands[id].items?.length);
+  sel.innerHTML=`<option value="">Choose a source…</option>`+ids.map(id=>`<option value="${esc(id)}"${id===cur?" selected":""}>${esc((state.materials.find(m=>m.id===id)||{title:id}).title.slice(0,80))}</option>`).join("");
+  $("hSheet").textContent=sheetText(sel.value);
+}
+function sheetText(srcId){
+  if(!srcId) return "";
+  const m=state.materials.find(x=>x.id===srcId)||{title:srcId}, idx=hIndex(), mine=(hstate.cands[srcId]?.items||[]);
+  const pOf={}; for(const p of hstate.set?.practices||[]) for(const id of p.members) pOf[id]=p;
+  const L=[`# Review sheet: ${m.title}`, "", `Prepared by the narrative workbench for ${state.project.name||"the project"}. Each item is the tool's paraphrase of a passage, with its location. Please mark each one and add a comment where needed.`, ""];
+  mine.forEach((x,k)=>{
+    const p=pOf[x.id]; const others=p?p.members.filter(id=>idx[id]&&idx[id].sourceId!==srcId).map(id=>idx[id]):[];
+    L.push(`## ${k+1}. ${p?p.label:x.action.slice(0,60)} (${x.location||"location not given"})`, "", `What the tool read: ${x.action}`);
+    const det=[x.who&&"who: "+x.who, x.boat&&"boat: "+x.boat, x.place&&"place: "+x.place, x.period&&"when: "+x.period, x.cargo&&"cargo: "+x.cargo, x.gear&&"gear: "+x.gear, x.conditions&&"conditions: "+x.conditions].filter(Boolean);
+    if(det.length) L.push(`Details: ${det.join("; ")}`);
+    if(x.numbers.length) L.push(`Numbers: ${x.numbers.map(n=>`${n.what}: ${n.value}${n.unit?" "+n.unit:""}`).join("; ")}`);
+    const q=[];
+    for(const f of p?.conflicts||[]) q.push(`Sources disagree (${f.type}): ${f.text}`);
+    if(others.length) q.push(`Also described by: ${[...new Set(others.map(o=>srcTitle(o.sourceId)))].join("; ")}.`);
+    else q.push("No other source describes this: is it accurate as stated?");
+    if(x.kind==="practice"&&!x.boat) q.push("Which boat was used?");
+    if(!x.period) q.push("When did this happen?");
+    L.push("", "Questions:", ...q.map(s2=>"- "+s2), "", "[ ] correct   [ ] wrong   [ ] unsure      Comment:", "");
+  });
+  return L.join("\n");
+}
+$("hSheetSrc").addEventListener("change",()=>{ $("hSheet").textContent=sheetText($("hSheetSrc").value); });
+$("hSheetCopy").addEventListener("click",async()=>{ const t=sheetText($("hSheetSrc").value); if(!t){ toast("Choose a source first."); return; } try{ await navigator.clipboard.writeText(t); toast("Copied"); }catch{ toast("Copy is not available here; use Download."); } });
+$("hSheetDl").addEventListener("click",async()=>{ const id=$("hSheetSrc").value, t=sheetText(id); if(!t){ toast("Choose a source first."); return; } if(!downloads){ toast("Downloads are not available here; use Copy."); return; } try{ await downloads.save({filename:`review-sheet-${norm(SHORT(state.materials.find(m=>m.id===id)||{title:id})).replace(/[^a-z0-9]+/g,"-")}.md`, data:t}); }catch(e){ if(e.code!=="declined") toast("Could not save: "+(e.message||e.code)); } });
+function renderHistory(){ renderHSources(); renderHTable(); }
+
 // ---------- game report ----------
 const rstate={world:null, classes:{}, acts:{}, report:null, history:[], running:false};
 const RSTAT={"in game":"p-good","port":"p-good","landmark":"p-good","on map":"p-info","sea mark only":"p-warn","in development":"p-warn","shown":"p-good","covered":"p-good","partly":"p-warn","missing":"p-bad","not shown":"p-bad","outside the game's areas":"p-bad","area unknown":"p-info","out of scope":"p-info"};
@@ -1120,16 +1382,20 @@ async function buildReport(){
     // 3. sailing behaviour and boat parts
     const physics=info.filter(x=>["sailing","hull"].includes(cls(x).category)).map(x=>({name:x.c.label, kind:cls(x).category, status:x.sim?"shown":(/out of scope/i.test(cls(x).needs)?"out of scope":"not shown"), needs:x.sim?"":cls(x).needs, sources:x.srcs, concepts:[x.c.id]}));
     // 4. historical practices against the game's activities
-    const prac=info.filter(x=>cls(x).category==="practice"&&x.srcs.length);
+    const hidx=hIndex();
+    const hprac=(hstate.set?.practices||[]).filter(p=>p.decision!=="rejected"&&p.kind==="practice").map(p=>{ const ms=p.members.map(id=>hidx[id]).filter(Boolean);
+      return {key:"h:"+p.id, name:p.label, srcs:[...new Set(ms.map(x=>x.sourceId))], meaning:String(ms[0]?.action||"").slice(0,120), boat:p.boats.slice(0,2).join(", "), place:p.places.slice(0,2).join(", "),
+        evidence:ms.slice(0,6).map(x=>`- ${srcTitle(x.sourceId)}${x.location?" ("+x.location+")":""}: ${x.action}`)}; });
+    const prac=hprac.length ? hprac : info.filter(x=>cls(x).category==="practice"&&x.srcs.length).map(x=>({key:x.c.id, name:x.c.label, srcs:x.srcs, meaning:String(x.ms[0]?.definition||"").slice(0,100), concepts:[x.c.id]}));
     const P=60;
     for(let i=0;i<prac.length;i+=P){
       $("rState").textContent=`Comparing practices with the game's activities: ${Math.min(i+P,prac.length)} of ${prac.length}…`;
-      const batch=prac.slice(i,i+P).map(x=>({id:x.c.id, practice:x.c.label, terms:[...new Set(x.ms.map(m=>m.term))].slice(0,4), meaning:String(x.ms[0]?.definition||"").slice(0,100), sources:x.srcs.length}));
+      const batch=prac.slice(i,i+P).map(x=>({id:x.key, practice:x.name, boat:x.boat||"", place:x.place||"", meaning:x.meaning, sources:x.srcs.length}));
       const r=await ask(activityPrompt(batch));
       for(const it of (Array.isArray(r?.items)?r.items:[])) if(it?.id) rstate.acts[it.id]={status:["covered","partly","missing"].includes(it.status)?it.status:"missing", activity:String(it.activity||""), why:String(it.why||"").slice(0,160)};
     }
     await saveR("report/activities",{byConcept:rstate.acts, updatedAt:new Date().toISOString()});
-    const practices=prac.map(x=>({name:x.c.label, ...(rstate.acts[x.c.id]||{status:"missing",activity:"",why:""}), sources:x.srcs, concepts:[x.c.id]}));
+    const practices=prac.map(x=>({name:x.name, ...(rstate.acts[x.key]||{status:"missing",activity:"",why:""}), sources:x.srcs, concepts:x.concepts||[], ...(x.evidence?{evidence:x.evidence}:{})}));
     // 5. conflicts on what the game depends on
     const conflicts=info.filter(x=>(x.c.conflicts||[]).length && ["boat","place","sailing","hull","practice","event"].includes(cls(x).category)).flatMap(x=>x.c.conflicts.map(f=>({name:x.c.label, kind:cls(x).category, type:f.type, text:f.text, sources:x.srcs, concepts:[x.c.id]})));
     const count=(xs,pred)=>xs.filter(pred).length;
@@ -1146,7 +1412,7 @@ async function buildReport(){
 }
 function issueDrafts(r, min){
   const idx=candIndex(), byC=Object.fromEntries((cstate.set?.concepts||[]).map(c=>[c.id,c]));
-  const ev=(f)=>{ const lines=[]; for(const cid of f.concepts||[]){ const c=byC[cid]; if(!c) continue; const ms=c.members.map(id=>idx[id]).filter(Boolean);
+  const ev=(f)=>{ if(f.evidence) return f.evidence.join("\n"); const lines=[]; for(const cid of f.concepts||[]){ const c=byC[cid]; if(!c) continue; const ms=c.members.map(id=>idx[id]).filter(Boolean);
       for(const m of ms.slice(0,6)) lines.push(`- ${m.kind==="simulation"?"game":srcTitle(m.sourceId)}${m.location?" ("+m.location+")":""}: "${m.term}" — ${m.definition}`); } return lines.join("\n"); };
   const foot=`\n\n---\nDrafted by the narrative workbench from ${r.sources} sources (concept table of ${new Date(r.conceptsAt).toLocaleDateString()}). Paraphrased evidence; check the sources before filing.`;
   const out=[];
@@ -1319,7 +1585,7 @@ $("driveOut").addEventListener("change",(ev)=>{ const t=ev.target, ds=t.dataset;
   if(ds.duse) renderDrive(); });
 
 // ---------- boot ----------
-function renderAll(){ renderProject(); renderMaterials(); renderForm(); if(!$("panel-readiness").hidden) renderReadiness(); if(!$("panel-concepts").hidden) renderConcepts(); }
+function renderAll(){ renderProject(); renderMaterials(); renderForm(); if(!$("panel-readiness").hidden) renderReadiness(); if(!$("panel-concepts").hidden) renderConcepts(); if(!$("panel-history").hidden) renderHistory(); }
 renderAll();
 try{ const t=localStorage.getItem("intake.tab"); if(t) showTab(t); }catch{}
 
@@ -1338,6 +1604,9 @@ try{ const t=localStorage.getItem("intake.tab"); if(t) showTab(t); }catch{}
   const cRefresh=()=>{ if(!$("panel-concepts").hidden && !cstate.running) renderConcepts(); };
   db.collection("texts").onSnapshot(s=>{ cstate.texts=Object.fromEntries(s.docs.map(d=>[d.id,d.data()])); cRefresh(); }, ()=>{});
   db.collection("candidates").onSnapshot(s=>{ cstate.cands=Object.fromEntries(s.docs.map(d=>[d.id,d.data()])); cRefresh(); }, ()=>{});
+  const hRefresh=()=>{ if(!$("panel-history").hidden && !hstate.running) renderHistory(); };
+  db.collection("practiceCands").onSnapshot(s=>{ if(!hstate.running){ hstate.cands=Object.fromEntries(s.docs.map(d=>[d.id,d.data()])); hRefresh(); } }, ()=>{});
+  db.doc("practices/current").onSnapshot(s=>{ if(!hstate.running){ hstate.set=s.exists?s.data():null; hRefresh(); } }, ()=>{});
   const rRefresh=()=>{ if(!$("panel-report").hidden && !rstate.running) renderReport(); };
   db.doc("world/game").onSnapshot(s=>{ rstate.world=s.exists?s.data():null; rRefresh(); }, ()=>{});
   db.doc("report/classes").onSnapshot(s=>{ if(!rstate.running) rstate.classes=s.exists?(s.data().byConcept||{}):{}; }, ()=>{});
