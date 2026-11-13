@@ -27,7 +27,17 @@ The tool's screens. Each is a single HTML page with no build step.
   A review sheet for one source lists every claim taken from it with its location and the
   questions raised, for a historian to mark. Data: practiceCands/, practices/current.
 
-  Tab 6, Game report: evaluates the game against the sources. Concepts are sorted by kind
+  Tab 6, Situations: for each historical practice, proposes an activity from what the game can
+  simulate (its boats, areas and ports, and the concepts it shows): goal, measurable success
+  rule, boat (with a substitution note when the historical boat is missing), area and route,
+  concepts, level 1-3, minutes, simplifications, what the game would still need, feasibility
+  (full, simplified, needs feature) and a premise drawn only from the practice record. The
+  proposals never see the game's activity list. "Compare with the game's mini-games" then runs
+  the blind comparison: for each museum mini-game, same, related or none; for each proposal,
+  same, related or new. Uses processed records only; no source is read again.
+  Data: situations/current, situations/blind.
+
+  Tab 7, Game report: evaluates the game against the sources. Concepts are sorted by kind
   (boat, place, sailing, boat part, practice, role, cargo, event, regulation, internal), then
   boats and places are checked against the pack's game world list (area by area), sailing
   concepts against the simulation, and historical practices (from the History tab when it has run) against the game's activities.
