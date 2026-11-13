@@ -251,7 +251,7 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
   <!-- 7 Narrative -->
   <section class="panel" id="panel-narrative" role="tabpanel" hidden>
     <p class="sub">Narrative for the game's mini-games, one at a time. The tool gathers the evidence behind each mini-game (its practices and concepts, with sources and pages), proposes a cast and beats (from your story bible where it covers the mini-game), writes candidate lines in European Portuguese and English that may use only that evidence, and checks every claim. You edit, approve or reject; approved lines export as a line bank for the game. Characters are invented and marked fictional; facts come only from the evidence.</p>
-    <div class="row" style="margin-top:12px"><select id="nGame" style="width:auto;max-width:100%"></select>
+    <div class="row" style="margin-top:12px"><select id="nGame" style="width:auto;max-width:100%"></select><select id="nOpt" style="width:auto;max-width:100%" hidden></select>
       <button class="btn primary" id="nPlan">Plan cast and beats</button><button class="btn" id="nWrite">Write lines</button><button class="btn" id="nCheck">Check lines</button><button class="btn" id="nExport">Export line bank</button><span class="hint" id="nRun"></span></div>
     <div class="row" style="margin-top:8px" id="nSet"><label class="hint">Narrator <select id="nMode" style="width:auto"><option value="historical">In character, historical</option><option value="guide">Present-day guide</option></select></label>
       <label class="hint">Period <input type="text" id="nPeriod" placeholder="e.g. 1925" style="width:7em"></label>
@@ -306,7 +306,7 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":
 function toast(msg){const t=$("toast");t.textContent=msg;t.hidden=false;clearTimeout(toast.h);toast.h=setTimeout(()=>t.hidden=true,2600);}
 function setSave(msg){$("saveState").textContent=msg;}
 
-const BUILD="2026-11-13 · version 22";
+const BUILD="2026-11-13 · version 23";
 $("buildTag").textContent=BUILD;
 // ---------- tabs ----------
 function showTab(name){
@@ -1512,13 +1512,17 @@ const nstate={docs:{}, lines:{}, settings:{}, events:null, game:"", running:fals
 const POOL={quiet:2, normal:3, chatty:5};
 function nSettings(id){ return {mode:"historical", period:"", talk:"normal", ...(nstate.settings[nKey(id||nstate.game)]||{})}; }
 const yearOf=(t)=>{ const m=String(t||"").match(/\b(1[0-9]{3}|20[0-9]{2})\b/); return m?Number(m[0]):null; };
-function landmarksIn(g){ const area=(g.places||[])[0]?.area; return (rstate.world?.landmark_info||[]).filter(l=>l.area===area); }
+const areasOf=(g)=>[...new Set((g.places||[]).map(p=>p.area).filter(Boolean))];
+function optionsOf(g){ const out=[]; for(const b of (g.boats||[])) for(const pl of (g.places||[{}])){ const label=`${b} · ${rstate.world?.area_names?.[pl.area]||pl.area||""}${pl.from?": "+pl.from:""}${pl.to?" → "+pl.to:""}${pl.at?": "+pl.at:""}`; out.push({key:nKey([b,pl.area,pl.from||pl.at,pl.to].filter(Boolean).join("-")), boat:b, place:pl, label}); } return out; }
+function scoped(g){ if(!g) return g; const o=optionsOf(g).find(x=>x.key===nstate.opt); return o?{...g, boats:[o.boat], places:[o.place], option:o}:{...g, option:null}; }
+const dKey=()=>nKey(nstate.game)+(nstate.opt&&nstate.opt!=="all"?"~"+nstate.opt:"");
+function landmarksIn(g){ const areas=areasOf(g); return (rstate.world?.landmark_info||[]).filter(l=>areas.includes(l.area)); }
 function outOfPeriod(g){ const st=nSettings(g.id), y=yearOf(st.period); if(st.mode!=="historical"||!y) return []; return landmarksIn(g).filter(l=>l.year&&l.year>y); }
 function placesFor(g, evidence){
-  const w=rstate.world, area=(g.places||[])[0]?.area, st=nSettings(g.id), y=yearOf(st.period);
+  const w=rstate.world, areas=areasOf(g), st=nSettings(g.id), y=yearOf(st.period);
   const named=new Set(evidence.flatMap(e=>((e.text.match(/place: ([^·]+)/)||[])[1]||"").split(/[,;]/).map(x=>x.trim()).filter(Boolean)));
   const out=[];
-  for(const pn of (w.ports?.[area]||[])) out.push({name:pn, kind:"port", inEvidence:[...named].some(n=>norm(n)===norm(pn))});
+  for(const pn of areas.flatMap(a=>w.ports?.[a]||[])) out.push({name:pn, kind:"port", inEvidence:[...named].some(n=>norm(n)===norm(pn))});
   for(const l of landmarksIn(g)){ if(st.mode==="historical"&&y&&l.year&&l.year>y) continue; out.push({name:l.name, kind:"landmark", year:l.year||"unknown", inEvidence:[...named].some(n=>norm(n)===norm(l.name))}); }
   for(const n of named) if(!out.some(o=>norm(o.name)===norm(n))) out.push({name:n, kind:"place in the sources", inEvidence:true});
   return out.slice(0,40);
@@ -1527,13 +1531,13 @@ const WORDS={cue:6, story:35, reflection:25, curiosity:60};
 const nKey=(id)=>String(id).replace(/[^a-z0-9]+/gi,"-");
 function miniGames(){ return (rstate.world?.activities||[]).filter(a=>a.type==="museum mini-game"&&(a.boats||[]).length); }
 function evidenceFor(g){
-  const hidx=hIndex(), idx=candIndex(), boat=norm(g.boats[0]||"");
+  const hidx=hIndex(), idx=candIndex(), boatsN=(g.boats||[]).map(norm);
   const ev=[], add=(origin,sourceId,location,text,numbers)=>{ if(!text) return; ev.push({id:"e"+(ev.length+1), origin, sourceId, source:srcTitle(sourceId), location:location||"", text:String(text).slice(0,260), numbers:(numbers||[]).map(n=>`${n.what}: ${n.value}${n.unit?" "+n.unit:""}`)}); };
   const prs=[], seen=new Set(), pById=Object.fromEntries((hstate.set?.practices||[]).map(p=>[p.id,p]));
   const bl=sstate.blind?.games?.find(x=>x.id===g.id), act=bl?.proposal&&sstate.set?.activities?.find(a=>a.id===bl.proposal);
   if(act&&pById[act.practice]){ prs.push(pById[act.practice]); seen.add(act.practice); }
   const nsrc=(p)=>new Set(p.members.map(id=>hidx[id]?.sourceId).filter(Boolean)).size;
-  for(const p of (hstate.set?.practices||[]).filter(p=>p.decision!=="rejected"&&!seen.has(p.id)&&(p.boats||[]).some(b=>norm(b).includes(boat))).sort((a,b)=>nsrc(b)-nsrc(a)).slice(0,5)) prs.push(p);
+  for(const p of (hstate.set?.practices||[]).filter(p=>p.decision!=="rejected"&&!seen.has(p.id)&&(p.boats||[]).some(b=>boatsN.some(bn=>norm(b).includes(bn)))).sort((a,b)=>nsrc(b)-nsrc(a)).slice(0,5)) prs.push(p);
   for(const p of prs) for(const id of p.members.slice(0,6)){ const x=hidx[id]; if(x) add(id,x.sourceId,x.location,[x.action,x.who&&"who: "+x.who,x.place&&"place: "+x.place,x.period&&"when: "+x.period,x.cargo&&"cargo: "+x.cargo].filter(Boolean).join(" · "),x.numbers); }
   const cids=[...new Set([...(act?.concepts||[]), ...prs.flatMap(p=>p.concepts||[])])].slice(0,10);
   const cById=Object.fromEntries((cstate.set?.concepts||[]).map(c=>[c.id,c]));
@@ -1547,7 +1551,7 @@ function glossary(){
     if(use.length&&(ms.some(x=>x.kind==="simulation")||(c.simLinks||[]).length||avoid.length)) out.push({concept:c.label, use:use.slice(0,3), avoid:avoid.slice(0,3)}); }
   return out.slice(0,50);
 }
-function bibleFor(g){ const t=cstate.texts["m-auth-bible"]?.text||""; if(!t) return ""; const b=norm(g.boats[0]||""); return norm(t).includes(b)?t:""; }
+function bibleFor(g){ const t=cstate.texts["m-auth-bible"]?.text||""; if(!t) return ""; return (g.boats||[]).some(b=>norm(t).includes(norm(b)))?t:""; }
 function planPrompt(g, E, bible){
   const p=state.project, ev=nstate.events;
   const roles=[...new Set(E.evidence.map(e=>(e.text.match(/who: ([^·]+)/)||[])[1]).filter(Boolean).map(x=>x.trim()))].slice(0,12);
@@ -1555,6 +1559,7 @@ function planPrompt(g, E, bible){
 Tone and constraints: ${(p.tone||"none given").replace(/\n/g,"; ")}.
 
 Activity: ${g.title}. ${g.description} Boat: ${g.boats.join(", ")}. Place: ${JSON.stringify(g.places||[])}.
+${g.option?`This plan is for one option of the activity (${g.option.label}); its lines will play only when the game draws this option.`:(optionsOf(g).length>1?`This plan is shared by all the activity's options (${optionsOf(g).map(o=>o.label).join("; ")}): its lines must fit every one of them, so keep places and boat details general and leave place beats out.`:"")}
 
 ${bible?`Author's story bible (characters, tone and arcs; its facts are proposals and are NOT evidence):\n${bible}\n`:"The author's story bible does not cover this activity.\n"}
 Evidence: the only facts the lines may later use (id, source, location, text):
@@ -1606,20 +1611,20 @@ Lines:
 ${items.map(x=>`${x.id}\nPT: ${x.pt}\nEN: ${x.en}\nEvidence:\n${x.ev.map(e=>`${e.id}: ${e.text}${e.numbers.length?" ("+e.numbers.join("; ")+")":""}`).join("\n")||"none"}`).join("\n\n")}`;
 }
 const idOf=(v,pfx)=>{ const m=String(v||"").match(new RegExp("\\b"+pfx+"\\d+\\b")); return m?m[0]:""; };
-const curDoc=()=>{ const k=nKey(nstate.game), d=nstate.docs[k]; if(!d) return d; const L=nstate.lines[k]; d.lines=(L&&Array.isArray(L.lines))?L.lines:(Array.isArray(d.lines)?d.lines:[]); return d; };
+const curDoc=()=>{ const k=dKey(), d=nstate.docs[k]; if(!d) return d; const L=nstate.lines[k]; d.lines=(L&&Array.isArray(L.lines))?L.lines:(Array.isArray(d.lines)?d.lines:[]); return d; };
 async function saveLines(d, note){
-  const k=nKey(nstate.game), rec={lines:JSON.parse(JSON.stringify(d.lines||[])), updatedAt:new Date().toISOString(), ...(note?{lastWrite:note}:{})};
+  const k=dKey(), rec={lines:JSON.parse(JSON.stringify(d.lines||[])), updatedAt:new Date().toISOString(), ...(note?{lastWrite:note}:{})};
   nstate.lines[k]=rec;
   if(!db) return true;
   try{ await db.doc("narrativeLines/"+k).set(rec); const back=await db.doc("narrativeLines/"+k).get(); const n=back.exists?(back.data().lines||[]).length:-1;
     if(n!==rec.lines.length){ $("nRun").textContent=`Saving lines failed: ${rec.lines.length} written, ${n<0?"none":n} stored.`; return false; } return true; }
   catch(e){ $("nRun").textContent="Could not save the lines: "+(e.message||e.code); return false; } }
-async function saveN(d){ d.updatedAt=new Date().toISOString(); nstate.docs[nKey(nstate.game)]=d;
+async function saveN(d){ d.updatedAt=new Date().toISOString(); nstate.docs[dKey()]=d;
   const {lines, ...plan}=d; // the plan (cast, beats, evidence) and the lines are saved separately
-  try{ await saveDoc("narrative/"+nKey(nstate.game), JSON.parse(JSON.stringify(plan))); return true; }
+  try{ await saveDoc("narrative/"+dKey(), JSON.parse(JSON.stringify(plan))); return true; }
   catch(e){ $("nRun").textContent="Could not save: "+(e.message||e.code); toast("Could not save: "+(e.message||e.code)); return false; } }
 async function planNarrative(){
-  const g=miniGames().find(a=>a.id===nstate.game); if(!g||!sample) return;
+  const g=scoped(miniGames().find(a=>a.id===nstate.game)); if(!g||!sample) return;
   if(curDoc()?.lines?.some(l=>l.status==="approved") && !planNarrative.sure){ planNarrative.sure=true; $("nRun").textContent="This replaces the cast, beats and lines of this mini-game, approved lines included. Press again to go ahead."; return; }
   planNarrative.sure=false; nstate.running=true; $("nRun").textContent="Gathering evidence and planning…";
   try{
@@ -1629,8 +1634,8 @@ async function planNarrative(){
     const cast=(Array.isArray(r?.cast)?r.cast:[]).slice(0,3).map((k,i)=>({id:idOf(k.id,"k")||"k"+(i+1), name:String(k.name||"").slice(0,60), role:String(k.role||"").slice(0,120), voice:String(k.voice||"").slice(0,160), want:String(k.want||"").slice(0,160), evidence:(k.evidence||[]).map(v=>idOf(v,"e")).filter(v=>eids.has(v)), fictional:true}));
     const trig=(t)=>{ t=String(t||""); if(/^near_place:/.test(t)) return t.slice(0,90); return evs.includes(t)?t:(evs.find(x=>t.includes(x))||"start"); };
     const beats=(Array.isArray(r?.beats)?r.beats:[]).slice(0,16).map((b,i)=>({id:"b"+(i+1), part:["setup","complication","turn","close","curiosity","leg","place"].includes(b.part)?b.part:"setup", trigger:trig(b.trigger), delivery:WORDS[b.delivery]?b.delivery:"story", character:idOf(b.character,"k")||cast[0]?.id||"", gist:String(b.gist||"").slice(0,300), concept:String(b.concept||"").slice(0,80), evidence:(b.evidence||[]).map(v=>idOf(v,"e")).filter(v=>eids.has(v))}));
-    nstate.lines[nKey(g.id)]={lines:[], updatedAt:new Date().toISOString()}; if(db) await db.doc("narrativeLines/"+nKey(g.id)).set(nstate.lines[nKey(g.id)]);
-    await saveN({game:g.id, title:g.title, settings:nSettings(g.id), evidence:E.evidence, basis:{practices:E.practices, concepts:E.concepts, proposal:E.proposal, match:E.match, bible:!!bible}, cast, beats, lines:[], notes:String(r?.notes||"").slice(0,600), createdAt:new Date().toISOString()});
+    nstate.lines[dKey()]={lines:[], updatedAt:new Date().toISOString()}; if(db) await db.doc("narrativeLines/"+dKey()).set(nstate.lines[dKey()]);
+    await saveN({game:g.id, title:g.title, option:g.option?{key:g.option.key, boat:g.option.boat, place:g.option.place, label:g.option.label}:null, settings:nSettings(g.id), evidence:E.evidence, basis:{practices:E.practices, concepts:E.concepts, proposal:E.proposal, match:E.match, bible:!!bible}, cast, beats, lines:[], notes:String(r?.notes||"").slice(0,600), createdAt:new Date().toISOString()});
     $("nRun").textContent=`Planned ${cast.length} characters and ${beats.length} beats from ${E.evidence.length} evidence records${bible?" and your story bible":""}.`;
   }catch(e){ $("nRun").textContent=e.code==="rate_limited"?"Too many requests; wait a minute.":"Could not plan: "+(e.message||e.code||e); }
   nstate.running=false; renderNarrative();
@@ -1655,7 +1660,7 @@ function mechChecks(l, d){
   return out;
 }
 async function writeLines(){
-  const d=curDoc(), g=miniGames().find(a=>a.id===nstate.game); if(!d||!sample) { $("nRun").textContent="Plan cast and beats first."; return; }
+  const d=curDoc(), g=scoped(miniGames().find(a=>a.id===nstate.game)); if(!d||!sample) { $("nRun").textContent="Plan cast and beats first."; return; }
   nstate.running=true; $("nRun").textContent="Writing candidate lines…";
   try{
     const r=await sample.json(linesPrompt(d,g),{modelTier:"complex"}); const eids=new Set(d.evidence.map(e=>e.id));
@@ -1688,21 +1693,38 @@ async function checkLines(onlyUnchecked){
   }catch(e){ $("nRun").textContent=e.code==="rate_limited"?"Too many requests; wait a minute.":"Could not check: "+(e.message||e.code||e); }
   nstate.running=false; renderNarrative();
 }
+function coverage(g0){
+  const base=nKey(g0.id), ok=(l)=>l.status==="approved"||l.status==="verified";
+  const parts=(k)=>{ const d=nstate.docs[k], L=nstate.lines[k]?.lines||[]; if(!d) return new Set(); return new Set(L.filter(ok).map(l=>d.beats.find(b=>b.id===l.beat)?.part).filter(Boolean)); };
+  const shared=parts(base);
+  return optionsOf(g0).map(o=>{ const have=new Set([...shared,...parts(base+"~"+o.key)]); const missing=["setup","close"].filter(x=>!have.has(x)); return {option:o, missing}; });
+}
 function exportBank(){
-  const d=curDoc(), g=miniGames().find(a=>a.id===nstate.game); if(!d) return null;
-  const order=miniGames().map(a=>a.id), cast=Object.fromEntries(d.cast.map(k=>[k.id,k])), place=(g.places||[])[0]||{};
-  const lines=d.lines.filter(l=>l.status==="approved"||l.status==="verified").map(l=>{ const b=d.beats.find(x=>x.id===l.beat)||{};
-    const ev=[...new Set([...(l.claims||[]).flatMap(c=>c.evidence), ...(b.evidence||[])])].map(id=>d.evidence.find(e=>e.id===id)).filter(Boolean);
-    return {id:`${nKey(g.id)}-${l.beat}-${l.id}`, mission:order.indexOf(g.id)+1, boat:g.boats[0], zone:[place.area,place.from||place.at,place.to].filter(Boolean).join(":"), beat:b.part==="curiosity"?"epilogue":b.part, trigger:b.trigger, delivery:b.delivery, character:cast[b.character]?.name||"", concept:b.concept||undefined,
-      text:{pt:l.pt, en:l.en}, depth:b.delivery==="curiosity"?2:1, fictional:!!l.fictional, sources:ev.map(e=>e.origin), status:l.status==="approved"?"approved":"verified"}; });
-  const used=[...new Set(lines.flatMap(l=>l.sources))].map(o=>d.evidence.find(e=>e.origin===o)).filter(Boolean);
-  return {game:g.id, title:g.title, narrator:nSettings(g.id), exportedAt:new Date().toISOString(), triggers:[...new Set(lines.map(l=>l.trigger))], lines, credits:[...new Set(used.map(e=>e.source))], evidence:used.map(e=>({id:e.origin, source:e.source, location:e.location, paraphrase:e.text}))};
+  const g0=miniGames().find(a=>a.id===nstate.game); if(!g0) return null;
+  const base=nKey(g0.id), order=miniGames().map(a=>a.id), opts=optionsOf(g0);
+  const keys=Object.keys(nstate.docs).filter(k=>k===base||k.startsWith(base+"~")); if(!keys.length) return null;
+  const lines=[], usedEv=[];
+  for(const k of keys){ const d=nstate.docs[k], L=nstate.lines[k]?.lines||[], cast=Object.fromEntries(d.cast.map(c=>[c.id,c]));
+    const o=k===base?null:opts.find(x=>base+"~"+x.key===k); const pl=o?o.place:((g0.places||[]).length===1?g0.places[0]:null);
+    const when=o?{boats:[o.boat], areas:[o.place.area].filter(Boolean), places:[o.place.from||o.place.at, o.place.to].filter(Boolean)}:null;
+    for(const l of L.filter(l=>l.status==="approved"||l.status==="verified")){ const b=d.beats.find(x=>x.id===l.beat)||{};
+      const ev=[...new Set([...(l.claims||[]).flatMap(c=>c.evidence), ...(b.evidence||[])])].map(id=>d.evidence.find(e=>e.id===id)).filter(Boolean); usedEv.push(...ev);
+      lines.push({id:`${k}-${l.beat}-${l.id}`, mission:order.indexOf(g0.id)+1, boat:o?o.boat:(g0.boats.length===1?g0.boats[0]:"any"), zone:pl?[pl.area,pl.from||pl.at,pl.to].filter(Boolean).join(":"):"any",
+        ...(when?{when}:{}), beat:b.part==="curiosity"?"epilogue":b.part, trigger:b.trigger, delivery:b.delivery, character:cast[b.character]?.name||"", concept:b.concept||undefined,
+        text:{pt:l.pt, en:l.en}, depth:b.delivery==="curiosity"?2:1, fictional:!!l.fictional, sources:ev.map(e=>e.origin), status:l.status==="approved"?"approved":"verified"}); } }
+  const seen=new Set(), used=usedEv.filter(e=>!seen.has(e.origin)&&seen.add(e.origin));
+  return {game:g0.id, title:g0.title, narrator:nSettings(g0.id), options:opts.map(o=>({key:o.key, boat:o.boat, place:o.place})), coverage:coverage(g0).map(c=>({option:c.option.key, missing:c.missing})),
+    exportedAt:new Date().toISOString(), triggers:[...new Set(lines.map(l=>l.trigger))], lines, credits:[...new Set(used.map(e=>e.source))], evidence:used.map(e=>({id:e.origin, source:e.source, location:e.location, paraphrase:e.text}))};
 }
 function renderNarrative(){
   const games=miniGames(); const sel=$("nGame");
   if(!nstate.game&&games.length) nstate.game=games[0].id;
-  sel.innerHTML=games.map(g=>`<option value="${esc(g.id)}"${g.id===nstate.game?" selected":""}>${esc(g.title)}${nstate.docs[nKey(g.id)]?" ✓":""}</option>`).join("");
-  const out=$("nOut"), g=games.find(a=>a.id===nstate.game);
+  sel.innerHTML=games.map(g=>`<option value="${esc(g.id)}"${g.id===nstate.game?" selected":""}>${esc(g.title)}${Object.keys(nstate.docs).some(k=>k===nKey(g.id)||k.startsWith(nKey(g.id)+"~"))?" ✓":""}</option>`).join("");
+  const g0=games.find(a=>a.id===nstate.game), opts=g0?optionsOf(g0):[];
+  if(opts.length>1){ if(!nstate.opt) nstate.opt="all"; $("nOpt").hidden=false;
+    $("nOpt").innerHTML=`<option value="all"${nstate.opt==="all"?" selected":""}>All options (shared lines)${nstate.docs[nKey(g0.id)]?" ✓":""}</option>`+opts.map(o=>`<option value="${esc(o.key)}"${o.key===nstate.opt?" selected":""}>${esc(o.label)}${nstate.docs[nKey(g0.id)+"~"+o.key]?" ✓":""}</option>`).join(""); }
+  else { nstate.opt="all"; $("nOpt").hidden=true; }
+  const out=$("nOut"), g=scoped(g0);
   if(g){ const st=nSettings(g.id); $("nMode").value=st.mode; if(document.activeElement!==$("nPeriod")) $("nPeriod").value=st.period; $("nTalk").value=st.talk; }
   const oop=g?outOfPeriod(g):[];
   const oopHtml=oop.length?`<div class="banner" style="margin-top:10px">In a historical setting of ${esc(nSettings(g.id).period)}, the game's map shows landmarks that did not exist yet: ${esc(oop.map(l=>`${l.name} (${l.year})`).join(", "))}. A historical edition should hide them. Years are author data marked “to verify” (domains/sailing/landmarks.yaml).</div>`:"";
@@ -1713,8 +1735,10 @@ function renderNarrative(){
   if(!d){ out.innerHTML=oopHtml+`<div class="empty" style="margin-top:12px"><b>${esc(g.title)}</b>: ${esc(g.description)}<br>${E.evidence.length?"":`<b>No evidence for this mini-game:</b> none of the sources read so far covers the ${esc(g.boats.join(", "))} or ${esc(rstate.world.area_names?.[(g.places||[])[0]?.area]||"its area")}. Lines planned now can only be pure character (marked fictional); add sources on it to ground them.<br>`}Boat: ${esc(g.boats.join(", "))} · ${E.evidence.length} evidence records from ${E.practices.length} practices and ${E.concepts.length} concepts${bl?` · blind comparison: ${esc(bl.match)}`:""}${bibleFor(g)?" · your story bible covers it":""}.<br>Press Plan cast and beats.</div>`; return; }
   const cast=Object.fromEntries(d.cast.map(k=>[k.id,k])), evs=nstate.events.events.map(x=>x.id);
   const st={draft:"p-info",verified:"p-good","needs work":"p-warn",approved:"p-good",rejected:"p-bad"};
-  const LW=nstate.lines[nKey(g.id)]?.lastWrite;
-  out.innerHTML=oopHtml+`<div class="hint" style="margin-top:10px">${d.settings?`${esc(d.settings.mode==="guide"?"present-day guide":"in character")}${d.settings.period?", "+esc(d.settings.period):""}, ${esc(d.settings.talk)} talk · `:""}${d.lines.length} lines stored${LW?` (last writing: ${LW.kept} of ${LW.received} kept)`:""} · ${d.evidence.length} evidence records · ${d.basis.bible?"from your story bible and the evidence":"from the evidence"} · planned ${esc(new Date(d.createdAt).toLocaleString())}${d.notes?` · notes: ${esc(d.notes)}`:""}</div>
+  const LW=nstate.lines[dKey()]?.lastWrite;
+  const cov=g0?coverage(g0).filter(c=>c.missing.length):[];
+  const covHtml=cov.length?`<div class="hint" style="margin-top:6px">Coverage: ${cov.map(c=>`${esc(c.option.label)} has no verified or approved ${esc(c.missing.join(" or "))} line`).join("; ")}. The game would fall back to general lines there.</div>`:"";
+  out.innerHTML=oopHtml+covHtml+`<div class="hint" style="margin-top:10px">${d.option?`Option: ${esc(d.option.label)} · `:(opts.length>1?"Shared by all options · ":"")}${d.settings?`${esc(d.settings.mode==="guide"?"present-day guide":"in character")}${d.settings.period?", "+esc(d.settings.period):""}, ${esc(d.settings.talk)} talk · `:""}${d.lines.length} lines stored${LW?` (last writing: ${LW.kept} of ${LW.received} kept)`:""} · ${d.evidence.length} evidence records · ${d.basis.bible?"from your story bible and the evidence":"from the evidence"} · planned ${esc(new Date(d.createdAt).toLocaleString())}${d.notes?` · notes: ${esc(d.notes)}`:""}</div>
     <div class="section"><h2>Cast <span class="hint">(fictional)</span></h2>${d.cast.map(k=>`<div class="src"><b>${esc(k.name)}</b> — ${esc(k.role)}<div class="hint">Voice: ${esc(k.voice)} · Wants: ${esc(k.want)}${k.evidence.length?` · role from ${esc(k.evidence.map(id=>d.evidence.find(e=>e.id===id)?.source).filter(Boolean).join("; "))}`:""}</div></div>`).join("")}</div>
     <div class="section"><h2>Beats and lines</h2>${d.beats.map(b=>{ const ls=d.lines.filter(l=>l.beat===b.id);
       return `<div class="concept"><div class="concept-h"><h3>${esc(b.part==="leg"?"leg (pool)":b.part)}: ${esc(b.gist)}</h3><div class="row"><span class="pill p-acc">${esc(b.trigger)}</span><span class="pill">${esc(b.delivery)} · ≤${WORDS[b.delivery]} words</span><span class="pill">${esc(cast[b.character]?.name||"")}</span>${b.concept?`<span class="pill p-info">${esc(b.concept)}</span>`:""}</div></div>
@@ -1727,7 +1751,8 @@ function renderNarrative(){
           <div class="row" style="margin-top:6px"><button class="btn small${l.status==="approved"?" primary":""}" data-lapprove="${l.id}">Approve</button><button class="btn small" data-ledit="${l.id}">Edit</button><button class="btn small" data-lreject="${l.id}">Reject</button></div></div>`).join("")}
       </div>`; }).join("")}</div>`;
 }
-$("nGame").addEventListener("change",()=>{ nstate.game=$("nGame").value; nstate.editing=null; renderNarrative(); });
+$("nGame").addEventListener("change",()=>{ nstate.game=$("nGame").value; nstate.opt=""; nstate.editing=null; renderNarrative(); });
+$("nOpt").addEventListener("change",()=>{ nstate.opt=$("nOpt").value; nstate.editing=null; renderNarrative(); });
 async function saveSettings(){ const k=nKey(nstate.game); nstate.settings[k]={mode:$("nMode").value, period:$("nPeriod").value.trim().slice(0,40), talk:$("nTalk").value, updatedAt:new Date().toISOString()};
   try{ if(db) await db.doc("narrativeSettings/"+k).set(nstate.settings[k]); }catch(e){ toast("Could not save: "+(e.message||e.code)); } renderNarrative(); }
 $("nMode").addEventListener("change",saveSettings); $("nTalk").addEventListener("change",saveSettings); $("nPeriod").addEventListener("change",saveSettings);
@@ -1735,6 +1760,7 @@ $("nPlan").addEventListener("click",planNarrative);
 $("nWrite").addEventListener("click",writeLines);
 $("nCheck").addEventListener("click",()=>checkLines(false));
 $("nExport").addEventListener("click",async()=>{ const bank=exportBank(); if(!bank){ toast("Plan and write lines first."); return; } if(!bank.lines.length){ toast("No verified or approved lines yet."); return; }
+  const gaps=bank.coverage.filter(c=>c.missing.length); if(gaps.length) toast(`Exported with gaps: ${gaps.length} option${gaps.length>1?"s":""} without setup or close lines.`);
   const t=JSON.stringify(bank,null,1);
   if(downloads){ try{ await downloads.save({filename:`line-bank-${nKey(bank.game)}.json`, data:t}); return; }catch(e){ if(e.code==="declined") return; } }
   try{ await navigator.clipboard.writeText(t); toast("Copied the line bank"); }catch{ toast("Could not export here."); } });

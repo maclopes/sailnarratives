@@ -62,6 +62,13 @@ The tool's screens. Each is a single HTML page with no build step.
   domains/sailing/landmarks.yaml, marked "to verify"), lines that mention them fail the check,
   and the game report drafts an issue to hide them in a historical edition.
 
+  Mini-games with several boats or places: a second list chooses "All options (shared
+  lines)" or one option (boat × place). Shared plans must fit every option (no place beats);
+  option plans are stored separately (narrative/<mini-game>~<option>). Export merges them into
+  one line bank: shared lines have no conditions, option lines carry `when: {boats, areas,
+  places}`, and a coverage check lists options without a verified or approved setup or close
+  line (the game would fall back to the shared lines there).
+
   Tab 8, Game report: evaluates the game against the sources. Concepts are sorted by kind
   (boat, place, sailing, boat part, practice, role, cargo, event, regulation, internal), then
   boats and places are checked against the pack's game world list (area by area), sailing
