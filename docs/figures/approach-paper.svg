@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700" font-family="Helvetica, Arial, sans-serif" fill="#111">
+<defs>
+ <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker>
+ <style>
+  .b{fill:#fff;stroke:#222;stroke-width:1.3}
+  .k{fill:#e6e6e6;stroke:#222;stroke-width:1.3}
+  .s{fill:#cfcfcf;stroke:#111;stroke-width:2}
+  .l{fill:none;stroke:#222;stroke-width:1.3;marker-end:url(#a)}
+  .d{fill:none;stroke:#222;stroke-width:1.3;marker-start:url(#a);marker-end:url(#a)}
+  .t{font-size:14px;font-weight:700;text-anchor:middle}
+  .u{font-size:11.5px;text-anchor:middle;fill:#333}
+  .n{font-size:11px;fill:#222}
+  .h{font-size:15px;font-weight:700}
+  .i{font-size:12px;font-style:italic;fill:#444}
+ </style>
+</defs>
+<rect width="1200" height="700" fill="#fff"/>
+<text x="20" y="26" class="h">A  Offline authoring</text><text x="185" y="26" class="i">the language model proposes, one author curates</text>
+
+<g transform="translate(0,40)">
+ <rect x="18" y="10" width="194" height="470" fill="#f4f4f4" stroke="#999" stroke-dasharray="4 3"/>
+ <text x="115" y="30" class="i" text-anchor="middle">domain pack</text>
+ <text x="660" y="5" class="i" text-anchor="middle">generic tool</text>
+
+ <!-- sources -->
+ <rect x="30" y="80" width="170" height="90" class="b"/><text x="115" y="117" class="t">Simulation code</text><text x="115" y="137" class="u">run through an adapter</text>
+ <rect x="30" y="225" width="170" height="90" class="b"/><text x="115" y="262" class="t">Reference books</text><text x="115" y="282" class="u">and author documents</text>
+ <rect x="30" y="370" width="170" height="90" class="b"/><text x="115" y="407" class="t">Historical accounts</text><text x="115" y="427" class="u">licence recorded per chunk</text>
+ <path d="M200,125 H258" class="l"/><path d="M200,270 H258" class="l"/><path d="M200,415 H258" class="l"/>
+
+ <!-- knowledge bases -->
+ <rect x="260" y="80" width="210" height="90" class="k"/><text x="365" y="110" class="t">Simulation base</text><text x="365" y="130" class="u">capabilities and limits;</text><text x="365" y="146" class="u">events, difficulty</text>
+ <rect x="260" y="225" width="210" height="90" class="k"/><text x="365" y="255" class="t">Concepts base</text><text x="365" y="275" class="u">terms, prerequisites,</text><text x="365" y="291" class="u">evidence rules</text>
+ <rect x="260" y="370" width="210" height="90" class="k"/><text x="365" y="400" class="t">History base</text><text x="365" y="420" class="u">practices with</text><text x="365" y="436" class="u">evidence passages</text>
+ <!-- links -->
+ <path d="M300,174 V221" class="d"/><text x="314" y="194" class="n"><tspan font-weight="700">L1</tspan> evidence rule</text><text x="314" y="208" class="n">or simulation gap</text>
+ <path d="M300,319 V366" class="d"/><text x="314" y="339" class="n"><tspan font-weight="700">L2</tspan> mapping</text><text x="314" y="353" class="n">(interpretation)</text>
+ <path d="M470,125 Q610,270 470,415" fill="none" stroke="#222" stroke-width="1.3"/>
+ <text x="478" y="300" class="n" font-weight="700">L3</text><text x="478" y="313" class="n">scenario</text><text x="478" y="326" class="n">verdict</text>
+ <path d="M470,270 H565" fill="none" stroke="#222" stroke-width="1.3"/>
+ <circle cx="540" cy="270" r="3" fill="#222"/>
+ <path d="M565,270 H588" class="l"/><path d="M565,270 V105 H588" class="l"/>
+
+ <!-- middle -->
+ <rect x="590" y="60" width="180" height="90" class="b"/><text x="680" y="90" class="t">Missing and</text><text x="680" y="107" class="t">contradictory</text><text x="680" y="127" class="u">gaps, conflicts, anachronisms</text>
+ <rect x="590" y="225" width="180" height="90" class="s"/><text x="680" y="252" class="t">Situations</text><text x="680" y="271" class="u">practice + concepts +</text><text x="680" y="286" class="u">feasible scenario;</text><text x="680" y="301" class="u">simplifications recorded</text>
+
+ <!-- outputs -->
+ <rect x="830" y="40" width="340" height="55" class="b"/><text x="1000" y="63" class="t">Game evaluation report</text><text x="1000" y="82" class="u">issue drafts for the game's developers</text>
+ <rect x="830" y="105" width="340" height="55" class="b"/><text x="1000" y="128" class="t">Questions</text><text x="1000" y="147" class="u">review sheet per source for the historian; author</text>
+ <path d="M770,90 L828,70" class="l"/><path d="M770,120 L828,132" class="l"/>
+ <rect x="830" y="200" width="340" height="55" class="b"/><text x="1000" y="223" class="t">Activity proposals</text><text x="1000" y="242" class="u">compared blind with the game's existing activities</text>
+ <rect x="830" y="275" width="340" height="100" class="b"/><text x="1000" y="298" class="t">Narrative pipeline</text>
+ <text x="1000" y="318" class="u">author sets cast, arcs and beats (story first)</text>
+ <text x="1000" y="335" class="u">retrieve → generate → verify claims (evidence IDs)</text>
+ <text x="1000" y="352" class="u">fictional content marked → author review</text>
+ <path d="M770,250 L828,228" class="l"/><path d="M770,290 L828,322" class="l"/>
+ <rect x="830" y="405" width="340" height="65" class="k"/><text x="1000" y="430" class="t">Reviewed line bank</text><text x="1000" y="450" class="u">PT / EN; trigger, delivery, conditions, sources</text>
+ <path d="M1000,375 V403" class="l"/>
+</g>
+
+<line x1="10" y1="545" x2="1190" y2="545" stroke="#555" stroke-dasharray="7 5"/>
+<path d="M1000,510 V572 H680 V598" class="l"/>
+<text x="988" y="566" class="i" text-anchor="end">shared folder in the game (versioned contract)</text>
+
+<g transform="translate(0,560)">
+ <text x="20" y="10" class="h">B  Runtime in the game</text><text x="215" y="10" class="i">deterministic, no language model</text>
+ <rect x="30" y="40" width="170" height="70" class="b"/><text x="115" y="70" class="t">Simulation</text><text x="115" y="89" class="u">boat state each frame</text>
+ <rect x="260" y="40" width="210" height="70" class="b"/><text x="365" y="70" class="t">Observer</text><text x="365" y="89" class="u">game moments + difficulty 0–1</text>
+ <rect x="590" y="40" width="180" height="70" class="s"/><text x="680" y="64" class="t">Scheduler</text><text x="680" y="82" class="u">cues during difficulty;</text><text x="680" y="97" class="u">stories in calm windows</text>
+ <rect x="830" y="40" width="340" height="70" class="b"/><text x="1000" y="70" class="t">Captions, optional speech</text><text x="1000" y="89" class="u">curiosities in an end-of-mission logbook</text>
+ <path d="M200,75 H258" class="l"/><path d="M470,75 H588" class="l"/><path d="M770,75 H828" class="l"/>
+</g>
+</svg>

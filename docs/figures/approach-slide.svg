@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Helvetica, Arial, sans-serif">
+<defs>
+ <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1f5f8b"/></marker>
+ <style>
+  .card{fill:#fff;stroke:#d8ccb0;stroke-width:2}
+  .ar{fill:none;stroke:#1f5f8b;stroke-width:5;stroke-linecap:round;marker-end:url(#a)}
+  .h{font-size:30px;font-weight:700;fill:#173f5c}
+  .c{font-size:27px;font-weight:700;fill:#173f5c}
+  .p{font-size:21px;fill:#4a4a4a}
+  .num{font-size:26px;font-weight:700;fill:#fff;text-anchor:middle}
+ </style>
+</defs>
+<rect width="1600" height="900" fill="#f7f3ea"/>
+<text x="80" y="88" font-size="48" font-weight="700" fill="#173f5c">How the narrative tool works</text>
+<text x="80" y="128" font-size="24" fill="#6b5b3e">From the game, sailing books and history to a skipper who knows when to talk</text>
+
+<!-- step headers -->
+<g>
+ <circle cx="110" cy="200" r="22" fill="#c8892b"/><text x="110" y="209" class="num">1</text><text x="145" y="210" class="h">Gather</text>
+ <circle cx="500" cy="200" r="22" fill="#c8892b"/><text x="500" y="209" class="num">2</text><text x="535" y="210" class="h">Connect</text>
+ <circle cx="880" cy="200" r="22" fill="#c8892b"/><text x="880" y="209" class="num">3</text><text x="915" y="210" class="h">Write</text>
+ <circle cx="1250" cy="200" r="22" fill="#c8892b"/><text x="1250" y="209" class="num">4</text><text x="1285" y="210" class="h">Play</text>
+</g>
+
+<!-- 1 sources -->
+<rect x="80" y="250" width="370" height="110" rx="16" class="card"/>
+<g stroke="#1f5f8b" stroke-width="4" fill="none" stroke-linecap="round"><path d="M105,295 q12,-12 24,0 t24,0 t24,0"/><path d="M105,318 q12,-12 24,0 t24,0 t24,0"/></g>
+<text x="195" y="298" class="c">Game physics</text><text x="195" y="328" class="p">how the boats really sail</text>
+
+<rect x="80" y="385" width="370" height="110" rx="16" class="card"/>
+<g fill="#e9dcc0" stroke="#8a6d3b" stroke-width="3"><path d="M105,420 l30,8 v40 l-30,-8 z"/><path d="M165,420 l-30,8 v40 l30,-8 z"/></g>
+<text x="195" y="433" class="c">Sailing books</text><text x="195" y="463" class="p">what visitors can learn</text>
+
+<rect x="80" y="520" width="370" height="110" rx="16" class="card"/>
+<g fill="#e9dcc0" stroke="#8a6d3b" stroke-width="3"><rect x="112" y="548" width="44" height="54" rx="4"/><path d="M120,563 h28 M120,575 h28 M120,587 h20" stroke-width="2.5"/></g>
+<text x="195" y="568" class="c">History</text><text x="195" y="598" class="p">what people really did</text>
+
+<path d="M455,320 L495,345" class="ar"/><path d="M455,440 L495,440" class="ar"/><path d="M455,560 L495,530" class="ar"/>
+
+<!-- 2 venn -->
+<g fill-opacity="0.35" stroke-width="3">
+ <circle cx="610" cy="380" r="105" fill="#1f5f8b" stroke="#1f5f8b"/>
+ <circle cx="730" cy="380" r="105" fill="#c8892b" stroke="#c8892b"/>
+ <circle cx="670" cy="480" r="105" fill="#a4462f" stroke="#a4462f"/>
+</g>
+<text x="575" y="345" font-size="22" font-weight="700" fill="#173f5c" text-anchor="middle">Physics</text>
+<text x="770" y="345" font-size="22" font-weight="700" fill="#6b4310" text-anchor="middle">Concepts</text>
+<text x="670" y="550" font-size="22" font-weight="700" fill="#6e2a1a" text-anchor="middle">History</text>
+<rect x="608" y="410" width="124" height="38" rx="19" fill="#fff" stroke="#173f5c" stroke-width="2"/>
+<text x="670" y="436" font-size="20" font-weight="700" fill="#173f5c" text-anchor="middle">Situations</text>
+<text x="670" y="625" font-size="21" fill="#4a4a4a" text-anchor="middle">where all three agree</text>
+
+<path d="M800,430 L860,430" class="ar"/>
+
+<!-- 3 write -->
+<rect x="870" y="250" width="320" height="380" rx="16" class="card"/>
+<g transform="translate(905,280)"><circle cx="18" cy="14" r="13" fill="#c8892b"/><path d="M0,52 q18,-26 36,0" fill="#c8892b"/><rect x="48" y="8" width="44" height="34" rx="8" fill="#1f5f8b"/><text x="70" y="31" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">AI</text></g>
+<text x="1010" y="305" class="c">Author + AI</text>
+<g class="p"><text x="900" y="380">✓ The AI drafts,</text><text x="925" y="406">the author decides</text>
+<text x="900" y="450">✓ Every fact cites</text><text x="925" y="476">its source</text>
+<text x="900" y="520">✓ Invented characters</text><text x="925" y="546">are marked as fiction</text>
+<text x="900" y="590">✓ Portuguese and English</text></g>
+
+<path d="M1195,430 L1240,430" class="ar"/>
+
+<!-- 4 play -->
+<rect x="1250" y="250" width="300" height="380" rx="16" fill="#173f5c"/>
+<rect x="1266" y="266" width="268" height="190" rx="8" fill="#bcd6e6"/>
+<rect x="1266" y="380" width="268" height="76" fill="#1f5f8b"/>
+<path d="M1330,392 h110 l-14,20 h-82 z" fill="#5a3a22"/>
+<path d="M1384,388 V300 L1432,388 z" fill="#a4462f"/>
+<rect x="1278" y="278" width="244" height="46" rx="10" fill="#fff"/>
+<text x="1290" y="298" font-size="15" font-weight="700" fill="#173f5c">Skipper</text>
+<text x="1290" y="316" font-size="15" fill="#333">“That’s Belém tower ahead…”</text>
+<text x="1266" y="492" font-size="18" font-weight="700" fill="#fff">Talks only when it’s calm</text>
+<rect x="1266" y="510" width="268" height="16" rx="8" fill="#355e7a"/>
+<rect x="1266" y="510" width="120" height="16" rx="8" fill="#7fbf7f"/>
+<rect x="1386" y="510" width="80" height="16" fill="#d9534f"/>
+<text x="1270" y="552" font-size="16" fill="#dfe9f0">calm leg: story</text>
+<text x="1390" y="552" font-size="16" fill="#f3c3c1">tacking: quiet</text>
+<text x="1270" y="596" font-size="16" fill="#dfe9f0">text on screen, voice optional</text>
+
+<!-- bottom -->
+<path d="M670,640 V690" class="ar"/>
+<rect x="440" y="700" width="460" height="130" rx="16" fill="#fff" stroke="#a4462f" stroke-width="3"/>
+<text x="465" y="740" class="c" fill="#6e2a1a">Report for the game team</text>
+<text x="465" y="772" class="p">Missing boats, places and practices;</text>
+<text x="465" y="800" class="p">contradictions for the historian</text>
+
+<rect x="960" y="700" width="590" height="130" rx="16" fill="#e9dcc0"/>
+<text x="985" y="740" class="c">No AI inside the game</text>
+<text x="985" y="772" class="p">Lines are written and checked beforehand;</text>
+<text x="985" y="800" class="p">the game only chooses which line, and when.</text>
+</svg>
