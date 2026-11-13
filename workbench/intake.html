@@ -134,7 +134,7 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
       <h1>Materials intake</h1>
       <p class="sub">Tell the tool what you are working with. It records each material, then reports what the materials allow and what is missing before any work starts.</p>
     </div>
-    <div class="save" id="saveState">Connecting…</div>
+    <div><div class="save" id="saveState">Connecting…</div><div class="save" id="buildTag"></div></div>
   </div>
   <div class="banner" id="localBanner" hidden>Saving is not available in this view, so changes last only until you close the page.</div>
 
@@ -302,6 +302,8 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":
 function toast(msg){const t=$("toast");t.textContent=msg;t.hidden=false;clearTimeout(toast.h);toast.h=setTimeout(()=>t.hidden=true,2600);}
 function setSave(msg){$("saveState").textContent=msg;}
 
+const BUILD="2026-11-13 · version 20";
+$("buildTag").textContent=BUILD;
 // ---------- tabs ----------
 function showTab(name){
   for (const b of document.querySelectorAll(".tabs button")) b.setAttribute("aria-selected", String(b.dataset.tab===name));
@@ -1502,7 +1504,7 @@ $("sDl").addEventListener("click",async()=>{ const t=situationsText(); if(!t){ t
 
 
 // ---------- narrative for the game's mini-games ----------
-const nstate={docs:{}, events:null, game:"", running:false, editing:null};
+const nstate={docs:{}, lines:{}, events:null, game:"", running:false, editing:null};
 const WORDS={cue:6, story:35, reflection:25, curiosity:60};
 const nKey=(id)=>String(id).replace(/[^a-z0-9]+/gi,"-");
 function miniGames(){ return (rstate.world?.activities||[]).filter(a=>a.type==="museum mini-game"&&(a.boats||[]).length); }
@@ -1579,9 +1581,17 @@ Lines:
 ${items.map(x=>`${x.id}\nPT: ${x.pt}\nEN: ${x.en}\nEvidence:\n${x.ev.map(e=>`${e.id}: ${e.text}${e.numbers.length?" ("+e.numbers.join("; ")+")":""}`).join("\n")||"none"}`).join("\n\n")}`;
 }
 const idOf=(v,pfx)=>{ const m=String(v||"").match(new RegExp("\\b"+pfx+"\\d+\\b")); return m?m[0]:""; };
-const curDoc=()=>nstate.docs[nKey(nstate.game)];
+const curDoc=()=>{ const k=nKey(nstate.game), d=nstate.docs[k]; if(!d) return d; const L=nstate.lines[k]; d.lines=(L&&Array.isArray(L.lines))?L.lines:(Array.isArray(d.lines)?d.lines:[]); return d; };
+async function saveLines(d, note){
+  const k=nKey(nstate.game), rec={lines:JSON.parse(JSON.stringify(d.lines||[])), updatedAt:new Date().toISOString(), ...(note?{lastWrite:note}:{})};
+  nstate.lines[k]=rec;
+  if(!db) return true;
+  try{ await db.doc("narrativeLines/"+k).set(rec); const back=await db.doc("narrativeLines/"+k).get(); const n=back.exists?(back.data().lines||[]).length:-1;
+    if(n!==rec.lines.length){ $("nRun").textContent=`Saving lines failed: ${rec.lines.length} written, ${n<0?"none":n} stored.`; return false; } return true; }
+  catch(e){ $("nRun").textContent="Could not save the lines: "+(e.message||e.code); return false; } }
 async function saveN(d){ d.updatedAt=new Date().toISOString(); nstate.docs[nKey(nstate.game)]=d;
-  try{ await saveDoc("narrative/"+nKey(nstate.game), JSON.parse(JSON.stringify(d))); return true; }
+  const {lines, ...plan}=d; // the plan (cast, beats, evidence) and the lines are saved separately
+  try{ await saveDoc("narrative/"+nKey(nstate.game), JSON.parse(JSON.stringify(plan))); return true; }
   catch(e){ $("nRun").textContent="Could not save: "+(e.message||e.code); toast("Could not save: "+(e.message||e.code)); return false; } }
 async function planNarrative(){
   const g=miniGames().find(a=>a.id===nstate.game); if(!g||!sample) return;
@@ -1593,6 +1603,7 @@ async function planNarrative(){
     const eids=new Set(E.evidence.map(e=>e.id)), evs=nstate.events.events.map(x=>x.id);
     const cast=(Array.isArray(r?.cast)?r.cast:[]).slice(0,3).map((k,i)=>({id:idOf(k.id,"k")||"k"+(i+1), name:String(k.name||"").slice(0,60), role:String(k.role||"").slice(0,120), voice:String(k.voice||"").slice(0,160), want:String(k.want||"").slice(0,160), evidence:(k.evidence||[]).map(v=>idOf(v,"e")).filter(v=>eids.has(v)), fictional:true}));
     const beats=(Array.isArray(r?.beats)?r.beats:[]).slice(0,7).map((b,i)=>({id:"b"+(i+1), part:["setup","complication","turn","close","curiosity"].includes(b.part)?b.part:"setup", trigger:evs.includes(b.trigger)?b.trigger:(evs.find(x=>String(b.trigger||"").includes(x))||"start"), delivery:WORDS[b.delivery]?b.delivery:"story", character:idOf(b.character,"k")||cast[0]?.id||"", gist:String(b.gist||"").slice(0,300), concept:String(b.concept||"").slice(0,80), evidence:(b.evidence||[]).map(v=>idOf(v,"e")).filter(v=>eids.has(v))}));
+    nstate.lines[nKey(g.id)]={lines:[], updatedAt:new Date().toISOString()}; if(db) await db.doc("narrativeLines/"+nKey(g.id)).set(nstate.lines[nKey(g.id)]);
     await saveN({game:g.id, title:g.title, evidence:E.evidence, basis:{practices:E.practices, concepts:E.concepts, proposal:E.proposal, match:E.match, bible:!!bible}, cast, beats, lines:[], notes:String(r?.notes||"").slice(0,600), createdAt:new Date().toISOString()});
     $("nRun").textContent=`Planned ${cast.length} characters and ${beats.length} beats from ${E.evidence.length} evidence records${bible?" and your story bible":""}.`;
   }catch(e){ $("nRun").textContent=e.code==="rate_limited"?"Too many requests; wait a minute.":"Could not plan: "+(e.message||e.code||e); }
@@ -1626,10 +1637,11 @@ async function writeLines(){
       const pt=x.pt??x.PT??x.text?.pt??x.text_pt??x.portuguese, en=x.en??x.EN??x.text?.en??x.text_en??x.english; if(pt) flat.push({...x, beat:x.beat||beat, pt, en}); };
     (Array.isArray(r)?r:(Array.isArray(r?.lines)?r.lines:(Array.isArray(r?.beats)?r.beats:[]))).forEach(x=>take(x));
     const fresh=flat.map(l=>({id:"l"+(n++), beat:idOf(l.beat,"b"), pt:String(l.pt||"").slice(0,500), en:String(l.en||"").slice(0,500), claims:(Array.isArray(l.claims)?l.claims:[]).slice(0,6).map(c=>({claim:String(c.claim||"").slice(0,200), evidence:(c.evidence||[]).map(v=>idOf(v,"e")).filter(v=>eids.has(v))})), fictional:!!l.fictional, status:"draft"})).filter(l=>d.beats.some(b=>b.id===l.beat)&&l.pt);
-    d.lines=[...keep,...fresh]; d.lastWrite={received:flat.length, kept:fresh.length, at:new Date().toISOString()};
-    const ok=await saveN(d);
+    d.lines=[...keep,...fresh];
+    const ok=await saveLines(d,{received:flat.length, kept:fresh.length, at:new Date().toISOString()});
     $("nRun").textContent=!fresh.length?`Claude's answer had no usable lines (${flat.length} found). Press Write lines again.`:ok?`Wrote ${fresh.length} candidate lines${flat.length>fresh.length?` (${flat.length-fresh.length} named no known beat)`:""}. Press Check lines.`:`Wrote ${fresh.length} lines but could not save them; see the message above.`;
-  }catch(e){ $("nRun").textContent=e.code==="rate_limited"?"Too many requests; wait a minute.":"Could not write: "+(e.message||e.code||e); }
+  }catch(e){ $("nRun").textContent=e.code==="rate_limited"?"Too many requests; wait a minute.":"Could not write: "+(e.message||e.code||e);
+    try{ if(d) await saveLines(d,{error:String(e.code||e.message||e).slice(0,200), at:new Date().toISOString()}); }catch{} }
   nstate.running=false; renderNarrative();
 }
 async function checkLines(onlyUnchecked){
@@ -1644,7 +1656,7 @@ async function checkLines(onlyUnchecked){
       const mech=mechChecks(l,d), warn=glossaryWarnings(l); const bad=claims.filter(x=>x.verdict!=="supported");
       l.check={claims, mech, warn, at:new Date().toISOString()}; if(l.status!=="approved") l.status=(!bad.length&&!mech.length)?"verified":"needs work"; }
     const got=new Set((Array.isArray(r?.checks)?r.checks:[]).map(c=>idOf(c.line,"l")));
-    await saveN(d); $("nRun").textContent=`Checked ${todo.filter(l=>got.has(l.id)).length} of ${todo.length} lines`+(todo.length>got.size?"; press Check lines again for the rest.":".");
+    await saveLines(d); $("nRun").textContent=`Checked ${todo.filter(l=>got.has(l.id)).length} of ${todo.length} lines`+(todo.length>got.size?"; press Check lines again for the rest.":".");
   }catch(e){ $("nRun").textContent=e.code==="rate_limited"?"Too many requests; wait a minute.":"Could not check: "+(e.message||e.code||e); }
   nstate.running=false; renderNarrative();
 }
@@ -1670,7 +1682,8 @@ function renderNarrative(){
   if(!d){ out.innerHTML=`<div class="empty" style="margin-top:12px"><b>${esc(g.title)}</b>: ${esc(g.description)}<br>${E.evidence.length?"":`<b>No evidence for this mini-game:</b> none of the sources read so far covers the ${esc(g.boats.join(", "))} or ${esc(rstate.world.area_names?.[(g.places||[])[0]?.area]||"its area")}. Lines planned now can only be pure character (marked fictional); add sources on it to ground them.<br>`}Boat: ${esc(g.boats.join(", "))} · ${E.evidence.length} evidence records from ${E.practices.length} practices and ${E.concepts.length} concepts${bl?` · blind comparison: ${esc(bl.match)}`:""}${bibleFor(g)?" · your story bible covers it":""}.<br>Press Plan cast and beats.</div>`; return; }
   const cast=Object.fromEntries(d.cast.map(k=>[k.id,k])), evs=nstate.events.events.map(x=>x.id);
   const st={draft:"p-info",verified:"p-good","needs work":"p-warn",approved:"p-good",rejected:"p-bad"};
-  out.innerHTML=`<div class="hint" style="margin-top:10px">${d.evidence.length} evidence records · ${d.basis.bible?"from your story bible and the evidence":"from the evidence"} · planned ${esc(new Date(d.createdAt).toLocaleString())}${d.notes?` · notes: ${esc(d.notes)}`:""}</div>
+  const LW=nstate.lines[nKey(g.id)]?.lastWrite;
+  out.innerHTML=`<div class="hint" style="margin-top:10px">${d.lines.length} lines stored${LW?` (last writing: ${LW.kept} of ${LW.received} kept)`:""} · ${d.evidence.length} evidence records · ${d.basis.bible?"from your story bible and the evidence":"from the evidence"} · planned ${esc(new Date(d.createdAt).toLocaleString())}${d.notes?` · notes: ${esc(d.notes)}`:""}</div>
     <div class="section"><h2>Cast <span class="hint">(fictional)</span></h2>${d.cast.map(k=>`<div class="src"><b>${esc(k.name)}</b> — ${esc(k.role)}<div class="hint">Voice: ${esc(k.voice)} · Wants: ${esc(k.want)}${k.evidence.length?` · role from ${esc(k.evidence.map(id=>d.evidence.find(e=>e.id===id)?.source).filter(Boolean).join("; "))}`:""}</div></div>`).join("")}</div>
     <div class="section"><h2>Beats and lines</h2>${d.beats.map(b=>{ const ls=d.lines.filter(l=>l.beat===b.id);
       return `<div class="concept"><div class="concept-h"><h3>${esc(b.part)}: ${esc(b.gist)}</h3><div class="row"><span class="pill p-acc">${esc(b.trigger)}</span><span class="pill">${esc(b.delivery)} · ≤${WORDS[b.delivery]} words</span><span class="pill">${esc(cast[b.character]?.name||"")}</span>${b.concept?`<span class="pill p-info">${esc(b.concept)}</span>`:""}</div></div>
@@ -1693,14 +1706,14 @@ $("nExport").addEventListener("click",async()=>{ const bank=exportBank(); if(!ba
   try{ await navigator.clipboard.writeText(t); toast("Copied the line bank"); }catch{ toast("Could not export here."); } });
 $("nOut").addEventListener("change",async(ev)=>{ const d=curDoc(); if(!d) return; const t=ev.target;
   if(t.dataset.btrig){ d.beats.find(b=>b.id===t.dataset.btrig).trigger=t.value; await saveN(d); renderNarrative(); }
-  if(t.dataset.bdel){ d.beats.find(b=>b.id===t.dataset.bdel).delivery=t.value; d.lines.filter(l=>l.beat===t.dataset.bdel&&l.status!=="approved").forEach(l=>{ l.check=null; l.status="draft"; }); await saveN(d); renderNarrative(); } });
+  if(t.dataset.bdel){ d.beats.find(b=>b.id===t.dataset.bdel).delivery=t.value; d.lines.filter(l=>l.beat===t.dataset.bdel&&l.status!=="approved").forEach(l=>{ l.check=null; l.status="draft"; }); await saveN(d); await saveLines(d); renderNarrative(); } });
 $("nOut").addEventListener("click",async(ev)=>{ const d=curDoc(); const b=ev.target.closest("button"); if(!d||!b) return;
   const l=d.lines.find(x=>x.id===(b.dataset.lapprove||b.dataset.lreject||b.dataset.ledit||b.dataset.lsave));
-  if(b.dataset.lapprove){ l.status="approved"; await saveN(d); renderNarrative(); }
-  else if(b.dataset.lreject){ l.status="rejected"; await saveN(d); renderNarrative(); }
+  if(b.dataset.lapprove){ l.status="approved"; await saveLines(d); renderNarrative(); }
+  else if(b.dataset.lreject){ l.status="rejected"; await saveLines(d); renderNarrative(); }
   else if(b.dataset.ledit){ nstate.editing=l.id; renderNarrative(); }
   else if(b.hasAttribute("data-lcancel")){ nstate.editing=null; renderNarrative(); }
-  else if(b.dataset.lsave){ l.pt=$("nEditPt").value.trim(); l.en=$("nEditEn").value.trim(); l.check=null; l.status="draft"; nstate.editing=null; await saveN(d); await checkLines(true); } });
+  else if(b.dataset.lsave){ l.pt=$("nEditPt").value.trim(); l.en=$("nEditEn").value.trim(); l.check=null; l.status="draft"; nstate.editing=null; await saveLines(d); await checkLines(true); } });
 
 // ---------- game report ----------
 const rstate={world:null, classes:{}, acts:{}, report:null, history:[], running:false};
@@ -2033,6 +2046,9 @@ try{ const t=localStorage.getItem("intake.tab"); if(t) showTab(t); }catch{}
   db.doc("practices/current").onSnapshot(s=>{ if(!hstate.running){ hstate.set=s.exists?s.data():null; hRefresh(); } }, ()=>{});
   const nRefresh=()=>{ if(!$("panel-narrative").hidden && !nstate.running && !nstate.editing) renderNarrative(); };
   db.doc("world/events").onSnapshot(s=>{ nstate.events=s.exists?s.data():null; nRefresh(); }, ()=>{});
+  db.collection("narrativeLines").onSnapshot(s=>{ if(nstate.running) return;
+    for(const doc of s.docs){ const inc=doc.data(), cur=nstate.lines[doc.id]; if(!cur || String(inc.updatedAt||"")>=String(cur.updatedAt||"")) nstate.lines[doc.id]=inc; }
+    nRefresh(); }, ()=>{});
   db.collection("narrative").onSnapshot(s=>{ if(nstate.running) return;
     for(const doc of s.docs){ const inc=doc.data(), cur=nstate.docs[doc.id]; if(!cur || String(inc.updatedAt||"")>=String(cur.updatedAt||"")) nstate.docs[doc.id]=inc; }
     nRefresh(); }, ()=>{});
