@@ -35,6 +35,23 @@ flag, evidence ids, and a credits list of sources. The game's tests check that e
 a known game moment, every place exists on the map, and every language has the same keys, as
 they already do for texts and mini-games.
 
+### Mini-games with options (several boats or places)
+
+The game's `content/minigames.json` can list several boats and places for one mini-game and draws
+one each time. Lines therefore carry optional conditions, and come in three layers:
+
+- **General lines:** the task and the sailing; no conditions; valid in every option.
+- **Option lines:** `when: {boats: [...], areas: [...], places: [...]}`; the cast and the story
+  of one boat or area (a Tagus catraeiro is not a middle-Tagus barqueiro).
+- **Place lines:** triggered by `near_place:<name>`, so they play only where the boat really is.
+
+At mission start the game passes the drawn boat and place to the narrator, which keeps the
+general lines and those whose conditions match. In the tool, each mini-game's options (boat ×
+place) can be planned separately or share one cast; the export merges them into one file and runs
+a coverage check (each option needs at least a setup and a close line). An option without lines
+(for example a place added to the game later) falls back to the general lines, never to lines
+written for another boat or place.
+
 ### 2. Runtime (built in this repository, imported by the game)
 
 - **Observer:** the parked draft (`domains/sailing/adapter/observer`), split into a generic
