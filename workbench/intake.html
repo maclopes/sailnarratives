@@ -211,6 +211,7 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
     <div class="section">
       <div class="row" style="justify-content:space-between"><h2>Concepts</h2><span class="hint" id="cMeta"></span></div>
       <div class="chips" id="cChips"></div>
+      <p class="hint">Each card is one concept: the terms the tool found in different sources that it thinks mean the same thing. If a term is in the wrong card, use <b>Move to…</b> on its row. <b>Group is right</b> confirms the card; <b>Leave out</b> drops it from later steps. Cards you have not decided on are still used. Changing a card's terms sends it back to undecided.</p>
       <div id="cList"></div>
     </div>
     <div class="section">
@@ -230,6 +231,7 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
     <div class="section">
       <div class="row" style="justify-content:space-between"><h2>Practices and events</h2><span class="hint" id="hMeta"></span></div>
       <div class="chips" id="hChips"></div>
+      <p class="hint">Each card is one practice: passages from different sources that the tool thinks describe the same thing people did. If a passage is in the wrong card, use <b>Move to…</b> on its row. <b>Group is right</b> confirms the card; <b>Leave out</b> drops it from later steps. Cards you have not decided on are still used. Changing a card's passages sends it back to undecided.</p>
       <div id="hList"></div>
     </div>
     <div class="section">
@@ -306,7 +308,7 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":
 function toast(msg){const t=$("toast");t.textContent=msg;t.hidden=false;clearTimeout(toast.h);toast.h=setTimeout(()=>t.hidden=true,2600);}
 function setSave(msg){$("saveState").textContent=msg;}
 
-const BUILD="2026-11-14 · version 25";
+const BUILD="2026-11-14 · version 26";
 $("buildTag").textContent=BUILD;
 // ---------- tabs ----------
 function showTab(name){
@@ -926,7 +928,7 @@ function renderCTable(){
         <td>${esc(x.definition)}${(x.numbers||[]).length?`<div class="hint">${x.numbers.map(n=>esc(`${n.what}: ${n.value}${n.unit?" "+n.unit:""}`)).join(" · ")}</div>`:""}${x.measured_by?`<div class="hint">shown by: ${esc(x.measured_by)}</div>`:""}</td>
         <td class="hint">${esc(x.location)}</td>
         <td><select data-move="${esc(x.id)}" aria-label="Move to another concept"><option value="">Move to…</option><option value="__new">A new concept</option></select></td></tr>`).join("")}</table></div>
-      <div class="row" style="margin-top:8px"><button class="btn small${c.decision==="accepted"?" primary":""}" data-decide="accepted" data-cid="${esc(c.id)}">Accept</button><button class="btn small" data-decide="rejected" data-cid="${esc(c.id)}">Reject</button>${c.decision!=="draft"?`<button class="btn small" data-decide="draft" data-cid="${esc(c.id)}">Back to draft</button>`:""}<button class="btn small" data-rename="${esc(c.id)}">Rename</button></div>
+      <div class="row" style="margin-top:8px"><button class="btn small${c.decision==="accepted"?" primary":""}" data-decide="accepted" data-cid="${esc(c.id)}" title="These terms mean the same thing, and the concept is kept">Group is right</button><button class="btn small" data-decide="rejected" data-cid="${esc(c.id)}" title="Not a useful concept: later steps ignore it">Leave out</button>${c.decision!=="draft"?`<button class="btn small" data-decide="draft" data-cid="${esc(c.id)}">Undecided</button>`:""}<button class="btn small" data-rename="${esc(c.id)}">Rename</button></div>
     </div>`; }).join("") || `<div class="empty">No concept has this status.</div>`;
 }
 async function saveSet(){ try{ await saveDoc("concepts/current", cstate.set); }catch(e){ toast("Could not save: "+(e.message||e.code)); } renderCTable(); }
@@ -941,9 +943,9 @@ $("cList").addEventListener("click",async(ev)=>{
 $("cList").addEventListener("change",async(ev)=>{
   const id=ev.target.dataset?.move; const to=ev.target.value; if(!id||!to||!cstate.set) return;
   const from=cstate.set.concepts.find(c=>c.members.includes(id)); if(!from||from.id===to) return;
-  from.members=from.members.filter(x=>x!==id);
+  from.members=from.members.filter(x=>x!==id); if(from.decision==="accepted") from.decision="draft";
   if(to==="__new"){ const idx=candIndex(); const n=Math.max(0,...cstate.set.concepts.map(c=>Number(String(c.id).slice(1))||0))+1; cstate.set.concepts.push({id:"c"+n, label:idx[id]?.term||"New concept", members:[id], conflicts:[], decision:"draft"}); }
-  else cstate.set.concepts.find(c=>c.id===to).members.push(id);
+  else { const t=cstate.set.concepts.find(c=>c.id===to); t.members.push(id); if(t.decision==="accepted") t.decision="draft"; }
   cstate.set.concepts=cstate.set.concepts.filter(c=>c.members.length);
   await saveSet(); toast("Moved");
 });
@@ -1278,7 +1280,7 @@ function renderHTable(){
       <div style="overflow-x:auto"><table class="members"><tr><th>Source</th><th>What it says (paraphrase)</th><th>Where</th><th></th></tr>
       ${ms.map(x=>`<tr><td><span class="pill">${esc(srcTitle(x.sourceId))}</span></td><td>${esc(x.action)}${[x.who&&"who: "+x.who,x.cargo&&"cargo: "+x.cargo,x.gear&&"gear: "+x.gear,x.conditions&&"conditions: "+x.conditions].filter(Boolean).length?`<div class="hint">${esc([x.who&&"who: "+x.who,x.cargo&&"cargo: "+x.cargo,x.gear&&"gear: "+x.gear,x.conditions&&"conditions: "+x.conditions].filter(Boolean).join(" · "))}</div>`:""}${x.numbers.length?`<div class="hint">${esc(x.numbers.map(n=>`${n.what}: ${n.value}${n.unit?" "+n.unit:""}`).join(" · "))}</div>`:""}</td><td class="hint">${esc(x.location)}</td>
         <td><select data-hmove="${esc(x.id)}" aria-label="Move to another practice"><option value="">Move to…</option><option value="__new">A new practice</option></select></td></tr>`).join("")}</table></div>
-      <div class="row" style="margin-top:8px"><button class="btn small${p.decision==="accepted"?" primary":""}" data-hdecide="accepted" data-pid="${esc(p.id)}">Accept</button><button class="btn small" data-hdecide="rejected" data-pid="${esc(p.id)}">Reject</button>${p.decision!=="draft"?`<button class="btn small" data-hdecide="draft" data-pid="${esc(p.id)}">Back to draft</button>`:""}<button class="btn small" data-hrename="${esc(p.id)}">Rename</button></div></div>`; }).join("")
+      <div class="row" style="margin-top:8px"><button class="btn small${p.decision==="accepted"?" primary":""}" data-hdecide="accepted" data-pid="${esc(p.id)}" title="These passages describe the same practice, and it is kept">Group is right</button><button class="btn small" data-hdecide="rejected" data-pid="${esc(p.id)}" title="Not a useful practice: later steps ignore it">Leave out</button>${p.decision!=="draft"?`<button class="btn small" data-hdecide="draft" data-pid="${esc(p.id)}">Undecided</button>`:""}<button class="btn small" data-hrename="${esc(p.id)}">Rename</button></div></div>`; }).join("")
     + (rows.filter(r=>hstate.filter==="all"||r.st.includes(hstate.filter)).length>150?`<div class="hint">Showing the 150 with most sources; use the filters to see others.</div>`:"");
   renderSheetSel();
 }
@@ -1291,9 +1293,9 @@ $("hList").addEventListener("click",async(ev)=>{ const b=ev.target.closest("butt
   else if(b.dataset.hrenamesave){ const v=$("hRenameBox").value.trim(); if(v) p.label=v.slice(0,90); hstate.renaming=null; await saveHSet(); } });
 $("hList").addEventListener("change",async(ev)=>{ const id=ev.target.dataset?.hmove, to=ev.target.value; if(!id||!to||!hstate.set) return;
   const idx=hIndex(), from=hstate.set.practices.find(p=>p.members.includes(id)); if(!from||from.id===to) return;
-  from.members=from.members.filter(x=>x!==id);
+  from.members=from.members.filter(x=>x!==id); if(from.decision==="accepted") from.decision="draft";
   if(to==="__new"){ const n=Math.max(0,...hstate.set.practices.map(p=>Number(String(p.id).slice(1))||0))+1; hstate.set.practices.push({id:"p"+n, label:idx[id]?.action.slice(0,60)||"New practice", members:[id], conflicts:[], decision:"draft", boats:[], places:[], periods:[]}); }
-  else hstate.set.practices.find(p=>p.id===to).members.push(id);
+  else { const t=hstate.set.practices.find(p=>p.id===to); t.members.push(id); if(t.decision==="accepted") t.decision="draft"; }
   hstate.set.practices=hstate.set.practices.filter(p=>p.members.length); hstate.set.practices.forEach(p=>mergeFields(p,idx)); await saveHSet(); toast("Moved"); });
 $("hFind").addEventListener("click",findPractices);
 $("hLink").addEventListener("click",()=>linkPractices(false));
@@ -1477,7 +1479,7 @@ function renderSituations(){
       ${a.needs||featuresOf(a).length?`<div class="hint">The game would need: ${esc([featuresOf(a).join(", "),a.needs].filter(Boolean).join(" · "))}</div>`:""}
       ${a.premise?`<div class="hint" style="margin-top:6px">Premise: ${esc(a.premise)}</div>`:""}
       <div class="hint">From the practice “${esc(p?.label||a.practice)}” · ${srcs.length} source${srcs.length===1?"":"s"}: ${esc(srcs.map(srcTitle).join("; "))}</div>
-      <div class="row" style="margin-top:8px"><button class="btn small${a.decision==="accepted"?" primary":""}" data-sdecide="accepted" data-sid="${esc(a.id)}">Accept</button><button class="btn small" data-sdecide="rejected" data-sid="${esc(a.id)}">Reject</button>${a.decision!=="draft"?`<button class="btn small" data-sdecide="draft" data-sid="${esc(a.id)}">Back to draft</button>`:""}</div></div>`; }).join("")
+      <div class="row" style="margin-top:8px"><button class="btn small${a.decision==="accepted"?" primary":""}" data-sdecide="accepted" data-sid="${esc(a.id)}">Accept</button><button class="btn small" data-sdecide="rejected" data-sid="${esc(a.id)}">Reject</button>${a.decision!=="draft"?`<button class="btn small" data-sdecide="draft" data-sid="${esc(a.id)}">Undecided</button>`:""}</div></div>`; }).join("")
     + (set.skipped.length?`<details style="margin-top:10px"><summary class="hint" style="cursor:pointer">${set.skipped.length} practices skipped</summary><ul>${set.skipped.map(k=>`<li>${esc(pById[k.practice]?.label||k.practice)}: <span class="hint">${esc(k.why)}</span></li>`).join("")}</ul></details>`:"");
 }
 function gameAdditions(){

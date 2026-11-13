@@ -12,8 +12,11 @@ The tool's screens. Each is a single HTML page with no build step.
   attached PDF in the page, or pasted), Claude lists candidate concepts in the source's own
   words; a second request groups them across sources and languages. The tool then gives each
   concept statuses with fixed rules: agreed, conflicting, term clash, variant difference,
-  missing term, single source, not in simulation, simulation only. The author accepts,
-  rejects, renames, and moves members between concepts. "Write summary" asks Claude for a
+  missing term, single source, not in simulation, simulation only. Each card groups terms
+  that the tool thinks mean the same thing. The author moves terms between cards ("Move to…"),
+  renames, and marks a card "Group is right" or "Leave out" (dropped from later steps);
+  undecided cards are still used, and changing a card's terms makes it undecided again. The
+  History cards work the same way for passages describing one practice. "Write summary" asks Claude for a
   short reading of the table by type of concept (agreements, conflicts with a suggested next
   step, clarifications, gaps), which can be copied or downloaded as Markdown. Data: texts/,
   candidates/, concepts/current, summaries/concepts in the artifact database.
