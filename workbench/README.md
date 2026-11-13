@@ -34,7 +34,12 @@ The tool's screens. Each is a single HTML page with no build step.
   (full, simplified, needs feature) and a premise drawn only from the practice record. The
   proposals never see the game's activity list. "Compare with the game's mini-games" then runs
   the blind comparison: for each museum mini-game, same, related or none; for each proposal,
-  same, related or new. Uses processed records only; no source is read again.
+  same, related or new. Practices blocked only by something the game lacks are proposed
+  anyway as "needs feature", naming the addition (tide and current, water depth, rowing,
+  towing, crew, nets, cargo, steam traffic, river bar, new map area, new boat, rig changes);
+  "Reconsider skipped" reruns just the skipped ones. A table groups the additions by how many
+  activities each would unlock or improve and how many sources back them; the game report turns
+  them into issue drafts. Uses processed records only; no source is read again.
   Data: situations/current, situations/blind.
 
   Tab 7, Game report: evaluates the game against the sources. Concepts are sorted by kind

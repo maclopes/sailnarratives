@@ -242,8 +242,8 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
   <!-- 6 Situations -->
   <section class="panel" id="panel-situations" role="tabpanel" hidden>
     <p class="sub">Joins each historical practice with the concepts it exercises and what the game can simulate, and proposes an activity: goal, measurable success rule, boat, route, level, length, simplifications and what the game would still need. Proposals are made without seeing the game's own activities; the blind comparison then checks which existing mini-games the method finds on its own. Only processed records are used: no source is read again.</p>
-    <div class="row" style="margin-top:12px"><button class="btn primary" id="sPropose">Propose activities</button><button class="btn" id="sCompare">Compare with the game's mini-games</button><button class="btn" id="sCopy">Copy</button><button class="btn" id="sDl">Download</button><span class="hint" id="sRun"></span></div>
-    <div id="sBlind"></div>
+    <div class="row" style="margin-top:12px"><button class="btn primary" id="sPropose">Propose activities</button><button class="btn" id="sReconsider">Reconsider skipped</button><button class="btn" id="sCompare">Compare with the game's mini-games</button><button class="btn" id="sCopy">Copy</button><button class="btn" id="sDl">Download</button><span class="hint" id="sRun"></span></div>
+    <div id="sBlind"></div><div id="sAdd"></div>
     <div class="section"><div class="row" style="justify-content:space-between"><h2>Proposed activities</h2><span class="hint" id="sMeta"></span></div><div class="chips" id="sChips"></div><div id="sList"></div></div>
   </section>
 
@@ -1317,6 +1317,9 @@ function renderHistory(){ renderHSources(); renderHTable(); }
 // ---------- situations: activity proposals and the blind comparison ----------
 const sstate={set:null, blind:null, running:false, filter:"all"};
 const FEAS={"full":"p-good","simplified":"p-warn","needs feature":"p-bad"};
+const FEATURES=["tide and current","water depth and shallows","rowing and poling","towing","crew and tasks aboard","fishing net and catch","cargo loading and weight","steam and motor traffic","river bar and pilotage","new map area","new boat","rig changes","other"];
+const FEATURE_WORDS=[["tide and current",/tide|maré|current|corrente|flood|ebb/i],["water depth and shallows",/depth|shallow|esteiro|draught|draft|sandbank|grounding/i],["rowing and poling",/row|oar|pole|poling|vara|remo/i],["towing",/tow|sirga/i],["crew and tasks aboard",/crew|furl|aboard/i],["fishing net and catch",/net|trawl|catch|fishing/i],["cargo loading and weight",/cargo|load|weight|transshipment/i],["steam and motor traffic",/steam|motor|ferry|vapor/i],["river bar and pilotage",/\bbar\b|pilot/i],["new map area",/area|map|algarve|morocco|outside|upriver stretch|santarém|santarem/i],["new boat",/boat model|new boat|not in the game/i],["rig changes",/rig|mast/i]];
+function featuresOf(a){ const f=(Array.isArray(a.features)?a.features:[]).filter(x=>FEATURES.includes(x)); if(f.length) return f; const t=[a.needs,...(a.simplifications||[])].join(" "); if(!a.needs&&a.feasibility==="full") return []; return FEATURE_WORDS.filter(([,re])=>re.test(t)).map(([k])=>k); }
 const MATCH={"same":"p-good","related":"p-warn","none":"p-bad","new":"p-info"};
 function shownConcepts(){
   const idx=candIndex();
@@ -1343,9 +1346,10 @@ For each practice that can become an activity, propose one:
 - minutes: 1 to 6. level: 1 for basics (points of sail, trim), 2 for manoeuvres (tacking, gybing, docking), 3 for specialised work (trawling sideways, towing, coming alongside at sea).
 - simplifications: what the activity leaves out compared with the practice. needs: a game feature missing to do it fully, or "".
 - feasibility: "full" if the game can do it as described, "simplified" if it can with the listed simplifications, "needs feature" if a missing feature is essential.
+- features: the game additions it would need, chosen from: ${FEATURES.join(", ")}. Empty when none.
 - premise: one sentence on what the visitor does, in historical terms, using only facts in the practice record (no invented names, dates or numbers).
-Skip practices that cannot become a sailing activity and say why.
-Return JSON only: {"activities":[{"practice":"","title":"","goal":"","success":"","boat":"","boatNote":"","area":"","route":"","concepts":[],"minutes":3,"level":1,"simplifications":[],"needs":"","feasibility":"full","premise":""}],"skipped":[{"practice":"","why":""}]}
+Do not skip a practice only because the game lacks something (tide, current, rowing, towing, crew, nets, cargo, depth, a map area, a boat): propose the activity as it would be with that addition, with feasibility "needs feature" and the features named. Skip only practices with no boat or water activity at all (land transport, pictures, petitions, registrations) and say why. Refer to practices and concepts by their bare ids ("p8", "c12").
+Return JSON only: {"activities":[{"practice":"","title":"","goal":"","success":"","boat":"","boatNote":"","area":"","route":"","concepts":[],"minutes":3,"level":1,"simplifications":[],"needs":"","features":[],"feasibility":"full","premise":""}],"skipped":[{"practice":"","why":""}]}
 
 Practices:
 ${JSON.stringify(batch)}`;
@@ -1362,19 +1366,21 @@ ${JSON.stringify(props)}
 For each game activity of type "museum mini-game", give the closest proposal and the match: "same" (the same practice and essentially what the player does), "related" (the same practice or boat, but a different task), or "none". For each proposal, say whether the game has an equivalent: "same", "related" or "new", naming the game activity.
 Return JSON only: {"games":[{"id":"","proposal":"","match":"same","why":""}],"proposals":[{"id":"","game":"","match":"new","why":""}]}`;
 }
-async function proposeActivities(){
+async function proposeActivities(onlySkipped){
   if(!sample){ toast("Asking Claude is not available in this view."); return; }
   if(!rstate.world){ $("sRun").textContent="The game's world list is not loaded."; return; }
   if(!hstate.set?.practices?.length){ $("sRun").textContent="Run the History step first."; return; }
   const shown=shownConcepts(); const hidx=hIndex(); const idx=candIndex();
   const cById=Object.fromEntries((cstate.set?.concepts||[]).map(c=>[c.id,c]));
   const isShown=new Set(shown.map(c=>c.id));
-  const prac=hstate.set.practices.filter(p=>p.decision!=="rejected"&&p.kind==="practice");
-  sstate.running=true; $("sPropose").disabled=true;
+  let prac=hstate.set.practices.filter(p=>p.decision!=="rejected"&&p.kind==="practice");
+  if(onlySkipped){ const sk=new Set((sstate.set?.skipped||[]).map(k=>k.practice)); prac=prac.filter(p=>sk.has(p.id)); if(!prac.length){ $("sRun").textContent="No skipped practices to reconsider."; return; } }
+  sstate.running=true; $("sPropose").disabled=true; $("sReconsider").disabled=true;
   const fatal=(e)=>e?.code==="not_granted"||e?.code==="rate_limited"||e?.code==="unavailable";
   const ask=async(prompt)=>{ for(let a=0;a<2;a++){ try{ return await sample.json(prompt,{modelTier:"default"}); }catch(e){ if(fatal(e)||a===1) throw e; } } };
   try{
-    const out=[], skipped=[]; const B=15; let unmatched=0;
+    const keep=onlySkipped?(sstate.set.activities||[]):[]; const out=[], skipped=[]; const B=15; let unmatched=0;
+    let nextId=Math.max(0,...keep.map(a=>Number(String(a.id).slice(1))||0))+1;
     // Claude sometimes writes "p8 Some label" or "c12: label" instead of the bare id
     const pid=(v)=>{ const m=String(v||"").match(/\bp\d+\b/); return m?m[0]:""; };
     const cid=(v)=>{ const m=String(v||"").match(/\bc\d+\b/); return m?m[0]:""; };
@@ -1386,19 +1392,20 @@ async function proposeActivities(){
           linkedConcepts:(p.concepts||[]).map(id=>({id, label:cById[id]?.label||id, shown:isShown.has(id)}))}; });
       const r=await ask(proposePrompt(batch, shown));
       for(const a of (Array.isArray(r?.activities)?r.activities:[])){ if(a) a.practice=pid(a.practice); if(!a?.practice||!prac.some(p=>p.id===a.practice)){ unmatched++; continue; }
-        out.push({id:"s"+(out.length+1), practice:a.practice, title:String(a.title||"").slice(0,80), goal:String(a.goal||"").slice(0,240), success:String(a.success||"").slice(0,240), boat:String(a.boat||""), boatNote:String(a.boatNote||"").slice(0,200),
+        out.push({id:"s"+(nextId++), practice:a.practice, title:String(a.title||"").slice(0,80), goal:String(a.goal||"").slice(0,240), success:String(a.success||"").slice(0,240), boat:String(a.boat||""), boatNote:String(a.boatNote||"").slice(0,200),
           area:String(a.area||""), route:String(a.route||"").slice(0,120), concepts:[...new Set((Array.isArray(a.concepts)?a.concepts:[]).map(cid))].filter(id=>cById[id]).slice(0,8), minutes:Math.max(1,Math.min(6,Number(a.minutes)||3)), level:[1,2,3].includes(Number(a.level))?Number(a.level):2,
-          simplifications:(Array.isArray(a.simplifications)?a.simplifications:[]).map(x=>String(x).slice(0,120)).slice(0,6), needs:String(a.needs||"").slice(0,120), feasibility:FEAS[a.feasibility]?a.feasibility:"simplified", premise:String(a.premise||"").slice(0,240), decision:"draft"}); }
+          simplifications:(Array.isArray(a.simplifications)?a.simplifications:[]).map(x=>String(x).slice(0,120)).slice(0,6), needs:String(a.needs||"").slice(0,120), features:(Array.isArray(a.features)?a.features:[]).filter(x=>FEATURES.includes(x)), feasibility:FEAS[a.feasibility]?a.feasibility:"simplified", premise:String(a.premise||"").slice(0,240), decision:"draft"}); }
       for(const k of (Array.isArray(r?.skipped)?r.skipped:[])) if(k?.practice) skipped.push({practice:pid(k.practice)||String(k.practice).slice(0,40), why:String(k.why||"").slice(0,160)});
     }
     // boats: check against the game's list
     for(const a of out){ a.boatInGame=matchBoat(a.boat)!=="missing"; }
-    sstate.set={activities:out, skipped, createdAt:new Date().toISOString(), basis:{practicesAt:hstate.set.updatedAt||hstate.set.createdAt, conceptsAt:cstate.set?.updatedAt||cstate.set?.createdAt, shownConcepts:shown.length,
+    const allOut=[...keep,...out];
+    sstate.set={activities:allOut, skipped, createdAt:new Date().toISOString(), basis:{practicesAt:hstate.set.updatedAt||hstate.set.createdAt, conceptsAt:cstate.set?.updatedAt||cstate.set?.createdAt, shownConcepts:shown.length,
       inputs:"history practices, concepts and their game links, the game's boats, areas and ports; not the game's activities"}};
     await saveDoc("situations/current", sstate.set);
-    $("sRun").textContent=`Proposed ${out.length} activities from ${prac.length} practices (${skipped.length} skipped).`+(unmatched?` ${unmatched} proposals named no known practice and were left out.`:"");
+    $("sRun").textContent=`Proposed ${out.length} activities from ${prac.length} ${onlySkipped?"reconsidered ":""}practices (${skipped.length} still skipped).`+(unmatched?` ${unmatched} proposals named no known practice and were left out.`:"");
   }catch(e){ $("sRun").textContent=(e.code==="not_granted"?"Asking Claude is not allowed in this view.":e.code==="rate_limited"?"Too many requests; wait a minute.":"Stopped: "+(e.message||e.code||e)); }
-  sstate.running=false; $("sPropose").disabled=false; renderSituations();
+  sstate.running=false; $("sPropose").disabled=false; $("sReconsider").disabled=false; renderSituations();
 }
 async function compareBlind(){
   if(!sample||!sstate.set?.activities?.length){ $("sRun").textContent="Propose activities first."; return; }
@@ -1429,6 +1436,10 @@ function renderSituations(){
       ${mini.map(m=>{ const x=b.games.find(y=>y.id===m.id)||{match:"none"}; return `<tr><td>${esc(m.title)}</td><td><span class="pill ${MATCH[x.match]}">${esc(x.match)}</span></td><td>${esc(byId[x.proposal]?.title||"")}</td><td class="hint">${esc(x.why||"")}</td></tr>`; }).join("")}</table></div>
       <p class="hint" style="margin-top:6px">Caveat: the method doc's concept tables were an input to the concepts step, and they mention some game feedback; the game's activity list itself was not used to propose.</p></div>`; }
   else $("sBlind").innerHTML="";
+  const adds=gameAdditions();
+  $("sAdd").innerHTML=adds.length?`<div class="section"><h2>Game additions these activities need</h2><p class="sub">Grouped from the proposals: how many activities each addition would unlock (fully, or improve), and how many sources back those activities.</p>
+    <div style="overflow-x:auto"><table class="rtable"><tr><th>Addition</th><th>Unlocks</th><th>Improves</th><th>Sources</th><th>Activities</th></tr>
+    ${adds.map(e=>`<tr><td><b>${esc(e.feature)}</b></td><td class="n">${e.full}</td><td class="n">${e.acts.length-e.full}</td><td class="n" title="${esc(e.sources.map(srcTitle).join("; "))}">${e.sources.length}</td><td class="hint">${esc(e.acts.map(a=>a.title).join("; "))}</td></tr>`).join("")}</table></div></div>`:"";
   if(!set?.activities?.length){ $("sChips").innerHTML=""; $("sMeta").textContent=""; $("sList").innerHTML=`<div class="empty">No proposals yet. Press Propose activities.</div>`; return; }
   const cLabel=Object.fromEntries((cstate.set?.concepts||[]).map(c=>[c.id,c.label])); const pById=Object.fromEntries((hstate.set?.practices||[]).map(p=>[p.id,p])); const hidx=hIndex();
   const bp=Object.fromEntries((b?.proposals||[]).map(x=>[x.id,x]));
@@ -1446,23 +1457,33 @@ function renderSituations(){
       <div class="hint" style="margin-top:4px">Boat: ${esc(a.boat)}${a.boatInGame?"":" (not in the game)"}${a.boatNote?" · "+esc(a.boatNote):""} · ${esc(w?.area_names?.[a.area]||a.area)}${a.route?": "+esc(a.route):""}</div>
       ${a.concepts.length?`<div class="row" style="margin-top:6px">${a.concepts.map(id=>`<span class="pill ${shownSet.has(id)?"p-good":"p-warn"}" title="${shownSet.has(id)?"shown by the game":"not shown by the game"}">${esc(cLabel[id]||id)}</span>`).join("")}</div>`:""}
       ${a.simplifications.length?`<div class="hint" style="margin-top:6px">Leaves out: ${esc(a.simplifications.join("; "))}</div>`:""}
-      ${a.needs?`<div class="hint">The game would need: ${esc(a.needs)}</div>`:""}
+      ${a.needs||featuresOf(a).length?`<div class="hint">The game would need: ${esc([featuresOf(a).join(", "),a.needs].filter(Boolean).join(" · "))}</div>`:""}
       ${a.premise?`<div class="hint" style="margin-top:6px">Premise: ${esc(a.premise)}</div>`:""}
       <div class="hint">From the practice “${esc(p?.label||a.practice)}” · ${srcs.length} source${srcs.length===1?"":"s"}: ${esc(srcs.map(srcTitle).join("; "))}</div>
       <div class="row" style="margin-top:8px"><button class="btn small${a.decision==="accepted"?" primary":""}" data-sdecide="accepted" data-sid="${esc(a.id)}">Accept</button><button class="btn small" data-sdecide="rejected" data-sid="${esc(a.id)}">Reject</button>${a.decision!=="draft"?`<button class="btn small" data-sdecide="draft" data-sid="${esc(a.id)}">Back to draft</button>`:""}</div></div>`; }).join("")
     + (set.skipped.length?`<details style="margin-top:10px"><summary class="hint" style="cursor:pointer">${set.skipped.length} practices skipped</summary><ul>${set.skipped.map(k=>`<li>${esc(pById[k.practice]?.label||k.practice)}: <span class="hint">${esc(k.why)}</span></li>`).join("")}</ul></details>`:"");
 }
+function gameAdditions(){
+  const set=sstate.set; if(!set?.activities?.length) return [];
+  const hidx=hIndex(), pById=Object.fromEntries((hstate.set?.practices||[]).map(p=>[p.id,p])), g={};
+  for(const a of set.activities.filter(a=>a.decision!=="rejected")) for(const f of featuresOf(a)){
+    const e=(g[f] ||= {feature:f, acts:[], full:0, sources:new Set()}); e.acts.push(a); if(a.feasibility==="needs feature") e.full++;
+    const p=pById[a.practice]; if(p) p.members.forEach(id=>{ const x=hidx[id]; if(x) e.sources.add(x.sourceId); }); }
+  return Object.values(g).map(e=>({...e, sources:[...e.sources]})).sort((a,b)=>b.full-a.full||b.acts.length-a.acts.length);
+}
 function situationsText(){
   const set=sstate.set; if(!set) return ""; const cLabel=Object.fromEntries((cstate.set?.concepts||[]).map(c=>[c.id,c.label])); const pById=Object.fromEntries((hstate.set?.practices||[]).map(p=>[p.id,p])); const b=sstate.blind;
   const L=[`# Proposed activities: ${state.project.name||""}`.trim(),"",`Built ${set.createdAt} from ${set.basis.inputs}. Drafts for review.`,""];
+  const adds=gameAdditions(); if(adds.length){ L.push("## Game additions these activities need",""); adds.forEach(e=>L.push(`- ${e.feature}: unlocks ${e.full}, improves ${e.acts.length-e.full} (${e.sources.length} sources)`)); L.push(""); }
   if(b){ L.push("## Blind comparison with the game's mini-games",""); for(const m of (rstate.world?.activities||[]).filter(a=>a.type==="museum mini-game")){ const x=b.games.find(y=>y.id===m.id)||{match:"none"}; const pr=set.activities.find(a=>a.id===x.proposal); L.push(`- ${m.title}: ${x.match}${pr?` (${pr.title})`:""}${x.why?` — ${x.why}`:""}`); } L.push(""); }
   for(const a of set.activities.filter(a=>a.decision!=="rejected").sort((x,y)=>x.level-y.level)){
     L.push(`## ${a.title} (level ${a.level}, ${a.minutes} min, ${a.feasibility})`,"",`- Goal: ${a.goal}`,`- Success: ${a.success}`,`- Boat: ${a.boat}${a.boatNote?` (${a.boatNote})`:""}`,`- Where: ${a.area}${a.route?": "+a.route:""}`,`- Concepts: ${a.concepts.map(id=>cLabel[id]||id).join(", ")}`);
-    if(a.simplifications.length) L.push(`- Leaves out: ${a.simplifications.join("; ")}`); if(a.needs) L.push(`- Game would need: ${a.needs}`); if(a.premise) L.push(`- Premise: ${a.premise}`);
+    if(a.simplifications.length) L.push(`- Leaves out: ${a.simplifications.join("; ")}`); if(a.needs||featuresOf(a).length) L.push(`- Game would need: ${[featuresOf(a).join(", "),a.needs].filter(Boolean).join(" · ")}`); if(a.premise) L.push(`- Premise: ${a.premise}`);
     L.push(`- From the practice: ${pById[a.practice]?.label||a.practice}`,""); }
   return L.join("\n");
 }
-$("sPropose").addEventListener("click",proposeActivities);
+$("sPropose").addEventListener("click",()=>proposeActivities(false));
+$("sReconsider").addEventListener("click",()=>proposeActivities(true));
 $("sCompare").addEventListener("click",compareBlind);
 $("sChips").addEventListener("click",(ev)=>{ const x=ev.target.closest("[data-sfilter]"); if(!x) return; sstate.filter=x.dataset.sfilter; renderSituations(); });
 $("sList").addEventListener("click",async(ev)=>{ const x=ev.target.closest("[data-sdecide]"); if(!x||!sstate.set) return; const a=sstate.set.activities.find(y=>y.id===x.dataset.sid); a.decision=x.dataset.sdecide; try{ await saveDoc("situations/current", sstate.set); }catch(e){ toast("Could not save: "+(e.message||e.code)); } renderSituations(); });
@@ -1586,9 +1607,10 @@ async function buildReport(){
     const practices=prac.map(x=>({name:x.name, ...(rstate.acts[x.key]||{status:"missing",activity:"",why:""}), sources:x.srcs, concepts:x.concepts||[], ...(x.evidence?{evidence:x.evidence}:{})}));
     // 5. conflicts on what the game depends on
     const conflicts=info.filter(x=>(x.c.conflicts||[]).length && ["boat","place","sailing","hull","practice","event"].includes(cls(x).category)).flatMap(x=>x.c.conflicts.map(f=>({name:x.c.label, kind:cls(x).category, type:f.type, text:f.text, sources:x.srcs, concepts:[x.c.id]})));
+    const additions=gameAdditions().map(e=>({feature:e.feature, full:e.full, improves:e.acts.length-e.full, sources:e.sources, acts:e.acts.map(a=>a.title)}));
     const count=(xs,pred)=>xs.filter(pred).length;
     const report={createdAt:new Date().toISOString(), game:rstate.world.game, gameCommit:rstate.world.commit, conceptsAt:cstate.set.updatedAt||cstate.set.createdAt, sources:[...new Set(info.flatMap(x=>x.srcs))].length,
-      boats, places, physics, practices, conflicts,
+      boats, places, physics, practices, conflicts, additions,
       counts:{boatsIn:count(boats,b=>b.status==="in game"), boatsMissing:count(boats,b=>b.status==="missing"), placesIn:count(places,p=>["port","landmark","on map"].includes(p.status)), placesMissing:count(places,p=>["missing","outside the game's areas","sea mark only"].includes(p.status)),
         physicsShown:count(physics,x=>x.status==="shown"), physicsNot:count(physics,x=>x.status==="not shown"), practicesCovered:count(practices,x=>x.status==="covered"), practicesPartly:count(practices,x=>x.status==="partly"), practicesMissing:count(practices,x=>x.status==="missing"), conflicts:conflicts.length}};
     const id="r"+report.createdAt.replace(/[^0-9]/g,"").slice(0,14);
@@ -1615,6 +1637,8 @@ function issueDrafts(r, min){
     out.push({title:`Simulate ${g.needs} (needed by ${g.xs.length} concept${g.xs.length>1?"s":""})`, body:`The sources describe ${g.xs.map(x=>x.name).join(", ")}, which the simulation cannot show without ${g.needs}.\n\nEvidence:\n${g.xs.map(ev).join("\n")}`});
   for(const x of r.practices.filter(x=>x.status!=="covered"&&x.sources.length>=min).sort((a,b)=>b.sources.length-a.sources.length))
     out.push({title:`Activity: ${x.name} (${x.status==="partly"?"partly covered":"missing"}, ${x.sources.length} sources)`, body:`${x.status==="partly"?`Closest game activity: ${x.activity}. `:""}${x.why}\n\nSources: ${x.sources.map(srcTitle).join("; ")}\n\nEvidence:\n${ev(x)}`});
+  for(const e of (r.additions||[]).filter(e=>e.sources.length>=min))
+    out.push({title:`Add ${e.feature}: would unlock ${e.full} and improve ${e.improves} activities`, body:`Activities proposed from the historical sources need ${e.feature}:\n${e.acts.map(t=>"- "+t).join("\n")}\n\nSources behind them: ${e.sources.map(srcTitle).join("; ")}`});
   for(const f of r.conflicts.filter(f=>f.sources.length>=Math.min(min,2)))
     out.push({title:`Check ${f.name}: sources disagree (${f.type})`, body:`${f.text}\n\nEvidence:\n${ev(f)}`});
   return out.map(o=>({...o, body:o.body+foot}));
