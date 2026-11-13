@@ -306,7 +306,7 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":
 function toast(msg){const t=$("toast");t.textContent=msg;t.hidden=false;clearTimeout(toast.h);toast.h=setTimeout(()=>t.hidden=true,2600);}
 function setSave(msg){$("saveState").textContent=msg;}
 
-const BUILD="2026-11-14 · version 24";
+const BUILD="2026-11-14 · version 25";
 $("buildTag").textContent=BUILD;
 // ---------- tabs ----------
 function showTab(name){
@@ -910,7 +910,7 @@ function renderCTable(){
   $("cMeta").textContent=`${set.concepts.length} concepts · ${acc} accepted · ${rej} rejected · from ${set.sources.length} sources, ${new Date(set.createdAt).toLocaleString()}`;
   $("cChips").innerHTML=[["all","All",set.concepts.length],...CORDER.filter(k=>count[k]).map(k=>[k,k,count[k]])].map(([k,l,n])=>`<button class="chip" data-filter="${esc(k)}" aria-pressed="${cstate.filter===k}" title="${esc(CSTATUS[k]?.[1]||"")}">${esc(l)} · ${n}</button>`).join("");
   const shown=rows.filter(r=>cstate.filter==="all"||r.st.includes(cstate.filter));
-  const options=set.concepts.map(c=>`<option value="${esc(c.id)}">${esc(c.label)}</option>`).join("");
+  cstate.moveOptions=set.concepts.map(c=>`<option value="${esc(c.id)}">${esc(c.label)}</option>`).join("");
   $("cList").innerHTML=shown.map(({c,st})=>{
     const ms=c.members.map(id=>idx[id]).filter(Boolean).sort((a,b)=>(a.kind==="simulation"?-1:0)-(b.kind==="simulation"?-1:0));
     return `<div class="concept${c.decision==="rejected"?" rejected":""}"><div class="concept-h">
@@ -925,7 +925,7 @@ function renderCTable(){
         <td class="term">${esc(x.term)}</td>
         <td>${esc(x.definition)}${(x.numbers||[]).length?`<div class="hint">${x.numbers.map(n=>esc(`${n.what}: ${n.value}${n.unit?" "+n.unit:""}`)).join(" · ")}</div>`:""}${x.measured_by?`<div class="hint">shown by: ${esc(x.measured_by)}</div>`:""}</td>
         <td class="hint">${esc(x.location)}</td>
-        <td><select data-move="${esc(x.id)}" aria-label="Move to another concept"><option value="">Move to…</option><option value="__new">A new concept</option>${options}</select></td></tr>`).join("")}</table></div>
+        <td><select data-move="${esc(x.id)}" aria-label="Move to another concept"><option value="">Move to…</option><option value="__new">A new concept</option></select></td></tr>`).join("")}</table></div>
       <div class="row" style="margin-top:8px"><button class="btn small${c.decision==="accepted"?" primary":""}" data-decide="accepted" data-cid="${esc(c.id)}">Accept</button><button class="btn small" data-decide="rejected" data-cid="${esc(c.id)}">Reject</button>${c.decision!=="draft"?`<button class="btn small" data-decide="draft" data-cid="${esc(c.id)}">Back to draft</button>`:""}<button class="btn small" data-rename="${esc(c.id)}">Rename</button></div>
     </div>`; }).join("") || `<div class="empty">No concept has this status.</div>`;
 }
@@ -1266,7 +1266,7 @@ function renderHTable(){
   $("hMeta").textContent=`${set.practices.length} practices · ${set.practices.filter(p=>p.decision==="accepted").length} accepted · ${Object.keys(idx).length} items read`;
   $("hChips").innerHTML=[["all","All",set.practices.length],...Object.keys(HSTATUS).filter(k=>count[k]).map(k=>[k,k,count[k]])].map(([k,l,n])=>`<button class="chip" data-hfilter="${esc(k)}" aria-pressed="${hstate.filter===k}" title="${esc(HSTATUS[k]?.[1]||"")}">${esc(l)} · ${n}</button>`).join("");
   const cLabel=Object.fromEntries((cstate.set?.concepts||[]).map(c=>[c.id,c.label]));
-  const options=set.practices.map(p=>`<option value="${esc(p.id)}">${esc(p.label.slice(0,60))}</option>`).join("");
+  hstate.moveOptions=set.practices.map(p=>`<option value="${esc(p.id)}">${esc(p.label.slice(0,60))}</option>`).join("");
   const shown=rows.filter(r=>hstate.filter==="all"||r.st.includes(hstate.filter)).slice(0,150);
   $("hList").innerHTML=shown.map(({p,st,n})=>{ const ms=p.members.map(id=>idx[id]).filter(Boolean);
     return `<div class="concept${p.decision==="rejected"?" rejected":""}"><div class="concept-h">
@@ -1277,7 +1277,7 @@ function renderHTable(){
       ${(p.conflicts||[]).map(f=>`<div class="conf"><span class="pill p-bad">${esc(f.type)}</span><span>${esc(f.text)}</span></div>`).join("")}
       <div style="overflow-x:auto"><table class="members"><tr><th>Source</th><th>What it says (paraphrase)</th><th>Where</th><th></th></tr>
       ${ms.map(x=>`<tr><td><span class="pill">${esc(srcTitle(x.sourceId))}</span></td><td>${esc(x.action)}${[x.who&&"who: "+x.who,x.cargo&&"cargo: "+x.cargo,x.gear&&"gear: "+x.gear,x.conditions&&"conditions: "+x.conditions].filter(Boolean).length?`<div class="hint">${esc([x.who&&"who: "+x.who,x.cargo&&"cargo: "+x.cargo,x.gear&&"gear: "+x.gear,x.conditions&&"conditions: "+x.conditions].filter(Boolean).join(" · "))}</div>`:""}${x.numbers.length?`<div class="hint">${esc(x.numbers.map(n=>`${n.what}: ${n.value}${n.unit?" "+n.unit:""}`).join(" · "))}</div>`:""}</td><td class="hint">${esc(x.location)}</td>
-        <td><select data-hmove="${esc(x.id)}" aria-label="Move to another practice"><option value="">Move to…</option><option value="__new">A new practice</option>${options}</select></td></tr>`).join("")}</table></div>
+        <td><select data-hmove="${esc(x.id)}" aria-label="Move to another practice"><option value="">Move to…</option><option value="__new">A new practice</option></select></td></tr>`).join("")}</table></div>
       <div class="row" style="margin-top:8px"><button class="btn small${p.decision==="accepted"?" primary":""}" data-hdecide="accepted" data-pid="${esc(p.id)}">Accept</button><button class="btn small" data-hdecide="rejected" data-pid="${esc(p.id)}">Reject</button>${p.decision!=="draft"?`<button class="btn small" data-hdecide="draft" data-pid="${esc(p.id)}">Back to draft</button>`:""}<button class="btn small" data-hrename="${esc(p.id)}">Rename</button></div></div>`; }).join("")
     + (rows.filter(r=>hstate.filter==="all"||r.st.includes(hstate.filter)).length>150?`<div class="hint">Showing the 150 with most sources; use the filters to see others.</div>`:"");
   renderSheetSel();
@@ -2086,6 +2086,10 @@ $("driveOut").addEventListener("change",(ev)=>{ const t=ev.target, ds=t.dataset;
   if(ds.duse) renderDrive(); });
 
 // Records from the database are read-only; work on an editable copy.
+// "Move to…" lists are filled only when opened: one full list per row made hundreds of thousands of elements.
+function fillMoveList(ev){ const sel=ev.target.closest?.("select[data-move],select[data-hmove]"); if(!sel||sel.dataset.filled) return;
+  sel.insertAdjacentHTML("beforeend", sel.dataset.move!==undefined ? (cstate.moveOptions||"") : (hstate.moveOptions||"")); sel.dataset.filled="1"; }
+for(const id of ["cList","hList"]) for(const t of ["pointerdown","touchstart","focusin","keydown"]) $(id).addEventListener(t,fillMoveList,{passive:true});
 let heavyStarted=false, heavyWanted=false, startHeavy=()=>{ heavyWanted=true; };
 const own=(x)=>x==null?x:JSON.parse(JSON.stringify(x));
 // ---------- boot ----------
