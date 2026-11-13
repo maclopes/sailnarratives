@@ -306,13 +306,14 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":
 function toast(msg){const t=$("toast");t.textContent=msg;t.hidden=false;clearTimeout(toast.h);toast.h=setTimeout(()=>t.hidden=true,2600);}
 function setSave(msg){$("saveState").textContent=msg;}
 
-const BUILD="2026-11-13 · version 23";
+const BUILD="2026-11-14 · version 24";
 $("buildTag").textContent=BUILD;
 // ---------- tabs ----------
 function showTab(name){
   for (const b of document.querySelectorAll(".tabs button")) b.setAttribute("aria-selected", String(b.dataset.tab===name));
   for (const p of ["project","materials","readiness","concepts","history","situations","narrative","report"]) $("panel-"+p).hidden = p!==name;
   try{localStorage.setItem("intake.tab",name);}catch{}
+  if (!["project","materials","readiness"].includes(name)) startHeavy();
   if (name==="readiness") renderReadiness();
   if (name==="concepts") renderConcepts();
   if (name==="report") renderReport();
@@ -2085,6 +2086,7 @@ $("driveOut").addEventListener("change",(ev)=>{ const t=ev.target, ds=t.dataset;
   if(ds.duse) renderDrive(); });
 
 // Records from the database are read-only; work on an editable copy.
+let heavyStarted=false, heavyWanted=false, startHeavy=()=>{ heavyWanted=true; };
 const own=(x)=>x==null?x:JSON.parse(JSON.stringify(x));
 // ---------- boot ----------
 function renderAll(){ renderProject(); renderMaterials(); renderForm(); if(!$("panel-readiness").hidden) renderReadiness(); if(!$("panel-concepts").hidden) renderConcepts(); if(!$("panel-history").hidden) renderHistory(); }
@@ -2103,6 +2105,7 @@ try{ const t=localStorage.getItem("intake.tab"); if(t) showTab(t); }catch{}
     e=>{ clearTimeout(timer); setSave("Could not load: "+(e.message||e.code)); });
   db.collection("materials").onSnapshot(s=>{ clearTimeout(timer); state.materials=s.docs.map(d=>({id:d.id,...own(d.data())})); renderMaterials(); if(!$("panel-readiness").hidden) renderReadiness(); if(!$("panel-concepts").hidden) renderConcepts(); },
     e=>{ clearTimeout(timer); setSave("Could not load: "+(e.message||e.code)); });
+  startHeavy=()=>{ if(heavyStarted) return; heavyStarted=true;
   const cRefresh=()=>{ if(!$("panel-concepts").hidden && !cstate.running) renderConcepts(); };
   db.collection("texts").onSnapshot(s=>{ cstate.texts=Object.fromEntries(s.docs.map(d=>[d.id,own(d.data())])); cRefresh(); }, ()=>{});
   db.collection("candidates").onSnapshot(s=>{ cstate.cands=Object.fromEntries(s.docs.map(d=>[d.id,own(d.data())])); cRefresh(); }, ()=>{});
@@ -2128,5 +2131,7 @@ try{ const t=localStorage.getItem("intake.tab"); if(t) showTab(t); }catch{}
   db.collection("reports").orderBy("createdAt","desc").limit(10).onSnapshot(s=>{ rstate.history=s.docs.map(d=>({id:d.id,...own(d.data())})); if(!rstate.running) rstate.report=rstate.history[0]||rstate.report; rRefresh(); }, ()=>{});
   db.doc("summaries/concepts").onSnapshot(s=>{ summary=s.exists?own(s.data()):null; if(!$("panel-concepts").hidden) renderSummary(); }, ()=>{});
   db.doc("concepts/current").onSnapshot(s=>{ if(!cstate.running){ cstate.set=s.exists?own(s.data()):null; cRefresh(); } }, ()=>{});
+  };
+  if(heavyWanted) startHeavy();
 })();
 </script>
