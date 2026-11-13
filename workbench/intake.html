@@ -956,7 +956,7 @@ async function linkConcepts(onlyNew){
   if(!todo.length){ if(!onlyNew) $("cRun").textContent="Nothing to check."; return; }
   cstate.running=true; $("cLink").disabled=true; $("cFind").disabled=true;
   const fatal=(e)=>e?.code==="not_granted"||e?.code==="rate_limited"||e?.code==="unavailable";
-  const B=60; let done=0;
+  const B=30; let done=0;
   try{
     for(let i=0;i<todo.length;i+=B){
       $("cRun").textContent=`Checking against the game: ${Math.min(i+B,todo.length)} of ${todo.length} concepts…`;
@@ -976,7 +976,8 @@ async function linkConcepts(onlyNew){
       }
       cstate.set.updatedAt=now; await saveDoc("concepts/current", cstate.set); renderCTable();
     }
-    $("cRun").textContent=`Checked ${done} concepts against the game.`;
+    const missed=todo.filter(c=>!c.linkedAt).length;
+    $("cRun").textContent=`Checked ${done} concepts against the game.`+(missed?` ${missed} got no answer; press Check against the game to retry them.`:"");
   }catch(e){ $("cRun").textContent=(e.code==="not_granted"?"Asking Claude is not allowed in this view.":e.code==="rate_limited"?"Too many requests; wait a minute.":"Stopped: "+(e.message||e.code||e))+" Checks so far are saved; press Check against the game to continue."; }
   cstate.running=false; $("cLink").disabled=false; renderCSources();
 }
@@ -1365,20 +1366,41 @@ async function buildReport(){
   const ask=async(prompt)=>{ for(let a=0;a<2;a++){ try{ return await sample.json(prompt,{modelTier:"default"}); }catch(e){ if(fatal(e)||a===1) throw e; } } };
   try{
     const info=rows.filter(r=>r.c.decision!=="rejected" && !(r.c.scope==="out" && r.c.decision!=="accepted")).map(r=>({c:r.c, ms:r.ms, sim:r.ms.some(x=>x.kind==="simulation")||(r.c.simLinks||[]).length>0, srcs:[...new Set(r.ms.filter(x=>x.kind!=="simulation").map(x=>x.sourceId))]}));
-    // 1. sort concepts into categories (only those not sorted yet)
-    const todo=info.filter(x=>!rstate.classes[x.c.id]); const B=100;
-    for(let i=0;i<todo.length;i+=B){
-      $("rState").textContent=`Sorting concepts by kind: ${Math.min(i+B,todo.length)} of ${todo.length}…`;
-      const batch=todo.slice(i,i+B).map(x=>({id:x.c.id, label:x.c.label, terms:[...new Set(x.ms.map(m=>m.term))].slice(0,5), meaning:String(x.ms.find(m=>m.kind!=="simulation")?.definition||x.ms[0]?.definition||"").slice(0,80), sources:x.srcs.length, sim:x.sim}));
-      const r=await ask(classifyPrompt(batch));
-      for(const it of (Array.isArray(r?.items)?r.items:[])) if(it?.id) rstate.classes[it.id]={category:String(it.category||"other"), name:String(it.name||""), area:String(it.area||""), needs:String(it.needs||"")};
-      await saveR("report/classes",{byConcept:rstate.classes, updatedAt:new Date().toISOString()});
+    // 1. sort concepts into categories (only those not sorted yet); check every answer came back
+    const asItem=(x)=>({id:x.c.id, label:x.c.label, terms:[...new Set(x.ms.map(m=>m.term))].slice(0,5), meaning:String(x.ms.find(m=>m.kind!=="simulation")?.definition||x.ms[0]?.definition||"").slice(0,80), sources:x.srcs.length, sim:x.sim});
+    // boats and places named in the history's practices, sorted the same way
+    const hidx0=hIndex(), named={};
+    for(const p of (hstate.set?.practices||[]).filter(p=>p.decision!=="rejected")){ const srcs=[...new Set(p.members.map(id=>hidx0[id]?.sourceId).filter(Boolean))];
+      for(const [kind,list] of [["boat",p.boats||[]],["place",p.places||[]]]) for(const nm of list){ const k=(kind==="boat"?"hb:":"hp:")+norm(nm).slice(0,60); (named[k] ||= {id:k, label:nm, kind, srcs:new Set(), practices:[]}); srcs.forEach(x=>named[k].srcs.add(x)); named[k].practices.push(p.id); } }
+    const namedItems=Object.values(named).map(n=>({id:n.id, label:n.label, terms:[n.label], meaning:n.kind==="boat"?"a boat named in a historical source":"a place named in a historical source", sources:n.srcs.size, sim:false}));
+    let pending=[...info.filter(x=>!rstate.classes[x.c.id]).map(asItem), ...namedItems.filter(n=>!rstate.classes[n.id])];
+    const total=pending.length; let unsorted=0;
+    for(const size of [40,15]){
+      const left=[];
+      for(let i=0;i<pending.length;i+=size){
+        $("rState").textContent=`Sorting by kind: ${total-pending.length+i} of ${total}…`;
+        const batch=pending.slice(i,i+size); const r=await ask(classifyPrompt(batch)); const got=new Set();
+        for(const it of (Array.isArray(r?.items)?r.items:[])) if(it?.id && batch.some(b=>b.id===it.id)){ rstate.classes[it.id]={category:String(it.category||"other").toLowerCase(), name:String(it.name||""), area:String(it.area||""), needs:String(it.needs||"")}; got.add(it.id); }
+        left.push(...batch.filter(b=>!got.has(b.id)));
+        await saveR("report/classes",{byConcept:rstate.classes, updatedAt:new Date().toISOString()});
+      }
+      pending=left; if(!pending.length) break;
     }
+    unsorted=pending.length;
     const cls=(x)=>rstate.classes[x.c.id]||{category:"other"};
     // 2. boats and places, grouped by name
     const group=(cat,keyf)=>{ const g={}; for(const x of info.filter(x=>cls(x).category===cat)){ const k=keyf(x); if(!k) continue; (g[k] ||= {xs:[]}).xs.push(x); } return Object.values(g); };
-    const boats=group("boat",x=>norm(cls(x).name||x.c.label)).map(({xs})=>{ const name=cls(xs[0]).name||xs[0].c.label; return {name, status:matchBoat(name), sources:[...new Set(xs.flatMap(x=>x.srcs))], concepts:xs.map(x=>x.c.id)}; });
-    const places=group("place",x=>norm(cls(x).name||x.c.label)+"|"+cls(x).area).map(({xs})=>{ const c0=cls(xs[0]); const name=c0.name||xs[0].c.label; return {name, area:c0.area, status:matchPlace(name,c0.area), sources:[...new Set(xs.flatMap(x=>x.srcs))], concepts:xs.map(x=>x.c.id)}; });
+    // boats and places from the concepts and from the history's practices, merged by name
+    const ents={};
+    const addEnt=(cat,c0,label,srcs,conceptId,evidence)=>{ const name=c0.name||label; const key=cat+"|"+norm(name).replace(/s$/,"")+(cat==="place"?"|"+c0.area:"");
+      const e=(ents[key] ||= {cat, name, area:c0.area, sources:new Set(), concepts:[], evidence:[]}); srcs.forEach(x=>e.sources.add(x)); if(conceptId) e.concepts.push(conceptId); if(evidence) e.evidence.push(...evidence); };
+    for(const x of info){ const c0=cls(x); if(c0.category==="boat"||c0.category==="place") addEnt(c0.category,c0,x.c.label,x.srcs,x.c.id,null); }
+    for(const n of Object.values(named)){ const c0=rstate.classes[n.id]; if(!c0||(c0.category!=="boat"&&c0.category!=="place")) continue;
+      const ev=n.practices.slice(0,3).flatMap(pid=>{ const p=hstate.set.practices.find(q=>q.id===pid); const m0=p&&hidx0[p.members[0]]; return m0?[`- ${srcTitle(m0.sourceId)}${m0.location?" ("+m0.location+")":""}: ${m0.action}`]:[]; });
+      addEnt(c0.category,c0,n.label,[...n.srcs],null,ev); }
+    const finish=(e)=>({name:e.name, area:e.area, sources:[...e.sources], concepts:[...new Set(e.concepts)], ...(e.concepts.length?{}:{evidence:e.evidence.slice(0,6)})});
+    const boats=Object.values(ents).filter(e=>e.cat==="boat").map(e=>({...finish(e), status:matchBoat(e.name)}));
+    const places=Object.values(ents).filter(e=>e.cat==="place").map(e=>({...finish(e), status:matchPlace(e.name,e.area)}));
     // 3. sailing behaviour and boat parts
     const physics=info.filter(x=>["sailing","hull"].includes(cls(x).category)).map(x=>({name:x.c.label, kind:cls(x).category, status:x.sim?"shown":(/out of scope/i.test(cls(x).needs)?"out of scope":"not shown"), needs:x.sim?"":cls(x).needs, sources:x.srcs, concepts:[x.c.id]}));
     // 4. historical practices against the game's activities
@@ -1387,7 +1409,7 @@ async function buildReport(){
       return {key:"h:"+p.id, name:p.label, srcs:[...new Set(ms.map(x=>x.sourceId))], meaning:String(ms[0]?.action||"").slice(0,120), boat:p.boats.slice(0,2).join(", "), place:p.places.slice(0,2).join(", "),
         evidence:ms.slice(0,6).map(x=>`- ${srcTitle(x.sourceId)}${x.location?" ("+x.location+")":""}: ${x.action}`)}; });
     const prac=hprac.length ? hprac : info.filter(x=>cls(x).category==="practice"&&x.srcs.length).map(x=>({key:x.c.id, name:x.c.label, srcs:x.srcs, meaning:String(x.ms[0]?.definition||"").slice(0,100), concepts:[x.c.id]}));
-    const P=60;
+    const P=30;
     for(let i=0;i<prac.length;i+=P){
       $("rState").textContent=`Comparing practices with the game's activities: ${Math.min(i+P,prac.length)} of ${prac.length}…`;
       const batch=prac.slice(i,i+P).map(x=>({id:x.key, practice:x.name, boat:x.boat||"", place:x.place||"", meaning:x.meaning, sources:x.srcs.length}));
@@ -1406,7 +1428,7 @@ async function buildReport(){
     const id="r"+report.createdAt.replace(/[^0-9]/g,"").slice(0,14);
     await saveR("reports/"+id, report); rstate.report={id,...report};
     if(!db) rstate.history=[rstate.report,...rstate.history];
-    $("rState").textContent="Done.";
+    $("rState").textContent="Done."+(unsorted?` ${unsorted} concepts could not be sorted by kind; build again to retry them.`:"");
   }catch(e){ $("rState").textContent=(e.code==="not_granted"?"Asking Claude is not allowed in this view.":e.code==="rate_limited"?"Too many requests; wait a minute.":"Stopped: "+(e.message||e.code||e))+" Sorting done so far is kept; build again to continue."; }
   rstate.running=false; $("rBuild").disabled=false; renderReport();
 }
