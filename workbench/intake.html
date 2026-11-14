@@ -308,7 +308,7 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":
 function toast(msg){const t=$("toast");t.textContent=msg;t.hidden=false;clearTimeout(toast.h);toast.h=setTimeout(()=>t.hidden=true,2600);}
 function setSave(msg){$("saveState").textContent=msg;}
 
-const BUILD="2026-11-14 · version 28";
+const BUILD="2026-11-14 · version 29";
 $("buildTag").textContent=BUILD;
 // ---------- tabs ----------
 function showTab(name){
@@ -1893,8 +1893,21 @@ function isAreaItself(name){
     if(rest.every(t=>GENERIC.has(t)) || rest.some(t=>STRETCH.has(t))) return true; }
   return false;
 }
+// one key per boat type: no generic word in front ("Barco Moliceiro" = "Moliceiro", but "barco de
+// água acima" stays), no "do Tejo" after it, other names of a type from the pack's aliases
+function boatKey(name){
+  const w=rstate.world, words=new Set((w.aliases?.boat_words||[]).map(spell));
+  const areas=[...Object.values(w.aliases?.areas||{}).flat(), ...Object.values(w.area_names||{})].map(spell);
+  let t=spell(name).replace(/[;,/].*$/,"").trim();
+  for(const a of areas) t=t.replace(new RegExp(" (do|da|de|of the|from the) "+a.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"$"),"");
+  const parts=t.split(" "); if(words.has(parts[0]) && parts[0].endsWith("s") && words.has(parts[0].slice(0,-1))) parts[0]=parts[0].slice(0,-1);
+  t=parts.join(" "); if(parts.length>1 && words.has(parts[0]) && !["de","do","da","dos","das","a","of"].includes(parts[1])) t=parts.slice(1).join(" ");
+  t=t.replace(/s$/,"");
+  for(const [own,others] of Object.entries(w.aliases?.boats||{})) if([own,...others].some(o=>spell(o).replace(/s$/,"")===t)) return spell(own).replace(/s$/,"");
+  return t;
+}
 function matchBoat(name){
-  const k=norm(name).replace(/s$/,""); const b=rstate.world.boats.find(b=>norm(b.name)===k || norm(b.name)===norm(name));
+  const k=boatKey(name); const b=rstate.world.boats.find(b=>boatKey(b.name)===k);
   return b ? (b.in_development?"in development":"in game") : "missing";
 }
 async function saveR(path,data){ if(db) await db.doc(path).set(data); }
@@ -1935,8 +1948,8 @@ async function buildReport(){
     const group=(cat,keyf)=>{ const g={}; for(const x of info.filter(x=>cls(x).category===cat)){ const k=keyf(x); if(!k) continue; (g[k] ||= {xs:[]}).xs.push(x); } return Object.values(g); };
     // boats and places from the concepts and from the history's practices, merged by name
     const ents={};
-    const addEnt=(cat,c0,label,srcs,conceptId,evidence)=>{ const name=c0.name||label; const key=cat+"|"+nameKey(name)+(cat==="place"?"|"+c0.area:"");
-      const e=(ents[key] ||= {cat, name, area:c0.area, sources:new Set(), concepts:[], evidence:[]}); srcs.forEach(x=>e.sources.add(x)); if(conceptId) e.concepts.push(conceptId); if(evidence) e.evidence.push(...evidence); };
+    const addEnt=(cat,c0,label,srcs,conceptId,evidence)=>{ const name=c0.name||label; const key=cat+"|"+(cat==="boat"?boatKey(name):nameKey(name))+(cat==="place"?"|"+c0.area:"");
+      const e=(ents[key] ||= {cat, name, area:c0.area, sources:new Set(), concepts:[], evidence:[]}); (e.names ||= new Set()).add(name); srcs.forEach(x=>e.sources.add(x)); if(conceptId) e.concepts.push(conceptId); if(evidence) e.evidence.push(...evidence); };
     const isList=(t)=>/;/.test(t)||/^\S.* (to|a|até|->|–) \S/.test(String(t))&&!isAreaItself(t)&&/\b(to|até)\b|->|–/.test(String(t)); // lists and routes are not one place
     for(const x of info){ const c0=cls(x); if((c0.category==="boat"||c0.category==="place")&&!isList(c0.name||x.c.label)) addEnt(c0.category,c0,x.c.label,x.srcs,x.c.id,null); }
     for(const n of Object.values(named)){ const c0=rstate.classes[n.id]; if(!c0||(c0.category!=="boat"&&c0.category!=="place")||isList(c0.name||n.label)) continue;
@@ -1947,7 +1960,8 @@ async function buildReport(){
       if(other){ const t=other[1]; e.sources.forEach(x=>t.sources.add(x)); t.concepts.push(...e.concepts); t.evidence.push(...e.evidence); delete ents[k]; } }
     const regionNames=[...new Set([...info.filter(x=>cls(x).category==="region").map(x=>cls(x).name||x.c.label), ...Object.values(named).filter(n=>rstate.classes[n.id]?.category==="region").map(n=>rstate.classes[n.id].name||n.label)])].sort();
     const finish=(e)=>({name:e.name, area:e.area, sources:[...e.sources], concepts:[...new Set(e.concepts)], ...(e.concepts.length?{}:{evidence:e.evidence.slice(0,6)})});
-    const boats=Object.values(ents).filter(e=>e.cat==="boat").map(e=>({...finish(e), status:matchBoat(e.name)}));
+    const boats=Object.values(ents).filter(e=>e.cat==="boat").map(e=>{ const gb=rstate.world.boats.find(b=>boatKey(b.name)===boatKey(e.name)); const names=[...(e.names||[e.name])];
+      return {...finish(e), name:gb?gb.name:names.sort((a,b)=>a.length-b.length)[0], also:names.filter(n=>norm(n)!==norm(gb?gb.name:names[0])).slice(0,6), status:matchBoat(e.name)}; });
     const places=Object.values(ents).filter(e=>e.cat==="place").map(e=>({...finish(e), status:matchPlace(e.name,e.area)}));
     // 3. sailing behaviour and boat parts
     const physics=info.filter(x=>["sailing","hull"].includes(cls(x).category)).map(x=>({name:x.c.label, kind:cls(x).category, status:x.sim?"shown":(/out of scope/i.test(cls(x).needs)?"out of scope":"not shown"), needs:x.sim?"":cls(x).needs, sources:x.srcs, concepts:[x.c.id]}));
@@ -2027,7 +2041,7 @@ function renderReport(){
       ${tile(c.practicesCovered,`practices covered · ${c.practicesPartly} partly`,"practicesCovered",true)}${tile(c.practicesMissing,"practices with no activity","practicesMissing",false)}
       ${tile(c.conflicts,"conflicts between sources","conflicts",false)}
     </div>
-    <div class="section"><h2>Boats</h2>${tbl(by(r.boats),[["Boat",x=>`<td>${esc(x.name)}</td>`],["Sources",nsrc],["In the game",x=>st(x.status)]])}</div>
+    <div class="section"><h2>Boats</h2>${tbl(by(r.boats),[["Boat",x=>`<td>${esc(x.name)}${(x.also||[]).length?`<div class="hint">also written: ${esc(x.also.join(", "))}</div>`:""}</td>`],["Sources",nsrc],["In the game",x=>st(x.status)]])}</div>
     <div class="section"><h2>Places</h2>${(r.regions||[]).length?`<p class="hint">Not counted as places: ${r.regions.length} countries, seas, regions and whole rivers (${esc(r.regions.slice(0,12).join(", "))}${r.regions.length>12?"…":""}).</p>`:""}${tbl(by(r.places.filter(p=>p.status!=="the river or area itself")),[["Place",x=>`<td>${esc(x.name)}</td>`],["Area",x=>`<td class="hint">${esc(rstate.world.area_names?.[x.area]||x.area||"")}</td>`],["Sources",nsrc],["In the game",x=>st(x.status)]])}</div>
     <div class="section"><h2>Sailing and the boat</h2>${tbl(by(r.physics),[["Concept",x=>`<td>${esc(x.name)}<div class="hint">${esc(x.kind==="hull"?"boat part or gear":"sailing")}</div></td>`],["Sources",nsrc],["Simulation",x=>st(x.status)],["Would need",x=>`<td class="hint">${esc(x.needs||"")}</td>`]])}</div>
     <div class="section"><h2>Historical practices and the game's activities</h2>${tbl(by(r.practices),[["Practice",x=>`<td>${esc(x.name)}</td>`],["Sources",nsrc],["In the game",x=>st(x.status)],["Closest activity",x=>`<td class="hint">${esc(x.activity||"")}${x.why?`<div>${esc(x.why)}</div>`:""}</td>`]])}</div>

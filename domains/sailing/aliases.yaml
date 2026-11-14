@@ -16,3 +16,9 @@ places:
   Lisboa: [Lisbon, Lisbonne]
   Setúbal: [Setubal]
   Almada: [Cacilhas]
+# Boat names: generic words in front of a type ("Barco Moliceiro" = Moliceiro, "boat Catraio" =
+# Catraio; "barco de água acima" keeps its "barco", which is part of the name), and other names
+# of one type.
+boat_words: [barco, barcos, boat, boats, embarcação, embarcações]
+boats:
+  Vapor: [steamboat, steamer, steamship, barco a vapor, steam boat, passenger steamer, steam passenger boat, steam cargo boat, company steamer]
