@@ -485,6 +485,14 @@ scope*. **4. Practices against activities** (`activityPrompt`): *covered*, *part
 **Relevance:** every finding counts its **independent sources**; issue drafts are written only for
 findings with at least the chosen number of sources (default 2), most sources first.
 
+**Detailed report:** the report of 14 November, 10:59 (workbench version 29, game `1d66225`)
+is written up in full in [`docs/game-report-2026-11-14.md`](game-report-2026-11-14.md): 6 of 111
+boats and 37 of 178 places in the game, 133 of 190 sailing and boat concepts shown, 10 of 111
+practices covered and 41 partly, 11 conflicts, the game additions, recommendations for the
+game's developers, and every list in the appendices.
+
+The earlier figures below are from the report of 07:11, kept to show how the fixes changed it.
+
 **Result (report of 14 November, 07:11, on the old world list):**
 
 | | In the game | Not in the game |

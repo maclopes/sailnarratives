@@ -2886,6 +2886,7 @@
     "Tagus",
     "Rio Tejo",
     "River Tagus",
+    "Rio de Lisboa",
     "Estuário do Tejo",
     "Tagus estuary",
     "Baixo Tejo",
@@ -2929,7 +2930,11 @@
   "places": {
    "Lisboa": [
     "Lisbon",
-    "Lisbonne"
+    "Lisbonne",
+    "Porto de Lisboa",
+    "Port of Lisbon",
+    "Ribeira de Lisboa",
+    "Lisbon harbour"
    ],
    "Setúbal": [
     "Setubal"

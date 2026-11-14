@@ -308,7 +308,7 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":
 function toast(msg){const t=$("toast");t.textContent=msg;t.hidden=false;clearTimeout(toast.h);toast.h=setTimeout(()=>t.hidden=true,2600);}
 function setSave(msg){$("saveState").textContent=msg;}
 
-const BUILD="2026-11-14 · version 29";
+const BUILD="2026-11-14 · version 30";
 $("buildTag").textContent=BUILD;
 // ---------- tabs ----------
 function showTab(name){
@@ -1870,6 +1870,7 @@ Practices:
 ${JSON.stringify(batch)}`;
 }
 function matchPlace(name, area){
+  const w0=rstate.world; for(const [own,others] of Object.entries(w0.aliases?.places||{})) if(others.some(o=>spell(o)===spell(name))) name=own;
   const w=rstate.world, k=norm(name), eq=(list)=>(list||[]).some(x=>norm(x)===k);
   const mf=w.map_files?.[area]||area;
   if(area && w.ports[area] && eq(w.ports[area])) return "port";
@@ -1884,7 +1885,7 @@ function matchPlace(name, area){
 // one key for spellings of one name: no accents or case, "d'água" = "de água", no plural s
 const spell=(t)=>norm(String(t||"").replace(/\bd['’]\s?/gi,"de "));
 const nameKey=(t)=>spell(t).replace(/s$/,"");
-const GENERIC=new Set("rio river estuario estuary foz mouth baixo lower alto upper medio middle vale valley margem margens margin margins riverbank riverbanks riverbed bank banks channel channels canal canais bacia basin leziria lezirias sul norte south north esteiros aguas waters of the do da de dos das em at ao a e and".split(" "));
+const GENERIC=new Set("direita esquerda right left rio river estuario estuary foz mouth baixo lower alto upper medio middle vale valley margem margens margin margins riverbank riverbanks riverbed bank banks channel channels canal canais bacia basin leziria lezirias sul norte south north esteiros aguas waters of the do da de dos das em at ao a e and".split(" "));
 const STRETCH=new Set("between entre below above abaixo acima stretch troco from to ate desde".split(" "));
 function isAreaItself(name){
   const w=rstate.world, k=" "+spell(name).replace(/[-–,;:()]/g," ").replace(/\s+/g," ")+" ";
@@ -1948,7 +1949,8 @@ async function buildReport(){
     const group=(cat,keyf)=>{ const g={}; for(const x of info.filter(x=>cls(x).category===cat)){ const k=keyf(x); if(!k) continue; (g[k] ||= {xs:[]}).xs.push(x); } return Object.values(g); };
     // boats and places from the concepts and from the history's practices, merged by name
     const ents={};
-    const addEnt=(cat,c0,label,srcs,conceptId,evidence)=>{ const name=c0.name||label; const key=cat+"|"+(cat==="boat"?boatKey(name):nameKey(name))+(cat==="place"?"|"+c0.area:"");
+    const addEnt=(cat,c0,label,srcs,conceptId,evidence)=>{ let name=c0.name||label;
+      if(cat==="place") for(const [own,others] of Object.entries(rstate.world.aliases?.places||{})) if(others.some(o=>spell(o)===spell(name))) name=own; const key=cat+"|"+(cat==="boat"?boatKey(name):nameKey(name))+(cat==="place"?"|"+c0.area:"");
       const e=(ents[key] ||= {cat, name, area:c0.area, sources:new Set(), concepts:[], evidence:[]}); (e.names ||= new Set()).add(name); srcs.forEach(x=>e.sources.add(x)); if(conceptId) e.concepts.push(conceptId); if(evidence) e.evidence.push(...evidence); };
     const isList=(t)=>/;/.test(t)||/^\S.* (to|a|até|->|–) \S/.test(String(t))&&!isAreaItself(t)&&/\b(to|até)\b|->|–/.test(String(t)); // lists and routes are not one place
     for(const x of info){ const c0=cls(x); if((c0.category==="boat"||c0.category==="place")&&!isList(c0.name||x.c.label)) addEnt(c0.category,c0,x.c.label,x.srcs,x.c.id,null); }
