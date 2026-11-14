@@ -11,6 +11,8 @@ materiais/recordacao-livre.csv). Prints, as Markdown tables for the paper:
 - relevance: Spearman correlation between the tool's number of sources and the experts'
   importance (sections A to C);
 - conflicts: which version the experts chose; terms: which words they chose; lines;
+- activities (Folha 2B, blind): the game's mini-games against the tool's proposals: did the boats
+  do this, is the boat right, and how important is it to show;
 - coverage: of the boats and places the experts named unprompted (step 1), how many the tool's
   knowledge base has, and how many the game has.
 """
@@ -27,7 +29,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SECTIONS = {"A": "Boats missing from the game", "B": "Places missing from the game", "C": "Practices", "D": "Conflicts", "E": "Terms", "F": "Lines"}
+SECTIONS = {"G": "Activities (blind)", "A": "Boats missing from the game", "B": "Places missing from the game", "C": "Practices", "D": "Conflicts", "E": "Terms", "F": "Lines"}
 
 
 def norm(t: str) -> str:
@@ -100,6 +102,33 @@ def main(folder: Path) -> None:
     for item in sorted({r["item"] for r in rows if r["seccao"] == "E"}, key=lambda x: int(x[1:])):
         c = Counter(w.strip() for r in rows if r["item"] == item for w in r["termo_escolhido"].split(";") if w.strip())
         print(f"| {item} | {'; '.join(f'{k}: {v}' for k, v in c.most_common()) or '-'} |")
+
+    act = [r for r in rows if r["seccao"] == "G"]
+    if act:
+        print("\n| Activities (blind) | Items | Did this (yes of judged) | Right boat (yes of judged) | Mean importance |\n|---|---|---|---|---|")
+        def share(rs: list, k: str) -> str:
+            c = Counter(col(r, k) for r in rs)
+            j = c["sim"] + c["nao"]
+            return f"{c['sim']}/{j} ({100 * c['sim'] / j:.0f}%)" if j else "-"
+        def mean_imp(rs: list) -> str:
+            v = [int(col(r, "importante")) for r in rs if col(r, "importante") in ("1", "2", "3")]
+            return f"{sum(v) / len(v):.2f}" if v else "-"
+        groups = [("The game's mini-games", [r for r in act if r["origem"] == "jogo"]),
+                  ("The tool's proposals", [r for r in act if r["origem"] == "ferramenta"]),
+                  ("  related to a mini-game", [r for r in act if r["origem"] == "ferramenta" and r["estado_ferramenta"] == "related"]),
+                  ("  new to the game", [r for r in act if r["origem"] == "ferramenta" and r["estado_ferramenta"] == "new"])]
+        for name, rs in groups:
+            print(f"| {name} | {len({r['item'] for r in rs})} | {share(rs, 'certo')} | {share(rs, 'barco_certo')} | {mean_imp(rs)} |")
+        # per participant: is the mean importance of the tool's proposals at least that of the game's?
+        ge = 0
+        for pp in people:
+            g, t2 = mean_imp([r for r in act if r["participante"] == pp and r["origem"] == "jogo"]), mean_imp([r for r in act if r["participante"] == pp and r["origem"] == "ferramenta"])
+            ge += g != "-" and t2 != "-" and float(t2) >= float(g)
+        print(f"\nParticipants rating the tool's proposals at least as important as the game's, on average: {ge} of {len(people)}")
+        print("\n| Item | Origin | Did this | Right boat | Importance |\n|---|---|---|---|---|")
+        for item in sorted({r["item"] for r in act}, key=lambda x: int(x[1:])):
+            rs = [r for r in act if r["item"] == item]
+            print(f"| {item} {rs[0]['texto'][:60]} | {rs[0]['origem']} {rs[0]['estado_ferramenta']} | {share(rs, 'certo')} | {share(rs, 'barco_certo')} | {mean_imp(rs)} |")
 
     rep = max((json.load(open(f, encoding="utf-8")) for f in glob.glob(str(ROOT / "data/workbench/reports/*.json"))), key=lambda r: r["createdAt"])
     tool = {k: {norm(n) for e in rep[k] for n in [e["name"], *e.get("also", [])]} for k in ("boats", "places")}

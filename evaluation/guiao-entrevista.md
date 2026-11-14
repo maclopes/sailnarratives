@@ -1,7 +1,7 @@
 # Guião da entrevista: o jogo dos barcos tradicionais do Tejo
 
 Duração prevista: 45 a 60 minutos. Uma pessoa de cada vez. Materiais: Folha 1 (para o
-entrevistador anotar), Folha 2 (o conteúdo do jogo, para mostrar), Folha 3 (as afirmações a
+entrevistador anotar), Folha 2 (o conteúdo do jogo, para mostrar), Folha 2B (atividades, para mostrar e assinalar), Folha 3 (as afirmações a
 avaliar, para mostrar e assinalar), gravador (só com autorização).
 
 **Regra principal:** a ordem importa. No passo 1 a pessoa responde **sem ver nada**. Só depois se
@@ -48,14 +48,23 @@ Fazer as perguntas uma a uma e anotar tudo na Folha 1. Depois de cada resposta, 
 6. **Erros.** "O que é que as pessoas costumam dizer de errado sobre estes barcos ou a sua
    história?"
 
-## 2. O conteúdo do jogo, sem jogar (10 min)
+## 2. O conteúdo do jogo, sem jogar (15 min)
 
-Mostrar a **Folha 2** (os barcos, as zonas, os lugares e as atividades que o jogo tem).
+Mostrar a **Folha 2** (os barcos, as zonas e os lugares que o jogo tem).
 
 > "Isto é o que o jogo tem hoje. Para cada coisa, diga se está certa, se está errada, ou se não
 > sabe. E o que é que falta?"
 
 A pessoa assinala na folha, ou o entrevistador assinala por ela. Anotar o que falta.
+
+Depois mostrar a **Folha 2B** (atividades):
+
+> "Estas são atividades que o jogo pode ter. Para cada uma: os barcos do Tejo faziam isto? O
+> barco é o certo para isto? E é importante mostrá-lo?"
+
+**Não dizer** quais atividades o jogo já tem e quais foram propostas pela ferramenta: a lista
+mistura as duas de propósito. Se a pessoa perguntar, responder "isso digo no fim" e, no fim,
+dizer.
 
 ## 3. O que a ferramenta encontrou (20 a 25 min)
 
@@ -88,7 +97,8 @@ Agradecer. Anotar a duração da entrevista.
 
 ## Notas para o entrevistador
 
-- Não dizer que o jogo "já tem" ou "não tem" alguma coisa antes do passo 2.
+- Não dizer que o jogo "já tem" ou "não tem" alguma coisa antes do passo 2, nem de onde vem cada
+  atividade da Folha 2B.
 - Se a pessoa perguntar "está certo?", responder "o que acha?" e anotar.
 - Anotar os nomes como são ditos (por exemplo "virar por d'avante", "Aldeia Galega"): a
   ortografia exata é corrigida depois.

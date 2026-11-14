@@ -5,7 +5,7 @@
 Reads the items to ask about (evaluation/items.yaml), the tool's data (data/workbench/), the
 game's world list (domains/sailing/game-world.json) and, from a checkout of the game, its
 Portuguese texts and boat pictures. Writes evaluation/materiais/: folha-1, folha-2, folha-3 as
-HTML (and PDF with --pdf, using the pre-installed Playwright), registo.csv (one row per item, to
+HTML, folha-2b (activities, shown blind) (and PDF with --pdf, using the pre-installed Playwright), registo.csv (one row per item, to
 fill in per participant) and recordacao-livre.csv (the step-1 answers).
 """
 
@@ -146,12 +146,21 @@ def sheet2(world: dict, tx: dict, img_dir: Path) -> str:
     for a, title in (("tejo", "Lugares do mapa do Tejo (estuário)"), ("medio", "Lugares do mapa do Médio Tejo")):
         if a in world["ports"]:
             b.append(f"<h2>{title}</h2><table>" + head + "".join(row3(html.escape(p)) for p in world["ports"][a]) + "</table>")
-    b.append('<h2 class="pb">Atividades do jogo</h2><table>' + head)
-    for act in [x for x in world["activities"] if x["type"] == "museum mini-game"]:
-        k = act["id"]
-        b.append(row3(html.escape(tx.get(k, act["title"])), html.escape(tx.get(k + ".desc", act.get("description", "")))))
-    b.append("</table><h2>O que falta no jogo?</h2>" + lines(6))
+    # the game's activities are not listed here: they are on Folha 2B, mixed blind with the tool's
+    b.append("<h2>O que falta no jogo?</h2>" + lines(6))
     return page("Folha 2", "".join(b))
+
+
+def sheet2b(items: dict) -> str:
+    """The game's activities and the tool's proposals in one list, with no sign of their origin."""
+    b = ['<h1>Folha 2B · Atividades para o jogo</h1><p class="sub">Atividades que o jogo pode ter. Para cada uma: os barcos do Tejo faziam isto? '
+         'O barco é o certo para isto? É importante mostrá-lo num jogo sobre o Tejo?</p>',
+         '<table><tr><th></th><th>Atividade</th><th>Faziam isto?<br>sim · não · não sei</th><th>Barco certo?<br>sim · não · não sei</th><th>Importante?<br>1 · 2 · 3</th></tr>']
+    for it in items.get("activities", []):
+        b.append(f'<tr><td class="id">{it["id"]}</td><td>{html.escape(it["pt"])}</td>'
+                 f'<td class="box">{SQ}{SQ}{SQ}</td><td class="box">{SQ}{SQ}{SQ}</td><td class="box">{SQ}{SQ}{SQ}</td></tr>')
+    b.append("</table><h2>Que outras atividades mostraria?</h2>" + lines(6))
+    return page("Folha 2B", "".join(b))
 
 
 def sheet3(items: dict, counts: dict) -> str:
@@ -185,12 +194,13 @@ def sheet3(items: dict, counts: dict) -> str:
 def templates(items: dict, counts: dict) -> None:
     with (OUT / "registo.csv").open("w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh)
-        w.writerow(["participante", "seccao", "item", "ref", "fontes_ferramenta", "estado_ferramenta", "texto",
-                    "certo (sim/nao/nao_sei)", "importante (1-3)", "ja_sabia (sim/nao)", "versao_escolhida", "termo_escolhido", "diria_assim (sim/nao)", "como_sabe", "notas"])
-        for sec, key in (("A", "boats"), ("B", "places"), ("C", "practices"), ("D", "conflicts"), ("E", "terms"), ("F", "lines")):
-            for it in items[key]:
+        w.writerow(["participante", "seccao", "item", "ref", "fontes_ferramenta", "estado_ferramenta", "origem", "texto",
+                    "certo (sim/nao/nao_sei)", "importante (1-3)", "ja_sabia (sim/nao)", "barco_certo (sim/nao/nao_sei)", "versao_escolhida", "termo_escolhido", "diria_assim (sim/nao)", "como_sabe", "notas"])
+        # G (Folha 2B): "certo" is "faziam isto?"; origem and estado (the tool's blind match) are for the analysis
+        for sec, key in (("G", "activities"), ("A", "boats"), ("B", "places"), ("C", "practices"), ("D", "conflicts"), ("E", "terms"), ("F", "lines")):
+            for it in items.get(key, []):
                 text = it.get("pt") or line_text(it["ref"])["pt"]
-                w.writerow(["P?", sec, it["id"], it["ref"], counts.get(it["ref"], ""), it.get("status", ""), text] + [""] * 8)
+                w.writerow(["P?", sec, it["id"], it["ref"], counts.get(it["ref"], ""), it.get("status", it.get("match", "")), it.get("origin", ""), text] + [""] * 9)
     with (OUT / "recordacao-livre.csv").open("w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh)
         w.writerow(["participante", "tipo (barco/lugar/trabalho/epoca/palavra/erro)", "nome_como_dito", "detalhe (para que servia, onde, quando)", "notas"])
@@ -200,7 +210,7 @@ def templates(items: dict, counts: dict) -> None:
 def to_pdf(files: list[Path]) -> None:
     js = """
 const {chromium}=require('playwright');(async()=>{const b=await chromium.launch();
-for(const f of process.argv.slice(2)){const p=await b.newPage();await p.goto('file://'+f);await p.pdf({path:f.replace(/\\.html$/,'.pdf'),format:'A4',printBackground:true});await p.close();}
+for(const f of process.argv.slice(1)){const p=await b.newPage();await p.goto('file://'+f);await p.pdf({path:f.replace(/\\.html$/,'.pdf'),format:'A4',printBackground:true});await p.close();}
 await b.close();})();"""
     for f in files:  # one browser per file: more robust than one for all
         subprocess.run(["node", "-e", js, str(f)], check=True)
@@ -224,7 +234,7 @@ def main() -> None:
         shutil.copy(f, img / f.name)
     tx = game_texts(a.game)
     files = []
-    for name, content in (("folha-1-registo", sheet1()), ("folha-2-o-jogo", sheet2(world, tx, img)), ("folha-3-achados", sheet3(items, counts))):
+    for name, content in (("folha-1-registo", sheet1()), ("folha-2-o-jogo", sheet2(world, tx, img)), ("folha-2b-atividades", sheet2b(items)), ("folha-3-achados", sheet3(items, counts))):
         f = OUT / f"{name}.html"
         f.write_text(content, encoding="utf-8")
         files.append(f)

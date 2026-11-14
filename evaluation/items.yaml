@@ -128,3 +128,24 @@ lines:
   - {id: F4, ref: "line:mini-supplies:l8", status: "needs work"}
   - {id: F5, ref: "line:mini-passengers:l7", status: "needs work"}
   - {id: F6, ref: "line:mini-passengers:l12", status: "needs work"}
+
+# G. Activities, shown blind on Folha 2B: the game's six Tagus mini-games and nine of the
+# tool's Tagus proposals (from practices not in section C, so nothing on Folha 3 gives their
+# origin away), in one shuffled list written in the same style. The sheet does not show the
+# origin; "origin" and "match" (the tool's blind comparison) are for the analysis only.
+activities:
+  - {id: G1, ref: "game:mini.downwind", origin: jogo, match: "", pt: "Falua: navegar com o vento pela popa até um ponto do rio."}
+  - {id: G2, ref: "situation:s38", origin: ferramenta, match: "related", pt: "Falua: levar o rei entre o Paço de Almeirim e Lisboa."}
+  - {id: G3, ref: "game:mini.passengers", origin: jogo, match: "", pt: "Catraio: levar passageiros de Lisboa para Almada, do outro lado do rio."}
+  - {id: G4, ref: "situation:s17", origin: ferramenta, match: "new", pt: "Muleta: diminuir o pano com vento forte, com a tripulação a subir à verga."}
+  - {id: G5, ref: "situation:s36", origin: ferramenta, match: "related", pt: "Muleta: pescar azevias e linguados no estuário durante a Quaresma, apesar da proibição da tartaranha."}
+  - {id: G6, ref: "game:mini.fishing", origin: jogo, match: "", pt: "Muleta: pescar com a rede na água, derivando de lado sobre os cardumes."}
+  - {id: G7, ref: "situation:s37", origin: ferramenta, match: "related", pt: "Fragata: levar sal, peixe e pano de Lisboa rio acima, até Santarém, Abrantes e Punhete."}
+  - {id: G8, ref: "situation:s58", origin: ferramenta, match: "related", pt: "Fragata: levar madeira rio abaixo até às tercenas de Lisboa."}
+  - {id: G9, ref: "game:mini.busy", origin: jogo, match: "", pt: "Fragata: atravessar com carga a parte mais movimentada do Tejo, entre muitos barcos, com rajadas e vento a rodar."}
+  - {id: G10, ref: "situation:s61", origin: ferramenta, match: "related", pt: "Catraio: sair de Vila Franca de Xira para pescar no rio."}
+  - {id: G11, ref: "situation:s15", origin: ferramenta, match: "related", pt: "Muleta: comércio pela costa, a trazer produtos do Algarve para o Tejo."}
+  - {id: G12, ref: "situation:s56", origin: ferramenta, match: "new", pt: "Fragata: subir o rio à vara ou puxada da margem, contra a corrente de inverno e os bancos de areia de verão."}
+  - {id: G13, ref: "situation:s39", origin: ferramenta, match: "related", pt: "Fragata: levar melões e vinho de Muge e da Azambuja para Lisboa, várias vezes por semana."}
+  - {id: G14, ref: "game:mini.supplies", origin: jogo, match: "", pt: "Canoa: levar pão, água e gelo a uma muleta que pesca no mar e trazer o seu peixe."}
+  - {id: G15, ref: "game:mini.upwind", origin: jogo, match: "", pt: "Falua: chegar a um ponto do rio contra o vento, bordejando."}

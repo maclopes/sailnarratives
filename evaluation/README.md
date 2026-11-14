@@ -20,7 +20,8 @@ the tool.
 | --- | --- | --- | --- |
 | 0 | Consent, recording, profile | `guiao-entrevista.md`, Folha 1 | who the expert is |
 | 1 | **Free recall**, nothing shown: boats, places, work, periods, words, common mistakes | Folha 1 (the interviewer writes) | an independent list to compare with the tool (coverage) |
-| 2 | **The game's content**, shown on paper, not played: boats, areas, places, activities. Right, wrong, missing? | Folha 2 | the expert's evaluation of the game |
+| 2 | **The game's content**, shown on paper, not played: boats, areas, places. Right, wrong, missing? | Folha 2 | the expert's evaluation of the game |
+| 2B | **Activities, blind**: the game's six Tagus mini-games mixed with nine of the tool's proposals, same style, origin not shown. Did the boats do this? Right boat? Important? | Folha 2B | the tool's proposals judged against the designer's choices |
 | 3 | **The tool's findings**: missing boats and places, practices, conflicts (which version is right), terms, lines. Correct? Important? Already known? | Folha 3 | precision, relevance, novelty; the conflicts settled |
 | 4 | Anything else; other people to hear | Folha 1 | |
 
@@ -33,6 +34,7 @@ the tool.
 | `build_materials.py` | builds the sheets and templates: `python evaluation/build_materials.py --pdf` (needs a checkout of the game next to this repository for its Portuguese texts and boat pictures) |
 | `materiais/folha-1-registo.pdf` | the interviewer's record sheet (profile, step 1, step 2 notes) |
 | `materiais/folha-2-o-jogo.pdf` | what the game has today (with the boats' pictures), large print, boxes to tick |
+| `materiais/folha-2b-atividades.pdf` | the mixed list of activities (section G of `items.yaml`; its origin is recorded there, not on the sheet) |
 | `materiais/folha-3-achados.pdf` | the tool's findings to judge, large print, boxes to tick |
 | `materiais/registo.csv` | one row per Folha 3 item, with the tool's number of sources; copy per participant and fill in |
 | `materiais/recordacao-livre.csv` | the step-1 answers, one row per name said |
@@ -53,6 +55,11 @@ deleted once transcribed and never committed.
 - **Conflicts:** which version the experts chose for each contradiction between sources (and how
   they know); this also corrects the knowledge base.
 - **Terms:** the words the experts use, against the tool's European Portuguese glossary.
+- **Activities (blind):** for the game's mini-games and the tool's proposals (and, among these,
+  those the tool's blind comparison found related or new), the share the experts judged real
+  practice, the share with the right boat, and the mean importance; and how many participants
+  rated the tool's proposals at least as important as the game's. The nine proposals come from
+  practices not shown on Folha 3, so nothing there gives their origin away.
 - **Coverage:** of the boats and places the experts named unprompted (step 1), how many the
   tool's knowledge base has, and how many the game has; the names the tool lacks show the gaps in
   its sources. Names are matched after removing accents, plurals, a generic "barco" in front and
