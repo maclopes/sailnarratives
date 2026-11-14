@@ -4,8 +4,8 @@ Version of 2026-11-14 (workbench version 26). The workbench is the tool's interf
 (`workbench/intake.html`, published at https://claude.ai/artifact/28te1trNq5pVdem1xFzUD9). This
 document explains what each step does, which rule or prompt it uses, how relations between
 items are made, how relevance is decided, and what each step produced for the first domain
-pack (traditional boats of the Tagus, the fragateiro game). The results were read from the
-workbench's database on 2026-11-14.
+pack (traditional boats of the Tagus, the fragateiro game), with examples. The results were
+read from the workbench's database on 2026-11-14 at about 08:00 UTC.
 
 ## The method in one paragraph
 
@@ -19,97 +19,107 @@ lines the game shows.
 
 ## Overview
 
-| Step (tab) | Input | Method | Output |
-| --- | --- | --- | --- |
-| 1 Project | the author | form | subject, audience, visit length, languages, goals, simplifications, tone |
-| 2 Materials | the author, Google Drive, link check | form, Drive import, rules | a source registry with licence, reliability, read status, held-out flag |
-| 3 Readiness | project and materials | rules, plus one Claude review | gaps per knowledge base, a `domain.yaml` manifest |
-| 4 Concepts | source texts | Claude extracts per piece of text, Claude groups in batches, rules give statuses, Claude checks against the game, Claude summarises | a concept table with source terms, statuses and conflicts |
-| 5 History | historical texts | Claude extracts practices, Claude groups, rules give statuses, Claude links to concepts | a practice table with evidence passages |
-| 6 Situations | practices, concepts, game world | Claude proposes activities, Claude compares blind with the game | activity proposals, game additions, blind comparison |
-| 7 Narrative | one mini-game, evidence, story bible | rules gather evidence, Claude plans, Claude writes, Claude and rules check | cast, beats and checked lines per mini-game |
-| 8 Game report | all of the above, game world | Claude sorts by kind, rules match against the game, Claude compares practices with activities | an evaluation of the game with issue drafts |
+| Step (tab) | Input | Method | Output | Result now |
+| --- | --- | --- | --- | --- |
+| 1 Project | the author | form | subject, audience, languages, goals | done |
+| 2 Materials | the author, Google Drive, link check | form, Drive import, rules | source registry | 44 materials, 23 with text |
+| 3 Readiness | project and materials | rules, one Claude review | gaps per base | gaps in licences and grades |
+| 4 Concepts | source texts | Claude reads, Claude groups, rules give statuses, Claude checks against the game | concept table | 1,536 terms → 935 concepts |
+| 5 History | historical texts | Claude reads, Claude groups, rules, Claude links to concepts | practice table | 1,073 passages → 283 practices |
+| 6 Situations | practices, concepts, game world | Claude proposes, Claude compares blind | activities, additions, comparison | 72 activities; 3 of 9 mini-games found blind |
+| 7 Narrative | one mini-game, evidence | rules gather evidence, Claude plans and writes, Claude and rules check | cast, beats, checked lines | 4 mini-games, 57 lines |
+| 8 Game report | all of the above, game world | Claude sorts by kind, rules match, Claude compares | evaluation and issue drafts | 6 of 129 boats, 38 of 202 places in the game |
 
 All Claude requests go through the page's `sample.json(prompt, {modelTier})`: tier `default` for
 reading and sorting, `complex` for planning, writing, summarising and comparing. Each request is
 retried once; "not allowed", "too many requests" and "unavailable" stop the run, keeping what
 was done.
 
+## Is everything up to date? What to run
+
+| Step | State | To do |
+| --- | --- | --- |
+| Concepts: reading and grouping | all 1,536 candidates grouped | nothing |
+| Concepts: check against the game | 891 of 935 checked | press **Check against the game** once more for the last 44 |
+| Concepts: summary of the sources | written on 12 November from the old table (633 concepts) | press **Write summary** |
+| History | 283 practices, all linked to concepts | nothing |
+| Situations and blind comparison | 72 activities, all compared | nothing |
+| Narrative | Seaweed: 15 lines written, not checked; Cargo with the Fragata: planned, no lines | **Check lines** on Seaweed; **Write lines** on Cargo if wanted |
+| Game report | built today, but on the old world list of the game | I loaded the current world list (Oeste area, lighthouses, windmill) into the workbench; press **Build report** |
+| Materials | 43 of 44 have no licence, none has a reliability grade; the moliceiro source has no language | fill in, in Materials |
+
+The results below are those of today's data; the game report figures will change slightly
+when it is built again on the current world list.
+
 ---
 
 ## 1. Project
 
-**What:** a form for the subject, audience, visit length (minutes), primary language with its
-variant (for example European Portuguese), other languages, learning goals, simplifications the
-simulation makes, and tone. Saved as one record (`project/main`).
+**What:** a form for the subject, audience, visit length, primary language with its variant,
+other languages, learning goals, the simulation's simplifications, and tone. Saved as one
+record (`project/main`).
 
 **Why it matters later:** the subject, goals, visit length and audience go into every prompt;
 the primary language variant decides which source terms count as the right ones (step 4) and
 the glossary used in writing (step 7).
 
 **Result:** "Boats of the Tagus", museum visitors, European Portuguese (pt-PT) first, English
-second; goals: the sailing concepts the simulation shows and the working life of the river's
-boats.
+second. Goals: the sailing concepts the simulation shows (points of sail, trim, tacking,
+gybing) and the working life of the river's boats.
 
 ## 2. Materials
 
-**What:** a registry of every source. Each has a kind (simulation, reference book, historical
-account, author's document, existing activity, person who can check), title, link or file,
-language, licence (open, CC0, copyright: cite and paraphrase only, permission, unknown),
-reliability (A scholarly or museum, B documented local history, C uncited), read status and
-notes.
+**What:** a registry of every source: kind (simulation, reference book, historical account,
+author's document, existing activity, person who can check), title, link or file, language,
+licence (open, CC0, copyright: cite and paraphrase only, permission, unknown), reliability (A
+scholarly or museum, B documented local history, C uncited), read status and notes.
 
 **Rules:**
-- *Required fields per kind* (for example a historical account needs language, licence and
-  reliability); missing ones show as "incomplete".
+- *Required fields per kind* (a historical account needs language, licence and reliability);
+  missing ones show as "incomplete".
 - *Held out:* "existing activity" items, and any item marked as describing the game's existing
   activities, are kept out of every input so the blind comparison (step 6) is fair.
 - *Link check:* `tagus-linkcheck` (pipeline) reports each link as works, moved, broken,
-  unreachable or not checked, with an archived copy when one exists; its report can be imported.
-- *Google Drive import:* walks a folder path (for example `projects/tagusnavy/historia`), lists
-  the files, matches each to an existing material by title or proposes a new one, and stores the
-  file's text (step 4 reads it).
+  unreachable or not checked, with an archived copy when one exists.
+- *Google Drive import:* walks a folder path (`projects/tagusnavy/historia`), lists the files,
+  matches each to a material by title or proposes a new one, and stores the file's text.
 
 **Result:** 44 materials: 36 historical accounts, 4 author's documents, 1 simulation (the
-fragateiro physics), 1 reference book (Veleiro.net sailing course, pt-BR), 1 existing activity
-(the game's mini-game list), 1 person (a historian). 32 read in full, 4 could not be read, 7
-not read. 5 held out (the existing activities, the story bible, the method document, the
-leaflet, the discussion summary). **Gaps:** no reliability grade and no licence recorded on 43
-of 44 (only one is marked "cite and paraphrase"), so everything is treated as copyrighted.
+fragateiro physics), 1 reference book (Veleiro.net sailing course, Brazilian Portuguese), 1
+existing activity (the game's mini-game list), 1 person (a historian). 5 held out (the
+existing activities, the story bible, the method document, the leaflet, the discussion summary).
+
+**Example of relevant information:** the registry is where copyright is decided. Only one source
+is marked "cite and paraphrase"; the other 43 have no licence, so the tool treats all of them as
+copyrighted (paraphrase, never quote) and warns before sending their text to Claude.
 
 ## 3. Readiness
 
 **What:** before any reading, a check of whether the materials can support each knowledge base.
 
-**Rules** (`readiness()`), one block per base, each finding graded ok / note / gap / blocks:
+**Rules** (`readiness()`), one block per base, each finding graded ok, note, gap or blocks:
 - *Project:* missing subject, audience, visit length, primary language or its variant, goals.
 - *Simulation:* at least one simulation item; someone who can confirm it (a developer).
-- *Concepts:* reference books in each project language and variant (a pt-BR course for a pt-PT
-  project gives a gap: terms differ), completeness.
+- *Concepts:* reference books in each project language and variant, completeness.
 - *History:* at least one account; grade A sources; ungraded, unknown licence, unread, dead
   links; half or more grade C; a historian listed.
-- *Blind comparison:* something held out; author documents that may mention existing
-  activities.
+- *Blind comparison:* something held out; author documents that may mention existing activities.
 
-A base is *blocked* if any finding blocks, *usable with gaps* if any is a gap, otherwise
-*ready*.
+A base is *blocked* if any finding blocks, *usable with gaps* if any is a gap, otherwise *ready*.
 
-**Claude's second look** (button "Ask Claude"): the project, the materials' metadata (titles,
-notes, kinds, licences, held-out flags; never the texts) and the rule findings are sent with
-this instruction:
+**Claude's second look** sends the metadata (never the texts) and the rule findings:
 
 > Fixed rules have already produced the findings listed in ruleFindings. Do not repeat them.
 > Suggest up to 8 further gaps, risks or contradictions that a careful researcher would notice
-> from the titles, notes and metadata: missing kinds of source, imbalances, likely licence or
-> reliability problems, materials that may contradict each other, questions to ask the people
-> listed. … Do not invent facts about the subject.
-> Return JSON only: `{"items":[{"area","severity":"blocks|gap|note","text"}]}`
+> from the titles, notes and metadata … Do not invent facts about the subject.
 
-**Output:** the findings, and an export of the pack manifest (`domain.yaml`).
+**Result:** simulation ready; concepts usable with gaps; history usable with gaps; blind
+comparison ready.
 
-**Result (by the rules today):** simulation ready; concepts with gaps (the only reference book
-is Brazilian Portuguese, so every pt-PT term needs checking); history with gaps (no grades, no
-licences, 4 unreadable); blind comparison ready (5 held out).
+**Example of relevant information:** "The Portuguese reference books are Portuguese (Brazil),
+not Portuguese (Portugal): terms may differ, so each term needs checking." This warning came true
+in step 4: the course says *cambar* and *jaibe*, the Tagus sources *virar por davante* and
+*virar em roda*.
 
 ## 4. Concepts
 
@@ -118,24 +128,16 @@ whether the game shows it.
 
 ### 4a. Getting the text
 
-- **PDF:** pdf.js extracts the text layer page by page, writing a `[page N]` marker before each
-  page so passages keep their location. A PDF with no text layer (a scan) is refused: paste the
-  text instead.
-- **Google Drive:** the text comes through the Drive connector.
-- **Paste**, for anything else.
-
-The text is stored per source (`texts/<source>`). **Result:** 21 sources with text, 895,375
-characters in all (17 from Drive, 1 PDF, 1 from the game's repository, 1 author document, 1
-excerpt).
+pdf.js extracts a PDF's text layer page by page with a `[page N]` marker before each page (a
+scan with no text layer is refused); Google Drive files come through the Drive connector;
+anything else is pasted. **Result:** 23 sources with text, about one million characters.
 
 ### 4b. Reading: extracting candidate concepts
 
-**Algorithm:** the text is cut into pieces of at most 6,000 characters, cutting at page,
-section or file markers where possible (`chunks()`). Each piece is one request, in order; the
-answers are saved after each piece, so a stopped run resumes at the next unread piece. Within a
-source, candidates with the same normalised term (lower case, no accents or quotes) are merged.
-Each candidate gets an id made of the source id, the text's length and a number
-(`m-ref-veleiro:abc:12`); when the text changes, the ids change and the source is read again.
+**Algorithm:** the text is cut into pieces of at most 6,000 characters at page, section or file
+markers (`chunks()`), one request per piece, in order, saved after each piece (a stopped run
+resumes). Within a source, candidates with the same normalised term are merged. Each gets an id
+(source, text length, number); a changed text is read again.
 
 **Prompt** (`extractPrompt`), per piece:
 
@@ -148,91 +150,89 @@ Each candidate gets an id made of the source id, the text's length and a number
 > - numbers: only values the source states (angles, speeds, limits), with what they measure.
 > - One item per distinct term, at most 30 items. Do not add anything that is not in the text.
 
-For the simulation's own description, the prompt adds: a concept is something the player does
-or experiences that the simulation computes, detects or controls, and `measured_by` names the
-signal, event or control that shows it.
+For the simulation's own description, a concept is something the player does or experiences
+that the simulation computes, detects or controls, and `measured_by` names the signal, event or
+control.
 
-Paraphrase only, with the location: this is how copyrighted sources are used (cite and
-paraphrase, never quote).
+**Result:** 1,536 candidates from 20 sources. Most: Pedrosa, *A Muleta e a Tartaranha* (220),
+Veleiro.net (178), the moliceiro heritage file (175), Gaspar, *Os portos fluviais do Tejo* (134),
+*Territórios da Lisboa Medieval* (130).
 
-**Result:** 1,334 candidate concepts from 18 sources. Largest: Pedrosa, *A Muleta e a
-Tartaranha* (220), Veleiro.net course (178), Gaspar, *Os portos fluviais do Tejo* (134),
-*Territórios da Lisboa Medieval* (130), "o tejo" site (124), *Portugal Marítimo* (96); the
-game's physics gave 66.
+**Example (one candidate):** Veleiro.net, page 7, term *Orça Fechada* (pt-BR): "Close-hauled:
+sailing as close to the wind line as possible, heading against it."
 
 ### 4c. Grouping: relations between candidates
 
-A relation here means **"these candidates name the same concept"**. It is made by meaning, not
-by spelling: the same word can mean different things (Brazilian *cambar* is a tack, in the
-method document a gybe).
+A relation here means **"these candidates name the same concept"**, decided by meaning, not
+spelling.
 
-**Algorithm:** the candidates are taken in order of source kind (simulation first, then
-reference books, author documents, historical accounts), in batches of 50. Each batch is placed
-into the concept table built so far (`assignPrompt`); the table is sent with each concept's id,
-label and a short meaning (shortened further if the request would be too large). Candidates
-Claude does not place become concepts of their own. Grouping never undoes the author's work:
-existing concepts, their decisions and moves are kept, and only new candidates are placed.
+**Algorithm:** candidates in order of source kind (simulation, reference books, author documents,
+historical accounts), in batches of 50, are placed into the table built so far
+(`assignPrompt`), which is sent with each concept's id, label and a short meaning. Candidates
+not placed become concepts of their own. Existing concepts, decisions and moves are kept.
 
 **Prompt** (`assignPrompt`):
 
 > For each candidate: if it means the same as an existing concept, give that concept's id.
-> Otherwise give a short English label for a new concept; candidates in this batch that mean the
-> same thing get the same new label. Group by meaning, never by spelling: the same word can mean
-> different things in different sources or language variants. …
+> Otherwise give a short English label for a new concept … Group by meaning, never by spelling:
+> the same word can mean different things in different sources or language variants. …
 > Also report real conflicts between a candidate and the concept it joins: different numbers for
 > the same quantity, or a different definition. A different language, variant or synonym … is
 > not a conflict, and neither is a simulation describing how it models something, unless its
 > values or behaviour contradict the source.
 
-(An earlier version grouped all candidates in one request, `alignPrompt`; it failed on 1,500
-candidates and was replaced by the batches.)
+**Author review:** each concept is a card; the author moves a term ("Move to…"), renames,
+confirms ("Group is right") or drops it ("Leave out").
 
-**Author review:** each concept is a card listing its source terms; the author moves a term to
-another card ("Move to…"), renames, confirms ("Group is right") or drops it ("Leave out").
+**Result:** 935 concepts. 771 rest on one source, 93 on two, 36 on three, 35 on four or more.
+By kind of source: 718 only from historical accounts, 129 only from the reference book, 44 only
+from the simulation; 11 join history and the reference book, 4 history, the reference book and
+the simulation.
+
+**Example (one concept card, "Close-hauled"):**
+
+| Source | Term | Meaning (paraphrase) | Where |
+| --- | --- | --- | --- |
+| fragateiro (simulation) | close-hauled | as close to the wind as possible, sails hauled in | PHYSICS.md, Sails and sheets |
+| Veleiro.net (pt-BR) | Orça Fechada, orça | as close to the wind line as possible | pages 7, 22 |
+| Method document | bolina | as close to the wind as the rig permits; the only way to gain ground upwind | Foundations |
+| Moliceiro heritage file | bolinar | sailing close to the wind to gain windward distance | — |
+
+Linked to the simulation's *no-go zone* and *polar*; scope core; one conflict (below).
+
+**Example of a grouping error to fix by hand:** the card "Sheet" holds the pt-PT verb *caçar*
+(to sheet in), which belongs in "Sheeting in": the same word sits in two cards (a *term clash*,
+see 4d).
 
 ### 4d. Statuses: fixed rules over each group
 
-`statuses()` gives each concept one or more statuses, from its members' sources, kinds and
-languages:
+| Status | Rule | Count |
+| --- | --- | --- |
+| single source | all non-simulation members come from one source | 727 |
+| not in simulation | no simulation member and no simulation link | 698 |
+| missing term | no member in pt-PT | 674 |
+| out of scope | step 4e proposed "out" | 430 |
+| term clash | the same word, in one language, in two concepts | 74 |
+| simulation only | only the simulation names it | 44 |
+| agreed | none of the others | 23 |
+| conflicting | a reported conflict | 12 |
+| variant difference | pt-PT and pt-BR members share no term | 7 |
 
-| Status | Rule |
-| --- | --- |
-| conflicting | Claude reported a conflict for the group (number, definition, term) |
-| term clash | the same normalised term, in one language, appears in two different concepts |
-| variant difference | members in two variants of one language (pt-PT, pt-BR) share no term |
-| missing term | no member in the primary language variant (pt-PT) |
-| single source | all non-simulation members come from one source |
-| not in simulation | no member from the simulation and no simulation link |
-| simulation only | only the simulation names it |
-| agreed | none of the above |
-| out of scope | step 4e proposed it out of scope and the author has not confirmed it |
+**Examples:**
+- *Agreed* (several sources, no problem, and the game shows it): shallow draught (8 sources),
+  rudder (7), *arrais* (skipper, 7), flat-bottomed hull (7), keel (6), *muleta* (6), *falua* (6).
+- *Variant difference*, the most useful finding for writing lines: tacking (pt-BR *cambar*,
+  *cambada*; pt-PT *virar de bordo*, *dar por davante*), gybing (*jaibe*; *virar em roda*),
+  starboard (*boreste*; *estibordo*), shrouds (*brandais*; *ovéns*), leeway (*deriva*;
+  *abatimento*).
+- *Term clash:* *boca* (beam) in two cards, *vela grande* in "Mainsail" and "Muleta main sail",
+  *estai* in "Forestay" and "Stays". Most are duplicates to merge, a few are real double meanings.
 
-**Result:** 633 concepts from 1,069 grouped candidates (265 more were read but not yet placed:
-the last grouping run stopped). 417 concepts have a single member; 121 concepts are backed by
-two or more sources and 48 by three or more. Statuses: not in simulation 577, single source
-477, missing term (no pt-PT word) 381, term clash 36, simulation only 35, conflicting 29 (15
-number, 10 definition, 4 term), variant difference 7. 56 concepts include the simulation.
+### 4e. Check against the game: concept to simulation, and relevance
 
-By source kind: 424 concepts come only from historical accounts, 125 only from the reference
-book, 35 only from the simulation; 12 join history and the reference book, 8 the reference book
-and the simulation, 4 the author, the reference book and the simulation.
+**Prompt** (`linkPrompt`), 30 concepts at a time, with the learning goals, visit length and
+simplifications:
 
-Concepts with most sources: shallow draught, *arrais* (skipper), *varino*, *muleta*, lateen
-sail (6 sources each); rudder, keel, river landing places (5).
-
-Examples of conflicts: the course uses both *orça fechada* and *orça* for close-hauled; the
-closest angle to the wind is 45–50° in the course against about 36° in the game; *tábua de
-bolina* described as a lowered board in one source and a fixed lateral keel in another.
-
-### 4e. Check against the game: concept to simulation
-
-**What:** links each concept to the simulation's own concepts, flags numbers that disagree with
-the game, proposes a scope, and removes conflict noise. Runs on concepts not checked yet, 30 at
-a time.
-
-**Prompt** (`linkPrompt`), with the learning goals, the visit length and the simplifications:
-
-> For each concept below:
 > - sim: ids of simulation concepts that show or measure it. Link only when the simulation
 >   really lets the player see or do it …
 > - numbers: if a number stated for the concept disagrees with the simulation's number for the
@@ -242,44 +242,39 @@ a time.
 >   subject (for example modern yacht fittings, safety drills, unrelated topics).
 > - keep: the indices of the listed conflicts that are real disagreements.
 
-**Relevance** of a concept is decided here: **core** (serves a learning goal and can be met in
-the game or its stories), **maybe** (context), **out** (not for a short visit). Out-of-scope
-concepts leave the later steps unless the author confirms them.
+**Relevance of a concept is decided here:** core, maybe or out. Out-of-scope concepts leave the
+later steps unless the author confirms them.
 
-**Result:** not run on the current table (0 of 633 concepts checked). Until it runs, scope is
-unset, nothing is out of scope, and "not in simulation" counts only groups that contain a
-simulation candidate. This is the next step to run in the Concepts tab.
+**Result:** 891 of 935 checked: 131 core, 330 maybe, 430 out; 187 linked to the simulation; 5
+number conflicts with the game found.
+
+**Examples with Claude's reason:**
+- core: close-hauled ("central point of sail; shown in polar and no-go zone"), in irons ("sails
+  flap, speed near zero"), sheeting in ("sheet control directly lets player trim in");
+- maybe: reefing ("sail reduction context; not a simulated control"), gaff rig ("Fragata rig;
+  useful boat context"), lying athwart wind and current ("working life; sim has no current");
+- out: storm sail ("modern storm jib detail"), boom vang ("modern yacht fitting, not modelled"),
+  topping lift, halyard, shrouds ("rigging detail, not simulated").
 
 ### 4f. Summary of the sources
 
-**Prompt** (`summaryPrompt`, tier complex): the table without dropped concepts, with each
-member's source, term, language, meaning, numbers and statuses:
+**Prompt** (`summaryPrompt`): sort the concepts into 4 to 8 types; per type, agreements,
+conflicts with a next step, clarifications and gaps; an overview of the conflicts to settle
+first. "Do not add facts that are not in the table."
 
-> 1. Sort the concepts into 4 to 8 types that suit this subject … Every concept goes in one type.
-> 2. For each type, at most 5 points in each list: agreements …; conflicts … and one suggested
->    next step (ask a sailor, check a source, decide as a game design choice); clarifications
->    (where one source supplies what the others lack …); gaps.
-> 3. An overview of 2 to 4 sentences: the main conflicts to settle first, and what is missing.
-> Do not add facts that are not in the table.
-
-**Result:** 9 types (points of sail and wind; manoeuvres and steering; sails and rig; hull and
-steering gear; boat types compared with the game; places and the river compared with the game;
-work, trade and rules; navigation and safety; simulation internals). Overview: settle first (1)
-the sailing vocabulary (*cambar* is a tack in the Brazilian course and a gybe in the method
-document; the historical sources give the European terms *virar por davante* and *virar em
-roda*), (2) the closest angle to the wind (45–50° in the course, about 36° in the game), (3)
-dates and figures in the history (steamboats, navigable lengths, passenger limits).
+**Result (from the old table, to rewrite):** "Settle first (1) the sailing vocabulary, where
+*cambar* means tack in the Brazilian course and gybe in the method document, while the
+historical sources give the European terms (*virar por davante*, *virar em roda*); (2) the
+closest angle to the wind, 45–50° in the course against about 36° in the game; (3) dates and
+figures in the history."
 
 ## 5. History
 
-Goal: what people did with boats on the river, each practice backed by passages from the
-sources.
+Goal: what people did with boats on the river, each practice backed by passages.
 
 ### 5a. Reading: extracting practices
 
-Same pieces of text as in 4b (historical accounts only, not held out). One request per piece.
-
-**Prompt** (`practicePrompt`):
+The same pieces of text (historical accounts only). **Prompt** (`practicePrompt`):
 
 > List what people did with boats and the river: practices, rules and events.
 > - One item per distinct practice or event: a work routine (a fishing method, a cargo run, a
@@ -287,226 +282,267 @@ Same pieces of text as in 4b (historical accounts only, not held out). One reque
 >   a dated event (a ban, a survey, a new service), or a description of a boat or place without
 >   action.
 > - action: your English paraphrase, at most 25 words. Never copy sentences.
-> - who, boat, place, period, cargo, gear, conditions: as the text states them …; "" when the
->   text does not say.
-> - numbers: only values the text states …; kind: practice, rule, event or description;
->   location: the [page N] marker. At most 25 items. Do not add anything that is not in the text.
+> - who, boat, place, period, cargo, gear, conditions: as the text states them … "" when the
+>   text does not say. numbers: only values the text states. Do not add anything that is not in
+>   the text.
 
-Duplicates within a source are merged on kind, boat, place and the start of the action.
+**Result:** 1,073 passages from 15 sources; most from Gaspar (252), Pedrosa (196), the moliceiro
+file (172), *Territórios da Lisboa Medieval* (122).
 
-**Result:** 437 passages from 10 historical sources.
+**Example (one passage):** Pedrosa, page 23: "Duhamel Du Monceau says muletas trawled sideways
+like Mediterranean tartanas, fishing sardines at night between Peniche and Setúbal"; gear: nets,
+fire for night fishing (*candeio*); crew 5–6 men.
 
 ### 5b. Grouping: relations between passages
 
-A relation here means **"these passages describe the same practice or event"**. Batches of 40
-are placed into the practice list built so far (`hAssignPrompt`), as in 4c:
+A relation means **"these passages describe the same practice or event"**. Batches of 40
+(`hAssignPrompt`):
 
 > If it describes the same practice or event as an existing one (the same activity by the same
 > kind of people or boat; places and periods may differ), give that practice's id. …
-> Report real disagreements: "date" (different dates for the same event), "number" (different
-> values for the same quantity; give both with their sources), "description" (accounts that
-> cannot both be true). More detail, or the same practice in another period, is not a conflict.
+> Report real disagreements: "date" …, "number" …, "description" (accounts that cannot both be
+> true). More detail, or the same practice in another period, is not a conflict.
 
-After each batch, each practice's boats, places and periods are the union of its members'
-(`mergeFields`), and its kind is the most common kind among them.
+Each practice's boats, places and periods are the union of its members'.
 
-**Statuses** (`hStatuses`, rules): conflicting; single source; agreed (two or more sources, no
-conflict); no boat (a practice whose sources name no boat); no place; no period; no concept
-(linked, but to no concept).
+**Statuses** (rules): conflicting; single source; agreed (two or more sources, no conflict); no
+boat; no place; no period; no concept.
 
-**Result:** 132 practices: 38 practices, 26 events, 14 rules, 54 descriptions. 103 rest on a
-single source, 29 on two or more (7 on four). 8 with conflicts (4 number, 3 description, 2
-date). 45 without a period, 16 without a place, 8 practices without a boat.
+**Result:** 283 practices: 85 practices, 56 events, 23 rules, 119 descriptions. 239 on one
+source, 31 on two, 13 on three or more. 10 with conflicts. 89 without a period, 24 without a
+place, 26 practices without a boat.
 
-Best supported: the decline of sail freight because of rail, road and bridges (6 sources);
-preservation of surviving boats (5); the 1552 count of Tagus boats, boat types and terminology,
-river traffic between the banks until the mid-20th century, boat building in the Tagus yards
-(4 each).
+**Example (one practice card, "Muleta sideways trawling"):** boats *muleta*, *batel*; places
+Seixal and Barreiro, between Peniche and Setúbal, the Tagus estuary; periods 1772, 1891. Passages:
+Pedrosa (introduction: the net cast to windward, the boat drifting across the wind), Pedrosa
+(Baldaque da Silva on balancing the sails against wind and current, with the long poles,
+*botalós*), Pedrosa page 23 (Duhamel Du Monceau), *Embarcações do Rio Tejo* (muleta and batel
+trawling from the side with the *tartaranha*). Linked concepts: trawling broadside, windward,
+drifting with current and wind, the *tartaranha* net, lying athwart wind and current.
 
-Examples of conflicts: the decline of sail freight dated 1951 and 1966 against "intense
-activity until the 1960s"; the 1552 count of 1,490 boats said to cover the whole Tagus in one
-source and the river boats only in another.
+**Best supported practices:** freight of the *barcos d'água acima* between the Ribatejo and
+Lisbon (4 sources), river traffic linking the banks until the mid-20th century (4), supplying
+ships at anchor in Lisbon (3).
 
 ### 5c. Practice to concept
 
-**Prompt** (`hLinkPrompt`), 50 practices at a time, with the list of concepts not dropped:
-
-> For each practice, give the ids of the concepts it exercises or shows (a manoeuvre, a point
-> of sail, a boat part, a type of boat, a place), at most 6, and a note of at most 12 words on
-> how. This is an interpretation: sources describe work, not technique, so link only what the
-> practice clearly involves.
-
-**Result:** all 132 practices linked; 82 to at least one concept (350 links), 50 to none.
-
-**Review sheet:** for one source, a list of its passages with their practice, statuses and
-conflicts, for the historian to check a single PDF.
+**Prompt** (`hLinkPrompt`): "give the ids of the concepts it exercises or shows … at most 6, and
+a note of at most 12 words on how. This is an interpretation: sources describe work, not
+technique, so link only what the practice clearly involves." **Result:** 281 of 283 practices
+linked.
 
 ## 6. Situations
 
-A situation is where all three bases agree: a historical practice, the concepts it exercises,
-and a simulation that can play it.
+A situation is where all three bases agree: a practice, its concepts, a simulation that can play it.
 
 ### 6a. Proposing activities
 
-**Input:** practices of kind "practice" not dropped, 15 at a time, each with its boats, places,
-periods, number of sources, up to 3 actions, conditions, cargo and linked concepts (marked
-whether the game shows them); the game's boats, areas and ports; the concepts the game shows
-(those with a simulation member or link). **Not** the game's existing activities (held out).
+**Input:** practices (not dropped), 15 at a time, each with boats, places, periods, number of
+sources, actions, conditions, cargo and linked concepts; the game's boats, areas and ports; the
+concepts the game shows. **Not** the game's existing activities.
 
 **Prompt** (`proposePrompt`), in short:
 
 > Each activity must come from one historical practice below and let the player do a
-> recognisable part of it in the game. … For each practice that can become an activity, propose
-> one: title, goal, success (a rule the game can measure), boat (one of the game's boats; if the
-> historical boat is not in the game, pick the closest and explain), area and route, concepts,
-> minutes (1 to 6), level (1 basics, 2 manoeuvres, 3 specialised work), simplifications, needs,
-> feasibility ("full", "simplified", "needs feature"), features (from a fixed list: tide and
-> current, water depth and shallows, rowing and poling, towing, crew and tasks aboard, fishing
-> net and catch, cargo loading and weight, steam and motor traffic, river bar and pilotage, new
-> map area, new boat, rig changes, other), premise (only facts in the practice record).
-> Do not skip a practice only because the game lacks something … propose the activity as it
-> would be with that addition, with feasibility "needs feature" and the features named. Skip
-> only practices with no boat or water activity at all … and say why.
+> recognisable part of it in the game. … title, goal, success (a rule the game can measure),
+> boat (one of the game's boats …), area and route, concepts, minutes (1 to 6), level (1 basics,
+> 2 manoeuvres, 3 specialised work), simplifications, needs, feasibility ("full", "simplified",
+> "needs feature"), features (from a fixed list), premise (only facts in the practice record).
+> Do not skip a practice only because the game lacks something … Skip only practices with no
+> boat or water activity at all … and say why.
 
-**Rules after the answer:** ids are read from the text ("p8 Label" gives p8); a proposal naming
-no known practice is dropped and counted; the boat is matched against the game's boats.
-**Game additions** gathers the features across proposals, counting the activities each would
-unlock (needs feature) or improve, and the sources behind them.
+**Result:** 72 activities: 3 full, 37 simplified, 32 needing a game feature; 28 at level 1, 35 at
+level 2, 9 at level 3. 16 practices skipped (ox-cart transport to the river ports, petitions on
+the French *tartana*, early illustrations: no water activity).
 
-**Relevance:** the level orders activities (concepts drive the order); feasibility says how
-much the game must change.
+**Examples:**
+- *Full:* "Crossing between the banks" (level 2, 4 min, Falua, Lisboa–Almada–Seixal): "cross from
+  Lisboa to Almada and back within 5 minutes, with at least one tack or gybe". From the practice
+  "river traffic linking the Tagus banks until the mid-20th century". Leaves out: no current, no
+  passengers or goods shown.
+- *Full:* "Leeboard down" (level 1, Muleta): sail close-hauled and keep leeway below a set angle
+  for 60 seconds.
+- *Simplified:* "Back upriver with the wind" (Fragata, Lisboa to Vila Franca de Xira): reach the
+  quay in 6 minutes with at least 2 tacks. Needs current to make upriver sailing truly harder.
+- *Needs feature:* "Becalmed fragata": make progress in a weak wind and see why a fragata needed
+  a rowed tow; needs rowing, towing and crew.
 
-**Result:** 33 activities from 38 practices: 5 full, 19 simplified, 9 needing a feature; 9 at
-level 1, 20 at level 2, 4 at level 3. 8 practices skipped (for example ox-cart transport to the
-paper mills, petitions on the French *tartana*: no water activity). Most requested additions:
-water depth and shallows (5), cargo loading and weight (4), new boat (4), fishing net and catch
-(4).
+**Game additions** (counted over all proposals): cargo loading and weight (25 activities), a new
+map area (18), a new boat (16), crew and tasks aboard (11), fishing net and catch (9), tide and
+current (8), water depth and shallows (7).
 
 ### 6b. Blind comparison with the game's activities
 
-**Prompt** (`comparePrompt`, tier complex): the game's mini-games and mission kinds (now
-revealed), and the proposals:
+**Prompt** (`comparePrompt`): for each game mini-game, the closest proposal and the match
+("same", "related", "none"); for each proposal, whether the game has it ("same", "related",
+"new").
 
-> For each game activity of type "museum mini-game", give the closest proposal and the match:
-> "same" (the same practice and essentially what the player does), "related" (the same practice
-> or boat, but a different task), or "none". For each proposal, say whether the game has an
-> equivalent: "same", "related" or "new".
+**Result:** of the game's 9 mini-games, **3 found the same** without seeing them, 5 related, 1 not:
 
-**Result:** of the game's 9 mini-games, 2 found the same (Upwind with the Falua, Passengers
-with the Catraio), 4 related (Downwind, Cargo with the Fragata, Fishing with the Muleta,
-Supplies with the Canoa), 3 none (Whales, Seaweed, Free sailing: no source in the registry
-describes them). Claude answered for 13 of the 33 proposals: 6 match a game activity, 6 are related, 1 is new.
+| Game mini-game | Match | Closest proposal | Why |
+| --- | --- | --- | --- |
+| Passengers (Catraio) | same | Small catraio crossing | both cross between Lisbon and Almada by catraio |
+| Seaweed (Moliceiro) | same | Moliço run | both sail a moliceiro to the *moliço* grounds in the Ria de Aveiro |
+| Fishing (Muleta) | same | Haul the net broadside | both sail a muleta broadside to drag the trawl |
+| Upwind | related | Back upriver with the wind | same practice (tacking), Fragata going upriver, not a Falua to a mark |
+| Downwind | related | Festival day regatta run | running with sails out, but a Moliceiro |
+| Cargo (Fragata) | related | Timber to the Tercenas | Fragata cargo in busy traffic, but downriver delivery |
+| Supplies (Canoa) | related | Supply run to the anchored ship | out to a vessel and back, by Catraio |
+| Whales (Baleeiro) | related | Sail to the distant fishing banks | same boat, but a long voyage |
+| Free sailing | none | — | no proposal is free sailing |
+
+Of the 72 proposals, 7 match a game activity, 54 are related and 11 are new. **Examples of new
+activities the game lacks:** docking at the Cais das Colunas, the becalmed fragata, the quay of
+the steam cargo boats, piloting across the bar, changing the rig, shortening sail.
 
 ## 7. Narrative
 
-For one of the game's mini-games, and optionally one of its options (boat × place).
+### 7a. Gathering evidence (rules, no Claude)
 
-### 7a. Gathering evidence (rules)
+`evidenceFor()` takes, in order: the practice of the proposal the blind comparison matched to
+the mini-game; up to 5 more practices with the same boat, **most sources first**; up to 6
+passages of each; up to 10 linked concepts with 2 source terms each. At most 45 evidence records
+(`e1`…). **Relevance for the narrative:** matched blind, then same boat, then number of sources.
 
-`evidenceFor()` selects, without Claude:
-1. the practice of the proposal the blind comparison matched to this mini-game, if any;
-2. then up to 5 practices whose boats include the mini-game's boat, **most sources first**;
-3. up to 6 passages of each, as evidence records (`e1`, `e2`…: source, location, paraphrase,
-   numbers);
-4. up to 10 concepts linked to the proposal or those practices, with 2 source terms each.
-
-At most 45 records. **Relevance for the narrative is therefore:** matched by the blind
-comparison, then same boat, then number of sources.
-
-Also gathered: the places the boat may pass (the area's ports and landmarks, minus landmarks
-built after the chosen period, plus places named in the evidence), the game moments that can
-trigger a line (33), the author's story bible if it mentions the boat, and a glossary of
-pt-PT terms to use and other variants to avoid (from the concept table).
+Also: the places the boat may pass (ports and landmarks of the area, minus landmarks built after
+the chosen period, plus places in the evidence), the 33 game moments, the author's story bible
+if it mentions the boat, and a glossary of pt-PT terms to use and variants to avoid.
 
 ### 7b. Planning cast and beats
 
-**Prompt** (`planPrompt`, tier complex), with the evidence, the bible (marked "proposals, not
-evidence"), the game moments, the deliveries, the narrator (in character in a period, or a
-present-day guide) and the talk setting (quiet, normal, chatty):
+**Prompt** (`planPrompt`): 1 to 3 invented characters labelled fictional, whose trade comes from
+the evidence; 4 to 6 beats (setup, complication, turn, close) plus leg beats (`steady_leg`) and
+place beats (`near_place:<name>`); "never put a story line on a difficult moment: a difficult
+moment gets at most a cue, and the story continues as a reflection after it is solved"; each beat
+with a trigger, delivery, character, gist, concept and evidence ids.
 
-> - 1 to 3 characters, invented and labelled fictional, whose trade and world come from the
->   evidence (cite evidence ids for their role).
-> - 4 to 6 story beats in the order setup, complication, turn, close, plus at most one curiosity
->   card. The sailing difficulty is the complication.
-> - Leg beats (trigger "steady_leg"): talk for the long calm stretches … Place beats (trigger
->   "near_place:<name>"): only from evidence that mentions it.
-> - Never put a story line on a difficult moment: a difficult moment gets at most a cue, and the
->   story continues as a reflection after it is solved.
-> - Each beat: trigger, delivery, character, gist, concept, evidence ids.
+**Example ("Fishing with the Muleta"):** cast: Arrais Joaquim (fictional skipper of a Seixal
+muleta in the 1880s) and Manel (the youngest of the 5 or 6 crew). Beats: setup at `start`; a leg
+pool at `steady_leg`; a place beat at `near_place:Seixal`; a cue when the sail starts luffing; a
+reflection when it stops; a close at `catch`; a curiosity card at `net_out`. Evidence came from
+6 practices (sideways trawling, the fishing grounds, the origins of the muleta…).
 
 ### 7c. Writing lines
 
-**Prompt** (`linesPrompt`, tier complex): two candidates per beat (a pool of 2, 3 or 5 for leg
-beats), in European Portuguese and English, with word limits (cue 6, reflection 25, story 35,
-curiosity 60), the glossary, and:
+**Prompt** (`linesPrompt`): two candidates per beat (a pool for leg beats), pt-PT and English,
+word limits (cue 6, reflection 25, story 35, curiosity 60), the glossary, and: "Use only facts in
+that beat's evidence. Names of characters, feelings and small actions are colour: they must not
+state checkable facts … claims: every factual statement in the line, each with the evidence ids
+that support it."
 
-> Use only facts in that beat's evidence. Names of characters, feelings and small actions are
-> colour: they must not state checkable facts. … claims: every factual statement in the line,
-> each with the evidence ids that support it. fictional: true when the line states no fact from
-> the evidence.
+### 7d. Checking lines
 
-### 7d. Checking lines (Claude and rules)
-
-- **Claude, independently** (`checkPrompt`): for each factual statement, "supported",
-  "unsupported" or "contradicted" by the listed evidence.
-- **Rules** (`mechChecks`, `glossaryWarnings`): word limits; every number in the line must be in
-  the evidence (thousands separators ignored); the same numbers in PT and EN; no landmark built
-  after the period; no avoided variant term.
-- A line becomes **verified** when all claims are supported and no rule fails, otherwise **needs
-  work**; the author approves. Only verified and approved lines are exported, each with its
-  trigger, delivery, conditions (`when`: boats, areas, places) and evidence ids; the export
-  reports, per option, whether a setup and a close line exist.
+Claude checks each claim independently ("supported", "unsupported", "contradicted"); rules check
+word limits, that every number is in the evidence, the same numbers in PT and EN, no landmark
+newer than the period, no avoided variant term. A line is **verified** when everything passes,
+otherwise **needs work**; the author approves.
 
 **Result:**
 
-| Mini-game | Evidence | Cast | Beats | Lines | Verified | Needs work |
+| Mini-game | Evidence | Beats | Lines | Verified | Needs work | Not checked |
 | --- | --- | --- | --- | --- | --- | --- |
-| Passengers with the Catraio (with story bible) | 35 | 2 | 7 | 14 | 3 | 11 |
-| Supplies with the Canoa | 42 | 2 | 6 (with a leg and a place beat) | 13 | 9 | 4 |
-| Fishing with the Muleta | 42 | 2 | 7 (with a leg, a place and a curiosity) | 15 | 12 | 3 |
-| Cargo with the Fragata | 44 | 2 | 6 | not written yet | | |
+| Passengers (Catraio), with story bible | 35 | 7 | 14 | 3 | 11 | |
+| Supplies (Canoa) | 42 | 6 | 13 | 9 | 4 | |
+| Fishing (Muleta) | 42 | 7 | 15 | 12 | 3 | |
+| Seaweed (Moliceiro) | | 7 | 15 | | | 15 |
+| Cargo (Fragata) | 44 | 6 | 0 | | | |
 
-Why lines needed work: 15 claims unsupported by their evidence (none contradicted), 3 lines
-with different numbers in PT and EN, 1 over the word limit. 9 lines are fictional colour.
+Of 94 checked claims, 79 were supported and 15 unsupported (none contradicted); 3 lines had
+different numbers in PT and EN, 1 was too long.
+
+**Examples:**
+- *Verified* (Fishing, setup): "Largamos do Seixal. A muleta não corre atrás do peixe de proa.
+  Vai atravessada ao vento e à corrente, a arrastar a tartaranha pelo costado." / "We leave
+  Seixal. The muleta doesn't chase fish bow-first. She lies across wind and current, dragging the
+  tartaranha from her side." Both claims supported by Pedrosa and *Embarcações do Rio Tejo*.
+- *Verified* (Fishing, leg pool): "E estes paus compridos, à proa e à popa? São os botalós, Manel.
+  Neles se armam as velas e se amarram as asas da rede."
+- *Needs work* (Fishing, leg pool): "… entre o Cabo da Roca e Setúbal. Nas águas do Entre-Cabos."
+  The fishing grounds are supported; the name "Entre-Cabos" for them is not in that beat's
+  evidence (it is in another record), so the check flags it.
+- *Needs work* (Fishing, reflection): "Sem esse equilíbrio, não há abatimento de lado." Claude
+  added a cause the evidence does not state.
+
+**To fix:** the Seaweed plan has a place beat at `near_place:Ria de Aveiro`, which is an area,
+not a place; the game's check would reject it.
 
 ## 8. Game report
 
-An evaluation of the game against the sources (a main goal of the tool).
+**1. Sorting by kind** (`classifyPrompt`), 40 at a time, retried in 15s: boat, place, sailing,
+hull, practice, role, cargo, event, regulation, internal, other; the modern name for boats and
+places, the game area of a place, and what the simulation would need for what it does not show.
+**Result:** 1,346 items sorted: 403 places, 276 boats, 179 hull, 117 sailing, 73 practices.
 
-**1. Sorting by kind** (`classifyPrompt`), 40 items at a time, retried in 15s for any missing:
-concepts not dropped, plus the boats and places named in the practices. Categories: boat,
-place, sailing, hull, practice, role, cargo, event, regulation, internal, other. For boats and
-places, the usual modern name; for places, the game area it lies in (or outside); for sailing,
-hull and practice items the game does not show, what the simulation would need.
+**2. Matching against the game (rules):** a boat is *in game*, *in development* or *missing*; a
+place is a *port*, *landmark*, *on map*, *sea mark only*, *outside the game's areas*, *area
+unknown* or *missing*. Boats and places from concepts and from practices are merged by name and
+area, each keeping the sources that name it.
 
-**2. Matching against the game (rules):** a boat is *in game*, *in development* or *missing*
-(name compared after normalising, singular); a place is a *port*, *landmark*, *on map* (a named
-place on the area's map), *sea mark only*, *outside the game's areas*, *area unknown* or
-*missing*. Boats and places from concepts and from practices are merged by name and area; each
-keeps the set of sources that name it.
+**3. Physics:** sailing and hull concepts *shown*, *not shown* (with what is needed) or *out of
+scope*. **4. Practices against activities** (`activityPrompt`): *covered*, *partly*, *missing*.
+**5. Conflicts, anachronisms, game additions.**
 
-**3. Physics:** sailing and hull concepts are *shown* (a simulation member or link), *not shown*
-(with what is needed) or *out of scope*.
+**Relevance:** every finding counts its **independent sources**; issue drafts are written only for
+findings with at least the chosen number of sources (default 2), most sources first.
 
-**4. Practices against activities** (`activityPrompt`), 30 at a time: *covered* (a game activity
-lets the player do essentially this, with a fitting boat and place), *partly*, *missing*, with
-the closest activity.
+**Result (report of 14 November, 07:11, on the old world list):**
 
-**5. Conflicts** on boats, places, sailing, hull, practices and events; **anachronisms**
-(landmarks newer than the narrative's period); **game additions** from step 6.
+| | In the game | Not in the game |
+| --- | --- | --- |
+| Boats (129) | 6: Fragata (11 sources), Falua (7), Muleta (7), Canoa (5), Catraio (3), Moliceiro (2) | 123 |
+| Places (202) | 38: Lisboa (12), Vila Nova da Barquinha (8), Vila Franca de Xira (8), Abrantes (7), Montijo (7)… | 121 missing or outside, 43 area unknown |
+| Sailing and hull (219) | 132 shown | 50 not shown, 37 out of scope |
+| Practices (85) | 7 covered, 26 partly | 52 missing |
 
-**Relevance:** every finding counts the **independent sources** behind it; issue drafts are
-written only for findings with at least the chosen number of sources (1, 2 or 3; default 2),
-most sources first. Each draft carries its paraphrased evidence and the sources' names.
+**Examples of relevant findings:**
+- *Boats the sources name most that the game lacks:* Varino (10 sources), *barco d'água acima*
+  (10), Barca (9), Bote and Bote cacilheiro (7 each), the steamboat (7), Batel (6), Bateira (6).
+- *Places:* Mar da Palha (6), the Esteiros (6), Mouchões (5), Cais das Colunas (3) are missing
+  on the Tagus map; Santarém, Chamusca and Azambuja lie outside the game's maps (upriver).
+- *Not shown by the simulation:* lateen sail (7 sources; to check: the game's Muleta has
+  lateen-like sails, so this may be a classification error), silting of the riverbed (6, needs
+  water depth), floods (3), sailing upstream (3, needs current), towpaths (3, needs towing from
+  the bank). Most requested: tide and current, water depth.
+- *Practices covered:* the Ribatejo–Lisbon freight run (the route Vila Franca–Lisboa), river
+  traffic between the banks (transport missions), the muleta's fishing grounds (fishing).
+  *Partly:* fragatas handling cargo in Lisbon harbour (Cargo mini-game, but no loading).
+  *Missing:* crew roles aboard the *barco d'água acima*, the fragata's rowed tow, the royal
+  boat journeys Almeirim–Lisbon.
+- *Game additions (activities unlocked / improved, sources):* new map area 15 / 4 (8 sources),
+  new boat 14 / 2 (9), cargo loading and weight 12 / 18 (12), crew and tasks 8 / 5 (11).
 
-**Result:** the two reports stored date from 13 November, before the fixes to sorting (batches
-of 40, coverage check, boats and places from the practices) and before the rebuilt world list
-(Oeste area, lighthouses). They show the sailing side only: 21 sailing and hull concepts shown,
-89 not shown (most often needing navigation marks in channels, reefing control, halyard tension,
-a person-overboard event) and 35 out of scope; of 38 practices compared, none covered by the
-game's activities. **Boats and places: 0, because of the bug since fixed. Build the report
-again** to get the boats, places, additions and anachronisms, and to compare against the
-current game.
+**Known noise in the report, to clean up:** the river itself ("Tejo", "Tagus", "Estuário do
+Tejo", "Rio Tejo") is counted as a missing place; the same thing appears under several names
+(*barco a vapor*, *vapor*, steam passenger boat; *barco d'água acima* twice); Santarém appears
+both "outside" and "area unknown". The real number of missing boats and places is therefore
+lower than 123 and 121. Anachronisms: none, because no narrative has a period set yet.
+
+---
+
+## Statistics of conflicts
+
+Conflicts are found at three levels: between sources (Claude, while grouping), between sources
+and the game (Claude, in the check against the game), and between word forms (rules). Counted on
+today's data, and sorted by what they are about:
+
+| Kind | Count | Found by | Examples |
+| --- | --- | --- | --- |
+| **Terminology: Portuguese variants** (pt-PT against pt-BR) | 7 concepts | rule (variant difference) | *virar de bordo / cambar* (tack); *virar em roda / jaibe* (gybe); *estibordo / boreste*; *ovéns / brandais*; *abatimento / deriva* |
+| **Terminology: one word, two concepts** | 74 concepts | rule (term clash) | *caçar* in "Sheet" and "Sheeting in"; *boca*; *vela grande*; *estai*. Mostly duplicates to merge |
+| **Terminology: no pt-PT word** | 674 concepts | rule (missing term) | most concepts from the Brazilian course or English sources |
+| **Sailing numbers against the game** | 5 | Claude, check against the game | closest angle to the wind 45–50° in the course against about 36° in the game (Rabelo 50°); downwind sail at 90° against no matching angle in the game; square sail no closer than 50° against "braced to 35°" |
+| **Definitions that differ** | 3 | Claude, grouping | *tábua de bolina*: a lowered board (one source) or a fixed side keel (another); a gust: a stronger wind, or also a change of direction (the game); *bateira*: a cargo boat, or the boat the Avieiro fishermen lived on |
+| **Historical quantities** | 6 | Claude, grouping | the batel's passenger limit, 8 or 12 (two paragraphs of the 1572 *Regimento dos Barqueiros*); a muleta's sails, 9–10 (Baldaque da Silva) or up to 20 (Smyth 1867, Folin 1892); boats seized at the bar in 1650, 16 or 14; muleta crew 15–20 men |
+| **Geography** | 2 | Claude, grouping | the Tagus permanently navigable for 85 km or 65 km; traffic up to 20–30 km above Lisbon, or as far as the tide (Sabugueiro) |
+| **Dates** | 3 | Claude, grouping | decline of sail freight dated 1951 and 1966, against "until the 1970s" (Museu da Paisagem) and a crisis caused by road transport early in the 20th century (Freire); Rossio de Abrantes: boats over 20 t until the early 1950s, or up to 30 t until the late 1950s |
+| **Same figure, different scope** | 1 | Claude, grouping | the 1552 count of 1,490 boats: the whole Tagus (mediotejo) or the river boats serving Lisbon (getLISBON) |
+| **A source against what it quotes** | 2 | Claude, grouping | Pedrosa says Duhamel Du Monceau was wrong about muletas fishing at sea; Pedrosa says no muleta fished, while documents he cites (1620, 1633, 1634) show them fishing |
+| **Not real conflicts (noise)** | 3 | — | "No conflict" written as a conflict; supply limits of 7, 10 and 20 *léguas* that are different rules; a crew size "that may differ" without a second figure |
+
+In short: of the 22 conflicts Claude reported between sources and with the game, 19 are real and 3
+are noise. Numbers (10) are the most common, then dates and definitions (3 each); terminology is
+by far the largest problem overall, but it is found by rules, not by Claude: 7 concepts where
+the Portuguese variants disagree and 674 with no European Portuguese word yet.
 
 ---
 
@@ -515,8 +551,8 @@ current game.
 | Relation | Made by | Kept as |
 | --- | --- | --- |
 | candidate ↔ candidate (same concept) | Claude, by meaning, in batches; author moves | concept members |
-| passage ↔ passage (same practice) | Claude, by activity and kind of people or boat, in batches; author moves | practice members |
-| concept → simulation | the simulation's own candidates in the same group, or Claude's link check | `simLinks` |
+| passage ↔ passage (same practice) | Claude, by activity and kind of people or boat; author moves | practice members |
+| concept → simulation | a simulation candidate in the group, or Claude's check against the game | `simLinks` |
 | practice → concept | Claude, marked as interpretation | `concepts` and a note |
 | practice → activity proposal | one proposal per practice, by Claude | `practice` on each proposal |
 | proposal ↔ game activity | Claude, blind | the blind comparison |
@@ -537,9 +573,9 @@ current game.
 
 ## Known limits
 
-- Claude's extraction and grouping are drafts; a different run can group differently. The author's
-  moves and decisions are the reference.
-- Reading is slow (about 150 requests, one at a time) and sends copyrighted text to Claude; the
-  plan is to re-read on a local model.
-- Some steps are incomplete or out of date: the game check (4e) has not run on the current
-  concept table, 265 candidates are not yet grouped, and the game report (8) predates later fixes.
+- Claude's extraction and grouping are drafts; a different run can group differently. The
+  author's moves and decisions are the reference.
+- Reading is slow (one request per piece of text, one at a time) and sends copyrighted text to
+  Claude; the plan is to re-read on a local model.
+- The report counts the river's own name and spelling variants as separate places and boats
+  (see 8); merging them is the next improvement to the matching rules.
