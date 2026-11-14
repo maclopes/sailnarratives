@@ -1,11 +1,17 @@
 # How the workbench works: steps, methods and results
 
-Version of 2026-11-14 (workbench version 26). The workbench is the tool's interface
+Version of 2026-11-14 (workbench version 33). The workbench is the tool's interface
 (`workbench/intake.html`, published at https://claude.ai/artifact/28te1trNq5pVdem1xFzUD9). This
 document explains what each step does, which rule or prompt it uses, how relations between
 items are made, how relevance is decided, and what each step produced for the first domain
-pack (traditional boats of the Tagus, the fragateiro game), with examples. The results were
-read from the workbench's database on 2026-11-14 at about 08:00 UTC.
+pack (traditional boats of the Tagus, the fragateiro game), with examples, and above all **the
+problems the tool found** in the sources and the game: dates, places, boat names, methods,
+terms, numbers. The results were read from the workbench's database on 14 November 2026 (the
+snapshot in `data/workbench/`).
+
+The sections follow the steps of the method. Since version 33 the workbench shows them in six
+tabs: Project; Sources (sections 2 and 3); Knowledge, with the views Concepts (4), Practices (5)
+and Boats and places (8); Situations (6); Narrative (7); Game report (8).
 
 ## The method in one paragraph
 
@@ -25,10 +31,10 @@ lines the game shows.
 | 2 Materials | the author, Google Drive, link check | form, Drive import, rules | source registry | 44 materials, 21 with text |
 | 3 Readiness | project and materials | rules, one Claude review | gaps per base | gaps in licences and grades |
 | 4 Concepts | source texts | Claude reads, Claude groups, rules give statuses, Claude checks against the game | concept table | 1,536 terms → 935 concepts |
-| 5 History | historical texts | Claude reads, Claude groups, rules, Claude links to concepts | practice table | 1,073 passages → 283 practices |
-| 6 Situations | practices, concepts, game world | Claude proposes, Claude compares blind | activities, additions, comparison | 72 activities; 3 of 9 mini-games found blind |
-| 7 Narrative | one mini-game, evidence | rules gather evidence, Claude plans and writes, Claude and rules check | cast, beats, checked lines | 4 mini-games, 57 lines |
-| 8 Game report | all of the above, game world | Claude sorts by kind, rules match, Claude compares | evaluation and issue drafts | 6 of 129 boats, 38 of 202 places in the game |
+| 5 History | historical texts | Claude reads, Claude groups, rules, Claude links to concepts | practice table | 1,258 passages → 361 practices |
+| 6 Situations | practices, concepts, game world | Claude proposes, Claude compares blind | activities, additions, comparison | 78 activities; 3 of 9 mini-games found blind |
+| 7 Narrative | one mini-game, evidence | rules gather evidence, Claude plans and writes, Claude and rules check | cast, beats, checked lines | 7 mini-games planned, 6 with lines (127 lines) |
+| 8 Game report | all of the above, game world | rules only (since version 32) | evaluation and issue drafts | 6 of 111 boats, 37 of 178 places in the game |
 
 All Claude requests go through the page's `sample.json(prompt, {modelTier})`: tier `default` for
 reading and sorting, `complex` for planning, writing, summarising and comparing. Each request is
@@ -39,17 +45,122 @@ was done.
 
 | Step | State | To do |
 | --- | --- | --- |
-| Concepts: reading and grouping | all 1,536 candidates grouped | nothing |
-| Concepts: check against the game | 891 of 935 checked | press **Check against the game** once more for the last 44 |
-| Concepts: summary of the sources | written on 12 November from the old table (633 concepts) | press **Write summary** |
-| History | 283 practices, all linked to concepts | nothing |
-| Situations and blind comparison | 72 activities, all compared | nothing |
-| Narrative | Seaweed: 15 lines written, not checked; Cargo with the Fragata: planned, no lines | **Check lines** on Seaweed; **Write lines** on Cargo if wanted |
-| Game report | built today, but on the old world list and before the fixes of version 27 | the current world list is loaded; press **Build report** (it sorts the boats and places again, about 20 extra requests) |
-| Materials | 43 of 44 have no licence, none has a reliability grade; the moliceiro source has no language | fill in, in Materials |
+| Knowledge, Concepts: check against the game | 891 of 935 checked; no concept has its kind yet (new in version 32) | press **Check against the game** (it now also gives each concept its kind) |
+| Knowledge, Concepts: summary of the sources | written on 12 November from the old table (633 concepts) | press **Write summary** |
+| Knowledge, Practices | 361 practices from 17 sources, all linked to concepts | nothing |
+| Knowledge, Boats and places | new in version 31 | press **Update the list**, then merge and correct cards |
+| Situations | 78 activities, compared blind | nothing |
+| Narrative | Upwind (31 lines), Whales (39), Seaweed (31) written, not checked | **Check lines** on each |
+| Game report | last built 10:59 on version 29 | **Build report** (no Claude requests since version 32) |
+| Sources | 43 of 44 have no licence, none has a reliability grade | fill in, in Sources |
 
-The results below are those of today's data; the game report figures will change slightly
-when it is built again on the current world list.
+## What the tool found: problems, with examples
+
+The tool's main use, besides drafting the narrative, is to **surface problems**: in the sources
+(they disagree, or leave things out), between the sources and the game, and in its own drafts.
+Every example below is from the Tagus data. Each comes with where the tool found it and what to
+do next.
+
+### Dates
+
+| Problem | Sources | Found by | Next step |
+| --- | --- | --- | --- |
+| The end of sail freight on the Tagus is dated **1951 and 1966** in one account, **"until the 1970s, ending with the Ponte 25 de Abril"** in another, and blamed on **road transport in the first quarter of the 20th century** in a third | getLISBON, Museu da Paisagem, Freire | grouping of practices (date) | the historian: probably different trades (cargo, ferries) ending at different times |
+| The Lisbon–Azambuja **steamers stopped on 30 July 1857** when the railway opened, and stopped calling at Barquinha after **1862**: the same practice card also says sail freight declined in the 1950s–60s | Freire | grouping (date) | split the card: steam passenger service and sail freight are different practices |
+| Master Reguinga's shipwreck and the festival it began are dated **1863** in one account and **1 July 1824** in another | *Mar da Costa* | grouping (date) | check the parish or newspaper record |
+| The Rossio de Abrantes: boats **over 20 t until the early 1950s**, or **up to 30 t until the late 1950s** | Gaspar, another account | grouping (number and date) | the historian |
+| 130 of 361 practices have **no date or period** at all, including well-attested ones (fragata crews and rowing, the muleta's fishing grounds, the xávega at Costa da Caparica) | all | rule: "no period" | look for dates in the sources, or accept "undated" |
+| A single card spans **six periods**: 1857, 1950s, 1951, 1966, "the 1970s", "the first quarter of the 20th century" | — | the card's periods | a sign the card mixes several events |
+
+### Places
+
+| Problem | Example | Found by | Next step |
+| --- | --- | --- | --- |
+| **Old names** of places | *Punhete* (47 mentions) is today's Constância; *Aldeia Galega* or *Aldeagalega* is Montijo; "porto da Barquinha" is Vila Nova da Barquinha | sorting by kind gives the modern official name; the pack's `aliases.yaml` adds others | keep the old name for lines set in the past (the narrator can say *Punhete*), the modern one for the map |
+| One place in **two areas** | the Mouchões, under the Tagus map and the Middle Tagus map | Boats and places | fixed by rule in version 31 (one card, the area most sources give) |
+| Places **between the game's maps** | Santarém (6 sources), Chamusca, Azambuja, Valada, Muge, Porto do Sabugueiro | game report: "outside the game's areas" | an issue for the game's developers: a map area between Vila Franca and Constância |
+| Well-attested places **missing on a map** | Mar da Palha, the bar (*Barra do Tejo*), Cais das Colunas, the Mouchões | game report: "missing" | an issue: name them on the Tagus map |
+| A main landing that is **only a sea mark** in the game | Cacilhas | game report | an issue: make it a named place |
+| Places Claude **could not place** | Porto de Arraiolos, Portos dos Frades, Porto da Cortiça (medieval river ports, 3 sources each) | "area unknown" | the historian, or a gazetteer |
+| **Lists and routes** read as one place | "Peniche; Setúbal", "Lisbon to Santarém", "Tejo between Santarém and Cascais" | rules (version 27) | split or treated as the river itself |
+| The **river itself** counted as a place | "Tejo", "Estuário do Tejo", "Margem Direita do Tejo", "Rio de Lisboa" | rules and the pack's aliases | counted as the area, not as a missing place |
+| A place Claude wrote in a **line** but the game knows by another name | a line triggered at "Lisbon"; the game's port is "Lisboa" | export | mapped by the pack's aliases |
+
+### Boat names
+
+| Problem | Example | Found by | Next step |
+| --- | --- | --- | --- |
+| **Spellings** of one type | *barco d'água acima*, *barco de água acima*, *barcos d'água acima* | rules (merging "d'" and "de", plurals) | merged automatically |
+| A **generic word** in front | "Barco Moliceiro" and "Moliceiro"; "barco catraio" and "Catraio"; "Barco Rabelo" and "Rabelo" | rules (the pack's `boat_words`) | merged automatically (version 29) |
+| A place **after** the name | "Fragata do Tejo", "Batel do Tejo" | rules | merged |
+| **Regional names** that may be one type | *barco d'água acima* and *barco de Riba-Tejo* (also written "Riba Tejo") | Boats and places | merge them with Move to… if a historian confirms (10 sources become 12) |
+| **One word, several boats** | *bateira*: a cargo boat (one source), the Avieiro fishermen's boat they also lived on (another), a small boat on the Lisbon run (a third) | grouping (definition) | split into separate concepts: different *bateiras* |
+| **A type and a family** | *barca* as one boat type, and as the general word for river boats; *bote* as a type, and in *bote de fragata*, *bote cacilheiro*, *bote de tartaranha* | term clash | decide which sources mean a type |
+| **Synonyms across languages** | *vapor*, *barco a vapor*, "steamboat", "steamer", "steam passenger boat" | the pack's aliases | merged |
+| A name **joining two boats** | "Muleta / Barino", "Canoa and Catraio" | rules (lists) | split |
+| Boats **the sources name most that the game lacks** | barco d'água acima (10 sources), varino (9), barca (8), bote (7), batel (6), bateira (6) | game report | issues for the developers |
+| The game's boats **no source names** | the Baleeiro, the Bac, the Pinasse | game report | look for Azorean, Arcachon and Aveiro-coast sources |
+
+### Methods and practices
+
+| Problem | Example | Found by | Next step |
+| --- | --- | --- | --- |
+| A source **disputes a source it quotes** | Duhamel du Monceau says muletas trawled sideways for sardines between Peniche and Setúbal; Pedrosa says that is wrong | grouping (description) | keep both; the narrative should not state either as fact |
+| A source **contradicts its own documents** | Pedrosa says all muletas were cargo boats and none fished, but cites documents of 1620, 1633 and 1634–1645 showing muletas fishing | grouping (description) | the historian |
+| A method **the source doubts** | Rebelo says the muleta paid out cable and hauled the net by hand for hours; Pedrosa doubts it | reading (kept as "the source doubts") | an activity may leave it out; a line may say "it is said" |
+| **How the leeboard worked** | the *tábua de bolina* as a board lowered in shallow water, or as a fixed side keel, one each side on the muleta | grouping (definition) | ask a sailor; the game's muleta has one |
+| **Dwellings** described differently | Costa da Caparica: only straw huts in 18th- and 19th-century accounts, but plank *palheiros* in the Ílhavo settlers' tradition; the only stone-and-wood house around 1900 a tavern, disputed by the editor (masonry by 1859) | grouping (description) | the historian |
+| **The same figure, different scope** | 1,490 boats in 1552: on the whole Tagus with the estuary (mediotejo), or the river boats serving Lisbon (getLISBON) | grouping (description) | read the 1552 source |
+| Practices with **no boat** | the xávega beach net, towing boats from the bank at Cachão do Cabril, lime shipments to Lisbon | rule: "no boat" (37 practices) | the activity step skips or asks for a boat |
+| Practices **far from the game** | Nile irrigation, the Almourol dam project, curative springs, brandy distilling to save freight | situations skip them with a reason; the report lists them | leave them out in Knowledge |
+
+### Numbers
+
+| Problem | Example | Found by |
+| --- | --- | --- |
+| A **regulation** that contradicts itself | the 1572 *Regimento dos Barqueiros*: the batel from Lisbon to Almada carries at most 8 people (paragraph 19) or 12 (paragraph 61) | grouping (number) |
+| A **rig** counted differently | a muleta's sails: 9 or 10 (Baldaque da Silva), up to 20 (Smyth, 1867), at least 20 (Folin, 1892) | grouping (number) |
+| An **event** counted differently | boats seized by the English at the bar in 1650: 16 (English source), 14 (the king's letter) | grouping (number) |
+| **Distances** | the Tagus permanently navigable for 85 km, or 65 km; traffic up to 20–30 km above Lisbon, or as far as the tide (Sabugueiro) | grouping (number) |
+| **Sailing** against the game | the closest angle to the wind: 45–50° in the sailing course, about 36° for the game's Falua, 50° for the Rabelo; a square sail no closer than 50°, or braced to 35° | check against the game (number) |
+
+### Terms and languages
+
+| Problem | Example | Found by |
+| --- | --- | --- |
+| **Portuguese variants** | tack: *cambar* (Brazil) / *virar de bordo*, *dar por davante* (Portugal); gybe: *jaibe* / *virar em roda*; starboard: *boreste* / *estibordo*; shrouds: *brandais* / *ovéns*; leeway: *deriva* / *abatimento* | rule: variant difference (7 concepts) |
+| **One word, two meanings** | *cambar*: a tack in the Brazilian course, a gybe in the method document; *mestre*: the master of a fishing crew, or a master boatbuilder; *painel*: an open stern panel, or the moliceiro's painted panels; *barra*: high-sea fishing beyond the bar, or the river-mouth limit | rule: term clash (38 words) |
+| **No European Portuguese word** | 674 concepts, mostly from the Brazilian course and English sources | rule: missing term |
+
+### The narrative's own drafts
+
+| Problem | Example (line, then what the check said) | Found by |
+| --- | --- | --- |
+| An **invented detail** | Passengers: "… Obrigado pela moeda, menina." ("Thanks for the coin, miss.") → *the passenger paid with a coin*: unsupported | the independent claim check |
+| An invented **exchange** | Supplies: "Passa cá o pão e leva o peixe da muleta pela água, fresco, que não espera." → *bread is handed over*, *the fish must arrive fresh*: unsupported | claim check |
+| A **true name, wrong evidence** | Fishing: "Nas águas do Entre-Cabos" → the name is in the sources but not in that beat's evidence: unsupported | claim check |
+| An added **cause** | Fishing: "Sem esse equilíbrio, não há abatimento de lado" → unsupported | claim check |
+| **Sailing commands** with no source | Passengers: "Arriba! Folga, deixa encher!" → unsupported: the historical evidence describes work, not commands; such cues need the simulation's or the sailing course's evidence | claim check |
+| **Numbers** that differ between PT and EN | 3 lines | rules |
+| **Too long** | a story line of 26 words (limit 25 for that delivery) | rules |
+
+### Readiness of the sources
+
+| Problem | Example | Found by |
+| --- | --- | --- |
+| The only reference book is in **another variant** | Veleiro.net is Brazilian Portuguese; the project is European Portuguese | readiness rule; it predicted the variant problems above |
+| **No licence, no grade** | 43 of 44 sources have no licence, none has a reliability grade | readiness rules |
+| **Unreadable** sources | 4 could not be read | readiness rules |
+| Author documents that **describe the game** | the story bible, the method document, the leaflet, the discussion summary: held out so the blind comparison is fair | readiness (blind comparison) |
+
+### Mistakes of the tool itself (and their fixes)
+
+| Problem | Example | Fixed |
+| --- | --- | --- |
+| A conflict that is not one | "Leeward: No conflict." recorded as a conflict; supply limits of 7, 10 and 20 *léguas* that are different rules | to remove by hand; the prompt asks to drop such cases |
+| A concept reported **not shown** that the game has | the lateen sail (7 sources): the game's Muleta carries lateen-like sails, but the concept has no link to the simulation | to link by hand |
+| Boats and places **counted several times** | "barco catraio" and "Catraio"; Lisboa and "Porto de Lisboa"; the Mouchões in two areas | versions 27–31 |
+| Countries and seas counted as **places outside the maps** | Spain, the Indian Ocean, the Nile | version 27 (regions) |
 
 ---
 
@@ -93,6 +204,16 @@ existing activities, the story bible, the method document, the leaflet, the disc
 is marked "cite and paraphrase"; the other 43 have no licence, so the tool treats all of them as
 copyrighted (paraphrase, never quote) and warns before sending their text to Claude.
 
+**Problems found at this step (examples):**
+- *Licences and grades:* 43 of 44 sources have no licence, none a reliability grade.
+- *Titles from file names:* "BOOK Territorios da Lisboa Medieval 3 22", "jorgeGasparOsportosfluviaisdoTejo",
+  "(9) Facebook": the Drive import keeps file names, which then appear in credits and reports
+  until the author corrects them.
+- *Unreadable sources:* 4 web pages could not be read (blocked or gone); the link check offers
+  archived copies.
+- *Sources about one area only:* nothing on the Azores, Arcachon or the Aveiro coast, although
+  the game has boats there.
+
 ## 3. Readiness
 
 **What:** before any reading, a check of whether the materials can support each knowledge base.
@@ -120,6 +241,11 @@ comparison ready.
 not Portuguese (Portugal): terms may differ, so each term needs checking." This warning came true
 in step 4: the course says *cambar* and *jaibe*, the Tagus sources *virar por davante* and
 *virar em roda*.
+
+**Problems found at this step (examples):** the only reference book in the wrong variant of
+Portuguese (above); 5 author documents that describe the game's existing activities, held out
+so the blind comparison stays fair; nobody listed to check the concepts (an instructor); and a
+historian listed but not yet named.
 
 ## 4. Concepts
 
@@ -225,8 +351,18 @@ see 4d).
   *cambada*; pt-PT *virar de bordo*, *dar por davante*), gybing (*jaibe*; *virar em roda*),
   starboard (*boreste*; *estibordo*), shrouds (*brandais*; *ovéns*), leeway (*deriva*;
   *abatimento*).
-- *Term clash:* *boca* (beam) in two cards, *vela grande* in "Mainsail" and "Muleta main sail",
-  *estai* in "Forestay" and "Stays". Most are duplicates to merge, a few are real double meanings.
+- *Term clash* (38 words in two or more cards). Duplicates to merge: *boca* (beam) twice,
+  *vela grande* in "Mainsail" and "Muleta main sail", *fragatas* in "Fragata" and "Fragatas of Vila
+  Nova da Barquinha", *cais* in "Quay" and "River landing places". Real double meanings, to keep
+  apart: *barca* (a boat type, and the ferry barca at Porto do Tejo), *mestre* (the master of a
+  fishing crew, and a master boatbuilder), *painel* (a stern panel, and the moliceiro's painted
+  panels), *barra* (fishing beyond the bar, and the river-mouth limit), *cheias* (floods, and the
+  silt they leave, *nateiros*).
+- *Conflicting* beyond sailing: *bateira* described as a cargo boat, as the Avieiros' fishing
+  boat and home, and as a small boat on the Lisbon run; the batel's passenger limit (8 or 12); the
+  barco da carreira (one boat a week, 2–4 per route, 100 from Abrantes in 1552).
+- *Single source* (727 concepts): for example most of the moliceiro's terms (only the moliceiro
+  heritage file), and most medieval terms (only *Territórios da Lisboa Medieval*).
 
 ### 4e. Check against the game: concept to simulation, and relevance
 
@@ -255,6 +391,17 @@ number conflicts found by this check.
   useful boat context"), lying athwart wind and current ("working life; sim has no current");
 - out: storm sail ("modern storm jib detail"), boom vang ("modern yacht fitting, not modelled"),
   topping lift, halyard, shrouds ("rigging detail, not simulated").
+- Beyond sailing: *core*: the *barcos d'água acima* ("working life of the river's cargo boats"),
+  the *arrais* ("skipper at the helm; the player steers"), the *camaradas* ("working life of
+  crew; the simulation omits crew"), the river landing places ("ports where cargo was loaded;
+  game ports"); *maybe*: towing from the bank ("not simulated"), the helmsman ("crew not
+  simulated").
+
+**A problem this step revealed:** the only sailing course is about **modern yachts**, so many of
+its terms are out of scope for traditional river boats: winch, cockpit, genoa, spreader, cleat,
+turnbuckle, lifeline ("yacht term, not for traditional river boats"). The concepts the game
+needs (the lateen rig, the leeboard, poling, towing) come from the historical sources instead.
+Scope now: 131 core, 330 maybe, 430 out.
 
 ### 4f. Summary of the sources
 
@@ -286,7 +433,7 @@ The same pieces of text (historical accounts only). **Prompt** (`practicePrompt`
 >   text does not say. numbers: only values the text states. Do not add anything that is not in
 >   the text.
 
-**Result:** 1,073 passages from 15 sources; most from Gaspar (252), Pedrosa (196), the moliceiro
+**Result:** 1,258 passages from 17 sources; most from Gaspar (252), Pedrosa (196), the moliceiro
 file (172), *Territórios da Lisboa Medieval* (122).
 
 **Example (one passage):** Pedrosa, page 23: "Duhamel Du Monceau says muletas trawled sideways
@@ -308,9 +455,20 @@ Each practice's boats, places and periods are the union of its members'.
 **Statuses** (rules): conflicting; single source; agreed (two or more sources, no conflict); no
 boat; no place; no period; no concept.
 
-**Result:** 283 practices: 85 practices, 56 events, 23 rules, 119 descriptions. 239 on one
-source, 31 on two, 13 on three or more. 10 with conflicts. 89 without a period, 24 without a
-place, 26 practices without a boat.
+**Result:** 361 practices: 111 practices, 69 events, 26 rules, 155 descriptions. 309 on one
+source, 35 on two, 17 on three or more. 12 with conflicts (6 number, 5 description, 3 date). 130
+without a period, 24 without a place, 37 practices without a boat.
+
+**Problems found at this step (examples):**
+- *Dates:* Master Reguinga's shipwreck and festival, 1863 or 1 July 1824 (*Mar da Costa*); the end
+  of sail freight, 1951/1966, the 1970s, or the early 20th century.
+- *Methods:* Duhamel du Monceau's sardine trawling disputed by Pedrosa; Pedrosa saying no muleta
+  fished while citing documents of muletas fishing; the Costa da Caparica huts, straw or plank.
+- *Numbers:* the batel's 8 or 12 passengers in one regulation; 16 or 14 boats seized in 1650.
+- *Scope:* 1,490 boats in 1552, on the whole Tagus or only serving Lisbon.
+- *Old place names* kept as written: *Punhete* (Constância), *Aldeia Galega* (Montijo).
+- *Missing information:* no period for well-attested practices (fragata crews, the muleta's
+  fishing grounds); no boat for the xávega beach net.
 
 **Example (one practice card, "Muleta sideways trawling"):** boats *muleta*, *batel*; places
 Seixal and Barreiro, between Peniche and Setúbal, the Tagus estuary; periods 1772, 1891. Passages:
@@ -328,8 +486,8 @@ ships at anchor in Lisbon (3).
 
 **Prompt** (`hLinkPrompt`): "give the ids of the concepts it exercises or shows … at most 6, and
 a note of at most 12 words on how. This is an interpretation: sources describe work, not
-technique, so link only what the practice clearly involves." **Result:** 281 of 283 practices
-linked.
+technique, so link only what the practice clearly involves." **Result:** 351 of 361 practices
+linked to at least one concept.
 
 ## 6. Situations
 
@@ -370,6 +528,20 @@ the French *tartana*, early illustrations: no water activity).
 **Game additions** (counted over all proposals): cargo loading and weight (25 activities), a new
 map area (18), a new boat (16), crew and tasks aboard (11), fishing net and catch (9), tide and
 current (8), water depth and shallows (7).
+
+**Problems found at this step (examples):**
+- *Boats the game lacks, replaced:* the *barcos d'água acima* by the Fragata ("the closest game
+  boat"), the steam cargo boats by the Fragata, the tartana by the Muleta, the rasca by the
+  Muleta ("both ventured beyond the bar"). Each substitution is written down and is a finding for
+  the developers.
+- *Places the game lacks:* "Fair wind to Lisbon" needs "a continuous map from the Ribatejo to
+  Lisboa"; "Coastal trade leg" needs the Algarve and Morocco.
+- *Mechanics the game lacks:* a net and its hauling ("Haul the net broadside"), a towed rowing
+  boat ("Becalmed fragata"), shallows and a ship to follow ("Pilot across the bar"), switchable
+  rigs ("Change the rig").
+- *Practices that are not activities,* skipped with a reason: boatmen leaving for the railway or
+  lorry driving; brandy distilling to save freight; flood dikes; riverbank angling ("done from
+  the shore, with no boat"); the xávega ("names no boat or sailing").
 
 ### 6b. Blind comparison with the game's activities
 
@@ -466,7 +638,24 @@ different numbers in PT and EN, 1 was too long.
 **To fix:** the Seaweed plan has a place beat at `near_place:Ria de Aveiro`, which is an area,
 not a place; the game's check would reject it.
 
+**Problems found at this step (examples, more in "What the tool found"):** invented details
+("Obrigado pela moeda, menina": nothing says passengers paid with a coin), an invented exchange
+of bread for fish, a true name used without its evidence (*Entre-Cabos*), an added cause ("without
+that balance there is no sideways drift"), sailing commands with no source behind them ("Arriba!
+Folga, deixa encher!"), numbers that differ between Portuguese and English, a line one word too
+long. 15 of 94 checked claims were unsupported; none contradicted the evidence.
+
 ## 8. Game report
+
+The full report of 14 November, with every boat, place, concept and practice, is in
+[`docs/game-report-2026-11-14.md`](game-report-2026-11-14.md). Problems it found, in short:
+boats the sources name most that the game lacks (the *barco d'água acima*, the varino, the
+barca, the bote, the batel, the bateira); places between the game's two Tagus maps (Santarém,
+Chamusca, Azambuja, Valada, Muge); well-attested places with no name on the map (Mar da Palha,
+the bar, Cais das Colunas, the Mouchões) or only a sea mark (Cacilhas); 13 concepts that need
+tide or current and 11 that need water depth; 60 practices with no activity (the crew of a
+barco d'água acima, the fragata's rowed tow, *xávega* beach nets, the royal journeys
+Almeirim–Lisbon).
 
 **1. Sorting by kind** (`classifyPrompt`), 40 at a time, retried in 15s: boat, place, sailing,
 hull, practice, role, cargo, event, regulation, internal, other; the modern name for boats and
@@ -542,20 +731,21 @@ today's data, and sorted by what they are about:
 | Kind | Count | Found by | Examples |
 | --- | --- | --- | --- |
 | **Terminology: Portuguese variants** (pt-PT against pt-BR) | 7 concepts | rule (variant difference) | *virar de bordo / cambar* (tack); *virar em roda / jaibe* (gybe); *estibordo / boreste*; *ovéns / brandais*; *abatimento / deriva* |
-| **Terminology: one word, two concepts** | 74 concepts | rule (term clash) | *caçar* in "Sheet" and "Sheeting in"; *boca*; *vela grande*; *estai*. Mostly duplicates to merge |
+| **Terminology: one word, two concepts** | 38 words (74 concepts) | rule (term clash) | *caçar* in "Sheet" and "Sheeting in"; *boca*; *vela grande*; *barca*; *mestre*; *painel*. Mostly duplicates to merge, some real double meanings |
 | **Terminology: no pt-PT word** | 674 concepts | rule (missing term) | most concepts from the Brazilian course or English sources |
 | **Sailing numbers** (angles, sail settings) | 4 | Claude, grouping and check against the game | closest angle to the wind 45–50° in the course against about 36° in the game (Rabelo 50°); downwind sail at 90° against no matching angle in the game; square sail no closer than 50° against "braced to 35°" |
 | **Definitions that differ** | 3 | Claude, grouping | *tábua de bolina*: a lowered board (one source) or a fixed side keel (another); a gust: a stronger wind, or also a change of direction (the game); *bateira*: a cargo boat, or the boat the Avieiro fishermen lived on |
 | **Historical quantities** | 5 | Claude, grouping | the batel's passenger limit, 8 or 12 (two paragraphs of the 1572 *Regimento dos Barqueiros*, found twice); a muleta's sails, 9–10 (Baldaque da Silva) or up to 20 (Smyth 1867, Folin 1892); boats seized at the bar in 1650, 16 or 14; boats per route on the scheduled service |
 | **Geography** | 3 | Claude, grouping | the Tagus permanently navigable for 85 km or 65 km (found twice); traffic up to 20–30 km above Lisbon, or as far as the tide (Sabugueiro) |
-| **Dates** | 3 | Claude, grouping | decline of sail freight dated 1951 and 1966, against "until the 1970s" (Museu da Paisagem) and the end of the Lisbon–Azambuja steamers in 1857 after the railway (Freire); Rossio de Abrantes: boats over 20 t until the early 1950s, or up to 30 t until the late 1950s |
+| **Dates** | 4 | Claude, grouping | decline of sail freight dated 1951 and 1966, against "until the 1970s" (Museu da Paisagem) and the end of the Lisbon–Azambuja steamers in 1857 after the railway (Freire); Rossio de Abrantes: boats over 20 t until the early 1950s, or up to 30 t until the late 1950s; Master Reguinga's shipwreck and festival, 1863 or 1 July 1824 (*Mar da Costa*) |
+| **Accounts that cannot both be true** | 2 | Claude, grouping | Costa da Caparica: straw huts in 18th–19th-century accounts, plank *palheiros* in the Ílhavo tradition; the only stone-and-wood house around 1900 a tavern, disputed by the editor (masonry by 1859) |
 | **Same figure, different scope** | 1 | Claude, grouping | the 1552 count of 1,490 boats: the whole Tagus (mediotejo) or the river boats serving Lisbon (getLISBON) |
 | **A source against what it quotes** | 2 | Claude, grouping | Pedrosa says Duhamel Du Monceau was wrong about muletas fishing at sea; Pedrosa says no muleta fished, while documents he cites (1620, 1633, 1634) show them fishing |
 | **Not real conflicts (noise)** | 3 | Claude | "No conflict" written as a conflict; supply limits of 7, 10 and 20 *léguas* that are different rules; a muleta crew size "that may differ" without a second figure |
 
-In short: Claude reported 24 conflicts (13 between concepts, 11 between practices); 21 are real
+In short: Claude reported 27 conflicts (13 between concepts, 14 between practices); 24 are real
 and 3 are noise. Numbers are the most common (12: sailing angles, historical quantities,
-distances), then dates and definitions (3 each). Terminology is by far the largest problem
+distances), then dates (4), definitions (3) and differing accounts (2). Terminology is by far the largest problem
 overall, but it is found by the rules, not by Claude: 7 concepts where the Portuguese variants
 disagree, 74 words used in two concepts, and 674 concepts with no European Portuguese word yet.
 
