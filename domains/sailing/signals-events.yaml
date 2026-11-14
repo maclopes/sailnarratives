@@ -71,6 +71,12 @@ events:
   gust:             {when: "true wind speed up 30 % within 5 s"}
   wind_shift:       {when: "true wind direction moves 10° within 5 s"}
   point_of_sail_change: {when: "point_of_sail band changes and holds 5 s"}
+  # moments that confirm an instruction was followed (a cue's "expects")
+  sheet_in:         {when: "sheets hauled in by at least 0.2 within 3 s"}
+  sheet_out:        {when: "sheets eased by at least 0.2 within 3 s"}
+  trim_good:        {when: "trim_error below 0.1 for 2 s after being above 0.25"}
+  head_up:          {when: "abs(twa_deg) decreases by at least 20° within 5 s (turning towards the wind)"}
+  bear_away:        {when: "abs(twa_deg) increases by at least 20° within 5 s (turning away from the wind)"}
   steady_leg:       {when: "heading within 10° and point_of_sail unchanged for 20 s"}
   near_vessel:      {when: "another boat within 3 boat lengths or time_to_contact < 15 s"}
   collision:        {when: "collision reported by the mission"}

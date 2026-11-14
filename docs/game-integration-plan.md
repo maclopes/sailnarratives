@@ -61,11 +61,17 @@ written for another boat or place.
   engine in `runtime/` and the sailing rules in the pack. Fed once per frame with the boat
   state and the mission context; emits game moments (tack, gybe, in irons, steady leg, gust,
   near vessel, arrival…) and a difficulty level 0 to 1 with calm windows.
-- **Scheduler:** applies the delivery rules from the design:
+- **Scheduler** (built: `runtime/src/scheduler.ts`, class `Narrator`, with tests): applies the
+  delivery rules from the design:
   - a cue may play during difficulty, at most one every 8 s;
   - story lines play only in calm windows, and a line is never cut;
   - a reflection plays in the first calm window after a difficulty, or expires after 20 s;
-  - leg pools play in turn on steady legs, without repeats;
+  - a cue that asks for an action (`expects`: `sheet_in`, `trim_good`, `bear_away`…) is answered
+    with a short acknowledgement ("Isso!", "Boa!") when the player does it within 15 s, even
+    during a difficult moment; if they do not, nothing more is said (no nagging);
+  - quiet moments: after a random 10–20 s of calm without talk, the story continues (leg
+    lines, in order); when the story has nothing left, trivia about the boats, the region, the
+    fish and the jobs (checked against the sources like any fact); never during difficulty;
   - place lines play once per run;
   - curiosity cards go to an end-of-mission logbook;
   - lines that miss their window are dropped, not queued.

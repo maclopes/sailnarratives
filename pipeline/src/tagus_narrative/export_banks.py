@@ -84,11 +84,15 @@ def bank_for(plan: dict[str, Any], lines: list[dict[str, Any]], materials: dict[
         for r in recs:
             used[r["origin"]] = r
         out = {"id": f"{minigame}.{beat['id']}.{line['id']}", "beat": beat["part"], "trigger": trigger,
-               "delivery": "leg" if beat["part"] == "leg" else beat["delivery"], "speaker": beat["character"],
+               "delivery": "leg" if beat["part"] == "leg" else beat["delivery"], "speaker": line.get("speaker") or beat["character"],
                "text": {"pt": line["pt"], "en": line["en"]}, "fictional": bool(line.get("fictional")),
                "sources": [r["origin"] for r in recs], "status": "approved" if line["status"] == "approved" else "verified"}
         if beat.get("concept"):
             out["concept"] = beat["concept"]
+        if beat.get("expects"):
+            out["expects"] = list(beat["expects"])
+        if line.get("topic"):
+            out["topic"] = line["topic"]
         option = plan.get("option")
         if option:
             pl = option.get("place") or {}
