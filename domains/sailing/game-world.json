@@ -2963,6 +2963,9 @@
     "steam cargo boat",
     "company steamer"
    ]
+  },
+  "waters": {
+   "medio": "tejo"
   }
  }
 }

@@ -322,7 +322,7 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":
 function toast(msg){const t=$("toast");t.textContent=msg;t.hidden=false;clearTimeout(toast.h);toast.h=setTimeout(()=>t.hidden=true,2600);}
 function setSave(msg){$("saveState").textContent=msg;}
 
-const BUILD="2026-11-14 · version 33";
+const BUILD="2026-11-14 · version 34";
 $("buildTag").textContent=BUILD;
 // ---------- tabs ----------
 let kview="concepts"; try{ kview=localStorage.getItem("intake.kview")||"concepts"; }catch{}
@@ -1468,14 +1468,14 @@ Each activity must come from one historical practice below and let the player do
 
 What the game can simulate:
 - Boats (name, home waters): ${w.boats.map(b=>`${b.name} (${b.home}${b.in_development?", in development":""})`).join("; ")}
-- Areas (id: ports): ${Object.entries(w.ports).map(([a,ps])=>`${a}: ${ps.join(", ")}`).join(" | ")}
+- Areas (id, home waters of its boats: ports): ${Object.entries(w.ports).map(([a,ps])=>`${a} (${areaWaters(a)}): ${ps.join(", ")}`).join(" | ")}
 - Sailing concepts the game shows and can measure (id: label): ${shown.map(c=>`${c.id}: ${c.label}`).join("; ")}
 - The game has wind (steady or gusty), other boats, buoys and named places; it has no tide, current, water depth, rowing or crew.
 
 For each practice that can become an activity, propose one:
 - title: short. goal: what the player must do, one sentence.
 - success: a rule the game can measure: a place to reach, a point of sail or heading to hold, a speed, a time, a distance.
-- boat: one of the game's boats. If the historical boat is not in the game, pick the closest and explain in boatNote.
+- boat: one of the game's boats whose home waters are the area's (see Areas). If the historical boat is not in the game, pick the closest boat from those same waters and name the historical boat in boatNote. Never take a boat from other waters, even if it suits the task better (a boat built for other rivers is a historical error).
 - area: a game area id; route: ports or places in that area.
 - concepts: ids from the list above that the player must use.
 - minutes: 1 to 6. level: 1 for basics (points of sail, trim), 2 for manoeuvres (tacking, gybing, docking), 3 for specialised work (trawling sideways, towing, coming alongside at sea).
@@ -1606,16 +1606,17 @@ function renderSituations(){
   const cLabel=Object.fromEntries((cstate.set?.concepts||[]).map(c=>[c.id,c.label])); const pById=Object.fromEntries((hstate.set?.practices||[]).map(p=>[p.id,p])); const hidx=hIndex();
   const bp=Object.fromEntries((b?.proposals||[]).map(x=>[x.id,x]));
   const acts=set.activities.slice().sort((a,c)=>a.level-c.level||(c.decision==="accepted")-(a.decision==="accepted"));
-  const count={}; acts.forEach(a=>{ count[a.feasibility]=(count[a.feasibility]||0)+1; if(bp[a.id]?.match==="new") count["new to the game"]=(count["new to the game"]||0)+1; });
+  const count={}; acts.forEach(a=>{ count[a.feasibility]=(count[a.feasibility]||0)+1; const bw=boatWaters(a.boat,a.area); if(bw!=="ok"&&bw!=="missing") count["boat from other waters"]=(count["boat from other waters"]||0)+1; if(bp[a.id]?.match==="new") count["new to the game"]=(count["new to the game"]||0)+1; });
   $("sMeta").textContent=`${acts.length} proposals · ${acts.filter(a=>a.decision==="accepted").length} accepted · ${set.skipped.length} practices skipped · ${new Date(set.createdAt).toLocaleString()}`;
-  $("sChips").innerHTML=[["all","All",acts.length],...["full","simplified","needs feature","new to the game"].filter(k=>count[k]).map(k=>[k,k,count[k]])].map(([k,l,n])=>`<button class="chip" data-sfilter="${esc(k)}" aria-pressed="${sstate.filter===k}">${esc(l)} · ${n}</button>`).join("");
+  $("sChips").innerHTML=[["all","All",acts.length],...["full","simplified","needs feature","new to the game","boat from other waters"].filter(k=>count[k]).map(k=>[k,k,count[k]])].map(([k,l,n])=>`<button class="chip" data-sfilter="${esc(k)}" aria-pressed="${sstate.filter===k}">${esc(l)} · ${n}</button>`).join("");
   const shownSet=new Set(shownConcepts().map(c=>c.id));
-  $("sList").innerHTML=acts.filter(a=>sstate.filter==="all"||a.feasibility===sstate.filter||(sstate.filter==="new to the game"&&bp[a.id]?.match==="new")).map(a=>{
+  $("sList").innerHTML=acts.filter(a=>sstate.filter==="all"||a.feasibility===sstate.filter||(sstate.filter==="new to the game"&&bp[a.id]?.match==="new")||(sstate.filter==="boat from other waters"&&!["ok","missing"].includes(boatWaters(a.boat,a.area)))).map(a=>{
     const p=pById[a.practice], srcs=p?[...new Set(p.members.map(id=>hidx[id]?.sourceId).filter(Boolean))]:[];
     return `<div class="concept${a.decision==="rejected"?" rejected":""}"><div class="concept-h"><h3>${esc(a.title)}</h3>
       <div class="row"><span class="pill p-acc">level ${a.level}</span><span class="pill">${a.minutes} min</span><span class="pill ${FEAS[a.feasibility]}">${esc(a.feasibility)}</span>${bp[a.id]?`<span class="pill ${MATCH[bp[a.id].match]}" title="${esc(bp[a.id].why)}">${esc(bp[a.id].match==="new"?"new to the game":bp[a.id].match+" as "+bp[a.id].game)}</span>`:""}${a.decision!=="draft"?`<span class="pill ${a.decision==="accepted"?"p-good":"p-bad"}">${esc(a.decision)}</span>`:""}</div></div>
       <div style="margin-top:6px"><b>Goal:</b> ${esc(a.goal)}</div>
       <div><b>Success:</b> ${esc(a.success)}</div>
+      ${(()=>{ const bw=boatWaters(a.boat,a.area); return bw!=="ok"&&bw!=="missing"?`<div class="hint" style="margin-top:4px;color:var(--bad,#b42318)"><b>Boat from other waters:</b> the ${esc(a.boat)} belongs to ${esc(w?.area_names?.[bw]||bw)}, not to ${esc(w?.area_names?.[a.area]||a.area)}. Change the boat or reject the proposal.</div>`:""; })()}
       <div class="hint" style="margin-top:4px">Boat: ${esc(a.boat)}${a.boatInGame?"":" (not in the game)"}${a.boatNote?" · "+esc(a.boatNote):""} · ${esc(w?.area_names?.[a.area]||a.area)}${a.route?": "+esc(a.route):""}</div>
       ${a.concepts.length?`<div class="row" style="margin-top:6px">${a.concepts.map(id=>`<span class="pill ${shownSet.has(id)?"p-good":"p-warn"}" title="${shownSet.has(id)?"shown by the game":"not shown by the game"}">${esc(cLabel[id]||id)}</span>`).join("")}</div>`:""}
       ${a.simplifications.length?`<div class="hint" style="margin-top:6px">Leaves out: ${esc(a.simplifications.join("; "))}</div>`:""}
@@ -2049,6 +2050,13 @@ function boatKey(name){
   t=t.replace(/s$/,"");
   for(const [own,others] of Object.entries(w.aliases?.boats||{})) if([own,...others].some(o=>spell(o).replace(/s$/,"")===t)) return spell(own).replace(/s$/,"");
   return t;
+}
+// the home waters of an area's boats (pack aliases.waters; default: the area itself)
+function areaWaters(area){ return rstate.world?.aliases?.waters?.[area]||area; }
+// "ok", "missing" (not a game boat), or the boat's home waters when they are not the area's
+function boatWaters(boat, area){
+  const k=boatKey(boat); const b=(rstate.world?.boats||[]).find(b=>boatKey(b.name)===k);
+  if(!b) return "missing"; return !b.home||b.home===areaWaters(area)?"ok":b.home;
 }
 function matchBoat(name){
   const k=boatKey(name); const b=rstate.world.boats.find(b=>boatKey(b.name)===k);

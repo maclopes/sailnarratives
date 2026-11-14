@@ -10,6 +10,11 @@ areas:
   pasaia: [Pasaia, Pasajes, Pasaia bay]
   azores: [Açores, Azores]
   madeira: [Madeira]
+# The home waters of each area's boats, where they differ from the area id: a boat whose home is
+# "tejo" belongs on the middle Tagus too. Used by the workbench to keep each proposed activity's
+# boat in its own waters (a Douro Rabelo is not a middle-Tagus boat).
+waters:
+  medio: tejo
 # Other names of the game's places (English exonyms and older spellings), so a line written for
 # "Lisbon" plays at the game's port "Lisboa".
 places:

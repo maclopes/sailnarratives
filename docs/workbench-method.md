@@ -161,6 +161,7 @@ do next.
 | A concept reported **not shown** that the game has | the lateen sail (7 sources): the game's Muleta carries lateen-like sails, but the concept has no link to the simulation | to link by hand |
 | Boats and places **counted several times** | "barco catraio" and "Catraio"; Lisboa and "Porto de Lisboa"; the Mouchões in two areas | versions 27–31 |
 | Countries and seas counted as **places outside the maps** | Spain, the Indian Ocean, the Nile | version 27 (regions) |
+| A boat from **other waters** | two middle-Tagus activities (towing past the Cachão do Cabril rapids; the Alcántara ore convoys) given the Douro Rabelo: their practices name no Tagus boat, the prompt asked for "the closest" game boat and the model chose the one built for rapids; only the boat's name was checked | version 34: the prompt asks for a boat from the area's own waters (pack `aliases.yaml`, `waters`), and the Situations tab flags any boat from other waters |
 
 ---
 
@@ -503,7 +504,7 @@ concepts the game shows. **Not** the game's existing activities.
 
 > Each activity must come from one historical practice below and let the player do a
 > recognisable part of it in the game. … title, goal, success (a rule the game can measure),
-> boat (one of the game's boats …), area and route, concepts, minutes (1 to 6), level (1 basics,
+> boat (one of the game's boats from the area's own waters …), area and route, concepts, minutes (1 to 6), level (1 basics,
 > 2 manoeuvres, 3 specialised work), simplifications, needs, feasibility ("full", "simplified",
 > "needs feature"), features (from a fixed list), premise (only facts in the practice record).
 > Do not skip a practice only because the game lacks something … Skip only practices with no
