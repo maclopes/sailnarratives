@@ -22,7 +22,7 @@ lines the game shows.
 | Step (tab) | Input | Method | Output | Result now |
 | --- | --- | --- | --- | --- |
 | 1 Project | the author | form | subject, audience, languages, goals | done |
-| 2 Materials | the author, Google Drive, link check | form, Drive import, rules | source registry | 44 materials, 23 with text |
+| 2 Materials | the author, Google Drive, link check | form, Drive import, rules | source registry | 44 materials, 21 with text |
 | 3 Readiness | project and materials | rules, one Claude review | gaps per base | gaps in licences and grades |
 | 4 Concepts | source texts | Claude reads, Claude groups, rules give statuses, Claude checks against the game | concept table | 1,536 terms → 935 concepts |
 | 5 History | historical texts | Claude reads, Claude groups, rules, Claude links to concepts | practice table | 1,073 passages → 283 practices |
@@ -130,7 +130,7 @@ whether the game shows it.
 
 pdf.js extracts a PDF's text layer page by page with a `[page N]` marker before each page (a
 scan with no text layer is refused); Google Drive files come through the Drive connector;
-anything else is pasted. **Result:** 23 sources with text, about one million characters.
+anything else is pasted. **Result:** 21 sources with text, about 0.9 million characters.
 
 ### 4b. Reading: extracting candidate concepts
 
@@ -154,7 +154,7 @@ For the simulation's own description, a concept is something the player does or 
 that the simulation computes, detects or controls, and `measured_by` names the signal, event or
 control.
 
-**Result:** 1,536 candidates from 20 sources. Most: Pedrosa, *A Muleta e a Tartaranha* (220),
+**Result:** 1,536 candidates from 19 sources. Most: Pedrosa, *A Muleta e a Tartaranha* (220),
 Veleiro.net (178), the moliceiro heritage file (175), Gaspar, *Os portos fluviais do Tejo* (134),
 *Territórios da Lisboa Medieval* (130).
 
@@ -246,7 +246,7 @@ simplifications:
 later steps unless the author confirms them.
 
 **Result:** 891 of 935 checked: 131 core, 330 maybe, 430 out; 187 linked to the simulation; 5
-number conflicts with the game found.
+number conflicts found by this check.
 
 **Examples with Claude's reason:**
 - core: close-hauled ("central point of sail; shown in polar and no-go zone"), in irons ("sails
@@ -530,19 +530,20 @@ today's data, and sorted by what they are about:
 | **Terminology: Portuguese variants** (pt-PT against pt-BR) | 7 concepts | rule (variant difference) | *virar de bordo / cambar* (tack); *virar em roda / jaibe* (gybe); *estibordo / boreste*; *ovéns / brandais*; *abatimento / deriva* |
 | **Terminology: one word, two concepts** | 74 concepts | rule (term clash) | *caçar* in "Sheet" and "Sheeting in"; *boca*; *vela grande*; *estai*. Mostly duplicates to merge |
 | **Terminology: no pt-PT word** | 674 concepts | rule (missing term) | most concepts from the Brazilian course or English sources |
-| **Sailing numbers against the game** | 5 | Claude, check against the game | closest angle to the wind 45–50° in the course against about 36° in the game (Rabelo 50°); downwind sail at 90° against no matching angle in the game; square sail no closer than 50° against "braced to 35°" |
+| **Sailing numbers** (angles, sail settings) | 4 | Claude, grouping and check against the game | closest angle to the wind 45–50° in the course against about 36° in the game (Rabelo 50°); downwind sail at 90° against no matching angle in the game; square sail no closer than 50° against "braced to 35°" |
 | **Definitions that differ** | 3 | Claude, grouping | *tábua de bolina*: a lowered board (one source) or a fixed side keel (another); a gust: a stronger wind, or also a change of direction (the game); *bateira*: a cargo boat, or the boat the Avieiro fishermen lived on |
-| **Historical quantities** | 6 | Claude, grouping | the batel's passenger limit, 8 or 12 (two paragraphs of the 1572 *Regimento dos Barqueiros*); a muleta's sails, 9–10 (Baldaque da Silva) or up to 20 (Smyth 1867, Folin 1892); boats seized at the bar in 1650, 16 or 14; muleta crew 15–20 men |
-| **Geography** | 2 | Claude, grouping | the Tagus permanently navigable for 85 km or 65 km; traffic up to 20–30 km above Lisbon, or as far as the tide (Sabugueiro) |
-| **Dates** | 3 | Claude, grouping | decline of sail freight dated 1951 and 1966, against "until the 1970s" (Museu da Paisagem) and a crisis caused by road transport early in the 20th century (Freire); Rossio de Abrantes: boats over 20 t until the early 1950s, or up to 30 t until the late 1950s |
+| **Historical quantities** | 5 | Claude, grouping | the batel's passenger limit, 8 or 12 (two paragraphs of the 1572 *Regimento dos Barqueiros*, found twice); a muleta's sails, 9–10 (Baldaque da Silva) or up to 20 (Smyth 1867, Folin 1892); boats seized at the bar in 1650, 16 or 14; boats per route on the scheduled service |
+| **Geography** | 3 | Claude, grouping | the Tagus permanently navigable for 85 km or 65 km (found twice); traffic up to 20–30 km above Lisbon, or as far as the tide (Sabugueiro) |
+| **Dates** | 3 | Claude, grouping | decline of sail freight dated 1951 and 1966, against "until the 1970s" (Museu da Paisagem) and the end of the Lisbon–Azambuja steamers in 1857 after the railway (Freire); Rossio de Abrantes: boats over 20 t until the early 1950s, or up to 30 t until the late 1950s |
 | **Same figure, different scope** | 1 | Claude, grouping | the 1552 count of 1,490 boats: the whole Tagus (mediotejo) or the river boats serving Lisbon (getLISBON) |
 | **A source against what it quotes** | 2 | Claude, grouping | Pedrosa says Duhamel Du Monceau was wrong about muletas fishing at sea; Pedrosa says no muleta fished, while documents he cites (1620, 1633, 1634) show them fishing |
-| **Not real conflicts (noise)** | 3 | — | "No conflict" written as a conflict; supply limits of 7, 10 and 20 *léguas* that are different rules; a crew size "that may differ" without a second figure |
+| **Not real conflicts (noise)** | 3 | Claude | "No conflict" written as a conflict; supply limits of 7, 10 and 20 *léguas* that are different rules; a muleta crew size "that may differ" without a second figure |
 
-In short: of the 22 conflicts Claude reported between sources and with the game, 19 are real and 3
-are noise. Numbers (10) are the most common, then dates and definitions (3 each); terminology is
-by far the largest problem overall, but it is found by rules, not by Claude: 7 concepts where
-the Portuguese variants disagree and 674 with no European Portuguese word yet.
+In short: Claude reported 24 conflicts (13 between concepts, 11 between practices); 21 are real
+and 3 are noise. Numbers are the most common (12: sailing angles, historical quantities,
+distances), then dates and definitions (3 each). Terminology is by far the largest problem
+overall, but it is found by the rules, not by Claude: 7 concepts where the Portuguese variants
+disagree, 74 words used in two concepts, and 674 concepts with no European Portuguese word yet.
 
 ---
 
