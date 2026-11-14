@@ -33,8 +33,10 @@ Updated 2026-11-14. Read this first when starting a new session.
    lines; a download button in the workbench for the same files.
 2. Runtime in `runtime/`: observer split (generic engine + sailing rules) and scheduler, with
    scripted-sail tests; Playtest view in the workbench.
-3. Game integration behind `?narrative=on` (captions, hooks, place watcher), then speech
-   (offline text to speech).
+3. Game integration: done in the game itself (its own narrator, `src/world/narrator.ts`, and
+   moment detector, `src/world/moments.ts`, with captions and a Narration setting). On the game
+   branch it also has replies to followed instructions and story or trivia in quiet moments,
+   matching `runtime/src/scheduler.ts` here. Next: speech (offline text to speech).
 4. The game should generate `from-game/world.json` itself at each release.
 
 ## Open questions
