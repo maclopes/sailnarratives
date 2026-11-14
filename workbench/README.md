@@ -81,10 +81,12 @@ The tool's screens. Each is a single HTML page with no build step.
   places}`, and a coverage check lists options without a verified or approved setup or close
   line (the game would fall back to the shared lines there).
 
-  Tab 7, Game report: evaluates the game against the sources. Concepts are sorted by kind
-  (sailing, boat part, practice, role, cargo, event, regulation, internal; only concepts not
-  sorted before), boats and places come from the Boats and places list (tab 4) and are checked
-  against the pack's game world list (area by area), sailing
+  Tab 7, Game report: evaluates the game against the sources, with no Claude requests (from
+  version 32): it assembles what the other tabs decided. Each concept's kind (sailing, boat
+  part, boat, place, practice…) comes from Check against the game (tab 3); boats and places from
+  the Boats and places list (tab 4), checked against the pack's game world list (area by area);
+  which game activity covers each practice from Situations (tab 5, "Compare with the game's
+  activities", data situations/coverage); sailing
   concepts against the simulation, and historical practices (from the History tab when it has run) against the game's activities.
   Every finding counts its sources; a threshold hides weak ones. It drafts one issue per
   finding for the game's developers (copy or download as Markdown) and keeps earlier reports,

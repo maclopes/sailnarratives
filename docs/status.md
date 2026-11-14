@@ -30,8 +30,9 @@ Eight tabs become six: Sources (Materials + Readiness + one reading pass), Knowl
 History + Boats and places), Activities (Situations + the report's practice comparison),
 Narrative, and a Game report that assembles without Claude requests. Stage 1 is done (workbench
 version 31): Readiness is part of Sources, and boats and places are one reviewed list built by
-rules, which the report reads. Next: stage 2 (report as pure assembly, practice comparison in
-Activities), stage 3 (one Knowledge tab), stage 4 (one reading pass for new sources).
+rules, which the report reads. Stage 2 is done (version 32): the report makes no Claude requests;
+concept kinds come from Check against the game, and the practice comparison is in Situations.
+Next: stage 3 (one Knowledge tab), stage 4 (one reading pass for new sources).
 Snapshots of the workbench's database: `data/workbench/` (`workbench/snapshot.py`).
 
 ## Next steps

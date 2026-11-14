@@ -249,8 +249,8 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
   <!-- 6 Situations -->
   <section class="panel" id="panel-situations" role="tabpanel" hidden>
     <p class="sub">Joins each historical practice with the concepts it exercises and what the game can simulate, and proposes an activity: goal, measurable success rule, boat, route, level, length, simplifications and what the game would still need. Proposals are made without seeing the game's own activities; the blind comparison then checks which existing mini-games the method finds on its own. Only processed records are used: no source is read again.</p>
-    <div class="row" style="margin-top:12px"><button class="btn primary" id="sPropose">Propose activities</button><button class="btn" id="sReconsider">Reconsider skipped</button><button class="btn" id="sCompare">Compare with the game's mini-games</button><button class="btn" id="sCopy">Copy</button><button class="btn" id="sDl">Download</button><span class="hint" id="sRun"></span></div>
-    <div id="sBlind"></div><div id="sAdd"></div>
+    <div class="row" style="margin-top:12px"><button class="btn primary" id="sPropose">Propose activities</button><button class="btn" id="sReconsider">Reconsider skipped</button><button class="btn" id="sCompare">Compare with the game's activities</button><button class="btn" id="sCopy">Copy</button><button class="btn" id="sDl">Download</button><span class="hint" id="sRun"></span></div>
+    <div id="sBlind"></div><div id="sCover"></div><div id="sAdd"></div>
     <div class="section"><div class="row" style="justify-content:space-between"><h2>Proposed activities</h2><span class="hint" id="sMeta"></span></div><div class="chips" id="sChips"></div><div id="sList"></div></div>
   </section>
 
@@ -312,7 +312,7 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":
 function toast(msg){const t=$("toast");t.textContent=msg;t.hidden=false;clearTimeout(toast.h);toast.h=setTimeout(()=>t.hidden=true,2600);}
 function setSave(msg){$("saveState").textContent=msg;}
 
-const BUILD="2026-11-14 · version 31";
+const BUILD="2026-11-14 · version 32";
 $("buildTag").textContent=BUILD;
 // ---------- tabs ----------
 function showTab(name){
@@ -960,6 +960,7 @@ function renderConcepts(){ renderCSources(); renderCTable(); renderSummary(); }
 
 
 // ---------- link concepts to the simulation, propose scope, prune conflict noise ----------
+const KINDS_C=["sailing","hull","boat","place","region","practice","role","cargo","event","regulation","internal","other"];
 function linkPrompt(simList, batch){
   const p=state.project;
   return `You check concepts gathered from sources about ${p.subject||"one subject"} against a game's simulation, for a short museum visit (${p.visitMinutes||"a few"} minutes, audience: ${p.audience||"visitors"}).
@@ -973,7 +974,9 @@ For each concept below:
 - numbers: if a number stated for the concept disagrees with the simulation's number for the same quantity (for example the closest angle to the wind), describe it in one sentence naming both values; otherwise "".
 - scope: "core" if it serves the learning goals and a visitor can meet it in the game or its stories; "maybe" if useful context; "out" if it does not fit a short museum visit on this subject (for example modern yacht fittings, safety drills, unrelated topics). why: at most 10 words.
 - keep: the indices of the listed conflicts that are real disagreements. Drop ones that are only two words for the same thing in one source, the difference between languages or variants, or a simulation describing how it models something.
-Return JSON only: {"items":[{"id":"","sim":[],"numbers":"","scope":"core","why":"","keep":[0]}]}
+- kind: sailing (something a sailor does or feels: points of sail, manoeuvres, sail handling, wind, current, tide, depth), hull (a part of a boat, its rig or gear), boat (a type of boat), place (a named place or stretch of water), region (a country, sea, province or whole river), practice (a work routine), role, cargo, event, regulation, internal (a setting of the simulation or a tool, not something to learn), or other.
+- needs: for sailing, hull and practice concepts that sim leaves empty, at most 6 words on what the simulation would need to show it ("tide and current", "water depth", "reefing control"), or "out of scope".
+Return JSON only: {"items":[{"id":"","sim":[],"numbers":"","scope":"core","why":"","keep":[0],"kind":"sailing","needs":""}]}
 
 Concepts:
 ${JSON.stringify(batch)}`;
@@ -1006,6 +1009,7 @@ async function linkConcepts(onlyNew){
         if(Array.isArray(it.keep) && (c.conflicts||[]).length) c.conflicts=c.conflicts.filter((f,k)=>it.keep.includes(k));
         if(it.numbers && String(it.numbers).trim() && !(c.conflicts||[]).some(f=>f.type==="number"&&f.source==="game")) (c.conflicts ||= []).push({type:"number", text:String(it.numbers).slice(0,300), source:"game"});
         if(["core","maybe","out"].includes(it.scope)){ c.scope=it.scope; c.scopeWhy=String(it.why||"").slice(0,100); }
+        if(KINDS_C.includes(String(it.kind||"").toLowerCase())){ c.kind=String(it.kind).toLowerCase(); c.needs=String(it.needs||"").slice(0,80); }
         c.linkedAt=now; done++;
       }
       cstate.set.updatedAt=now; await saveDoc("concepts/current", cstate.set); renderCTable();
@@ -1352,9 +1356,11 @@ function guessArea(name){ const w=rstate.world; if(!w) return "unknown"; const k
 /** The names the sources give, each with its kind, area, sources and where it came from. */
 function entityMentions(){
   const out=[], cls=rstate.classes||{}, hidx=hIndex();
-  for(const r of conceptRows()){ if(r.c.decision==="rejected") continue; const k=cls[r.c.id]; if(!k||!EKINDS[k.category]) continue;
+  for(const r of conceptRows()){ if(r.c.decision==="rejected") continue;
+    // the kind from the concept check, or else from the earlier report sorting (which also gave a name and an area)
+    const k=cls[r.c.id] && (!r.c.kind || r.c.kind===cls[r.c.id].category) ? cls[r.c.id] : (r.c.kind?{category:r.c.kind}:null); if(!k||!EKINDS[k.category]) continue;
     const name=k.name||r.c.label; if(isRouteOrList(name)) continue;
-    out.push({kind:k.category, name, area:k.area||"unknown", sources:[...new Set(r.ms.filter(x=>x.kind!=="simulation").map(x=>x.sourceId))], concept:r.c.id}); }
+    out.push({kind:k.category, name, area:k.area||(k.category==="place"?guessArea(name):"unknown"), sources:[...new Set(r.ms.filter(x=>x.kind!=="simulation").map(x=>x.sourceId))], concept:r.c.id}); }
   for(const p of (hstate.set?.practices||[]).filter(p=>p.decision!=="rejected")){ const srcs=[...new Set(p.members.map(id=>hidx[id]?.sourceId).filter(Boolean))];
     for(const [field,list] of [["boat",p.boats||[]],["place",p.places||[]]]) for(const nm of list.flatMap(splitNames)){
       const k=cls[(field==="boat"?"hb:":"hp:")+norm(nm).slice(0,60)]; const kind=k&&EKINDS[k.category]?k.category:(k&&k.category==="other"?null:field); if(!kind) continue;
@@ -1529,9 +1535,35 @@ async function compareBlind(){
     const g=(Array.isArray(r?.games)?r.games:[]).map(x=>({...x, id:gid(x.id), proposal:sid(x.proposal)})).filter(x=>x.id).map(x=>({id:x.id, proposal:props.some(p=>p.id===x.proposal)?x.proposal:"", match:MATCH[x.match]?x.match:"none", why:String(x.why||"").slice(0,200)}));
     const pr=(Array.isArray(r?.proposals)?r.proposals:[]).map(x=>({...x, id:sid(x.id)})).filter(x=>props.some(y=>y.id===x.id)).map(x=>({id:x.id, game:String(x.game||""), match:MATCH[x.match]?x.match:"new", why:String(x.why||"").slice(0,200)}));
     sstate.blind={games:g, proposals:pr, createdAt:new Date().toISOString(), situationsAt:sstate.set.createdAt};
-    await saveDoc("situations/blind", sstate.blind); $("sRun").textContent="Comparison done.";
+    await saveDoc("situations/blind", sstate.blind);
+    await comparePractices(); $("sRun").textContent="Comparison done.";
   }catch(e){ $("sRun").textContent=e.code==="rate_limited"?"Too many requests; wait a minute.":"Could not compare: "+(e.message||e.code||e); }
   $("sCompare").disabled=false; renderSituations();
+}
+/** Which of the game's activities covers each historical practice (was in the game report). */
+function practiceRows(){ const hidx=hIndex();
+  return (hstate.set?.practices||[]).filter(p=>p.decision!=="rejected"&&p.kind==="practice").map(p=>{ const ms=p.members.map(id=>hidx[id]).filter(Boolean);
+    return {key:"h:"+p.id, id:p.id, name:p.label, srcs:[...new Set(ms.map(x=>x.sourceId))], meaning:String(ms[0]?.action||"").slice(0,120), boat:(p.boats||[]).slice(0,2).join(", "), place:(p.places||[]).slice(0,2).join(", "),
+      evidence:ms.slice(0,6).map(x=>`- ${srcTitle(x.sourceId)}${x.location?" ("+x.location+")":""}: ${x.action}`)}; }); }
+async function comparePractices(onlyNew=true){
+  const cov=sstate.coverage?.byPractice ? {...sstate.coverage.byPractice} : {...(rstate.acts||{})}; // earlier results from the game report are kept
+  const prac=practiceRows().filter(x=>!(onlyNew&&cov[x.key])); const P=30;
+  for(let i=0;i<prac.length;i+=P){
+    $("sRun").textContent=`Comparing practices with the game's activities: ${Math.min(i+P,prac.length)} of ${prac.length}…`;
+    const batch=prac.slice(i,i+P).map(x=>({id:x.key, practice:x.name, boat:x.boat, place:x.place, meaning:x.meaning, sources:x.srcs.length}));
+    const r=await sample.json(activityPrompt(batch),{modelTier:"default"});
+    for(const it of (Array.isArray(r?.items)?r.items:[])){ const k=String(it?.id||"").match(/h:p\d+/)?.[0]; if(k) cov[k]={status:["covered","partly","missing"].includes(it.status)?it.status:"missing", activity:String(it.activity||""), why:String(it.why||"").slice(0,160)}; }
+    sstate.coverage={byPractice:cov, updatedAt:new Date().toISOString()}; await saveDoc("situations/coverage", sstate.coverage);
+  }
+  if(!prac.length){ sstate.coverage={byPractice:cov, updatedAt:new Date().toISOString()}; await saveDoc("situations/coverage", sstate.coverage); }
+}
+function renderCoverage(){
+  const cov=sstate.coverage?.byPractice||rstate.acts||{}, rows=practiceRows(); if(!rows.length){ $("sCover").innerHTML=""; return; }
+  const st=(x)=>cov[x.key]?.status||"not compared", n={}; rows.forEach(x=>n[st(x)]=(n[st(x)]||0)+1);
+  const by=(k)=>rows.filter(x=>st(x)===k).sort((a,b)=>b.srcs.length-a.srcs.length);
+  $("sCover").innerHTML=`<div class="section"><h2>Practices and the game's activities</h2><p class="sub">For each historical practice, whether one of the game's activities lets the player do it: <b>${n.covered||0}</b> covered, <b>${n.partly||0}</b> partly, <b>${n.missing||0}</b> with no activity${n["not compared"]?`, <b>${n["not compared"]}</b> not compared yet (press Compare with the game's activities)`:""}. The game report uses this.</p>
+    ${["covered","partly","missing"].filter(k=>n[k]).map(k=>`<details style="margin-top:6px"><summary class="hint" style="cursor:pointer">${k==="missing"?"No activity":k[0].toUpperCase()+k.slice(1)} · ${n[k]}</summary><div style="overflow-x:auto"><table class="rtable"><tr><th>Practice</th><th>Sources</th><th>Closest activity</th><th>Why</th></tr>
+      ${by(k).map(x=>`<tr><td>${esc(x.name)}</td><td class="n">${x.srcs.length}</td><td class="hint">${esc(cov[x.key]?.activity||"")}</td><td class="hint">${esc(cov[x.key]?.why||"")}</td></tr>`).join("")}</table></div></details>`).join("")}</div>`;
 }
 function renderSituations(){
   const set=sstate.set, w=rstate.world;
@@ -1546,6 +1578,7 @@ function renderSituations(){
       ${mini.map(m=>{ const x=b.games.find(y=>y.id===m.id)||{match:"none"}; return `<tr><td>${esc(m.title)}</td><td><span class="pill ${MATCH[x.match]}">${esc(x.match)}</span></td><td>${esc(byId[x.proposal]?.title||"")}</td><td class="hint">${esc(x.why||"")}</td></tr>`; }).join("")}</table></div>
       <p class="hint" style="margin-top:6px">Caveat: the method doc's concept tables were an input to the concepts step, and they mention some game feedback; the game's activity list itself was not used to propose.</p></div>`; }
   else $("sBlind").innerHTML="";
+  renderCoverage();
   const adds=gameAdditions();
   $("sAdd").innerHTML=adds.length?`<div class="section"><h2>Game additions these activities need</h2><p class="sub">Grouped from the proposals: how many activities each addition would unlock (fully, or improve), and how many sources back those activities.</p>
     <div style="overflow-x:auto"><table class="rtable"><tr><th>Addition</th><th>Unlocks</th><th>Improves</th><th>Sources</th><th>Activities</th></tr>
@@ -2004,7 +2037,6 @@ function matchBoat(name){
 }
 async function saveR(path,data){ if(db) await db.doc(path).set(data); }
 async function buildReport(){
-  if(!sample){ toast("Asking Claude is not available in this view."); return; }
   if(!rstate.world){ $("rState").textContent="The game's world list is not loaded."; return; }
   const rows=conceptRows(); if(!rows.length){ $("rState").textContent="Run Find concepts first (Concepts tab)."; return; }
   rstate.running=true; $("rBuild").disabled=true;
@@ -2012,25 +2044,10 @@ async function buildReport(){
   const ask=async(prompt)=>{ for(let a=0;a<2;a++){ try{ return await sample.json(prompt,{modelTier:"default"}); }catch(e){ if(fatal(e)||a===1) throw e; } } };
   try{
     const info=rows.filter(r=>r.c.decision!=="rejected" && !(r.c.scope==="out" && r.c.decision!=="accepted")).map(r=>({c:r.c, ms:r.ms, sim:r.ms.some(x=>x.kind==="simulation")||(r.c.simLinks||[]).length>0, srcs:[...new Set(r.ms.filter(x=>x.kind!=="simulation").map(x=>x.sourceId))]}));
-    // 1. sort concepts into categories (only those not sorted yet); check every answer came back
-    const asItem=(x)=>({id:x.c.id, label:x.c.label, terms:[...new Set(x.ms.map(m=>m.term))].slice(0,5), meaning:String(x.ms.find(m=>m.kind!=="simulation")?.definition||x.ms[0]?.definition||"").slice(0,80), sources:x.srcs.length, sim:x.sim});
-    const stale=(id)=>{ const k=rstate.classes[id]; return !k || ((k.v||1)<CLASS_V && ["boat","place","other"].includes(k.category)); };
-    // only concepts are sorted; boats and places come from the Boats and places list (History tab)
-    let pending=info.filter(x=>stale(x.c.id)).map(asItem);
-    const total=pending.length; let unsorted=0;
-    for(const size of [40,15]){
-      const left=[];
-      for(let i=0;i<pending.length;i+=size){
-        $("rState").textContent=`Sorting by kind: ${total-pending.length+i} of ${total}…`;
-        const batch=pending.slice(i,i+size); const r=await ask(classifyPrompt(batch)); const got=new Set();
-        for(const it of (Array.isArray(r?.items)?r.items:[])) if(it?.id && batch.some(b=>b.id===it.id)){ rstate.classes[it.id]={category:String(it.category||"other").toLowerCase(), name:String(it.name||""), area:String(it.area||""), needs:String(it.needs||""), v:CLASS_V}; got.add(it.id); }
-        left.push(...batch.filter(b=>!got.has(b.id)));
-        await saveR("report/classes",{byConcept:rstate.classes, updatedAt:new Date().toISOString()});
-      }
-      pending=left; if(!pending.length) break;
-    }
-    unsorted=pending.length;
-    const cls=(x)=>rstate.classes[x.c.id]||{category:"other"};
+    // 1. each concept's kind comes from the concept check (Concepts, Check against the game); concepts
+    // checked before kinds existed keep the kind the earlier reports gave them
+    const cls=(x)=>x.c.kind?{category:x.c.kind, needs:x.c.needs||""}:(rstate.classes[x.c.id]||{category:"other", unsorted:true});
+    const unsorted=info.filter(x=>cls(x).unsorted).length;
     // 2. boats and places: the list in the History tab, built again by rules (keeps the author's changes)
     buildEntities(); await saveEntities();
     const hidx0=hIndex(), evOf=(e)=>e.practices.slice(0,3).flatMap(pid=>{ const p=hstate.set?.practices?.find(q=>q.id===pid); const m0=p&&hidx0[p.members[0]]; return m0?[`- ${srcTitle(m0.sourceId)}${m0.location?" ("+m0.location+")":""}: ${m0.action}`]:[]; });
@@ -2041,21 +2058,10 @@ async function buildReport(){
     const regionNames=live.filter(e=>e.kind==="region").map(e=>e.name).sort();
     // 3. sailing behaviour and boat parts
     const physics=info.filter(x=>["sailing","hull"].includes(cls(x).category)).map(x=>({name:x.c.label, kind:cls(x).category, status:x.sim?"shown":(/out of scope/i.test(cls(x).needs)?"out of scope":"not shown"), needs:x.sim?"":cls(x).needs, sources:x.srcs, concepts:[x.c.id]}));
-    // 4. historical practices against the game's activities
-    const hidx=hIndex();
-    const hprac=(hstate.set?.practices||[]).filter(p=>p.decision!=="rejected"&&p.kind==="practice").map(p=>{ const ms=p.members.map(id=>hidx[id]).filter(Boolean);
-      return {key:"h:"+p.id, name:p.label, srcs:[...new Set(ms.map(x=>x.sourceId))], meaning:String(ms[0]?.action||"").slice(0,120), boat:p.boats.slice(0,2).join(", "), place:p.places.slice(0,2).join(", "),
-        evidence:ms.slice(0,6).map(x=>`- ${srcTitle(x.sourceId)}${x.location?" ("+x.location+")":""}: ${x.action}`)}; });
-    const prac=hprac.length ? hprac : info.filter(x=>cls(x).category==="practice"&&x.srcs.length).map(x=>({key:x.c.id, name:x.c.label, srcs:x.srcs, meaning:String(x.ms[0]?.definition||"").slice(0,100), concepts:[x.c.id]}));
-    const P=30;
-    for(let i=0;i<prac.length;i+=P){
-      $("rState").textContent=`Comparing practices with the game's activities: ${Math.min(i+P,prac.length)} of ${prac.length}…`;
-      const batch=prac.slice(i,i+P).map(x=>({id:x.key, practice:x.name, boat:x.boat||"", place:x.place||"", meaning:x.meaning, sources:x.srcs.length}));
-      const r=await ask(activityPrompt(batch));
-      for(const it of (Array.isArray(r?.items)?r.items:[])) if(it?.id) rstate.acts[it.id]={status:["covered","partly","missing"].includes(it.status)?it.status:"missing", activity:String(it.activity||""), why:String(it.why||"").slice(0,160)};
-    }
-    await saveR("report/activities",{byConcept:rstate.acts, updatedAt:new Date().toISOString()});
-    const practices=prac.map(x=>({name:x.name, ...(rstate.acts[x.key]||{status:"missing",activity:"",why:""}), sources:x.srcs, concepts:x.concepts||[], ...(x.evidence?{evidence:x.evidence}:{})}));
+    // 4. historical practices against the game's activities: the comparison made in Situations
+    const cov=sstate.coverage?.byPractice||rstate.acts||{};
+    const prac=practiceRows(); const notCompared=prac.filter(x=>!cov[x.key]).length;
+    const practices=prac.map(x=>({name:x.name, ...(cov[x.key]||{status:"not compared",activity:"",why:""}), sources:x.srcs, concepts:x.concepts||[], ...(x.evidence?{evidence:x.evidence}:{})}));
     // 5. conflicts on what the game depends on
     const conflicts=info.filter(x=>(x.c.conflicts||[]).length && ["boat","place","sailing","hull","practice","event"].includes(cls(x).category)).flatMap(x=>x.c.conflicts.map(f=>({name:x.c.label, kind:cls(x).category, type:f.type, text:f.text, sources:x.srcs, concepts:[x.c.id]})));
     const anachronisms=miniGames().map(g=>({g, l:outOfPeriod(g)})).filter(x=>x.l.length).map(x=>({game:x.g.title, period:nSettings(x.g.id).period, landmarks:x.l.map(l=>`${l.name} (${l.year})`)}));
@@ -2068,7 +2074,7 @@ async function buildReport(){
     const id="r"+report.createdAt.replace(/[^0-9]/g,"").slice(0,14);
     await saveR("reports/"+id, report); rstate.report={id,...report};
     if(!db) rstate.history=[rstate.report,...rstate.history];
-    $("rState").textContent="Done."+(unsorted?` ${unsorted} concepts could not be sorted by kind; build again to retry them.`:"");
+    $("rState").textContent="Done, without Claude requests."+(unsorted?` ${unsorted} concepts have no kind yet (Concepts: Check against the game).`:"")+(notCompared?` ${notCompared} practices not compared with the game's activities yet (Situations: Compare with the game's activities).`:"");
   }catch(e){ $("rState").textContent=(e.code==="not_granted"?"Asking Claude is not allowed in this view.":e.code==="rate_limited"?"Too many requests; wait a minute.":"Stopped: "+(e.message||e.code||e))+" Sorting done so far is kept; build again to continue."; }
   rstate.running=false; $("rBuild").disabled=false; renderReport();
 }
@@ -2293,6 +2299,7 @@ try{ const t=localStorage.getItem("intake.tab"); if(t) showTab(t); }catch{}
     nRefresh(); }, ()=>{});
   const sRefresh=()=>{ if(!$("panel-situations").hidden && !sstate.running) renderSituations(); };
   db.doc("situations/current").onSnapshot(s=>{ if(!sstate.running){ sstate.set=s.exists?own(s.data()):null; sRefresh(); } }, ()=>{});
+  db.doc("situations/coverage").onSnapshot(s=>{ sstate.coverage=s.exists?own(s.data()):null; sRefresh(); }, ()=>{});
   db.doc("situations/blind").onSnapshot(s=>{ sstate.blind=s.exists?own(s.data()):null; sRefresh(); }, ()=>{});
   const rRefresh=()=>{ if(!$("panel-report").hidden && !rstate.running) renderReport(); };
   db.doc("world/game").onSnapshot(s=>{ rstate.world=s.exists?own(s.data()):null; rRefresh(); nRefresh(); sRefresh(); }, ()=>{});
