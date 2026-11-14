@@ -1,0 +1,1375 @@
+{
+ "items": [
+  {
+   "definition": "Navigation limited to the tidal territory of the river, as opposed to true river navigation; the source says the remaining Tagus traffic is of this kind.",
+   "id": "mmwdz10zt3xye:1",
+   "location": "[page 156]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "20-30",
+     "what": "distance upstream of Lisbon beyond which estuary navigation is insignificant"
+    }
+   ],
+   "term": "navegação de estuário"
+  },
+  {
+   "definition": "The tidal stretch of the river, where the remaining Tagus boat traffic operates.",
+   "id": "mmwdz10zt3xye:2",
+   "location": "[page 156]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "20-30",
+     "what": "distance upstream of Lisbon beyond which traffic becomes insignificant"
+    }
+   ],
+   "term": "território de marés"
+  },
+  {
+   "definition": "Stretches of Portuguese rivers usable by boats, totalled in a 1957 study including the Ria de Aveiro.",
+   "id": "mmwdz10zt3xye:3",
+   "location": "[page 156]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "885",
+     "what": "total navigable stretches of Portuguese rivers (1957)"
+    },
+    {
+     "unit": "km",
+     "value": "50",
+     "what": "of which Ria de Aveiro"
+    }
+   ],
+   "term": "troços navegáveis"
+  },
+  {
+   "definition": "River stretches navigable all year round, here for boats carrying more than 40 tonnes.",
+   "id": "mmwdz10zt3xye:4",
+   "location": "[page 156]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "260",
+     "what": "permanently navigable length for boats over 40 tonnes"
+    },
+    {
+     "unit": "km",
+     "value": "85",
+     "what": "Tagus and its adjuvant system, permanent"
+    },
+    {
+     "unit": "km",
+     "value": "60",
+     "what": "Sado, permanent"
+    },
+    {
+     "unit": "km",
+     "value": "52",
+     "what": "Guadiana, permanent"
+    }
+   ],
+   "term": "navegáveis permanentemente"
+  },
+  {
+   "definition": "Navigable only for part of the year; the Tagus was so for about two months along a longer stretch.",
+   "id": "mmwdz10zt3xye:5",
+   "location": "[page 156]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "months",
+     "value": "2",
+     "what": "duration of temporary navigability on the Tagus"
+    },
+    {
+     "unit": "km",
+     "value": "160",
+     "what": "length of temporarily navigable Tagus (1957)"
+    }
+   ],
+   "term": "navegável temporariamente"
+  },
+  {
+   "definition": "Cargo capacity per boat, used to classify navigable stretches by economic usefulness (classes such as over 40 t, 20-40 t, 10-20 t, 2-10 t).",
+   "id": "mmwdz10zt3xye:6",
+   "location": "[page 156]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "t",
+     "value": ">40",
+     "what": "largest boat capacity class"
+    },
+    {
+     "unit": "t",
+     "value": "20-40",
+     "what": "class"
+    },
+    {
+     "unit": "t",
+     "value": "10-20",
+     "what": "class"
+    },
+    {
+     "unit": "t",
+     "value": "2-10",
+     "what": "class"
+    }
+   ],
+   "term": "carga por barco"
+  },
+  {
+   "definition": "The auxiliary waterways connected to the Tagus that add to its navigable length.",
+   "id": "mmwdz10zt3xye:7",
+   "location": "[page 156]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "65",
+     "what": "total navigable extension"
+    }
+   ],
+   "term": "sistema adjuvante do Tejo"
+  },
+  {
+   "definition": "Water transport, maritime or river, which before railways was the only means of widening markets and cheaper than land haulage.",
+   "id": "mmwdz10zt3xye:8",
+   "location": "[page 154]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "times",
+     "value": "10",
+     "what": "land transport cost relative to water transport"
+    }
+   ],
+   "term": "transporte por barco"
+  },
+  {
+   "definition": "A proposed canal between Moita and Setúbal to link the Tagus and Sado navigable systems.",
+   "id": "mmwdz10zt3xye:9",
+   "location": "[page 154]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "canal Tejo-Sado"
+  },
+  {
+   "definition": "Zones supplied by or supplying a settlement, which coasts and navigable rivers stretch lengthwise instead of forming circles.",
+   "id": "mmwdz10zt3xye:10",
+   "location": "[page 154]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "áreas de influência"
+  },
+  {
+   "definition": "Stretch of the Tagus between Abrantes and Sabugueiro, where tides begin to be felt; the author's definition of the middle river.",
+   "id": "mmwdz10zt3xye:11",
+   "location": "[page 159]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "médio Tejo"
+  },
+  {
+   "definition": "Tide; its influence starts being felt at Sabugueiro, marking the downstream limit of the middle Tagus.",
+   "id": "mmwdz10zt3xye:12",
+   "location": "[page 159]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "maré"
+  },
+  {
+   "definition": "River-navigation boats serving Lisbon and the Tagus ports; counted in a 1552 survey as the river's working fleet.",
+   "id": "mmwdz10zt3xye:13",
+   "location": "[page 159]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "1490",
+     "what": "river boats in Lisbon and Tagus ports, 1552"
+    }
+   ],
+   "term": "barcos de navegação fluvial"
+  },
+  {
+   "definition": "Boat on a regular route carrying goods or passengers, distinguished in Abrantes' fleet from fishing boats.",
+   "id": "mmwdz10zt3xye:14",
+   "location": "[page 159]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "100",
+     "what": "Abrantes boats on regular service, 1552"
+    }
+   ],
+   "term": "barco de carreira"
+  },
+  {
+   "definition": "Fishing, a river boat use; part of Abrantes' fleet worked at fishing rather than regular transport.",
+   "id": "mmwdz10zt3xye:15",
+   "location": "[page 159]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "80",
+     "what": "Abrantes fishing boats, 1552"
+    }
+   ],
+   "term": "pesca"
+  },
+  {
+   "definition": "Type of river boat used on scheduled runs carrying goods to Lisbon from upstream Tagus ports.",
+   "id": "mmwdz10zt3xye:16",
+   "location": "[page 160]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "boats, two to three ",
+     "value": "4",
+     "what": "barcas from Muge to Lisbon"
+    },
+    {
+     "unit": "boats, three to four",
+     "value": "4",
+     "what": "barcas from Benavente to Lisbon"
+    },
+    {
+     "unit": "boats, two to three ",
+     "value": "3",
+     "what": "barcas and batéis from Vila Nova da Rainha"
+    }
+   ],
+   "term": "barcas"
+  },
+  {
+   "definition": "Smaller river boats that, alongside barcas, served the Tagus ports and ran regular trips to Lisbon.",
+   "id": "mmwdz10zt3xye:17",
+   "location": "[page 160]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "batéis"
+  },
+  {
+   "definition": "Quay or wharf for loading and mooring boats; Tancos had an imposing one built in the early 16th century.",
+   "id": "mmwdz10zt3xye:18",
+   "location": "[page 158]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "cais"
+  },
+  {
+   "definition": "Tagus estuary near Lisbon, where ports such as Almada and Ribatejo (Montijo) linked Lisbon with the south.",
+   "id": "mmwdz10zt3xye:19",
+   "location": "[page 158]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "estuário"
+  },
+  {
+   "definition": "Fertile floodplain lands along the Tagus, such as those of Santarém and Abrantes, whose melons were shipped by river.",
+   "id": "mmwdz10zt3xye:20",
+   "location": "[page 160]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "lezírias"
+  },
+  {
+   "definition": "Lower Tagus, where river communications were frequent and intense and better documented than upstream.",
+   "id": "mmwdz10zt3xye:21",
+   "location": "[page 160]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "baixo Tejo"
+  },
+  {
+   "definition": "Voyages on the middle and upper Tagus were less regular because of various constraints, unlike the lower river.",
+   "id": "mmwdz10zt3xye:22",
+   "location": "[page 160]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "viagens irregulares"
+  },
+  {
+   "definition": "Towing of boats along the riverbank by crews pulling, used to haul vessels past difficult stretches such as rapids.",
+   "id": "mmwdz10zt3xye:23",
+   "location": "[page 160]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "sirga"
+  },
+  {
+   "definition": "Towpaths built at the hardest points of the river so that crews could haul boats upstream or through obstacles.",
+   "id": "mmwdz10zt3xye:24",
+   "location": "[page 160]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "sirgadouros"
+  },
+  {
+   "definition": "Towing paths along the river used for hauling boats; their construction, with removal of rocks, made heavy cargo transport possible.",
+   "id": "mmwdz10zt3xye:25",
+   "location": "[page 160]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "caminhos de sirga"
+  },
+  {
+   "definition": "Rapids: difficult river stretches that boats had to pass, requiring all crews to help each other by towing.",
+   "id": "mmwdz10zt3xye:26",
+   "location": "[page 160]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "rápidos"
+  },
+  {
+   "definition": "Convoys of boats travelling together so crews could pool effort for hauling at difficult points.",
+   "id": "mmwdz10zt3xye:27",
+   "location": "[page 160]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "10",
+     "what": "minimum boats in a convoy"
+    },
+    {
+     "unit": "tonnes",
+     "value": "20-30",
+     "what": "cargo capacity per boat"
+    }
+   ],
+   "term": "combóios"
+  },
+  {
+   "definition": "Rocks or obstacles in the riverbed that had to be removed or cleared to allow navigation.",
+   "id": "mmwdz10zt3xye:28",
+   "location": "[page 160]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "escolhos"
+  },
+  {
+   "definition": "Low-water dry season, when river traffic could not operate, especially for larger boats.",
+   "id": "mmwdz10zt3xye:29",
+   "location": "[page 160]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "estiagem"
+  },
+  {
+   "definition": "Rafts used in summer to carry timber and cork downriver to Salvaterra de Magos or Valada, where cargo was moved onto boats.",
+   "id": "mmwdz10zt3xye:30",
+   "location": "[page 161]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "jangadas"
+  },
+  {
+   "definition": "Steam navigation, proposed in 1828 for the Tagus between Aranjuez and Lisbon.",
+   "id": "mmwdz10zt3xye:31",
+   "location": "[page 162]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "navegação a vapor"
+  },
+  {
+   "definition": "River navigation on the Tagus, carrying goods by boat; it declined after competition from railways and road transport, especially after the Second World War.",
+   "id": "mmwdz10zt3xye:32",
+   "location": "[page 164]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "navegação do Tejo"
+  },
+  {
+   "definition": "Dams, identified as part of the major works needed to improve navigability of the Tagus beyond towpaths alone.",
+   "id": "mmwdz10zt3xye:33",
+   "location": "[page 164]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barragens"
+  },
+  {
+   "definition": "Dikes or embankments, listed among the large engineering works needed to regularize the river for navigation.",
+   "id": "mmwdz10zt3xye:34",
+   "location": "[page 164]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "diques"
+  },
+  {
+   "definition": "Improving the river's course to make it steadier and easier to navigate, through works carried out up to the late 19th century.",
+   "id": "mmwdz10zt3xye:35",
+   "location": "[page 164]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "regularizar o curso"
+  },
+  {
+   "definition": "Vessels of about 300 tonnes capacity, projected for a canalized Tagus route between Madrid and Lisbon in a 1909 Spanish engineering study.",
+   "id": "mmwdz10zt3xye:36",
+   "location": "[page 164]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "t",
+     "value": "300",
+     "what": "projected boat capacity on Madrid-Lisbon route"
+    }
+   ],
+   "term": "barcos de 300 t"
+  },
+  {
+   "definition": "The tidal reach of the lower Tagus, where river boats still operated longest after abandoning the middle course.",
+   "id": "mmwdz10zt3xye:37",
+   "location": "[page 165]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "onde chega a maré"
+  },
+  {
+   "definition": "Boatmen who worked river boats on the Tagus; after traffic declined many moved to the lower Tagus, changed trade, or retired.",
+   "id": "mmwdz10zt3xye:38",
+   "location": "[page 165]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barqueiros"
+  },
+  {
+   "definition": "The river-seafaring population whose work gave Tagus ports their distinctive character, remembered with nostalgia after traffic ended.",
+   "id": "mmwdz10zt3xye:39",
+   "location": "[page 165]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "gente marítima"
+  },
+  {
+   "definition": "Sailors and boat owners, the largest occupational group among taxpayers in the port of Tancos in 1763.",
+   "id": "mmwdz10zt3xye:40",
+   "location": "[page 166]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "people",
+     "value": "96",
+     "what": "sailors and boat owners among Tancos taxpayers, 1763"
+    },
+    {
+     "unit": "people",
+     "value": "143",
+     "what": "total Tancos taxpayers, 1763"
+    }
+   ],
+   "term": "marinheiros e donos de barcos"
+  },
+  {
+   "definition": "Boat builder, a trade represented by an elderly informant interviewed at Rossio in 1969-1970 about former river port life.",
+   "id": "mmwdz10zt3xye:41",
+   "location": "[page 166]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "construtor de barcos"
+  },
+  {
+   "definition": "Propulsion by sail; boats travelled downstream to Lisbon, and also upstream on the return, using sails.",
+   "id": "mmwdz10zt3xye:42",
+   "location": "[page 167]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "à vela"
+  },
+  {
+   "definition": "Propulsion by oars; used by boats heading downstream toward Lisbon alongside sailing.",
+   "id": "mmwdz10zt3xye:43",
+   "location": "[page 167]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "a remos"
+  },
+  {
+   "definition": "Propulsion by pushing a pole against the riverbed; used with sail on the upstream return journey.",
+   "id": "mmwdz10zt3xye:44",
+   "location": "[page 167]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "à vara"
+  },
+  {
+   "definition": "Tidal waters of the lower river; they begin at Sabugueiro, where boats could be held up by floods.",
+   "id": "mmwdz10zt3xye:45",
+   "location": "[page 167]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "days",
+     "value": "18",
+     "what": "maximum flood delay at Sabugueiro"
+    }
+   ],
+   "term": "águas de maré"
+  },
+  {
+   "definition": "River floods, which delayed boats and sometimes damaged riverside towns, though rarely severely in Constância.",
+   "id": "mmwdz10zt3xye:46",
+   "location": "[page 167]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "days",
+     "value": "18",
+     "what": "maximum flood delay at Sabugueiro"
+    }
+   ],
+   "term": "cheias"
+  },
+  {
+   "definition": "The mast of a river boat; in summer, low river level left a 20 m mast out of sight from the town.",
+   "id": "mmwdz10zt3xye:47",
+   "location": "[page 168]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "20",
+     "what": "mast height of José da Silva's boat"
+    }
+   ],
+   "term": "mastro"
+  },
+  {
+   "definition": "Timber rafts floated downriver, for example from Praia do Ribatejo to Valada or Salvaterra, made until 1950.",
+   "id": "mmwdz10zt3xye:48",
+   "location": "[page 168]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "jangadas de madeira"
+  },
+  {
+   "definition": "Type of Tagus river vessel still owned by a former boat operator, used for river works and carrying construction materials.",
+   "id": "mmwdz10zt3xye:49",
+   "location": "[page 169]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "fragatas"
+  },
+  {
+   "definition": "Ferry boat carrying people across the Tagus between the two banks at Vila Nova da Barquinha.",
+   "id": "mmwdz10zt3xye:50",
+   "location": "[page 169]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barca de passagem"
+  },
+  {
+   "definition": "Freight cargo carried by boat, such as timber, wine or fertiliser, whose availability declined with road and rail competition.",
+   "id": "mmwdz10zt3xye:51",
+   "location": "[page 167]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "frete"
+  },
+  {
+   "definition": "Voyage times: downstream to Lisbon was fairly predictable, while the return upstream varied widely with conditions.",
+   "id": "mmwdz10zt3xye:52",
+   "location": "[page 167]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "days",
+     "value": "4",
+     "what": "Rossio to Lisbon, average"
+    },
+    {
+     "unit": "days",
+     "value": "2",
+     "what": "Rossio to Lisbon, fastest"
+    },
+    {
+     "unit": "days",
+     "value": "5",
+     "what": "Rossio to Lisbon, longest"
+    },
+    {
+     "unit": "days",
+     "value": "2 to 30",
+     "what": "Lisbon to Rossio, range"
+    },
+    {
+     "unit": "days",
+     "value": "1.5",
+     "what": "Constância to Lisbon, fastest"
+    },
+    {
+     "unit": "days",
+     "value": "15",
+     "what": "Constância round trip, average"
+    }
+   ],
+   "term": "duração das viagens"
+  },
+  {
+   "definition": "Cargo capacity of boats, which varied by port and period and limited where they could navigate.",
+   "id": "mmwdz10zt3xye:53",
+   "location": "[page 167]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "t",
+     "value": "20",
+     "what": "Rossio boats around 1920, over"
+    },
+    {
+     "unit": "t",
+     "value": "30",
+     "what": "boats leaving Rossio in the late 1950s, up to"
+    },
+    {
+     "unit": "t",
+     "value": "25 to 40",
+     "what": "Constância large boats around 1930"
+    },
+    {
+     "unit": "t",
+     "value": "10 to 12",
+     "what": "Constância small boats around 1930"
+    },
+    {
+     "unit": "t",
+     "value": "60",
+     "what": "boat built in 1945 at Constância"
+    },
+    {
+     "unit": "t",
+     "value": "15",
+     "what": "boats navigable on the Zêzere to Barca Nova"
+    }
+   ],
+   "term": "tonelagem dos barcos"
+  },
+  {
+   "definition": "Tributary joining the Tagus at Constância, navigable for small boats as far as Barca Nova and a site of boat building.",
+   "id": "mmwdz10zt3xye:54",
+   "location": "[page 168]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "t",
+     "value": "15",
+     "what": "boat capacity navigable to Barca Nova"
+    }
+   ],
+   "term": "Zêzere"
+  },
+  {
+   "definition": "Boats that loaded timber at the Tagus after it arrived by floating or ox-cart from the forests.",
+   "id": "mmwdz10zt3xye:55",
+   "location": "[page 180]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barcos"
+  },
+  {
+   "definition": "River transport of goods such as timber toward Lisbon, strongly sustained by the Zêzere basin forests until the mid-20th century.",
+   "id": "mmwdz10zt3xye:56",
+   "location": "[page 180]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "transporte fluvial"
+  },
+  {
+   "definition": "Floating timber downstream on the Zêzere river, letting the timber area extend inland without greatly raising the product's cost.",
+   "id": "mmwdz10zt3xye:57",
+   "location": "[page 180]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "flutuação"
+  },
+  {
+   "definition": "Combined transport in which goods travel partly by road and partly by river to reach the market.",
+   "id": "mmwdz10zt3xye:58",
+   "location": "[page 180]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "transporte misto, rodoviário-fluvial"
+  },
+  {
+   "definition": "Sea transport, used for example to bring timber from Alfeizerão to Lisbon.",
+   "id": "mmwdz10zt3xye:59",
+   "location": "[page 180]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "transporte marítimo"
+  },
+  {
+   "definition": "Ox-drawn carts used to haul timber overland to the Tagus, where it was loaded onto rafts or boats.",
+   "id": "mmwdz10zt3xye:60",
+   "location": "[page 180]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "carros de bois"
+  },
+  {
+   "definition": "Navigable waterways, whose proximity determined whether forest timber could economically reach consumers.",
+   "id": "mmwdz10zt3xye:61",
+   "location": "[page 181]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vias navegáveis"
+  },
+  {
+   "definition": "The maximum practical distance for hauling timber overland before railways, beyond which water transport or imports were needed.",
+   "id": "mmwdz10zt3xye:62",
+   "location": "[page 181]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "32",
+     "what": "usual limit of land transport for timber before the railway"
+    }
+   ],
+   "term": "limite do transporte terrestre"
+  },
+  {
+   "definition": "River or sea access routes that made more intensive grain cultivation viable near them in Alentejo.",
+   "id": "mmwdz10zt3xye:63",
+   "location": "[page 181]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vias de acesso fluvial ou marítimo"
+  },
+  {
+   "definition": "River traffic on the Tagus, whose historical flows of goods shaped where certain industrial and commercial activities were located and, in part, remain located today.",
+   "id": "mmwdz10zt3xye:64",
+   "location": "O TRAFECO FLUVIAL E A LOCALIZAÇÃO DE ALGUMAS ACTIVIDADES SEC",
+   "measured_by": "",
+   "numbers": [],
+   "term": "tráfego fluvial"
+  },
+  {
+   "definition": "River ports on the Tagus where goods were loaded or unloaded, attracting industrial installations such as wine stores and processing works.",
+   "id": "mmwdz10zt3xye:65",
+   "location": "O TRAFECO FLUVIAL E A LOCALIZAÇÃO DE ALGUMAS ACTIVIDADES SEC",
+   "measured_by": "",
+   "numbers": [],
+   "term": "portos fluviais do Tejo"
+  },
+  {
+   "definition": "Supply of timber to Lisbon and other lower-Tagus centres, for which the river was a fundamental vehicle.",
+   "id": "mmwdz10zt3xye:66",
+   "location": "Serração de madeiras",
+   "measured_by": "",
+   "numbers": [],
+   "term": "abastecimento de madeiras"
+  },
+  {
+   "definition": "Sawmilling: an industrial treatment of timber that reduced its mass, and so its transport cost and the buyer's price.",
+   "id": "mmwdz10zt3xye:67",
+   "location": "Serração de madeiras",
+   "measured_by": "",
+   "numbers": [],
+   "term": "serração de madeiras"
+  },
+  {
+   "definition": "Felled tree trunks, cleaned and sorted by size at the extraction site before being sent downriver.",
+   "id": "mmwdz10zt3xye:68",
+   "location": "Serração de madeiras",
+   "measured_by": "",
+   "numbers": [],
+   "term": "troncos"
+  },
+  {
+   "definition": "Loading points on the river where timber changed mode of transport, a pause in the system that favoured local industry.",
+   "id": "mmwdz10zt3xye:69",
+   "location": "Serração de madeiras",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pontos de embarque"
+  },
+  {
+   "definition": "Intermediate storage and trading depots along the river, such as those at Alferrarede, Rio de Moinhos and Praia do Ribatejo, in the timber circuit.",
+   "id": "mmwdz10zt3xye:70",
+   "location": "Serração de madeiras",
+   "measured_by": "",
+   "numbers": [],
+   "term": "entrepostos"
+  },
+  {
+   "definition": "The timber route from the pine forests of Alto Ribatejo and Beira Baixa down the Tagus to Lisbon, the main market and export centre.",
+   "id": "mmwdz10zt3xye:71",
+   "location": "Serração de madeiras",
+   "measured_by": "",
+   "numbers": [],
+   "term": "circuito madeireiro"
+  },
+  {
+   "definition": "The river port serving Alferrarede at Abrantes, used for embarking timber.",
+   "id": "mmwdz10zt3xye:72",
+   "location": "Serração de madeiras",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Barreiras do Tejo"
+  },
+  {
+   "definition": "Timber yards located along Lisbon's port, such as Xabregas, Cais do Tojo, Poço do Bispo and Alcântara.",
+   "id": "mmwdz10zt3xye:73",
+   "location": "Serração de madeiras",
+   "measured_by": "",
+   "numbers": [],
+   "term": "estâncias"
+  },
+  {
+   "definition": "Wine warehouses at river ports, historically used by merchants including foreigners to store wine for shipment.",
+   "id": "mmwdz10zt3xye:74",
+   "location": "O TRAFECO FLUVIAL E A LOCALIZAÇÃO DE ALGUMAS ACTIVIDADES SEC",
+   "measured_by": "",
+   "numbers": [],
+   "term": "armazéns de vinhos"
+  },
+  {
+   "definition": "Wholesale grocery trade that redistributed goods coming up the Tagus to the interior from the ports.",
+   "id": "mmwdz10zt3xye:75",
+   "location": "O TRAFECO FLUVIAL E A LOCALIZAÇÃO DE ALGUMAS ACTIVIDADES SEC",
+   "measured_by": "",
+   "numbers": [],
+   "term": "comércio grossista de mercearias"
+  },
+  {
+   "definition": "A pole tipped with a curved iron hook, used by timber workers on the riverbank to guide floating logs downstream.",
+   "id": "mmwdz10zt3xye:76",
+   "location": "[page 184]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "gravato"
+  },
+  {
+   "definition": "Specialised men who guided logs floating down the Zêzere from the banks, using a hooked pole.",
+   "id": "mmwdz10zt3xye:77",
+   "location": "[page 184]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "madeireiros"
+  },
+  {
+   "definition": "Logs of timber; floating them was the traditional way to move wood down the Zêzere towards the Tejo.",
+   "id": "mmwdz10zt3xye:78",
+   "location": "[page 184]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "toros"
+  },
+  {
+   "definition": "Bundled brushwood cargo; boats went up the Zêzere in the rainy season to load it, since it could not be floated.",
+   "id": "mmwdz10zt3xye:79",
+   "location": "[page 184]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "tonnes",
+     "value": "15",
+     "what": "maximum displacement of boats navigating up the Zêzere to Barca Nova"
+    }
+   ],
+   "term": "fachina"
+  },
+  {
+   "definition": "The rainy season, when higher water allowed some navigation on the Zêzere by boats.",
+   "id": "mmwdz10zt3xye:80",
+   "location": "[page 184]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "estação das chuvas"
+  },
+  {
+   "definition": "Transshipment: the point where cargo changes transport mode, such as ox cart to boat, which influenced where industries located.",
+   "id": "mmwdz10zt3xye:81",
+   "location": "[page 185]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "transbordo"
+  },
+  {
+   "definition": "A warehouse or depot at Valada where timber arriving by raft was collected and then sent by boat to Lisbon.",
+   "id": "mmwdz10zt3xye:82",
+   "location": "[page 185]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "entreposto"
+  },
+  {
+   "definition": "The seasonal wider riverbed, flooded in the wet season, where Abrantes' quay area was located and which lies far from the water in summer.",
+   "id": "mmwdz10zt3xye:83",
+   "location": "[page 192]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "leito maior estacional"
+  },
+  {
+   "definition": "The exceptional flood bed of the Tagus, where Punhete's civic and social centre and quay sit, reached only in exceptional floods.",
+   "id": "mmwdz10zt3xye:84",
+   "location": "[page 192]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "leito maior excepcional"
+  },
+  {
+   "definition": "A ford or shallow crossing; sometimes used for army passage, it can influence where a river port site is chosen.",
+   "id": "mmwdz10zt3xye:85",
+   "location": "[page 191]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vau"
+  },
+  {
+   "definition": "A quay where boats can moor, only buildable where the river is deep enough alongside the bank.",
+   "id": "mmwdz10zt3xye:86",
+   "location": "[page 191]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "cais acostável"
+  },
+  {
+   "definition": "River depth, a local factor in choosing a port site because deeper water allows moorable quays; the river scours the deeper bank.",
+   "id": "mmwdz10zt3xye:87",
+   "location": "[page 191]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "profundidade do rio"
+  },
+  {
+   "definition": "The wet season, when water reaches the Barreiras do Tejo quay; in summer the quay is far from the water.",
+   "id": "mmwdz10zt3xye:88",
+   "location": "[page 191]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "estação húmida"
+  },
+  {
+   "definition": "The meeting of two navigable rivers, such as the Tagus and Zêzere at Punhete, a favourable factor for a port site.",
+   "id": "mmwdz10zt3xye:89",
+   "location": "[page 192]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "confluência"
+  },
+  {
+   "definition": "Barges that carried liquid fuel from Lisbon to Rossio, where pumps and piping transferred it to depots.",
+   "id": "mmwdz10zt3xye:90",
+   "location": "[page 190]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barcaças"
+  },
+  {
+   "definition": "A steep, direct path linking Abrantes to its quay at Barreiras do Tejo.",
+   "id": "mmwdz10zt3xye:91",
+   "location": "[page 191]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "caminho da barca"
+  },
+  {
+   "definition": "A long-distance port; Rossio served this role for Abrantes, handling goods to and from the Alentejo.",
+   "id": "mmwdz10zt3xye:92",
+   "location": "[page 192]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "porto de longo curso"
+  },
+  {
+   "definition": "Crossing between Rossio and Barreiras do Tejo, by a rudimentary bridge in summer and by small boats the rest of the year.",
+   "id": "mmwdz10zt3xye:93",
+   "location": "[page 192]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "travessia Rossio-Barreiras do Tejo"
+  },
+  {
+   "definition": "Verb form describing timber being bound into rafts at the beach before being sent downriver.",
+   "id": "mmwdz10zt3xye:94",
+   "location": "[page 193]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "enjangadas"
+  },
+  {
+   "definition": "Water depth; in summer it was insufficient to load boats, so timber travelled on rafts instead.",
+   "id": "mmwdz10zt3xye:95",
+   "location": "[page 193]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "profundidade de água"
+  },
+  {
+   "definition": "Transferred from rafts to boats at Valada, which then carried the timber on to Lisbon.",
+   "id": "mmwdz10zt3xye:96",
+   "location": "[page 193]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "transbordada"
+  },
+  {
+   "definition": "Tides, which affect the Tagus from around Valada downstream and shape the river's regime and downstream ports.",
+   "id": "mmwdz10zt3xye:97",
+   "location": "[page 193]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "marés"
+  },
+  {
+   "definition": "The river's flow condition, which changes near Valada where tidal influence begins.",
+   "id": "mmwdz10zt3xye:98",
+   "location": "[page 193]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "regime"
+  },
+  {
+   "definition": "Floodplain bed of the river, where Ribeira de Santarém and Valada were built.",
+   "id": "mmwdz10zt3xye:99",
+   "location": "[page 193]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "leito de cheia"
+  },
+  {
+   "definition": "Silting up of the river, which left Barquinha's original quay far from the normal riverbed.",
+   "id": "mmwdz10zt3xye:100",
+   "location": "[page 193]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "assoreamento"
+  },
+  {
+   "definition": "The river's ordinary channel, from which silted quays became distant.",
+   "id": "mmwdz10zt3xye:101",
+   "location": "[page 193]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "leito normal do rio"
+  },
+  {
+   "definition": "Landing places built to reach the river after silting, linked to the town by roads perpendicular to the river.",
+   "id": "mmwdz10zt3xye:102",
+   "location": "[page 193]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "embarcadouros"
+  },
+  {
+   "definition": "A minor port, such as Praia do Ribatejo, specialised in exporting timber.",
+   "id": "mmwdz10zt3xye:103",
+   "location": "[page 193]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "porto secundário"
+  },
+  {
+   "definition": "Loading quays near the riverbed, as at Amoreira and Rio de Moinhos, which did not generate settlements.",
+   "id": "mmwdz10zt3xye:104",
+   "location": "[page 193]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "cais de embarque"
+  },
+  {
+   "definition": "River ports of the Tagus, whose urban form comprises quay, squares, streets and lanes.",
+   "id": "mmwdz10zt3xye:105",
+   "location": "[page 193]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "themes",
+     "value": "4",
+     "what": "main themes of urban morphology"
+    }
+   ],
+   "term": "portos fluviais"
+  },
+  {
+   "definition": "Sea ports near the Tagus mouth, shaped by tides rather than river-bed fluctuations, on a gentle gulf.",
+   "id": "mmwdz10zt3xye:106",
+   "location": "[page 193]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "portos de mar"
+  },
+  {
+   "definition": "Artificial canal linking Benavente directly to the Tagus, north of the town, alongside the Sorraia.",
+   "id": "mmwdz10zt3xye:107",
+   "location": "[page 193]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Vala Nova"
+  },
+  {
+   "definition": "Open squares along the riverfront, forming the focal point of each urban nucleus and a direction point between the quays and the interior.",
+   "id": "mmwdz10zt3xye:108",
+   "location": "[page 198]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "largos"
+  },
+  {
+   "definition": "Warehouses located beside the quay and on access streets, directly tied to river traffic; some survive today in ruins.",
+   "id": "mmwdz10zt3xye:109",
+   "location": "[page 198]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "armazéns"
+  },
+  {
+   "definition": "Upstream direction along the river, used to locate the part of the settlement where commerce concentrated.",
+   "id": "mmwdz10zt3xye:110",
+   "location": "[page 198]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "a montante"
+  },
+  {
+   "definition": "Downstream direction along the river, where the road bridge was built and the settlement extended.",
+   "id": "mmwdz10zt3xye:111",
+   "location": "[page 198]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "a jusante"
+  },
+  {
+   "definition": "Main street running roughly parallel to the river, along which commerce was established in the river port town.",
+   "id": "mmwdz10zt3xye:112",
+   "location": "[page 198]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Rua Direita"
+  },
+  {
+   "definition": "Tagus port settlement whose form was ordered by river activities; Rossio de Abrantes is presented as a typical case on flat terrain.",
+   "id": "mmwdz10zt3xye:113",
+   "location": "[page 199]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "aglomeração portuária do Tejo"
+  },
+  {
+   "definition": "Decline of river transport as rail and road grew, which moved the town centre away from the quay toward the main road.",
+   "id": "mmwdz10zt3xye:114",
+   "location": "[page 198]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "decadência do fluvial"
+  },
+  {
+   "definition": "Steep slopes on which some river ports (Constância, Tancos, Vila Nova da Barquinha) grew, making their layout less regular.",
+   "id": "mmwdz10zt3xye:115",
+   "location": "[page 199]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vertentes abruptas"
+  },
+  {
+   "definition": "Riverside square beside the quay that served as the civic and social centre of the port town, especially important at Constância.",
+   "id": "mmwdz10zt3xye:116",
+   "location": "[page 199]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "largo ribeirinho"
+  },
+  {
+   "definition": "Unit of vessel carrying capacity; the Tagus had long been navigated by boats of some tonnage as far as Abrantes.",
+   "id": "mmwdz10zt3xye:117",
+   "location": "[page 200]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "tonneaux",
+     "value": "50 to 60",
+     "what": "boat tonnage navigable up to Abrantes"
+    }
+   ],
+   "term": "tonneaux"
+  },
+  {
+   "definition": "Goods carried upriver on the Tagus, chiefly salt, fish and manufactured products.",
+   "id": "mmwdz10zt3xye:118",
+   "location": "[page 200]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "marchandises qui remontent le Tage"
+  },
+  {
+   "definition": "River ports along the Tagus, which acted as contact points between the interior, Lisbon and abroad, such as Santarém and Abrantes.",
+   "id": "mmwdz10zt3xye:119",
+   "location": "[page 200]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "ports fluviaux du Tage"
+  },
+  {
+   "definition": "Towpaths built along the riverbank so boats could be hauled upstream; part of Philip II's works to improve Tagus navigation.",
+   "id": "mmwdz10zt3xye:120",
+   "location": "[page 201]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1580",
+     "what": "year of Philip II's river improvement effort"
+    }
+   ],
+   "term": "chemins de halage"
+  },
+  {
+   "definition": "Rocks or hazards in the riverbed that obstructed navigation and were destroyed to make the river passable.",
+   "id": "mmwdz10zt3xye:121",
+   "location": "[page 201]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "écueils"
+  },
+  {
+   "definition": "Quays or landing places improved to support river trade and loading of boats.",
+   "id": "mmwdz10zt3xye:122",
+   "location": "[page 201]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "quais"
+  },
+  {
+   "definition": "Floating loose timber downstream on a river, used on the Zêzere to bring construction wood toward the Tagus.",
+   "id": "mmwdz10zt3xye:123",
+   "location": "[page 202]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "flottage"
+  },
+  {
+   "definition": "Rafts of timber carried down the Tagus from the Zêzere confluence to the limit of the tide.",
+   "id": "mmwdz10zt3xye:124",
+   "location": "[page 202]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "radeaux"
+  },
+  {
+   "definition": "The upstream point reached by the tide, where rafted timber was transferred to boats for carriage to Lisbon.",
+   "id": "mmwdz10zt3xye:125",
+   "location": "[page 202]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "limite de la marée"
+  },
+  {
+   "definition": "The wide tidal mouth of the Tagus near Lisbon, where river navigation is now confined.",
+   "id": "mmwdz10zt3xye:126",
+   "location": "[page 201]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "estuaire"
+  },
+  {
+   "definition": "Sea transport along the coast that reduced the cost of bringing timber and charcoal to Lisbon.",
+   "id": "mmwdz10zt3xye:127",
+   "location": "[page 202]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "navigation maritime"
+  },
+  {
+   "definition": "Transport cost, the key factor determining which products were supplied to Lisbon from which distance.",
+   "id": "mmwdz10zt3xye:128",
+   "location": "[page 201]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "coût de transport"
+  },
+  {
+   "definition": "A model of land use in rings around a city, driven by distance and transport cost, tested here on Lisbon.",
+   "id": "mmwdz10zt3xye:129",
+   "location": "[page 201]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "about 100",
+     "what": "distance from Lisbon for cheap wine and wheat cultivation along the Tagus"
+    }
+   ],
+   "term": "schéma de Von Thünen"
+  },
+  {
+   "definition": "Boatmen who worked the river boats; they lost work to railways and lorries and moved to other occupations.",
+   "id": "mmwdz10zt3xye:130",
+   "location": "[page 201]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bateliers"
+  },
+  {
+   "definition": "The railway, which ended navigation upstream of Abrantes and nearly ruined the port of Vila Nova da Barquinha.",
+   "id": "mmwdz10zt3xye:131",
+   "location": "[page 201]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "chemin de fer"
+  },
+  {
+   "definition": "The lorry, which after the last war finished off Tagus river transport.",
+   "id": "mmwdz10zt3xye:132",
+   "location": "[page 201]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "camion"
+  },
+  {
+   "definition": "River ports such as Rossio de Abrantes and Chamusca, whose trades (cork, wholesale) shaped later industry.",
+   "id": "mmwdz10zt3xye:133",
+   "location": "[page 202]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "ports fluviaux"
+  },
+  {
+   "definition": "Streets parallel to the river and riverside squares where port towns concentrated their commercial and service activity.",
+   "id": "mmwdz10zt3xye:134",
+   "location": "[page 203]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "rues parallèles au fleuve"
+  }
+ ],
+ "kind": "historical",
+ "lang": "",
+ "partsDone": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17
+ ],
+ "partsTotal": 18,
+ "runAt": "2026-11-12T20:19:22.709Z",
+ "sourceId": "mmwdz10zt3xye",
+ "textChars": 104173,
+ "title": "jorgeGasparOsportosfluviaisdoTejo"
+}

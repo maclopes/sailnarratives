@@ -1,0 +1,246 @@
+{
+ "items": [
+  {
+   "action": "Barcos d'água acima carried goods between the Ribatejo and Lisboa, sailing down and up the Tejo, taking produce to the capital and bringing back goods.",
+   "boat": "barcos d'água acima (barcos do Ribatejo)",
+   "cargo": "all sorts of goods",
+   "conditions": "",
+   "gear": "white sails",
+   "id": "m-hist-blk-portos:5c1:p1",
+   "kind": "practice",
+   "location": "Introduction",
+   "numbers": [],
+   "period": "mid-20th century (remembered); for sever",
+   "place": "Tejo, Ribatejo to Lisboa",
+   "who": ""
+  },
+  {
+   "action": "Trains, then lorries and trucks, offered faster and cheaper freight transport, so the old sailing boats gradually stopped trading.",
+   "boat": "barcos d'água acima",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-blk-portos:5c1:p2",
+   "kind": "event",
+   "location": "Introduction",
+   "numbers": [],
+   "period": "",
+   "place": "Tejo",
+   "who": ""
+  },
+  {
+   "action": "Ports grew along both banks at points of heavy traffic, where goods gathered for boats to collect and where arriving cargo was unloaded.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-blk-portos:5c1:p3",
+   "kind": "description",
+   "location": "Ports section",
+   "numbers": [],
+   "period": "",
+   "place": "Rossio de Abrantes, Punhete (Constância), Tancos, Barquinha, Pinheiro, Chamusca,",
+   "who": ""
+  },
+  {
+   "action": "Several ports near Chamusca: Arraiolos, cited by Fernão Lopes, two Frades ports near the Convento de Santo António, Cortiça, Carvão and Mulheres ports.",
+   "boat": "",
+   "cargo": "cork, coal",
+   "conditions": "Cortiça and Carvão names show what was mainly loaded there",
+   "gear": "",
+   "id": "m-hist-blk-portos:5c1:p4",
+   "kind": "description",
+   "location": "Ports section",
+   "numbers": [
+    {
+     "unit": "ports",
+     "value": "2",
+     "what": "Frades ports"
+    }
+   ],
+   "period": "15th and 16th centuries",
+   "place": "Chamusca; porto de Arraiolos; portos dos Frades; porto da Cortiça; porto do Carv",
+   "who": "Fernão Lopes"
+  },
+  {
+   "action": "A count of boats on the Tejo, including the estuary, for transport and fishing found 1490 boats, with Abrantes, Constância, Tancos and Chamusca group listed.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-blk-portos:5c1:p5",
+   "kind": "event",
+   "location": "Ports section",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "1490",
+     "what": "boats on the Tejo"
+    },
+    {
+     "unit": "boats",
+     "value": "180",
+     "what": "boats at Abrantes"
+    },
+    {
+     "unit": "boats",
+     "value": "120",
+     "what": "boats at Constância"
+    },
+    {
+     "unit": "boats",
+     "value": "100",
+     "what": "boats at Tancos"
+    },
+    {
+     "unit": "boats",
+     "value": "50",
+     "what": "boats at Chamusca, Golegã and Azinhaga"
+    }
+   ],
+   "period": "mid-16th century (1552 table)",
+   "place": "Tejo; Abrantes; Constância; Tancos; Chamusca with Golegã and Azinhaga",
+   "who": ""
+  },
+  {
+   "action": "A medium-sized boat could then sail upriver to Vila Velha or beyond, in a Tejo without dams, with abundant free-flowing water and no silting.",
+   "boat": "medium-sized boat",
+   "cargo": "",
+   "conditions": "no dams, abundant water, no silting",
+   "gear": "",
+   "id": "m-hist-blk-portos:5c1:p6",
+   "kind": "description",
+   "location": "Ports section",
+   "numbers": [],
+   "period": "16th century",
+   "place": "Tejo to Vila Velha",
+   "who": ""
+  },
+  {
+   "action": "Philip II of Spain, ruling Portugal, tried to make the Tejo navigable at least to Toledo, with some successful initiatives.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-blk-portos:5c1:p7",
+   "kind": "event",
+   "location": "Ports section",
+   "numbers": [],
+   "period": "",
+   "place": "Tejo to Toledo",
+   "who": "Filipe II de Espanha"
+  },
+  {
+   "action": "The Chamusca ports saw major freight movement, about 5,500 tonnes passing through, counting goods leaving and arriving.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "outgoing goods were more than incoming",
+   "gear": "",
+   "id": "m-hist-blk-portos:5c1:p8",
+   "kind": "event",
+   "location": "Ports section",
+   "numbers": [
+    {
+     "unit": "tonnes",
+     "value": "5500",
+     "what": "goods through Chamusca ports"
+    }
+   ],
+   "period": "1854",
+   "place": "portos da Chamusca",
+   "who": ""
+  },
+  {
+   "action": "Barcos d'água acima were shallow medium-sized boats with a tall mast raked aft, a large triangular bastardo sail and a small foresail.",
+   "boat": "barcos d'água acima",
+   "cargo": "",
+   "conditions": "1 to 2 m of water enough, even in midsummer",
+   "gear": "mast, bastardo sail, small bow sail",
+   "id": "m-hist-blk-portos:5c1:p9",
+   "kind": "description",
+   "location": "Boats section",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "15 to 20",
+     "what": "length"
+    },
+    {
+     "unit": "m",
+     "value": "5 or 6",
+     "what": "beam"
+    },
+    {
+     "unit": "tonnes",
+     "value": "30 or 40",
+     "what": "load carried"
+    },
+    {
+     "unit": "m",
+     "value": "1 to 2",
+     "what": "water depth needed"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Crew roles: the arrais, often the owner, commanded and steered; experienced camaradas worked the boat; young moços learned the trade.",
+   "boat": "barcos d'água acima",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-blk-portos:5c1:p10",
+   "kind": "practice",
+   "location": "Boats section",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "arrais, camaradas, moços"
+  },
+  {
+   "action": "Because they suited calm river waters, these boats were authorised to sail only upriver, not at sea beyond the bar.",
+   "boat": "barcos d'água acima",
+   "cargo": "",
+   "conditions": "only água acima, not the sea",
+   "gear": "",
+   "id": "m-hist-blk-portos:5c1:p11",
+   "kind": "rule",
+   "location": "Boats section",
+   "numbers": [],
+   "period": "",
+   "place": "Tejo, not beyond the barra",
+   "who": ""
+  },
+  {
+   "action": "The run to Lisboa carried wine, cork, coal, cereals, olive oil, straw, firewood and fruit; the return brought salt, manufactured goods, fertiliser and news.",
+   "boat": "barcos d'água acima",
+   "cargo": "wine, cork, coal, cereals, olive oil, straw, firewood, fruit; return: salt, manu",
+   "conditions": "good weather and favourable wind",
+   "gear": "",
+   "id": "m-hist-blk-portos:5c1:p12",
+   "kind": "practice",
+   "location": "Boats section",
+   "numbers": [
+    {
+     "unit": "days",
+     "value": "2",
+     "what": "minimum voyage time to Lisboa"
+    }
+   ],
+   "period": "",
+   "place": "Ribatejo to Lisboa",
+   "who": "embarcados"
+  }
+ ],
+ "partsDone": [
+  0,
+  1
+ ],
+ "partsTotal": 2,
+ "runAt": "2026-11-13T01:42:35.708Z",
+ "sourceId": "m-hist-blk-portos",
+ "textChars": 6913,
+ "title": "mediotejo, Portos do Tejo e barcos d'água acima"
+}

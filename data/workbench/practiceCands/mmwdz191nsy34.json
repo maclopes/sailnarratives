@@ -1,0 +1,2924 @@
+{
+ "items": [
+  {
+   "action": "The Portuguese Tagus basin is roughly divided into three zones: Lisbon to Tancos, Tancos to Belver dam, and Belver to the border (lower, middle, upper Tagus).",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p1",
+   "kind": "description",
+   "location": "[page 51] O Tejo em Portugal, 21",
+   "numbers": [],
+   "period": "",
+   "place": "Tejo, Lisboa, Tancos, Belver",
+   "who": ""
+  },
+  {
+   "action": "The lower Tagus is marked by continuous silting; its valley holds very fertile land, periodically fertilised by flood mud, plus salt marshes unsuited to rich crops.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "silting, floods",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p2",
+   "kind": "description",
+   "location": "[page 51] Baixo Tejo, 22",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "138",
+     "what": "length of lower Tagus stretch"
+    }
+   ],
+   "period": "",
+   "place": "Baixo Tejo",
+   "who": ""
+  },
+  {
+   "action": "Vineyards occupy part of the most fertile lowland but struggle to find markets for their wine, owing to market conditions and vineyard expansion in the Americas and Africa.",
+   "boat": "",
+   "cargo": "wine",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p3",
+   "kind": "description",
+   "location": "[page 51] Baixo Tejo, 22",
+   "numbers": [],
+   "period": "",
+   "place": "Baixo Tejo",
+   "who": ""
+  },
+  {
+   "action": "The river's drop from Lisbon to Tancos is about 15 metres; a dam at Almourol (level 30) would command a large irrigable area.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p4",
+   "kind": "description",
+   "location": "[page 51] Baixo Tejo, 22",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "15",
+     "what": "river drop to Tancos"
+    },
+    {
+     "unit": "hectares",
+     "value": "over 100000",
+     "what": "area dominated by Almourol dam"
+    }
+   ],
+   "period": "",
+   "place": "Tancos, Almourol",
+   "who": ""
+  },
+  {
+   "action": "Reservoirs at Montargil and Maranhão were built on the Sorraia's headwaters to store water for irrigating downstream land.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "irregular rainfall in Alentejo",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p5",
+   "kind": "event",
+   "location": "[page 51-52] Baixo Tejo, 22",
+   "numbers": [],
+   "period": "",
+   "place": "Sorraia, Montargil, Maranhão",
+   "who": ""
+  },
+  {
+   "action": "The right bank carries the Leste railway and the main towns (Lisbon, Santarém, Vila Franca, Torres Novas) and Lisbon's main water sources, including a Tagus pumping and treatment station.",
+   "boat": "",
+   "cargo": "water",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p6",
+   "kind": "description",
+   "location": "[page 52] Baixo Tejo, 22",
+   "numbers": [],
+   "period": "",
+   "place": "Margem direita, Lisboa, Santarém, Vila Franca, Torres Novas",
+   "who": ""
+  },
+  {
+   "action": "Industry on the right bank has grown appreciably in recent years, perhaps without a plan suited to the river's capacity.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p7",
+   "kind": "description",
+   "location": "[page 52] Baixo Tejo, 22",
+   "numbers": [],
+   "period": "",
+   "place": "Margem direita do Tejo",
+   "who": ""
+  },
+  {
+   "action": "The middle Tagus between Tancos and Belver is a transition stretch from the coastal section, with a modest drop.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p8",
+   "kind": "description",
+   "location": "[page 52] Tejo médio, 23",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "15",
+     "what": "drop from Almourol to Belver"
+    },
+    {
+     "unit": "km",
+     "value": "44",
+     "what": "length of stretch"
+    }
+   ],
+   "period": "",
+   "place": "Tancos, Belver, Almourol",
+   "who": ""
+  },
+  {
+   "action": "The Zêzere is the main right-bank tributary, draining wooded, rainy highlands; it is one of Portugal's largest rivers though its flow is uncertain in some years.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "flow uncertain in some years",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p9",
+   "kind": "description",
+   "location": "[page 52] Tejo médio, 23",
+   "numbers": [],
+   "period": "",
+   "place": "Zêzere, Estrela, Gardunha, Castelo Branco",
+   "who": ""
+  },
+  {
+   "action": "Towns along the Tagus and Zêzere (Tomar, Sertã, Fundão, Covilhã, Abrantes, Tramagal, Alferrarede) have industrial, agricultural and forestry importance; the railway follows the river.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p10",
+   "kind": "description",
+   "location": "[page 52] Tejo médio, 23",
+   "numbers": [],
+   "period": "",
+   "place": "Tomar, Sertã, Fundão, Covilhã, Abrantes, Tramagal, Alferrarede",
+   "who": ""
+  },
+  {
+   "action": "Forestry, especially pine, covers much of the right bank; the author notes a forestry tradition though exploitation methods are deficient.",
+   "boat": "",
+   "cargo": "pine timber",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p11",
+   "kind": "practice",
+   "location": "[page 52] Tejo médio, 23",
+   "numbers": [],
+   "period": "",
+   "place": "Margem direita, Tejo médio",
+   "who": ""
+  },
+  {
+   "action": "A proposed dam at Almourol would create a reservoir reaching Belver's dam base, making the river navigable; some favour two dams instead of one.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p12",
+   "kind": "description",
+   "location": "[page 52] Tejo médio, 23",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "15",
+     "what": "drop to overcome"
+    },
+    {
+     "unit": "dams",
+     "value": "2",
+     "what": "proposed number of dams (alternative)"
+    }
+   ],
+   "period": "",
+   "place": "Almourol, Belver",
+   "who": ""
+  },
+  {
+   "action": "Tomar could have a river port on the Nabão, seven or eight kilometres away.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p13",
+   "kind": "description",
+   "location": "[page 52] Tejo médio, 23",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "7-8",
+     "what": "distance of possible port from Tomar"
+    }
+   ],
+   "period": "",
+   "place": "Tomar, Nabão",
+   "who": ""
+  },
+  {
+   "action": "The area has long historical traditions, marked by the castles of Almourol, Tomar and Abrantes.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p14",
+   "kind": "description",
+   "location": "[page 53] Tejo médio, 23",
+   "numbers": [],
+   "period": "",
+   "place": "Almourol, Tomar, Abrantes",
+   "who": ""
+  },
+  {
+   "action": "The upper Tagus runs between hills with banks over 100 metres high, followed on the right bank by the Beira Baixa railway with tight curves and four tunnels.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p15",
+   "kind": "description",
+   "location": "[page 53] Alto Tejo, 24",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "51",
+     "what": "distance Belver to Sever border"
+    },
+    {
+     "unit": "tunnels",
+     "value": "4",
+     "what": "railway tunnels"
+    },
+    {
+     "unit": "m",
+     "value": "over 100",
+     "what": "bank height"
+    }
+   ],
+   "period": "",
+   "place": "Alto Tejo, Belver, Sever",
+   "who": ""
+  },
+  {
+   "action": "The landscape is rugged and grand in places such as Portas do Ródão, with olive groves on slopes and pastoral evening scenes.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "evening light",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p16",
+   "kind": "description",
+   "location": "[page 53] Alto Tejo, 24",
+   "numbers": [],
+   "period": "",
+   "place": "Portas do Ródão",
+   "who": ""
+  },
+  {
+   "action": "Right-bank tributaries (Ocresa, Alvito, Fróia, Pracana, Ponsul) drain rain from Gardunha, Alvelos, Moradal and Malcata, but contribute less than the Zêzere does to the middle Tagus.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p17",
+   "kind": "description",
+   "location": "[page 53] Alto Tejo, 24",
+   "numbers": [],
+   "period": "",
+   "place": "Ocresa, Alvito, Fróia, Pracana, Ponsul",
+   "who": ""
+  },
+  {
+   "action": "The river's drop from Belver to the Sever border exceeds forty metres; dams at Fratel and Tejo Internacional are planned besides Belver.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p18",
+   "kind": "description",
+   "location": "[page 53] Alto Tejo, 24",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "over 40",
+     "what": "drop Belver to Sever border"
+    }
+   ],
+   "period": "",
+   "place": "Belver, Fratel, Tejo Internacional",
+   "who": ""
+  },
+  {
+   "action": "Describes the river's upper stretch as rich in medieval castles beside the river, such as Belver, Amieira and Ródão, plus castles in the tributary zone.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p19",
+   "kind": "description",
+   "location": "page 53",
+   "numbers": [],
+   "period": "medieval",
+   "place": "Belver, Amieira, Ródão; Flor da Rosa, Crato, Marvão, Nisa, Castelo Branco, Sertã",
+   "who": ""
+  },
+  {
+   "action": "Notes that early 20th-century river planning considered only hydroelectric power from waterfalls, ignoring irrigation, tourism and navigation; this approach was long abandoned.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "energy-only planning reduced the river's economic value",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p20",
+   "kind": "description",
+   "location": "page 54, section 25 Aproveitamento do rio",
+   "numbers": [],
+   "period": "early 20th century",
+   "place": "",
+   "who": "planners"
+  },
+  {
+   "action": "Argues the Tagus plan should be integral, balancing energy with irrigation, navigability, water supply including Lisbon, tourism and industrial poles near raw materials.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p21",
+   "kind": "description",
+   "location": "page 54, section 25 Aproveitamento do rio",
+   "numbers": [],
+   "period": "",
+   "place": "Tejo, Lisboa",
+   "who": ""
+  },
+  {
+   "action": "Notes the objection that navigation lacks traffic; on the Douro this argument persisted for years despite potential poor-ore transport, and it is expected to recur on the Tagus.",
+   "boat": "",
+   "cargo": "poor ore",
+   "conditions": "navigation conditions are easier upstream of Almourol",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p22",
+   "kind": "description",
+   "location": "page 54",
+   "numbers": [
+    {
+     "unit": "tonnes",
+     "value": "2000000",
+     "what": "ore transport possible on the Douro"
+    }
+   ],
+   "period": "",
+   "place": "Douro; Tejo upstream of Almourol",
+   "who": "opponents of navigability"
+  },
+  {
+   "action": "Proposes a downstream cargo run of forest products from a suggested Tagus port industrial pole, loaded directly at Lisbon onto the export vessel.",
+   "boat": "",
+   "cargo": "forest products for export",
+   "conditions": "proposal, not an established practice",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p23",
+   "kind": "description",
+   "location": "page 54",
+   "numbers": [
+    {
+     "unit": "tonnes",
+     "value": "100000",
+     "what": "minimum forest products carried downstream"
+    }
+   ],
+   "period": "",
+   "place": "porto do Tejo, Lisboa",
+   "who": ""
+  },
+  {
+   "action": "Proposes a tourist route full of historical sites, starting in Lisbon and reaching the base of the Alcântara Dam, whose lake is about 90 km long.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "scenic landscape",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p24",
+   "kind": "description",
+   "location": "page 54",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "90",
+     "what": "length of the Alcântara reservoir"
+    }
+   ],
+   "period": "",
+   "place": "Lisboa to Barragem de Alcântara",
+   "who": ""
+  },
+  {
+   "action": "Proposes that, if river navigability is achieved in two or three decades, the Tagus would become a tourist route lined with monuments from Almourol and Tomar toward Toledo and Talavera.",
+   "boat": "",
+   "cargo": "tourists",
+   "conditions": "depends on the navigability programme being carried out",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p25",
+   "kind": "description",
+   "location": "[page 3] start",
+   "numbers": [
+    {
+     "unit": "decades",
+     "value": "2-3",
+     "what": "decades until the route could exist"
+    }
+   ],
+   "period": "within two or three decades",
+   "place": "Tejo; Almourol; Tomar; Nabão; Alcântara; Toledo; Talavera",
+   "who": ""
+  },
+  {
+   "action": "Proposes irrigation canals on the right and left banks from Almourol and Castelo de Bode; the left-bank canal could also carry navigation, irrigation water and power for a Muge plant.",
+   "boat": "",
+   "cargo": "water for irrigation",
+   "conditions": "left-bank canal adaptable to navigation, irrigation and energy",
+   "gear": "canal",
+   "id": "mmwdz191nsy34:3t83:p26",
+   "kind": "description",
+   "location": "[page 3] irrigation",
+   "numbers": [],
+   "period": "",
+   "place": "Ribatejo; Almourol; Castelo de Bode; Muge",
+   "who": ""
+  },
+  {
+   "action": "Summarises objections to the canal: no land to irrigate, Spanish plans will use Tagus water, unsuitable geology, costly lining, and not economical. The author says no studies exist yet.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "no studies yet on these questions",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p27",
+   "kind": "description",
+   "location": "[page 3] irrigation",
+   "numbers": [],
+   "period": "",
+   "place": "Ribatejo; Spain",
+   "who": ""
+  },
+  {
+   "action": "Notes that early river communication in the Euphrates, Indus and Nile valleys linked only neighbouring peoples and riverside cities.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "narrow settlement limited river links",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p28",
+   "kind": "description",
+   "location": "[page 3] 26 Navegação Fluvial",
+   "numbers": [],
+   "period": "early antiquity",
+   "place": "Euphrates; Indus; Nile",
+   "who": "peoples of the Euphrates, Indus and Nile valleys"
+  },
+  {
+   "action": "Sargon's legendary origin: set afloat as a baby in a wicker basket sealed with bitumen, found by the boatman Akki, who adopted him.",
+   "boat": "wicker basket",
+   "cargo": "",
+   "conditions": "",
+   "gear": "bitumen sealing",
+   "id": "mmwdz191nsy34:3t83:p29",
+   "kind": "event",
+   "location": "[page 3] 26",
+   "numbers": [
+    {
+     "unit": "years",
+     "value": "2360",
+     "what": "years before Christ"
+    }
+   ],
+   "period": "2360 BC",
+   "place": "Mesopotamia",
+   "who": "Sargão; Akki, o barqueiro"
+  },
+  {
+   "action": "Moses was legendarily placed in a rush basket coated with bitumen and pitch and left in reeds by the river bank.",
+   "boat": "rush basket",
+   "cargo": "",
+   "conditions": "",
+   "gear": "bitumen and pitch",
+   "id": "mmwdz191nsy34:3t83:p30",
+   "kind": "event",
+   "location": "[page 3] 26",
+   "numbers": [
+    {
+     "unit": "years",
+     "value": "1000",
+     "what": "years after Sargon"
+    }
+   ],
+   "period": "a thousand years after Sargon",
+   "place": "Nile",
+   "who": "Moisés"
+  },
+  {
+   "action": "Legend says Abidis, son of Ulysses and Calypso, was cast into the Tagus in a wicker basket by his grandfather and landed at low tide near Santarém.",
+   "boat": "wicker basket",
+   "cargo": "",
+   "conditions": "low tide",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p31",
+   "kind": "event",
+   "location": "[page 3] 26",
+   "numbers": [],
+   "period": "",
+   "place": "Tejo near Santarém",
+   "who": "Abídis"
+  },
+  {
+   "action": "In the early centuries of light traffic, the donkey and the river were the main means of communication; river use grew with trade and civilisation.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "small traffic",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p32",
+   "kind": "practice",
+   "location": "[page 3] 26",
+   "numbers": [],
+   "period": "early centuries",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "The Romans used inland navigation wherever possible, including on the Tagus, and supplied Rome by river and sea transport.",
+   "boat": "",
+   "cargo": "supplies for Rome",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p33",
+   "kind": "practice",
+   "location": "[page 3] 26",
+   "numbers": [],
+   "period": "Roman era",
+   "place": "Nilo; Loire; Ródano; Reno; Danúbio; Tejo; Tibre",
+   "who": "Romanos"
+  },
+  {
+   "action": "Today Europe and North America have inland ports hundreds of kilometres from the oceans, some handling tens of millions of tonnes.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p34",
+   "kind": "description",
+   "location": "[page 3] 27",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "many hundreds",
+     "what": "distance of inland ports from oceans"
+    },
+    {
+     "unit": "tonnes",
+     "value": "tens of millions",
+     "what": "cargo handled at some ports"
+    }
+   ],
+   "period": "present day of the source",
+   "place": "Europe; North America",
+   "who": ""
+  },
+  {
+   "action": "Cites the recent Moselle and St Lawrence waterway projects as examples of modern engineering overcoming obstacles to river navigation for economic aims.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p35",
+   "kind": "event",
+   "location": "[page 3] 27",
+   "numbers": [],
+   "period": "recent",
+   "place": "Mosela; S. Lourenço",
+   "who": ""
+  },
+  {
+   "action": "Italian hydraulic engineer Antonelli, serving Philip II, sailed from Abrantes to Alcântara, then upriver to Toledo, Aranjuez and the Jarama, reaching near Madrid by canal, then returned to Lisbon.",
+   "boat": "chalupa de quatro remos",
+   "cargo": "",
+   "conditions": "survey of the river's navigability from Madrid",
+   "gear": "four oars",
+   "id": "mmwdz191nsy34:3t83:p36",
+   "kind": "event",
+   "location": "[page 5] section 30",
+   "numbers": [
+    {
+     "unit": "oars",
+     "value": "4",
+     "what": "oars on the boat"
+    }
+   ],
+   "period": "1582",
+   "place": "Abrantes, Alcântara, Toledo, Aranjuez, Jarama, Madrid, Lisboa",
+   "who": "Antonelli, hydraulic engineer in the service of Filipe II"
+  },
+  {
+   "action": "Christobal Rodas, Antonelli's nephew, reportedly travelled down the river from Toledo to Lisbon in 13 days.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p37",
+   "kind": "event",
+   "location": "[page 5] section 30",
+   "numbers": [
+    {
+     "unit": "days",
+     "value": "13",
+     "what": "duration of the descent"
+    }
+   ],
+   "period": "",
+   "place": "Toledo to Lisboa",
+   "who": "Christobal Rodas, nephew of Antonelli"
+  },
+  {
+   "action": "Further exploratory voyages along the Tagus were made in later years.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p38",
+   "kind": "event",
+   "location": "[page 5] section 30",
+   "numbers": [],
+   "period": "1588, 1589, 1641 and later",
+   "place": "Tejo",
+   "who": ""
+  },
+  {
+   "action": "Estêvão Cabral presented a memoir on the damage the Tagus caused to its banks to the Royal Academy of Sciences of Lisbon. He called the river royal and perennial.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "damage to the banks",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p39",
+   "kind": "event",
+   "location": "[page 5] section 30",
+   "numbers": [],
+   "period": "1790",
+   "place": "Lisboa, Tejo",
+   "who": "Estêvão Cabral"
+  },
+  {
+   "action": "Lieutenant-colonel of engineering Anastácio Rodrigues studied the river's navigability from Abrantes to Malpica by royal order, listed the works required and proposed a budget.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "royal commission",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p40",
+   "kind": "event",
+   "location": "[page 5] section 30",
+   "numbers": [],
+   "period": "1812",
+   "place": "Abrantes to Malpica",
+   "who": "Anastácio Rodrigues, tenente-coronel de engenharia"
+  },
+  {
+   "action": "Rodrigues described natural and artificial obstacles to navigation: strong currents, weirs, mills, fish traps, carreiros and tarrafas.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "strong currents in some places",
+   "gear": "açudes, azenhas, pesqueiras, carreiros, tarrafas",
+   "id": "mmwdz191nsy34:3t83:p41",
+   "kind": "description",
+   "location": "[page 5] section 30",
+   "numbers": [],
+   "period": "1812",
+   "place": "Tejo, Abrantes to Malpica",
+   "who": "Anastácio Rodrigues"
+  },
+  {
+   "action": "Rodrigues said the chief natural difficulty was the total lack of towpaths (sirgadouros), meaning comfortable paths at least three or four palmos wide for hauling boats.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "no towpaths along the river",
+   "gear": "sirgadouros (towpaths)",
+   "id": "mmwdz191nsy34:3t83:p42",
+   "kind": "description",
+   "location": "[page 5] section 30",
+   "numbers": [
+    {
+     "unit": "palmos",
+     "value": "3 to 4",
+     "what": "minimum towpath width"
+    }
+   ],
+   "period": "1812",
+   "place": "Tejo",
+   "who": "Anastácio Rodrigues"
+  },
+  {
+   "action": "Flat walls on the river banks were built to help navigation as far as Porto do Tejo, where a barge long transferred goods from the Beira to the South.",
+   "boat": "barca",
+   "cargo": "products of the Beira",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p43",
+   "kind": "description",
+   "location": "[page 5] section 30",
+   "numbers": [],
+   "period": "for many years",
+   "place": "Porto do Tejo",
+   "who": ""
+  },
+  {
+   "action": "The father of D. Nuno Álvares Pereira and other priors going to court travelled from Flor da Rosa to embark at Amieira, sleeping in the castle that guarded the Order's treasure.",
+   "boat": "Barca da Amieira",
+   "cargo": "",
+   "conditions": "the quay of the Barca da Amieira still exists",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p44",
+   "kind": "practice",
+   "location": "[page 5] section 30",
+   "numbers": [],
+   "period": "",
+   "place": "Flor da Rosa, Amieira",
+   "who": "father of D. Nuno Álvares Pereira and other priors"
+  },
+  {
+   "action": "The stretch from Vila Franca to Tancos is seen as harder to make navigable than Almourol to the border, since the river widens and has less drop.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "wide river, small difference in level, densely populated alluvial zone",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p45",
+   "kind": "description",
+   "location": "[page 5] sections 31-32",
+   "numbers": [],
+   "period": "",
+   "place": "Vila Franca to Tancos",
+   "who": ""
+  },
+  {
+   "action": "Navigation of the Tagus from Tancos to the border was suggested in the 1943 report, with three dams at Almourol, Belver and Fratel; Belver's dam has been in service for some years.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "Fratel and Almourol dams still to be built",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p46",
+   "kind": "event",
+   "location": "[page 5] sections 30-31",
+   "numbers": [
+    {
+     "unit": "metres",
+     "value": "55",
+     "what": "level difference Almourol to Sever mouth"
+    },
+    {
+     "unit": "metres",
+     "value": "24 to 26",
+     "what": "Fratel dam drop"
+    },
+    {
+     "unit": "metres",
+     "value": "15",
+     "what": "proposed dam downstream of Almourol"
+    }
+   ],
+   "period": "1943",
+   "place": "Almourol, Belver, Fratel",
+   "who": "Portuguese government"
+  },
+  {
+   "action": "River deposition has reduced depths and blocked passages once navigable; the stretch has long been judged to need careful study and maintenance works to guarantee minimum depth.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "silting from sediment carried by floods",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p47",
+   "kind": "description",
+   "location": "[page 62]",
+   "numbers": [],
+   "period": "",
+   "place": "Tagus, Lisboa-Santarém stretch",
+   "who": ""
+  },
+  {
+   "action": "Floodborne materials formed the fertile Lezírias lands, and periodic floods still renew part of their fertility.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "periodic floods",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p48",
+   "kind": "description",
+   "location": "[page 62]",
+   "numbers": [],
+   "period": "",
+   "place": "Lezírias",
+   "who": ""
+  },
+  {
+   "action": "Specialists judged river navigation up to Vila Franca, or the Muge stream confluence, to need no great works; the upstream stretch to Almourol would be harder and costlier.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p49",
+   "kind": "description",
+   "location": "[page 62]",
+   "numbers": [],
+   "period": "",
+   "place": "Vila Franca, ribeira de Muge, Almourol",
+   "who": "specialists"
+  },
+  {
+   "action": "A study was suggested for a left-bank canal from the Almourol dam to the Muge stream, serving irrigation, water supply, navigation between Lisbon and Almourol, and a power plant.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "retention level at Almourol fixed at 30 metres",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p50",
+   "kind": "event",
+   "location": "[page 62]",
+   "numbers": [
+    {
+     "unit": "metres",
+     "value": "30",
+     "what": "retention level at Almourol"
+    }
+   ],
+   "period": "",
+   "place": "Almourol to ribeira de Muge, left bank",
+   "who": ""
+  },
+  {
+   "action": "Specialist study indicated the Muge plant could produce over 300 million kWh in average years; later river regularisation raised the estimate to 350-400 million.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "works on the Zêzere and in Spain improved flow regularity; Alcântara dam to be completed",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p51",
+   "kind": "description",
+   "location": "[page 63]",
+   "numbers": [
+    {
+     "unit": "kWh",
+     "value": "300 million",
+     "what": "original estimated output, average years"
+    },
+    {
+     "unit": "kWh",
+     "value": "350-400 million",
+     "what": "revised estimated output"
+    }
+   ],
+   "period": "",
+   "place": "Muge",
+   "who": "specialists"
+  },
+  {
+   "action": "The canal scheme caused a stir and public controversy; the matter remained unresolved, needing on-site studies of geology, route, river regime, flooded land, cargoes and agriculture.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p52",
+   "kind": "event",
+   "location": "[page 63]",
+   "numbers": [],
+   "period": "",
+   "place": "Ribatejo",
+   "who": "public opinion"
+  },
+  {
+   "action": "Questions raised on the national economic influence of Tagus navigability, investment needed to complete the works, and the Almourol-Muge canal alternative; Belver dam exists and Fratel dam is planned.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p53",
+   "kind": "description",
+   "location": "[page 63]",
+   "numbers": [],
+   "period": "",
+   "place": "Belver, Fratel, Barquinha, Golegã, Santarém",
+   "who": ""
+  },
+  {
+   "action": "Inland navigation is often opposed for its effect on rail traffic, since railways already run yearly deficits paid by the State; lower river tariffs could affect them.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p54",
+   "kind": "description",
+   "location": "[page 63]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "State, railways"
+  },
+  {
+   "action": "With the arrival of railways in the previous century, waterways suffered setbacks and advocates of fast transport predicted the end of inland navigation.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p55",
+   "kind": "event",
+   "location": "[page 63]",
+   "numbers": [],
+   "period": "19th century",
+   "place": "",
+   "who": "advocates of accelerated transport"
+  },
+  {
+   "action": "Industries were located near navigable rivers or canals, decentralising coastal centres and benefiting rail traffic, as international congress studies showed.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p56",
+   "kind": "practice",
+   "location": "[page 63]",
+   "numbers": [],
+   "period": "",
+   "place": "navigable rivers and canals",
+   "who": "industries"
+  },
+  {
+   "action": "Text argues that a forest-products industrial hub at Porto do Tejo would create new freight, over 100,000 tonnes initially, for both rail and river navigation.",
+   "boat": "",
+   "cargo": "forest products",
+   "conditions": "Proposed future industrial development; not an existing practice",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p57",
+   "kind": "description",
+   "location": "[page 7]",
+   "numbers": [
+    {
+     "unit": "tonnes",
+     "value": "100000",
+     "what": "estimated initial freight"
+    }
+   ],
+   "period": "",
+   "place": "Porto do Tejo",
+   "who": ""
+  },
+  {
+   "action": "Compares 1955-1958 investment in waterways, roads and railways in Germany, Belgium, France and the Netherlands, showing waterways received far less investment.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "Figures in millions of national currency; waterways cheaper per tonne",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p58",
+   "kind": "description",
+   "location": "[page 7] investment table",
+   "numbers": [
+    {
+     "unit": "million marks",
+     "value": "457",
+     "what": "Germany waterways investment"
+    },
+    {
+     "unit": "million marks",
+     "value": "10122",
+     "what": "Germany roads investment"
+    },
+    {
+     "unit": "million marks",
+     "value": "5577",
+     "what": "Germany railways investment"
+    },
+    {
+     "unit": "million francs",
+     "value": "3847",
+     "what": "Belgium waterways investment"
+    },
+    {
+     "unit": "million florins",
+     "value": "435",
+     "what": "Netherlands waterways investment"
+    }
+   ],
+   "period": "1955-1958",
+   "place": "Germany, Belgium, France, Netherlands",
+   "who": ""
+  },
+  {
+   "action": "Distance by river from Lisbon to the Talavera de la Reina bridge is about 528 km, with the bridge base at about 360 m elevation.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p59",
+   "kind": "description",
+   "location": "[page 7] Distâncias e desníveis, §34",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "528",
+     "what": "river distance from Lisbon"
+    },
+    {
+     "unit": "m",
+     "value": "360",
+     "what": "elevation at bridge base"
+    }
+   ],
+   "period": "",
+   "place": "Lisbon to Talavera de la Reina bridge",
+   "who": ""
+  },
+  {
+   "action": "Dams are planned, under construction or in service between Almourol and Arzobispo bridge, which would turn the Tejo into a chain of lakes.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "Almourol to Arzobispo is 344 km, 482 km from Lisbon",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p60",
+   "kind": "description",
+   "location": "[page 7] §34",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "344",
+     "what": "Almourol to Arzobispo distance"
+    },
+    {
+     "unit": "km",
+     "value": "90.5",
+     "what": "Alcântara lake length"
+    },
+    {
+     "unit": "km",
+     "value": "70",
+     "what": "Tejo Internacional lake length"
+    },
+    {
+     "unit": "km",
+     "value": "54.5",
+     "what": "Valdecañas lake length"
+    },
+    {
+     "unit": "km",
+     "value": "44",
+     "what": "Almourol lake length"
+    }
+   ],
+   "period": "",
+   "place": "Almourol, Belver, Fratel, Tejo Internacional, Alcântara, Torrejón, Valdecañas, A",
+   "who": ""
+  },
+  {
+   "action": "Navigation within Portugal would be possible over 226 km, or about 233 km if the Tejo Internacional dam were moved upstream to the Sever mouth; to Alcântara 296 km.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "Depends on dam siting",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p61",
+   "kind": "description",
+   "location": "[page 7] §34",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "226",
+     "what": "navigable length in Portugal"
+    },
+    {
+     "unit": "km",
+     "value": "233",
+     "what": "navigable length if dam moved"
+    },
+    {
+     "unit": "km",
+     "value": "296",
+     "what": "navigation to Alcântara"
+    }
+   ],
+   "period": "",
+   "place": "Tejo in Portugal, Sever mouth, Alcântara",
+   "who": ""
+  },
+  {
+   "action": "Table gives distances and elevation gains between locks, such as Lisbon-Almourol 138 km, and approximate distances from Lisbon with lake levels for each dam site.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "Lake levels given as N.P.A.",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p62",
+   "kind": "description",
+   "location": "[page 7] lock and distance tables",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "138",
+     "what": "Lisbon-Almourol"
+    },
+    {
+     "unit": "km",
+     "value": "44",
+     "what": "Almourol-Belver"
+    },
+    {
+     "unit": "m",
+     "value": "30",
+     "what": "Almourol lake level"
+    },
+    {
+     "unit": "km",
+     "value": "296",
+     "what": "Alcântara distance from Lisbon"
+    },
+    {
+     "unit": "m",
+     "value": "220",
+     "what": "Alcântara lake level"
+    }
+   ],
+   "period": "",
+   "place": "Almourol, Belver, Fratel, Internacional, Alcântara, Torrejón, Valdecañas, Arzobi",
+   "who": ""
+  },
+  {
+   "action": "River navigation was once very important on the Tejo and other rivers until railways and roads were built; use declined and some navigable channels silted up.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p63",
+   "kind": "description",
+   "location": "[page 7] §35",
+   "numbers": [],
+   "period": "until the railway and road networks",
+   "place": "Tejo",
+   "who": ""
+  },
+  {
+   "action": "Text notes Portugal lacks river ports and any effort to establish them on the Tejo banks, and urges developing inland navigation where possible.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "Argued as needed for industrial development and regional revival",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p64",
+   "kind": "description",
+   "location": "[page 7] §35",
+   "numbers": [],
+   "period": "",
+   "place": "Tejo banks",
+   "who": ""
+  },
+  {
+   "action": "Text calls for a communications plan including roads, inland navigation and railways, and for moving low-value goods by navigable waterway instead of road where possible.",
+   "boat": "",
+   "cargo": "low-value goods",
+   "conditions": "Proposal; text breaks off mid-sentence",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p65",
+   "kind": "description",
+   "location": "[page 7] end",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Road haulage is described as costly in freight and nationally: it burns imported fuel, uses largely imported equipment, wears roads, and is heavily taxed to cover rail deficits.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "Compared with river transport, which is described as cheaper",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p66",
+   "kind": "description",
+   "location": "page 8, Transporte",
+   "numbers": [],
+   "period": "",
+   "place": "Portugal",
+   "who": ""
+  },
+  {
+   "action": "High freight rates delay development of the interior by blocking exploitation of low-value products, producing a vicious circle of small shipments due to insufficient traffic.",
+   "boat": "",
+   "cargo": "poor products",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p67",
+   "kind": "description",
+   "location": "page 8, Transporte",
+   "numbers": [],
+   "period": "",
+   "place": "interior of Portugal",
+   "who": ""
+  },
+  {
+   "action": "Road and rail transport depend entirely on foreign fuel, vulnerable in international crises; river navigation difficulties can be greatly reduced.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "international political crises",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p68",
+   "kind": "description",
+   "location": "page 8, Transporte",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Worked example: a raw material sold locally for 100 escudos costs 200 at the factory; the difference goes to fuel, labour, taxes, insurance and commissions. River transport or local processing would cut it.",
+   "boat": "",
+   "cargo": "raw material",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p69",
+   "kind": "description",
+   "location": "page 8, para 36",
+   "numbers": [
+    {
+     "unit": "escudos",
+     "value": "100",
+     "what": "local sale price per unit"
+    },
+    {
+     "unit": "escudos",
+     "value": "200",
+     "what": "factory price per unit"
+    },
+    {
+     "unit": "contos",
+     "value": "100000",
+     "what": "difference over one million units"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "The Tagus and Douro are proposed as the backbone of any transport plan to develop the depressed interior and areas like the lezírias and left bank of the lower Tagus.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p70",
+   "kind": "description",
+   "location": "page 8, Transporte",
+   "numbers": [],
+   "period": "",
+   "place": "Tejo, Douro, lezírias, margem esquerda do baixo Tejo",
+   "who": ""
+  },
+  {
+   "action": "The Tagus is presented as one link in a chain of river uses: navigation, energy, irrigation, tourism, water supply, and industrial centres positioned near the port of Lisbon.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p71",
+   "kind": "description",
+   "location": "page 8, Transporte",
+   "numbers": [],
+   "period": "",
+   "place": "Tejo, porto de Lisboa",
+   "who": ""
+  },
+  {
+   "action": "Early settlers moved down into the Tigris and Euphrates valley, with fertile soils and abundant water, where they faced sandy, dry or marshy land needing drainage and irrigation.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "periodic catastrophic floods, dry climate",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p72",
+   "kind": "description",
+   "location": "page 8, Rega, para 37",
+   "numbers": [],
+   "period": "",
+   "place": "Mesopotamia, Vale dos Dois Rios",
+   "who": "primitive men"
+  },
+  {
+   "action": "Draining, channelling and irrigating the valley required collective effort, leading to early human association; cities existed by 4000 BC, as shown by excavations at Eridu.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p73",
+   "kind": "practice",
+   "location": "page 8, Rega, para 37",
+   "numbers": [
+    {
+     "unit": "years BC",
+     "value": "6000",
+     "what": "approximate date of Neolithic revolution"
+    }
+   ],
+   "period": "4000 BC",
+   "place": "Eridu, Mesopotamia",
+   "who": "early Mesopotamian communities"
+  },
+  {
+   "action": "Over two millennia, Mesopotamians invented the plough, used draught animals in farming, and used sailing boats to navigate the river.",
+   "boat": "barco à vela",
+   "cargo": "",
+   "conditions": "",
+   "gear": "plough",
+   "id": "mmwdz191nsy34:3t83:p74",
+   "kind": "description",
+   "location": "page 8, Rega, para 37",
+   "numbers": [],
+   "period": "",
+   "place": "Mesopotamia",
+   "who": "Mesopotamian people"
+  },
+  {
+   "action": "A farmer near Nippur in Mesopotamia wrote cuneiform tablets for his sons with precepts on cultivating land using river water.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "cuneiform tablets",
+   "id": "mmwdz191nsy34:3t83:p75",
+   "kind": "description",
+   "location": "[page 71] section 38",
+   "numbers": [
+    {
+     "unit": "years",
+     "value": "4000",
+     "what": "years ago"
+    }
+   ],
+   "period": "about 4000 years ago",
+   "place": "Nippur, Mesopotamia",
+   "who": "a farmer of the Nippur region"
+  },
+  {
+   "action": "Farming advice: open irrigation channels so water does not rise too high, keep the moist soil level, keep stray animals off it.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "after the water has soaked in",
+   "gear": "irrigation channels",
+   "id": "mmwdz191nsy34:3t83:p76",
+   "kind": "rule",
+   "location": "[page 71] section 38",
+   "numbers": [],
+   "period": "about 4000 years ago",
+   "place": "Mesopotamia",
+   "who": "the Nippur farmer"
+  },
+  {
+   "action": "Farming advice: watch the sower so the grain does not fall more than two fingers deep, and sow evenly.",
+   "boat": "",
+   "cargo": "grain",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p77",
+   "kind": "rule",
+   "location": "[page 71] section 38",
+   "numbers": [
+    {
+     "unit": "fingers",
+     "value": "2",
+     "what": "maximum depth of grain"
+    }
+   ],
+   "period": "about 4000 years ago",
+   "place": "Mesopotamia",
+   "who": "the Nippur farmer"
+  },
+  {
+   "action": "Nile irrigation plans used for thousands of years; the fellah still follows old practice in some areas, though flooded basins were mostly replaced by perennial irrigation.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "flooded basins",
+   "id": "mmwdz191nsy34:3t83:p78",
+   "kind": "practice",
+   "location": "[page 71]",
+   "numbers": [],
+   "period": "",
+   "place": "Nile",
+   "who": "the felá (fellah)"
+  },
+  {
+   "action": "By tradition, Menes, first king of Egypt, began building dikes; the Nile has since fed a growing population settled on the margins.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "dikes",
+   "id": "mmwdz191nsy34:3t83:p79",
+   "kind": "event",
+   "location": "[page 71]",
+   "numbers": [
+    {
+     "unit": "years",
+     "value": "5000",
+     "what": "years of the river producing food"
+    }
+   ],
+   "period": "3400 BC",
+   "place": "Egypt, Nile",
+   "who": "Menes"
+  },
+  {
+   "action": "The shadouf is the oldest irrigation device and persists in some regions; Greeks later introduced the sakia and the Archimedes screw.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "shadouf, sakia, Archimedes screw",
+   "id": "mmwdz191nsy34:3t83:p80",
+   "kind": "description",
+   "location": "[page 71]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "Greeks"
+  },
+  {
+   "action": "Nile floods resemble Tagus floods but are more regular; they come mainly from the Ethiopian highlands via the Blue Nile, peaking in July.",
+   "boat": "",
+   "cargo": "fertilising silt",
+   "conditions": "peak flood in July",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p81",
+   "kind": "description",
+   "location": "[page 71]",
+   "numbers": [
+    {
+     "unit": "%",
+     "value": "84",
+     "what": "share of Nile water from Blue Nile"
+    },
+    {
+     "unit": "%",
+     "value": "16",
+     "what": "share from central African lakes"
+    }
+   ],
+   "period": "",
+   "place": "Nile, Ethiopia",
+   "who": ""
+  },
+  {
+   "action": "Lists major river-development schemes elsewhere (Colorado, Columbia, Mississippi, São Francisco, Rhône, Po, Guadalquivir, Guadiana, Volga, Don) as evidence of continuing initiative.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p82",
+   "kind": "description",
+   "location": "[pages 71-72]",
+   "numbers": [],
+   "period": "",
+   "place": "North America, Brazil, Europe",
+   "who": ""
+  },
+  {
+   "action": "Tagus, Mondego and Guadiana are important for irrigation in Portugal, but only Ponsul and Sorraia have an acceptable scheme.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p83",
+   "kind": "description",
+   "location": "[page 72]",
+   "numbers": [],
+   "period": "",
+   "place": "Tejo, Mondego, Guadiana, Ponsul, Sorraia",
+   "who": ""
+  },
+  {
+   "action": "Irrigation planning must weigh water quantity, soils, climate, cost, prior uses such as energy and navigation, drinking water, rural industry and investment repayment.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p84",
+   "kind": "rule",
+   "location": "[page 72] section 39",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "planners"
+  },
+  {
+   "action": "Given low investment capacity and trade deficit, schemes should be chosen where the water already serves or can serve other economic functions.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "low national product, trade deficit, scarce capital",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p85",
+   "kind": "rule",
+   "location": "[page 72] section 39",
+   "numbers": [],
+   "period": "",
+   "place": "Portugal",
+   "who": ""
+  },
+  {
+   "action": "The Tagus basin in Portugal is vast, with varied soils, arid southern climate, good communications and a major European port; irrigable areas include Cova da Beira and Castelo Branco.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p86",
+   "kind": "description",
+   "location": "[page 73] section 40",
+   "numbers": [],
+   "period": "",
+   "place": "Tejo basin, Cova da Beira, Castelo Branco plateau, Abrantes",
+   "who": ""
+  },
+  {
+   "action": "Proposal that the State build a 17 km tunnel linking Bogas to the Alvito reservoir, using surplus Zêzere water for energy and Alto Alentejo irrigation instead of lifting Tejo water at Fratel.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "Zêzere surplus water is currently lost without economic use",
+   "gear": "tunnel, Alvito dam, hydroelectric plant",
+   "id": "mmwdz191nsy34:3t83:p87",
+   "kind": "event",
+   "location": "page 12, section 44 (Alto Alentejo irrigation)",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "17",
+     "what": "tunnel length"
+    },
+    {
+     "unit": "million cubic metres",
+     "value": "320",
+     "what": "planned annual irrigation water consumption"
+    },
+    {
+     "unit": "metres",
+     "value": "135",
+     "what": "plant head of fall"
+    }
+   ],
+   "period": "",
+   "place": "Bogas, Alvito, Zêzere, Alto Alentejo, Fratel",
+   "who": "the State"
+  },
+  {
+   "action": "Alto Alentejo irrigation water would be obtained through State financing, with works paid from budget funds and mostly loans that must be repaid.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "loans must be reimbursed",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p88",
+   "kind": "rule",
+   "location": "page 12, start",
+   "numbers": [],
+   "period": "",
+   "place": "Alto Alentejo",
+   "who": "the State"
+  },
+  {
+   "action": "Author notes the Tejo problem is more complex than the Douro's, involving irrigation, tourism, industry, navigation and energy, and may be more valuable to the national economy.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "downstream of Almourol lie the country's most fertile lands, at risk of losing fertility",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p89",
+   "kind": "description",
+   "location": "page 12, section 45",
+   "numbers": [],
+   "period": "",
+   "place": "Tejo, Douro, Almourol",
+   "who": ""
+  },
+  {
+   "action": "Earlier proposal for full development of the Douro with navigation and energy was doubted as utopian, but later studies multiplied the energy estimate and the Douro supplied the country.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p90",
+   "kind": "event",
+   "location": "page 12, section 45",
+   "numbers": [],
+   "period": "",
+   "place": "Douro",
+   "who": ""
+  },
+  {
+   "action": "The Tejo riverbed downstream of Tancos is irregular, with shifting channels, silting from floods, navigation difficulties and poorly performing ditches dug for navigation or drainage.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "floods cause silting",
+   "gear": "ditches (valas)",
+   "id": "mmwdz191nsy34:3t83:p91",
+   "kind": "description",
+   "location": "page 12, section 46 (Esquema do Ribatejo)",
+   "numbers": [],
+   "period": "",
+   "place": "Tejo downstream of Tancos",
+   "who": ""
+  },
+  {
+   "action": "Estêvão Cabral's memoir describes conditions around 1790, including complaints and remedies that went unheeded.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p92",
+   "kind": "description",
+   "location": "page 12, section 46",
+   "numbers": [],
+   "period": "c. 1790",
+   "place": "Tejo",
+   "who": "Estêvão Cabral"
+  },
+  {
+   "action": "Floods were both feared and hoped for by riverside people: they harmed, but carried fertile silt and moisture, and fertility declined after years without floods.",
+   "boat": "",
+   "cargo": "silt (lodos)",
+   "conditions": "fewer floods may cause serious problems for Ribatejo farming",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p93",
+   "kind": "description",
+   "location": "page 12, section 46",
+   "numbers": [],
+   "period": "",
+   "place": "Ribatejo",
+   "who": "riverside populations"
+  },
+  {
+   "action": "Agricultural conversion in the Ribatejo is expected to reduce wine production, as Common Market integration harms wine exports and some markets' quality demands block sales.",
+   "boat": "",
+   "cargo": "wine",
+   "conditions": "economic integration, Common Market",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p94",
+   "kind": "description",
+   "location": "page 12, section 46",
+   "numbers": [],
+   "period": "",
+   "place": "Ribatejo",
+   "who": ""
+  },
+  {
+   "action": "Proposes a dam at the Almourol granites raising the Tagus to level 30 so two canals can irrigate over 100,000 hectares downstream, mostly on the left bank.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "Flood retention in Spain and Portugal expected to reduce floods",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p95",
+   "kind": "practice",
+   "location": "[page 13] section 47",
+   "numbers": [
+    {
+     "unit": "hectares",
+     "value": "over 100000",
+     "what": "area dominated by level 30"
+    }
+   ],
+   "period": "",
+   "place": "Almourol, Ribatejo",
+   "who": ""
+  },
+  {
+   "action": "Suggests a left-bank canal from the Tagus to a power station on the Muge stream, serving navigation between Muge and Almourol and carrying irrigation water.",
+   "boat": "",
+   "cargo": "water",
+   "conditions": "River between Almourol and Muge is heavily silted; flood attenuation and better summer flow assumed",
+   "gear": "canal",
+   "id": "mmwdz191nsy34:3t83:p96",
+   "kind": "practice",
+   "location": "[page 13] section 47",
+   "numbers": [],
+   "period": "",
+   "place": "Muge to Almourol, left bank",
+   "who": ""
+  },
+  {
+   "action": "Describes the salt marshes below level 20 as recoverable land, plus periodically flooded land suited to meadows, livestock, orchards and vegetables for canning.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "Land below level 20 within the level 30 area",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p97",
+   "kind": "practice",
+   "location": "[page 13] section 47",
+   "numbers": [
+    {
+     "unit": "hectares",
+     "value": "over 15000",
+     "what": "recoverable salt marshes, estimated by some"
+    }
+   ],
+   "period": "",
+   "place": "Ribatejo, near Lisbon",
+   "who": ""
+  },
+  {
+   "action": "Notes that ancient tradition (Varro and Pliny) mentions horse breeding near Lisbon, while cattle and sheep are now more important to the economy.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p98",
+   "kind": "practice",
+   "location": "[page 13] section 47",
+   "numbers": [],
+   "period": "Antiquity",
+   "place": "Near Lisbon",
+   "who": "Varrão, Plinio"
+  },
+  {
+   "action": "Proposes a smaller canal from the Castelo do Bode tailrace to irrigate the right bank, serve the Entroncamento industrial hub to Torres Novas, and supply Lisbon.",
+   "boat": "",
+   "cargo": "water",
+   "conditions": "Would avoid Tagus water laden with sulfates, currently pumped to Lisbon and treated incompletely",
+   "gear": "canal",
+   "id": "mmwdz191nsy34:3t83:p99",
+   "kind": "practice",
+   "location": "[page 13] section 48",
+   "numbers": [
+    {
+     "unit": "hectares",
+     "value": "over 30000",
+     "what": "area dominated by level 30 on right bank"
+    }
+   ],
+   "period": "",
+   "place": "Right bank, Castelo do Bode, Entroncamento, Torres Novas",
+   "who": ""
+  },
+  {
+   "action": "Describes the proposed Almourol dam, which would raise the riverbed to level 30 and create a reservoir whose backwater would end at Belver.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p100",
+   "kind": "practice",
+   "location": "[page 13] section 48",
+   "numbers": [
+    {
+     "unit": "metres",
+     "value": "15",
+     "what": "dam height"
+    }
+   ],
+   "period": "",
+   "place": "Almourol, Belver",
+   "who": ""
+  },
+  {
+   "action": "Weighs the costs of the reservoir (lost fall at Castelo do Bode, flooded Constância streets and farmland) against benefits in irrigation, energy, water supply and navigation.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "Constância streets already flood in major floods",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p101",
+   "kind": "practice",
+   "location": "[page 13] section 48",
+   "numbers": [
+    {
+     "unit": "kWh",
+     "value": "20 million",
+     "what": "energy lost at Castelo do Bode"
+    }
+   ],
+   "period": "",
+   "place": "Castelo do Bode, Constância, Abrantes",
+   "who": ""
+  },
+  {
+   "action": "States that irrigation is not fundamental to the Tagus plan but one part of its benefit, and that estimates are uncertain and may change.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "Plan covers disparate zones, many with traditional crops",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p102",
+   "kind": "practice",
+   "location": "[page 13] section 49, Área regada",
+   "numbers": [],
+   "period": "",
+   "place": "Tagus basin",
+   "who": ""
+  },
+  {
+   "action": "Text estimates that at least 100,000 hectares could be irrigated with Tagus and tributary water, excluding schemes already built at Campina, Alvega and Sorraia; breakdown by zone given.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "Estimate depends on levelling of river flows after flood changes caused by water retention in Spain ",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p103",
+   "kind": "description",
+   "location": "[page 14] Irrigation estimate table",
+   "numbers": [
+    {
+     "unit": "hectares",
+     "value": "10000",
+     "what": "Cova da Beira irrigable area"
+    },
+    {
+     "unit": "hectares",
+     "value": "2000",
+     "what": "Castelo Branco zone irrigable area"
+    },
+    {
+     "unit": "hectares",
+     "value": "42000",
+     "what": "Alto Alentejo irrigable area"
+    },
+    {
+     "unit": "hectares",
+     "value": "45000",
+     "what": "Ribatejo both banks irrigable area"
+    },
+    {
+     "unit": "hectares",
+     "value": "100000",
+     "what": "Total irrigable area"
+    }
+   ],
+   "period": "",
+   "place": "Cova da Beira, Castelo Branco zone, Alto Alentejo, Ribatejo both banks",
+   "who": ""
+  },
+  {
+   "action": "The author argues the 45,000 hectares for Ribatejo is conservative, citing the large area below the 30 m level at Almourol, fewer floods, wine marketing difficulties and Lisbon's demand.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "Fewer floods, food imports, migration to Lisbon",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p104",
+   "kind": "description",
+   "location": "[page 14] Ribatejo discussion",
+   "numbers": [
+    {
+     "unit": "hectares",
+     "value": "45000",
+     "what": "Ribatejo irrigation area"
+    },
+    {
+     "unit": "years",
+     "value": "20",
+     "what": "forecast horizon"
+    }
+   ],
+   "period": "within 20 years",
+   "place": "Ribatejo, Almourol, Lisbon area",
+   "who": ""
+  },
+  {
+   "action": "An irrigation project covering 10,000 hectares on the right bank below Valada has already been studied.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p105",
+   "kind": "event",
+   "location": "[page 14] Ribatejo discussion",
+   "numbers": [
+    {
+     "unit": "hectares",
+     "value": "10000",
+     "what": "project area"
+    }
+   ],
+   "period": "",
+   "place": "right bank, below Valada",
+   "who": ""
+  },
+  {
+   "action": "Irrigation on this scale would transform the work and social character of the population, and requires study of soils, climate, food needs, exports and crop conservation and marketing.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p106",
+   "kind": "description",
+   "location": "[page 14] Irrigation planning",
+   "numbers": [],
+   "period": "",
+   "place": "from Serra da Estrela to near Évora and Lisbon",
+   "who": ""
+  },
+  {
+   "action": "The author states that irrigation is an art needing teaching, and that poor water use causes many failures; irrigation plans need thorough surveys and impartial judgement.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p107",
+   "kind": "description",
+   "location": "[page 14] Irrigation planning",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Irrigation and navigation on the Tagus are said to outweigh energy use in economic and social importance, so study should consider all aspects, not only energy.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p108",
+   "kind": "description",
+   "location": "[page 14] Irrigation planning",
+   "numbers": [],
+   "period": "",
+   "place": "Tagus",
+   "who": ""
+  },
+  {
+   "action": "Section 50 argues that using domestic natural resources, especially energy, is a matter of national security, a view strengthened during the last Great War, without implying self-sufficiency.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p109",
+   "kind": "description",
+   "location": "[page 14] Energia, section 50",
+   "numbers": [],
+   "period": "last Great War",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Text argues water should be used rationally for all economic purposes, and says wartime blockades showed this; Portugal's river energy, over 14,000 million units a year, is triple current consumption.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "average years",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p110",
+   "kind": "description",
+   "location": "page 17, before section 55",
+   "numbers": [
+    {
+     "unit": "million units",
+     "value": "14000",
+     "what": "river energy potential in average years"
+    }
+   ],
+   "period": "",
+   "place": "Portugal",
+   "who": ""
+  },
+  {
+   "action": "Spanish hydroelectric and irrigation schemes on the Tagus and its tributaries (Alcântara, Buendia, Valdecañas, Entrepeñas, Gabriel) are expected to regulate the river's flow for about twenty years.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "reserves from wet years held for dry years",
+   "gear": "reservoirs",
+   "id": "mmwdz191nsy34:3t83:p111",
+   "kind": "description",
+   "location": "section 55, The Energy on the Tagus",
+   "numbers": [
+    {
+     "unit": "million cubic metres",
+     "value": "over 9000",
+     "what": "reservoir capacity"
+    },
+    {
+     "unit": "years",
+     "value": "20",
+     "what": "years of regulation"
+    }
+   ],
+   "period": "next twenty years",
+   "place": "Tagus basin in Spain",
+   "who": "Spanish authorities"
+  },
+  {
+   "action": "A recently announced Spanish plan to divert Tagus headwaters towards the Segura area is flagged; Portuguese bodies are urged to watch such diversions.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p112",
+   "kind": "event",
+   "location": "section 55",
+   "numbers": [],
+   "period": "recent",
+   "place": "Tagus headwaters to Segura zone",
+   "who": "Portuguese authorities"
+  },
+  {
+   "action": "Upstream of Almourol, the main tributaries are the Zêzere, Ocresa, Ponsul and Erges on the right bank; Torto, Figueiró, Nisa and Sever on the left matter less.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p113",
+   "kind": "description",
+   "location": "section 56",
+   "numbers": [],
+   "period": "",
+   "place": "Tagus upstream of Almourol",
+   "who": ""
+  },
+  {
+   "action": "Zêzere power comes from the Castelo de Bode, Bouçã and Cabril dams, the Santa Luzia plant and a small works at Unhais da Serra.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "dams, power plants",
+   "id": "mmwdz191nsy34:3t83:p114",
+   "kind": "description",
+   "location": "section 57",
+   "numbers": [],
+   "period": "",
+   "place": "Zêzere",
+   "who": ""
+  },
+  {
+   "action": "Small reservoir capacity forced large unproductive water releases at Cabril and Castelo de Bode over four years, while energy output stayed high.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "reservoir capacity insufficient",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p115",
+   "kind": "event",
+   "location": "section 57",
+   "numbers": [
+    {
+     "unit": "thousand million m3",
+     "value": "2910",
+     "what": "water released at Cabril"
+    },
+    {
+     "unit": "thousand million m3",
+     "value": "3627",
+     "what": "water released at Castelo de Bode"
+    },
+    {
+     "unit": "million kWh",
+     "value": "2801",
+     "what": "energy produced in the period"
+    },
+    {
+     "unit": "million kWh",
+     "value": "700",
+     "what": "average annual production"
+    }
+   ],
+   "period": "1962/1965",
+   "place": "Cabril and Castelo de Bode dams",
+   "who": ""
+  },
+  {
+   "action": "Proposal to use high drops in the upper Zêzere for energy and gravity irrigation of the Cova da Beira near Guarda, Covilhã and Fundão.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p116",
+   "kind": "practice",
+   "location": "section 57",
+   "numbers": [],
+   "period": "",
+   "place": "Upper Zêzere, Cova da Beira, downstream of Valhelhas",
+   "who": ""
+  },
+  {
+   "action": "Proposal to divert surplus Zêzere water by a tunnel from a lake at Bogas to the planned Alvito reservoir, near Bogas de Baixo; alternative is a tunnel from Cabril.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "narrow quartzite gorge allows cheap works",
+   "gear": "tunnel",
+   "id": "mmwdz191nsy34:3t83:p117",
+   "kind": "practice",
+   "location": "section 57",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "17",
+     "what": "tunnel length"
+    },
+    {
+     "unit": "million m3",
+     "value": "2400",
+     "what": "Alvito storage capacity"
+    },
+    {
+     "unit": "m",
+     "value": "130",
+     "what": "drop used by diversion"
+    },
+    {
+     "unit": "m",
+     "value": "300",
+     "what": "total drop in Bogas-Alvito-Tejo system"
+    }
+   ],
+   "period": "",
+   "place": "Bogas, Alvito, Cabril, Zêzere",
+   "who": ""
+  },
+  {
+   "action": "Proposed Almourol dam would supply water to Lisbon via a right-bank canal starting below Castelo de Bode dam, also irrigating the right bank and serving Entroncamento and other towns.",
+   "boat": "",
+   "cargo": "water",
+   "conditions": "canal versus tunnel alternative requires detailed study",
+   "gear": "canal on right bank",
+   "id": "mmwdz191nsy34:3t83:p118",
+   "kind": "description",
+   "location": "para. 61",
+   "numbers": [],
+   "period": "",
+   "place": "Almourol; Castelo de Bode; Entroncamento",
+   "who": ""
+  },
+  {
+   "action": "Water level at Almourol would have to be raised to level 30 to reach the base of Belver dam, costing 5 metres of head at Castelo de Bode.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "normal tailwater level at Castelo de Bode is 25",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p119",
+   "kind": "description",
+   "location": "para. 61",
+   "numbers": [
+    {
+     "unit": "level",
+     "value": "25",
+     "what": "normal tailwater level at Castelo de Bode"
+    },
+    {
+     "unit": "level",
+     "value": "30",
+     "what": "required level at Almourol"
+    },
+    {
+     "unit": "metres",
+     "value": "5",
+     "what": "head lost at Castelo de Bode"
+    },
+    {
+     "unit": "million kWh",
+     "value": "20",
+     "what": "annual energy lost in an average year"
+    }
+   ],
+   "period": "",
+   "place": "Almourol; Belver; Castelo de Bode",
+   "who": ""
+  },
+  {
+   "action": "Energy scheme works have several uses: irrigation of Cova da Beira, Castelo Branco plateau, Alto Alentejo and Ribatejo, navigation to the border, and domestic and industrial water supply for three poles.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "Ribatejo irrigation needed after floods regulated by retention in Spanish and Portuguese schemes",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p120",
+   "kind": "description",
+   "location": "para. 61",
+   "numbers": [],
+   "period": "",
+   "place": "Entroncamento, Abrantes, Porto do Tejo; Tejo to the border",
+   "who": ""
+  },
+  {
+   "action": "Energy scheme comprises the upper Zêzere plant, the Bogas diversion with a tunnel to Padrão plant, Alvito, and the Fratel, Almourol, Internacional and Erges stages, the last shared with Spain.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "tunnel",
+   "id": "mmwdz191nsy34:3t83:p121",
+   "kind": "description",
+   "location": "para. 61",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "17",
+     "what": "Bogas tunnel length"
+    }
+   ],
+   "period": "",
+   "place": "Zêzere; Bogas; Tripeiro; Alvito; Fratel; Almourol; Erges",
+   "who": ""
+  },
+  {
+   "action": "River flow is regulated by afforesting the basin to slow runoff and by dams storing winter water to be turbined in summer.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "Tagus basin has dry summers and months without rain",
+   "gear": "dams, reservoirs",
+   "id": "mmwdz191nsy34:3t83:p122",
+   "kind": "practice",
+   "location": "para. 62",
+   "numbers": [],
+   "period": "",
+   "place": "Tagus basin",
+   "who": ""
+  },
+  {
+   "action": "Spain is studying and building many dams on the Tagus bed and its tributaries.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "dams",
+   "id": "mmwdz191nsy34:3t83:p123",
+   "kind": "event",
+   "location": "para. 62",
+   "numbers": [],
+   "period": "",
+   "place": "Tagus and tributaries in Spain",
+   "who": "Spain"
+  },
+  {
+   "action": "Portuguese dams already built include Castelo de Bode, Cabril, Santa Luzia, Pracana, Póvoa, Poio, Ponsul, Montargil and Maranhão, some for irrigation.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p124",
+   "kind": "description",
+   "location": "para. 62",
+   "numbers": [
+    {
+     "unit": "million m3",
+     "value": "900",
+     "what": "Castelo de Bode reservoir capacity"
+    },
+    {
+     "unit": "million m3",
+     "value": "615",
+     "what": "Cabril reservoir capacity"
+    },
+    {
+     "unit": "million m3",
+     "value": "116",
+     "what": "Pracana reservoir capacity"
+    }
+   ],
+   "period": "",
+   "place": "Zêzere; Ocresa; ribeira de Nisa; Ponsul; Sorraia tributaries",
+   "who": ""
+  },
+  {
+   "action": "International Tagus between Sever and Erges, plus the Erges, could store a large volume of water.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p125",
+   "kind": "description",
+   "location": "para. 62",
+   "numbers": [
+    {
+     "unit": "million m3",
+     "value": "600",
+     "what": "possible storage"
+    }
+   ],
+   "period": "",
+   "place": "Tejo Internacional, Sever, Erges",
+   "who": ""
+  },
+  {
+   "action": "Projected or surveyed dams on tributaries include Alvito, Bogas on the Zêzere, and the Alpreada-Taveiró system on the Ponsul; Alto Zêzere-Cova da Beira scheme adds usable volume.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p126",
+   "kind": "description",
+   "location": "para. 62",
+   "numbers": [
+    {
+     "unit": "million m3",
+     "value": "2360",
+     "what": "Alvito capacity"
+    },
+    {
+     "unit": "million m3",
+     "value": "500",
+     "what": "Bogas capacity"
+    },
+    {
+     "unit": "million m3",
+     "value": "60 to 70",
+     "what": "Alto Zêzere-Cova da Beira usable volume"
+    }
+   ],
+   "period": "",
+   "place": "Alvito; Bogas; Zêzere; Ponsul; Cova da Beira",
+   "who": ""
+  },
+  {
+   "action": "Author's energy estimates come from scattered, specialist-authenticated data and probably understate average-year output; energy is one valuable but secondary benefit among the river's integrated uses.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "no official studies on some of the most valuable possibilities",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p127",
+   "kind": "description",
+   "location": "para. 62",
+   "numbers": [],
+   "period": "",
+   "place": "Tagus basin, Portugal",
+   "who": "the author"
+  },
+  {
+   "action": "Annual energy production table for the Zêzere: Castelo de Bode, Bouça and Cabril; Santa Luzia; Bogas with diversion to Alvito; Alto Zêzere unknown.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p128",
+   "kind": "description",
+   "location": "energy table",
+   "numbers": [
+    {
+     "unit": "million kWh",
+     "value": "870",
+     "what": "Castelo de Bode, Bouça, Cabril"
+    },
+    {
+     "unit": "million kWh",
+     "value": "50",
+     "what": "Santa Luzia"
+    },
+    {
+     "unit": "million kWh",
+     "value": "330",
+     "what": "Bogas"
+    }
+   ],
+   "period": "average 1962-1965",
+   "place": "Zêzere",
+   "who": ""
+  },
+  {
+   "action": "Annual energy production table for national Tagus: Almourol dam plant, Muge plant with irrigation and navigation canal, Belver with new unit, and Fratel.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p129",
+   "kind": "description",
+   "location": "energy table",
+   "numbers": [
+    {
+     "unit": "million kWh",
+     "value": "250",
+     "what": "Almourol dam plant"
+    },
+    {
+     "unit": "million kWh",
+     "value": "350 to 400",
+     "what": "Muge plant"
+    },
+    {
+     "unit": "million kWh",
+     "value": "260",
+     "what": "Belver"
+    },
+    {
+     "unit": "million kWh",
+     "value": "430",
+     "what": "Fratel"
+    }
+   ],
+   "period": "",
+   "place": "Almourol; Muge; Belver; Fratel",
+   "who": ""
+  },
+  {
+   "action": "The author proposes that the Tagus could serve as a tourist navigation route from Abrantes area to the border, past castles and medieval fortresses visible from the river.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "navigation with only three elevations; future prospect",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p130",
+   "kind": "description",
+   "location": "[page 21]",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "more than 230",
+     "what": "navigable distance to the border"
+    },
+    {
+     "unit": "count",
+     "value": "3",
+     "what": "elevations on the route"
+    }
+   ],
+   "period": "",
+   "place": "Almourol, Abrantes, Belver, Amieira, Ródão, Tagus to the border",
+   "who": ""
+  },
+  {
+   "action": "The text anticipates that the Tagus basin will be dotted with reservoirs, listing those in the river bed in Portugal continuing into Spain up to near Talavera de la Reina.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "expected in a hoped-for near future",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p131",
+   "kind": "description",
+   "location": "[page 21]",
+   "numbers": [],
+   "period": "",
+   "place": "Almourol, Belver, Fratel, Tejo Internacional, Alcântara, Torrejón, Valdecañas",
+   "who": ""
+  },
+  {
+   "action": "Further reservoirs are listed on the tributaries within Portugal, expected to add to the lakes of the Tagus basin.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "future prospect",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p132",
+   "kind": "description",
+   "location": "[page 21]",
+   "numbers": [],
+   "period": "",
+   "place": "Castelo do Bode, Bouça, Cabril, Bogas, Santa Luzia, Alvito, Pracana, Erges",
+   "who": ""
+  },
+  {
+   "action": "The Almourol reservoir on the Nabão reaches a point about eight kilometres from Tomar.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p133",
+   "kind": "description",
+   "location": "[page 21]",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "about 8",
+     "what": "distance of reservoir limit from Tomar"
+    }
+   ],
+   "period": "",
+   "place": "Almourol, Nabão, Tomar",
+   "who": ""
+  },
+  {
+   "action": "Treatment of sick people seeking relief at the curative springs of Fonte das Virtudes, in very rudimentary facilities, still done in the author's time.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "springs lie between the reservoir and the railway",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p134",
+   "kind": "practice",
+   "location": "[page 21]",
+   "numbers": [],
+   "period": "",
+   "place": "Fonte das Virtudes, beside the Tagus past Portas do Ródão",
+   "who": "sick people"
+  },
+  {
+   "action": "The Portas do Ródão area is presented as a tourist resort prospect: fishing and sports lake, mountain gorge, castle with panoramas, future navigable river and railway.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "future navigable Tagus",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p135",
+   "kind": "description",
+   "location": "[page 21]",
+   "numbers": [],
+   "period": "",
+   "place": "Portas do Ródão, Castelo do Rei Vamba",
+   "who": ""
+  },
+  {
+   "action": "The author argues tourism planning for the Tagus basin should include Estrela and Gardunha winter sports, Castelo de Vide, Flor da Rosa, Castelo Branco, Abrantes and Tomar, which could have a river port.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p136",
+   "kind": "description",
+   "location": "[page 21]",
+   "numbers": [],
+   "period": "",
+   "place": "Serra da Estrela, Gardunha, Castelo de Vide, Flor da Rosa, Castelo Branco, Alped",
+   "who": ""
+  },
+  {
+   "action": "Tagus inland navigation carried goods and passengers from the country's centre; the text says this traffic persisted until less than a century ago, though slow and difficult.",
+   "boat": "",
+   "cargo": "goods and people from the centre of the country",
+   "conditions": "slow and difficult",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p137",
+   "kind": "description",
+   "location": "[page 116]",
+   "numbers": [
+    {
+     "unit": "years",
+     "value": "100",
+     "what": "years since traffic ended, upper bound"
+    }
+   ],
+   "period": "until less than a century ago",
+   "place": "Tejo",
+   "who": ""
+  },
+  {
+   "action": "Inland river transport on the Douro continued even after the railway was built, described as slow and difficult.",
+   "boat": "",
+   "cargo": "people and goods",
+   "conditions": "slow and difficult; persisted after railway construction",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p138",
+   "kind": "description",
+   "location": "[page 116]",
+   "numbers": [],
+   "period": "",
+   "place": "Douro",
+   "who": ""
+  },
+  {
+   "action": "Kings made attempts to make the Tagus navigable, mentioned as covered elsewhere, reflecting concern over coastal overdevelopment and a wish to involve inland peoples in national progress.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p139",
+   "kind": "event",
+   "location": "[page 116]",
+   "numbers": [],
+   "period": "",
+   "place": "Tejo",
+   "who": "kings"
+  },
+  {
+   "action": "Regulation of the river's flow is expected within decades, ending centuries of wide swings in discharge; summer flows would rise and winter flows fall in the Ribatejo.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "Depends on coordinated works in Spain and Portugal",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p140",
+   "kind": "description",
+   "location": "page 29, start",
+   "numbers": [],
+   "period": "coming decades",
+   "place": "Ribatejo, Tejo",
+   "who": ""
+  },
+  {
+   "action": "Proposes a canal on the left bank from Almourol to supply irrigation water, needed for agricultural conversion away from vines and for industrialising that bank.",
+   "boat": "",
+   "cargo": "water for irrigation",
+   "conditions": "",
+   "gear": "canal",
+   "id": "mmwdz191nsy34:3t83:p141",
+   "kind": "description",
+   "location": "page 29, p.127",
+   "numbers": [],
+   "period": "",
+   "place": "left bank, from Almourol",
+   "who": ""
+  },
+  {
+   "action": "Right bank is favoured by the Eastern railway, industrial centres at Torres Novas, Entroncamento and Tomar, and rich riverside land; Lisbon's water supply could come by canal from the Zêzere or the Tejo.",
+   "boat": "",
+   "cargo": "water",
+   "conditions": "",
+   "gear": "canal",
+   "id": "mmwdz191nsy34:3t83:p142",
+   "kind": "description",
+   "location": "page 29, p.127",
+   "numbers": [],
+   "period": "",
+   "place": "right bank, Tejo; Zêzere",
+   "who": ""
+  },
+  {
+   "action": "Export industries load goods at the factory or river port onto boats that carry them to the Tejo estuary, where they are transferred to ships, avoiding extra handling costs.",
+   "boat": "boat",
+   "cargo": "export products, agricultural produce",
+   "conditions": "River transport is described as much cheaper than any other; loading and unloading costs hurt poor p",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p143",
+   "kind": "practice",
+   "location": "page 29, p.127",
+   "numbers": [
+    {
+     "unit": "tonnes",
+     "value": "thousands",
+     "what": "export volumes"
+    }
+   ],
+   "period": "",
+   "place": "Tejo estuary, Lisbon port",
+   "who": ""
+  },
+  {
+   "action": "Cellulose from a factory at Porto do Tejo on the reservoir could be sent directly to a ship anchored in the Tejo estuary.",
+   "boat": "ship",
+   "cargo": "cellulose",
+   "conditions": "Hypothetical, tied to a reservoir",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p144",
+   "kind": "practice",
+   "location": "page 29, p.127",
+   "numbers": [],
+   "period": "",
+   "place": "Porto do Tejo; Tejo estuary",
+   "who": ""
+  },
+  {
+   "action": "Moncorvo ore is carried by aerial cableway from the mines to a boat on the Douro, which takes it to the steelworks.",
+   "boat": "boat",
+   "cargo": "ore",
+   "conditions": "Cited as an example of transport without trucks or rail",
+   "gear": "aerial cableway",
+   "id": "mmwdz191nsy34:3t83:p145",
+   "kind": "practice",
+   "location": "page 29, p.127",
+   "numbers": [],
+   "period": "",
+   "place": "Moncorvo; Douro",
+   "who": ""
+  },
+  {
+   "action": "Good river links and abundant water would help intensive exploitation of uranium mines and the Segura barite deposits.",
+   "boat": "",
+   "cargo": "uranium, barite",
+   "conditions": "Hypothetical, if mining becomes intensive",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p146",
+   "kind": "description",
+   "location": "page 29, p.127",
+   "numbers": [],
+   "period": "",
+   "place": "Segura; Tejo",
+   "who": ""
+  },
+  {
+   "action": "The Entroncamento area is expected to become an industrial centre, helped by the railway workshops, fertile riverbanks, water supply, road and rail links, and a possible river port on the Nabão near Tomar.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p147",
+   "kind": "description",
+   "location": "page 29, p.128",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "a few",
+     "what": "distance of possible river port from Tomar"
+    }
+   ],
+   "period": "",
+   "place": "Entroncamento, Tomar, Torres Novas, Nabão",
+   "who": ""
+  },
+  {
+   "action": "Dams at Almourol on the Tejo and Castelo do Bode on the Zêzere would form lakes suitable for tourism, nautical sports, fishing and rest for factory workers.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "Proposed",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p148",
+   "kind": "description",
+   "location": "page 29, p.128",
+   "numbers": [],
+   "period": "",
+   "place": "Almourol, Castelo do Bode",
+   "who": "factory population"
+  },
+  {
+   "action": "Abrantes, between the Zêzere mouth and Belver dam, is a second agricultural-industrial hub with traditions, served by roads E.N. 2 and 3.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p149",
+   "kind": "description",
+   "location": "page 29, p.128",
+   "numbers": [],
+   "period": "",
+   "place": "Abrantes, Zêzere mouth to Belver dam",
+   "who": ""
+  },
+  {
+   "action": "Products from inland regions could be shipped down the Tejo through a river port at Rossio, possibly combined with rail.",
+   "boat": "",
+   "cargo": "products of intermediate regions",
+   "conditions": "Possible, with Beira Alta links",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p150",
+   "kind": "description",
+   "location": "page 29, p.128",
+   "numbers": [],
+   "period": "future",
+   "place": "Rossio, Abrantes",
+   "who": ""
+  },
+  {
+   "action": "The region has had manufacturing from Tramagal to Mouriscas, including metalworking, chemicals, milling and ceramics.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p151",
+   "kind": "description",
+   "location": "page 29, p.128",
+   "numbers": [],
+   "period": "",
+   "place": "Tramagal to Mouriscas",
+   "who": ""
+  },
+  {
+   "action": "Proposes an industrial pole centred on Abrantes, including Tramagal, Rossio, Alferrarede, Mouriscas and Alvega, with development resting on Tagus navigation and the Almourol dam and lake.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "Development base is navigation of the Tagus and the Almourol dam and lake",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p152",
+   "kind": "description",
+   "location": "[page 129]",
+   "numbers": [],
+   "period": "",
+   "place": "Abrantes, Tramagal, Rio de Moinhos, Rossio, Alferrarede, Mouriscas, Alvega, lago",
+   "who": ""
+  },
+  {
+   "action": "Suggests tourism on the Almourol lake, wood industries, and agricultural canning could keep the Constância-to-Belver dam area busy within a few years.",
+   "boat": "",
+   "cargo": "agricultural raw material from neighbouring Alto Alentejo farms",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p153",
+   "kind": "description",
+   "location": "[page 129]",
+   "numbers": [],
+   "period": "",
+   "place": "Constância to Belver dam, lago de Almourol",
+   "who": ""
+  },
+  {
+   "action": "Describes a planned third economic pole on the Quaternary lands of the Porto do Tejo, extending to the planned International Tagus dam site just downstream of the Sever.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "Gently undulating terrain, aimed at agriculture and forestry",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p154",
+   "kind": "description",
+   "location": "[page 129] Pólo do Porto do Tejo",
+   "numbers": [],
+   "period": "",
+   "place": "Porto do Tejo, Sever",
+   "who": ""
+  },
+  {
+   "action": "Describes the Tagus between Belver and Porto do Tejo as hemmed by steep hills, with poor road access and no room for industry; the railway runs along the valley.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "Steep escarpments; stations cut into the hillside",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p155",
+   "kind": "description",
+   "location": "[page 129]",
+   "numbers": [
+    {
+     "unit": "tunnels",
+     "value": "4",
+     "what": "railway tunnels"
+    }
+   ],
+   "period": "",
+   "place": "Belver, Amieira, Fratel, Porto do Tejo",
+   "who": ""
+  },
+  {
+   "action": "The Fratel dam, upstream of the Figueiró stream mouth, forms a lake with depth and width for river boats to navigate several kilometres above Porto do Tejo.",
+   "boat": "barcos próprios para a navegação fluvial",
+   "cargo": "",
+   "conditions": "Lake with large-radius curves ending almost at the border",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p156",
+   "kind": "description",
+   "location": "[page 129]",
+   "numbers": [],
+   "period": "",
+   "place": "Fratel dam, ribeira de Figueiró, Porto do Tejo",
+   "who": ""
+  },
+  {
+   "action": "The Fratel dam is planned to provide energy, navigation, a road bridge and irrigation water for the Alto Alentejo scheme, and to aid the Monte Claro uranium mines.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "Alto Alentejo scheme already approved",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p157",
+   "kind": "description",
+   "location": "[page 129]",
+   "numbers": [],
+   "period": "",
+   "place": "Fratel dam, Monte Claro, Alto Alentejo",
+   "who": ""
+  },
+  {
+   "action": "Notes the Portas do Ródão and castles of great national historical importance on this stretch, with other defensive structures nearby.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p158",
+   "kind": "description",
+   "location": "[page 129]",
+   "numbers": [],
+   "period": "",
+   "place": "Portas do Ródão, Flor da Rosa, Nisa, Marvão, Castelo Branco, Monsanto",
+   "who": ""
+  },
+  {
+   "action": "Defines the upper Tagus industrial pole's zone of influence, about 100 km in radius, from the serra da Estrela to the Zêzere and the border, including part of Alto Alentejo.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p159",
+   "kind": "description",
+   "location": "[page 129]",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "100",
+     "what": "radius of zone of influence"
+    }
+   ],
+   "period": "",
+   "place": "serra da Estrela, Zêzere, Alto Alentejo",
+   "who": ""
+  },
+  {
+   "action": "Describes regional industries: Covilhã as the country's largest wool centre, Portalegre growing, Castelo Branco with metalworking, milling and granite quarrying, and possible textile and embroidery expansion.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p160",
+   "kind": "description",
+   "location": "[page 130] section 80",
+   "numbers": [],
+   "period": "",
+   "place": "Covilhã, Portalegre, Castelo Branco",
+   "who": ""
+  },
+  {
+   "action": "States that the region's fundamental economic base is its large forest resources, notably pine products such as cellulose, paper, resins, oils and essences, with export potential.",
+   "boat": "",
+   "cargo": "pine products: cellulose, paper, resins, oils, essences",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz191nsy34:3t83:p161",
+   "kind": "description",
+   "location": "[page 130]",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "100",
+     "what": "radius around Porto do Tejo"
+    }
+   ],
+   "period": "",
+   "place": "region within 100 km of Porto do Tejo",
+   "who": ""
+  }
+ ],
+ "partsDone": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29
+ ],
+ "partsTotal": 30,
+ "runAt": "2026-11-14T10:15:56.177Z",
+ "sourceId": "mmwdz191nsy34",
+ "textChars": 177843,
+ "title": "o tejo originalsite"
+}

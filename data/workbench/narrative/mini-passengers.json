@@ -1,0 +1,478 @@
+{
+ "basis": {
+  "bible": true,
+  "concepts": [
+   "c19",
+   "c14",
+   "c186",
+   "c192",
+   "c291",
+   "c568",
+   "c238",
+   "c601",
+   "c554",
+   "c286"
+  ],
+  "match": "same",
+  "practices": [
+   "p100",
+   "p10",
+   "p12",
+   "p30",
+   "p124"
+  ],
+  "proposal": "s8"
+ },
+ "beats": [
+  {
+   "character": "k1",
+   "concept": "Reading the wind before leaving",
+   "delivery": "story",
+   "evidence": [
+    "e1",
+    "e14",
+    "e18",
+    "e31"
+   ],
+   "gist": "At the Lisbon quay Joaquim reads the wind, says it will be an upwind crossing to Almada under sail and oars, and notes his passenger has not said why she is going.",
+   "id": "b1",
+   "part": "setup",
+   "trigger": "start"
+  },
+  {
+   "character": "k1",
+   "concept": "Virar de bordo / cambar, caçar",
+   "delivery": "cue",
+   "evidence": [
+    "e24",
+    "e25"
+   ],
+   "gist": "As the player turns through the wind, Joaquim gives a short instruction to bring the bow across and sheet in on the new side.",
+   "id": "b2",
+   "part": "complication",
+   "trigger": "tack"
+  },
+  {
+   "character": "k2",
+   "concept": "Bolina, zigzagging between close-hauled headings",
+   "delivery": "story",
+   "evidence": [
+    "e24",
+    "e12",
+    "e21",
+    "e34"
+   ],
+   "gist": "On a calm leg the passenger asks why they keep zigzagging; Joaquim explains that a boat cannot sail straight into the wind, and points out the other craft that work the same river.",
+   "id": "b3",
+   "part": "complication",
+   "trigger": "steady_leg"
+  },
+  {
+   "character": "k1",
+   "concept": "Getting out of irons: arribar, folgar then caçar",
+   "delivery": "cue",
+   "evidence": [],
+   "gist": "The boat stalls head to wind and Joaquim gives a short instruction to bear away and let the sail fill again.",
+   "id": "b4",
+   "part": "complication",
+   "trigger": "enter_irons"
+  },
+  {
+   "character": "k2",
+   "concept": "Holding course after recovering",
+   "delivery": "reflection",
+   "evidence": [
+    "e9",
+    "e11",
+    "e8"
+   ],
+   "gist": "Once the boat is moving again, the passenger asks why he stays in this work; Joaquim answers that the river is the road between the two banks and boats are the fastest way across, and she finally says why she is going to Almada.",
+   "id": "b5",
+   "part": "turn",
+   "trigger": "out_of_irons"
+  },
+  {
+   "character": "k1",
+   "concept": "Approach and dock (acostar), controlling speed to come alongside",
+   "delivery": "story",
+   "evidence": [
+    "e22",
+    "e23",
+    "e1"
+   ],
+   "gist": "Joaquim brings the catraio alongside at Almada and says a quiet line about the people he carries; the passenger pays and steps ashore.",
+   "id": "b6",
+   "part": "close",
+   "trigger": "arrive"
+  },
+  {
+   "character": "k1",
+   "concept": "",
+   "delivery": "curiosity",
+   "evidence": [
+    "e6",
+    "e14",
+    "e29",
+    "e8",
+    "e11"
+   ],
+   "gist": "Optional card separating fact from fiction: Joaquim and the passenger are invented, while the catraio, its passenger trade between the banks, and the river traffic that lasted until the mid-20th century and the 1966 bridge are documented.",
+   "id": "b7",
+   "part": "close",
+   "trigger": "mission_end"
+  }
+ ],
+ "cast": [
+  {
+   "evidence": [
+    "e1",
+    "e14",
+    "e29",
+    "e18"
+   ],
+   "fictional": true,
+   "id": "k1",
+   "name": "Tio Joaquim",
+   "role": "Catraeiro (invented, labelled fictional) who rows and sails a catraio carrying passengers between Lisbon and the south b",
+   "voice": "Dry, practical, a little proud of his trade; teaches by reacting to what the player does at the tiller",
+   "want": "To get today's passenger across to Almada cleanly and on time"
+  },
+  {
+   "evidence": [
+    "e1",
+    "e13"
+   ],
+   "fictional": true,
+   "id": "k2",
+   "name": "The passenger",
+   "role": "Passenger crossing to Almada (invented, labelled fictional), one of the people the small Tagus boats carried between the",
+   "voice": "Curious and direct; asks the questions the player would ask",
+   "want": "To reach the south bank for a personal reason she reveals only at the turn"
+  }
+ ],
+ "createdAt": "2026-11-13T07:06:12.648Z",
+ "evidence": [
+  {
+   "id": "e1",
+   "location": "Mar da Palha (1)",
+   "numbers": [],
+   "origin": "mmwdz12sr2kq0:t59:p26",
+   "source": "Embarcações do Rio Tejo",
+   "sourceId": "mmwdz12sr2kq0",
+   "text": "Boats carried passengers between Cacilhas, Almada and Lisbon. · place: Cacilhas, Almada, Lisboa · cargo: people"
+  },
+  {
+   "id": "e2",
+   "location": "Introduction",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p1",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "The generic term 'barca' was long used for any small river-traffic or fishing boat on the Tagus. · place: Tejo"
+  },
+  {
+   "id": "e3",
+   "location": "Introduction",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p4",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "From the early 16th century barcas began to diversify according to their functions and the routes they sailed on the Tagus. · place: Tejo · when: séc. XVI"
+  },
+  {
+   "id": "e4",
+   "location": "Introduction",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p5",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "Going upriver, entering shallow creeks, carrying varied cargo and fishing in river and sea required boats with differing keels, flat bottoms, bows, masts and sails. · place: Tejo, esteiros · cargo: various goods"
+  },
+  {
+   "id": "e5",
+   "location": "Estaleiros e Tipologias",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p10",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "Boat shapes, sizes and colours varied with function, route navigability and the style of each yard or town."
+  },
+  {
+   "id": "e6",
+   "location": "Estaleiros e Tipologias",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p11",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "Well-known passenger boats included catraio, caíque, bote, batel, canoa, falua and bote cacilheiro. · cargo: passengers"
+  },
+  {
+   "id": "e7",
+   "location": "Estaleiros e Tipologias",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p12",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "Well-known cargo boats included mill boats, Riba-Tejo boats, cargueiros, bateiras, faluas, canoa cacilheira, varinos and fragatas. · cargo: goods"
+  },
+  {
+   "id": "e8",
+   "location": "Introduction",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p6",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "River traffic linked the two banks, coast and interior, and mouth and Riba-Tejo, carrying goods and people and supporting fishing, until the mid-20th century. · place: Tejo, Riba-Tejo · when: until meados do séc. XX · cargo: goods and people"
+  },
+  {
+   "id": "e9",
+   "location": "Travessia Fluvial Belém - Trafaria",
+   "numbers": [],
+   "origin": "m-hist-paisagem:3rd:p4",
+   "source": "Museu da Paisagem",
+   "sourceId": "m-hist-paisagem",
+   "text": "Historically the Tagus was the only road for national and intercontinental trade and linked the two banks; the crossing still carries this maritime heritage. · place: Tejo · cargo: trade"
+  },
+  {
+   "id": "e10",
+   "location": "Introduction",
+   "numbers": [],
+   "origin": "mmwdz14kpqwcc:azv:p6",
+   "source": "Cacilheiros no Rio Tejo",
+   "sourceId": "mmwdz14kpqwcc",
+   "text": "River traffic linked the two banks, coast and interior, carrying goods and people and supporting fishing in the river and nearby coast until the mid-20th century. · place: Tejo, Riba-Tejo · when: until mid séc. XX · cargo: goods and people"
+  },
+  {
+   "id": "e11",
+   "location": "Tipologias",
+   "numbers": [],
+   "origin": "mmwdz16aqbi7n:9p6:p8",
+   "source": "Barcos Tradicionais do Tejo e ",
+   "sourceId": "mmwdz16aqbi7n",
+   "text": "Before the bridge opened, boats carried people and goods and linked towns between Santarém and Cascais faster than other means. · place: between Santarém and Cascais · when: before 1966 · cargo: people and goods"
+  },
+  {
+   "id": "e12",
+   "location": "Tipologias",
+   "numbers": [],
+   "origin": "mmwdz16aqbi7n:9p6:p11",
+   "source": "Barcos Tradicionais do Tejo e ",
+   "sourceId": "mmwdz16aqbi7n",
+   "text": "The river was the era's motorway, busy with varied craft: fragatas, varinos, faluas, cangueiros, botes, botes de fragata, botes de pinho, barcos de água acima, canoas and catraios. · place: Tagus estuary"
+  },
+  {
+   "id": "e13",
+   "location": "Tipologias",
+   "numbers": [],
+   "origin": "mmwdz16aqbi7n:9p6:p13",
+   "source": "Barcos Tradicionais do Tejo e ",
+   "sourceId": "mmwdz16aqbi7n",
+   "text": "Smaller boats carried people and goods such as fresh produce and groceries. · cargo: fresh produce, groceries, people"
+  },
+  {
+   "id": "e14",
+   "location": "[page 2]",
+   "numbers": [],
+   "origin": "m-hist-freire:jhq:p24",
+   "source": "Freire",
+   "sourceId": "m-hist-freire",
+   "text": "Passenger transport used the catraio, caíque, bote, batel and canoa. · place: Tejo · cargo: passengers"
+  },
+  {
+   "id": "e15",
+   "location": "[page 2]",
+   "numbers": [],
+   "origin": "m-hist-freire:jhq:p25",
+   "source": "Freire",
+   "sourceId": "m-hist-freire",
+   "text": "Cargo was carried by mill boats, Riba-Tejo boats, bateiras, faluas, varinos-avieiros and fragatas. · place: Tejo · cargo: goods"
+  },
+  {
+   "id": "e16",
+   "location": "[page 2]",
+   "numbers": [],
+   "origin": "m-hist-freire:jhq:p26",
+   "source": "Freire",
+   "sourceId": "m-hist-freire",
+   "text": "Fishing used picareto, abrangel, catrafúcio (three-plank boat), saveiros and muletas. · place: Tejo · cargo: fish"
+  },
+  {
+   "id": "e17",
+   "location": "[page 2]",
+   "numbers": [],
+   "origin": "m-hist-freire:jhq:p27",
+   "source": "Freire",
+   "sourceId": "m-hist-freire",
+   "text": "Varinos-avieiros and fragatas were the most representative cargo boats of the Tejo. · place: Tejo"
+  },
+  {
+   "id": "e18",
+   "location": "[page 2]",
+   "numbers": [],
+   "origin": "m-hist-freire:jhq:p28",
+   "source": "Freire",
+   "sourceId": "m-hist-freire",
+   "text": "All navigation was then done by sail and oars. · place: Tejo"
+  },
+  {
+   "id": "e19",
+   "location": "part 2, Pinto Basto quote",
+   "numbers": [
+    "masts on falua: 2 masts",
+    "masts on fragata and varino: 1 mast"
+   ],
+   "origin": "mmwdz12sr2kq0:t59:p15",
+   "source": "Embarcações do Rio Tejo",
+   "sourceId": "mmwdz12sr2kq0",
+   "text": "Pinto Basto notes sailors confused boat names, calling fragatas and varinos 'faluas'; the falua has two masts, the others one, and they serve very different purposes. · who: A. J. Pinto Basto · place: Tejo · when: 1893"
+  },
+  {
+   "id": "e20",
+   "location": "Cacilheiros section",
+   "numbers": [],
+   "origin": "mmwdz14kpqwcc:azv:p30",
+   "source": "Cacilheiros no Rio Tejo",
+   "sourceId": "mmwdz14kpqwcc",
+   "text": "From early times botes, catraios and faluas linked Lisbon with Montijo, formerly Aldeia Galega or Aldegalega. · place: Montijo (Aldeia Galega, Aldegalega)"
+  },
+  {
+   "id": "e21",
+   "location": "Pintura Decorativa",
+   "numbers": [],
+   "origin": "mmwdz16aqbi7n:9p6:p15",
+   "source": "Barcos Tradicionais do Tejo e ",
+   "sourceId": "mmwdz16aqbi7n",
+   "text": "Faluas formed a fairly regular network carrying passengers; a children's rhyme about a falua from Belém survives. · place: Belém · cargo: people"
+  },
+  {
+   "id": "e22",
+   "location": "[section: Foundations > Sailing concepts]",
+   "numbers": [],
+   "origin": "m-auth-method:19",
+   "source": "Method doc",
+   "sourceId": "m-auth-method",
+   "text": "Approach and docking: “Approach and dock” (en) — Controlling speed to come alongside another boat or a quay."
+  },
+  {
+   "id": "e23",
+   "location": "[section: main text]",
+   "numbers": [],
+   "origin": "m-hist-blk-portos:17",
+   "source": "mediotejo",
+   "sourceId": "m-hist-blk-portos",
+   "text": "Approach and docking: “acostar” (pt-PT) — To come alongside or berth at a quay or bank."
+  },
+  {
+   "id": "e24",
+   "location": "[section: Foundations > Sailing concepts]",
+   "numbers": [],
+   "origin": "m-auth-method:14",
+   "source": "Method doc",
+   "sourceId": "m-auth-method",
+   "text": "Tacking: “virar de bordo” (en) — Tacking: turning through the wind to change sides while going upwind, zigzagging between two close-hauled headings."
+  },
+  {
+   "id": "e25",
+   "location": "[page 6]",
+   "numbers": [],
+   "origin": "m-ref-veleiro:44",
+   "source": "Veleiro.net",
+   "sourceId": "m-ref-veleiro",
+   "text": "Tacking: “Cambar” (pt-BR) — Tacking: turning the bow through the wind line so the sails change sides."
+  },
+  {
+   "id": "e26",
+   "location": "[section: Breve história das embarcações do estuário do Tejo",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:38",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "Botes (small boats): “botes” (pt-PT) — Small traditional boats, some still preserved at Sarilhos Pequenos and Moita through local enthusiasm and municipal support."
+  },
+  {
+   "id": "e27",
+   "location": "[section: main text]",
+   "numbers": [],
+   "origin": "mmwdz13qounll:18",
+   "source": "barcos do tejo",
+   "sourceId": "mmwdz13qounll",
+   "text": "Botes (small boats): “botes” () — Small boats listed among Tagus vessels; botes de fragata are also mentioned."
+  },
+  {
+   "id": "e28",
+   "location": "[no marker]",
+   "numbers": [],
+   "origin": "mmwdz14kpqwcc:49",
+   "source": "Cacilheiros no Rio Tejo",
+   "sourceId": "mmwdz14kpqwcc",
+   "text": "Cacilhas: “Cacilhas” () — Town in Almada on the south bank of the Tagus, the departure point of the cacilheiro ferries to Lisbon."
+  },
+  {
+   "id": "e29",
+   "location": "Part 2 (no marker)",
+   "numbers": [],
+   "origin": "m-hist-freire:16",
+   "source": "Freire",
+   "sourceId": "m-hist-freire",
+   "text": "Passenger boats of the Tagus: “catraio” (pt-PT) — A small boat type used on the Tagus to carry passengers."
+  },
+  {
+   "id": "e30",
+   "location": "Part 2 (no marker)",
+   "numbers": [],
+   "origin": "m-hist-freire:17",
+   "source": "Freire",
+   "sourceId": "m-hist-freire",
+   "text": "Passenger boats of the Tagus: “caíque” (pt-PT) — A boat type used on the Tagus for moving passengers."
+  },
+  {
+   "id": "e31",
+   "location": "[page 230] note 25",
+   "numbers": [],
+   "origin": "mmwdz15icx6en:51",
+   "source": "BOOK Territorios da Lisboa Med",
+   "sourceId": "mmwdz15icx6en",
+   "text": "Crossing between banks: “entre-margens” () — Crossing from one bank of the river to the other, one of the possible Tagus routes."
+  },
+  {
+   "id": "e32",
+   "location": "[section: main text]",
+   "numbers": [],
+   "origin": "mmwdz13qounll:19",
+   "source": "barcos do tejo",
+   "sourceId": "mmwdz13qounll",
+   "text": "Catraios (small boats): “catraios” () — A type of small boat listed among those of the Tagus."
+  },
+  {
+   "id": "e33",
+   "location": "[page 6]",
+   "numbers": [],
+   "origin": "mmwdz13qounll:47",
+   "source": "barcos do tejo",
+   "sourceId": "mmwdz13qounll",
+   "text": "Catraios (small boats): “catraio” () — Type of small Tagus boat once common along the riverside."
+  },
+  {
+   "id": "e34",
+   "location": "[section: Fragata]",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:29",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "Falua: “falua” (pt-PT) — Medium-sized Tagus boat between a bote and a large fragata, doing similar cargo work and also carrying passengers."
+  },
+  {
+   "id": "e35",
+   "location": "[section: 1.2 – Bases de Dados de Imagens e seus Autores]",
+   "numbers": [],
+   "origin": "mmwdz12sr2kq0:18",
+   "source": "Embarcações do Rio Tejo",
+   "sourceId": "mmwdz12sr2kq0",
+   "text": "Falua: “falua” () — A traditional Tagus boat type whose layout methods and construction elements are described in an early carpentry treatise."
+  }
+ ],
+ "game": "mini.passengers",
+ "notes": "Built from the story bible's Mission 3 cast (Tio Joaquim, the passenger) and its setup, complication, turn and close structure. Changes: (1) Dropped the mid-1920s date and the Cooperativa de Catraeiros at Porto Brandão. They are not in the evidence, so the period stays loosely 'before the bridge, sail and oars' (e8, e11, e18). (2) Dropped the steamer complication, the 1860s steam date and the figure of more than 2,000 boats. None are in the evidence, and e18 says navigation was by sail and oars. The near_vessel beat was cut to stay within six beats; other boats now appear in b3 as faluas and o",
+ "title": "Passengers with the Catraio",
+ "updatedAt": "2026-11-13T07:06:12.648Z"
+}

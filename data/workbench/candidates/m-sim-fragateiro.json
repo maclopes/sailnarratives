@@ -1,0 +1,787 @@
+{
+ "items": [
+  {
+   "definition": "A lifting surface (sail, keel or rudder) that produces lift and drag from the flow past it; one force model covers all of them.",
+   "id": "m-sim-fragateiro:8gy:1",
+   "location": "[file: fragateiro docs/PHYSICS.md] One force model for every",
+   "measured_by": "Force computed from flow speed, area and angle of attack in foil.ts",
+   "numbers": [],
+   "term": "foil"
+  },
+  {
+   "definition": "The angle between a foil's chord direction and the incoming flow, which determines how much lift and drag it generates.",
+   "id": "m-sim-fragateiro:8gy:2",
+   "location": "[file: fragateiro docs/PHYSICS.md] One force model for every",
+   "measured_by": "Alpha value computed for each foil; a sail fills when alpha is above 0",
+   "numbers": [],
+   "term": "angle of attack"
+  },
+  {
+   "definition": "The wind felt at the sail: true wind minus the boat's own velocity, including the effect of its rotation.",
+   "id": "m-sim-fragateiro:8gy:3",
+   "location": "[file: fragateiro docs/PHYSICS.md] Sails",
+   "measured_by": "Flow velocity computed at the sail's centre of effort",
+   "numbers": [],
+   "term": "apparent wind"
+  },
+  {
+   "definition": "The ratio of lift to drag of a sail; cloth sails do better than yacht tables suggest, so the model raised it.",
+   "id": "m-sim-fragateiro:8gy:4",
+   "location": "[file: fragateiro docs/PHYSICS.md] Sails",
+   "measured_by": "Sail coefficient tables with drag scaling (SAIL_DRAG_SCALE)",
+   "numbers": [
+    {
+     "unit": "",
+     "value": "1.5",
+     "what": "yacht table best lift/drag"
+    },
+    {
+     "unit": "",
+     "value": "3–5",
+     "what": "cloth sails best lift/drag"
+    },
+    {
+     "unit": "",
+     "value": "2.5",
+     "what": "model best lift/drag now"
+    }
+   ],
+   "term": "lift/drag"
+  },
+  {
+   "definition": "Underwater side area modelled as strips that resist sideways motion and, as the boat turns, damp yaw.",
+   "id": "m-sim-fragateiro:8gy:5",
+   "location": "[file: fragateiro docs/PHYSICS.md] Keel and hull",
+   "measured_by": "Lift and drag on each strip across the lateralSpan",
+   "numbers": [
+    {
+     "unit": "strips",
+     "value": "6",
+     "what": "number of strips"
+    }
+   ],
+   "term": "keel"
+  },
+  {
+   "definition": "A foil at the stern turned by the helm to steer the boat.",
+   "id": "m-sim-fragateiro:8gy:6",
+   "location": "[file: fragateiro docs/PHYSICS.md] Keel and hull",
+   "measured_by": "Helm control sets the rudder angle",
+   "numbers": [],
+   "term": "rudder"
+  },
+  {
+   "definition": "The line that limits how far the boom can swing out; it does not push the sail itself.",
+   "id": "m-sim-fragateiro:8gy:7",
+   "location": "[file: fragateiro docs/PHYSICS.md] Sails and sheets",
+   "measured_by": "Sheet control sets minAngle and maxAngle limits",
+   "numbers": [
+    {
+     "unit": "degrees",
+     "value": "20",
+     "what": "minimum boom angle with sheet hauled in, working sails"
+    },
+    {
+     "unit": "degrees",
+     "value": "4",
+     "what": "minimum angle, Muleta small fishing sails"
+    }
+   ],
+   "term": "sheet"
+  },
+  {
+   "definition": "The range of angles near the wind's direction where the sails cannot fill, so the boat makes no progress.",
+   "id": "m-sim-fragateiro:8gy:8",
+   "location": "[file: fragateiro docs/PHYSICS.md] Sails and sheets",
+   "measured_by": "Sails flap and speed stays near zero at those wind angles",
+   "numbers": [
+    {
+     "unit": "degrees",
+     "value": "about 36",
+     "what": "no-go zone half-width"
+    }
+   ],
+   "term": "no-go zone"
+  },
+  {
+   "definition": "A sail streaming along the wind with an angle of attack near zero gives no drive, but it keeps some drag.",
+   "id": "m-sim-fragateiro:8gy:9",
+   "location": "[file: fragateiro docs/PHYSICS.md] Sails and sheets",
+   "measured_by": "Alpha near 0 with no drive",
+   "numbers": [
+    {
+     "unit": "of table drag",
+     "value": "about one fifth",
+     "what": "drag fraction while flapping"
+    },
+    {
+     "unit": "degrees",
+     "value": "10",
+     "what": "angle of attack at which drag returns to table value"
+    }
+   ],
+   "term": "flaps"
+  },
+  {
+   "definition": "Sailing as close to the wind as possible, with the sails hauled in.",
+   "id": "m-sim-fragateiro:8gy:10",
+   "location": "[file: fragateiro docs/PHYSICS.md] Sails and sheets",
+   "measured_by": "Sail trim and the polar speed at the wind angle",
+   "numbers": [],
+   "term": "close-hauled"
+  },
+  {
+   "definition": "Sailing with the wind from the side, where the sails sit about half-way out and speed is highest.",
+   "id": "m-sim-fragateiro:8gy:11",
+   "location": "[file: fragateiro docs/PHYSICS.md] Sails and sheets; Tuning",
+   "measured_by": "Polar output from npm run polar",
+   "numbers": [
+    {
+     "unit": "kn",
+     "value": "5.7",
+     "what": "Falua speed at 6 m/s wind"
+    }
+   ],
+   "term": "beam reach"
+  },
+  {
+   "definition": "Sailing with the wind from astern, with the sails fully eased out.",
+   "id": "m-sim-fragateiro:8gy:12",
+   "location": "[file: fragateiro docs/PHYSICS.md] Sails and sheets; Tuning",
+   "measured_by": "Polar output from npm run polar",
+   "numbers": [
+    {
+     "unit": "kn",
+     "value": "5",
+     "what": "Falua speed running at 6 m/s wind"
+    }
+   ],
+   "term": "running"
+  },
+  {
+   "definition": "The sails swing across when the wind crosses the stern.",
+   "id": "m-sim-fragateiro:8gy:13",
+   "location": "[file: fragateiro docs/PHYSICS.md] Sails and sheets",
+   "measured_by": "Sail target angle changes when the wind crosses the stern",
+   "numbers": [],
+   "term": "gybes"
+  },
+  {
+   "definition": "A turn through the wind; the flapping sail's retained drag lets the boat keep way so it can complete it.",
+   "id": "m-sim-fragateiro:8gy:14",
+   "location": "[file: fragateiro docs/PHYSICS.md] Sails and sheets",
+   "measured_by": "Boat keeps speed while sails flap",
+   "numbers": [],
+   "term": "tack"
+  },
+  {
+   "definition": "The sail angle follows its target slowly so manoeuvres look natural.",
+   "id": "m-sim-fragateiro:8gy:15",
+   "location": "[file: fragateiro docs/PHYSICS.md] Sails and sheets",
+   "measured_by": "Sail angle response to its target",
+   "numbers": [
+    {
+     "unit": "s",
+     "value": "0.35",
+     "what": "lag time"
+    }
+   ],
+   "term": "sail angle lag"
+  },
+  {
+   "definition": "The speed near which wave-making resistance rises steeply so the boat stops accelerating.",
+   "id": "m-sim-fragateiro:8gy:16",
+   "location": "[file: fragateiro docs/PHYSICS.md] Resistance",
+   "measured_by": "Wave coefficient growing with (Fn/0.4)^4 as Froude number rises",
+   "numbers": [],
+   "term": "hull speed"
+  },
+  {
+   "definition": "A speed measure relative to hull length that sets the wave-making resistance coefficient.",
+   "id": "m-sim-fragateiro:8gy:17",
+   "location": "[file: fragateiro docs/PHYSICS.md] Resistance",
+   "measured_by": "Fn used in C_w",
+   "numbers": [
+    {
+     "unit": "",
+     "value": "0.4",
+     "what": "reference value in wave coefficient"
+    }
+   ],
+   "term": "Froude number"
+  },
+  {
+   "definition": "Air drag on the hull, masts and rigging, which hurts upwind sailing.",
+   "id": "m-sim-fragateiro:8gy:18",
+   "location": "[file: fragateiro docs/PHYSICS.md] Resistance",
+   "measured_by": "windageArea force and its yaw moment, making the boat fall off the wind when sails flap",
+   "numbers": [
+    {
+     "unit": "",
+     "value": "a quarter of waterline length",
+     "what": "position of windage ahead of centre"
+    }
+   ],
+   "term": "windage"
+  },
+  {
+   "definition": "A boat with flapping sails turns away from the wind because windage acts ahead of the centre.",
+   "id": "m-sim-fragateiro:8gy:19",
+   "location": "[file: fragateiro docs/PHYSICS.md] Resistance",
+   "measured_by": "Yaw moment from windage",
+   "numbers": [],
+   "term": "falls off the wind"
+  },
+  {
+   "definition": "Moving astern meets extra drag, so a boat stopped head to wind creeps backwards rather than sailing backwards.",
+   "id": "m-sim-fragateiro:8gy:20",
+   "location": "[file: fragateiro docs/PHYSICS.md] Resistance",
+   "measured_by": "Astern drag terms in the resistance model",
+   "numbers": [
+    {
+     "unit": "",
+     "value": "1.2",
+     "what": "drag coefficient astern"
+    },
+    {
+     "unit": "%",
+     "value": "60",
+     "what": "area fraction of beam times draft"
+    },
+    {
+     "unit": "s",
+     "value": "mass / 15",
+     "what": "linear term time constant"
+    }
+   ],
+   "term": "going backwards"
+  },
+  {
+   "definition": "Resistance to turning, arising because keel strips at different positions see different flows when the boat rotates.",
+   "id": "m-sim-fragateiro:8gy:21",
+   "location": "[file: fragateiro docs/PHYSICS.md] Keel and hull; Resistance",
+   "measured_by": "Yaw rate r and the moment from keel strips",
+   "numbers": [
+    {
+     "unit": "m/s",
+     "value": "1",
+     "what": "speed below which extra damping fades"
+    }
+   ],
+   "term": "yaw damping"
+  },
+  {
+   "definition": "Water dragged with the hull adds effective mass, so a sideways slide builds up slowly.",
+   "id": "m-sim-fragateiro:8gy:22",
+   "location": "[file: fragateiro docs/PHYSICS.md] Equations of motion",
+   "measured_by": "Surge, sway and yaw equations of motion",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "1.05",
+     "what": "surge added mass"
+    },
+    {
+     "unit": "m",
+     "value": "3",
+     "what": "sway added mass"
+    },
+    {
+     "unit": "times",
+     "value": "1.3",
+     "what": "yaw inertia multiplier"
+    }
+   ],
+   "term": "added mass"
+  },
+  {
+   "definition": "The three planar motions of the boat: forward, sideways and turning.",
+   "id": "m-sim-fragateiro:8gy:23",
+   "location": "[file: fragateiro docs/PHYSICS.md] Sailing physics",
+   "measured_by": "Velocities u, v and yaw rate r",
+   "numbers": [
+    {
+     "unit": "",
+     "value": "3",
+     "what": "degrees of freedom in plane"
+    }
+   ],
+   "term": "surge, sway, yaw"
+  },
+  {
+   "definition": "The boat leans sideways under the sails' side force, resisted by stability, and heel reduces sail force.",
+   "id": "m-sim-fragateiro:8gy:24",
+   "location": "[file: fragateiro docs/PHYSICS.md] Sailing physics; Equation",
+   "measured_by": "Heel angle φ from the heel equation",
+   "numbers": [
+    {
+     "unit": "degrees",
+     "value": "about 10",
+     "what": "Canoa maximum heel"
+    },
+    {
+     "unit": "degrees",
+     "value": "about 14",
+     "what": "Pinasse maximum heel"
+    }
+   ],
+   "term": "heel"
+  },
+  {
+   "definition": "Muleta mode where all sails are set and the net is dragged from bow and stern boom tips, leaving the boat drifting slowly to leeward.",
+   "id": "m-sim-fragateiro:8gy:25",
+   "location": "[file: fragateiro docs/PHYSICS.md] Muleta fishing",
+   "measured_by": "Drift speed and net drag at the boom tips",
+   "numbers": [
+    {
+     "unit": "kn",
+     "value": "about 1",
+     "what": "leeward drift in 6 m/s wind"
+    }
+   ],
+   "term": "lateral fishing"
+  },
+  {
+   "definition": "Trimming one sail against the other turns the Muleta, which fishermen used to keep it square to the wind.",
+   "id": "m-sim-fragateiro:8gy:26",
+   "location": "[file: fragateiro docs/PHYSICS.md] Muleta fishing",
+   "measured_by": "Sheet controls on front and rear sails",
+   "numbers": [],
+   "term": "trimming front and rear sails"
+  },
+  {
+   "definition": "A printout of the best boat speed at each wind angle for each boat and mode.",
+   "id": "m-sim-fragateiro:8gy:27",
+   "location": "[file: fragateiro docs/PHYSICS.md] Tuning",
+   "measured_by": "npm run polar output",
+   "numbers": [
+    {
+     "unit": "m/s",
+     "value": "6",
+     "what": "test wind speed"
+    },
+    {
+     "unit": "kn",
+     "value": "2.7",
+     "what": "Falua speed at 40°"
+    },
+    {
+     "unit": "kn",
+     "value": "3.6",
+     "what": "Falua speed at 45°"
+    },
+    {
+     "unit": "degrees",
+     "value": "35",
+     "what": "Falua: nothing below about"
+    }
+   ],
+   "term": "polar"
+  },
+  {
+   "definition": "The Rabelo's square sail cannot sail closer to the wind than roughly this angle, so it has a no-go zone upwind.",
+   "id": "m-sim-fragateiro:8gy:28",
+   "location": "[file: src/physics]",
+   "measured_by": "Boat speed and heading relative to the wind; tests check the no-go zone.",
+   "numbers": [
+    {
+     "unit": "°",
+     "value": "50",
+     "what": "minimum sailable angle to the wind for the Rabelo"
+    }
+   ],
+   "term": "no way below about 50°"
+  },
+  {
+   "definition": "A square-rigged boat that cannot be braced close enough to the wind turns away from it through downwind, rather than through it.",
+   "id": "m-sim-fragateiro:8gy:29",
+   "location": "[file: src/physics]",
+   "measured_by": "The brace limit on the square sail and the boat's turn path through the wind.",
+   "numbers": [
+    {
+     "unit": "°",
+     "value": "35",
+     "what": "closest angle a square sail can be braced"
+    }
+   ],
+   "term": "wears round instead of tacking"
+  },
+  {
+   "definition": "The smallest sheet angle a sail allows. Single fore-and-aft sails can be hauled in along the hull; other working sails stop at 20°.",
+   "id": "m-sim-fragateiro:8gy:30",
+   "location": "[file: src/physics]",
+   "measured_by": "The sheet control, limited at its minimum angle.",
+   "numbers": [
+    {
+     "unit": "°",
+     "value": "0",
+     "what": "minAngle for single-sail fore-and-aft rigs"
+    },
+    {
+     "unit": "°",
+     "value": "20",
+     "what": "stop angle for other working sails"
+    }
+   ],
+   "term": "minAngle"
+  },
+  {
+   "definition": "The lines that set the angle of each sail. The player trims them, and best drive close-hauled comes with them fully in.",
+   "id": "m-sim-fragateiro:8gy:31",
+   "location": "[section: Levels]",
+   "measured_by": "The player's sheet control; on Easy, bestSheets() sets them automatically.",
+   "numbers": [],
+   "term": "sheets"
+  },
+  {
+   "definition": "Boats such as the Pinasse and Moliceiro with one fore-and-aft sail, able to be hauled right in along the hull.",
+   "id": "m-sim-fragateiro:8gy:32",
+   "location": "[file: src/physics]",
+   "measured_by": "The sheet control's allowed range (minAngle 0).",
+   "numbers": [],
+   "term": "Single-sail fore-and-aft rigs"
+  },
+  {
+   "definition": "Estimated boat weights that give each boat its own feel, affecting how it carries way through a tack and how fast it accelerates.",
+   "id": "m-sim-fragateiro:8gy:33",
+   "location": "[file: src/physics]",
+   "measured_by": "Speed gain and speed kept through a tack.",
+   "numbers": [
+    {
+     "unit": "t",
+     "value": "15",
+     "what": "Falua"
+    },
+    {
+     "unit": "t",
+     "value": "7",
+     "what": "Muleta"
+    },
+    {
+     "unit": "t",
+     "value": "30",
+     "what": "Fragata (part-loaded)"
+    },
+    {
+     "unit": "t",
+     "value": "5",
+     "what": "Catraio"
+    },
+    {
+     "unit": "t",
+     "value": "5",
+     "what": "Canoa"
+    },
+    {
+     "unit": "t",
+     "value": "0.6",
+     "what": "Pinasse"
+    }
+   ],
+   "term": "masses"
+  },
+  {
+   "definition": "The sideways slip of the boat through the water, pushed by the wind; hull grip keeps it small.",
+   "id": "m-sim-fragateiro:8gy:34",
+   "location": "[file: src/physics]",
+   "measured_by": "Sideways drift speed; the track shows it unless noDrift is on.",
+   "numbers": [
+    {
+     "unit": "kn",
+     "value": "0.1–0.2",
+     "what": "leeway speed in this wind"
+    }
+   ],
+   "term": "leeway"
+  },
+  {
+   "definition": "The airflow driving the boat. The default is 12 kn, and each sail responds to the wind it feels.",
+   "id": "m-sim-fragateiro:8gy:35",
+   "location": "[file: src/physics]",
+   "measured_by": "Wind setting and the wind each sail feels.",
+   "numbers": [
+    {
+     "unit": "kn",
+     "value": "12",
+     "what": "default wind speed"
+    }
+   ],
+   "term": "wind"
+  },
+  {
+   "definition": "The simulation's time-speed setting, which shortens trips while keeping displayed speeds realistic.",
+   "id": "m-sim-fragateiro:8gy:36",
+   "location": "[file: src/physics]",
+   "measured_by": "The speed setting control.",
+   "numbers": [
+    {
+     "unit": "×",
+     "value": "3",
+     "what": "default time factor"
+    },
+    {
+     "unit": "×",
+     "value": "1, 2, 3, 5, 10",
+     "what": "available settings"
+    }
+   ],
+   "term": "3× faster than real time"
+  },
+  {
+   "definition": "A level that automatically sets sheets for best forward drive and hides sideways slip in the track, with balanced sails.",
+   "id": "m-sim-fragateiro:8gy:37",
+   "location": "[section: Levels]",
+   "measured_by": "bestSheets() sheet setting and the noDrift track option.",
+   "numbers": [
+    {
+     "unit": "%",
+     "value": "5",
+     "what": "tolerance of bestSheets() against best sheet setting"
+    }
+   ],
+   "term": "Easy"
+  },
+  {
+   "definition": "A search over a sail's lift and drag curves that finds the sheet setting giving the most forward drive for the wind felt.",
+   "id": "m-sim-fragateiro:8gy:38",
+   "location": "[section: Levels]",
+   "measured_by": "The automatic sheet value applied each step on Easy.",
+   "numbers": [
+    {
+     "unit": "%",
+     "value": "within 5",
+     "what": "match to best sheet setting"
+    }
+   ],
+   "term": "bestSheets()"
+  },
+  {
+   "definition": "An option that leaves sideways slip out of the displayed track while the hull behaves as usual, so speeds are unchanged.",
+   "id": "m-sim-fragateiro:8gy:39",
+   "location": "[section: Levels]",
+   "measured_by": "The track display, without drift.",
+   "numbers": [],
+   "term": "noDrift"
+  },
+  {
+   "definition": "A level where the player trims the sails, with balanced sails on.",
+   "id": "m-sim-fragateiro:8gy:40",
+   "location": "[section: Levels]",
+   "measured_by": "The player's sheet control.",
+   "numbers": [],
+   "term": "Medium"
+  },
+  {
+   "definition": "A level with unbalanced sails and no low-speed steering help; the Catraio and Canoa need sheets eased while turning to get through the wind.",
+   "id": "m-sim-fragateiro:8gy:41",
+   "location": "[section: Levels]",
+   "measured_by": "Sheet control during a turn and whether the boat passes through the wind.",
+   "numbers": [],
+   "term": "Hard"
+  },
+  {
+   "definition": "A setting where sail forces act at the hull's centre of lateral resistance and the rudder ignores drift, so a centred rudder holds course.",
+   "id": "m-sim-fragateiro:8gy:42",
+   "location": "[section: Balanced sails]",
+   "measured_by": "Boat holding its course with a centred rudder.",
+   "numbers": [],
+   "term": "Balanced sails"
+  },
+  {
+   "definition": "The points where the sails' forces act. On real boats they are not over the hull's centre of lateral resistance, so the boat turns to or from the wind.",
+   "id": "m-sim-fragateiro:8gy:43",
+   "location": "[section: Balanced sails]",
+   "measured_by": "Turning tendency without balanced sails.",
+   "numbers": [],
+   "term": "centres of effort"
+  },
+  {
+   "definition": "The point of the hull where sideways water resistance acts. With balanced sails, the sail forces are applied here.",
+   "id": "m-sim-fragateiro:8gy:44",
+   "location": "[section: Balanced sails]",
+   "measured_by": "Where sail forces are applied in the simulation.",
+   "numbers": [],
+   "term": "centre of lateral resistance"
+  },
+  {
+   "definition": "Sideways movement of the boat that also pushes on the rudder; backwards drift never reverses the steering in balanced mode.",
+   "id": "m-sim-fragateiro:8gy:45",
+   "location": "[section: Balanced sails]",
+   "measured_by": "Sideways slip in the track; rudder behaviour.",
+   "numbers": [],
+   "term": "drift"
+  },
+  {
+   "definition": "A behaviour checked by the physics tests, referring to the boat drifting while fishing.",
+   "id": "m-sim-fragateiro:8gy:46",
+   "location": "[section: Balanced sails]",
+   "measured_by": "Checked in tests/physics.test.ts.",
+   "numbers": [],
+   "term": "fishing drift"
+  },
+  {
+   "definition": "Ropes that trim sails in or out; the player adjusts them for all sails together or per sail group to set sail angle.",
+   "id": "m-sim-fragateiro:8gy:47",
+   "location": "[file: fragateiro README.md, section Controls]",
+   "measured_by": "Sheet controls (W/S or ↑/↓, one slider per sail group, vertical drag); sheets indicator at the bottom centre",
+   "numbers": [],
+   "term": "Sheets (all sails)"
+  },
+  {
+   "definition": "Switch between game modes, including the Muleta mode, using a key or mode buttons.",
+   "id": "m-sim-fragateiro:8gy:48",
+   "location": "[file: fragateiro README.md, section Controls]",
+   "measured_by": "M key or mode buttons",
+   "numbers": [],
+   "term": "Change mode (Muleta)"
+  },
+  {
+   "definition": "Choose which traditional boat to sail while in free sailing mode, so handling differences can be compared.",
+   "id": "m-sim-fragateiro:8gy:49",
+   "location": "[file: fragateiro README.md, section Controls]",
+   "measured_by": "B key or boat buttons in the settings panel",
+   "numbers": [],
+   "term": "Change boat (free sailing)"
+  },
+  {
+   "definition": "Overlay that makes the forces acting on the boat visible to the player.",
+   "id": "m-sim-fragateiro:8gy:50",
+   "location": "[file: fragateiro README.md, section Controls]",
+   "measured_by": "F key or checkbox toggling the force display",
+   "numbers": [],
+   "term": "Show forces"
+  },
+  {
+   "definition": "Viewpoint on the boat (behind, ahead, port, starboard, top or free) for observing sails and heading from different sides.",
+   "id": "m-sim-fragateiro:8gy:51",
+   "location": "[file: fragateiro README.md, section Controls]",
+   "measured_by": "Keys 1–6 (C = behind) or camera buttons",
+   "numbers": [
+    {
+     "unit": "views",
+     "value": "6",
+     "what": "number of camera views selectable with number keys"
+    }
+   ],
+   "term": "Camera view"
+  },
+  {
+   "definition": "Jump to one of the river's ports to practise sailing from different locations along the Tagus.",
+   "id": "m-sim-fragateiro:8gy:52",
+   "location": "[file: fragateiro README.md, section Controls]",
+   "measured_by": "T key (next place) or clicking a port on the minimap",
+   "numbers": [
+    {
+     "unit": "ports",
+     "value": "21",
+     "what": "ports available"
+    }
+   ],
+   "term": "Move to a place, in free sailing"
+  },
+  {
+   "definition": "Small chart showing the boat's surroundings, either a local area or the whole map, also showing other boats.",
+   "id": "m-sim-fragateiro:8gy:53",
+   "location": "[file: fragateiro README.md, section Controls]",
+   "measured_by": "Button under the minimap switching between 15 km and whole map",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "15",
+     "what": "local minimap range around the boat"
+    }
+   ],
+   "term": "Minimap"
+  },
+  {
+   "definition": "Navigation information to a chosen destination: how far, in which direction, and how long it will take.",
+   "id": "m-sim-fragateiro:8gy:54",
+   "location": "[file: fragateiro README.md, section Controls]",
+   "measured_by": "Sail to list in the settings panel",
+   "numbers": [],
+   "term": "Destination: distance, bearing and time"
+  },
+  {
+   "definition": "Time acceleration of the simulation; displayed boat speeds remain real values, with a time multiplier note shown.",
+   "id": "m-sim-fragateiro:8gy:55",
+   "location": "[file: fragateiro README.md, section Controls]",
+   "measured_by": "Speed setting; 'time ×3' label under the speed display",
+   "numbers": [
+    {
+     "unit": "×",
+     "value": "1, 2, 3 (default), 5, 10",
+     "what": "available game speeds"
+    }
+   ],
+   "term": "Game speed"
+  },
+  {
+   "definition": "Visualisation of the wind direction and strength as streaks over the water.",
+   "id": "m-sim-fragateiro:8gy:56",
+   "location": "[file: fragateiro README.md, section Controls]",
+   "measured_by": "Wind settings option showing streaks over the water",
+   "numbers": [],
+   "term": "Show the wind"
+  },
+  {
+   "definition": "Synthesised audio feedback conveying wind, water and luffing sails, indicating how well the sails are trimmed.",
+   "id": "m-sim-fragateiro:8gy:57",
+   "location": "[file: fragateiro README.md, section Controls]",
+   "measured_by": "N key or checkbox; sound starts on first click or key",
+   "numbers": [],
+   "term": "Sound of wind, water and flapping sails"
+  },
+  {
+   "definition": "Other vessels sharing the river, shown as dots on the minimap.",
+   "id": "m-sim-fragateiro:8gy:58",
+   "location": "[file: fragateiro README.md, section Controls]",
+   "measured_by": "Checkbox; dots on the minimap",
+   "numbers": [],
+   "term": "Other boats on the river"
+  },
+  {
+   "definition": "Objectives the player completes, with a level; a mission restarts from the beginning when the game is restarted.",
+   "id": "m-sim-fragateiro:8gy:59",
+   "location": "[file: fragateiro README.md, section Controls]",
+   "measured_by": "Missions button; R key restarts a mission",
+   "numbers": [],
+   "term": "Missions and level"
+  },
+  {
+   "definition": "Lighting condition of the scene: sunrise, day or sunset.",
+   "id": "m-sim-fragateiro:8gy:60",
+   "location": "[file: fragateiro README.md, section Controls]",
+   "measured_by": "Time of day setting in the settings panel (remembered)",
+   "numbers": [],
+   "term": "Time of day"
+  },
+  {
+   "definition": "Wind as felt from a stationary point, shown in blue on the compass.",
+   "id": "m-sim-fragateiro:8gy:61",
+   "location": "[file: fragateiro README.md, section Controls]",
+   "measured_by": "Blue wind indicator on the compass",
+   "numbers": [],
+   "term": "true wind"
+  },
+  {
+   "definition": "The boat's real speed through the simulation, unaffected by game speed multiplier.",
+   "id": "m-sim-fragateiro:8gy:62",
+   "location": "[file: fragateiro README.md, section Controls]",
+   "measured_by": "Speed display on screen with 'time ×3' note",
+   "numbers": [],
+   "term": "speed"
+  }
+ ],
+ "kind": "simulation",
+ "lang": "en",
+ "partsDone": [
+  0,
+  1,
+  2
+ ],
+ "partsTotal": 3,
+ "runAt": "2026-11-13T23:07:56.872Z",
+ "sourceId": "m-sim-fragateiro",
+ "textChars": 10978,
+ "title": "fragateiro web game: sailing physics (src/physics)"
+}

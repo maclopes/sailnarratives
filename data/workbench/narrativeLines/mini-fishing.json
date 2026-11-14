@@ -1,0 +1,671 @@
+{
+ "lines": [
+  {
+   "beat": "b1",
+   "check": {
+    "at": "2026-11-13T07:24:10.512Z",
+    "claims": [
+     {
+      "claim": "The muleta does not chase fish bow-first; she lies across wind and current",
+      "evidence": [
+       "e9"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "The muleta drags the tartaranha net from her side",
+      "evidence": [
+       "e12",
+       "e9"
+      ],
+      "verdict": "supported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "Muletas are registered at Seixal",
+     "evidence": [
+      "e2"
+     ]
+    },
+    {
+     "claim": "The muleta trawled sideways, drifting across wind and current",
+     "evidence": [
+      "e9"
+     ]
+    },
+    {
+     "claim": "The muleta trawled from the side with the tartaranha net",
+     "evidence": [
+      "e12"
+     ]
+    }
+   ],
+   "en": "We leave Seixal. The muleta doesn't chase fish bow-first. She lies across wind and current, dragging the tartaranha from her side.",
+   "fictional": false,
+   "id": "l1",
+   "pt": "Largamos do Seixal. A muleta não corre atrás do peixe de proa. Vai atravessada ao vento e à corrente, a arrastar a tartaranha pelo costado.",
+   "status": "verified"
+  },
+  {
+   "beat": "b1",
+   "check": {
+    "at": "2026-11-13T07:24:10.517Z",
+    "claims": [
+     {
+      "claim": "Fishing here is not done bow-first; the muleta drifts sideways",
+      "evidence": [
+       "e9",
+       "e12"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "The net goes to windward",
+      "evidence": [
+       "e9"
+      ],
+      "verdict": "supported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "The tartaranha net was cast to windward",
+     "evidence": [
+      "e9"
+     ]
+    },
+    {
+     "claim": "The muleta drifted sideways across wind and current",
+     "evidence": [
+      "e9"
+     ]
+    }
+   ],
+   "en": "Watch the wind, watch the current, Manel. We don't fish bow-first here: the net goes to windward and the muleta drifts sideways.",
+   "fictional": false,
+   "id": "l2",
+   "pt": "Olha o vento, olha a corrente, Manel. Aqui não se pesca de proa: a rede vai a barlavento e a muleta abate de lado.",
+   "status": "verified"
+  },
+  {
+   "beat": "b2",
+   "check": {
+    "at": "2026-11-13T07:24:10.529Z",
+    "claims": [
+     {
+      "claim": "The net is cast to windward and the muleta drifts sideways across wind and current",
+      "evidence": [
+       "e9"
+      ],
+      "verdict": "supported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "The tartaranha net was cast to windward",
+     "evidence": [
+      "e9"
+     ]
+    },
+    {
+     "claim": "The muleta drifted sideways across wind and current",
+     "evidence": [
+      "e9"
+     ]
+    }
+   ],
+   "en": "Why does the net go to windward, skipper? Because that's how it's done, Manel. It's cast to windward and the muleta drifts sideways, across wind and current.",
+   "fictional": false,
+   "id": "l3",
+   "pt": "Porque é que a rede vai a barlavento, arrais? Porque assim é que se faz, Manel. Lança-se a barlavento e a muleta abate de lado, atravessada ao vento e à corrente.",
+   "status": "verified"
+  },
+  {
+   "beat": "b2",
+   "check": {
+    "at": "2026-11-13T07:24:10.535Z",
+    "claims": [
+     {
+      "claim": "The long poles fore and aft are called botalós",
+      "evidence": [
+       "e10"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "The sails are set on the botalós",
+      "evidence": [
+       "e10"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "The net wings are tied to the botalós",
+      "evidence": [
+       "e10"
+      ],
+      "verdict": "supported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "The muleta had two long poles (botalós) fore and aft",
+     "evidence": [
+      "e10"
+     ]
+    },
+    {
+     "claim": "The botalós were used to set sails and to tie the net wings",
+     "evidence": [
+      "e10"
+     ]
+    }
+   ],
+   "en": "And these long poles, fore and aft? They're the botalós, Manel. The sails are set on them and the net wings are tied to them.",
+   "fictional": false,
+   "id": "l4",
+   "pt": "E estes paus compridos, à proa e à popa? São os botalós, Manel. Neles se armam as velas e se amarram as asas da rede.",
+   "status": "verified"
+  },
+  {
+   "beat": "b2",
+   "check": {
+    "at": "2026-11-13T07:24:10.540Z",
+    "claims": [
+     {
+      "claim": "The muleta fishes in the Tejo and the Sado and at sea between Cabo da Roca and Setúbal",
+      "evidence": [
+       "e1"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "These fishing waters are called Entre-Cabos",
+      "evidence": [
+       "e1",
+       "e2"
+      ],
+      "verdict": "unsupported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "The muleta fished in the Tejo and Sado estuaries",
+     "evidence": [
+      "e1"
+     ]
+    },
+    {
+     "claim": "The muleta fished at sea between Cabo da Roca and Setúbal",
+     "evidence": [
+      "e1"
+     ]
+    },
+    {
+     "claim": "Muletas fished in the waters called Entre-Cabos",
+     "evidence": [
+      "e2"
+     ]
+    }
+   ],
+   "en": "Do we always fish here, skipper? No. In the Tejo and the Sado, and out at sea, between Cabo da Roca and Setúbal. In the Entre-Cabos waters.",
+   "fictional": false,
+   "id": "l5",
+   "pt": "Pescamos sempre aqui, arrais? Não. No Tejo e no Sado, e lá fora no mar, entre o Cabo da Roca e Setúbal. Nas águas do Entre-Cabos.",
+   "status": "needs work"
+  },
+  {
+   "beat": "b3",
+   "check": {
+    "at": "2026-11-13T07:24:10.545Z",
+    "claims": [
+     {
+      "claim": "Muletas are registered at Seixal",
+      "evidence": [
+       "e2"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "The fish are caught out in the Entre-Cabos",
+      "evidence": [
+       "e2"
+      ],
+      "verdict": "supported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "Muletas are registered at Seixal",
+     "evidence": [
+      "e2"
+     ]
+    },
+    {
+     "claim": "Muletas fish in the Entre-Cabos waters",
+     "evidence": [
+      "e2"
+     ]
+    }
+   ],
+   "en": "There's Seixal. That's where the muletas are registered, but the fish are fetched out there, in the Entre-Cabos.",
+   "fictional": false,
+   "id": "l6",
+   "pt": "Ali está o Seixal. É cá que as muletas estão registadas, mas o peixe vai-se buscar lá fora, ao Entre-Cabos.",
+   "status": "verified"
+  },
+  {
+   "beat": "b3",
+   "check": {
+    "at": "2026-11-13T07:24:10.550Z",
+    "claims": [
+     {
+      "claim": "Muletas are registered at Seixal and Barreiro",
+      "evidence": [
+       "e2"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "Fishing is done in the Entre-Cabos, between Raso and Espichel",
+      "evidence": [
+       "e2"
+      ],
+      "verdict": "supported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "The muleta is an emblem of Seixal and Barreiro",
+     "evidence": [
+      "e9"
+     ]
+    },
+    {
+     "claim": "Muletas are registered at Seixal and Barreiro",
+     "evidence": [
+      "e2"
+     ]
+    },
+    {
+     "claim": "Muletas fish in the Entre-Cabos, between Raso and Espichel",
+     "evidence": [
+      "e2"
+     ]
+    }
+   ],
+   "en": "Seixal, Manel. Muleta country, registered here and in Barreiro. But the fishing is done in the Entre-Cabos, between Raso and Espichel.",
+   "fictional": false,
+   "id": "l7",
+   "pt": "O Seixal, Manel. Terra de muletas, registadas aqui e no Barreiro. Mas a pesca faz-se no Entre-Cabos, entre o Raso e o Espichel.",
+   "status": "verified"
+  },
+  {
+   "beat": "b4",
+   "check": {
+    "at": "2026-11-13T07:24:10.555Z",
+    "claims": [],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [],
+   "en": "Trim sails, let her lie across!",
+   "fictional": true,
+   "id": "l8",
+   "pt": "Caça essas velas, deixa-a atravessar!",
+   "status": "verified"
+  },
+  {
+   "beat": "b4",
+   "check": {
+    "at": "2026-11-13T07:24:10.560Z",
+    "claims": [],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [],
+   "en": "Trim the sail, across again.",
+   "fictional": true,
+   "id": "l9",
+   "pt": "Caça a vela, atravessa-a outra vez.",
+   "status": "verified"
+  },
+  {
+   "beat": "b5",
+   "check": {
+    "at": "2026-11-13T07:24:10.564Z",
+    "claims": [
+     {
+      "claim": "The sails balance wind and current",
+      "evidence": [
+       "e10"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "The muleta drifts sideways and drags the net from her side",
+      "evidence": [
+       "e9"
+      ],
+      "verdict": "supported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "The muleta's sails were arranged to balance forces by wind and current direction",
+     "evidence": [
+      "e10"
+     ]
+    },
+    {
+     "claim": "The muleta drifted sideways across wind and current while trawling",
+     "evidence": [
+      "e9"
+     ]
+    }
+   ],
+   "en": "See, Manel? The sails balance wind and current. That way she drifts sideways and drags the net from her side.",
+   "fictional": false,
+   "id": "l10",
+   "pt": "Vês, Manel? As velas equilibram o vento e a corrente. Assim ela abate de lado e arrasta a rede pelo costado.",
+   "status": "verified"
+  },
+  {
+   "beat": "b5",
+   "check": {
+    "at": "2026-11-13T07:24:10.568Z",
+    "claims": [
+     {
+      "claim": "The sails, properly trimmed, balance forces and hold the boat against wind and current",
+      "evidence": [
+       "e10"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "Without that balance there is no sideways drift",
+      "evidence": [
+       "e10",
+       "e9"
+      ],
+      "verdict": "unsupported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "The muleta's sails were arranged to balance forces by wind and current direction",
+     "evidence": [
+      "e10"
+     ]
+    },
+    {
+     "claim": "The muleta drifted sideways across wind and current",
+     "evidence": [
+      "e9"
+     ]
+    }
+   ],
+   "en": "Trimmed right, the sails hold her against wind and current. Without that balance, there's no sideways drift.",
+   "fictional": false,
+   "id": "l11",
+   "pt": "Bem caçadas, as velas seguram-na contra o vento e a corrente. Sem esse equilíbrio, não há abatimento de lado.",
+   "status": "needs work"
+  },
+  {
+   "beat": "b6",
+   "check": {
+    "at": "2026-11-13T07:24:10.572Z",
+    "claims": [
+     {
+      "claim": "The net goes to windward and the boat drifts sideways across wind and current",
+      "evidence": [
+       "e9"
+      ],
+      "verdict": "supported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "The tartaranha net was cast to windward",
+     "evidence": [
+      "e9"
+     ]
+    },
+    {
+     "claim": "The muleta drifted sideways across wind and current",
+     "evidence": [
+      "e9"
+     ]
+    }
+   ],
+   "en": "Full net, skipper! Now I get it: the net goes to windward and we drift sideways, across wind and current. The skipper only says: Home.",
+   "fictional": false,
+   "id": "l12",
+   "pt": "Rede cheia, arrais! Agora percebo: a rede vai a barlavento e nós abatemos de lado, atravessados ao vento e à corrente. O arrais só diz: Para casa.",
+   "status": "verified"
+  },
+  {
+   "beat": "b6",
+   "check": {
+    "at": "2026-11-13T07:24:10.578Z",
+    "claims": [
+     {
+      "claim": "The muleta fishes from the side with the tartaranha",
+      "evidence": [
+       "e9",
+       "e12"
+      ],
+      "verdict": "supported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "The muleta trawled from the side using the tartaranha net",
+     "evidence": [
+      "e12",
+      "e9"
+     ]
+    }
+   ],
+   "en": "Look at the fish, skipper! So that's why the muleta fishes from the side, with the tartaranha. Joaquim nods, without another word, and heads for home.",
+   "fictional": false,
+   "id": "l13",
+   "pt": "Olha o peixe, arrais! Então é por isso que a muleta pesca de lado, com a tartaranha. Joaquim acena, sem mais palavras, e aponta a casa.",
+   "status": "verified"
+  },
+  {
+   "beat": "b7",
+   "check": {
+    "at": "2026-11-13T07:24:10.582Z",
+    "claims": [
+     {
+      "claim": "Tartaranha was the net and, by extension, the boat fishing with it",
+      "evidence": [
+       "e35"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "From the late 19th century batel, bote and bateira also used the net, and any such boat was loosely called muleta",
+      "evidence": [
+       "e23"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "In 1891 Baldaque da Silva counted only one muleta",
+      "evidence": [
+       "e24"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "The net was tolerated until about 1920",
+      "evidence": [
+       "e25"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "The batel took the muleta's place",
+      "evidence": [
+       "e26"
+      ],
+      "verdict": "supported"
+     }
+    ],
+    "mech": [
+     "PT and EN numbers differ"
+    ],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "'Tartaranha' named a drag net and, by extension, the boat fishing with it",
+     "evidence": [
+      "e35"
+     ]
+    },
+    {
+     "claim": "From the late 19th century smaller boats (batel, bote, bateira) also trawled with the tartaranha",
+     "evidence": [
+      "e23"
+     ]
+    },
+    {
+     "claim": "The name muleta was often applied loosely to any boat fishing with the tartaranha",
+     "evidence": [
+      "e23"
+     ]
+    },
+    {
+     "claim": "Baldaque da Silva recorded only one muleta remaining by 1891",
+     "evidence": [
+      "e24"
+     ]
+    },
+    {
+     "claim": "Tartaranha nets were tolerated until their extinction around 1920",
+     "evidence": [
+      "e25"
+     ]
+    },
+    {
+     "claim": "The batel replaced the muleta when it became extinct",
+     "evidence": [
+      "e26"
+     ]
+    }
+   ],
+   "en": "Documented fact: 'tartaranha' was the net and, by extension, the boat fishing with it. From the late 19th century, batel, bote and bateira also used it, and any such boat was loosely called muleta. In 1891 Baldaque da Silva counted only one muleta. The net was tolerated until about 1920, and the batel took the muleta's place.",
+   "fictional": false,
+   "id": "l14",
+   "pt": "Facto documentado: tartaranha era a rede e, por extensão, o barco que pescava com ela. Desde o fim do século XIX, batéis, botes e bateiras também a usavam, e chamava-se muleta a qualquer um. Em 1891, Baldaque da Silva só contou uma muleta. A rede foi tolerada até cerca de 1920, e o batel ficou no lugar da muleta.",
+   "status": "needs work"
+  },
+  {
+   "beat": "b7",
+   "check": {
+    "at": "2026-11-13T07:24:10.587Z",
+    "claims": [
+     {
+      "claim": "The word tartaranha named the drag net and the boat that used it",
+      "evidence": [
+       "e35"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "In 1891 Baldaque da Silva recorded a single muleta",
+      "evidence": [
+       "e24"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "The net was tolerated until about 1920",
+      "evidence": [
+       "e25"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "The batel replaced the muleta",
+      "evidence": [
+       "e26"
+      ],
+      "verdict": "supported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "'Tartaranha' named a drag net and, by extension, the boat fishing with it",
+     "evidence": [
+      "e35"
+     ]
+    },
+    {
+     "claim": "Baldaque da Silva recorded only one muleta remaining by 1891",
+     "evidence": [
+      "e24"
+     ]
+    },
+    {
+     "claim": "Tartaranha nets were tolerated until their extinction around 1920",
+     "evidence": [
+      "e25"
+     ]
+    },
+    {
+     "claim": "The batel replaced the muleta when it became extinct",
+     "evidence": [
+      "e26"
+     ]
+    }
+   ],
+   "en": "Documented fact: the word 'tartaranha' named the drag net and the boat that used it. In 1891 Baldaque da Silva recorded a single muleta. The net lasted, tolerated, until about 1920, and the batel replaced the muleta.",
+   "fictional": false,
+   "id": "l15",
+   "pt": "Facto documentado: a palavra tartaranha dava nome à rede de arrasto e ao barco que a usava. Em 1891, Baldaque da Silva registou uma só muleta. A rede durou, tolerada, até cerca de 1920, e foi o batel que substituiu a muleta.",
+   "status": "verified"
+  }
+ ],
+ "updatedAt": "2026-11-13T07:24:10.588Z"
+}

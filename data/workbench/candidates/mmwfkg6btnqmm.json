@@ -1,0 +1,269 @@
+{
+ "items": [
+  {
+   "definition": "Submerged vegetation and seaweed gathered from the ria and used as fertilizer for sandy farmland; the moliceiro's traditional cargo.",
+   "id": "mmwfkg6btnqmm:62a:1",
+   "location": "[section: O Barco Moliceiro]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "moliço"
+  },
+  {
+   "definition": "Sail; one of the old methods of propelling the moliceiro.",
+   "id": "mmwfkg6btnqmm:62a:2",
+   "location": "[section: O Barco Moliceiro]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vela"
+  },
+  {
+   "definition": "Pole used by the crew to push the boat along, especially when there was no wind during work.",
+   "id": "mmwfkg6btnqmm:62a:3",
+   "location": "[section: O Barco Moliceiro]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vara"
+  },
+  {
+   "definition": "Towing the boat along the water from the bank by a line; an old propulsion method.",
+   "id": "mmwfkg6btnqmm:62a:4",
+   "location": "[section: O Barco Moliceiro]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "sirga"
+  },
+  {
+   "definition": "The moliceiro's load capacity: the amount of moliço it could carry.",
+   "id": "mmwfkg6btnqmm:62a:5",
+   "location": "[section: O Barco Moliceiro]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "tonnes",
+     "value": "7",
+     "what": "maximum moliço cargo"
+    }
+   ],
+   "term": "capacidade de carga"
+  },
+  {
+   "definition": "Side of the hull; a long stretch amidships was lowered to ease loading heavy cargo aboard.",
+   "id": "mmwfkg6btnqmm:62a:6",
+   "location": "[section: Barco Moliceiro - construção naval]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bordo"
+  },
+  {
+   "definition": "Waterline; the midship side edge sank below it once the load reached a certain amount, easing the loading manoeuvre.",
+   "id": "mmwfkg6btnqmm:62a:7",
+   "location": "[section: Barco Moliceiro - construção naval]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "linha de água"
+  },
+  {
+   "definition": "Large drag rakes used to gather moliço and mud from the bottom, then hauled into the boat.",
+   "id": "mmwfkg6btnqmm:62a:8",
+   "location": "[section: A Origem]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "ancinhos de arrasto"
+  },
+  {
+   "definition": "Bow; built markedly raised so poling crew work on a slope, gaining better efficiency with less effort than on a flat surface.",
+   "id": "mmwfkg6btnqmm:62a:9",
+   "location": "[section: Barco Moliceiro - construção naval]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "proa"
+  },
+  {
+   "definition": "The working task or labour of gathering moliço, during which propulsion might have to be by pole.",
+   "id": "mmwfkg6btnqmm:62a:10",
+   "location": "[section: Barco Moliceiro - construção naval]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "faina"
+  },
+  {
+   "definition": "Sloping surface on which poling crew work, giving better efficiency with less effort than a flat surface.",
+   "id": "mmwfkg6btnqmm:62a:11",
+   "location": "[section: Barco Moliceiro - construção naval]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "plano inclinado"
+  },
+  {
+   "definition": "Stern; raised to support a very large rudder.",
+   "id": "mmwfkg6btnqmm:62a:12",
+   "location": "[section: Barco Moliceiro - construção naval]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "ré"
+  },
+  {
+   "definition": "Rudder; very large, wide and shallow, allowing effective steering in the shallow moliço grounds.",
+   "id": "mmwfkg6btnqmm:62a:13",
+   "location": "[section: Barco Moliceiro - construção naval]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "leme"
+  },
+  {
+   "definition": "Shallow waters of the moliço grounds, where the wide, shallow rudder was needed to steer effectively.",
+   "id": "mmwfkg6btnqmm:62a:14",
+   "location": "[section: Barco Moliceiro - construção naval]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "águas baixas"
+  },
+  {
+   "definition": "Shallow areas of the ria where moliço was harvested.",
+   "id": "mmwfkg6btnqmm:62a:15",
+   "location": "[section: Barco Moliceiro - construção naval]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "praias de moliço"
+  },
+  {
+   "definition": "Caulking, sealing the hull's seams; aided by tarring the sides.",
+   "id": "mmwfkg6btnqmm:62a:16",
+   "location": "[section: Barco Moliceiro - construção naval]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "calafeto"
+  },
+  {
+   "definition": "Black pitch coating the hull sides to help caulk and protect the pine wood from weather and water.",
+   "id": "mmwfkg6btnqmm:62a:17",
+   "location": "[section: Barco Moliceiro - construção naval]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pez negro"
+  },
+  {
+   "definition": "Pine wood, the material of the moliceiro hull.",
+   "id": "mmwfkg6btnqmm:62a:18",
+   "location": "[section: Barco Moliceiro - construção naval]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "madeira de pinho"
+  },
+  {
+   "definition": "Side of the hull, tarred black; its large surfaces were later decorated.",
+   "id": "mmwfkg6btnqmm:62a:19",
+   "location": "[section: Barco Moliceiro - construção naval]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "costado"
+  },
+  {
+   "definition": "Port side of the boat, where a painted panel was first made, then repeated on the other side.",
+   "id": "mmwfkg6btnqmm:62a:20",
+   "location": "[section: Barco Moliceiro - construção naval]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bombordo"
+  },
+  {
+   "definition": "Starboard side of the boat, which received a painted panel matching the port side.",
+   "id": "mmwfkg6btnqmm:62a:21",
+   "location": "[section: Barco Moliceiro - construção naval]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "estibordo"
+  },
+  {
+   "definition": "Stern deck area, whose black side surfaces were also decorated.",
+   "id": "mmwfkg6btnqmm:62a:22",
+   "location": "[section: Barco Moliceiro - construção naval]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "castelo da ré"
+  },
+  {
+   "definition": "Painted decorative panels on the bow and stern, a folk art that developed from the boats' decoration.",
+   "id": "mmwfkg6btnqmm:62a:23",
+   "location": "[section: O Barco Moliceiro]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "painéis"
+  },
+  {
+   "definition": "Farming tools and implements, such as rakes, improved by farmers to harvest moliço.",
+   "id": "mmwfkg6btnqmm:62a:24",
+   "location": "[section: A Origem]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "alfaias"
+  },
+  {
+   "definition": "A named structural part of the moliceiro's bow cabin interior, listed in the nomenclature for the drawing of the forward house.",
+   "id": "mmwfkg6btnqmm:62a:25",
+   "location": "Des N° 8 Interior da casa de proa (nomenclatura)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Cheleiras"
+  },
+  {
+   "definition": "A named structural part of the moliceiro's bow cabin interior, listed in the nomenclature for the drawing of the forward house.",
+   "id": "mmwfkg6btnqmm:62a:26",
+   "location": "Des N° 8 Interior da casa de proa (nomenclatura)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Golfiões"
+  },
+  {
+   "definition": "Boards forming the bed or floor inside the bow cabin of the moliceiro.",
+   "id": "mmwfkg6btnqmm:62a:27",
+   "location": "Des N° 8 Interior da casa de proa (nomenclatura)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Tábuas da cama ou do soalho"
+  },
+  {
+   "definition": "Ribs or frames, the transverse structural members of the hull, listed among the bow cabin interior parts.",
+   "id": "mmwfkg6btnqmm:62a:28",
+   "location": "Des N° 8 Interior da casa de proa (nomenclatura)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Cavernas"
+  },
+  {
+   "definition": "A named structural part of the moliceiro's bow cabin interior, listed in the nomenclature of the drawing.",
+   "id": "mmwfkg6btnqmm:62a:29",
+   "location": "Des N° 8 Interior da casa de proa (nomenclatura)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Braços"
+  },
+  {
+   "definition": "A named part of the bow cabin interior of the moliceiro, listed in the nomenclature of the drawing.",
+   "id": "mmwfkg6btnqmm:62a:30",
+   "location": "Des N° 8 Interior da casa de proa (nomenclatura)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Gaiola"
+  },
+  {
+   "definition": "The forward cabin or house at the bow of the moliceiro, whose interior parts are labelled in drawing no. 8.",
+   "id": "mmwfkg6btnqmm:62a:31",
+   "location": "Des N° 8 Interior da casa de proa (nomenclatura)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "casa de proa"
+  }
+ ],
+ "kind": "historical",
+ "lang": "",
+ "partsDone": [
+  0,
+  1
+ ],
+ "partsTotal": 2,
+ "runAt": "2026-11-13T23:10:15.027Z",
+ "sourceId": "mmwfkg6btnqmm",
+ "textChars": 7858,
+ "title": "História e Curiosidades do Barco Moliceiro   Passeio Moliceiro"
+}

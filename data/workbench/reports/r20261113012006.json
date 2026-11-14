@@ -1,0 +1,2087 @@
+{
+ "boats": [],
+ "conceptsAt": "2026-11-12T20:36:38.898Z",
+ "conflicts": [
+  {
+   "concepts": [
+    "c1"
+   ],
+   "kind": "sailing",
+   "name": "Close-hauled",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro"
+   ],
+   "text": "Veleiro.net (pt-BR) uses both 'Orça Fechada' and 'orça' for close-hauled sailing.",
+   "type": "term"
+  },
+  {
+   "concepts": [
+    "c7"
+   ],
+   "kind": "sailing",
+   "name": "Reefing",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro"
+   ],
+   "text": "Method doc includes replacing the sail with a storm sail. Veleiro.net 'Rizar' covers folding the mainsail and rolling the genoa. 'rizo' covers reducing the mainsail only.",
+   "type": "definition"
+  },
+  {
+   "concepts": [
+    "c10"
+   ],
+   "kind": "hull",
+   "name": "Gaff rig",
+   "sources": [
+    "m-auth-method",
+    "m-hist-getlisbon"
+   ],
+   "text": "c10 describes the gaff rig used together with a jib; the candidate says the fragata flies its gaff sail with one or two headsails. This is a minor difference in the number of headsails, not a clear contradiction.",
+   "type": "number"
+  },
+  {
+   "concepts": [
+    "c18"
+   ],
+   "kind": "hull",
+   "name": "Leeboard",
+   "sources": [
+    "m-auth-method",
+    "m-hist-pedrosa"
+   ],
+   "text": "Existing concept describes a board lowered to reduce slip in shallow water. The candidate (tábua de bolina) describes a lateral keel on one side, one per side on the muleta, for lateen-rigged flat-bottomed boats; it also adds dates (documented 1710, on other boats 1785) not in the existing concept. Possibly complementary rather than conflicting.",
+   "type": "definition"
+  },
+  {
+   "concepts": [
+    "c19"
+   ],
+   "kind": "sailing",
+   "name": "Approach and docking",
+   "sources": [
+    "m-auth-method",
+    "m-hist-blk-portos",
+    "mmwdz14kpqwcc"
+   ],
+   "text": "Method doc describes the skill of controlling speed to come alongside. Fragateiro defines it as a mission phase triggered within a set distance of the target.",
+   "type": "definition"
+  },
+  {
+   "concepts": [
+    "c23"
+   ],
+   "kind": "sailing",
+   "name": "Sail trim",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro"
+   ],
+   "text": "Veleiro.net (pt-BR) uses both 'Ajuste das Velas' and 'mareação' for sail trim.",
+   "type": "term"
+  },
+  {
+   "concepts": [
+    "c25"
+   ],
+   "kind": "sailing",
+   "name": "Gust",
+   "sources": [
+    "m-auth-method"
+   ],
+   "text": "Method doc defines a gust as a sudden increase in wind. Fragateiro's gust_or_shift also includes changes in wind direction.",
+   "type": "definition"
+  },
+  {
+   "concepts": [
+    "c42"
+   ],
+   "kind": "hull",
+   "name": "Forestay",
+   "sources": [
+    "m-ref-veleiro",
+    "mmwdz14kpqwcc"
+   ],
+   "text": "Existing 'Forestay' is a wire from bow to masthead; the candidate 'estai' is a generic stay set with the varino's lateen sail. Similar, but the source does not say it runs from the bow.",
+   "type": "definition"
+  },
+  {
+   "concepts": [
+    "c67"
+   ],
+   "kind": "sailing",
+   "name": "Luffing (sail flapping)",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "text": "Fragateiro web game (en) uses 'sail_luffing', 'luffing' and 'flaps' for a sail flapping unfilled.",
+   "type": "term"
+  },
+  {
+   "concepts": [
+    "c89"
+   ],
+   "kind": "sailing",
+   "name": "Wind shift",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "text": "Veleiro.net 'rondada' describes only a shift away from the bow. 'rondada de vento' and fragateiro wind_shift describe any change in wind direction.",
+   "type": "definition"
+  }
+ ],
+ "counts": {
+  "boatsIn": 0,
+  "boatsMissing": 0,
+  "conflicts": 10,
+  "physicsNot": 89,
+  "physicsShown": 21,
+  "placesIn": 0,
+  "placesMissing": 0,
+  "practicesCovered": 1,
+  "practicesMissing": 11,
+  "practicesPartly": 0
+ },
+ "createdAt": "2026-11-13T01:20:06.510Z",
+ "game": "fragateiro",
+ "gameCommit": "20490724d579e76e1be610bbafaa14829922a7e3",
+ "physics": [
+  {
+   "concepts": [
+    "c1"
+   ],
+   "kind": "sailing",
+   "name": "Close-hauled",
+   "needs": "",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c2"
+   ],
+   "kind": "sailing",
+   "name": "Reaching (wind abeam to abaft the beam)",
+   "needs": "reaching point of sail",
+   "sources": [
+    "m-auth-method"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c3"
+   ],
+   "kind": "sailing",
+   "name": "Running (wind astern)",
+   "needs": "",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c4"
+   ],
+   "kind": "sailing",
+   "name": "In irons / head to wind",
+   "needs": "",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c5"
+   ],
+   "kind": "sailing",
+   "name": "Sheeting in",
+   "needs": "sheet trim control",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c6"
+   ],
+   "kind": "sailing",
+   "name": "Easing the sheets",
+   "needs": "sheet trim control",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c7"
+   ],
+   "kind": "sailing",
+   "name": "Reefing",
+   "needs": "reefing control",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c8"
+   ],
+   "kind": "hull",
+   "name": "Storm sail",
+   "needs": "storm sail option",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c9"
+   ],
+   "kind": "hull",
+   "name": "Rig type",
+   "needs": "multiple rig types",
+   "sources": [
+    "m-auth-method"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c10"
+   ],
+   "kind": "hull",
+   "name": "Gaff rig",
+   "needs": "gaff rig and jib",
+   "sources": [
+    "m-auth-method",
+    "m-hist-getlisbon"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c11"
+   ],
+   "kind": "hull",
+   "name": "Lug rig",
+   "needs": "lug rig option",
+   "sources": [
+    "m-auth-method"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c12"
+   ],
+   "kind": "sailing",
+   "name": "Heading up",
+   "needs": "steering toward wind",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c13"
+   ],
+   "kind": "sailing",
+   "name": "Bearing away",
+   "needs": "steering away from wind",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c14"
+   ],
+   "kind": "sailing",
+   "name": "Tacking",
+   "needs": "",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro",
+    "m-hist-pedrosa"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c15"
+   ],
+   "kind": "sailing",
+   "name": "Gybing",
+   "needs": "",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro",
+    "m-hist-pedrosa"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c17"
+   ],
+   "kind": "sailing",
+   "name": "Drifting with current and wind",
+   "needs": "tide and current",
+   "sources": [
+    "m-auth-method"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c18"
+   ],
+   "kind": "hull",
+   "name": "Leeboard",
+   "needs": "leeboard and water depth",
+   "sources": [
+    "m-auth-method",
+    "m-hist-pedrosa"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c19"
+   ],
+   "kind": "sailing",
+   "name": "Approach and docking",
+   "needs": "",
+   "sources": [
+    "m-auth-method",
+    "m-hist-blk-portos",
+    "mmwdz14kpqwcc"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c22"
+   ],
+   "kind": "sailing",
+   "name": "Points of sail",
+   "needs": "",
+   "sources": [
+    "m-auth-method"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c23"
+   ],
+   "kind": "sailing",
+   "name": "Sail trim",
+   "needs": "sail trim feedback marker",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c24"
+   ],
+   "kind": "sailing",
+   "name": "Heel",
+   "needs": "",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c25"
+   ],
+   "kind": "sailing",
+   "name": "Gust",
+   "needs": "",
+   "sources": [
+    "m-auth-method"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c26"
+   ],
+   "kind": "hull",
+   "name": "Halyard",
+   "needs": "sail hoisting control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c27"
+   ],
+   "kind": "hull",
+   "name": "Quarter (hull area)",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro",
+    "m-hist-pedrosa"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c28"
+   ],
+   "kind": "hull",
+   "name": "Topping lift",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c29"
+   ],
+   "kind": "hull",
+   "name": "Beam (widest part)",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c30"
+   ],
+   "kind": "hull",
+   "name": "Bow quarter (hull area)",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c31"
+   ],
+   "kind": "hull",
+   "name": "Port side",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro",
+    "m-hist-pedrosa"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c32"
+   ],
+   "kind": "hull",
+   "name": "Starboard side",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro",
+    "m-hist-pedrosa"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c33"
+   ],
+   "kind": "hull",
+   "name": "Shrouds",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro",
+    "m-hist-pedrosa"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c34"
+   ],
+   "kind": "hull",
+   "name": "Boom vang",
+   "needs": "boom vang control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c35"
+   ],
+   "kind": "hull",
+   "name": "Tiller",
+   "needs": "tiller steering control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c36"
+   ],
+   "kind": "hull",
+   "name": "Winch",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c37"
+   ],
+   "kind": "hull",
+   "name": "Cockpit",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c38"
+   ],
+   "kind": "hull",
+   "name": "Spreader",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c39"
+   ],
+   "kind": "hull",
+   "name": "Cleat",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c40"
+   ],
+   "kind": "hull",
+   "name": "Downhaul",
+   "needs": "downhaul control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c41"
+   ],
+   "kind": "hull",
+   "name": "Backstay",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c42"
+   ],
+   "kind": "hull",
+   "name": "Forestay",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro",
+    "mmwdz14kpqwcc"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c43"
+   ],
+   "kind": "hull",
+   "name": "Turnbuckle",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c44"
+   ],
+   "kind": "hull",
+   "name": "Chainplate fitting",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c45"
+   ],
+   "kind": "hull",
+   "name": "Sheet",
+   "needs": "",
+   "sources": [
+    "m-ref-veleiro",
+    "m-hist-pedrosa"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c46"
+   ],
+   "kind": "hull",
+   "name": "Genoa",
+   "needs": "genoa sail option",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c47"
+   ],
+   "kind": "hull",
+   "name": "Gooseneck",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c48"
+   ],
+   "kind": "hull",
+   "name": "Lifeline",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c49"
+   ],
+   "kind": "hull",
+   "name": "Rudder",
+   "needs": "",
+   "sources": [
+    "m-ref-veleiro",
+    "m-hist-blk-portos",
+    "m-hist-getlisbon",
+    "m-hist-pedrosa"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c50"
+   ],
+   "kind": "hull",
+   "name": "Rigging (spars and stays)",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c51"
+   ],
+   "kind": "hull",
+   "name": "Mast",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro",
+    "m-hist-blk-portos",
+    "m-hist-pedrosa",
+    "mmwdz10zt3xye"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c52"
+   ],
+   "kind": "hull",
+   "name": "Mainsail",
+   "needs": "mainsail option",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c53"
+   ],
+   "kind": "hull",
+   "name": "Blocks",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c55"
+   ],
+   "kind": "hull",
+   "name": "Outhaul",
+   "needs": "outhaul control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c57"
+   ],
+   "kind": "hull",
+   "name": "Stern",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro",
+    "m-hist-pedrosa"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c58"
+   ],
+   "kind": "hull",
+   "name": "Bow",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro",
+    "m-hist-pedrosa",
+    "mmwdz14kpqwcc"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c59"
+   ],
+   "kind": "hull",
+   "name": "Keel",
+   "needs": "keel leeway resistance",
+   "sources": [
+    "m-ref-veleiro",
+    "m-hist-getlisbon",
+    "m-hist-pedrosa",
+    "mmwdz12sr2kq0",
+    "mmwdz14kpqwcc"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c60"
+   ],
+   "kind": "sailing",
+   "name": "Bare poles",
+   "needs": "bare poles in storm",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c61"
+   ],
+   "kind": "sailing",
+   "name": "Wing and wing",
+   "needs": "wing and wing sail setting",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c62"
+   ],
+   "kind": "sailing",
+   "name": "Port tack",
+   "needs": "tack side indicator",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c63"
+   ],
+   "kind": "sailing",
+   "name": "Starboard tack",
+   "needs": "tack side indicator",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c64"
+   ],
+   "kind": "sailing",
+   "name": "Windward",
+   "needs": "windward side indicator",
+   "sources": [
+    "m-ref-veleiro",
+    "m-hist-pedrosa"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c65"
+   ],
+   "kind": "sailing",
+   "name": "Beating to windward",
+   "needs": "repeated tacking upwind",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c66"
+   ],
+   "kind": "sailing",
+   "name": "Close reach",
+   "needs": "",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c67"
+   ],
+   "kind": "sailing",
+   "name": "Luffing (sail flapping)",
+   "needs": "",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c68"
+   ],
+   "kind": "sailing",
+   "name": "Leeward",
+   "needs": "leeward side indicator",
+   "sources": [
+    "m-ref-veleiro",
+    "m-hist-pedrosa"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c69"
+   ],
+   "kind": "sailing",
+   "name": "Beam reach",
+   "needs": "",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c70"
+   ],
+   "kind": "sailing",
+   "name": "Broad reach",
+   "needs": "",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c71"
+   ],
+   "kind": "sailing",
+   "name": "True wind",
+   "needs": "",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c72"
+   ],
+   "kind": "sailing",
+   "name": "Apparent wind",
+   "needs": "apparent wind calculation",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c73"
+   ],
+   "kind": "sailing",
+   "name": "Sail as airfoil",
+   "needs": "sail aerodynamics model",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c74"
+   ],
+   "kind": "sailing",
+   "name": "Drive (windward thrust)",
+   "needs": "sail aerodynamics model",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c75"
+   ],
+   "kind": "sailing",
+   "name": "Lift (leeward suction)",
+   "needs": "sail aerodynamics model",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c76"
+   ],
+   "kind": "sailing",
+   "name": "Slot effect",
+   "needs": "headsail and mainsail interaction",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c77"
+   ],
+   "kind": "hull",
+   "name": "Leech",
+   "needs": "leech flutter trim feedback",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c78"
+   ],
+   "kind": "sailing",
+   "name": "Over-eased sails",
+   "needs": "over-eased sail feedback",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c79"
+   ],
+   "kind": "sailing",
+   "name": "Downwind sail setting rule",
+   "needs": "downwind sail trim",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c80"
+   ],
+   "kind": "sailing",
+   "name": "Upwind trim rule",
+   "needs": "upwind trim guidance",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c81"
+   ],
+   "kind": "sailing",
+   "name": "Leg of a zigzag course",
+   "needs": "tack legs tracking",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c83"
+   ],
+   "kind": "sailing",
+   "name": "Tiller centred",
+   "needs": "rudder centring control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c84"
+   ],
+   "kind": "hull",
+   "name": "Boom",
+   "needs": "boom swing in gybe",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c85"
+   ],
+   "kind": "hull",
+   "name": "Mainsheet",
+   "needs": "mainsheet control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c86"
+   ],
+   "kind": "sailing",
+   "name": "Gybe procedure",
+   "needs": "gybe step sequence",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c87"
+   ],
+   "kind": "sailing",
+   "name": "Wind on the quarter",
+   "needs": "quartering wind point of sail",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c88"
+   ],
+   "kind": "sailing",
+   "name": "Gybe warning command",
+   "needs": "crew commands",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c89"
+   ],
+   "kind": "sailing",
+   "name": "Wind shift",
+   "needs": "",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c90"
+   ],
+   "kind": "hull",
+   "name": "Wind indicator",
+   "needs": "wind indicator display",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c91"
+   ],
+   "kind": "sailing",
+   "name": "Sail area",
+   "needs": "sail area effect on speed",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c92"
+   ],
+   "kind": "hull",
+   "name": "Headsail furler",
+   "needs": "headsail furling control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c93"
+   ],
+   "kind": "sailing",
+   "name": "Excessive heeling",
+   "needs": "heel stability model",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c94"
+   ],
+   "kind": "sailing",
+   "name": "Drag",
+   "needs": "hull drag from heel",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c95"
+   ],
+   "kind": "sailing",
+   "name": "Leeway (sideways drift)",
+   "needs": "",
+   "sources": [
+    "m-ref-veleiro",
+    "m-hist-pedrosa"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c96"
+   ],
+   "kind": "sailing",
+   "name": "Upwind sailing",
+   "needs": "upwind performance model",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c97"
+   ],
+   "kind": "hull",
+   "name": "Genoa cars",
+   "needs": "genoa car adjustment",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c98"
+   ],
+   "kind": "sailing",
+   "name": "Headsail selection table",
+   "needs": "headsail choice by wind",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c99"
+   ],
+   "kind": "hull",
+   "name": "Head of the genoa",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c101"
+   ],
+   "kind": "hull",
+   "name": "Reefed tack corner",
+   "needs": "reefing control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c102"
+   ],
+   "kind": "hull",
+   "name": "Reefed clew corner",
+   "needs": "reefing control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c103"
+   ],
+   "kind": "hull",
+   "name": "Reef point",
+   "needs": "reefing control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c104"
+   ],
+   "kind": "sailing",
+   "name": "First reef",
+   "needs": "reefing control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c105"
+   ],
+   "kind": "sailing",
+   "name": "Second reef",
+   "needs": "reefing control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c106"
+   ],
+   "kind": "hull",
+   "name": "Dedicated reef lines",
+   "needs": "reefing control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c107"
+   ],
+   "kind": "hull",
+   "name": "Reef auxiliary lines",
+   "needs": "reefing control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c108"
+   ],
+   "kind": "sailing",
+   "name": "Sail camber",
+   "needs": "halyard tension and sail shape",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c109"
+   ],
+   "kind": "hull",
+   "name": "Luff",
+   "needs": "halyard tension and sail shape",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c110"
+   ],
+   "kind": "sailing",
+   "name": "Baggy sail",
+   "needs": "halyard tension and sail shape",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c111"
+   ],
+   "kind": "sailing",
+   "name": "Sail wrinkles",
+   "needs": "halyard tension and sail shape",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c112"
+   ],
+   "kind": "hull",
+   "name": "Foot of the mainsail",
+   "needs": "halyard tension and sail shape",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c113"
+   ],
+   "kind": "hull",
+   "name": "Traveller",
+   "needs": "traveller control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c114"
+   ],
+   "kind": "hull",
+   "name": "Hanks",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c115"
+   ],
+   "kind": "sailing",
+   "name": "Tensioning the halyard",
+   "needs": "halyard tension control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c116"
+   ],
+   "kind": "sailing",
+   "name": "Wind strength and halyard tension",
+   "needs": "halyard tension and sail shape",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c117"
+   ],
+   "kind": "hull",
+   "name": "Aids to navigation",
+   "needs": "navigation marks in channels",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c118"
+   ],
+   "kind": "hull",
+   "name": "Buoys",
+   "needs": "navigation marks in channels",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c119"
+   ],
+   "kind": "hull",
+   "name": "Fixed beacons",
+   "needs": "navigation marks in channels",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c120"
+   ],
+   "kind": "hull",
+   "name": "Lateral channel marks",
+   "needs": "",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c121"
+   ],
+   "kind": "hull",
+   "name": "Unlit buoys",
+   "needs": "navigation marks in channels",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c122"
+   ],
+   "kind": "hull",
+   "name": "Mid-channel buoys",
+   "needs": "navigation marks in channels",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c123"
+   ],
+   "kind": "hull",
+   "name": "Junction marks",
+   "needs": "navigation marks in channels",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c124"
+   ],
+   "kind": "hull",
+   "name": "Green junction mark (main channel right)",
+   "needs": "navigation marks in channels",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c125"
+   ],
+   "kind": "hull",
+   "name": "Red junction mark (main channel left)",
+   "needs": "navigation marks in channels",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c126"
+   ],
+   "kind": "hull",
+   "name": "Isolated danger buoys",
+   "needs": "navigation marks in channels",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c127"
+   ],
+   "kind": "hull",
+   "name": "Life jacket",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c128"
+   ],
+   "kind": "sailing",
+   "name": "Hypothermia",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c130"
+   ],
+   "kind": "hull",
+   "name": "Stays (standing rigging wires)",
+   "needs": "rig loads and failure",
+   "sources": [
+    "m-ref-veleiro",
+    "m-hist-getlisbon"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c131"
+   ],
+   "kind": "sailing",
+   "name": "Seasickness",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c138"
+   ],
+   "kind": "sailing",
+   "name": "Motoring sailboat",
+   "needs": "engine propulsion",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c144"
+   ],
+   "kind": "sailing",
+   "name": "Tack side (which side the wind comes from)",
+   "needs": "",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c145"
+   ],
+   "kind": "sailing",
+   "name": "Collision course",
+   "needs": "other traffic and collision detection",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c150"
+   ],
+   "kind": "sailing",
+   "name": "Clear, decisive course change",
+   "needs": "other traffic and collision avoidance",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c151"
+   ],
+   "kind": "sailing",
+   "name": "Constant compass bearing",
+   "needs": "other traffic and bearings",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c152"
+   ],
+   "kind": "sailing",
+   "name": "Blind zone behind the genoa",
+   "needs": "visibility and other traffic",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c158"
+   ],
+   "kind": "sailing",
+   "name": "Lowering the genoa",
+   "needs": "sail handling control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c160"
+   ],
+   "kind": "sailing",
+   "name": "Close-hauled approach to the victim",
+   "needs": "person overboard event",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c161"
+   ],
+   "kind": "sailing",
+   "name": "Leeward-side rescue",
+   "needs": "person overboard event",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c162"
+   ],
+   "kind": "hull",
+   "name": "Lower leeward rail",
+   "needs": "heel and freeboard",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c163"
+   ],
+   "kind": "sailing",
+   "name": "Gybe return to a person overboard",
+   "needs": "person overboard event",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c164"
+   ],
+   "kind": "sailing",
+   "name": "Final approach to the victim",
+   "needs": "person overboard event",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c165"
+   ],
+   "kind": "sailing",
+   "name": "Figure-eight recovery",
+   "needs": "person overboard event",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c166"
+   ],
+   "kind": "hull",
+   "name": "Reef knot",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c167"
+   ],
+   "kind": "hull",
+   "name": "Round turn and two half hitches",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c168"
+   ],
+   "kind": "hull",
+   "name": "Bowline",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c169"
+   ],
+   "kind": "hull",
+   "name": "Figure-eight knot",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c170"
+   ],
+   "kind": "hull",
+   "name": "Clove hitch",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c171"
+   ],
+   "kind": "hull",
+   "name": "Sheet bend",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c172"
+   ],
+   "kind": "hull",
+   "name": "Double sheet bend",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c173"
+   ],
+   "kind": "hull",
+   "name": "Cleat hitch",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c185"
+   ],
+   "kind": "sailing",
+   "name": "Aground",
+   "needs": "",
+   "sources": [
+    "mmwdz15icx6en"
+   ],
+   "status": "shown"
+  }
+ ],
+ "places": [],
+ "practices": [
+  {
+   "activity": "kind.fishing",
+   "concepts": [
+    "c16"
+   ],
+   "name": "Lying athwart wind and current",
+   "sources": [
+    "m-auth-method",
+    "m-hist-pedrosa"
+   ],
+   "status": "covered",
+   "why": "Muleta drifts sideways dragging a net through the shoals, essentially lying athwart."
+  },
+  {
+   "activity": "",
+   "concepts": [
+    "c20"
+   ],
+   "name": "Moving without sail (pole, tow, row)",
+   "sources": [
+    "m-auth-method",
+    "mmwdz10zt3xye",
+    "mmwdz15icx6en"
+   ],
+   "status": "missing",
+   "why": "No poling, rowing or towing mechanic; all activities are under sail."
+  },
+  {
+   "activity": "",
+   "concepts": [
+    "c21"
+   ],
+   "name": "Towing from the bank",
+   "sources": [
+    "m-auth-method",
+    "m-hist-freire",
+    "mmwdz10zt3xye",
+    "mmwdz15icx6en"
+   ],
+   "status": "missing",
+   "why": "No bank towing activity; river routes are sailed only."
+  },
+  {
+   "activity": "",
+   "concepts": [
+    "c100"
+   ],
+   "name": "Bending on a headsail",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "missing",
+   "why": "No sail-changing or headsail bending activity offered."
+  },
+  {
+   "activity": "",
+   "concepts": [
+    "c129"
+   ],
+   "name": "One hand for the boat",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "missing",
+   "why": "No onboard safety or handholds mechanic in any activity."
+  },
+  {
+   "activity": "",
+   "concepts": [
+    "c132"
+   ],
+   "name": "Safe stepping when nearing a dock",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "missing",
+   "why": "No stepping ashore mechanic; the anchor drill only covers stopping."
+  },
+  {
+   "activity": "",
+   "concepts": [
+    "c148"
+   ],
+   "name": "Lookout ahead and astern",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "missing",
+   "why": "No lookout task; busy-river routes only involve avoiding collisions."
+  },
+  {
+   "activity": "",
+   "concepts": [
+    "c154"
+   ],
+   "name": "Man overboard",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "missing",
+   "why": "No man overboard scenario or rescue manoeuvre among missions or drills."
+  },
+  {
+   "activity": "",
+   "concepts": [
+    "c155"
+   ],
+   "name": "Shouting man overboard",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "missing",
+   "why": "No crew communication or emergency calling feature."
+  },
+  {
+   "activity": "",
+   "concepts": [
+    "c156"
+   ],
+   "name": "Throwing a flotation device",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "missing",
+   "why": "No flotation device throwing or rescue equipment mechanic."
+  },
+  {
+   "activity": "",
+   "concepts": [
+    "c157"
+   ],
+   "name": "Watching the victim",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "missing",
+   "why": "No crew roles or victim-watching task exist."
+  },
+  {
+   "activity": "",
+   "concepts": [
+    "c159"
+   ],
+   "name": "Hoisting the victim with a halyard",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "missing",
+   "why": "No hoisting or recovery of a person using a halyard."
+  }
+ ],
+ "sources": 12
+}

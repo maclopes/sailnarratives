@@ -1,0 +1,558 @@
+{
+ "lines": [
+  {
+   "beat": "b1",
+   "claims": [
+    {
+     "claim": "A sail should be neither over-sheeted nor over-eased.",
+     "evidence": [
+      "e6"
+     ]
+    }
+   ],
+   "en": "Today we are not hunting: we will come up slowly, under sail alone, behind a whale. Mestre Manuel asks for the sail neither too tight nor too loose.",
+   "fictional": false,
+   "id": "l1",
+   "pt": "Hoje não vamos à caça: vamos chegar devagar, só à vela, por trás de uma baleia. O Mestre Manuel pede a vela nem caçada demais, nem folgada demais.",
+   "status": "draft"
+  },
+  {
+   "beat": "b1",
+   "claims": [
+    {
+     "claim": "A sail should be neither over-sheeted nor over-eased.",
+     "evidence": [
+      "e6"
+     ]
+    }
+   ],
+   "en": "Quiet on board, please. We want to get close without noise, with only the wind. Mestre Manuel looks at the sail: \"Not too tight, not too loose, lad.\"",
+   "fictional": false,
+   "id": "l2",
+   "pt": "Silêncio a bordo, por favor. Queremos aproximar-nos sem ruído, só com o vento. O Mestre Manuel olha para a vela: \"Nem muito caçada, nem muito solta, rapaz.\"",
+   "status": "draft"
+  },
+  {
+   "beat": "b2",
+   "claims": [],
+   "en": "Ease, ease. Slower.",
+   "fictional": true,
+   "id": "l3",
+   "pt": "Folga, folga. Mais devagar.",
+   "status": "draft"
+  },
+  {
+   "beat": "b2",
+   "claims": [],
+   "en": "Ease the sail, lad.",
+   "fictional": true,
+   "id": "l4",
+   "pt": "Folga a vela, rapaz.",
+   "status": "draft"
+  },
+  {
+   "beat": "b3",
+   "claims": [],
+   "en": "Now we wait. You do not chase.",
+   "fictional": true,
+   "id": "l5",
+   "pt": "Agora esperamos. Não se corre atrás.",
+   "status": "draft"
+  },
+  {
+   "beat": "b3",
+   "claims": [],
+   "en": "Leave her be. We stay here, no hurry.",
+   "fictional": true,
+   "id": "l6",
+   "pt": "Deixa-a. Ficamos aqui, sem pressa.",
+   "status": "draft"
+  },
+  {
+   "beat": "b4",
+   "claims": [],
+   "en": "Bear away a little.",
+   "fictional": true,
+   "id": "l7",
+   "pt": "Arriba um pouco.",
+   "status": "draft"
+  },
+  {
+   "beat": "b4",
+   "claims": [],
+   "en": "Bear away, bear away. Gently.",
+   "fictional": true,
+   "id": "l8",
+   "pt": "Arriba, arriba. Devagar.",
+   "status": "draft"
+  },
+  {
+   "beat": "b5",
+   "claims": [
+    {
+     "claim": "The sail flapping is called panejar (luffing).",
+     "evidence": [
+      "e7"
+     ]
+    },
+    {
+     "claim": "Luffing comes from over-easing the sheet or pointing closer to the wind than close-hauled.",
+     "evidence": [
+      "e7"
+     ]
+    }
+   ],
+   "en": "— What was that noise? — Luffing, panejar. You eased too much, or pointed closer to the wind than you should. A noisy sail does not arrive quietly.",
+   "fictional": false,
+   "id": "l9",
+   "pt": "— Que barulho era aquele? — Panejar. Folgaste demais, ou foste mais ao vento do que devias. Vela que faz barulho não chega calada.",
+   "status": "draft"
+  },
+  {
+   "beat": "b5",
+   "claims": [
+    {
+     "claim": "Luffing comes from over-easing the sheet or pointing closer to the wind than close-hauled.",
+     "evidence": [
+      "e7"
+     ]
+    }
+   ],
+   "en": "— Why was the sail flapping? — It luffs when you ease too much or point too close to the wind. And that way she hears us coming.",
+   "fictional": false,
+   "id": "l10",
+   "pt": "— A vela batia porquê? — Paneja quando se folga demais ou se aponta demasiado ao vento. E assim ela ouve-nos chegar.",
+   "status": "draft"
+  },
+  {
+   "beat": "b6",
+   "claims": [
+    {
+     "claim": "A sail eased too much deflects less air.",
+     "evidence": [
+      "e6"
+     ]
+    },
+    {
+     "claim": "A sail sheeted too tight breaks the airflow.",
+     "evidence": [
+      "e6"
+     ]
+    }
+   ],
+   "en": "See? Too loose, it deflects less air. Too tight, it breaks the airflow. Stay in between, lad, and listen to it.",
+   "fictional": false,
+   "id": "l11",
+   "pt": "Vês? Folgada demais, desvia menos ar. Caçada demais, quebra o escoamento. Fica no meio, rapaz, e escuta-a.",
+   "status": "draft"
+  },
+  {
+   "beat": "b6",
+   "claims": [
+    {
+     "claim": "Luffing is the sail flapping irregularly.",
+     "evidence": [
+      "e7"
+     ]
+    }
+   ],
+   "en": "— How do I know it is right? — When it does not luff and does not go hard. Look: there it is, still. The boat likes light hands.",
+   "fictional": false,
+   "id": "l12",
+   "pt": "— Como sei que está bem? — Quando não paneja e não fica dura. Olha: está ali, quieta. O barco gosta de mãos leves.",
+   "status": "draft"
+  },
+  {
+   "beat": "b6",
+   "claims": [
+    {
+     "claim": "With a beam wind, an over-sheeted sail breaks the airflow.",
+     "evidence": [
+      "e6"
+     ]
+    }
+   ],
+   "en": "With the wind on the beam, a sail sheeted too tight breaks the air. Ease just a touch. Like that. You hear nothing, do you?",
+   "fictional": false,
+   "id": "l13",
+   "pt": "Com o vento pelo través, vela muito caçada quebra o ar. Folga só um nada. Assim. Não se ouve nada, pois não?",
+   "status": "draft"
+  },
+  {
+   "beat": "b7",
+   "claims": [],
+   "en": "(Silence.) This boat has known other days. Today it only watches. Ease a touch, lad, let it sit.",
+   "fictional": true,
+   "id": "l14",
+   "pt": "(Silêncio.) Este barco já conheceu outros dias. Hoje só olha. Folga um nada, rapaz, deixa-o ficar.",
+   "status": "draft"
+  },
+  {
+   "beat": "b7",
+   "claims": [
+    {
+     "claim": "A sail should be neither over-sheeted nor over-eased.",
+     "evidence": [
+      "e6"
+     ]
+    }
+   ],
+   "en": "(Manuel is silent for a good while.) Neither tight nor loose. Let it breathe, and us too.",
+   "fictional": false,
+   "id": "l15",
+   "pt": "(Manuel cala-se um bom bocado.) Nem caçada nem solta. Deixa-a respirar, e a nós também.",
+   "status": "draft"
+  },
+  {
+   "beat": "b8",
+   "claims": [],
+   "en": "She is gone. We watched her, we did not hunt her, and that is what you take home. Mestre Manuel only says: \"Good boat.\" We head back to Horta.",
+   "fictional": true,
+   "id": "l16",
+   "pt": "Ela foi-se. Vimo-la, não a caçámos, e é isso que levam para casa. O Mestre Manuel só diz: \"Bom barco.\" Voltamos para a Horta.",
+   "status": "draft"
+  },
+  {
+   "beat": "b8",
+   "claims": [],
+   "en": "Today we watched, we did not hunt. Thank you for the quiet. Mestre Manuel runs a hand along the gunwale: \"She behaved well.\" Course for Horta.",
+   "fictional": true,
+   "id": "l17",
+   "pt": "Hoje observámos, não caçámos. Obrigado pelo silêncio. O Mestre Manuel passa a mão pela borda: \"Portou-se bem.\" Rumo à Horta.",
+   "status": "draft"
+  },
+  {
+   "beat": "b9",
+   "claims": [
+    {
+     "claim": "A sail should be neither over-sheeted nor over-eased.",
+     "evidence": [
+      "e6"
+     ]
+    },
+    {
+     "claim": "Panejar is the sail flapping from over-easing or pointing closer to the wind than close-hauled.",
+     "evidence": [
+      "e7"
+     ]
+    }
+   ],
+   "en": "What is real? The guide, Mestre Manuel and the young crew member are invented. The sailing terms used on board come from sources: a sail should be neither too tight nor too loose, and \"panejar\" is the sail flapping when it is eased too much or pointed too close to the wind.",
+   "fictional": false,
+   "id": "l18",
+   "pt": "O que é real? O guia, o Mestre Manuel e o jovem tripulante são inventados. Os termos de vela usados a bordo vêm de fontes: a vela não deve estar caçada nem folgada demais, e \"panejar\" é a vela a bater quando se folga demais ou se aponta demasiado ao vento.",
+   "status": "draft"
+  },
+  {
+   "beat": "b9",
+   "claims": [
+    {
+     "claim": "Too loose deflects less air; too tight breaks the airflow.",
+     "evidence": [
+      "e6"
+     ]
+    },
+    {
+     "claim": "Luffing comes from over-easing the sheet or pointing closer to the wind than close-hauled.",
+     "evidence": [
+      "e7"
+     ]
+    }
+   ],
+   "en": "On this trip, the people are fiction. The sail is not: too loose deflects less air, too tight breaks the airflow. And when it luffs, it was eased too much or pointed too close to the wind.",
+   "fictional": false,
+   "id": "l19",
+   "pt": "Nesta viagem, as pessoas são de ficção. A vela não: demasiado folgada desvia menos ar, demasiado caçada quebra o escoamento. E quando paneja, folgou-se demais ou foi-se demasiado ao vento.",
+   "status": "draft"
+  },
+  {
+   "beat": "b91",
+   "claims": [],
+   "en": "Very well!",
+   "fictional": true,
+   "id": "l20",
+   "pt": "Muito bem!",
+   "status": "draft"
+  },
+  {
+   "beat": "b91",
+   "claims": [],
+   "en": "That's it.",
+   "fictional": true,
+   "id": "l21",
+   "pt": "Isso mesmo.",
+   "status": "draft"
+  },
+  {
+   "beat": "b91",
+   "claims": [],
+   "en": "Good, that's right.",
+   "fictional": true,
+   "id": "l22",
+   "pt": "Boa, assim está bem.",
+   "status": "draft"
+  },
+  {
+   "beat": "b91",
+   "claims": [],
+   "en": "Perfect, keep going.",
+   "fictional": true,
+   "id": "l23",
+   "pt": "Perfeito, continue.",
+   "status": "draft"
+  },
+  {
+   "beat": "b92",
+   "claims": [],
+   "en": "Like that.",
+   "fictional": true,
+   "id": "l24",
+   "pt": "Assim.",
+   "status": "draft"
+  },
+  {
+   "beat": "b92",
+   "claims": [],
+   "en": "That's it, lad.",
+   "fictional": true,
+   "id": "l25",
+   "pt": "Isso, rapaz.",
+   "status": "draft"
+  },
+  {
+   "beat": "b92",
+   "claims": [],
+   "en": "Good.",
+   "fictional": true,
+   "id": "l26",
+   "pt": "Bom.",
+   "status": "draft"
+  },
+  {
+   "beat": "b92",
+   "claims": [],
+   "en": "All right. Easy.",
+   "fictional": true,
+   "id": "l27",
+   "pt": "Está bem. Devagar.",
+   "status": "draft"
+  },
+  {
+   "beat": "b93",
+   "claims": [],
+   "en": "Nice!",
+   "fictional": true,
+   "id": "l28",
+   "pt": "Boa!",
+   "status": "draft"
+  },
+  {
+   "beat": "b93",
+   "claims": [],
+   "en": "Wow, just like that.",
+   "fictional": true,
+   "id": "l29",
+   "pt": "Uau, assim mesmo.",
+   "status": "draft"
+  },
+  {
+   "beat": "b93",
+   "claims": [],
+   "en": "It worked!",
+   "fictional": true,
+   "id": "l30",
+   "pt": "Funcionou!",
+   "status": "draft"
+  },
+  {
+   "beat": "b93",
+   "claims": [],
+   "en": "Looks right, doesn't it?",
+   "fictional": true,
+   "id": "l31",
+   "pt": "Ficou bem, não ficou?",
+   "status": "draft"
+  },
+  {
+   "beat": "b90",
+   "claims": [
+    {
+     "claim": "Caravels were lateen-rigged vessels adapted and improved for difficult long-distance Discovery voyages.",
+     "evidence": [
+      "e8"
+     ]
+    }
+   ],
+   "en": "Caravels, lateen-rigged, were adapted and improved for the long, difficult voyages of the Discoveries.",
+   "fictional": false,
+   "id": "l32",
+   "pt": "As caravelas, de vela latina, foram adaptadas e melhoradas para as longas e difíceis viagens dos Descobrimentos.",
+   "speaker": "k1",
+   "status": "draft",
+   "topic": "boat"
+  },
+  {
+   "beat": "b90",
+   "claims": [
+    {
+     "claim": "In Lisbon, fishing 'do alto' meant fishing beyond the river bar, not at a set distance from the coast.",
+     "evidence": [
+      "e2"
+     ]
+    },
+    {
+     "claim": "The bar is the entrance of the Tagus at Lisbon.",
+     "evidence": [
+      "e3"
+     ]
+    }
+   ],
+   "en": "In Lisbon, fishing 'do alto' meant fishing beyond the Tagus bar, not at a set distance from the coast.",
+   "fictional": false,
+   "id": "l33",
+   "pt": "Em Lisboa, pescar «do alto» queria dizer pescar para lá da barra do Tejo, e não a uma distância certa da costa.",
+   "speaker": "k1",
+   "status": "draft",
+   "topic": "place"
+  },
+  {
+   "beat": "b90",
+   "claims": [
+    {
+     "claim": "Caravels from Galicia sailed to Cabo Branco to fish sharks and mullets.",
+     "evidence": [
+      "e1"
+     ]
+    },
+    {
+     "claim": "The fish were dried in the sun like cod from Newfoundland.",
+     "evidence": [
+      "e1"
+     ]
+    }
+   ],
+   "en": "Caravels from Galicia sailed to Cabo Branco to fish sharks and mullets, dried in the sun like Newfoundland cod.",
+   "fictional": false,
+   "id": "l34",
+   "pt": "Caravelas da Galiza iam a Cabo Branco pescar tubarões e tainhas, que secavam ao sol, como o bacalhau da Terra Nova.",
+   "speaker": "k1",
+   "status": "draft",
+   "topic": "fish"
+  },
+  {
+   "beat": "b90",
+   "claims": [
+    {
+     "claim": "A sail should be neither over-sheeted nor over-eased.",
+     "evidence": [
+      "e6"
+     ]
+    },
+    {
+     "claim": "Too loose deflects less air; too tight breaks the airflow.",
+     "evidence": [
+      "e6"
+     ]
+    }
+   ],
+   "en": "Not too tight, not too loose, lad. Too loose, the sail turns little air; too tight, it breaks the flow.",
+   "fictional": false,
+   "id": "l35",
+   "pt": "Nem caçada de mais, nem folgada de mais, rapaz. Folgada, a vela desvia pouco ar; caçada de mais, quebra o vento nela.",
+   "speaker": "k2",
+   "status": "draft",
+   "topic": "work"
+  },
+  {
+   "beat": "b90",
+   "claims": [
+    {
+     "claim": "Smoked or salted fish was shipped to Castile, Aragon, Italy, England and Flanders.",
+     "evidence": [
+      "e9"
+     ]
+    }
+   ],
+   "en": "Smoked or salted fish went to Castile, Aragon, Italy, England and Flanders, lad.",
+   "fictional": false,
+   "id": "l36",
+   "pt": "O peixe fumado ou salgado seguia para Castela, Aragão, Itália, Inglaterra e Flandres, rapaz.",
+   "speaker": "k2",
+   "status": "draft",
+   "topic": "place"
+  },
+  {
+   "beat": "b90",
+   "claims": [
+    {
+     "claim": "Pilots worked at the bar of the Tagus at Lisbon.",
+     "evidence": [
+      "e3"
+     ]
+    },
+    {
+     "claim": "Fishing outside the bar was authorised.",
+     "evidence": [
+      "e3"
+     ]
+    }
+   ],
+   "en": "I heard pilots worked at the Tagus bar, and that fishing outside it was allowed.",
+   "fictional": false,
+   "id": "l37",
+   "pt": "Ouvi dizer que na barra do Tejo trabalhavam pilotos, e que lá fora era permitido pescar.",
+   "speaker": "k3",
+   "status": "draft",
+   "topic": "people"
+  },
+  {
+   "beat": "b90",
+   "claims": [
+    {
+     "claim": "Coastal navigation included trips to the Algarve to fetch produce.",
+     "evidence": [
+      "e4"
+     ]
+    },
+    {
+     "claim": "Coastal navigation included trade with Moroccan ports.",
+     "evidence": [
+      "e4"
+     ]
+    }
+   ],
+   "en": "In coastal navigation, boats went to the Algarve to fetch produce, or to trade with Moroccan ports.",
+   "fictional": false,
+   "id": "l38",
+   "pt": "Na navegação costeira, os barcos iam ao Algarve buscar produtos, ou comerciar com portos de Marrocos.",
+   "speaker": "k1",
+   "status": "draft",
+   "topic": "work"
+  },
+  {
+   "beat": "b90",
+   "claims": [
+    {
+     "claim": "Fish preserved by salting and curing was kept in fishermen's houses.",
+     "evidence": [
+      "e10"
+     ]
+    },
+    {
+     "claim": "Salted and cured fish was sold alongside fresh fish.",
+     "evidence": [
+      "e10"
+     ]
+    }
+   ],
+   "en": "Salted and cured fish was kept in fishermen's houses, and sold alongside fresh fish.",
+   "fictional": false,
+   "id": "l39",
+   "pt": "O peixe salgado e curado ficava em casa dos pescadores, e vendia-se ao lado do peixe fresco.",
+   "speaker": "k3",
+   "status": "draft",
+   "topic": "fish"
+  }
+ ],
+ "updatedAt": "2026-11-14T10:37:04.023Z"
+}

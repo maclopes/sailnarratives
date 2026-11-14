@@ -1,0 +1,511 @@
+{
+ "items": [
+  {
+   "action": "The generic term 'barca' was long used for any small river-traffic or fishing boat on the Tagus.",
+   "boat": "barca",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-getlisbon:c4d:p1",
+   "kind": "description",
+   "location": "Introduction",
+   "numbers": [],
+   "period": "",
+   "place": "Tejo",
+   "who": ""
+  },
+  {
+   "action": "Records list many river boats (barcas and batéis) serving Lisbon, while ships from across Christendom entered the port each year and anchored offshore.",
+   "boat": "barcas, batéis, naus",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-getlisbon:c4d:p2",
+   "kind": "event",
+   "location": "Introduction",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "1490",
+     "what": "river boats serving Lisbon"
+    },
+    {
+     "unit": "ships",
+     "value": "1500",
+     "what": "naus and other ships entering Lisbon port annually"
+    }
+   ],
+   "period": "1552",
+   "place": "Lisboa",
+   "who": ""
+  },
+  {
+   "action": "Anchored ships offshore were supplied by various types of small boats.",
+   "boat": "various boats",
+   "cargo": "supplies",
+   "conditions": "ships anchored offshore",
+   "gear": "",
+   "id": "m-hist-getlisbon:c4d:p3",
+   "kind": "practice",
+   "location": "Introduction",
+   "numbers": [],
+   "period": "1552",
+   "place": "porto de Lisboa",
+   "who": ""
+  },
+  {
+   "action": "From the early 16th century barcas began to diversify according to their functions and the routes they sailed on the Tagus.",
+   "boat": "barcas",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-getlisbon:c4d:p4",
+   "kind": "event",
+   "location": "Introduction",
+   "numbers": [],
+   "period": "séc. XVI",
+   "place": "Tejo",
+   "who": ""
+  },
+  {
+   "action": "Going upriver, entering shallow creeks, carrying varied cargo and fishing in river and sea required boats with differing keels, flat bottoms, bows, masts and sails.",
+   "boat": "",
+   "cargo": "various goods",
+   "conditions": "shallow-water creeks",
+   "gear": "",
+   "id": "m-hist-getlisbon:c4d:p5",
+   "kind": "description",
+   "location": "Introduction",
+   "numbers": [],
+   "period": "",
+   "place": "Tejo, esteiros",
+   "who": ""
+  },
+  {
+   "action": "River traffic linked the two banks, coast and interior, and mouth and Riba-Tejo, carrying goods and people and supporting fishing, until the mid-20th century.",
+   "boat": "",
+   "cargo": "goods and people",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-getlisbon:c4d:p6",
+   "kind": "practice",
+   "location": "Introduction",
+   "numbers": [],
+   "period": "until meados do séc. XX",
+   "place": "Tejo, Riba-Tejo",
+   "who": ""
+  },
+  {
+   "action": "Fishermen, sailors, shipwrights and caulkers built traditional wooden boats in shipyards concentrated in riverside towns.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "built of wood",
+   "gear": "",
+   "id": "m-hist-getlisbon:c4d:p7",
+   "kind": "practice",
+   "location": "Estaleiros e Tipologias",
+   "numbers": [],
+   "period": "",
+   "place": "povoações ribeirinhas",
+   "who": "pescadores, marinheiros, carpinteiros navais, calafates"
+  },
+  {
+   "action": "Larger shipyards stood on the south bank, while smaller artisanal yards existed at other named places.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-getlisbon:c4d:p8",
+   "kind": "description",
+   "location": "Estaleiros e Tipologias",
+   "numbers": [],
+   "period": "",
+   "place": "Aldeagalega (Montijo), Alcochete, Sarilhos Pequenos, Barreiro, Seixal, Amora, Ar",
+   "who": ""
+  },
+  {
+   "action": "Upstream shipyards are also recorded at Valada, Punhete (Constância) and Rossio ao Sul do Tejo.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-getlisbon:c4d:p9",
+   "kind": "description",
+   "location": "Estaleiros e Tipologias",
+   "numbers": [],
+   "period": "",
+   "place": "Valada, Punhete (Constância), Rossio ao Sul do Tejo",
+   "who": ""
+  },
+  {
+   "action": "Boat shapes, sizes and colours varied with function, route navigability and the style of each yard or town.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-getlisbon:c4d:p10",
+   "kind": "description",
+   "location": "Estaleiros e Tipologias",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Well-known passenger boats included catraio, caíque, bote, batel, canoa, falua and bote cacilheiro.",
+   "boat": "catraio, caíque, bote, batel, canoa, falua, bote cacilheiro",
+   "cargo": "passengers",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-getlisbon:c4d:p11",
+   "kind": "description",
+   "location": "Estaleiros e Tipologias",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Well-known cargo boats included mill boats, Riba-Tejo boats, cargueiros, bateiras, faluas, canoa cacilheira, varinos and fragatas.",
+   "boat": "barcos dos moinhos, barcos de Riba-Tejo, cargueiros, bateira",
+   "cargo": "goods",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-getlisbon:c4d:p12",
+   "kind": "description",
+   "location": "Estaleiros e Tipologias",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Fishing boats named are caíques, saveiros and muletas; varinos and fragatas were the most representative cargo vessels of the Tagus.",
+   "boat": "caíques, saveiros, muletas, varinos, fragatas",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-getlisbon:c4d:p13",
+   "kind": "description",
+   "location": "Estaleiros e Tipologias",
+   "numbers": [],
+   "period": "",
+   "place": "Tejo",
+   "who": ""
+  },
+  {
+   "action": "The varino was an elegant, decorated boat resembling a large two-ended bateira, with a pronounced toothed bow and a lateen sail on a backward-leaning mast.",
+   "boat": "varino",
+   "cargo": "",
+   "conditions": "",
+   "gear": "estai, pano latino, mastro inclinado",
+   "id": "m-hist-getlisbon:c4d:p14",
+   "kind": "description",
+   "location": "Varino",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "The varino had a bulging keelless hull, two decks with bulkheads, and a hold with paneiros and false bulwarks for stowing cargo.",
+   "boat": "varino",
+   "cargo": "",
+   "conditions": "",
+   "gear": "paneiros",
+   "id": "m-hist-getlisbon:c4d:p15",
+   "kind": "description",
+   "location": "Varino",
+   "numbers": [
+    {
+     "unit": "coberta",
+     "value": "2",
+     "what": "decks"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "The fragata was a solid, open-mouthed, flat-sterned boat with one backward-leaning mast, a large gaff sail and one or two headsails, no oars, fixed rudder.",
+   "boat": "fragata",
+   "cargo": "",
+   "conditions": "",
+   "gear": "vela de carangueja, velas de proa",
+   "id": "m-hist-getlisbon:c4d:p16",
+   "kind": "description",
+   "location": "Fragata",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Fragatas loaded and unloaded ships anchored in Lisbon harbour and handled cargo at quays on both banks.",
+   "boat": "fragata",
+   "cargo": "goods",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-getlisbon:c4d:p17",
+   "kind": "practice",
+   "location": "Fragata",
+   "numbers": [],
+   "period": "",
+   "place": "porto de Lisboa, cais de ambas as margens",
+   "who": ""
+  },
+  {
+   "action": "Fragatas varied in size, with a keeled hull and two cabins, one forward and one aft.",
+   "boat": "fragata",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-getlisbon:c4d:p18",
+   "kind": "description",
+   "location": "Fragata",
+   "numbers": [
+    {
+     "unit": "tonnes",
+     "value": "10 to 100",
+     "what": "displacement"
+    },
+    {
+     "unit": "metres",
+     "value": "20 to 25",
+     "what": "length"
+    },
+    {
+     "unit": "metres",
+     "value": "6.10",
+     "what": "beam"
+    },
+    {
+     "unit": "metres",
+     "value": "2.60",
+     "what": "depth"
+    },
+    {
+     "unit": "câmaras",
+     "value": "2",
+     "what": "cabins"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "A fragata had a small crew and, without favourable wind, was rowed along by a small boat usually towed behind it.",
+   "boat": "fragata, bote",
+   "cargo": "",
+   "conditions": "no favourable wind",
+   "gear": "remos",
+   "id": "m-hist-getlisbon:c4d:p19",
+   "kind": "practice",
+   "location": "Fragata",
+   "numbers": [
+    {
+     "unit": "men",
+     "value": "3 to 5",
+     "what": "crew"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": "three to five men"
+  },
+  {
+   "action": "The term fragata was also applied generally to similar Tagus boats, such as faluas, a medium size between bote and large fragata.",
+   "boat": "fragata, falua",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-getlisbon:c4d:p20",
+   "kind": "description",
+   "location": "Fragata",
+   "numbers": [],
+   "period": "",
+   "place": "Tejo",
+   "who": ""
+  },
+  {
+   "action": "Paddle-wheel and later propeller steamers began carrying passengers between the river's two banks, gradually displacing the small boats that had done the same job.",
+   "boat": "vapores (steamers) with paddle wheels, then propellers",
+   "cargo": "passengers",
+   "conditions": "",
+   "gear": "paddle wheels, then propeller",
+   "id": "m-hist-getlisbon:c4d:p21",
+   "kind": "event",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "from the 1860s (19th century)",
+   "place": "Tagus, between the two banks",
+   "who": ""
+  },
+  {
+   "action": "The Vila Franca de Xira bridge opened, speeding goods transport between the banks; upriver river navigation lost impact and stopped being profitable for the arrais (skippers).",
+   "boat": "",
+   "cargo": "goods",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-getlisbon:c4d:p22",
+   "kind": "event",
+   "location": "[page 2]",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1951",
+     "what": "year of bridge inauguration"
+    }
+   ],
+   "period": "1951",
+   "place": "Vila Franca de Xira, Tagus upriver",
+   "who": "arrais"
+  },
+  {
+   "action": "Fragatas and varinos survived almost to the present but practically vanished from the Tagus because of ferry-boats and road freight, especially after the Tagus bridge opened.",
+   "boat": "fragatas, varinos, ferry-boats",
+   "cargo": "cargo",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-getlisbon:c4d:p23",
+   "kind": "event",
+   "location": "[page 2]",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1966",
+     "what": "year of Tagus bridge inauguration"
+    }
+   ],
+   "period": "1966",
+   "place": "Tagus",
+   "who": ""
+  },
+  {
+   "action": "Thanks to the dedication of enthusiasts and local councils, some botes and canoas still survive as local heritage.",
+   "boat": "botes, canoas",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-getlisbon:c4d:p24",
+   "kind": "description",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "",
+   "place": "Sarilhos Pequenos, Moita",
+   "who": "local councils, enthusiasts"
+  },
+  {
+   "action": "Seixal council restored old local-traffic boats for tourism; they had served between quays and ports of the estuary until the early 1970s.",
+   "boat": "old local traffic boats",
+   "cargo": "",
+   "conditions": "restored for tourist purposes",
+   "gear": "",
+   "id": "m-hist-getlisbon:c4d:p25",
+   "kind": "practice",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "until early 1970s",
+   "place": "Seixal, Tagus estuary",
+   "who": "Câmara do Seixal"
+  },
+  {
+   "action": "Botes-de-fragata 'Baía do Seixal' and 'Gaivotas' and varino 'Amoroso' belong to the Seixal Ecomuseum's collection as pleasure craft.",
+   "boat": "bote-de-fragata 'Baía do Seixal', bote-de-fragata 'Gaivotas'",
+   "cargo": "",
+   "conditions": "used as recreational boats",
+   "gear": "",
+   "id": "m-hist-getlisbon:c4d:p26",
+   "kind": "description",
+   "location": "[page 2]",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1914",
+     "what": "year of 'Baía do Seixal'"
+    },
+    {
+     "unit": "year",
+     "value": "1934",
+     "what": "year of 'Gaivotas'"
+    },
+    {
+     "unit": "year",
+     "value": "1921",
+     "what": "year of 'Amoroso'"
+    }
+   ],
+   "period": "",
+   "place": "Seixal",
+   "who": "Ecomuseu Municipal do Seixal"
+  },
+  {
+   "action": "Other riverside municipalities also had surviving boats restored and preserved.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-getlisbon:c4d:p27",
+   "kind": "practice",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "",
+   "place": "Moita, Alcochete, Vila Franca de Xira, Azambuja",
+   "who": "municipalities of Moita, Alcochete, Vila Franca de Xira, Azambuja"
+  },
+  {
+   "action": "Fragatas, varinos and canoas were the best-known Tagus boats; today they survive in oral memory, images, literature, and models in municipal museums.",
+   "boat": "fragatas, varinos, canoas",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-getlisbon:c4d:p28",
+   "kind": "description",
+   "location": "Iconografia e Memória",
+   "numbers": [],
+   "period": "",
+   "place": "Tagus riverside towns",
+   "who": ""
+  },
+  {
+   "action": "The fragata, now gone, earned the nickname 'Queen of the Tagus Estuary' for its size, billowing sails, constant crossings between banks and its crew's life at the quay.",
+   "boat": "fragata",
+   "cargo": "",
+   "conditions": "",
+   "gear": "sails",
+   "id": "m-hist-getlisbon:c4d:p29",
+   "kind": "description",
+   "location": "Iconografia e Memória",
+   "numbers": [],
+   "period": "",
+   "place": "Tagus estuary, quays",
+   "who": "fragata crews"
+  },
+  {
+   "action": "The fragata inspired revue theatre scenes and many verses, including fados and songs that evoke nostalgia.",
+   "boat": "fragata",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-getlisbon:c4d:p30",
+   "kind": "description",
+   "location": "Iconografia e Memória",
+   "numbers": [],
+   "period": "",
+   "place": "Lisbon",
+   "who": ""
+  }
+ ],
+ "partsDone": [
+  0,
+  1,
+  2
+ ],
+ "partsTotal": 3,
+ "runAt": "2026-11-13T01:43:04.389Z",
+ "sourceId": "m-hist-getlisbon",
+ "textChars": 15709,
+ "title": "getLISBON, Breve história das embarcações do estuário do Tejo"
+}

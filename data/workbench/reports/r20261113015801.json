@@ -1,0 +1,2505 @@
+{
+ "boats": [],
+ "conceptsAt": "2026-11-12T20:36:38.898Z",
+ "conflicts": [
+  {
+   "concepts": [
+    "c1"
+   ],
+   "kind": "sailing",
+   "name": "Close-hauled",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro"
+   ],
+   "text": "Veleiro.net (pt-BR) uses both 'Orça Fechada' and 'orça' for close-hauled sailing.",
+   "type": "term"
+  },
+  {
+   "concepts": [
+    "c7"
+   ],
+   "kind": "sailing",
+   "name": "Reefing",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro"
+   ],
+   "text": "Method doc includes replacing the sail with a storm sail. Veleiro.net 'Rizar' covers folding the mainsail and rolling the genoa. 'rizo' covers reducing the mainsail only.",
+   "type": "definition"
+  },
+  {
+   "concepts": [
+    "c10"
+   ],
+   "kind": "hull",
+   "name": "Gaff rig",
+   "sources": [
+    "m-auth-method",
+    "m-hist-getlisbon"
+   ],
+   "text": "c10 describes the gaff rig used together with a jib; the candidate says the fragata flies its gaff sail with one or two headsails. This is a minor difference in the number of headsails, not a clear contradiction.",
+   "type": "number"
+  },
+  {
+   "concepts": [
+    "c18"
+   ],
+   "kind": "hull",
+   "name": "Leeboard",
+   "sources": [
+    "m-auth-method",
+    "m-hist-pedrosa"
+   ],
+   "text": "Existing concept describes a board lowered to reduce slip in shallow water. The candidate (tábua de bolina) describes a lateral keel on one side, one per side on the muleta, for lateen-rigged flat-bottomed boats; it also adds dates (documented 1710, on other boats 1785) not in the existing concept. Possibly complementary rather than conflicting.",
+   "type": "definition"
+  },
+  {
+   "concepts": [
+    "c19"
+   ],
+   "kind": "sailing",
+   "name": "Approach and docking",
+   "sources": [
+    "m-auth-method",
+    "m-hist-blk-portos",
+    "mmwdz14kpqwcc"
+   ],
+   "text": "Method doc describes the skill of controlling speed to come alongside. Fragateiro defines it as a mission phase triggered within a set distance of the target.",
+   "type": "definition"
+  },
+  {
+   "concepts": [
+    "c23"
+   ],
+   "kind": "sailing",
+   "name": "Sail trim",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro"
+   ],
+   "text": "Veleiro.net (pt-BR) uses both 'Ajuste das Velas' and 'mareação' for sail trim.",
+   "type": "term"
+  },
+  {
+   "concepts": [
+    "c25"
+   ],
+   "kind": "sailing",
+   "name": "Gust",
+   "sources": [
+    "m-auth-method"
+   ],
+   "text": "Method doc defines a gust as a sudden increase in wind. Fragateiro's gust_or_shift also includes changes in wind direction.",
+   "type": "definition"
+  },
+  {
+   "concepts": [
+    "c42"
+   ],
+   "kind": "hull",
+   "name": "Forestay",
+   "sources": [
+    "m-ref-veleiro",
+    "mmwdz14kpqwcc"
+   ],
+   "text": "Existing 'Forestay' is a wire from bow to masthead; the candidate 'estai' is a generic stay set with the varino's lateen sail. Similar, but the source does not say it runs from the bow.",
+   "type": "definition"
+  },
+  {
+   "concepts": [
+    "c67"
+   ],
+   "kind": "sailing",
+   "name": "Luffing (sail flapping)",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "text": "Fragateiro web game (en) uses 'sail_luffing', 'luffing' and 'flaps' for a sail flapping unfilled.",
+   "type": "term"
+  },
+  {
+   "concepts": [
+    "c89"
+   ],
+   "kind": "sailing",
+   "name": "Wind shift",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "text": "Veleiro.net 'rondada' describes only a shift away from the bow. 'rondada de vento' and fragateiro wind_shift describe any change in wind direction.",
+   "type": "definition"
+  }
+ ],
+ "counts": {
+  "boatsIn": 0,
+  "boatsMissing": 0,
+  "conflicts": 10,
+  "physicsNot": 89,
+  "physicsShown": 21,
+  "placesIn": 0,
+  "placesMissing": 0,
+  "practicesCovered": 0,
+  "practicesMissing": 38,
+  "practicesPartly": 0
+ },
+ "createdAt": "2026-11-13T01:58:01.110Z",
+ "game": "fragateiro",
+ "gameCommit": "20490724d579e76e1be610bbafaa14829922a7e3",
+ "physics": [
+  {
+   "concepts": [
+    "c1"
+   ],
+   "kind": "sailing",
+   "name": "Close-hauled",
+   "needs": "",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c2"
+   ],
+   "kind": "sailing",
+   "name": "Reaching (wind abeam to abaft the beam)",
+   "needs": "reaching point of sail",
+   "sources": [
+    "m-auth-method"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c3"
+   ],
+   "kind": "sailing",
+   "name": "Running (wind astern)",
+   "needs": "",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c4"
+   ],
+   "kind": "sailing",
+   "name": "In irons / head to wind",
+   "needs": "",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c5"
+   ],
+   "kind": "sailing",
+   "name": "Sheeting in",
+   "needs": "sheet trim control",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c6"
+   ],
+   "kind": "sailing",
+   "name": "Easing the sheets",
+   "needs": "sheet trim control",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c7"
+   ],
+   "kind": "sailing",
+   "name": "Reefing",
+   "needs": "reefing control",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c8"
+   ],
+   "kind": "hull",
+   "name": "Storm sail",
+   "needs": "storm sail option",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c9"
+   ],
+   "kind": "hull",
+   "name": "Rig type",
+   "needs": "multiple rig types",
+   "sources": [
+    "m-auth-method"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c10"
+   ],
+   "kind": "hull",
+   "name": "Gaff rig",
+   "needs": "gaff rig and jib",
+   "sources": [
+    "m-auth-method",
+    "m-hist-getlisbon"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c11"
+   ],
+   "kind": "hull",
+   "name": "Lug rig",
+   "needs": "lug rig option",
+   "sources": [
+    "m-auth-method"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c12"
+   ],
+   "kind": "sailing",
+   "name": "Heading up",
+   "needs": "steering toward wind",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c13"
+   ],
+   "kind": "sailing",
+   "name": "Bearing away",
+   "needs": "steering away from wind",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c14"
+   ],
+   "kind": "sailing",
+   "name": "Tacking",
+   "needs": "",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro",
+    "m-hist-pedrosa"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c15"
+   ],
+   "kind": "sailing",
+   "name": "Gybing",
+   "needs": "",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro",
+    "m-hist-pedrosa"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c17"
+   ],
+   "kind": "sailing",
+   "name": "Drifting with current and wind",
+   "needs": "tide and current",
+   "sources": [
+    "m-auth-method"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c18"
+   ],
+   "kind": "hull",
+   "name": "Leeboard",
+   "needs": "leeboard and water depth",
+   "sources": [
+    "m-auth-method",
+    "m-hist-pedrosa"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c19"
+   ],
+   "kind": "sailing",
+   "name": "Approach and docking",
+   "needs": "",
+   "sources": [
+    "m-auth-method",
+    "m-hist-blk-portos",
+    "mmwdz14kpqwcc"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c22"
+   ],
+   "kind": "sailing",
+   "name": "Points of sail",
+   "needs": "",
+   "sources": [
+    "m-auth-method"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c23"
+   ],
+   "kind": "sailing",
+   "name": "Sail trim",
+   "needs": "sail trim feedback marker",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c24"
+   ],
+   "kind": "sailing",
+   "name": "Heel",
+   "needs": "",
+   "sources": [
+    "m-auth-method",
+    "m-ref-veleiro"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c25"
+   ],
+   "kind": "sailing",
+   "name": "Gust",
+   "needs": "",
+   "sources": [
+    "m-auth-method"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c26"
+   ],
+   "kind": "hull",
+   "name": "Halyard",
+   "needs": "sail hoisting control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c27"
+   ],
+   "kind": "hull",
+   "name": "Quarter (hull area)",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro",
+    "m-hist-pedrosa"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c28"
+   ],
+   "kind": "hull",
+   "name": "Topping lift",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c29"
+   ],
+   "kind": "hull",
+   "name": "Beam (widest part)",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c30"
+   ],
+   "kind": "hull",
+   "name": "Bow quarter (hull area)",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c31"
+   ],
+   "kind": "hull",
+   "name": "Port side",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro",
+    "m-hist-pedrosa"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c32"
+   ],
+   "kind": "hull",
+   "name": "Starboard side",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro",
+    "m-hist-pedrosa"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c33"
+   ],
+   "kind": "hull",
+   "name": "Shrouds",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro",
+    "m-hist-pedrosa"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c34"
+   ],
+   "kind": "hull",
+   "name": "Boom vang",
+   "needs": "boom vang control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c35"
+   ],
+   "kind": "hull",
+   "name": "Tiller",
+   "needs": "tiller steering control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c36"
+   ],
+   "kind": "hull",
+   "name": "Winch",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c37"
+   ],
+   "kind": "hull",
+   "name": "Cockpit",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c38"
+   ],
+   "kind": "hull",
+   "name": "Spreader",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c39"
+   ],
+   "kind": "hull",
+   "name": "Cleat",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c40"
+   ],
+   "kind": "hull",
+   "name": "Downhaul",
+   "needs": "downhaul control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c41"
+   ],
+   "kind": "hull",
+   "name": "Backstay",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c42"
+   ],
+   "kind": "hull",
+   "name": "Forestay",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro",
+    "mmwdz14kpqwcc"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c43"
+   ],
+   "kind": "hull",
+   "name": "Turnbuckle",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c44"
+   ],
+   "kind": "hull",
+   "name": "Chainplate fitting",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c45"
+   ],
+   "kind": "hull",
+   "name": "Sheet",
+   "needs": "",
+   "sources": [
+    "m-ref-veleiro",
+    "m-hist-pedrosa"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c46"
+   ],
+   "kind": "hull",
+   "name": "Genoa",
+   "needs": "genoa sail option",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c47"
+   ],
+   "kind": "hull",
+   "name": "Gooseneck",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c48"
+   ],
+   "kind": "hull",
+   "name": "Lifeline",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c49"
+   ],
+   "kind": "hull",
+   "name": "Rudder",
+   "needs": "",
+   "sources": [
+    "m-ref-veleiro",
+    "m-hist-blk-portos",
+    "m-hist-getlisbon",
+    "m-hist-pedrosa"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c50"
+   ],
+   "kind": "hull",
+   "name": "Rigging (spars and stays)",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c51"
+   ],
+   "kind": "hull",
+   "name": "Mast",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro",
+    "m-hist-blk-portos",
+    "m-hist-pedrosa",
+    "mmwdz10zt3xye"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c52"
+   ],
+   "kind": "hull",
+   "name": "Mainsail",
+   "needs": "mainsail option",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c53"
+   ],
+   "kind": "hull",
+   "name": "Blocks",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c55"
+   ],
+   "kind": "hull",
+   "name": "Outhaul",
+   "needs": "outhaul control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c57"
+   ],
+   "kind": "hull",
+   "name": "Stern",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro",
+    "m-hist-pedrosa"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c58"
+   ],
+   "kind": "hull",
+   "name": "Bow",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro",
+    "m-hist-pedrosa",
+    "mmwdz14kpqwcc"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c59"
+   ],
+   "kind": "hull",
+   "name": "Keel",
+   "needs": "keel leeway resistance",
+   "sources": [
+    "m-ref-veleiro",
+    "m-hist-getlisbon",
+    "m-hist-pedrosa",
+    "mmwdz12sr2kq0",
+    "mmwdz14kpqwcc"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c60"
+   ],
+   "kind": "sailing",
+   "name": "Bare poles",
+   "needs": "bare poles in storm",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c61"
+   ],
+   "kind": "sailing",
+   "name": "Wing and wing",
+   "needs": "wing and wing sail setting",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c62"
+   ],
+   "kind": "sailing",
+   "name": "Port tack",
+   "needs": "tack side indicator",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c63"
+   ],
+   "kind": "sailing",
+   "name": "Starboard tack",
+   "needs": "tack side indicator",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c64"
+   ],
+   "kind": "sailing",
+   "name": "Windward",
+   "needs": "windward side indicator",
+   "sources": [
+    "m-ref-veleiro",
+    "m-hist-pedrosa"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c65"
+   ],
+   "kind": "sailing",
+   "name": "Beating to windward",
+   "needs": "repeated tacking upwind",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c66"
+   ],
+   "kind": "sailing",
+   "name": "Close reach",
+   "needs": "",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c67"
+   ],
+   "kind": "sailing",
+   "name": "Luffing (sail flapping)",
+   "needs": "",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c68"
+   ],
+   "kind": "sailing",
+   "name": "Leeward",
+   "needs": "leeward side indicator",
+   "sources": [
+    "m-ref-veleiro",
+    "m-hist-pedrosa"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c69"
+   ],
+   "kind": "sailing",
+   "name": "Beam reach",
+   "needs": "",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c70"
+   ],
+   "kind": "sailing",
+   "name": "Broad reach",
+   "needs": "",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c71"
+   ],
+   "kind": "sailing",
+   "name": "True wind",
+   "needs": "",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c72"
+   ],
+   "kind": "sailing",
+   "name": "Apparent wind",
+   "needs": "apparent wind calculation",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c73"
+   ],
+   "kind": "sailing",
+   "name": "Sail as airfoil",
+   "needs": "sail aerodynamics model",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c74"
+   ],
+   "kind": "sailing",
+   "name": "Drive (windward thrust)",
+   "needs": "sail aerodynamics model",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c75"
+   ],
+   "kind": "sailing",
+   "name": "Lift (leeward suction)",
+   "needs": "sail aerodynamics model",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c76"
+   ],
+   "kind": "sailing",
+   "name": "Slot effect",
+   "needs": "headsail and mainsail interaction",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c77"
+   ],
+   "kind": "hull",
+   "name": "Leech",
+   "needs": "leech flutter trim feedback",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c78"
+   ],
+   "kind": "sailing",
+   "name": "Over-eased sails",
+   "needs": "over-eased sail feedback",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c79"
+   ],
+   "kind": "sailing",
+   "name": "Downwind sail setting rule",
+   "needs": "downwind sail trim",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c80"
+   ],
+   "kind": "sailing",
+   "name": "Upwind trim rule",
+   "needs": "upwind trim guidance",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c81"
+   ],
+   "kind": "sailing",
+   "name": "Leg of a zigzag course",
+   "needs": "tack legs tracking",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c83"
+   ],
+   "kind": "sailing",
+   "name": "Tiller centred",
+   "needs": "rudder centring control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c84"
+   ],
+   "kind": "hull",
+   "name": "Boom",
+   "needs": "boom swing in gybe",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c85"
+   ],
+   "kind": "hull",
+   "name": "Mainsheet",
+   "needs": "mainsheet control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c86"
+   ],
+   "kind": "sailing",
+   "name": "Gybe procedure",
+   "needs": "gybe step sequence",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c87"
+   ],
+   "kind": "sailing",
+   "name": "Wind on the quarter",
+   "needs": "quartering wind point of sail",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c88"
+   ],
+   "kind": "sailing",
+   "name": "Gybe warning command",
+   "needs": "crew commands",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c89"
+   ],
+   "kind": "sailing",
+   "name": "Wind shift",
+   "needs": "",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c90"
+   ],
+   "kind": "hull",
+   "name": "Wind indicator",
+   "needs": "wind indicator display",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c91"
+   ],
+   "kind": "sailing",
+   "name": "Sail area",
+   "needs": "sail area effect on speed",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c92"
+   ],
+   "kind": "hull",
+   "name": "Headsail furler",
+   "needs": "headsail furling control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c93"
+   ],
+   "kind": "sailing",
+   "name": "Excessive heeling",
+   "needs": "heel stability model",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c94"
+   ],
+   "kind": "sailing",
+   "name": "Drag",
+   "needs": "hull drag from heel",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c95"
+   ],
+   "kind": "sailing",
+   "name": "Leeway (sideways drift)",
+   "needs": "",
+   "sources": [
+    "m-ref-veleiro",
+    "m-hist-pedrosa"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c96"
+   ],
+   "kind": "sailing",
+   "name": "Upwind sailing",
+   "needs": "upwind performance model",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c97"
+   ],
+   "kind": "hull",
+   "name": "Genoa cars",
+   "needs": "genoa car adjustment",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c98"
+   ],
+   "kind": "sailing",
+   "name": "Headsail selection table",
+   "needs": "headsail choice by wind",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c99"
+   ],
+   "kind": "hull",
+   "name": "Head of the genoa",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c101"
+   ],
+   "kind": "hull",
+   "name": "Reefed tack corner",
+   "needs": "reefing control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c102"
+   ],
+   "kind": "hull",
+   "name": "Reefed clew corner",
+   "needs": "reefing control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c103"
+   ],
+   "kind": "hull",
+   "name": "Reef point",
+   "needs": "reefing control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c104"
+   ],
+   "kind": "sailing",
+   "name": "First reef",
+   "needs": "reefing control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c105"
+   ],
+   "kind": "sailing",
+   "name": "Second reef",
+   "needs": "reefing control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c106"
+   ],
+   "kind": "hull",
+   "name": "Dedicated reef lines",
+   "needs": "reefing control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c107"
+   ],
+   "kind": "hull",
+   "name": "Reef auxiliary lines",
+   "needs": "reefing control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c108"
+   ],
+   "kind": "sailing",
+   "name": "Sail camber",
+   "needs": "halyard tension and sail shape",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c109"
+   ],
+   "kind": "hull",
+   "name": "Luff",
+   "needs": "halyard tension and sail shape",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c110"
+   ],
+   "kind": "sailing",
+   "name": "Baggy sail",
+   "needs": "halyard tension and sail shape",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c111"
+   ],
+   "kind": "sailing",
+   "name": "Sail wrinkles",
+   "needs": "halyard tension and sail shape",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c112"
+   ],
+   "kind": "hull",
+   "name": "Foot of the mainsail",
+   "needs": "halyard tension and sail shape",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c113"
+   ],
+   "kind": "hull",
+   "name": "Traveller",
+   "needs": "traveller control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c114"
+   ],
+   "kind": "hull",
+   "name": "Hanks",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c115"
+   ],
+   "kind": "sailing",
+   "name": "Tensioning the halyard",
+   "needs": "halyard tension control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c116"
+   ],
+   "kind": "sailing",
+   "name": "Wind strength and halyard tension",
+   "needs": "halyard tension and sail shape",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c117"
+   ],
+   "kind": "hull",
+   "name": "Aids to navigation",
+   "needs": "navigation marks in channels",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c118"
+   ],
+   "kind": "hull",
+   "name": "Buoys",
+   "needs": "navigation marks in channels",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c119"
+   ],
+   "kind": "hull",
+   "name": "Fixed beacons",
+   "needs": "navigation marks in channels",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c120"
+   ],
+   "kind": "hull",
+   "name": "Lateral channel marks",
+   "needs": "",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c121"
+   ],
+   "kind": "hull",
+   "name": "Unlit buoys",
+   "needs": "navigation marks in channels",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c122"
+   ],
+   "kind": "hull",
+   "name": "Mid-channel buoys",
+   "needs": "navigation marks in channels",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c123"
+   ],
+   "kind": "hull",
+   "name": "Junction marks",
+   "needs": "navigation marks in channels",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c124"
+   ],
+   "kind": "hull",
+   "name": "Green junction mark (main channel right)",
+   "needs": "navigation marks in channels",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c125"
+   ],
+   "kind": "hull",
+   "name": "Red junction mark (main channel left)",
+   "needs": "navigation marks in channels",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c126"
+   ],
+   "kind": "hull",
+   "name": "Isolated danger buoys",
+   "needs": "navigation marks in channels",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c127"
+   ],
+   "kind": "hull",
+   "name": "Life jacket",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c128"
+   ],
+   "kind": "sailing",
+   "name": "Hypothermia",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c130"
+   ],
+   "kind": "hull",
+   "name": "Stays (standing rigging wires)",
+   "needs": "rig loads and failure",
+   "sources": [
+    "m-ref-veleiro",
+    "m-hist-getlisbon"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c131"
+   ],
+   "kind": "sailing",
+   "name": "Seasickness",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c138"
+   ],
+   "kind": "sailing",
+   "name": "Motoring sailboat",
+   "needs": "engine propulsion",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c144"
+   ],
+   "kind": "sailing",
+   "name": "Tack side (which side the wind comes from)",
+   "needs": "",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "shown"
+  },
+  {
+   "concepts": [
+    "c145"
+   ],
+   "kind": "sailing",
+   "name": "Collision course",
+   "needs": "other traffic and collision detection",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c150"
+   ],
+   "kind": "sailing",
+   "name": "Clear, decisive course change",
+   "needs": "other traffic and collision avoidance",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c151"
+   ],
+   "kind": "sailing",
+   "name": "Constant compass bearing",
+   "needs": "other traffic and bearings",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c152"
+   ],
+   "kind": "sailing",
+   "name": "Blind zone behind the genoa",
+   "needs": "visibility and other traffic",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c158"
+   ],
+   "kind": "sailing",
+   "name": "Lowering the genoa",
+   "needs": "sail handling control",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c160"
+   ],
+   "kind": "sailing",
+   "name": "Close-hauled approach to the victim",
+   "needs": "person overboard event",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c161"
+   ],
+   "kind": "sailing",
+   "name": "Leeward-side rescue",
+   "needs": "person overboard event",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c162"
+   ],
+   "kind": "hull",
+   "name": "Lower leeward rail",
+   "needs": "heel and freeboard",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c163"
+   ],
+   "kind": "sailing",
+   "name": "Gybe return to a person overboard",
+   "needs": "person overboard event",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c164"
+   ],
+   "kind": "sailing",
+   "name": "Final approach to the victim",
+   "needs": "person overboard event",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c165"
+   ],
+   "kind": "sailing",
+   "name": "Figure-eight recovery",
+   "needs": "person overboard event",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "not shown"
+  },
+  {
+   "concepts": [
+    "c166"
+   ],
+   "kind": "hull",
+   "name": "Reef knot",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c167"
+   ],
+   "kind": "hull",
+   "name": "Round turn and two half hitches",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c168"
+   ],
+   "kind": "hull",
+   "name": "Bowline",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c169"
+   ],
+   "kind": "hull",
+   "name": "Figure-eight knot",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c170"
+   ],
+   "kind": "hull",
+   "name": "Clove hitch",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c171"
+   ],
+   "kind": "hull",
+   "name": "Sheet bend",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c172"
+   ],
+   "kind": "hull",
+   "name": "Double sheet bend",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c173"
+   ],
+   "kind": "hull",
+   "name": "Cleat hitch",
+   "needs": "out of scope",
+   "sources": [
+    "m-ref-veleiro"
+   ],
+   "status": "out of scope"
+  },
+  {
+   "concepts": [
+    "c185"
+   ],
+   "kind": "sailing",
+   "name": "Aground",
+   "needs": "",
+   "sources": [
+    "mmwdz15icx6en"
+   ],
+   "status": "shown"
+  }
+ ],
+ "places": [],
+ "practices": [
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- mediotejo (Introduction): Barcos d'água acima carried goods between the Ribatejo and Lisboa, sailing down and up the Tejo, taking produce to the capital and bringing back goods.",
+    "- mediotejo (Boats section): The run to Lisboa carried wine, cork, coal, cereals, olive oil, straw, firewood and fruit; the return brought salt, manufactured goods, fertiliser and news.",
+    "- Freire (intro): Quays served as meeting points where goods arrived and left; cargo of people and goods went by river to Santarém, Vila Franca de Xira and Lisbon.",
+    "- Freire (intro): Upriver products were unloaded at those ports; boats returned with varied goods to Barquinha, where animal-drawn carts took them on to other territories.",
+    "- Freire (Crónica): Boats traded up and down the river, carrying forest wealth, ice from Lousã and Estrela mountains and farm produce, returning with salt, cloth and paper.",
+    "- Freire (Crónica): Vila Nova da Barquinha remembers a glorious time when its fragatas sailed the Tagus down to the Mar da Palha or the open sea."
+   ],
+   "name": "Barcos d'água acima carrying freight Ribatejo-Lisboa",
+   "sources": [
+    "m-hist-blk-portos",
+    "m-hist-freire",
+    "mmwdz12sr2kq0"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- mediotejo (Boats section): Crew roles: the arrais, often the owner, commanded and steered; experienced camaradas worked the boat; young moços learned the trade.",
+    "- Freire (Crónica): The arrais or master of the vessel is portrayed as a symbol of the Tagus, knowing the river's secrets and forecasting weather by the stars without instruments."
+   ],
+   "name": "Barco d'água acima crew roles",
+   "sources": [
+    "m-hist-blk-portos",
+    "m-hist-freire"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- getLISBON (Introduction): Anchored ships offshore were supplied by various types of small boats.",
+    "- Cacilheiros no Rio Tejo (Introduction): Anchored ships offshore were supplied by various types of smaller boats.",
+    "- Barcos Tradicionais do Tejo e  (Tipologias): Boats transshipped cargo between large ships and the port of Lisbon."
+   ],
+   "name": "Supplying anchored ships at Lisbon",
+   "sources": [
+    "m-hist-getlisbon",
+    "mmwdz14kpqwcc",
+    "mmwdz16aqbi7n"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- getLISBON (Introduction): River traffic linked the two banks, coast and interior, and mouth and Riba-Tejo, carrying goods and people and supporting fishing, until the mid-20th century.",
+    "- Museu da Paisagem (Travessia Fluvial Belém - Trafaria): Historically the Tagus was the only road for national and intercontinental trade and linked the two banks; the crossing still carries this maritime heritage.",
+    "- Cacilheiros no Rio Tejo (Introduction): River traffic linked the two banks, coast and interior, carrying goods and people and supporting fishing in the river and nearby coast until the mid-20th century.",
+    "- Barcos Tradicionais do Tejo e  (Tipologias): Before the bridge opened, boats carried people and goods and linked towns between Santarém and Cascais faster than other means.",
+    "- Barcos Tradicionais do Tejo e  (Tipologias): The river was the era's motorway, busy with varied craft: fragatas, varinos, faluas, cangueiros, botes, botes de fragata, botes de pinho, barcos de água acima, canoas and catraios.",
+    "- Barcos Tradicionais do Tejo e  (Tipologias): Smaller boats carried people and goods such as fresh produce and groceries."
+   ],
+   "name": "River traffic linking Tagus banks until mid-20th century",
+   "sources": [
+    "m-hist-getlisbon",
+    "m-hist-paisagem",
+    "mmwdz14kpqwcc",
+    "mmwdz16aqbi7n"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- getLISBON (Fragata): Fragatas loaded and unloaded ships anchored in Lisbon harbour and handled cargo at quays on both banks.",
+    "- Cacilheiros no Rio Tejo (Fragata): Fragata loaded and unloaded ships anchored in Lisbon's port and goods at quays on both banks.",
+    "- Cacilheiros no Rio Tejo (photo captions): Tagus frigates approached Cais das Colunas at Praça do Comércio while a steamer departed."
+   ],
+   "name": "Fragatas handling cargo at Lisbon harbour",
+   "sources": [
+    "m-hist-getlisbon",
+    "mmwdz14kpqwcc"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- getLISBON (Fragata): A fragata had a small crew and, without favourable wind, was rowed along by a small boat usually towed behind it.",
+    "- getLISBON (Iconografia e Memória): The fragata, now gone, earned the nickname 'Queen of the Tagus Estuary' for its size, billowing sails, constant crossings between banks and its crew's life at the quay.",
+    "- Cacilheiros no Rio Tejo (Fragata): Fragata crews were small.",
+    "- Cacilheiros no Rio Tejo (Fragata): Without a favourable wind, the fragata was rowed along by a small boat usually towed behind it."
+   ],
+   "name": "Fragata crew and rowing",
+   "sources": [
+    "m-hist-getlisbon",
+    "mmwdz14kpqwcc"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- Freire (Crónica): Overland trade was hard: no reasonable roads linked municipalities, so goods moved by ox-drawn carts and wagons to the river ports of the riba Tejo."
+   ],
+   "name": "Overland ox-cart transport to river ports",
+   "sources": [
+    "m-hist-freire"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- Freire (page 4): Almeida Garrett describes a steamer passenger trip from Santarém to Lisbon, nearly empty yet slow, arriving at Terreiro do Paço around five in the afternoon.",
+    "- Freire (page 5): Alexandre Herculano records a steamer journey upriver from Lisbon, via riverside towns to the Azambuja canal mouth, then onward by carriage to Santarém.",
+    "- Freire (page 5): Travellers from Lisbon often changed boats, going by steamer to a place such as Vila Franca or Santarém, then taking a sailing boat upstream."
+   ],
+   "name": "Steamer passenger travel on the upper Tagus",
+   "sources": [
+    "m-hist-freire"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- Freire (page 6): Chartered steam cargo boats, not passenger boats, from Lisbon moored at the Cais do Vapor in Barquinha, obliged to make a return voyage.",
+    "- Freire (page 4): The Prado paper mill had warehouses beside the steam quay on the east side of Barquinha town, so goods often arrived and left there.",
+    "- Freire (page 4): The Prado and Marianaia mills made writing, foolscap and wrapping papers from rags and wool, which required a warehouse at the Barquinha steam quay.",
+    "- Freire (page 4): Shipments of unspecified wool fabrics from Belgium and England, brought by steamboat, were stored in the Barquinha warehouse to be processed."
+   ],
+   "name": "Steam cargo and warehouse trade at Barquinha quay",
+   "sources": [
+    "m-hist-freire"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- Freire (page 4): Goods were moved from the warehouse onto ox carts and taken along the macadam district road no. 51 to the paper mills."
+   ],
+   "name": "Overland ox-cart transport to river ports",
+   "sources": [
+    "m-hist-freire"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- Pedrosa (p. 14): Tartaranha fishermen supplied fish to Lisbon and acted as bar pilots assisting India ships, royal fleets and merchant ships.",
+    "- Pedrosa (p. 14): The first regulation for Lisbon bar pilotage admitted as pilots only those with ten years of continuous experience on offshore fishing boats.",
+    "- Pedrosa ([page 36]): Muleta crews also performed pilotage services.",
+    "- Pedrosa (page 37): The muleta served as the boat of the pilots of the Lisbon bar, in the main Portuguese port where sailors from everywhere passed."
+   ],
+   "name": "Tartaranha fishermen as bar pilots and fish suppliers",
+   "sources": [
+    "m-hist-pedrosa"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- Pedrosa (page 17): During João IV's reign some Frenchmen sought to introduce a new model of tartaranha with a vessel also of a new type.",
+    "- Pedrosa ([page 17]): A king used the word tartana (vessel) together with tartaranha (net) in a letter, after deep-sea line-and-hook fishermen had opposed a French fishing proposal and the king refused it.",
+    "- Pedrosa ([page 17]): Two Frenchmen again asked to introduce the new tartaranha net and vessel; the king passed the request to Lisbon's city senate, which advised against it and the king refused.",
+    "- Pedrosa ([page 17]): The senate argued French tartanas resembled the launches of Moorish corsairs who raided the coast, so fishermen might mistake them and confront them by accident.",
+    "- Pedrosa ([page 17]): Estevam da Luz asked leave to build four large vessels at his own expense to fish far out at sea; the king granted a four-year exclusive licence.",
+    "- Pedrosa ([page 17-18]): The Espírito Santo brotherhood, representing deep-sea fishermen, again opposed the petition, but the senate called the invention very useful and favoured it."
+   ],
+   "name": "French proposals to introduce the tartana in Portugal",
+   "sources": [
+    "m-hist-pedrosa"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- Pedrosa ([page 18]): Spanish author Veitia Linage described tartanas as lateen-sailed Levantine-crewed vessels suited to fishing at sea, some sent to the Indies; foreign sailors were needed for the sails.",
+    "- Pedrosa ([page 18]): The tartana had lateen sails for navigating and extra sails for trawl fishing, which required foreign (French) sailors.",
+    "- Pedrosa (16. As Velas e a Rede): Duhamel Du Monceau said the French tartana could trawl with four to ten sails, though known images show fewer."
+   ],
+   "name": "Tartana rigging and foreign crews",
+   "sources": [
+    "m-hist-pedrosa"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- Pedrosa ([page 18]): The oldest known illustration of the French fishing tartana appears in an album by Jean Jouve of Marseilles.",
+    "- Pedrosa ([page 18, section 10]): The earliest illustration of the muleta, not yet mentioned by Portuguese authors, appears in Gueroult du Pas's album published in Paris, which also shows the tartana for fishing off Provence and Italy.",
+    "- Pedrosa ([page 18]): Figure 2 shows three tartanas: one with a single mast and lateen sail, one with an extra triangular sail on a pole, one fully rigged for beam trawling.",
+    "- Pedrosa ([page 18-20]): The muleta is shown under way without trawl rigging, with a forward-leaning mast, lateen sail, forward boom with a square sail, raised inward-curving ends and a leeboard on each quarter.",
+    "- Pedrosa ([page 28]): The tartana, used for fishing and cargo, is documented at Sanlúcar de Barrameda since the 18th century; a c.1910-1920 photo shows a muleta-like one-mast lateen rig."
+   ],
+   "name": "Early illustrations of tartana and muleta",
+   "sources": [
+    "m-hist-pedrosa"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- Pedrosa ([page 20]): This is the first documentation of the leeboard in Portugal; it appears on other vessels only later, in the Caderno de todos os barcos do Tejo.",
+    "- Pedrosa ([page 20]): The muleta has three features never seen on French fishing tartanas: inward-curving bow and stern, forward-leaning mast, and leeboard. The 1710 album shows leeboards only on Atlantic boats.",
+    "- Pedrosa ([page 20]): The leeboard reduces leeward drift and prevents capsizing; it is needed only on flat or nearly flat-bottomed lateen-rigged boats, not on round-rigged ones, and is lowered on one side.",
+    "- Pedrosa ([page 20]): Two theories exist on the leeboard's origin in Europe; one holds it is Chinese and reached Holland in the late 16th century.",
+    "- Pedrosa ([page 21]): The muleta's leeboard took several different shapes, while the Dutch yacht (jachten) sailing the Indian Ocean had a very large one.",
+    "- Pedrosa ([page 21]): The muleta used its leeward leeboard while sailing to reduce leeway, one board on each side; Portuguese authors name it variously (tábua de bolina, pau de borda, pá de borda, esparrela de deriva, tábua de abatimento)."
+   ],
+   "name": "Leeboard of the muleta and its origins",
+   "sources": [
+    "m-hist-pedrosa"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- Pedrosa ([page 23]): The muleta fished with the tartaranha net in the Tagus and Sado estuaries and at sea between Cabo da Roca and Setúbal.",
+    "- Embarcações do Rio Tejo (2.2): Muletas are registered at south-bank ports such as Barreiro and Seixal but fish in the Embocadura waters called Entre-Cabos."
+   ],
+   "name": "Muleta fishing grounds with tartaranha net",
+   "sources": [
+    "m-hist-pedrosa",
+    "mmwdz12sr2kq0"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- Pedrosa ([page 29]): Muletas and rascas ventured beyond the bar, sometimes many miles out, seeking cargo from abundant ocean fisheries.",
+    "- barcos do tejo ([page 3]): The rasca sails out over the bar to load figs at Algarve ports."
+   ],
+   "name": "Muletas and rascas trading beyond the bar",
+   "sources": [
+    "m-hist-pedrosa",
+    "mmwdz13qounll"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- Pedrosa ([page 29]): Muletas did coastal trading to the Algarve, bringing its products to the Tagus or exchanging them at Moroccan ports."
+   ],
+   "name": "Muleta coastal trade to Algarve and Morocco",
+   "sources": [
+    "m-hist-pedrosa"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- Pedrosa ([pages 29-30]): A muleta could be rigged as a yacht (iate) with two or three masts for some commercial commission.",
+    "- barcos do tejo ([page 3]): The moleta, used in fishing, is also rigged as a hiate to carry out some commercial commission."
+   ],
+   "name": "Muleta rigged as iate",
+   "sources": [
+    "m-hist-pedrosa",
+    "mmwdz13qounll"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- Pedrosa ([page 30]): Furling the sail: crew climbed the yard, first reducing sail area with brails, then rolling the cloth by hand and securing it."
+   ],
+   "name": "Furling the muleta sail",
+   "sources": [
+    "m-hist-pedrosa"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- Pedrosa ([page 32]): Rebelo says muletas paid out cable so the net reached the bottom, hauls lasted hours and the net was hauled by hand; the author doubts this.",
+    "- Pedrosa ([page 32]): Comparable boats used hoisting gear for nets: the lancha poveira had a windlass, and Dutch fishing ships show nets rigged to cables going to the masthead."
+   ],
+   "name": "Hauling the tartaranha net",
+   "sources": [
+    "m-hist-pedrosa"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- Pedrosa ([page 32]): The author corrects other writers: the beach-hauled net described at Costa de Caparica is the xávega, not the tartaranha net."
+   ],
+   "name": "Xávega beach-hauled net at Costa de Caparica",
+   "sources": [
+    "m-hist-pedrosa"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- Pedrosa ([page 36]): A 1730 description of Lisbon reports a huge quantity of fish unloaded by caravelles and muletes."
+   ],
+   "name": "Fish landing at Lisbon by muletas",
+   "sources": [
+    "m-hist-pedrosa"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- Pedrosa ([page 36]): Each cod-fishing ship carried several small boats that left at dawn daily from the fishing ground and returned at dusk with the catch.",
+    "- Pedrosa ([page 36]): Around 1875 the small boats carried by cod ships became dories; before that they were larger and heavier."
+   ],
+   "name": "Cod ships' small boats",
+   "sources": [
+    "m-hist-pedrosa"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- Embarcações do Rio Tejo (Embarcações do Médio Tejo): Boats of the Middle Tagus worked river fishing, transport and crossings between Vila Velha de Rodão and Constância, using oars.",
+    "- Embarcações do Rio Tejo (Embarcações do Baixo Tejo): Lower Tagus boats did river fishing, transport and crossings between Constância and Santarém.",
+    "- Embarcações do Rio Tejo (Embarcações do Baixo Tejo): Avieira boats were used for river fishing and as dwellings between Santarém and Sacavém.",
+    "- Embarcações do Rio Tejo (Embarcações do Baixo Tejo): Lower Tagus boats are listed with types such as canoa, bateira, catrafuço, culé, barco do tráfego and varino, with dimensions given.",
+    "- Embarcações do Rio Tejo (Embarcações do Estuário - Mouchões): Around Vila Franca de Xira, small boats did river fishing, carried fish and small goods, and ferried people.",
+    "- Embarcações do Rio Tejo (Embarcações do Estuário - Mouchões): Cargo boats carried goods upstream and downstream from Vila Franca de Xira; upstream boats lowered the mast to pass under the Marechal Carmona bridge."
+   ],
+   "name": "Boat types and uses by Tagus section",
+   "sources": [
+    "mmwdz12sr2kq0",
+    "mmwdz16aqbi7n"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- Embarcações do Rio Tejo (Mar da Palha (1)): Boats carried passengers between Cacilhas, Almada and Lisbon."
+   ],
+   "name": "Bote passenger service Cacilhas-Almada-Lisboa",
+   "sources": [
+    "mmwdz12sr2kq0"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- Embarcações do Rio Tejo (Mar da Palha (1)): Larger keel boats carried people and cargo from Cacilhas to Ribatejo ports and the estuary's south bank."
+   ],
+   "name": "Keel boats carrying people and cargo from Cacilhas",
+   "sources": [
+    "mmwdz12sr2kq0"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- Embarcações do Rio Tejo (Mar da Palha (4)): The bote of the tapa-esteiros fishing art fished with support from the canoa das redes."
+   ],
+   "name": "Tapa-esteiros fishing in Mar da Palha",
+   "sources": [
+    "mmwdz12sr2kq0"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- Embarcações do Rio Tejo (2.2): Avieiros, from Praia da Vieira, fished almost exclusively in the river, living aboard bateiras or in stilt-house villages they created."
+   ],
+   "name": "Avieiros fishing and living aboard bateiras",
+   "sources": [
+    "mmwdz12sr2kq0"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- Embarcações do Rio Tejo (2.2): In the Mouchões, some Avieiros remain, but the main activity is traffic and freight transport, partly in boats native to Vila Franca de Xira."
+   ],
+   "name": "Avieiros and freight traffic in the Mouchões",
+   "sources": [
+    "mmwdz12sr2kq0"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- Embarcações do Rio Tejo (2.2): Foz and Embocadura are devoted to sea fishing, with fishermen from all over Portugal, including Galicians.",
+    "- Embarcações do Rio Tejo (2.2): Fishing boats there are either keeled with transom stern, suggesting southern origin, or double-ended flat-bottomed, typical of the Aveiro lagoon."
+   ],
+   "name": "Sea fishing at Foz and Embocadura",
+   "sources": [
+    "mmwdz12sr2kq0"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- barcos do tejo ([page 3]): Most of these boats came from the Barreiro and Seixal shipyards, whose residents also commonly formed their crews; Trafaria residents supplied most fishing crews."
+   ],
+   "name": "Crews and shipyards of Barreiro, Seixal and Trafaria",
+   "sources": [
+    "mmwdz13qounll"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- barcos do tejo ([page 3]): The largest boats with the most crew came from shipyards at Esposende, Figueira, Porto and other northern coastal towns."
+   ],
+   "name": "Large boats built in northern coastal shipyards",
+   "sources": [
+    "mmwdz13qounll"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- barcos do tejo (Figura 11): A figure caption shows a boat being hauled by towing from the riverbank while passing the Cachão do Cabril rapids."
+   ],
+   "name": "Towing boats from the bank at Cachão do Cabril",
+   "sources": [
+    "mmwdz13qounll"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- Cacilheiros no Rio Tejo (Cacilheiros section): From early times botes, catraios and faluas linked Lisbon with Montijo, formerly Aldeia Galega or Aldegalega.",
+    "- Barcos Tradicionais do Tejo e  (Pintura Decorativa): Faluas formed a fairly regular network carrying passengers; a children's rhyme about a falua from Belém survives."
+   ],
+   "name": "Boat service Lisbon to Montijo (Aldeia Galega)",
+   "sources": [
+    "mmwdz14kpqwcc",
+    "mmwdz16aqbi7n"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- Cacilheiros no Rio Tejo (Cacilheiros section): Some ferries also carried cars.",
+    "- Cacilheiros no Rio Tejo (photo captions): A ferry-boat crossed between Cacilhas and Cais do Sodré and between Porto Brandão and Belém, carrying cars and donkey-drawn vegetable carts.",
+    "- Cacilheiros no Rio Tejo (photo captions): Carlos Alberto Figueiredo worked for several years on the ferry Eborense."
+   ],
+   "name": "Car-carrying ferries",
+   "sources": [
+    "mmwdz14kpqwcc"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- Barcos Tradicionais do Tejo e  (Tipologias): Cangueiros hauled heavy cargo including building materials, sand, stone and pine to fuel Lisbon's bread ovens."
+   ],
+   "name": "Cangueiros hauling heavy cargo to Lisbon",
+   "sources": [
+    "mmwdz16aqbi7n"
+   ],
+   "status": "missing",
+   "why": ""
+  },
+  {
+   "activity": "",
+   "concepts": [],
+   "evidence": [
+    "- Barcos Tradicionais do Tejo e  (Pintura Decorativa): Varinos, faluas and fragatas were the most decorated boats, with floral motifs and decorated lettering; each painter's style identified the boat's shipyard.",
+    "- Barcos Tradicionais do Tejo e  (Pintura Decorativa): The colour sequence painted on the calcês, the upper mast, was mandatory in the register and identified a boat's origin and ownership.",
+    "- Barcos Tradicionais do Tejo e  (Pintura Decorativa): Painting used bright red, blue, green, yellow and white chosen by painter or owner, without symbolism; pigment paints were later replaced by industrial paints.",
+    "- Barcos Tradicionais do Tejo e  (Pintura Decorativa): Painters worked directly on the surface without preliminary drawing, except for symmetry, applying one colour at a time to all elements, with no precision instruments."
+   ],
+   "name": "Decorative painting of Tagus boats",
+   "sources": [
+    "mmwdz16aqbi7n"
+   ],
+   "status": "missing",
+   "why": ""
+  }
+ ],
+ "sources": 12
+}

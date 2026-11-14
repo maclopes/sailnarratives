@@ -1,0 +1,148 @@
+{
+ "items": [
+  {
+   "definition": "Traditional Tagus vessel type, among the most heavily decorated boats on the river.",
+   "id": "mmwdz16aqbi7n:1",
+   "location": "[section: Tipologias de Barcos Tradicionais do Tejo]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Fragatas"
+  },
+  {
+   "definition": "Flat-bottomed traditional Tagus boats, able to sail near shallow banks and travel far upriver; among the most decorated.",
+   "id": "mmwdz16aqbi7n:2",
+   "location": "[section: Tipologias de Barcos Tradicionais do Tejo]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Varinos"
+  },
+  {
+   "definition": "Traditional boats that formed a fairly regular passenger transport network on the river; heavily decorated and remembered in a children's rhyme.",
+   "id": "mmwdz16aqbi7n:3",
+   "location": "[section: Pintura Decorativa]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Faluas"
+  },
+  {
+   "definition": "Boats built to carry heavy cargo such as building materials, sand, stone, or pine for Lisbon's bread ovens.",
+   "id": "mmwdz16aqbi7n:4",
+   "location": "[section: Tipologias de Barcos Tradicionais do Tejo]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Cangueiros"
+  },
+  {
+   "definition": "One of the traditional small boat types that animated the Tagus estuary.",
+   "id": "mmwdz16aqbi7n:5",
+   "location": "[section: Tipologias de Barcos Tradicionais do Tejo]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Botes"
+  },
+  {
+   "definition": "A traditional Tagus boat type listed among the estuary's varied vessels.",
+   "id": "mmwdz16aqbi7n:6",
+   "location": "[section: Tipologias de Barcos Tradicionais do Tejo]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Botes de Fragata"
+  },
+  {
+   "definition": "A traditional Tagus boat type listed among the estuary's varied vessels.",
+   "id": "mmwdz16aqbi7n:7",
+   "location": "[section: Tipologias de Barcos Tradicionais do Tejo]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Botes de Pinho"
+  },
+  {
+   "definition": "Flat-bottomed boats that could sail close to shallow banks and go further upriver.",
+   "id": "mmwdz16aqbi7n:8",
+   "location": "[section: Tipologias de Barcos Tradicionais do Tejo]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Barcos de Água Acima"
+  },
+  {
+   "definition": "Smaller boats carrying people and goods such as fresh produce and groceries.",
+   "id": "mmwdz16aqbi7n:9",
+   "location": "[section: Tipologias de Barcos Tradicionais do Tejo]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Canoas"
+  },
+  {
+   "definition": "Smaller boats carrying people and goods such as fresh produce and groceries.",
+   "id": "mmwdz16aqbi7n:10",
+   "location": "[section: Tipologias de Barcos Tradicionais do Tejo]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Catraios"
+  },
+  {
+   "definition": "Flat-bottomed boats with shallow draft, able to navigate near banks where water is shallow and travel farther upstream.",
+   "id": "mmwdz16aqbi7n:11",
+   "location": "[section: Tipologias de Barcos Tradicionais do Tejo]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Barcos de fundo chato"
+  },
+  {
+   "definition": "The highest part of the mast, whose painted colour sequence was recorded to identify a boat's origin and ownership.",
+   "id": "mmwdz16aqbi7n:12",
+   "location": "[section: Pintura Decorativa]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "calcês"
+  },
+  {
+   "definition": "Transfer of goods and people between large ships and the port of Lisbon, done by boat.",
+   "id": "mmwdz16aqbi7n:13",
+   "location": "[section: Tipologias de Barcos Tradicionais do Tejo]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1966",
+     "what": "year the bridge over the Tagus opened, ending boat dependence for crossings"
+    }
+   ],
+   "term": "transbordo"
+  },
+  {
+   "definition": "Folk painting of bright colours, floral motifs and decorated lettering, applied by popular painters in each yard's own style.",
+   "id": "mmwdz16aqbi7n:14",
+   "location": "[section: Pintura Decorativa]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pintura decorativa"
+  },
+  {
+   "definition": "A type of traditional Tagus river boat; the text cites one, 'Boa Viagem', owned by the Moita municipality, shown in a 1985 photograph.",
+   "id": "mmwdz16aqbi7n:15",
+   "location": "[part 2 of 3, image caption]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1985",
+     "what": "year of the photograph of the varino 'O Boa Viagem'"
+    }
+   ],
+   "term": "Varino"
+  }
+ ],
+ "kind": "historical",
+ "lang": "",
+ "partsDone": [
+  0,
+  1,
+  2
+ ],
+ "partsTotal": 3,
+ "runAt": "2026-11-12T20:22:45.261Z",
+ "sourceId": "mmwdz16aqbi7n",
+ "textChars": 12570,
+ "title": "Barcos Tradicionais do Tejo e a Sua Colorida Pintura Decorativa - getLISBON"
+}

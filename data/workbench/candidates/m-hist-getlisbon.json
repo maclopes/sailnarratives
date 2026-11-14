@@ -1,0 +1,441 @@
+{
+ "items": [
+  {
+   "definition": "Generic Tagus term for any small river-traffic or fishing boat, later differentiated by function and route.",
+   "id": "m-hist-getlisbon:1",
+   "location": "[section: Breve História das Embarcações do Estuário do Tejo",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "boats, in 1552",
+     "value": "1490",
+     "what": "river boats (barcas and batéis) serving Lisbon"
+    }
+   ],
+   "term": "barca"
+  },
+  {
+   "definition": "Type of small river boat serving Lisbon; also listed among passenger transport boats.",
+   "id": "m-hist-getlisbon:2",
+   "location": "[section: Breve História das Embarcações do Estuário do Tejo",
+   "measured_by": "",
+   "numbers": [],
+   "term": "batel"
+  },
+  {
+   "definition": "Keel: a structural feature some Tagus boats had, while others had half-keels or flat bottoms, depending on use and waters.",
+   "id": "m-hist-getlisbon:3",
+   "location": "[section: Breve História das Embarcações do Estuário do Tejo",
+   "measured_by": "",
+   "numbers": [],
+   "term": "quilha"
+  },
+  {
+   "definition": "Half keel: an intermediate hull-bottom type used by some Tagus boats.",
+   "id": "m-hist-getlisbon:4",
+   "location": "[section: Breve História das Embarcações do Estuário do Tejo",
+   "measured_by": "",
+   "numbers": [],
+   "term": "meia quilha"
+  },
+  {
+   "definition": "Flat bottom: hull type suited to navigating the shallow-water creeks of the Tagus.",
+   "id": "m-hist-getlisbon:5",
+   "location": "[section: Breve História das Embarcações do Estuário do Tejo",
+   "measured_by": "",
+   "numbers": [],
+   "term": "fundo raso"
+  },
+  {
+   "definition": "Shallow-water creeks of the Tagus that boats had to enter, shaping their hull design.",
+   "id": "m-hist-getlisbon:6",
+   "location": "[section: Breve História das Embarcações do Estuário do Tejo",
+   "measured_by": "",
+   "numbers": [],
+   "term": "esteiros"
+  },
+  {
+   "definition": "Curved or straight bows: a design variation among Tagus boats according to function and route.",
+   "id": "m-hist-getlisbon:7",
+   "location": "[section: Breve História das Embarcações do Estuário do Tejo",
+   "measured_by": "",
+   "numbers": [],
+   "term": "proas curvilíneas ou direitas"
+  },
+  {
+   "definition": "Masts and sails: these varied widely among Tagus boats according to their function.",
+   "id": "m-hist-getlisbon:8",
+   "location": "[section: Breve História das Embarcações do Estuário do Tejo",
+   "measured_by": "",
+   "numbers": [],
+   "term": "mastros e velame"
+  },
+  {
+   "definition": "Caulkers: shipyard craftsmen who, with shipwrights, built the wooden traditional boats.",
+   "id": "m-hist-getlisbon:9",
+   "location": "[section: Estaleiros e Tipologias]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "calafates"
+  },
+  {
+   "definition": "Wooden-boat shipyards, mostly in riverside towns, some large and some artisanal.",
+   "id": "m-hist-getlisbon:10",
+   "location": "[section: Estaleiros e Tipologias]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "estaleiros navais"
+  },
+  {
+   "definition": "Boat type listed among passenger transport craft of the Tagus.",
+   "id": "m-hist-getlisbon:11",
+   "location": "[section: Estaleiros e Tipologias]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "catraio"
+  },
+  {
+   "definition": "Boat type used for passenger transport and for fishing.",
+   "id": "m-hist-getlisbon:12",
+   "location": "[section: Estaleiros e Tipologias]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "caíque"
+  },
+  {
+   "definition": "Passenger boat type of the Tagus, linked to the Cacilhas crossing.",
+   "id": "m-hist-getlisbon:13",
+   "location": "[section: Estaleiros e Tipologias]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bote cacilheiro"
+  },
+  {
+   "definition": "Cargo-carrying boat type of the Tagus.",
+   "id": "m-hist-getlisbon:14",
+   "location": "[section: Estaleiros e Tipologias]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "canoa cacilheira"
+  },
+  {
+   "definition": "Boat type listed among cargo carriers; the varino resembled a large one with two bows.",
+   "id": "m-hist-getlisbon:15",
+   "location": "[section: Estaleiros e Tipologias]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bateiras"
+  },
+  {
+   "definition": "Boat type listed among Tagus fishing boats.",
+   "id": "m-hist-getlisbon:16",
+   "location": "[section: Estaleiros e Tipologias]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "saveiros"
+  },
+  {
+   "definition": "Boat type listed among Tagus fishing boats.",
+   "id": "m-hist-getlisbon:17",
+   "location": "[section: Estaleiros e Tipologias]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "muletas"
+  },
+  {
+   "definition": "Elegant, decorated, keelless cargo boat with a full hull, two bows and a steeply raked mast; one of the Tagus's emblematic boats.",
+   "id": "m-hist-getlisbon:18",
+   "location": "[section: Varino]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "varino"
+  },
+  {
+   "definition": "Decorative tuft or tassel crowning the varino's pronounced, toothed forward bow.",
+   "id": "m-hist-getlisbon:19",
+   "location": "[section: Varino]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "cabeleira ou borla"
+  },
+  {
+   "definition": "Stay: rigging line supporting the mast, set on the varino together with a lateen sail.",
+   "id": "m-hist-getlisbon:20",
+   "location": "[section: Varino]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "estai"
+  },
+  {
+   "definition": "Lateen sail, carried by the varino on a mast raked strongly backward.",
+   "id": "m-hist-getlisbon:21",
+   "location": "[section: Varino]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pano latino"
+  },
+  {
+   "definition": "Full, rounded hull shape shared by the varino and the fragata, giving cargo capacity.",
+   "id": "m-hist-getlisbon:22",
+   "location": "[section: Varino]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "casco bojudo"
+  },
+  {
+   "definition": "Cargo hold fitted with baskets (paneiros) for stowing cargo on the varino.",
+   "id": "m-hist-getlisbon:23",
+   "location": "[section: Varino]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "porão com paneiros"
+  },
+  {
+   "definition": "Raised false bulwarks on the varino's sides to help keep cargo properly stowed.",
+   "id": "m-hist-getlisbon:24",
+   "location": "[section: Varino]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bordas falsas"
+  },
+  {
+   "definition": "Sturdy, open, flat-sterned keeled cargo vessel with one raked mast, used to load and unload ships and quays; the Tagus's most emblematic boat.",
+   "id": "m-hist-getlisbon:25",
+   "location": "[section: Fragata]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "tonnes",
+     "value": "10 to 100",
+     "what": "displacement"
+    },
+    {
+     "unit": "metres",
+     "value": "20 to 25",
+     "what": "length"
+    },
+    {
+     "unit": "metres",
+     "value": "6.10",
+     "what": "beam (boca)"
+    },
+    {
+     "unit": "metres",
+     "value": "2.60",
+     "what": "depth (pontal)"
+    },
+    {
+     "unit": "men",
+     "value": "3 to 5",
+     "what": "crew"
+    }
+   ],
+   "term": "fragata"
+  },
+  {
+   "definition": "Gaff sail: the large main sail of the fragata, flown with one or two headsails.",
+   "id": "m-hist-getlisbon:26",
+   "location": "[section: Fragata]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "sails",
+     "value": "1 or 2",
+     "what": "headsails (velas de proa)"
+    }
+   ],
+   "term": "vela de carangueja"
+  },
+  {
+   "definition": "Fixed or secured rudder of the fragata, which had no oars.",
+   "id": "m-hist-getlisbon:27",
+   "location": "[section: Fragata]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "leme seguro"
+  },
+  {
+   "definition": "Towing by oar-powered small boat: how a fragata was moved when no favourable wind blew.",
+   "id": "m-hist-getlisbon:28",
+   "location": "[section: Fragata]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "puxada a remos por um bote"
+  },
+  {
+   "definition": "Medium-sized Tagus boat between a bote and a large fragata, doing similar cargo work and also carrying passengers.",
+   "id": "m-hist-getlisbon:29",
+   "location": "[section: Fragata]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "falua"
+  },
+  {
+   "definition": "Steamships that appeared from the 1860s, first paddle-wheel then propeller driven, carrying passengers between the river's banks and displacing small boats.",
+   "id": "m-hist-getlisbon:30",
+   "location": "[section: Breve história das embarcações do estuário do Tejo",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "decade (19th century",
+     "value": "1860s",
+     "what": "decade when steamships appeared"
+    }
+   ],
+   "term": "vapores"
+  },
+  {
+   "definition": "Paddle-wheel propulsion, the first form of steam traction used on passenger vessels crossing the river.",
+   "id": "m-hist-getlisbon:31",
+   "location": "[section: Breve história das embarcações do estuário do Tejo",
+   "measured_by": "",
+   "numbers": [],
+   "term": "tracção por rodas com pás"
+  },
+  {
+   "definition": "Propeller, the later propulsion method that replaced paddle wheels on steam passenger vessels.",
+   "id": "m-hist-getlisbon:32",
+   "location": "[section: Breve história das embarcações do estuário do Tejo",
+   "measured_by": "",
+   "numbers": [],
+   "term": "hélice"
+  },
+  {
+   "definition": "River navigation upstream on the Tagus, which lost importance and profitability for its skippers after the Vila Franca de Xira bridge opened.",
+   "id": "m-hist-getlisbon:33",
+   "location": "[section: Breve história das embarcações do estuário do Tejo",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1951",
+     "what": "year of Vila Franca de Xira bridge inauguration"
+    }
+   ],
+   "term": "navegação fluvial"
+  },
+  {
+   "definition": "Skippers or masters of the river boats, whose livelihood suffered when upriver navigation stopped being profitable.",
+   "id": "m-hist-getlisbon:34",
+   "location": "[section: Breve história das embarcações do estuário do Tejo",
+   "measured_by": "",
+   "numbers": [],
+   "term": "arrais"
+  },
+  {
+   "definition": "Large traditional Tagus cargo sailing boats, among the best known, which survived almost to the present before nearly vanishing.",
+   "id": "m-hist-getlisbon:35",
+   "location": "[section: Breve história das embarcações do estuário do Tejo",
+   "measured_by": "",
+   "numbers": [],
+   "term": "fragatas"
+  },
+  {
+   "definition": "Traditional Tagus sailing boats that, like the fragatas, lasted almost to modern times before nearly disappearing from the river.",
+   "id": "m-hist-getlisbon:36",
+   "location": "[section: Breve história das embarcações do estuário do Tejo",
+   "measured_by": "",
+   "numbers": [],
+   "term": "varinos"
+  },
+  {
+   "definition": "Modern ferries, a new naval transport that helped displace traditional sailing boats on the Tagus.",
+   "id": "m-hist-getlisbon:37",
+   "location": "[section: Breve história das embarcações do estuário do Tejo",
+   "measured_by": "",
+   "numbers": [],
+   "term": "ferry-boats"
+  },
+  {
+   "definition": "Small traditional boats, some still preserved at Sarilhos Pequenos and Moita through local enthusiasm and municipal support.",
+   "id": "m-hist-getlisbon:38",
+   "location": "[section: Breve história das embarcações do estuário do Tejo",
+   "measured_by": "",
+   "numbers": [],
+   "term": "botes"
+  },
+  {
+   "definition": "Traditional Tagus canoes, among the best-known boat types, with a few surviving at Sarilhos Pequenos and Moita.",
+   "id": "m-hist-getlisbon:39",
+   "location": "[section: Breve história das embarcações do estuário do Tejo",
+   "measured_by": "",
+   "numbers": [],
+   "term": "canoas"
+  },
+  {
+   "definition": "A boat type of which 'Baía do Seixal' and 'Gaivotas' are restored examples, now kept as recreational vessels by the Seixal Ecomuseum.",
+   "id": "m-hist-getlisbon:40",
+   "location": "[section: Breve história das embarcações do estuário do Tejo",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1914",
+     "what": "year of 'Baía do Seixal'"
+    },
+    {
+     "unit": "year",
+     "value": "1934",
+     "what": "year of 'Gaivotas'"
+    }
+   ],
+   "term": "botes-de-fragata"
+  },
+  {
+   "definition": "A varino built in 1921, restored and kept by the Seixal municipal Ecomuseum as a recreational vessel.",
+   "id": "m-hist-getlisbon:41",
+   "location": "[section: Breve história das embarcações do estuário do Tejo",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1921",
+     "what": "year of 'Amoroso'"
+    }
+   ],
+   "term": "varino \"Amoroso\""
+  },
+  {
+   "definition": "Local traffic between quays and ports of the estuary, a function the old boats served until the early 1970s.",
+   "id": "m-hist-getlisbon:42",
+   "location": "[section: Breve história das embarcações do estuário do Tejo",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "decade",
+     "value": "early 1970s",
+     "what": "end of this service"
+    }
+   ],
+   "term": "tráfego local entre cais e portos"
+  },
+  {
+   "definition": "Sails filled by the wind, one of the striking features of the fragata under way.",
+   "id": "m-hist-getlisbon:43",
+   "location": "[section: Iconografia e Memória – A Fragata Rainha do Tejo]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "velas enfunadas ao vento"
+  },
+  {
+   "definition": "Nickname 'Queen of the Tagus Estuary' given to the fragata for its size, billowing sails, constant crossings and crew life at the quay.",
+   "id": "m-hist-getlisbon:44",
+   "location": "[section: Iconografia e Memória – A Fragata Rainha do Tejo]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Rainha do Estuário do Tejo"
+  }
+ ],
+ "kind": "historical",
+ "lang": "pt-PT",
+ "partsDone": [
+  0,
+  1,
+  2
+ ],
+ "partsTotal": 3,
+ "runAt": "2026-11-12T20:01:10.502Z",
+ "sourceId": "m-hist-getlisbon",
+ "textChars": 15709,
+ "title": "getLISBON, Breve história das embarcações do estuário do Tejo"
+}

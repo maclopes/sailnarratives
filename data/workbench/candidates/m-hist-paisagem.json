@@ -1,0 +1,120 @@
+{
+ "items": [
+  {
+   "definition": "River crossing linking the two banks of the Tagus estuary, a short distance from where the river meets the Atlantic.",
+   "id": "m-hist-paisagem:1",
+   "location": "[section: Travessia Fluvial Belém - Trafaria]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "minutes",
+     "value": "30",
+     "what": "duration of the crossing"
+    }
+   ],
+   "term": "travessia fluvial Belém-Porto Brandão-Trafaria"
+  },
+  {
+   "definition": "The mouth of the Tagus, opening toward the sea, which gives the crossing a maritime character.",
+   "id": "m-hist-paisagem:2",
+   "location": "[section: Travessia Fluvial Belém - Trafaria]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "foz do Tejo"
+  },
+  {
+   "definition": "River terminal at Belém, built in 1940 as a landing stage supporting the Exposição do Mundo Português.",
+   "id": "m-hist-paisagem:3",
+   "location": "[section: Travessia Fluvial Belém - Trafaria]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1940",
+     "what": "year the quay was built"
+    }
+   ],
+   "term": "Estação Fluvial de Belém"
+  },
+  {
+   "definition": "Quay or landing place where boats dock and depart, such as those at Belém, Porto Brandão and Trafaria.",
+   "id": "m-hist-paisagem:4",
+   "location": "[section: Travessia Fluvial Belém - Trafaria]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "cais"
+  },
+  {
+   "definition": "Large passenger and vehicle vessel serving the crossing, often carrying very few people or cars.",
+   "id": "m-hist-paisagem:5",
+   "location": "[section: Travessia Fluvial Belém - Trafaria]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "ferry"
+  },
+  {
+   "definition": "Twin-hulled vessel used on the crossing; when it leaves the quay, the shore seems to drift away.",
+   "id": "m-hist-paisagem:6",
+   "location": "[section: Travessia Fluvial Belém - Trafaria]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "catamarã"
+  },
+  {
+   "definition": "On open water, lacking fixed landmarks, travellers lose their usual sense of speed, so the land seems to move away instead.",
+   "id": "m-hist-paisagem:7",
+   "location": "[section: Travessia Fluvial Belém - Trafaria]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "perda da referência de velocidade na água"
+  },
+  {
+   "definition": "The great breadth of the Tagus, which enabled intense river and maritime activity until the 1970s.",
+   "id": "m-hist-paisagem:8",
+   "location": "[section: Travessia Fluvial Belém - Trafaria]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "decade",
+     "value": "1970s",
+     "what": "period of intense river and maritime activity ended"
+    }
+   ],
+   "term": "largueza do rio"
+  },
+  {
+   "definition": "Bridge whose construction abruptly changed the landscape and reduced the river's traffic and role in connecting its banks.",
+   "id": "m-hist-paisagem:9",
+   "location": "[section: Travessia Fluvial Belém - Trafaria]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Ponte 25 de Abril"
+  },
+  {
+   "definition": "The southern bank of the Tagus, to which the crossing carries few passengers and which prospered less than the capital's side.",
+   "id": "m-hist-paisagem:10",
+   "location": "[section: Travessia Fluvial Belém - Trafaria]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Margem Sul"
+  },
+  {
+   "definition": "The Tagus was once the sole route for national and intercontinental trade and for uniting its two banks.",
+   "id": "m-hist-paisagem:11",
+   "location": "[section: Travessia Fluvial Belém - Trafaria]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Tejo como estrada do comércio"
+  }
+ ],
+ "kind": "historical",
+ "lang": "pt-PT",
+ "partsDone": [
+  0
+ ],
+ "partsTotal": 1,
+ "runAt": "2026-11-12T20:14:48.439Z",
+ "sourceId": "m-hist-paisagem",
+ "textChars": 4873,
+ "title": "Museu da Paisagem, Belém–Trafaria"
+}

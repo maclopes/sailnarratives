@@ -1,0 +1,494 @@
+{
+ "createdAt": "2026-11-14T10:25:52.594Z",
+ "games": [
+  {
+   "id": "mini.downwind",
+   "match": "related",
+   "proposal": "s70",
+   "why": "s70 is also a downwind run to a destination, but it uses the Moliceiro in Aveiro rather than the Falua."
+  },
+  {
+   "id": "mini.upwind",
+   "match": "related",
+   "proposal": "s2",
+   "why": "s2 also sails upwind by tacking, but uses the Fragata on an upriver route rather than the Falua to a mark."
+  },
+  {
+   "id": "mini.passengers",
+   "match": "same",
+   "proposal": "s31",
+   "why": "s31 is the same task: crossing between Lisbon and Almada by Catraio."
+  },
+  {
+   "id": "mini.whales",
+   "match": "related",
+   "proposal": "s35",
+   "why": "s35 uses the same boat (Baleeiro) in the Azores, but is a long voyage to fishing banks rather than approaching a whale."
+  },
+  {
+   "id": "mini.seaweed",
+   "match": "same",
+   "proposal": "s65",
+   "why": "s65 is the same task: sailing the Moliceiro to the moliço grounds and back."
+  },
+  {
+   "id": "mini.busy",
+   "match": "related",
+   "proposal": "s58",
+   "why": "s58 also takes Fragata cargo to Lisbon among other boats, but without the focus on gusts and shifting wind."
+  },
+  {
+   "id": "mini.fishing",
+   "match": "same",
+   "proposal": "s18",
+   "why": "s18 is the same task: the Muleta sailing slowly across the wind trawling its net."
+  },
+  {
+   "id": "mini.supplies",
+   "match": "related",
+   "proposal": "s4",
+   "why": "s4 is also a supply trip out to a vessel, but uses the Catraio to an anchored ship rather than the Canoa to a fishing Muleta."
+  },
+  {
+   "id": "mini.free",
+   "match": "none",
+   "proposal": "",
+   "why": "No proposal offers open-ended free sailing."
+  }
+ ],
+ "proposals": [
+  {
+   "game": "mini.downwind",
+   "id": "s1",
+   "match": "related",
+   "why": "Also a downwind run, but with the Fragata on the middle Tagus."
+  },
+  {
+   "game": "mini.upwind",
+   "id": "s2",
+   "match": "related",
+   "why": "Also tacking upwind, but with the Fragata upriver."
+  },
+  {
+   "game": "mini.busy",
+   "id": "s3",
+   "match": "related",
+   "why": "Same boat (Fragata) and trimming for shifting wind, but no traffic or cargo."
+  },
+  {
+   "game": "mini.supplies",
+   "id": "s4",
+   "match": "related",
+   "why": "Also a supply trip out to a vessel, but with a different boat and target."
+  },
+  {
+   "game": "mini.passengers",
+   "id": "s5",
+   "match": "same",
+   "why": "Same task: carrying people across the Tagus between Lisbon and Almada."
+  },
+  {
+   "game": "",
+   "id": "s6",
+   "match": "new",
+   "why": "No game activity involves docking."
+  },
+  {
+   "game": "",
+   "id": "s7",
+   "match": "new",
+   "why": "No game activity covers light-wind or becalmed sailing."
+  },
+  {
+   "game": "mini.upwind",
+   "id": "s8",
+   "match": "related",
+   "why": "Also progress upstream with the Falua under sail."
+  },
+  {
+   "game": "",
+   "id": "s9",
+   "match": "new",
+   "why": "No game activity involves docking alongside a quay."
+  },
+  {
+   "game": "",
+   "id": "s10",
+   "match": "new",
+   "why": "No game activity covers pilotage over the bar."
+  },
+  {
+   "game": "mini.fishing",
+   "id": "s11",
+   "match": "related",
+   "why": "Same boat (Muleta) and trawling context, but focused on sail trim."
+  },
+  {
+   "game": "mini.upwind",
+   "id": "s12",
+   "match": "related",
+   "why": "Also close-hauled sailing, but with the Muleta and its leeboard."
+  },
+  {
+   "game": "mini.fishing",
+   "id": "s13",
+   "match": "related",
+   "why": "Same boat (Muleta) going to the fishing grounds, but a passage and steady course rather than drifting."
+  },
+  {
+   "game": "",
+   "id": "s14",
+   "match": "new",
+   "why": "No game activity goes out past the bar to the open sea."
+  },
+  {
+   "game": "kind.transport",
+   "id": "s15",
+   "match": "related",
+   "why": "Also carrying cargo between ports, but along the coast."
+  },
+  {
+   "game": "",
+   "id": "s16",
+   "match": "new",
+   "why": "No game activity compares rigs."
+  },
+  {
+   "game": "",
+   "id": "s17",
+   "match": "new",
+   "why": "No game activity involves reefing or shortening sail."
+  },
+  {
+   "game": "mini.fishing",
+   "id": "s18",
+   "match": "same",
+   "why": "Same task: the Muleta drifting broadside with the net out."
+  },
+  {
+   "game": "mini.fishing",
+   "id": "s19",
+   "match": "related",
+   "why": "Same boat (Muleta), but landing the catch rather than fishing."
+  },
+  {
+   "game": "kind.fishing",
+   "id": "s20",
+   "match": "related",
+   "why": "Also a fishing outing, but with the Catraio rather than the Muleta."
+  },
+  {
+   "game": "mini.passengers",
+   "id": "s21",
+   "match": "related",
+   "why": "Also a river crossing, but with the Canoa."
+  },
+  {
+   "game": "mini.passengers",
+   "id": "s22",
+   "match": "same",
+   "why": "Same task: carrying passengers between Almada and Lisbon."
+  },
+  {
+   "game": "kind.transport",
+   "id": "s23",
+   "match": "related",
+   "why": "Also carrying cargo between ports, here upriver."
+  },
+  {
+   "game": "mini.fishing",
+   "id": "s24",
+   "match": "related",
+   "why": "Also net fishing, but holding position in a Canoa."
+  },
+  {
+   "game": "kind.fishing",
+   "id": "s25",
+   "match": "related",
+   "why": "Also a fishing outing, but with the Canoa and tying up for the night."
+  },
+  {
+   "game": "",
+   "id": "s26",
+   "match": "new",
+   "why": "No game activity goes out past the bar in Aveiro."
+  },
+  {
+   "game": "kind.transport",
+   "id": "s27",
+   "match": "related",
+   "why": "Also a port-to-port passage, here delivering the boat itself."
+  },
+  {
+   "game": "kind.free",
+   "id": "s28",
+   "match": "related",
+   "why": "Comparing boats is possible in free sailing, but without a set task."
+  },
+  {
+   "game": "",
+   "id": "s29",
+   "match": "new",
+   "why": "No game activity involves rapids or bank towing."
+  },
+  {
+   "game": "mini.passengers",
+   "id": "s30",
+   "match": "related",
+   "why": "Also carrying passengers, but with the Falua on the longer Lisbon to Montijo route."
+  },
+  {
+   "game": "mini.passengers",
+   "id": "s31",
+   "match": "same",
+   "why": "Same task: a Catraio crossing between Lisbon and Almada."
+  },
+  {
+   "game": "mini.busy",
+   "id": "s32",
+   "match": "related",
+   "why": "Same boat (Fragata) crossing the Tagus with cargo."
+  },
+  {
+   "game": "kind.transport",
+   "id": "s33",
+   "match": "related",
+   "why": "Also carrying cargo to Lisbon."
+  },
+  {
+   "game": "kind.free",
+   "id": "s34",
+   "match": "related",
+   "why": "Choosing boats freely is possible in free sailing; no identification task exists."
+  },
+  {
+   "game": "mini.whales",
+   "id": "s35",
+   "match": "related",
+   "why": "Same boat (Baleeiro) in the Azores, but a voyage to fishing banks."
+  },
+  {
+   "game": "kind.fishing",
+   "id": "s36",
+   "match": "related",
+   "why": "Also fishing, but in the estuary and landing the catch in Lisbon."
+  },
+  {
+   "game": "mini.upwind",
+   "id": "s37",
+   "match": "related",
+   "why": "Also sailing against the wind, but with the Fragata carrying cargo."
+  },
+  {
+   "game": "kind.transport",
+   "id": "s38",
+   "match": "related",
+   "why": "Also carrying passengers between ports."
+  },
+  {
+   "game": "kind.transport",
+   "id": "s39",
+   "match": "related",
+   "why": "Also carrying cargo between ports, here on a schedule."
+  },
+  {
+   "game": "kind.transport",
+   "id": "s40",
+   "match": "related",
+   "why": "Also a passenger and cargo service between ports."
+  },
+  {
+   "game": "",
+   "id": "s41",
+   "match": "new",
+   "why": "No game activity involves convoys or rapids."
+  },
+  {
+   "game": "kind.transport",
+   "id": "s42",
+   "match": "related",
+   "why": "Also a downriver cargo passage."
+  },
+  {
+   "game": "mini.busy",
+   "id": "s43",
+   "match": "related",
+   "why": "Same boat (Fragata) carrying cargo in the lower Tagus."
+  },
+  {
+   "game": "mini.busy",
+   "id": "s44",
+   "match": "related",
+   "why": "Same boat (Fragata) carrying cargo across to Lisbon, with docking added."
+  },
+  {
+   "game": "mini.busy",
+   "id": "s45",
+   "match": "related",
+   "why": "Same boat (Fragata) carrying cargo across to Lisbon."
+  },
+  {
+   "game": "kind.transport",
+   "id": "s46",
+   "match": "related",
+   "why": "Also carrying cargo down to Lisbon."
+  },
+  {
+   "game": "kind.transport",
+   "id": "s47",
+   "match": "related",
+   "why": "Also collecting and carrying cargo."
+  },
+  {
+   "game": "kind.transport",
+   "id": "s48",
+   "match": "related",
+   "why": "Also carrying cargo downriver."
+  },
+  {
+   "game": "mini.upwind",
+   "id": "s49",
+   "match": "related",
+   "why": "Also sailing upstream against the wind with the Fragata."
+  },
+  {
+   "game": "kind.transport",
+   "id": "s50",
+   "match": "related",
+   "why": "Also carrying cargo, with docking added."
+  },
+  {
+   "game": "kind.transport",
+   "id": "s51",
+   "match": "related",
+   "why": "Also carrying freight between ports."
+  },
+  {
+   "game": "kind.transport",
+   "id": "s52",
+   "match": "related",
+   "why": "Also a long upriver cargo voyage."
+  },
+  {
+   "game": "kind.transport",
+   "id": "s53",
+   "match": "related",
+   "why": "Also carrying cargo, here both up and down."
+  },
+  {
+   "game": "kind.transport",
+   "id": "s54",
+   "match": "related",
+   "why": "Also an upriver passage between ports."
+  },
+  {
+   "game": "kind.transport",
+   "id": "s55",
+   "match": "related",
+   "why": "Also carrying cargo, via the coast into Lisbon."
+  },
+  {
+   "game": "",
+   "id": "s56",
+   "match": "new",
+   "why": "No game activity involves poling or towing."
+  },
+  {
+   "game": "kind.transport",
+   "id": "s57",
+   "match": "related",
+   "why": "Also a timed passage to a port."
+  },
+  {
+   "game": "mini.busy",
+   "id": "s58",
+   "match": "related",
+   "why": "Also Fragata cargo to Lisbon among other boats."
+  },
+  {
+   "game": "kind.transport",
+   "id": "s59",
+   "match": "related",
+   "why": "Also carrying cargo to Lisbon."
+  },
+  {
+   "game": "mini.busy",
+   "id": "s60",
+   "match": "related",
+   "why": "Also navigating busy Tagus traffic, but with the Falua."
+  },
+  {
+   "game": "kind.fishing",
+   "id": "s61",
+   "match": "related",
+   "why": "Also a fishing outing, but with a small boat."
+  },
+  {
+   "game": "kind.supply",
+   "id": "s62",
+   "match": "related",
+   "why": "Also bringing fish to port."
+  },
+  {
+   "game": "kind.supply",
+   "id": "s63",
+   "match": "related",
+   "why": "Also a timed delivery of fish."
+  },
+  {
+   "game": "mini.seaweed",
+   "id": "s64",
+   "match": "related",
+   "why": "Same boat (Moliceiro) in the lagoon, but focused on handling."
+  },
+  {
+   "game": "mini.seaweed",
+   "id": "s65",
+   "match": "same",
+   "why": "Same task: sailing to the moliço grounds and back."
+  },
+  {
+   "game": "mini.seaweed",
+   "id": "s66",
+   "match": "related",
+   "why": "Same boat (Moliceiro), but a festival passage."
+  },
+  {
+   "game": "mini.upwind",
+   "id": "s67",
+   "match": "related",
+   "why": "Also tacking to windward, but with the Moliceiro in a channel."
+  },
+  {
+   "game": "mini.seaweed",
+   "id": "s68",
+   "match": "related",
+   "why": "Same boat (Moliceiro), but a launch outing."
+  },
+  {
+   "game": "mini.seaweed",
+   "id": "s69",
+   "match": "related",
+   "why": "Same boat (Moliceiro), but focused on hull and drift."
+  },
+  {
+   "game": "mini.downwind",
+   "id": "s70",
+   "match": "related",
+   "why": "Also a downwind run, but wing and wing with the Moliceiro."
+  },
+  {
+   "game": "mini.seaweed",
+   "id": "s71",
+   "match": "same",
+   "why": "Same task: gathering moliço on the grounds."
+  },
+  {
+   "game": "mini.seaweed",
+   "id": "s72",
+   "match": "related",
+   "why": "Same practice, but carrying the load to port."
+  }
+ ],
+ "situationsAt": "2026-11-14T10:25:44.371Z"
+}

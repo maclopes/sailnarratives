@@ -1,0 +1,227 @@
+{
+ "items": [
+  {
+   "definition": "Medium-sized river cargo boats of the Ribatejo that sailed between the Tagus towns and Lisbon, carrying goods in both directions.",
+   "id": "m-hist-blk-portos:1",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "metres",
+     "value": "15 to 20",
+     "what": "typical length"
+    },
+    {
+     "unit": "metres",
+     "value": "5 or 6",
+     "what": "typical beam"
+    },
+    {
+     "unit": "tonnes",
+     "value": "30 or 40",
+     "what": "cargo carried"
+    },
+    {
+     "unit": "metres",
+     "value": "1 to 2",
+     "what": "water depth needed to sail, even in midsummer"
+    },
+    {
+     "unit": "days",
+     "value": "2",
+     "what": "minimum voyage time to Lisbon in good weather and fair wind"
+    }
+   ],
+   "term": "barcos de água acima"
+  },
+  {
+   "definition": "Alternative name for the upriver boats, tying them to the Ribatejo region they served.",
+   "id": "m-hist-blk-portos:2",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barcos do Ribatejo"
+  },
+  {
+   "definition": "Describes the boats' very shallow draught, which let them sail loaded in low water.",
+   "id": "m-hist-blk-portos:3",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "metres",
+     "value": "1 to 2",
+     "what": "water depth sufficient for the voyage"
+    }
+   ],
+   "term": "calavam muito pouco"
+  },
+  {
+   "definition": "The beam, meaning the width of the hull.",
+   "id": "m-hist-blk-portos:4",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "metres",
+     "value": "5 or 6",
+     "what": "beam of the boats"
+    }
+   ],
+   "term": "boca"
+  },
+  {
+   "definition": "The tall mast, strongly raked aft, that carried the boat's large triangular sail.",
+   "id": "m-hist-blk-portos:5",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "mastro"
+  },
+  {
+   "definition": "Describes the mast's backward rake toward the stern.",
+   "id": "m-hist-blk-portos:6",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "inclinado à ré"
+  },
+  {
+   "definition": "The name of the large triangular main sail set on the mast.",
+   "id": "m-hist-blk-portos:7",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bastardo"
+  },
+  {
+   "definition": "A small sail set at the bow, in addition to the main sail.",
+   "id": "m-hist-blk-portos:8",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vela de proa"
+  },
+  {
+   "definition": "The skipper, who could be the owner, commanded the boat and steered at the helm.",
+   "id": "m-hist-blk-portos:9",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "arrais"
+  },
+  {
+   "definition": "The helm or rudder, operated by the arrais to steer the boat.",
+   "id": "m-hist-blk-portos:10",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "leme"
+  },
+  {
+   "definition": "Experienced seamen forming the working crew aboard the boat.",
+   "id": "m-hist-blk-portos:11",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "camaradas"
+  },
+  {
+   "definition": "Young crew members aboard to learn the trade and secure the future of navigation.",
+   "id": "m-hist-blk-portos:12",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "moços"
+  },
+  {
+   "definition": "Upriver. These boats were only permitted to sail in the calm river, not at sea beyond the bar.",
+   "id": "m-hist-blk-portos:13",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "água acima"
+  },
+  {
+   "definition": "The river mouth bar, beyond which the upriver boats were not allowed to sail.",
+   "id": "m-hist-blk-portos:14",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barra"
+  },
+  {
+   "definition": "A favourable, fair wind that, with good weather, made the voyage to Lisbon possible in about two days.",
+   "id": "m-hist-blk-portos:15",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "days",
+     "value": "2",
+     "what": "minimum voyage time to Lisbon"
+    }
+   ],
+   "term": "vento de feição"
+  },
+  {
+   "definition": "To lower or take in the sail, used figuratively for the boats ceasing to operate.",
+   "id": "m-hist-blk-portos:16",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "amainar a vela"
+  },
+  {
+   "definition": "To come alongside or berth at a quay or bank.",
+   "id": "m-hist-blk-portos:17",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "acostar"
+  },
+  {
+   "definition": "River landing places where goods were gathered for loading and unloaded on arrival, such as Abrantes, Constância and Chamusca.",
+   "id": "m-hist-blk-portos:18",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "portos"
+  },
+  {
+   "definition": "Silting of the riverbed, which reduced navigability once dams and lower water flow came.",
+   "id": "m-hist-blk-portos:19",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "assoreamento"
+  },
+  {
+   "definition": "The undammed Tagus, with abundant freely flowing water, which allowed larger boats to travel far upriver.",
+   "id": "m-hist-blk-portos:20",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Tejo sem barragens"
+  },
+  {
+   "definition": "A traditional Tagus sailing boat, now used for leisure trips on the river.",
+   "id": "m-hist-blk-portos:21",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "varino"
+  }
+ ],
+ "kind": "historical",
+ "lang": "pt-PT",
+ "partsDone": [
+  0,
+  1
+ ],
+ "partsTotal": 2,
+ "runAt": "2026-11-12T20:00:06.175Z",
+ "sourceId": "m-hist-blk-portos",
+ "textChars": 6913,
+ "title": "mediotejo, Portos do Tejo e barcos d'água acima"
+}

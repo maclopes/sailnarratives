@@ -1,0 +1,692 @@
+{
+ "basis": {
+  "bible": false,
+  "concepts": [
+   "c936",
+   "c964",
+   "c14",
+   "c865",
+   "c1",
+   "c788",
+   "c839",
+   "c838",
+   "c950",
+   "c952"
+  ],
+  "match": "same",
+  "practices": [
+   "p253",
+   "p255",
+   "p256",
+   "p265",
+   "p276",
+   "p252"
+  ],
+  "proposal": "s65"
+ },
+ "beats": [
+  {
+   "character": "k1",
+   "concept": "Close-hauled sailing and tacking to make ground upwind",
+   "delivery": "story",
+   "evidence": [
+    "e1",
+    "e3",
+    "e32",
+    "e43",
+    "e37",
+    "e33"
+   ],
+   "gist": "Ti Manuel casts off and tells Zé they must work up the lagoon to the shallow moliço grounds, because the farmers need moliço to fertilise their sandy soil.",
+   "id": "b1",
+   "part": "setup",
+   "trigger": "start"
+  },
+  {
+   "character": "k1",
+   "concept": "Holding a steady close-hauled heading",
+   "delivery": "story",
+   "evidence": [
+    "e25",
+    "e29",
+    "e24",
+    "e21",
+    "e20",
+    "e35",
+    "e5",
+    "e6",
+    "e42"
+   ],
+   "gist": "On a calm stretch, Ti Manuel answers Zé's questions about the boat and the work: the flat bottom and low sides that let full rakes come aboard, the pine hull and black pitch, the sarrim underfoot so crews don't slip, the big trapezoidal sail, and how many families live from moliço.",
+   "id": "b2",
+   "part": "leg",
+   "trigger": "steady_leg"
+  },
+  {
+   "character": "k2",
+   "concept": "Keeping a lookout among other boats",
+   "delivery": "story",
+   "evidence": [
+    "e2",
+    "e6",
+    "e4"
+   ],
+   "gist": "Out on the open lagoon, Zé sees other moliceiros working and asks why there are so many. Ti Manuel says the more people take up the trade, the more boats are built, and they work across the whole ria.",
+   "id": "b3",
+   "part": "place",
+   "trigger": "near_place:Ria de Aveiro"
+  },
+  {
+   "character": "k1",
+   "concept": "Reading shallow water; refloating",
+   "delivery": "cue",
+   "evidence": [
+    "e31",
+    "e32"
+   ],
+   "expects": [
+    "sheet_out",
+    "refloat"
+   ],
+   "gist": "The boat touches bottom on the shallow moliço grounds; Ti Manuel gives a short instruction only (for example, ease the sail and push free).",
+   "id": "b4",
+   "part": "complication",
+   "trigger": "aground"
+  },
+  {
+   "character": "k1",
+   "concept": "Steering in shallow water",
+   "delivery": "reflection",
+   "evidence": [
+    "e31",
+    "e25",
+    "e29",
+    "e32"
+   ],
+   "gist": "Once afloat again, Ti Manuel tells Zé the moliço grows where the water is lowest. That is why the boat draws so little and steers with a wide, shallow rudder, and why you learn the bottom of the ria the hard way.",
+   "id": "b5",
+   "part": "turn",
+   "trigger": "refloat"
+  },
+  {
+   "character": "k1",
+   "concept": "",
+   "delivery": "story",
+   "evidence": [
+    "e1",
+    "e4",
+    "e5",
+    "e30"
+   ],
+   "gist": "With the moliço gathered, Ti Manuel says the load goes to the farmers' fields. He is plain about the cost: the work is hard and the pay small, but the fields depend on it, and Zé has earned his place.",
+   "id": "b6",
+   "part": "close",
+   "trigger": "arrive"
+  },
+  {
+   "character": "k2",
+   "concept": "",
+   "delivery": "curiosity",
+   "evidence": [
+    "e7",
+    "e8",
+    "e9",
+    "e11",
+    "e12",
+    "e10"
+   ],
+   "gist": "Optional card: Zé points to the painted panels at bow and stern. There are four per boat, naïf scenes with captions in pure primary colours, and no two are alike. A boat isn't finished until it is painted.",
+   "id": "b7",
+   "part": "curiosity",
+   "trigger": "pickup"
+  },
+  {
+   "character": "k1",
+   "concept": "",
+   "delivery": "trivia",
+   "evidence": [
+    "e1",
+    "e2",
+    "e3",
+    "e4",
+    "e5",
+    "e6",
+    "e7",
+    "e8",
+    "e9",
+    "e10",
+    "e11",
+    "e12",
+    "e13",
+    "e14",
+    "e15",
+    "e16",
+    "e17",
+    "e18",
+    "e19",
+    "e20",
+    "e21",
+    "e22",
+    "e23",
+    "e24",
+    "e25",
+    "e26",
+    "e27",
+    "e28",
+    "e29",
+    "e30",
+    "e31",
+    "e32",
+    "e33",
+    "e34",
+    "e35",
+    "e36",
+    "e37",
+    "e38",
+    "e39",
+    "e40",
+    "e41",
+    "e42",
+    "e43",
+    "e44",
+    "e45"
+   ],
+   "gist": "facts for quiet moments",
+   "id": "b90",
+   "part": "trivia",
+   "trigger": "idle"
+  },
+  {
+   "character": "k1",
+   "concept": "",
+   "delivery": "ack",
+   "evidence": [],
+   "gist": "replies when the player does what was asked",
+   "id": "b91",
+   "part": "ack",
+   "trigger": "ack"
+  },
+  {
+   "character": "k2",
+   "concept": "",
+   "delivery": "ack",
+   "evidence": [],
+   "gist": "replies when the player does what was asked",
+   "id": "b92",
+   "part": "ack",
+   "trigger": "ack"
+  }
+ ],
+ "cast": [
+  {
+   "evidence": [
+    "e4",
+    "e5",
+    "e6",
+    "e30",
+    "e1",
+    "e3"
+   ],
+   "fictional": true,
+   "id": "k1",
+   "name": "Ti Manuel (fictional)",
+   "role": "Invented moliceiro, a professional moliço gatherer who sails his own boat and sells the moliço to farmers for their sand",
+   "voice": "Weathered, practical, dry humour. Speaks of the work as hard and necessary, not picturesque. Short sentences about wind, depth and rakes.",
+   "want": "Fill the boat with moliço before the wind turns and bring it back to the farmers who are waiting for it."
+  },
+  {
+   "evidence": [
+    "e4",
+    "e26",
+    "e25"
+   ],
+   "fictional": true,
+   "id": "k2",
+   "name": "Zé (fictional)",
+   "role": "Invented boy from a farming family nearby, crewing for the first time and learning the trade from Ti Manuel. The charact",
+   "voice": "Curious, a little impatient, asks the questions a visitor would ask.",
+   "want": "Learn to handle the rake and the boat well enough to earn a place aboard."
+  }
+ ],
+ "createdAt": "2026-11-13T23:57:27.613Z",
+ "evidence": [
+  {
+   "id": "e1",
+   "location": "Caracterização síntese",
+   "numbers": [
+    "aquatic plant species called moliço: 21 plants"
+   ],
+   "origin": "mmwfkg5geo1qs:1o7m:p2",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "Boats were used to gather moliço, aquatic plants from the lagoon bed, which served as fertilizer for farmland; this was a major regional economic activity. · who: População Ribeirinha da Ria de Aveiro · place: Ria de Aveiro · when: século XVIII · cargo: moliço"
+  },
+  {
+   "id": "e2",
+   "location": "A origem do Barco Moliceiro",
+   "numbers": [],
+   "origin": "mmwfkg5geo1qs:1o7m:p14",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "The boat was born for gathering moliço, a vital complement to subsistence farming, and worked across the whole lagoon. · place: whole lagoon (Ria de Aveiro) · cargo: moliço"
+  },
+  {
+   "id": "e3",
+   "location": "A Apanha do Moliço",
+   "numbers": [],
+   "origin": "mmwfkg5geo1qs:1o7m:p113",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "Farmers began gathering moliço (aquatic plants) from the ria to fertilize sandy soils beside it, especially from the 18th/19th centuries. · who: agricultural community · place: Região de Aveiro, ria · when: 18th/19th centuries · cargo: moliço"
+  },
+  {
+   "id": "e4",
+   "location": "A Apanha do Moliço",
+   "numbers": [],
+   "origin": "mmwfkg5geo1qs:1o7m:p114",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "Moliço gathering was first done by farmers, then grew into an independent profession, the moliceiro, supplying farmers as agriculture expanded. · who: Agricultores, moliceiros · place: Região de Aveiro · when: early 19th century · cargo: moliço"
+  },
+  {
+   "id": "e5",
+   "location": "A Apanha do Moliço",
+   "numbers": [],
+   "origin": "mmwfkg5geo1qs:1o7m:p117",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "Until the mid-1960s moliço gathering was a main source of wealth and employment for regional families. · who: regional families · place: Região de Aveiro · when: until mid-1960s · cargo: moliço"
+  },
+  {
+   "id": "e6",
+   "location": "part 9, opening paragraph",
+   "numbers": [],
+   "origin": "mmwfkg5geo1qs:1o7m:p121",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "The moliceiro was a main tool of the moliço-gathering trade; as more people worked in it, more boats were built and sailed on the Ria. · who: moliço gatherers · place: Ria de Aveiro · cargo: moliço"
+  },
+  {
+   "id": "e7",
+   "location": "Caracterização síntese",
+   "numbers": [
+    "decorated panels per boat: 4 panels",
+    "panels at bow: 2 panels",
+    "panels at stern: 2 panels"
+   ],
+   "origin": "mmwfkg5geo1qs:1o7m:p8",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "Each moliceiro carries decorated panels, each with a drawing and caption read together; no two panels repeat, and themes may be humorous, satirical, religious or other. · who: mestre-pintor"
+  },
+  {
+   "id": "e8",
+   "location": "page 3, Os painéis de moliceiros",
+   "numbers": [
+    "painted panels: 4 count"
+   ],
+   "origin": "mmwfkg5geo1qs:1o7m:p41",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "No moliceiro is considered finished until decorated; its four painted panels (two bow, two stern) make it famed as the most beautiful boat of the Ria. · who: António Rocha Madahil (1934); Claude Rivals (1988) · place: Ria"
+  },
+  {
+   "id": "e9",
+   "location": "page 3, Os painéis de moliceiros",
+   "numbers": [],
+   "origin": "mmwfkg5geo1qs:1o7m:p42",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "The panels are naïf painting with vivid colour, bold outlines, everyday themes and humorous captions; borders frame the central scene. · who: Ana Maria Lopes (1997)"
+  },
+  {
+   "id": "e10",
+   "location": "painel",
+   "numbers": [],
+   "origin": "mmwfkg5geo1qs:1o7m:p43",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "Painters decorate the central panel with a drawing on themes such as religion, profession, history, homeland or love, usually from their own imagination, with little input from the owner or master. · who: pintor"
+  },
+  {
+   "id": "e11",
+   "location": "painel",
+   "numbers": [],
+   "origin": "mmwfkg5geo1qs:1o7m:p44",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "Each panel drawing comes with a caption painted on a white or pink band below the frieze, between the frieze and the main motif. · who: pintor"
+  },
+  {
+   "id": "e12",
+   "location": "painel",
+   "numbers": [],
+   "origin": "mmwfkg5geo1qs:1o7m:p45",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "Moliceiro panels almost always use pure primary colours: yellow, green, blue, red, white and black."
+  },
+  {
+   "id": "e13",
+   "location": "Contexto tipológico; Caracterização síntese",
+   "numbers": [],
+   "origin": "mmwfkg5geo1qs:1o7m:p9",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "Moliço gathering ceased in the 1980s/90s, and the boat now serves tourism, which helped avoid its loss feared in the 1990s. · place: Ria de Aveiro · when: anos 80/90 do século XX"
+  },
+  {
+   "id": "e14",
+   "location": "[page 7]",
+   "numbers": [],
+   "origin": "mmwfkg5geo1qs:1o7m:p91",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "Tourism growth from the early 2000s increased the number of moliceiro boats, which had declined since the 1950s, prompting construction adjustments for tourist safety and navigation of urban canals. · place: Ria de Aveiro · when: early 2000s"
+  },
+  {
+   "id": "e15",
+   "location": "part 9, tourism revival",
+   "numbers": [
+    "boats at end of 2010s: about 30 boats"
+   ],
+   "origin": "mmwfkg5geo1qs:1o7m:p128",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "From the early 2000s, tourism drove a new rise in moliceiro numbers, adapting the boat to a new socioeconomic reality. · when: early 2000s onward · cargo: tourists"
+  },
+  {
+   "id": "e16",
+   "location": "Moliceiro como símbolo cultural",
+   "numbers": [],
+   "origin": "mmwfkg5geo1qs:1o7m:p133",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "Guided tourist trips in moliceiros were formally started in the late 1990s, consolidating the boat's shift to tourism. · when: late 1990s · cargo: tourists"
+  },
+  {
+   "id": "e17",
+   "location": "O Barco Moliceiro",
+   "numbers": [],
+   "origin": "mmwfkg6btnqmm:62a:p4",
+   "source": "História e Curiosidades do Bar",
+   "sourceId": "mmwfkg6btnqmm",
+   "text": "Today moliceiros are mainly used for tourist trips and regattas, preserving cultural heritage. · who: visitors · when: today"
+  },
+  {
+   "id": "e18",
+   "location": "[page 5]",
+   "numbers": [],
+   "origin": "mmwfkg5geo1qs:1o7m:p70",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "The boat is caulked to seal joints and keep water out, using oakum, an iron and a caulking mallet. · who: mestre"
+  },
+  {
+   "id": "e19",
+   "location": "[page 5]",
+   "numbers": [],
+   "origin": "mmwfkg5geo1qs:1o7m:p71",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "Fine pitch or pez louro is applied to the sides; black pitch goes on gunwales, bow cover, frames, traste and tostes. Rock pitch is boiled with oil in a three-legged pot. · who: mestre"
+  },
+  {
+   "id": "e20",
+   "location": "[page 5]",
+   "numbers": [],
+   "origin": "mmwfkg5geo1qs:1o7m:p72",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "After the black pitch coat, sarrim is spread on top so crews do not slip while sailing; then the boat is ready for painting. · who: tripulações"
+  },
+  {
+   "id": "e21",
+   "location": "Barco Moliceiro - construção naval",
+   "numbers": [],
+   "origin": "mmwfkg6btnqmm:62a:p10",
+   "source": "História e Curiosidades do Bar",
+   "sourceId": "mmwfkg6btnqmm",
+   "text": "Pine hulls were reportedly coated in black pitch to aid caulking and protect the wood from weather and water."
+  },
+  {
+   "id": "e22",
+   "location": "A Apanha do Moliço",
+   "numbers": [],
+   "origin": "mmwfkg5geo1qs:1o7m:p118",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "Around the 1970s moliço gathering began to be abandoned; per Jaime Vilar, causes were cheaper chemical fertilizers, hard poorly paid work, emigration, heavy taxes and moliço scarcity from changing tides. · who: Jaime Vilar (1983) · place: Região de Aveiro · wh"
+  },
+  {
+   "id": "e23",
+   "location": "O Barco Moliceiro",
+   "numbers": [],
+   "origin": "mmwfkg6btnqmm:62a:p3",
+   "source": "História e Curiosidades do Bar",
+   "sourceId": "mmwfkg6btnqmm",
+   "text": "Chemical fertilizers replaced moliço, so harvesting it became practically nonexistent. · cargo: moliço"
+  },
+  {
+   "id": "e24",
+   "location": "Contexto tipológico",
+   "numbers": [],
+   "origin": "mmwfkg5geo1qs:1o7m:p1",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "Moliceiro boats are built of pine (pinho manso and bravo) by traditional shipwrights, fitted to navigating the Ria de Aveiro and to its original economic use. · who: mestres construtores · place: Ria de Aveiro, Região de Aveiro · when: século XVIII"
+  },
+  {
+   "id": "e25",
+   "location": "Caracterização síntese",
+   "numbers": [],
+   "origin": "mmwfkg5geo1qs:1o7m:p4",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "The moliceiro has a flat bottom for shallow lagoon waters and low sides so the rakes full of moliço can be pulled aboard easily. · place: Ria de Aveiro · cargo: moliço"
+  },
+  {
+   "id": "e26",
+   "location": "Caracterização síntese",
+   "numbers": [],
+   "origin": "mmwfkg5geo1qs:1o7m:p6",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "Construction know-how, tools and skills are passed from masters to apprentices over decades, not only within families. · who: mestres e aprendizes · place: Região de Aveiro"
+  },
+  {
+   "id": "e27",
+   "location": "Caracterização síntese",
+   "numbers": [],
+   "origin": "mmwfkg5geo1qs:1o7m:p7",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "Masters build the whole boat using the pau-de-pontos, a handmade wooden rod serving as a ruler that only experienced builders can interpret. · who: mestres construtores"
+  },
+  {
+   "id": "e28",
+   "location": "Contexto temporal",
+   "numbers": [],
+   "origin": "mmwfkg5geo1qs:1o7m:p10",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "Building, repair work (amanhações) and panel painting occur year-round, whenever owners place new orders. · who: proprietários; mestres construtores · place: Região de Aveiro · when: ao longo do ano"
+  },
+  {
+   "id": "e29",
+   "location": "[page 2]",
+   "numbers": [
+    "length: 15 m",
+    "beam: 2.50-2.60 m",
+    "depth (pontal): 0.40-0.45 m",
+    "capacity: 5 tonnes"
+   ],
+   "origin": "mmwfkg5geo1qs:1o7m:p12",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "The moliceiro is described as a boat about 15 m long with 5 tonnes capacity, essential for gathering moliço and tied to a distinctive naval carpentry art. · place: Ria de Aveiro · cargo: moliço"
+  },
+  {
+   "id": "e30",
+   "location": "Origem / Historial - A Apanha do Moliço",
+   "numbers": [],
+   "origin": "mmwfkg5geo1qs:1o7m:135",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "Moliceiro (moliço gatherer trade): “moliceiro” () — The profession of the person who gathers moliço and supplies it to farmers; it emerged as a separate trade in the early 19th century."
+  },
+  {
+   "id": "e31",
+   "location": "[section: Barco Moliceiro - construção naval]",
+   "numbers": [],
+   "origin": "mmwfkg6btnqmm:62a:14",
+   "source": "História e Curiosidades do Bar",
+   "sourceId": "mmwfkg6btnqmm",
+   "text": "Shallow moliço grounds: “águas baixas” () — Shallow waters of the moliço grounds, where the wide, shallow rudder was needed to steer effectively."
+  },
+  {
+   "id": "e32",
+   "location": "[section: Barco Moliceiro - construção naval]",
+   "numbers": [],
+   "origin": "mmwfkg6btnqmm:62a:15",
+   "source": "História e Curiosidades do Bar",
+   "sourceId": "mmwfkg6btnqmm",
+   "text": "Shallow moliço grounds: “praias de moliço” () — Shallow areas of the ria where moliço was harvested."
+  },
+  {
+   "id": "e33",
+   "location": "[section: Foundations > Sailing concepts]",
+   "numbers": [],
+   "origin": "m-auth-method:14",
+   "source": "Method doc",
+   "sourceId": "m-auth-method",
+   "text": "Tacking: “virar de bordo” (en) — Tacking: turning through the wind to change sides while going upwind, zigzagging between two close-hauled headings."
+  },
+  {
+   "id": "e34",
+   "location": "[page 6]",
+   "numbers": [],
+   "origin": "m-ref-veleiro:44",
+   "source": "Veleiro.net",
+   "sourceId": "m-ref-veleiro",
+   "text": "Tacking: “Cambar” (pt-BR) — Tacking: turning the bow through the wind line so the sails change sides."
+  },
+  {
+   "id": "e35",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "numbers": [
+    "sail area: 24 m2"
+   ],
+   "origin": "mmwfkg5geo1qs:1o7m:49",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "Moliceiro trapezoidal sail: “Vela” () — Broad white trapezoidal sail that moves the boat; formerly decorated for river pilgrimages, now with flags on festive days."
+  },
+  {
+   "id": "e36",
+   "location": "[section: O Barco Moliceiro]",
+   "numbers": [],
+   "origin": "mmwfkg6btnqmm:62a:2",
+   "source": "História e Curiosidades do Bar",
+   "sourceId": "mmwfkg6btnqmm",
+   "text": "Moliceiro trapezoidal sail: “vela” () — Sail; one of the old methods of propelling the moliceiro."
+  },
+  {
+   "id": "e37",
+   "location": "[section: Foundations > Sailing concepts]",
+   "numbers": [
+    "approximate angle to the wind when close-hauled: 45 degrees"
+   ],
+   "origin": "m-auth-method:1",
+   "source": "Method doc",
+   "sourceId": "m-auth-method",
+   "text": "Close-hauled: “bolina” (en) — Sailing as close to the wind as the rig permits, with sails tight; the only way to gain ground upwind, done by tacking."
+  },
+  {
+   "id": "e38",
+   "location": "[page 7]",
+   "numbers": [],
+   "origin": "m-ref-veleiro:48",
+   "source": "Veleiro.net",
+   "sourceId": "m-ref-veleiro",
+   "text": "Close-hauled: “Orça Fechada” (pt-BR) — Close-hauled: sailing as close to the wind line as possible, heading against it."
+  },
+  {
+   "id": "e39",
+   "location": "[section: DO NORTE DE PORTUGAL]",
+   "numbers": [],
+   "origin": "mmwdz1b2r29ky:25",
+   "source": "PORTUGAL MARÍTIMO  BARCOS TRAD",
+   "sourceId": "mmwdz1b2r29ky",
+   "text": "Barco Moliceiro: “Barco Moliceiro” () — Boat of the Ria de Aveiro for gathering and carrying seaweed (moliço), also cargo and livestock; low sides, shallow draft, brightly painted bow and stern."
+  },
+  {
+   "id": "e40",
+   "location": "Transmissão activo - Descrição",
+   "numbers": [],
+   "origin": "mmwfkg5geo1qs:1o7m:132",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "Barco Moliceiro: “Barco Moliceiro” () — The traditional Aveiro lagoon boat built for gathering moliço (aquatic plant matter), whose construction and painting techniques are the knowledge being passed on."
+  },
+  {
+   "id": "e41",
+   "location": "[section: Contexto tipológico]",
+   "numbers": [
+    "century the activity began: 18th century"
+   ],
+   "origin": "mmwfkg5geo1qs:1o7m:2",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "Moliço harvesting: “apanha do moliço” () — Traditional harvesting of moliço from the Ria, the economic activity for which the moliceiro boat was originally designed."
+  },
+  {
+   "id": "e42",
+   "location": "[section: Caracterização síntese]",
+   "numbers": [
+    "number of aquatic plant species grouped as moliço: 21 plants"
+   ],
+   "origin": "mmwfkg5geo1qs:1o7m:1",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "Moliço (aquatic plants): “moliço” () — Group of 21 aquatic plants growing on the submerged bed of the Ria de Aveiro, harvested and used as farmland fertilizer."
+  },
+  {
+   "id": "e43",
+   "location": "[section: O Barco Moliceiro]",
+   "numbers": [],
+   "origin": "mmwfkg6btnqmm:62a:1",
+   "source": "História e Curiosidades do Bar",
+   "sourceId": "mmwfkg6btnqmm",
+   "text": "Moliço (aquatic plants): “moliço” () — Submerged vegetation and seaweed gathered from the ria and used as fertilizer for sandy farmland; the moliceiro's traditional cargo."
+  },
+  {
+   "id": "e44",
+   "location": "[section: A pintura dos moliceiros]",
+   "numbers": [],
+   "origin": "mmwfkg5geo1qs:1o7m:159",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "Polychrome painting style: “polichromias” () — Bright multicolour painting style of the decorations, featuring animals, human figures, flowers, arabesques, sun and moon."
+  },
+  {
+   "id": "e45",
+   "location": "[part 11 of 14]",
+   "numbers": [],
+   "origin": "mmwfkg5geo1qs:1o7m:162",
+   "source": "moliceiro-Matriz PCI",
+   "sourceId": "mmwfkg5geo1qs",
+   "text": "Jornal da ria (panels as news): “jornal da ria” () — Nickname for the panels, which are frequently renewed and record contemporary events such as politics, sport, television and music."
+  }
+ ],
+ "game": "mini.seaweed",
+ "notes": "No story bible covered this activity, so the cast and beats were built from scratch. Period chosen: the 1930s, within the time moliço gathering was a main livelihood (e5) and after the separate moliceiro trade had emerged (e4, e30). In-character lines must not mention tourism, guided trips, regattas, chemical fertilisers replacing moliço, decline or abandonment, or the panels as 'jornal da ria' with television (e13-e17, e22, e23, e45 postdate the period). These could go only in an out-of-character museum label, if the author wants one. Fact/fiction labelling: Ti Manuel and Zé are invented and ",
+ "option": null,
+ "settings": {
+  "mode": "historical",
+  "period": "",
+  "talk": "normal"
+ },
+ "title": "Seaweed with the Moliceiro",
+ "updatedAt": "2026-11-14T10:35:55.856Z"
+}

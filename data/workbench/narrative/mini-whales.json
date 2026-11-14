@@ -1,0 +1,323 @@
+{
+ "basis": {
+  "bible": true,
+  "concepts": [
+   "c324",
+   "c382",
+   "c23",
+   "c67",
+   "c561",
+   "c612"
+  ],
+  "match": "related",
+  "practices": [
+   "p133"
+  ],
+  "proposal": "s35"
+ },
+ "beats": [
+  {
+   "character": "k1",
+   "concept": "Sail trim before the approach",
+   "delivery": "story",
+   "evidence": [
+    "e6"
+   ],
+   "gist": "Off Horta, the guide explains that today's task is to come up quietly behind a whale under sail, and Manuel asks the crew to set the sail neither too tight nor too loose.",
+   "id": "b1",
+   "part": "setup",
+   "trigger": "start"
+  },
+  {
+   "character": "k2",
+   "concept": "Easing sheets to slow (folgar)",
+   "delivery": "cue",
+   "evidence": [],
+   "expects": [
+    "sheet_out"
+   ],
+   "gist": "The whale has seen the boat and dived, so Manuel tells the crew to ease the sheets and slow down.",
+   "id": "b2",
+   "part": "complication",
+   "trigger": "whale_sounds"
+  },
+  {
+   "character": "k2",
+   "concept": "Patience; slow approach from astern",
+   "delivery": "reflection",
+   "evidence": [],
+   "gist": "Once the boat has slowed, Manuel tells the young crew member, without any lecture, that you wait and do not chase. This is a pure character line with no factual claim about whale behaviour.",
+   "id": "b3",
+   "part": "complication",
+   "trigger": "sheet_out"
+  },
+  {
+   "character": "k2",
+   "concept": "Bearing away to stop luffing (arribar)",
+   "delivery": "cue",
+   "evidence": [],
+   "expects": [
+    "bear_away",
+    "luffing_stop"
+   ],
+   "gist": "The sail is flapping, so Manuel gives a short order to bear away.",
+   "id": "b4",
+   "part": "complication",
+   "trigger": "luffing_start"
+  },
+  {
+   "character": "k3",
+   "concept": "Recognising luffing (panejar)",
+   "delivery": "reflection",
+   "evidence": [
+    "e7"
+   ],
+   "gist": "The young crew member asks what the flapping was. Manuel names it 'panejar' and says it comes from easing too much or pointing too close to the wind, and that a noisy sail is not a quiet approach.",
+   "id": "b5",
+   "part": "complication",
+   "trigger": "luffing_stop"
+  },
+  {
+   "character": "k2",
+   "concept": "Fine trim on a steady heading",
+   "delivery": "story",
+   "evidence": [
+    "e6",
+    "e7"
+   ],
+   "gist": "On the slow stretch, Manuel and the young crew member talk quietly about keeping the sail just right: too loose deflects less air, too tight breaks the airflow. Lines play one after another as a pool.",
+   "id": "b6",
+   "part": "leg",
+   "trigger": "steady_leg"
+  },
+  {
+   "character": "k2",
+   "concept": "Holding station; trimming to drift",
+   "delivery": "story",
+   "evidence": [
+    "e6"
+   ],
+   "gist": "Close astern of the whale, Manuel says nothing for a moment, then gives one short, plain line acknowledging what boats like this were once used for, with no glory or detail. Until a source is supplied, he uses a generic, fact-free line instead.",
+   "id": "b7",
+   "part": "turn",
+   "trigger": "whale_close"
+  },
+  {
+   "character": "k1",
+   "concept": "Returning to port",
+   "delivery": "story",
+   "evidence": [],
+   "gist": "The guide closes by saying the group watched the whale, they did not hunt it. Manuel's last word is about the boat, not the whale, and the visitors turn back for Horta. There is no score for the approach.",
+   "id": "b8",
+   "part": "close",
+   "trigger": "whale_leaves"
+  },
+  {
+   "character": "k1",
+   "concept": "",
+   "delivery": "curiosity",
+   "evidence": [
+    "e6",
+    "e7"
+   ],
+   "gist": "An optional 'what is real' card: the guide, Manuel and the crew member are invented, while the sailing terms used on board (sail trim, panejar) come from sources.",
+   "id": "b9",
+   "part": "close",
+   "trigger": "mission_end"
+  },
+  {
+   "character": "k1",
+   "concept": "",
+   "delivery": "trivia",
+   "evidence": [
+    "e1",
+    "e2",
+    "e3",
+    "e4",
+    "e5",
+    "e6",
+    "e7",
+    "e8",
+    "e9",
+    "e10"
+   ],
+   "gist": "facts for quiet moments",
+   "id": "b90",
+   "part": "trivia",
+   "trigger": "idle"
+  },
+  {
+   "character": "k1",
+   "concept": "",
+   "delivery": "ack",
+   "evidence": [],
+   "gist": "replies when the player does what was asked",
+   "id": "b91",
+   "part": "ack",
+   "trigger": "ack"
+  },
+  {
+   "character": "k2",
+   "concept": "",
+   "delivery": "ack",
+   "evidence": [],
+   "gist": "replies when the player does what was asked",
+   "id": "b92",
+   "part": "ack",
+   "trigger": "ack"
+  },
+  {
+   "character": "k3",
+   "concept": "",
+   "delivery": "ack",
+   "evidence": [],
+   "gist": "replies when the player does what was asked",
+   "id": "b93",
+   "part": "ack",
+   "trigger": "ack"
+  }
+ ],
+ "cast": [
+  {
+   "evidence": [
+    "e6",
+    "e7"
+   ],
+   "fictional": true,
+   "id": "k1",
+   "name": "The guide (fictional)",
+   "role": "Present-day guide taking museum visitors out from Horta in a restored baleeiro to watch, not hunt. Speaks of the past in",
+   "voice": "Warm, clear, brief; frames what the visitor sees and keeps fact and fiction apart",
+   "want": "To get the group close to a sperm whale without disturbing it, and to send them home knowing they watched it"
+  },
+  {
+   "evidence": [
+    "e6",
+    "e7"
+   ],
+   "fictional": true,
+   "id": "k2",
+   "name": "Mestre Manuel (fictional)",
+   "role": "Older boatman at the helm who reacts to the player's sailing (trim, luffing). His backstory as a former whaler is kept o",
+   "voice": "Calm, spare, speaks to the young crew member more than to the player; long silences",
+   "want": "To show the young crew how to handle this boat quietly and well"
+  },
+  {
+   "evidence": [
+    "e7"
+   ],
+   "fictional": true,
+   "id": "k3",
+   "name": "Young crew member (fictional)",
+   "role": "Newcomer on the boat and the player's proxy for questions. Invented character.",
+   "voice": "Quiet, curious, asks short questions",
+   "want": "To understand how the old boatman reads the sail and the sea"
+  }
+ ],
+ "createdAt": "2026-11-14T10:36:23.681Z",
+ "evidence": [
+  {
+   "id": "e1",
+   "location": "[page 4]",
+   "numbers": [],
+   "origin": "m-hist-pedrosa:1tsz:p184",
+   "source": "Pedrosa",
+   "sourceId": "m-hist-pedrosa",
+   "text": "Caravels from Galicia sailed to Cabo Branco to fish sharks and mullets, which were dried in the sun like cod from Newfoundland. · who: Galician caravel crews · place: Cabo Branco · when: 1582 · cargo: chiens de mer (sharks), mullets, other fish"
+  },
+  {
+   "id": "e2",
+   "location": "[page 6]",
+   "numbers": [],
+   "origin": "m-hist-pedrosa:28",
+   "source": "Pedrosa",
+   "sourceId": "m-hist-pedrosa",
+   "text": "High-sea fishing beyond the bar: “alto” (pt-PT) — High sea; in Lisbon of that era, fishing 'do alto' meant fishing beyond the river bar, not at a set distance from the coast."
+  },
+  {
+   "id": "e3",
+   "location": "[section: 6. Os Pilotos da Barra]",
+   "numbers": [],
+   "origin": "m-hist-pedrosa:99",
+   "source": "Pedrosa",
+   "sourceId": "m-hist-pedrosa",
+   "text": "High-sea fishing beyond the bar: “barra” (pt-PT) — The bar or entrance of the Tagus at Lisbon, where fishing outside it was authorised and pilots worked."
+  },
+  {
+   "id": "e4",
+   "location": "[section: 15. A Muleta de Carga]",
+   "numbers": [],
+   "origin": "m-hist-pedrosa:178",
+   "source": "Pedrosa",
+   "sourceId": "m-hist-pedrosa",
+   "text": "Coastal navigation: “navegação costeira” (pt-PT) — Coastal navigation, such as trips to the Algarve to fetch produce or trade with Moroccan ports."
+  },
+  {
+   "id": "e5",
+   "location": "[section: Step 2, concept table only]",
+   "numbers": [],
+   "origin": "m-auth-method:23",
+   "source": "Method doc",
+   "sourceId": "m-auth-method",
+   "text": "Sail trim: “Trim (ease or sheet in)” (en) — Matching the sail setting to the heading; a marker turns green when correct."
+  },
+  {
+   "id": "e6",
+   "location": "[page 9]",
+   "numbers": [
+    "wind angle in over-sheeted example (beam wind): 90 degrees"
+   ],
+   "origin": "m-ref-veleiro:63",
+   "source": "Veleiro.net",
+   "sourceId": "m-ref-veleiro",
+   "text": "Sail trim: “Ajuste das Velas” (pt-BR) — Sail trim: sails should be neither over-sheeted nor over-eased; too loose deflects less air, too tight breaks the airflow."
+  },
+  {
+   "id": "e7",
+   "location": "[page 7]",
+   "numbers": [],
+   "origin": "m-ref-veleiro:51",
+   "source": "Veleiro.net",
+   "sourceId": "m-ref-veleiro",
+   "text": "Luffing (sail flapping): “Panejar” (pt-BR) — Luffing: the sail flapping irregularly, from over-easing the sheet or pointing closer to the wind than close-hauled."
+  },
+  {
+   "id": "e8",
+   "location": "[page 4]",
+   "numbers": [],
+   "origin": "mmwdz13qounll:32",
+   "source": "barcos do tejo",
+   "sourceId": "mmwdz13qounll",
+   "text": "Caravel (lateen-rigged): “caravela” () — Lateen-rigged vessel that was adapted and improved for difficult long-distance Discovery voyages."
+  },
+  {
+   "id": "e9",
+   "location": "[page 233], note 43",
+   "numbers": [],
+   "origin": "mmwdz15icx6en:77",
+   "source": "BOOK Territorios da Lisboa Med",
+   "sourceId": "mmwdz15icx6en",
+   "text": "Preserved fish cargo: “peixe fumado ou salgado” () — Smoked or salted fish, a preserved cargo shipped to Castile, Aragon, Italy, England, Flanders and other regions."
+  },
+  {
+   "id": "e10",
+   "location": "[page 235, note 57]",
+   "numbers": [],
+   "origin": "mmwdz15icx6en:108",
+   "source": "BOOK Territorios da Lisboa Med",
+   "sourceId": "mmwdz15icx6en",
+   "text": "Preserved fish cargo: “salgado e curado” () — Fish preserved by salting and curing, kept in fishermen's houses and sold alongside fresh fish."
+  }
+ ],
+ "game": "mini.whales",
+ "notes": "Adapted from the bible's Mission 4 cast and beats, with these changes. (1) The supplied evidence contains nothing about the Azores, sperm whales, the baleeiro, the vigia, the 1984 end of whaling, the crew of seven, 19th-century origins or the July 2026 heritage consultation. All of these bible facts were dropped from lines until real sources are added. The bible itself labels its facts as proposals, not evidence. (2) Manuel stays, but his former-whaler backstory is not stated as fact, because his role is grounded only in the sail-handling evidence (e6, e7). The turn keeps the one honest, non-r",
+ "option": null,
+ "settings": {
+  "mode": "guide",
+  "period": "",
+  "talk": "normal",
+  "updatedAt": "2026-11-14T10:36:04.930Z"
+ },
+ "title": "Whale watching with the Baleeiro",
+ "updatedAt": "2026-11-14T10:37:03.675Z"
+}

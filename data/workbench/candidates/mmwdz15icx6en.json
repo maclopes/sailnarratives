@@ -1,0 +1,1232 @@
+{
+ "items": [
+  {
+   "definition": "The degree to which the river can be navigated, which the source says varied over time with climate-driven changes in the river's flow.",
+   "id": "mmwdz15icx6en:1",
+   "location": "[page 226]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "navegabilidade"
+  },
+  {
+   "definition": "The volume of water flowing in the river, which fluctuated with rainfall and temperature and so affected whether boats could travel.",
+   "id": "mmwdz15icx6en:2",
+   "location": "[page 226]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "caudal"
+  },
+  {
+   "definition": "A river regime conditioned only by the combined rhythm of rainfall and temperature, which the source attributes to the Tagus and other Portuguese rivers.",
+   "id": "mmwdz15icx6en:3",
+   "location": "[page 226]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "regime fluvial"
+  },
+  {
+   "definition": "Long dry spells that sharply reduced the Tagus flow and made navigation difficult.",
+   "id": "mmwdz15icx6en:4",
+   "location": "[page 226], note 3",
+   "measured_by": "",
+   "numbers": [],
+   "term": "estiagens prolongadas"
+  },
+  {
+   "definition": "Rainfall, whose rhythm together with temperature determines the river's regime and flow variations.",
+   "id": "mmwdz15icx6en:5",
+   "location": "[page 226]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "precipitações"
+  },
+  {
+   "definition": "How the river's water behaves and flows, shaped by relief, rock composition and the characteristics of the basin.",
+   "id": "mmwdz15icx6en:6",
+   "location": "[page 226]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "comportamento hidráulico"
+  },
+  {
+   "definition": "The Tagus drainage basin, whose characteristics were formed by climate, relief and rock composition.",
+   "id": "mmwdz15icx6en:7",
+   "location": "[page 226]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bacia do Tejo"
+  },
+  {
+   "definition": "A broad plain built from the river's own sediments, which the Tagus flows across and spreads over downstream of Tancos.",
+   "id": "mmwdz15icx6en:8",
+   "location": "[page 226], note 4",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "more than 10",
+     "what": "maximum width of the alluvial plain"
+    }
+   ],
+   "term": "planície aluvial"
+  },
+  {
+   "definition": "Place upstream of which the Tagus runs in a single sinuous, high-banked channel on old rock, and downstream of which it opens into a plain.",
+   "id": "mmwdz15icx6en:9",
+   "location": "[page 226], note 4",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Tancos"
+  },
+  {
+   "definition": "The wide river mouth where the Tagus spreads out before the Lisbon hills, then passes to the sea through a narrow channel.",
+   "id": "mmwdz15icx6en:10",
+   "location": "[page 226], note 5",
+   "measured_by": "",
+   "numbers": [],
+   "term": "estuário"
+  },
+  {
+   "definition": "Low-lying alluvial lands along the Tagus, mentioned among features of the river landscape that differed in the past.",
+   "id": "mmwdz15icx6en:11",
+   "location": "[page 226]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "lezírias"
+  },
+  {
+   "definition": "River islets or sandbanks in the Tagus, mentioned among landscape features that have changed over time.",
+   "id": "mmwdz15icx6en:12",
+   "location": "[page 226]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "mouchões"
+  },
+  {
+   "definition": "Brackish water, which appeared in the valley as rising sea level pushed salt water upstream.",
+   "id": "mmwdz15icx6en:13",
+   "location": "[page 226], note 7",
+   "measured_by": "",
+   "numbers": [],
+   "term": "águas salobras"
+  },
+  {
+   "definition": "Silting up of the river and its margins, which gradually changed the Tagus channels and affected navigation over the centuries.",
+   "id": "mmwdz15icx6en:14",
+   "location": "[page 227]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "assoreamento"
+  },
+  {
+   "definition": "Tidal creeks or channels off the Tagus; when blocked, they made it hard to load wine onto boats.",
+   "id": "mmwdz15icx6en:15",
+   "location": "[page 227]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "esteiros",
+     "value": "2",
+     "what": "Number of esteiros the river forms at flood time, per Strabo"
+    }
+   ],
+   "term": "esteiros"
+  },
+  {
+   "definition": "Marshy lands, listed as a place-name marker for the lower Tagus.",
+   "id": "mmwdz15icx6en:16",
+   "location": "[page 227]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pauis"
+  },
+  {
+   "definition": "Place-name marker for the lower Tagus; the source lists it without explaining it.",
+   "id": "mmwdz15icx6en:17",
+   "location": "[page 227]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "alvercas"
+  },
+  {
+   "definition": "Place-name marker for the lower Tagus; the source lists it without explaining it.",
+   "id": "mmwdz15icx6en:18",
+   "location": "[page 227]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "adémias"
+  },
+  {
+   "definition": "Place-name marker for the lower Tagus; the source lists it without explaining it.",
+   "id": "mmwdz15icx6en:19",
+   "location": "[page 227]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "espargais"
+  },
+  {
+   "definition": "Place-name marker for the lower Tagus; also the assembly of Leiria (1438) where Lisbon complained about blocked esteiros.",
+   "id": "mmwdz15icx6en:20",
+   "location": "[page 227]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1438",
+     "what": "Year of the Cortes of Leiria"
+    }
+   ],
+   "term": "cortes"
+  },
+  {
+   "definition": "Loading wine onto boats at river inlets, which depended on the esteiros being open and navigable.",
+   "id": "mmwdz15icx6en:21",
+   "location": "[page 227]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "embarcar os vinhos"
+  },
+  {
+   "definition": "Boat navigation, hindered in 1572 by sand and earth falling into the river near Cardiga and by silt from floods.",
+   "id": "mmwdz15icx6en:22",
+   "location": "[page 227]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1572",
+     "what": "Year of the Cardiga report"
+    },
+    {
+     "unit": "league",
+     "value": "0.5",
+     "what": "Length of the sandy cliffs along the river"
+    }
+   ],
+   "term": "navegação dos Barcos"
+  },
+  {
+   "definition": "River floods, which carried sand that clogged waters and, per Strabo, made the plain navigable.",
+   "id": "mmwdz15icx6en:23",
+   "location": "[page 227]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "stadia",
+     "value": "150",
+     "what": "Extent of the flood-time 'sea' per Strabo"
+    }
+   ],
+   "term": "cheias"
+  },
+  {
+   "definition": "Single-channel river system toward which the Tagus tended once most secondary channels had silted up.",
+   "id": "mmwdz15icx6en:24",
+   "location": "[page 227]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "canal único"
+  },
+  {
+   "definition": "River craft, used on stretches of the Tagus where larger vessels could not go.",
+   "id": "mmwdz15icx6en:25",
+   "location": "[page 227]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "embarcações de rio"
+  },
+  {
+   "definition": "Large vessels that, per Strabo, could ascend the Tagus from its mouth because of its depth.",
+   "id": "mmwdz15icx6en:26",
+   "location": "[page 227]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "amphorae",
+     "value": "10000",
+     "what": "Boat capacity"
+    },
+    {
+     "unit": "stadia",
+     "value": "20",
+     "what": "Width of the river mouth"
+    },
+    {
+     "unit": "stadia",
+     "value": "500",
+     "what": "Distance of Móron from the sea at most"
+    }
+   ],
+   "term": "barcos de dez mil ânforas de capacidade"
+  },
+  {
+   "definition": "Deep-draught vessels that could navigate the deep stretch of river near Sacavém, arriving from the port of Lisbon.",
+   "id": "mmwdz15icx6en:27",
+   "location": "[page 228]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barcos de grande calado"
+  },
+  {
+   "definition": "Tides, whose push affected navigation and daily life in riverside towns such as Alverca, Alhandra, Povos, Vila Nova da Rainha, Azambuja and Porto de Muge.",
+   "id": "mmwdz15icx6en:28",
+   "location": "[page 228]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "marés"
+  },
+  {
+   "definition": "Boats used to carry cargo and people on the Tagus; described as small vessels carrying few people and unable to go far upriver when water was low.",
+   "id": "mmwdz15icx6en:29",
+   "location": "[page 228]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "leguas",
+     "value": "2",
+     "what": "distance from Muge to Santarém, the limit barcas could reach (as stated in the 1"
+    }
+   ],
+   "term": "barcas"
+  },
+  {
+   "definition": "Small boats, used alongside barcas to bring wheat and meat from the Ribatejo marshlands to Lisbon.",
+   "id": "mmwdz15icx6en:30",
+   "location": "[page 228]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "batéis"
+  },
+  {
+   "definition": "Larger ships loading salt and wine on the Sacavém river and at Montijo point; the text notes the count may be exaggerated.",
+   "id": "mmwdz15icx6en:31",
+   "location": "[page 228]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "ships",
+     "value": "60 and 70",
+     "what": "ships said to be loading at each place (Fernão Lopes)"
+    }
+   ],
+   "term": "navios"
+  },
+  {
+   "definition": "Upriver boats with lateen sails, smaller tonnage and shallow draught, which handled traffic above where tidal effect fades.",
+   "id": "mmwdz15icx6en:32",
+   "location": "[page 228]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "2",
+     "what": "distance of Porto do Sabugueiro upstream of Muge, beyond which tides are not fel"
+    }
+   ],
+   "term": "barcos de agua acima"
+  },
+  {
+   "definition": "Lateen sail, the type of sail used by the small upriver boats.",
+   "id": "mmwdz15icx6en:33",
+   "location": "[page 228]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "véla latina"
+  },
+  {
+   "definition": "Draught: the depth of a hull below water, determining which boats can navigate shallow stretches.",
+   "id": "mmwdz15icx6en:34",
+   "location": "[page 228]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "calado"
+  },
+  {
+   "definition": "Propelling a boat by pushing with a pole against the riverbed, used when sailing was not possible.",
+   "id": "mmwdz15icx6en:35",
+   "location": "[page 228]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "à força de vara"
+  },
+  {
+   "definition": "Towing a boat along the bank with a line, used to move boats upriver against the current.",
+   "id": "mmwdz15icx6en:36",
+   "location": "[page 228]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "puxados à sirga"
+  },
+  {
+   "definition": "Current speed; strong winter currents made upriver progress hard for the boats.",
+   "id": "mmwdz15icx6en:37",
+   "location": "[page 228]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "velocidade da corrente"
+  },
+  {
+   "definition": "Sand built up on the riverbed in summer, causing boats to run aground.",
+   "id": "mmwdz15icx6en:38",
+   "location": "[page 228]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "areias acumuladas no leito do rio"
+  },
+  {
+   "definition": "Running aground, a frequent hazard for boats in shallow, sandy stretches of the upper river.",
+   "id": "mmwdz15icx6en:39",
+   "location": "[page 228]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "encalhando"
+  },
+  {
+   "definition": "The crew of a boat, who suffered exhausting labour when working boats against the current and shoals.",
+   "id": "mmwdz15icx6en:40",
+   "location": "[page 228]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "companha"
+  },
+  {
+   "definition": "Groups of many small boats that once furrowed the river together.",
+   "id": "mmwdz15icx6en:41",
+   "location": "[page 228]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "flotilhas"
+  },
+  {
+   "definition": "Timber floated or carried downriver to the storehouses (tercenas) in Lisbon, a massive presence on the Lower Tagus.",
+   "id": "mmwdz15icx6en:42",
+   "location": "[page 229]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "madeiras que deslizavam rio abaixo"
+  },
+  {
+   "definition": "Types of boats making up the fleet of 35 vessels that the Master of Avis took upriver toward Alenquer in 1384.",
+   "id": "mmwdz15icx6en:43",
+   "location": "[page 230]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "35",
+     "what": "vessels in the fleet sailing up the Tagus to Alenquer"
+    },
+    {
+     "unit": "légua",
+     "value": "1",
+     "what": "distance from Alenquer where the boats stopped"
+    }
+   ],
+   "term": "barcas e batéis"
+  },
+  {
+   "definition": "Galleys sent to the people of Alenquer in 1384, which reached as far as the Ponte da Marinha.",
+   "id": "mmwdz15icx6en:44",
+   "location": "[page 230] note 27",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "légua",
+     "value": "1",
+     "what": "distance from Alenquer to the point reached"
+    }
+   ],
+   "term": "galés"
+  },
+  {
+   "definition": "Not used; see navios.",
+   "id": "mmwdz15icx6en:45",
+   "location": "[page 230] note 26",
+   "measured_by": "",
+   "numbers": [],
+   "term": "naufios"
+  },
+  {
+   "definition": "Vessels included among the thirty ships of the fleet assembled near Povos and Vila Franca in 1487.",
+   "id": "mmwdz15icx6en:46",
+   "location": "[page 230] note 26",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "navios",
+     "value": "30",
+     "what": "ships in the fleet"
+    }
+   ],
+   "term": "tasoreas"
+  },
+  {
+   "definition": "The tide began to rise (flood tide), described by the chronicler as a great help for travelling upriver faster.",
+   "id": "mmwdz15icx6en:47",
+   "location": "[page 230]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "o mar começasse demcher"
+  },
+  {
+   "definition": "The wind was not favourable for the voyage, so the crew relied on the rising tide instead.",
+   "id": "mmwdz15icx6en:48",
+   "location": "[page 230]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "o vemto nom era de viagem"
+  },
+  {
+   "definition": "Metaphor for the Tagus as a waterway, with routes upstream, downstream, across the river and in combinations between ports.",
+   "id": "mmwdz15icx6en:49",
+   "location": "[page 230] note 25",
+   "measured_by": "",
+   "numbers": [],
+   "term": "estrada líquida"
+  },
+  {
+   "definition": "Upstream and downstream directions of travel along the Tagus between ports.",
+   "id": "mmwdz15icx6en:50",
+   "location": "[page 230] note 25",
+   "measured_by": "",
+   "numbers": [],
+   "term": "sentido ascendente / descendente"
+  },
+  {
+   "definition": "Crossing from one bank of the river to the other, one of the possible Tagus routes.",
+   "id": "mmwdz15icx6en:51",
+   "location": "[page 230] note 25",
+   "measured_by": "",
+   "numbers": [],
+   "term": "entre-margens"
+  },
+  {
+   "definition": "Timber arriving by river, subject to a charge in the charters of Povos and Vila Franca de Xira, suggesting river transport of wood.",
+   "id": "mmwdz15icx6en:52",
+   "location": "[page 229] note 22",
+   "measured_by": "",
+   "numbers": [],
+   "term": "madeyra que ueer pelo rrio"
+  },
+  {
+   "definition": "Floating loose logs down the river, which a scholar thinks was unlikely because it could obstruct navigation.",
+   "id": "mmwdz15icx6en:53",
+   "location": "[page 229] note 22",
+   "measured_by": "",
+   "numbers": [],
+   "term": "flutuação de toros"
+  },
+  {
+   "definition": "Wooden quay at Povos, built around 1727 and damaged, then authorised for replacement in 1737 by another wooden quay.",
+   "id": "mmwdz15icx6en:54",
+   "location": "[page 229] note 18",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1737",
+     "what": "year the replacement was authorised"
+    },
+    {
+     "unit": "years",
+     "value": "10",
+     "what": "years between construction and replacement authorisation"
+    }
+   ],
+   "term": "cais de madeira"
+  },
+  {
+   "definition": "Common river boat on the Tagus, used constantly until the early 16th century, then diversified by function and route; also used as a platform carrying mills.",
+   "id": "mmwdz15icx6en:55",
+   "location": "[page 231]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "century",
+     "value": "16th",
+     "what": "year when barcas began to differentiate (approx., early century)"
+    }
+   ],
+   "term": "barca"
+  },
+  {
+   "definition": "Boats carrying floating mills, owned by Infante D. Henrique, allowed to travel the river without obstructing other boats' navigation.",
+   "id": "mmwdz15icx6en:56",
+   "location": "[page 231]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1451",
+     "what": "year of the authorization document"
+    }
+   ],
+   "term": "barcas onde se colocavam os moinhos"
+  },
+  {
+   "definition": "One of the river vessel types listed in the 1572 Regimento dos Barqueiros as present on the Tagus.",
+   "id": "mmwdz15icx6en:57",
+   "location": "[page 231]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1572",
+     "what": "year of the Regimento dos Barqueiros"
+    }
+   ],
+   "term": "batel"
+  },
+  {
+   "definition": "Small boats (batéis) used by Vila Franca de Xira fishermen to go fishing and earn their food.",
+   "id": "mmwdz15icx6en:58",
+   "location": "[page 231]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1496",
+     "what": "year of the privilege confirmation document"
+    }
+   ],
+   "term": "batees"
+  },
+  {
+   "definition": "Vessel type named in the 1572 Regimento dos Barqueiros among the boats identifiable on the Tagus.",
+   "id": "mmwdz15icx6en:59",
+   "location": "[page 231]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "caravelão"
+  },
+  {
+   "definition": "Vessel type listed in the 1572 Regimento, noted as used for carrying goods.",
+   "id": "mmwdz15icx6en:60",
+   "location": "[page 231]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "muleta"
+  },
+  {
+   "definition": "River vessel type listed in the 1572 Regimento dos Barqueiros.",
+   "id": "mmwdz15icx6en:61",
+   "location": "[page 231]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bateira"
+  },
+  {
+   "definition": "1572 regulation identifying the boat types operating on the Tagus: barca, batel, caravelão, muleta and bateira.",
+   "id": "mmwdz15icx6en:62",
+   "location": "[page 231]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1572",
+     "what": "year"
+    }
+   ],
+   "term": "Regimento dos Barqueiros"
+  },
+  {
+   "definition": "Shallow draught; needed for boats going upriver or through shallow river branches.",
+   "id": "mmwdz15icx6en:63",
+   "location": "[page 231]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pequeno calado"
+  },
+  {
+   "definition": "Keel-less or half-keel hull design, created by riverside shipbuilders for shallow, upstream Tagus navigation.",
+   "id": "mmwdz15icx6en:64",
+   "location": "[page 231]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "sem quilha ou de meia quilha"
+  },
+  {
+   "definition": "River navigation on the Tagus, which grew in the 16th century and had to be kept unobstructed by mill boats.",
+   "id": "mmwdz15icx6en:65",
+   "location": "[page 231]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "navegação"
+  },
+  {
+   "definition": "Imposing quay at Tancos built under King Manuel I, part of riverside works supporting Tagus navigation.",
+   "id": "mmwdz15icx6en:66",
+   "location": "[page 231]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "cais de Tancos"
+  },
+  {
+   "definition": "River fishermen who drew their livelihood from the water and faced the river's currents, sometimes tragically.",
+   "id": "mmwdz15icx6en:67",
+   "location": "[page 231]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pescadores de rio"
+  },
+  {
+   "definition": "River currents, whose variations were lived intensely, sometimes tragically, by those working on the water.",
+   "id": "mmwdz15icx6en:68",
+   "location": "[page 231]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "correntes"
+  },
+  {
+   "definition": "Shipwrecks, noted as frequent on the Tagus; survivors offered ex-votos at the Senhor da Boa Morte chapel.",
+   "id": "mmwdz15icx6en:69",
+   "location": "[page 231]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "naufrágios"
+  },
+  {
+   "definition": "River fishing carried out from riverside ports, using techniques and nets suited to the kind and size of fish sought.",
+   "id": "mmwdz15icx6en:70",
+   "location": "[page 233]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pesca de rio"
+  },
+  {
+   "definition": "Nets of different types, chosen through generations of experience to suit the size and quality of the fish being caught.",
+   "id": "mmwdz15icx6en:71",
+   "location": "[page 233]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "redes"
+  },
+  {
+   "definition": "Riverside ports on the Tagus from which fishermen set out to fish the river.",
+   "id": "mmwdz15icx6en:72",
+   "location": "[page 233]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "portos ribeirinhos"
+  },
+  {
+   "definition": "Merchant ships that, according to the cited historian, could navigate the Tagus much farther upstream, reaching Santarém.",
+   "id": "mmwdz15icx6en:73",
+   "location": "[page 233], note 43",
+   "measured_by": "",
+   "numbers": [],
+   "term": "navios de comércio"
+  },
+  {
+   "definition": "Shad, a fish caught in large quantities in the Tagus and carried on ships to be salted or sold, including for Ceuta.",
+   "id": "mmwdz15icx6en:74",
+   "location": "[page 233], note 43",
+   "measured_by": "",
+   "numbers": [],
+   "term": "saaues"
+  },
+  {
+   "definition": "Term in a 1420 document apparently denoting vessels or fishing operations linked to Prince Henry and Ceuta; meaning not explained in the text.",
+   "id": "mmwdz15icx6en:75",
+   "location": "[page 233], note 43",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1420",
+     "what": "year of the document"
+    }
+   ],
+   "term": "avargas"
+  },
+  {
+   "definition": "Shad found in the Tagus downstream of Santarém, loaded in great quantity for the kingdom and for Castile.",
+   "id": "mmwdz15icx6en:76",
+   "location": "[page 233], note 46",
+   "measured_by": "",
+   "numbers": [],
+   "term": "sáveis"
+  },
+  {
+   "definition": "Smoked or salted fish, a preserved cargo shipped to Castile, Aragon, Italy, England, Flanders and other regions.",
+   "id": "mmwdz15icx6en:77",
+   "location": "[page 233], note 43",
+   "measured_by": "",
+   "numbers": [],
+   "term": "peixe fumado ou salgado"
+  },
+  {
+   "definition": "Types of mobile fishing nets used on the Tagus; the source also mentions fixed nets (de armação) as a separate category.",
+   "id": "mmwdz15icx6en:78",
+   "location": "[page 233-234] footnote 49",
+   "measured_by": "",
+   "numbers": [],
+   "term": "redes de emalhar, de arrasto, de lançado e de armar"
+  },
+  {
+   "definition": "Net-based fishing gear used in different stretches of the Tagus, comprising several subtypes of mobile and fixed nets.",
+   "id": "mmwdz15icx6en:79",
+   "location": "[page 233-234] footnote 49",
+   "measured_by": "",
+   "numbers": [],
+   "term": "artes de rede"
+  },
+  {
+   "definition": "Net mesh size, which royal rules regulated to protect shad and ensure the species' survival.",
+   "id": "mmwdz15icx6en:80",
+   "location": "[page 234] footnote 50",
+   "measured_by": "",
+   "numbers": [],
+   "term": "malha das redes"
+  },
+  {
+   "definition": "A type of fishing net in which fish spawn or young fish were caught, mentioned in a royal rule on shad.",
+   "id": "mmwdz15icx6en:81",
+   "location": "[page 234] footnote 50",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bogeiros"
+  },
+  {
+   "definition": "A type of net, named alongside bogeiros, that was fitted with a fine-meshed inner net catching young fish.",
+   "id": "mmwdz15icx6en:82",
+   "location": "[page 234] footnote 50",
+   "measured_by": "",
+   "numbers": [],
+   "term": "lavadas"
+  },
+  {
+   "definition": "Very fine-meshed inner net attached within bogeiros and lavadas, which trapped young fish; its use was banned.",
+   "id": "mmwdz15icx6en:83",
+   "location": "[page 234] footnote 50",
+   "measured_by": "",
+   "numbers": [],
+   "term": "copes"
+  },
+  {
+   "definition": "Form of the fine-meshed inner net whose use in fishing nets was prohibited to preserve shad and other fish spawn.",
+   "id": "mmwdz15icx6en:84",
+   "location": "[page 234] footnote 50",
+   "measured_by": "",
+   "numbers": [],
+   "term": "copéis"
+  },
+  {
+   "definition": "A trap used on the Tagus to catch various kinds of fish.",
+   "id": "mmwdz15icx6en:85",
+   "location": "[page 234] footnote 51",
+   "measured_by": "",
+   "numbers": [],
+   "term": "ramada"
+  },
+  {
+   "definition": "A fish trap commonly used on the Tagus for different fish types.",
+   "id": "mmwdz15icx6en:86",
+   "location": "[page 234] footnote 51",
+   "measured_by": "",
+   "numbers": [],
+   "term": "nassa"
+  },
+  {
+   "definition": "A fish trap commonly used on the Tagus for different fish types.",
+   "id": "mmwdz15icx6en:87",
+   "location": "[page 234] footnote 51",
+   "measured_by": "",
+   "numbers": [],
+   "term": "avarga ou abarga"
+  },
+  {
+   "definition": "Poisoning river water with trovisco plant to catch fish, harming fish populations indiscriminately.",
+   "id": "mmwdz15icx6en:88",
+   "location": "[page 234] footnote 51",
+   "measured_by": "",
+   "numbers": [],
+   "term": "troviscada"
+  },
+  {
+   "definition": "A stake barrier built across the river that blocked fish moving upstream; banned under penalty of losing property and demolition.",
+   "id": "mmwdz15icx6en:89",
+   "location": "[page 234] footnote 52",
+   "measured_by": "",
+   "numbers": [],
+   "term": "estacada"
+  },
+  {
+   "definition": "A blocking structure across the Tagus that stopped fish from swimming upstream; prohibited by royal decree in 1507.",
+   "id": "mmwdz15icx6en:90",
+   "location": "[page 234] footnote 52",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1507",
+     "what": "year of royal prohibition"
+    }
+   ],
+   "term": "tapamento"
+  },
+  {
+   "definition": "Angling with rods and reeds or just a line, allowed on river beaches, channels and fishing spots not owned by lords or the crown.",
+   "id": "mmwdz15icx6en:91",
+   "location": "[page 234] footnote 54",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pesca à cana"
+  },
+  {
+   "definition": "Rods and reeds used for angling on the river.",
+   "id": "mmwdz15icx6en:92",
+   "location": "[page 234] footnote 54",
+   "measured_by": "",
+   "numbers": [],
+   "term": "canas e caniços"
+  },
+  {
+   "definition": "Riverside channels or fishing spots where angling could take place if not privately or royally owned.",
+   "id": "mmwdz15icx6en:93",
+   "location": "[page 234]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "caneiras"
+  },
+  {
+   "definition": "Designated fishing spots along the river, open to angling unless owned by a lord or the crown.",
+   "id": "mmwdz15icx6en:94",
+   "location": "[page 234]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pesqueiros"
+  },
+  {
+   "definition": "Night fishing, not specifically documented for the Tagus but possibly practised as on other medieval rivers.",
+   "id": "mmwdz15icx6en:95",
+   "location": "[page 234] footnote 53",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pesca nocturna"
+  },
+  {
+   "definition": "Fishing carried out as an occupation by fishermen, contrasted with casual fishing from the riverbank.",
+   "id": "mmwdz15icx6en:96",
+   "location": "[page 234]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pesca profissional"
+  },
+  {
+   "definition": "Beating the water with poles to drive fish and catch more; a simple fishing method mentioned for rivers.",
+   "id": "mmwdz15icx6en:97",
+   "location": "[page 225, note 56]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "varejasse"
+  },
+  {
+   "definition": "Throwing stones into the river to scare fish and increase the catch; a simple capture practice that could harm others' fishing grounds.",
+   "id": "mmwdz15icx6en:98",
+   "location": "[page 225, note 56]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "apedrasse o rio"
+  },
+  {
+   "definition": "A tithe-like royal levy on fish and sardines arriving through the river mouth, payable even if carried to Santarém rather than sold in Lisbon.",
+   "id": "mmwdz15icx6en:99",
+   "location": "[page 225, note 60]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "dízima"
+  },
+  {
+   "definition": "Boats carrying sea fish, some caught at the Tagus mouth, upstream to Santarém, linking the estuary to inland markets.",
+   "id": "mmwdz15icx6en:100",
+   "location": "[page 235, text and note 61]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barcos rio acima"
+  },
+  {
+   "definition": "The river mouth of the Tagus, where fish and sardines were caught and from which they were shipped, subject to the tithe.",
+   "id": "mmwdz15icx6en:101",
+   "location": "[page 235, note 60]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "foz"
+  },
+  {
+   "definition": "Transport of purchased fish by sea out of the kingdom, and from Lisbon to Santarém and elsewhere by water.",
+   "id": "mmwdz15icx6en:102",
+   "location": "[page 235, note 61]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "per mar pera fora do Reino"
+  },
+  {
+   "definition": "Carrying fish by water, i.e. river transport from Lisbon to Santarém and other places.",
+   "id": "mmwdz15icx6en:103",
+   "location": "[page 235, note 61]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pela aauga"
+  },
+  {
+   "definition": "Lisbon's waterfront market zone where boats unloaded, goods were loaded and traded, and commerce went on all day.",
+   "id": "mmwdz15icx6en:104",
+   "location": "[page 235, note 62]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Ribeira"
+  },
+  {
+   "definition": "The Tagus estuary, described as the source of Lisbon's wealth, where goods from the kingdom and abroad arrived and departed.",
+   "id": "mmwdz15icx6en:105",
+   "location": "[page 235, note 62]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "estuário do Tejo"
+  },
+  {
+   "definition": "Loading and unloading of cargo at the waterfront, a constant daily activity of river and sea trade.",
+   "id": "mmwdz15icx6en:106",
+   "location": "[page 235, note 62]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "cargas e descargas"
+  },
+  {
+   "definition": "Condition of preservation and way of transport of fish, which determined whether it could be consumed.",
+   "id": "mmwdz15icx6en:107",
+   "location": "[page 235, note 59]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "estado de conservação e forma de transporte"
+  },
+  {
+   "definition": "Fish preserved by salting and curing, kept in fishermen's houses and sold alongside fresh fish.",
+   "id": "mmwdz15icx6en:108",
+   "location": "[page 235, note 57]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "salgado e curado"
+  },
+  {
+   "definition": "Women retail sellers who bought fish from fishermen to resell and ensure distribution to consumers.",
+   "id": "mmwdz15icx6en:109",
+   "location": "[page 236]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "regateiras"
+  },
+  {
+   "definition": "Male resellers who could freely buy products for resale at the Ribeira.",
+   "id": "mmwdz15icx6en:110",
+   "location": "[page 235, note 62]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "regatões"
+  },
+  {
+   "definition": "Municipal rules setting places, hours, sales conditions, prices and quality of fish brought by riverside fishermen.",
+   "id": "mmwdz15icx6en:111",
+   "location": "[page 236]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "regras municipais"
+  },
+  {
+   "definition": "Sea and river fisheries, whose rents were a royal right under King Duarte, later confirmed by Manuel and successors.",
+   "id": "mmwdz15icx6en:112",
+   "location": "[page 225, note 55]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pescarias de mar e de rio"
+  },
+  {
+   "definition": "A toll that was among the royal rights drawn from fisheries, which the king could cede to nobles, clergy or councils.",
+   "id": "mmwdz15icx6en:113",
+   "location": "[page 225, note 55]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "portagem"
+  },
+  {
+   "definition": "Medieval fishing boats named 'wolves' rumps' in a 1309 royal sentence, used on the river to catch many fish species, including eels.",
+   "id": "mmwdz15icx6en:114",
+   "location": "[note 80]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1309",
+     "what": "year of the document mentioning these boats"
+    }
+   ],
+   "term": "barcos que chamauam cuus de lobos"
+  },
+  {
+   "definition": "Each vessel type was chosen according to the fish species targeted, whether in rivers, near the coast or on the open sea.",
+   "id": "mmwdz15icx6en:115",
+   "location": "[note 80]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "a utilização de cada embarcação seria ditada pelas características das espécies que se capturavam"
+  },
+  {
+   "definition": "River flood: it brought fertile silt to the fields, but its intensity, duration or timing could also damage crops and land.",
+   "id": "mmwdz15icx6en:116",
+   "location": "[section: Águas ameaçadoras, águas sofridas…]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "cheia"
+  },
+  {
+   "definition": "Fertile silt deposited by flood waters on farmland; now much reduced because dams trap the sediment upstream.",
+   "id": "mmwdz15icx6en:117",
+   "location": "[section: Águas ameaçadoras, águas sofridas…]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "nateiros"
+  },
+  {
+   "definition": "Erosive gullies or breaches the flood tore into riverside land, breaking up the ground next to the river.",
+   "id": "mmwdz15icx6en:118",
+   "location": "[section: Águas ameaçadoras, águas sofridas…]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "goivas"
+  },
+  {
+   "definition": "Ditches clogged with debris, slowing drainage and altering the river's behaviour; they needed costly reopening to keep land fertile.",
+   "id": "mmwdz15icx6en:119",
+   "location": "[section: Águas ameaçadoras, águas sofridas…]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "valas atulhadas"
+  },
+  {
+   "definition": "Engineering works on the river and its tributary system, begun under King Dinis and continued from the 16th century, such as course changes near Quinta da Cardiga.",
+   "id": "mmwdz15icx6en:120",
+   "location": "[notes 86, 88]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "century",
+     "value": "16th",
+     "what": "century when major works began"
+    },
+    {
+     "unit": "century",
+     "value": "20th",
+     "what": "century of dam construction"
+    }
+   ],
+   "term": "obras no Tejo"
+  },
+  {
+   "definition": "Flood surges of the river Tagus, recorded in documents since the eighteenth century.",
+   "id": "mmwdz15icx6en:121",
+   "location": "page 239",
+   "measured_by": "",
+   "numbers": [],
+   "term": "enchentes do Tejo"
+  },
+  {
+   "definition": "River flow volumes, altered by twentieth-century dams, which also changed how floodwaters drained.",
+   "id": "mmwdz15icx6en:122",
+   "location": "page 239",
+   "measured_by": "",
+   "numbers": [],
+   "term": "caudais"
+  },
+  {
+   "definition": "Dams built from the 1950s that reduced load, flood peaks and average annual flows, and narrowed the river channel.",
+   "id": "mmwdz15icx6en:123",
+   "location": "page 239",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "decade",
+     "value": "1950s",
+     "what": "decade when dam and flood-control construction began"
+    }
+   ],
+   "term": "barragens"
+  },
+  {
+   "definition": "Narrowing of the river channel, a result of dams and flood control, which changed the Tagus's physical shape.",
+   "id": "mmwdz15icx6en:124",
+   "location": "page 239",
+   "measured_by": "",
+   "numbers": [],
+   "term": "estreitamento do canal"
+  },
+  {
+   "definition": "The fishermen's daily working activity on the river, which stopped during floods.",
+   "id": "mmwdz15icx6en:125",
+   "location": "page 239",
+   "measured_by": "",
+   "numbers": [],
+   "term": "faina"
+  },
+  {
+   "definition": "Muddy flood torrents in which fish were lost, making the fishermen's livelihood harder.",
+   "id": "mmwdz15icx6en:126",
+   "location": "page 239",
+   "measured_by": "",
+   "numbers": [],
+   "term": "enxurradas barrentas"
+  },
+  {
+   "definition": "River ports used to load and shelter boats; fishermen feared floods would ruin them, as future return to the river depended on them.",
+   "id": "mmwdz15icx6en:127",
+   "location": "page 239",
+   "measured_by": "",
+   "numbers": [],
+   "term": "portos fluviais"
+  },
+  {
+   "definition": "Quay of a river town, a landing structure maintained with funds from penalties.",
+   "id": "mmwdz15icx6en:128",
+   "location": "page 239",
+   "measured_by": "",
+   "numbers": [],
+   "term": "cajs"
+  },
+  {
+   "definition": "Occasional freight transport by boat, for example toward Lisbon, which fishermen undertook after floods to earn a living.",
+   "id": "mmwdz15icx6en:129",
+   "location": "page 239",
+   "measured_by": "",
+   "numbers": [],
+   "term": "fretes"
+  },
+  {
+   "definition": "The riverbed or channel; floodwaters returned to it, and the river keeps remaking it on its way to the mouth.",
+   "id": "mmwdz15icx6en:130",
+   "location": "page 239",
+   "measured_by": "",
+   "numbers": [],
+   "term": "leito"
+  }
+ ],
+ "kind": "historical",
+ "lang": "",
+ "partsDone": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "partsTotal": 11,
+ "runAt": "2026-11-12T20:22:34.003Z",
+ "sourceId": "mmwdz15icx6en",
+ "textChars": 64124,
+ "title": "BOOK Territorios da Lisboa Medieval 3 225"
+}

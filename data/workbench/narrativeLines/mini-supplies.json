@@ -1,0 +1,596 @@
+{
+ "lines": [
+  {
+   "beat": "b1",
+   "check": {
+    "at": "2026-11-13T07:22:01.916Z",
+    "claims": [
+     {
+      "claim": "Boats like the narrator's carry people and goods on the river",
+      "evidence": [
+       "e14",
+       "e19"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "They travel by sail and oars",
+      "evidence": [
+       "e24"
+      ],
+      "verdict": "supported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "Smaller boats carried people and goods such as groceries.",
+     "evidence": [
+      "e19"
+     ]
+    },
+    {
+     "claim": "Navigation on the river was done by sail and oars.",
+     "evidence": [
+      "e24"
+     ]
+    }
+   ],
+   "en": "Bread and water for Ti Joaquim's muleta; he won't leave the fishing ground. Boats like mine carry people and goods on the river, by sail and oars. Sheet in the sail, let's go.",
+   "fictional": false,
+   "id": "l1",
+   "pt": "Pão e água para a muleta do Ti Joaquim, que não sai do pesqueiro. Barcos como o meu levam gente e mercadoria pelo rio, à vela e a remos. Caça a vela, vamos.",
+   "status": "verified"
+  },
+  {
+   "beat": "b1",
+   "check": {
+    "at": "2026-11-13T07:22:01.925Z",
+    "claims": [
+     {
+      "claim": "Boats linked the banks of the Tejo",
+      "evidence": [
+       "e14",
+       "e16"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "Boats carried people and cargo",
+      "evidence": [
+       "e14",
+       "e16",
+       "e19"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "Navigation was by sail and oars",
+      "evidence": [
+       "e24"
+      ],
+      "verdict": "supported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "River traffic linked the two banks of the Tejo, carrying goods and people.",
+     "evidence": [
+      "e14",
+      "e16"
+     ]
+    },
+    {
+     "claim": "Navigation on the Tejo was done by sail and oars.",
+     "evidence": [
+      "e24"
+     ]
+    }
+   ],
+   "en": "All aboard? The muleta won't wait. That's how the Tejo works: boats linking the banks, with people and cargo, by sail and oars. Sheet in a bit more.",
+   "fictional": false,
+   "id": "l2",
+   "pt": "Tudo a bordo? A muleta não espera. É assim que se anda no Tejo: barcos a ligar as margens, com gente e carga, à vela e a remos. Caça mais um pouco.",
+   "status": "verified"
+  },
+  {
+   "beat": "b2",
+   "check": {
+    "at": "2026-11-13T07:22:01.931Z",
+    "claims": [
+     {
+      "claim": "Any small river boat was once called a barca",
+      "evidence": [
+       "e8"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "Boats changed according to their work and route",
+      "evidence": [
+       "e9",
+       "e10"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "The canoa is a distinct boat type from the bote",
+      "evidence": [
+       "e18",
+       "e20"
+      ],
+      "verdict": "supported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "The term barca was long used for any small river-traffic or fishing boat on the Tagus.",
+     "evidence": [
+      "e8"
+     ]
+    },
+    {
+     "claim": "Barcas came to diversify according to their functions and routes.",
+     "evidence": [
+      "e9"
+     ]
+    },
+    {
+     "claim": "The canoa and the bote were distinct boats used for passenger transport.",
+     "evidence": [
+      "e20"
+     ]
+    }
+   ],
+   "en": "Once, any small river boat was called a barca. Then boats changed with their work and their route. This is a canoa. A canoa, not a bote. Hold that course.",
+   "fictional": false,
+   "id": "l3",
+   "pt": "Antigamente dizia-se barca a qualquer barco pequeno do rio. Depois os barcos foram mudando conforme o serviço e o caminho. Isto é uma canoa. Canoa, não bote. Mantém esse rumo.",
+   "status": "verified"
+  },
+  {
+   "beat": "b2",
+   "check": {
+    "at": "2026-11-13T07:22:01.937Z",
+    "claims": [
+     {
+      "claim": "Going upriver, entering creeks and fishing at sea each require different keel, bottom, mast and sail",
+      "evidence": [
+       "e10"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "The canoa carries people",
+      "evidence": [
+       "e20",
+       "e17"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "The canoa carries small goods",
+      "evidence": [
+       "e17",
+       "e19",
+       "e20"
+      ],
+      "verdict": "unsupported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "Going upriver, entering creeks and fishing at sea required boats with differing keels, bottoms, masts and sails.",
+     "evidence": [
+      "e10"
+     ]
+    },
+    {
+     "claim": "The canoa was used for passenger transport.",
+     "evidence": [
+      "e20"
+     ]
+    },
+    {
+     "claim": "Smaller boats carried people and small goods.",
+     "evidence": [
+      "e19"
+     ]
+    }
+   ],
+   "en": "Going upriver, entering the creeks, fishing at sea: each job wants a different keel, bottom, mast and sail. My canoa carries people and small goods.",
+   "fictional": false,
+   "id": "l4",
+   "pt": "Subir o rio, entrar nos esteiros, pescar no mar: cada serviço pede outra quilha, outro fundo, outro mastro, outra vela. A minha canoa leva gente e coisas pequenas.",
+   "status": "needs work"
+  },
+  {
+   "beat": "b2",
+   "check": {
+    "at": "2026-11-13T07:22:01.942Z",
+    "claims": [
+     {
+      "claim": "The river was the busiest road",
+      "evidence": [
+       "e18"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "Fragatas, varinos, faluas and catraios were distinct craft on the river",
+      "evidence": [
+       "e18"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "The river linked towns from Santarém to Cascais faster than any other way",
+      "evidence": [
+       "e17"
+      ],
+      "verdict": "supported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "The river was the busiest route of its time, with fragatas, varinos, faluas and catraios among its craft.",
+     "evidence": [
+      "e18"
+     ]
+    },
+    {
+     "claim": "Boats linked towns between Santarém and Cascais faster than other means.",
+     "evidence": [
+      "e17"
+     ]
+    }
+   ],
+   "en": "The river is the busiest road there is. Fragatas, varinos, faluas, catraios... and don't mix them up. It links the towns from Santarém to Cascais faster than any other way.",
+   "fictional": false,
+   "id": "l5",
+   "pt": "O rio é a estrada mais movimentada que há. Fragatas, varinos, faluas, catraios... e não os confundas. Liga as terras de Santarém a Cascais mais depressa que qualquer outro caminho.",
+   "status": "verified"
+  },
+  {
+   "beat": "b3",
+   "check": {
+    "at": "2026-11-13T07:22:01.947Z",
+    "claims": [
+     {
+      "claim": "Acostar means to come alongside, with controlled speed",
+      "evidence": [
+       "e32",
+       "e33"
+      ],
+      "verdict": "supported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [],
+   "en": "Easy. Come alongside, don't ram her.",
+   "fictional": true,
+   "id": "l6",
+   "pt": "Devagar. Acosta sem a abalroar.",
+   "status": "verified"
+  },
+  {
+   "beat": "b3",
+   "check": {
+    "at": "2026-11-13T07:22:01.952Z",
+    "claims": [
+     {
+      "claim": "Coming alongside involves reducing speed",
+      "evidence": [
+       "e32",
+       "e33"
+      ],
+      "verdict": "supported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [],
+   "en": "Lose speed. Come alongside gently.",
+   "fictional": true,
+   "id": "l7",
+   "pt": "Tira-lhe velocidade. Acosta de mansinho.",
+   "status": "verified"
+  },
+  {
+   "beat": "b4",
+   "check": {
+    "at": "2026-11-13T07:22:01.956Z",
+    "claims": [
+     {
+      "claim": "Muletas are fishing boats carrying fish",
+      "evidence": [
+       "e22",
+       "e34"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "Fish is carried by water (river transport)",
+      "evidence": [
+       "e40"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "The fish is carried fresh and cannot wait",
+      "evidence": [
+       "e40"
+      ],
+      "verdict": "unsupported"
+     },
+     {
+      "claim": "Bread is handed over in the exchange",
+      "evidence": [
+       "e33"
+      ],
+      "verdict": "unsupported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "The muleta is a fishing boat used on the Tagus.",
+     "evidence": [
+      "e34",
+      "e22"
+     ]
+    },
+    {
+     "claim": "Fish was carried by water.",
+     "evidence": [
+      "e40"
+     ]
+    }
+   ],
+   "en": "Well brought alongside. Hand over the bread and take the muleta's fish by water, fresh, it won't wait.",
+   "fictional": false,
+   "id": "l8",
+   "pt": "Bem acostado. Passa cá o pão e leva o peixe da muleta pela água, fresco, que não espera.",
+   "status": "needs work"
+  },
+  {
+   "beat": "b4",
+   "check": {
+    "at": "2026-11-13T07:22:01.961Z",
+    "claims": [
+     {
+      "claim": "The fish is carried by water to the quay",
+      "evidence": [
+       "e40"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "The fish must arrive fresh",
+      "evidence": [
+       "e40"
+      ],
+      "verdict": "unsupported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [],
+   "en": "Hm. You didn't hit me. That's something. The fish goes with you; get it to the quay fresh.",
+   "fictional": true,
+   "id": "l9",
+   "pt": "Hum. Não me bateste. Já é alguma coisa. O peixe vai contigo; que chegue fresco ao cais.",
+   "status": "needs work"
+  },
+  {
+   "beat": "b5",
+   "check": {
+    "at": "2026-11-13T07:22:01.965Z",
+    "claims": [
+     {
+      "claim": "Muletas unload fish in great quantity at Lisbon",
+      "evidence": [
+       "e1"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "Old accounts tell of hundreds of boats unloading",
+      "evidence": [
+       "e1"
+      ],
+      "verdict": "supported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "A huge quantity of fish was unloaded at Lisbon by muletas, by hundreds of boats.",
+     "evidence": [
+      "e1"
+     ]
+    }
+   ],
+   "en": "There's Lisbon. Here the muletas unload fish in great quantity. The old accounts tell of hundreds of boats unloading.",
+   "fictional": false,
+   "id": "l10",
+   "pt": "Lá está Lisboa. Aqui as muletas descarregam peixe em quantidade. Os antigos contam de centenas de barcos a descarregar.",
+   "status": "verified"
+  },
+  {
+   "beat": "b5",
+   "check": {
+    "at": "2026-11-13T07:22:01.969Z",
+    "claims": [
+     {
+      "claim": "Muletas and caravels unloaded heaps of fish at Lisbon",
+      "evidence": [
+       "e1"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "This went on for a long time",
+      "evidence": [
+       "e1"
+      ],
+      "verdict": "unsupported"
+     },
+     {
+      "claim": "Someone wrote it was hundreds of boats",
+      "evidence": [
+       "e1"
+      ],
+      "verdict": "supported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "Caravels and muletas unloaded a huge quantity of fish at Lisbon, by hundreds of boats, according to a written description.",
+     "evidence": [
+      "e1"
+     ]
+    }
+   ],
+   "en": "Look at the city. For a long time muletas and caravels have unloaded heaps of fish here. Someone once wrote it was hundreds of boats.",
+   "fictional": false,
+   "id": "l11",
+   "pt": "Olha a cidade. Há muito que muletas e caravelas despejam aqui montes de peixe. Houve quem escrevesse que eram centenas de barcos.",
+   "status": "needs work"
+  },
+  {
+   "beat": "b6",
+   "check": {
+    "at": "2026-11-13T07:22:01.974Z",
+    "claims": [
+     {
+      "claim": "The Ribeira had loading and unloading all day",
+      "evidence": [
+       "e37",
+       "e38"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "Everything was bought and sold at the Ribeira",
+      "evidence": [
+       "e37"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "Fish goes from Lisbon to Santarém by water",
+      "evidence": [
+       "e39",
+       "e40"
+      ],
+      "verdict": "supported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "The Ribeira was Lisbon's waterfront where boats unloaded, goods were loaded and traded all day.",
+     "evidence": [
+      "e37",
+      "e38"
+     ]
+    },
+    {
+     "claim": "Fish was carried by water from Lisbon to Santarém.",
+     "evidence": [
+      "e40",
+      "e39"
+     ]
+    }
+   ],
+   "en": "Here's the Ribeira. Loading and unloading all day, and everything bought and sold. From here the fish goes on by water to Santarém. My canoa is just one link.",
+   "fictional": false,
+   "id": "l12",
+   "pt": "Cá está a Ribeira. Cargas e descargas o dia todo, e tudo se compra e vende. Daqui o peixe segue pela água até Santarém. A minha canoa é só um elo.",
+   "status": "verified"
+  },
+  {
+   "beat": "b6",
+   "check": {
+    "at": "2026-11-13T07:22:01.978Z",
+    "claims": [
+     {
+      "claim": "Boats loaded and unloaded nonstop at the Ribeira",
+      "evidence": [
+       "e37",
+       "e38"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "Some fish went by sea out of the kingdom",
+      "evidence": [
+       "e39"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "Some fish went by water to Santarém",
+      "evidence": [
+       "e39",
+       "e40"
+      ],
+      "verdict": "supported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "Loading and unloading at the Ribeira went on constantly.",
+     "evidence": [
+      "e37",
+      "e38"
+     ]
+    },
+    {
+     "claim": "Fish was transported by sea out of the kingdom and by water from Lisbon to Santarém.",
+     "evidence": [
+      "e39",
+      "e40"
+     ]
+    }
+   ],
+   "en": "Ribeira, at last. Boats loading and unloading nonstop. Some fish goes by sea out of the kingdom, some by water to Santarém. Tomorrow, another trip.",
+   "fictional": false,
+   "id": "l13",
+   "pt": "Ribeira, finalmente. Barcos a carregar e a descarregar sem parar. Há peixe que segue por mar para fora do Reino, outro pela água para Santarém. Amanhã, outra viagem.",
+   "status": "verified"
+  }
+ ],
+ "updatedAt": "2026-11-13T07:22:01.979Z"
+}

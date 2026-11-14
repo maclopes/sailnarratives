@@ -1,0 +1,434 @@
+{
+ "items": [
+  {
+   "definition": "Navigators or skippers who, together with shipbuilders, developed boats suited to the Tagus's functions and navigation conditions over several centuries.",
+   "id": "mmwdz13qounll:1",
+   "location": "[section: Resumo]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "arrais"
+  },
+  {
+   "definition": "Naval builders who created boats adapted to transport and fishing and to the differing stretches of the Tagus.",
+   "id": "mmwdz13qounll:2",
+   "location": "[section: Resumo]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "construtores navais"
+  },
+  {
+   "definition": "The first of the river's navigational stretches, where conditions differ from the river upstream.",
+   "id": "mmwdz13qounll:3",
+   "location": "[section: Resumo]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "estuário"
+  },
+  {
+   "definition": "Point marking the end of the stretch running from the estuary; upstream of it begins the next navigational stretch toward Vila Velha de Ródão.",
+   "id": "mmwdz13qounll:4",
+   "location": "[section: Resumo]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Valada - Porto de Muge"
+  },
+  {
+   "definition": "Broad expanse of water in the Tagus estuary at Lisbon, filled with sails of many boat types.",
+   "id": "mmwdz13qounll:5",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Mar da Palha"
+  },
+  {
+   "definition": "Triangular lateen sails, the usual rig of Tagus boats, whether with one mast or two.",
+   "id": "mmwdz13qounll:6",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "velas latinas"
+  },
+  {
+   "definition": "The rigging or sail arrangement of a boat, which varied widely among Tagus vessels.",
+   "id": "mmwdz13qounll:7",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "armação"
+  },
+  {
+   "definition": "Carrying capacity of a vessel, which differed greatly between Tagus boat types.",
+   "id": "mmwdz13qounll:8",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "lotação"
+  },
+  {
+   "definition": "One of the Tagus boat types listed as belonging to the river.",
+   "id": "mmwdz13qounll:9",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "moinhos"
+  },
+  {
+   "definition": "Tagus boats that also ventured out to sea, for example carrying figs to Algarve ports.",
+   "id": "mmwdz13qounll:10",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "rascas"
+  },
+  {
+   "definition": "A type of Tagus boat listed among the river's vessels.",
+   "id": "mmwdz13qounll:11",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "faluas"
+  },
+  {
+   "definition": "Boats used for fishing that could also be rigged as a hiate for commercial work.",
+   "id": "mmwdz13qounll:12",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "moletas"
+  },
+  {
+   "definition": "A type of boat listed among those belonging to the Tagus.",
+   "id": "mmwdz13qounll:13",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "aveiros"
+  },
+  {
+   "definition": "A type of Tagus boat listed among the river's vessels.",
+   "id": "mmwdz13qounll:14",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "fragatas"
+  },
+  {
+   "definition": "A type of vessel; moletas could be rigged as hiates for commercial tasks.",
+   "id": "mmwdz13qounll:15",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "hiates"
+  },
+  {
+   "definition": "Tagus boats with a single mast carrying a lateen sail.",
+   "id": "mmwdz13qounll:16",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "varinos"
+  },
+  {
+   "definition": "A type of boat listed among the Tagus vessels.",
+   "id": "mmwdz13qounll:17",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "guigas"
+  },
+  {
+   "definition": "Small boats listed among Tagus vessels; botes de fragata are also mentioned.",
+   "id": "mmwdz13qounll:18",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "botes"
+  },
+  {
+   "definition": "A type of small boat listed among those of the Tagus.",
+   "id": "mmwdz13qounll:19",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "catraios"
+  },
+  {
+   "definition": "A type of boat listed among those belonging to the Tagus.",
+   "id": "mmwdz13qounll:20",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "escaleres"
+  },
+  {
+   "definition": "Small boats listed among those used on the Tagus.",
+   "id": "mmwdz13qounll:21",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "canoas"
+  },
+  {
+   "definition": "Name for navigation confined to the river, as opposed to boats that also ventured out to sea.",
+   "id": "mmwdz13qounll:22",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "navegação do Ribatejo"
+  },
+  {
+   "definition": "Boats named as typical of the Tagus, suggesting upstream river navigation.",
+   "id": "mmwdz13qounll:23",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barcos de água acima"
+  },
+  {
+   "definition": "Boats named among the typical Tagus craft.",
+   "id": "mmwdz13qounll:24",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barcos dos moios"
+  },
+  {
+   "definition": "A type of boat named among the typical craft of the Tagus.",
+   "id": "mmwdz13qounll:25",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bateiras"
+  },
+  {
+   "definition": "A type of boat named among the typical craft of the Tagus.",
+   "id": "mmwdz13qounll:26",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "enviadas"
+  },
+  {
+   "definition": "Before the Discoveries, a general term for any small boat used in river traffic or fishing on the Tagus.",
+   "id": "mmwdz13qounll:27",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barca"
+  },
+  {
+   "definition": "Fish-carrying boat designation recorded in the Almada charter of 1190.",
+   "id": "mmwdz13qounll:28",
+   "location": "[section: main text]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1190",
+     "what": "year of the Foral de Almada"
+    }
+   ],
+   "term": "barca do pescado"
+  },
+  {
+   "definition": "Round sail rig, thought to have been used on the early barcas in voyages directed by Infante D. Henrique.",
+   "id": "mmwdz13qounll:29",
+   "location": "[page 4]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "velame redondo"
+  },
+  {
+   "definition": "Lateen sail rig, used on larger vessels such as barinéis and caravels in the Portuguese Discoveries.",
+   "id": "mmwdz13qounll:30",
+   "location": "[page 4]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "velame latino"
+  },
+  {
+   "definition": "Larger vessel type with lateen rig, used after the early barcas in Henrician navigations.",
+   "id": "mmwdz13qounll:31",
+   "location": "[page 4]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barinel"
+  },
+  {
+   "definition": "Lateen-rigged vessel that was adapted and improved for difficult long-distance Discovery voyages.",
+   "id": "mmwdz13qounll:32",
+   "location": "[page 4]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "caravela"
+  },
+  {
+   "definition": "Shallow draught, required for boats going upriver or through the shallow arms of the Tagus.",
+   "id": "mmwdz13qounll:33",
+   "location": "[page 4]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pequeno calado"
+  },
+  {
+   "definition": "Hull design with no keel or a half keel, suited to shallow Tagus waters.",
+   "id": "mmwdz13qounll:34",
+   "location": "[page 4]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "sem quilha ou de meia quilha"
+  },
+  {
+   "definition": "Type of river boat listed in the 1572 Regimento dos Barqueiros for Tagus traffic; with barcas, served Lisbon.",
+   "id": "mmwdz13qounll:35",
+   "location": "[page 4]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "1490",
+     "what": "river boats (barcas and batéis) serving Lisbon in 1552"
+    }
+   ],
+   "term": "batel"
+  },
+  {
+   "definition": "River cargo vessel type listed in the 1572 Regimento dos Barqueiros for Tagus traffic.",
+   "id": "mmwdz13qounll:36",
+   "location": "[page 4]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "caravelão"
+  },
+  {
+   "definition": "Boat first used for carrying goods on the Tagus in the 16th century, later associated with fishing.",
+   "id": "mmwdz13qounll:37",
+   "location": "[page 4]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "muleta"
+  },
+  {
+   "definition": "Small Tagus river boat type listed in the 1572 Regimento dos Barqueiros.",
+   "id": "mmwdz13qounll:38",
+   "location": "[page 4]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bateira"
+  },
+  {
+   "definition": "Towing a boat upstream from the bank, shown in a 1909 image of passing the Cachão do Cabril rapids.",
+   "id": "mmwdz13qounll:39",
+   "location": "[page 5]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "à sirga"
+  },
+  {
+   "definition": "Large ocean-going ships entering Lisbon's port, alongside caravels, from across Christendom.",
+   "id": "mmwdz13qounll:40",
+   "location": "[page 5]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "vessels",
+     "value": "1500",
+     "what": "naus and caravels entering Lisbon port per year, 1552 era"
+    }
+   ],
+   "term": "naus"
+  },
+  {
+   "definition": "Shipyard; each yard or riverside town gave local boats their own style, adding to Tagus boat variety.",
+   "id": "mmwdz13qounll:41",
+   "location": "[page 4]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "estaleiro naval"
+  },
+  {
+   "definition": "Traditional Tagus sailing cargo boat that survived almost to the present day.",
+   "id": "mmwdz13qounll:42",
+   "location": "[page 6]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "fragata"
+  },
+  {
+   "definition": "Traditional Tagus sailing boat that survived almost to modern times, like the fragata.",
+   "id": "mmwdz13qounll:43",
+   "location": "[page 6]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "varino"
+  },
+  {
+   "definition": "Traditional Tagus boat type that once filled the river's waters.",
+   "id": "mmwdz13qounll:44",
+   "location": "[page 6]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "falua"
+  },
+  {
+   "definition": "Small traditional boat still kept alive in Sarilhos Pequenos and Moita.",
+   "id": "mmwdz13qounll:45",
+   "location": "[page 6]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bote"
+  },
+  {
+   "definition": "Small traditional Tagus boat, still preserved in Sarilhos Pequenos and Moita.",
+   "id": "mmwdz13qounll:46",
+   "location": "[page 6]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "canoa"
+  },
+  {
+   "definition": "Type of small Tagus boat once common along the riverside.",
+   "id": "mmwdz13qounll:47",
+   "location": "[page 6]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "catraio"
+  },
+  {
+   "definition": "Traditional Tagus boat type named among those that once filled the river and estuary.",
+   "id": "mmwdz13qounll:48",
+   "location": "[page 6]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "enviada"
+  },
+  {
+   "definition": "Boats serving the mills, listed among vanished Tagus craft.",
+   "id": "mmwdz13qounll:49",
+   "location": "[page 6]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barcos dos moinhos"
+  },
+  {
+   "definition": "Boat type of the Tagus fragata kind; one example is kept by the Seixal Ecomuseum.",
+   "id": "mmwdz13qounll:50",
+   "location": "[page 6]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bote de fragata"
+  }
+ ],
+ "kind": "historical",
+ "lang": "",
+ "partsDone": [
+  0,
+  1,
+  2
+ ],
+ "partsTotal": 3,
+ "runAt": "2026-11-12T20:20:40.237Z",
+ "sourceId": "mmwdz13qounll",
+ "textChars": 12683,
+ "title": "barcos do tejo"
+}

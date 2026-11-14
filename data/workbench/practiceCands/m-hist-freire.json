@@ -1,0 +1,957 @@
+{
+ "items": [
+  {
+   "action": "Quays served as meeting points where goods arrived and left; cargo of people and goods went by river to Santarém, Vila Franca de Xira and Lisbon.",
+   "boat": "",
+   "cargo": "people and goods",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p1",
+   "kind": "practice",
+   "location": "intro",
+   "numbers": [],
+   "period": "",
+   "place": "cais na Barquinha; Santarém, Vila Franca de Xira, Lisboa",
+   "who": ""
+  },
+  {
+   "action": "Upriver products were unloaded at those ports; boats returned with varied goods to Barquinha, where animal-drawn carts took them on to other territories.",
+   "boat": "",
+   "cargo": "various goods",
+   "conditions": "",
+   "gear": "carros de tração animal",
+   "id": "m-hist-freire:jhq:p2",
+   "kind": "practice",
+   "location": "intro",
+   "numbers": [],
+   "period": "",
+   "place": "porto da Barquinha",
+   "who": ""
+  },
+  {
+   "action": "Boats traded up and down the river, carrying forest wealth, ice from Lousã and Estrela mountains and farm produce, returning with salt, cloth and paper.",
+   "boat": "",
+   "cargo": "forest products, ice from serras da Lousã e da Estrela, fruits of the land, salt",
+   "conditions": "rio abaixo, rio acima",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p3",
+   "kind": "practice",
+   "location": "Crónica",
+   "numbers": [],
+   "period": "",
+   "place": "Tejo",
+   "who": "gentes de riba Tejo, Beiras and Alentejo"
+  },
+  {
+   "action": "Vila Nova da Barquinha remembers a glorious time when its fragatas sailed the Tagus down to the Mar da Palha or the open sea.",
+   "boat": "fragatas",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p4",
+   "kind": "description",
+   "location": "Crónica",
+   "numbers": [],
+   "period": "",
+   "place": "Vila Nova da Barquinha, Mar da Palha",
+   "who": ""
+  },
+  {
+   "action": "The arrais or master of the vessel is portrayed as a symbol of the Tagus, knowing the river's secrets and forecasting weather by the stars without instruments.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "forecast weather without meteorological instruments",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p5",
+   "kind": "description",
+   "location": "Crónica",
+   "numbers": [],
+   "period": "",
+   "place": "Tejo",
+   "who": "arrais / mestre"
+  },
+  {
+   "action": "An examination licence was issued to António Farinha of Barquinha to serve as arrais of a boat owned by Manuel Farinha, with certification from the Arsenal's patrão-mor.",
+   "boat": "barco",
+   "cargo": "",
+   "conditions": "obliged to answer to the almotacés and follow the mesa's orders",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p6",
+   "kind": "event",
+   "location": "Crónica",
+   "numbers": [
+    {
+     "unit": "years",
+     "value": "20",
+     "what": "age of António Farinha"
+    }
+   ],
+   "period": "15/10/1787",
+   "place": "rio de Lisboa e riba Tejo",
+   "who": "António Farinha; Manuel Farinha; patrão-mor João dos Santos"
+  },
+  {
+   "action": "All maritime and river activity was governed by municipal ordinances (posturas) setting rights and duties of boat masters and conduct of people at landing places and river ports.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "posturas municipais",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p7",
+   "kind": "rule",
+   "location": "Crónica",
+   "numbers": [],
+   "period": "",
+   "place": "portos fluviais",
+   "who": "chefes das embarcações"
+  },
+  {
+   "action": "Almotacés oversaw commercial acts, enforced price tables, fined breaches of the posturas and could detain offenders; privileged persons only if caught in the act.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "privileged persons detained only in flagrante delito",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p8",
+   "kind": "rule",
+   "location": "Crónica",
+   "numbers": [],
+   "period": "",
+   "place": "rio e portos",
+   "who": "almotacés"
+  },
+  {
+   "action": "The river stretch in front of Barquinha had several quays: Barquinha, Hidráulica, Jacinta and Vapor; the existence of a 'Vapor' quay remains a puzzle.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p9",
+   "kind": "description",
+   "location": "Crónica",
+   "numbers": [
+    {
+     "unit": "quays",
+     "value": "4",
+     "what": "named quays"
+    }
+   ],
+   "period": "",
+   "place": "Barquinha: cais da Barquinha, da Hidráulica, da Jacinta, do Vapor",
+   "who": ""
+  },
+  {
+   "action": "Overland trade was hard: no reasonable roads linked municipalities, so goods moved by ox-drawn carts and wagons to the river ports of the riba Tejo.",
+   "boat": "",
+   "cargo": "goods",
+   "conditions": "lack of roads",
+   "gear": "carros puxados a bois, carroças",
+   "id": "m-hist-freire:jhq:p10",
+   "kind": "practice",
+   "location": "Crónica",
+   "numbers": [],
+   "period": "",
+   "place": "riba Tejo ports",
+   "who": ""
+  },
+  {
+   "action": "A real road network began to be built; around then river transport dominated, up and down between Vila Velha de Rodão, Abrantes, Barquinha, Santarém, Vila Franca and Lisbon.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p11",
+   "kind": "event",
+   "location": "Crónica",
+   "numbers": [],
+   "period": "1849",
+   "place": "Vila Velha de Rodão, Abrantes, Barquinha, Santarém, Vila Franca, Lisboa",
+   "who": ""
+  },
+  {
+   "action": "Government pushed road and rail networks to integrate markets; trains, motor traffic and steam navigation were seen as ending isolation of villages.",
+   "boat": "navegação a vapor",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p12",
+   "kind": "event",
+   "location": "Crónica",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "Governo, liberalismo"
+  },
+  {
+   "action": "Road network grew from 1106 km of ordinary roads in 1858 to 2195 km in 1865, about 4000 km in 1874 and 13,000 km in 1900.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p13",
+   "kind": "event",
+   "location": "Crónica",
+   "numbers": [
+    {
+     "unit": "km (1858)",
+     "value": "1106",
+     "what": "ordinary roads"
+    },
+    {
+     "unit": "km (1865)",
+     "value": "2195",
+     "what": "ordinary roads"
+    },
+    {
+     "unit": "km (1874)",
+     "value": "4000",
+     "what": "ordinary roads"
+    },
+    {
+     "unit": "km (1900)",
+     "value": "13000",
+     "what": "ordinary roads"
+    }
+   ],
+   "period": "1858-1900",
+   "place": "Portugal",
+   "who": ""
+  },
+  {
+   "action": "The first railway line was inaugurated; the Companhia Real dos Caminhos de Ferro Portugueses was formed in 1863, reaching Elvas, and the train advanced further in 1864.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p14",
+   "kind": "event",
+   "location": "Crónica",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "36",
+     "what": "first railway line length"
+    }
+   ],
+   "period": "1856-1864",
+   "place": "Portugal, Elvas",
+   "who": "Companhia Real dos Caminhos de Ferro Portugueses"
+  },
+  {
+   "action": "Railway reached Alentejo-Lisbon coast link in 1864 and Algarve in 1865, beginning the rail competition with river transport.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p15",
+   "kind": "event",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "1864-1865",
+   "place": "Alentejo, Lisboa, Algarve",
+   "who": ""
+  },
+  {
+   "action": "Rail network grew from 701 km in 1865 to 1299 km in operation by 1882, with Beira Alta line reaching Vilar Formoso.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p16",
+   "kind": "event",
+   "location": "[page 2]",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "701",
+     "what": "rail network length 1865"
+    },
+    {
+     "unit": "km",
+     "value": "1299",
+     "what": "rail network length 1882"
+    }
+   ],
+   "period": "1865-1882",
+   "place": "Vilar Formoso",
+   "who": ""
+  },
+  {
+   "action": "Another 1000 km of railway were built between 1882 and 1894, and the railway began to dominate transport.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p17",
+   "kind": "event",
+   "location": "[page 2]",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "1000",
+     "what": "additional rail built"
+    }
+   ],
+   "period": "1882-1894",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Faster road transport in the first quarter of the 20th century put river traffic's dominance into crisis.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p18",
+   "kind": "event",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "1st quarter of 20th century",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Dams were built on the Tejo and the Zêzere in the 1950s, further hindering river navigation.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p19",
+   "kind": "event",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "1950s",
+   "place": "Tejo, Zêzere",
+   "who": ""
+  },
+  {
+   "action": "Sawmills of Manuel Viera da Cruz & Filhos and Tomaz da Cruz & Filhos at Praia do Ribatejo declined; they had employed about 500 workers.",
+   "boat": "",
+   "cargo": "timber",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p20",
+   "kind": "description",
+   "location": "[page 2]",
+   "numbers": [
+    {
+     "unit": "approx.",
+     "value": "500",
+     "what": "workers employed"
+    }
+   ],
+   "period": "",
+   "place": "Praia do Ribatejo, Barquinha",
+   "who": "Manuel Viera da Cruz & Filhos Lda; Tomaz da Cruz & Filhos"
+  },
+  {
+   "action": "Timber used to float down the Zêzere bed to Praia do Ribatejo; after the dams it no longer travelled on the river.",
+   "boat": "",
+   "cargo": "timber",
+   "conditions": "downstream flow",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p21",
+   "kind": "practice",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "",
+   "place": "rio Zêzere, Praia do Ribatejo",
+   "who": ""
+  },
+  {
+   "action": "The sawmill firms sued the Portuguese State for lost profits caused by the dams; the lawsuit was filed by Dr. Azeredo Perdigão and failed.",
+   "boat": "",
+   "cargo": "timber",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p22",
+   "kind": "event",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "the firms; Dr. Azeredo Perdigão"
+  },
+  {
+   "action": "Port activity at Barquinha declined due to rail and road alternatives, dams and recurring silting of the Tejo.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "recurring silting",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p23",
+   "kind": "description",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "",
+   "place": "Barquinha, Tejo",
+   "who": ""
+  },
+  {
+   "action": "Passenger transport used the catraio, caíque, bote, batel and canoa.",
+   "boat": "catraio, caíque, bote, batel, canoa",
+   "cargo": "passengers",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p24",
+   "kind": "description",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "",
+   "place": "Tejo",
+   "who": ""
+  },
+  {
+   "action": "Cargo was carried by mill boats, Riba-Tejo boats, bateiras, faluas, varinos-avieiros and fragatas.",
+   "boat": "barcos de moinhos, barcos de Riba-Tejo, bateiras, faluas, va",
+   "cargo": "goods",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p25",
+   "kind": "description",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "",
+   "place": "Tejo",
+   "who": ""
+  },
+  {
+   "action": "Fishing used picareto, abrangel, catrafúcio (three-plank boat), saveiros and muletas.",
+   "boat": "picareto, abrangel, catrafúcio ou barco de três tábuas, save",
+   "cargo": "fish",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p26",
+   "kind": "description",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "",
+   "place": "Tejo",
+   "who": ""
+  },
+  {
+   "action": "Varinos-avieiros and fragatas were the most representative cargo boats of the Tejo.",
+   "boat": "varinos - avieiros, fragatas",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p27",
+   "kind": "description",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "",
+   "place": "Tejo",
+   "who": ""
+  },
+  {
+   "action": "All navigation was then done by sail and oars.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "sail, oars",
+   "id": "m-hist-freire:jhq:p28",
+   "kind": "practice",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "",
+   "place": "Tejo",
+   "who": ""
+  },
+  {
+   "action": "Law of 24 November 1837 by Queen Maria II regulated steam vessels on the Tejo and opened a concession tender.",
+   "boat": "steam vessels",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p29",
+   "kind": "rule",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "1837",
+   "place": "Tejo",
+   "who": "D. Maria II"
+  },
+  {
+   "action": "Notice of 4 August 1851 set terms for a 15-year exclusive concession of Tejo steam navigation, requiring daily services on northern routes.",
+   "boat": "steam boats",
+   "cargo": "",
+   "conditions": "beyond canal mouth only for boats drawing under four feet",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p30",
+   "kind": "rule",
+   "location": "[page 2]",
+   "numbers": [
+    {
+     "unit": "years",
+     "value": "15",
+     "what": "exclusive concession"
+    },
+    {
+     "unit": "feet",
+     "value": "4",
+     "what": "maximum draught beyond canal mouth"
+    }
+   ],
+   "period": "1851",
+   "place": "Alhandra, Vila Franca de Xira, Carregado, Foz do Canal d'Azambuja",
+   "who": "Ministério do Reino; concessionary company"
+  },
+  {
+   "action": "On 25 July 1862 a vessel carried a steam locomotive upriver to the Barquinha steam quay, requiring large excavations there.",
+   "boat": "",
+   "cargo": "steam locomotive",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p31",
+   "kind": "event",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "1862",
+   "place": "cais do vapor, Barquinha",
+   "who": "Câmara Municipal da Barquinha"
+  },
+  {
+   "action": "A photo shows a varino carrying tonnes of cork upriver; another shows people, animals and a cart boarding.",
+   "boat": "varino",
+   "cargo": "cork",
+   "conditions": "upriver",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p32",
+   "kind": "description",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "First steam passenger service on the Tagus between Lisbon and Santarém began, but the voyage ended at Alqueidão because silting of the river prevented going further.",
+   "boat": "steam vessel with wooden hull and 20 NHP engine, built at Mo",
+   "cargo": "passengers",
+   "conditions": "silting of the Tagus stopped the route at Alqueidão",
+   "gear": "steam engine by Fawcett, Littledale & Co.",
+   "id": "m-hist-freire:jhq:p33",
+   "kind": "event",
+   "location": "page 3",
+   "numbers": [
+    {
+     "unit": "NHP",
+     "value": "20",
+     "what": "engine power"
+    },
+    {
+     "unit": "reis",
+     "value": "480",
+     "what": "fare to Vila Franca"
+    },
+    {
+     "unit": "reis",
+     "value": "960",
+     "what": "fare to Alqueidão"
+    },
+    {
+     "unit": "miles",
+     "value": "more than 1000",
+     "what": "Biscay crossing distance"
+    }
+   ],
+   "period": "27 January 1821",
+   "place": "Lisbon to Alqueidão (intended Santarém)",
+   "who": "Companhia/service ordered by Portugal's consul-general in Liverpool, António Jul"
+  },
+  {
+   "action": "Steam vessel built in Liverpool was reportedly the first steamship ordered by a foreign state, first to cross the Bay of Biscay and first to call at Portuguese ports.",
+   "boat": "steam vessel built in Liverpool",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p34",
+   "kind": "description",
+   "location": "page 3",
+   "numbers": [],
+   "period": "1820",
+   "place": "Liverpool, Bay of Biscay, Portuguese ports",
+   "who": ""
+  },
+  {
+   "action": "In the 1850s intercontinental transport relied on sailing ships, but mass emigration of European workers to America became chiefly the age of steamships.",
+   "boat": "sailing ships of 200 to 400 tonnes; steamships",
+   "cargo": "passengers",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p35",
+   "kind": "description",
+   "location": "page 3",
+   "numbers": [
+    {
+     "unit": "tonnes",
+     "value": "200-400",
+     "what": "sailing ship capacity"
+    },
+    {
+     "unit": "passengers",
+     "value": "100-200",
+     "what": "passengers per sailing ship"
+    }
+   ],
+   "period": "1850s",
+   "place": "Lisbon to America",
+   "who": "European migrant workers"
+  },
+  {
+   "action": "Steamers cut the Lisbon to Rio de Janeiro crossing from about six weeks under sail to three weeks, or two weeks without stops.",
+   "boat": "sailing ships and steamers",
+   "cargo": "passengers",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p36",
+   "kind": "description",
+   "location": "page 3",
+   "numbers": [
+    {
+     "unit": "weeks",
+     "value": "6",
+     "what": "sailing crossing time"
+    },
+    {
+     "unit": "weeks",
+     "value": "3",
+     "what": "steamer crossing time"
+    },
+    {
+     "unit": "weeks",
+     "value": "2",
+     "what": "non-stop steamer crossing time"
+    }
+   ],
+   "period": "first half of the 1870s",
+   "place": "Lisbon to Rio de Janeiro",
+   "who": ""
+  },
+  {
+   "action": "Ships entering the Tagus mouth were counted, excluding fishing boats: more sailing ships than steamers.",
+   "boat": "sailing ships and steamships",
+   "cargo": "",
+   "conditions": "fishing boats not counted",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p37",
+   "kind": "event",
+   "location": "page 3",
+   "numbers": [
+    {
+     "unit": "ships",
+     "value": "2266",
+     "what": "sailing ships entering"
+    },
+    {
+     "unit": "ships",
+     "value": "1256",
+     "what": "steamships entering"
+    }
+   ],
+   "period": "1874",
+   "place": "Tagus mouth",
+   "who": ""
+  },
+  {
+   "action": "Boats of various sizes and shapes sailed between Lisbon and points along the Tagus.",
+   "boat": "barcos de diversos tamanhos e feitios",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p38",
+   "kind": "description",
+   "location": "page 3",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "1143",
+     "what": "boats"
+    }
+   ],
+   "period": "1860",
+   "place": "Lisbon and the Tagus",
+   "who": ""
+  },
+  {
+   "action": "Registered avieiro boats were counted at Abrantes and Barquinha, described as thriving Middle Tagus ports.",
+   "boat": "avieiros",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p39",
+   "kind": "description",
+   "location": "page 4",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "190",
+     "what": "registered boats at Abrantes"
+    },
+    {
+     "unit": "boats",
+     "value": "75",
+     "what": "registered boats at Barquinha"
+    }
+   ],
+   "period": "1860",
+   "place": "Abrantes; Barquinha",
+   "who": ""
+  },
+  {
+   "action": "Almeida Garrett describes a steamer passenger trip from Santarém to Lisbon, nearly empty yet slow, arriving at Terreiro do Paço around five in the afternoon.",
+   "boat": "passenger steamer",
+   "cargo": "passengers",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p40",
+   "kind": "practice",
+   "location": "page 4",
+   "numbers": [],
+   "period": "1843",
+   "place": "Santarém to Lisbon, Terreiro do Paço",
+   "who": "Almeida Garrett"
+  },
+  {
+   "action": "Alexandre Herculano records a steamer journey upriver from Lisbon, via riverside towns to the Azambuja canal mouth, then onward by carriage to Santarém.",
+   "boat": "company steamer",
+   "cargo": "passengers",
+   "conditions": "fresh north wind",
+   "gear": "carriage drawn by 2 donkeys",
+   "id": "m-hist-freire:jhq:p41",
+   "kind": "practice",
+   "location": "page 5",
+   "numbers": [
+    {
+     "unit": "hours",
+     "value": "10",
+     "what": "travel time Lisbon to Santarém"
+    }
+   ],
+   "period": "6 June 1853",
+   "place": "Lisbon, Alverca, Alhandra, Vila Franca, Vila Nova, Azambuja canal mouth, Santaré",
+   "who": "Alexandre Herculano"
+  },
+  {
+   "action": "Travellers from Lisbon often changed boats, going by steamer to a place such as Vila Franca or Santarém, then taking a sailing boat upstream.",
+   "boat": "steamer and sailing boat",
+   "cargo": "passengers",
+   "conditions": "travelling upstream",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p42",
+   "kind": "practice",
+   "location": "page 5",
+   "numbers": [],
+   "period": "",
+   "place": "Vila Franca; Santarém",
+   "who": "travellers from Lisbon"
+  },
+  {
+   "action": "Steam passenger service between Lisbon and the Azambuja canal mouth ceased by decree because of heavy losses to the company, after the railway opened.",
+   "boat": "steam passenger boats",
+   "cargo": "passengers",
+   "conditions": "railway line opened east of Lisbon to Virtudes station",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p43",
+   "kind": "event",
+   "location": "page 6",
+   "numbers": [],
+   "period": "30 July 1857",
+   "place": "Lisbon, Alhandra, Vila Franca de Xira, Carregado, Vila Nova da Rainha, Azambuja ",
+   "who": "Companhia de Navegação do Tejo"
+  },
+  {
+   "action": "Chartered steam cargo boats, not passenger boats, from Lisbon moored at the Cais do Vapor in Barquinha, obliged to make a return voyage.",
+   "boat": "chartered steam cargo boats",
+   "cargo": "goods",
+   "conditions": "obligation of return trip",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p44",
+   "kind": "practice",
+   "location": "page 6",
+   "numbers": [],
+   "period": "",
+   "place": "Cais do Vapor, Barquinha",
+   "who": ""
+  },
+  {
+   "action": "The Prado paper mill had warehouses beside the steam quay on the east side of Barquinha town, so goods often arrived and left there.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p45",
+   "kind": "description",
+   "location": "page 4",
+   "numbers": [],
+   "period": "",
+   "place": "cais do vapor, Rua da Barca, Barquinha",
+   "who": "Prado paper mill"
+  },
+  {
+   "action": "The Prado paper mill began operating in the early 1820s at Prado, parish of Pedreira, municipality of Tomar.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p46",
+   "kind": "event",
+   "location": "page 4",
+   "numbers": [],
+   "period": "early 1820s",
+   "place": "Prado, Pedreira, Tomar",
+   "who": ""
+  },
+  {
+   "action": "The Prado paper mill was sold to a group of businessmen by João de Oliveira Casquilho and his brother-in-law Henrique de Roure Pietra.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p47",
+   "kind": "event",
+   "location": "page 4",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1875",
+     "what": "year of sale"
+    }
+   ],
+   "period": "1875",
+   "place": "Prado",
+   "who": "João de Oliveira Casquilho; Henrique de Roure Pietra"
+  },
+  {
+   "action": "The Prado and Marianaia mills made writing, foolscap and wrapping papers from rags and wool, which required a warehouse at the Barquinha steam quay.",
+   "boat": "",
+   "cargo": "trapo e lã",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p48",
+   "kind": "practice",
+   "location": "page 4",
+   "numbers": [],
+   "period": "last quarter of the 19th century",
+   "place": "cais do vapor, Barquinha",
+   "who": "fábricas do Prado e da Marianaia"
+  },
+  {
+   "action": "Shipments of unspecified wool fabrics from Belgium and England, brought by steamboat, were stored in the Barquinha warehouse to be processed.",
+   "boat": "barco vapor",
+   "cargo": "tecidos de lã da Bélgica e da Inglaterra",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p49",
+   "kind": "practice",
+   "location": "page 4",
+   "numbers": [],
+   "period": "1892",
+   "place": "Barquinha",
+   "who": ""
+  },
+  {
+   "action": "Goods were moved from the warehouse onto ox carts and taken along the macadam district road no. 51 to the paper mills.",
+   "boat": "",
+   "cargo": "imported wool materials",
+   "conditions": "macadam road",
+   "gear": "carros de bois",
+   "id": "m-hist-freire:jhq:p50",
+   "kind": "practice",
+   "location": "page 4",
+   "numbers": [
+    {
+     "unit": "",
+     "value": "51",
+     "what": "road number"
+    }
+   ],
+   "period": "",
+   "place": "Barquinha to paper mills, estrada distrital n.º 51 (estrada de neveiros)",
+   "who": ""
+  },
+  {
+   "action": "The railway reached the area; steamboats gradually stopped docking at Barquinha's steam quay and the Prado warehouses fell into disuse.",
+   "boat": "barcos a vapor",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p51",
+   "kind": "event",
+   "location": "page 4",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1862",
+     "what": "year railway arrived"
+    }
+   ],
+   "period": "1862",
+   "place": "Barquinha",
+   "who": ""
+  },
+  {
+   "action": "Engineer Manuel José Júlio Guerra published proposals for works on the Tagus riverbed and towpaths to improve navigation and protect adjacent fields; they were not carried out.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "works neglected",
+   "gear": "",
+   "id": "m-hist-freire:jhq:p52",
+   "kind": "event",
+   "location": "page 4",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1861",
+     "what": "year of publication"
+    }
+   ],
+   "period": "1861",
+   "place": "rio Tejo, sirgadouros",
+   "who": "Eng.º Manuel José Júlio Guerra"
+  },
+  {
+   "action": "Alexandre Herculano, royal commissioner inventorying convent archives, began his journey at the port of Barquinha and travelled onward on horseback.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "horses suited to difficult terrain",
+   "gear": "cavalos",
+   "id": "m-hist-freire:jhq:p53",
+   "kind": "event",
+   "location": "page 4",
+   "numbers": [],
+   "period": "14 June 1853",
+   "place": "porto da Barquinha",
+   "who": "Alexandre Herculano"
+  },
+  {
+   "action": "Snow was collected in wells on the Lousã mountain and carried by cart to Barquinha, as Herculano noted in 1853.",
+   "boat": "",
+   "cargo": "neve",
+   "conditions": "snow 14 feet deep in the hollow that February",
+   "gear": "carros; poços de neve",
+   "id": "m-hist-freire:jhq:p54",
+   "kind": "practice",
+   "location": "page 4",
+   "numbers": [
+    {
+     "unit": "feet",
+     "value": "14",
+     "what": "snow depth"
+    }
+   ],
+   "period": "1853",
+   "place": "serra da Lousã, Coentral, Barquinha",
+   "who": "mulheres (collecting snow)"
+  }
+ ],
+ "partsDone": [
+  0,
+  1,
+  2,
+  3,
+  4
+ ],
+ "partsTotal": 5,
+ "runAt": "2026-11-13T01:44:40.638Z",
+ "sourceId": "m-hist-freire",
+ "textChars": 25262,
+ "title": "Freire, Os cais na Barquinha"
+}

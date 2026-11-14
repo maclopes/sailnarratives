@@ -1,0 +1,356 @@
+{
+ "author": "Claude Code, from the concept table, the candidates and the sailing pack's game-world list",
+ "basedOn": "2026-11-12T19:55:58.234Z",
+ "createdAt": "2026-11-12T21:05:00Z",
+ "data": {
+  "overview": "18 sources gave 1,334 candidate concepts; 1,069 are grouped into 633 concepts (the last 265 were not placed yet), and 48 concepts are backed by three or more sources. Settle first: (1) the sailing vocabulary, where 'cambar' means tack in the Brazilian course and gybe in the method doc, while the historical sources give European terms (virar por davante for tacking, virar em roda for gybing) that could resolve it; (2) the closest angle to the wind, 45-50 degrees in the course against about 36 in the game; (3) dates and figures in the history (steamboats, navigable lengths, passenger limits). The biggest gaps for the game: the varino, the best-attested boat (6 sources), is not in the game, nor are the generic barca and batel; Cacilhas, Mar da Palha and the river between Vila Franca and Barquinha (Santarém, Valada, Muge) are not sailable; tide, current and shallow water are not simulated though many sources depend on them.",
+  "types": [
+   {
+    "agreements": [
+     "Close-hauled, the reaches and running mean the same in the course, the method doc and the game, which measures each as a band of wind angle.",
+     "In irons is described the same way in the method doc, the course and the game (sails flap, the boat stalls).",
+     "True wind and wind shifts appear in the course and in the game; the game also models gusts."
+    ],
+    "clarifications": [
+     "The course gives a term for in irons (filado ao vento) where the method doc had [to confirm], but it is Brazilian usage.",
+     "The game makes each point of sail measurable, so the evidence rule for each concept can come from it."
+    ],
+    "concepts": [
+     "Close-hauled",
+     "Close reach",
+     "Beam reach",
+     "Broad reach",
+     "Running (wind astern)",
+     "In irons / head to wind",
+     "True wind",
+     "Wind shift",
+     "Gust",
+     "Points of sail",
+     "Tack side"
+    ],
+    "conflicts": [
+     {
+      "next": "Decide the European Portuguese set with the Museu de Marinha; the game's five bands could carry five European names.",
+      "text": "The method doc uses three European terms (bolina, largo, popa); the Brazilian course uses five (orça fechada, orça folgada, través, través folgado or alheta, popa rasa)."
+     },
+     {
+      "next": "Ask a sailor of traditional rigs; record the game value as a design choice if it stays.",
+      "text": "Closest angle to the wind: 45-50 degrees in the course against about 36 in the game; the leaflet says about 45."
+     },
+     {
+      "next": "Minor: name the game event 'gust or shift' in the text.",
+      "text": "The game's gust event also covers direction shifts; the method doc's gust is only a rise in wind speed."
+     }
+    ],
+    "gaps": [
+     "No European Portuguese term yet for in irons and for the finer reaches.",
+     "Apparent wind is in the course and shown by the game, but the grouping did not link them (a known weakness, to be fixed by matching concepts to game signals)."
+    ],
+    "type": "Points of sail and wind"
+   },
+   {
+    "agreements": [
+     "Tacking and gybing have the same meaning in four sources, including the game's tack and gybe events.",
+     "Heading up (orçar) and bearing away (arribar) are the same in the course and the method doc.",
+     "Leeway is in the course (abatimento, deriva) and measured by the game.",
+     "Towing from the bank (sirga, sirgadouros) appears in four sources."
+    ],
+    "clarifications": [
+     "The historical sources explain why some boats could not tack and were towed, poled or rowed instead: material for story beats around calms and narrow channels."
+    ],
+    "concepts": [
+     "Tacking",
+     "Gybing",
+     "Heading up",
+     "Bearing away",
+     "Approach and docking",
+     "Leeway (sideways drift)",
+     "Lying athwart wind and current",
+     "Moving without sail (pole, tow, row)",
+     "Towing from the bank"
+    ],
+    "conflicts": [
+     {
+      "next": "Adopt the historical European terms, confirm with the Museu de Marinha, and never use 'cambar' alone in the game.",
+      "text": "'Cambar' is tacking in the Brazilian course and gybing in the method doc. The historical sources use 'virar por davante' (tacking) and 'virar em roda' (gybing), and note that the muleta could not 'virar por dentro'."
+     },
+     {
+      "next": "Game design choice; no source conflict.",
+      "text": "Approach and docking is a skill in the method doc and a mission phase in the game."
+     }
+    ],
+    "gaps": [
+     "Lying athwart (the muleta's fishing drift) is backed by the method doc and history, but no training book; the game has it as the muleta's fishing mode, not yet linked.",
+     "Poling, towing from the bank and rowing are not in the game.",
+     "Heading up and bearing away are not linked to the game's rudder (grouping miss)."
+    ],
+    "type": "Manoeuvres and steering"
+   },
+   {
+    "agreements": [
+     "The lateen sail is the best-attested rig (6 sources).",
+     "Caçar and folgar mean the same in European and Brazilian Portuguese.",
+     "The fragata's gaff sail (carangueja) agrees across the method doc and history."
+    ],
+    "clarifications": [
+     "History names the parts and actions of traditional rigs that training books do not (verga, ostagas, carregadeiras, amainar, botalós, varredoura, cevadeira, vela de espicha, bastardo).",
+     "In the game a sheet only limits how far the sail swings out; the course describes sheets as controlling the sail. Both are true; say it plainly in cues."
+    ],
+    "concepts": [
+     "Lateen sail",
+     "Gaff rig",
+     "Gaff sail (vela de carangueja)",
+     "Small bow sail",
+     "Sheeting in",
+     "Easing the sheets",
+     "Sail trim",
+     "Reefing",
+     "Storm sail",
+     "Bastardo (large triangular main sail)",
+     "Sprit sail",
+     "Catita sail",
+     "Yard (verga)",
+     "Lowering the sail (amainar)",
+     "Square sail required on muletas"
+    ],
+    "conflicts": [
+     {
+      "next": "Keep both as two techniques; the traditional boats used the storm sail.",
+      "text": "Reefing: the method doc includes swapping to a storm sail (caixamarim); the course reduces sail by folding or rolling it."
+     },
+     {
+      "next": "Check the passage with the historian; word it as a rule, not a rig.",
+      "text": "Muletas carried lateen sails, yet a 1572 regulation required a square sail for crossings (one source)."
+     },
+     {
+      "next": "Minor; give a range.",
+      "text": "The fragata's headsails: one or two, depending on the source."
+     }
+    ],
+    "gaps": [
+     "Reefing and lowering sail are not in the game.",
+     "Most modern yacht fittings from the course (genoa, winch, traveller, halyard tension) are out of scope for traditional boats."
+    ],
+    "type": "Sails and rig"
+   },
+   {
+    "agreements": [
+     "Shallow draught (6 sources) and flat bottoms (4) are the defining feature of Tagus boats.",
+     "Keel, rudder and mast agree across the course, the history and the game."
+    ],
+    "clarifications": [
+     "History explains shallow draught by the esteiros, sandbanks and silting: a link from hull form to place."
+    ],
+    "concepts": [
+     "Shallow draught",
+     "Flat bottom hull",
+     "Half keel",
+     "Keel",
+     "Rudder",
+     "Leeboard",
+     "Mast",
+     "Aft-raked mast",
+     "Forward-raked mast of the muleta",
+     "Fixed rudder of the fragata",
+     "Charolo (transverse steering bar)",
+     "Steering oar (esparrela)"
+    ],
+    "conflicts": [
+     {
+      "next": "Merge the names with the historian; it is one device with regional names.",
+      "text": "Leeboard: the method doc has a board lowered to reduce slip; a historical source describes boards on each side of the muleta, with several names (pau de bolina, pá de borda, esparrela de deriva)."
+     },
+     {
+      "next": "Probably two uses of one name; keep both, labelled by place.",
+      "text": "Bateira: cargo boat in one source, a boat the Avieiro fishing families lived aboard in another."
+     }
+    ],
+    "gaps": [
+     "Water depth is not simulated, so shallow draught and leeboards cannot be shown or scored.",
+     "Traditional steering gear (charolo or xarolo, steering oar, fixed rudder) is single-source and not in the game."
+    ],
+    "type": "Hull and steering gear"
+   },
+   {
+    "agreements": [
+     "In the game and well attested: muleta (6 sources), fragata (5), falua (4), catraio and canoa (3 each)."
+    ],
+    "clarifications": [
+     "The bote de fragata (3 sources) towed the fragata in calms: fits the game's fragata as a calm-weather feature."
+    ],
+    "concepts": [
+     "Muletas (fishing boat)",
+     "Fragata",
+     "Falua",
+     "Catraios (small boats)",
+     "Canoas (Tagus canoes)",
+     "Varino",
+     "Barca (generic Tagus boat)",
+     "Batel (small river boat)",
+     "Bateiras (cargo boats)",
+     "Saveiros (fishing boat)",
+     "Botes-de-fragata",
+     "Bote cacilheiro",
+     "Canoa cacilheira",
+     "Caíque (passenger and fishing boat)",
+     "Rasca (coastal cargo boat)",
+     "Caravelão (river cargo vessel)",
+     "Steamboats on the Tagus",
+     "Cacilheiros (Tagus ferries)"
+    ],
+    "conflicts": [
+     {
+      "next": "Check the date of each source: the falua changed over time.",
+      "text": "Falua: two masts in one source; other sources describe one."
+     },
+     {
+      "next": "Check both paragraphs with the historian.",
+      "text": "Batel: a passenger limit of 8 and of 12 in two places of the same source."
+     },
+     {
+      "next": "Record as a range by period.",
+      "text": "Muleta crew sizes differ between sources (a 12 m boat with 15 crew in one)."
+     },
+     {
+      "next": "Confirm names with the historian.",
+      "text": "Varino has several names (barino, colé or culé, monaio); 'avieiros' and 'aveiros' may not mean the same boats."
+     }
+    ],
+    "gaps": [
+     "Missing in the game: the varino (6 sources, the best attested of all), the barca and batel (5 each), bateira (3), saveiro (3), bote cacilheiro, canoa cacilheira, caíque, rasca, caravelão.",
+     "Steamboats and steam ferries (cacilheiros) are not boats to sail, but they are the turning point of many stories: possible traffic in the game."
+    ],
+    "type": "Boat types, compared with the game"
+   },
+   {
+    "agreements": [
+     "In the game as ports: Lisboa, Almada, Trafaria, Seixal, Barreiro, Moita, Sacavém, Vila Franca de Xira, and on the middle Tagus Vila Nova da Barquinha, Tancos, Constância, Praia do Ribatejo, Abrantes.",
+     "On the game map but not ports: Belém, Porto Brandão, Bugio, Aldeia Galega, Alhandra, Rossio ao Sul do Tejo."
+    ],
+    "clarifications": [
+     "Mar da Palha is named by four sources as the muletas' fishing ground: a strong place for a story."
+    ],
+    "concepts": [
+     "Mar da Palha",
+     "Tagus estuary",
+     "Mouth of the Tagus",
+     "Esteiros (shallow creeks)",
+     "Mouchões (islets and sandbanks)",
+     "Cacilhas",
+     "Cais do Sodré",
+     "Belém-Porto Brandão-Trafaria crossing",
+     "Porto da Barquinha",
+     "Tancos",
+     "Middle Tagus (Abrantes to Sabugueiro)",
+     "Valada - Porto de Muge",
+     "Barreiras do Tejo port",
+     "Zêzere river",
+     "Entre-Cabos waters",
+     "Estuary navigation (tidal reach)",
+     "Permanently navigable stretches"
+    ],
+    "conflicts": [
+     {
+      "next": "Check whether they count the same stretches.",
+      "text": "Navigable length of the Tagus system: 85 km permanently navigable in one place, 65 km in another."
+     },
+     {
+      "next": "Likely different periods or kinds of boat; ask the historian.",
+      "text": "Limit of traffic upstream: 20-30 km above Lisbon in one place, as far as the tide reaches (Sabugueiro) in another."
+     }
+    ],
+    "gaps": [
+     "Not a port in the game: Cacilhas (only a sea mark), Cais do Sodré; Mar da Palha has no label.",
+     "Not in the game at all: the river between Vila Franca and Barquinha (Santarém, Valada, Muge, Sabugueiro), where the upriver trade ran; Alenquer; Entre-Cabos (fishing grounds).",
+     "The tool matched 'Valada' to a place of the same name on the Aveiro map: place matching must respect the area."
+    ],
+    "type": "Places and the river, compared with the game"
+   },
+   {
+    "agreements": [
+     "The arrais (skipper) is named by six sources.",
+     "Silting and dams (5 sources) and the coming of steam and rail explain the end of river traffic.",
+     "The 1572 boatmen's regulation and the 1552 count of 1,490 river boats agree where they meet."
+    ],
+    "clarifications": [
+     "The medieval and early modern sources add people (barqueiros, almotacés, calafates, moços), cargoes (wine, salt, fish, timber, brushwood, cork) and rules (fees, closed months, licences): the raw material for characters and stakes."
+    ],
+    "concepts": [
+     "Arrais (skipper)",
+     "Barqueiros (river boatmen)",
+     "Caulkers (calafates)",
+     "Axe shipwrights (carpinteiros de machado)",
+     "Silting of riverbed",
+     "Floods and flood tides",
+     "Steamboats on the Tagus",
+     "Railway arrival (1862)",
+     "Regimento dos Barqueiros (1572)",
+     "1552 river boat survey",
+     "Timber and cork rafts",
+     "Freight fee (frete)",
+     "Scheduled service boat (barco da carreira)",
+     "Closed fishing months (meses defesos)",
+     "Tartaranha (trawl net)"
+    ],
+    "conflicts": [
+     {
+      "next": "Check both with the historian; keep the conflict flagged.",
+      "text": "When steamboats appeared: from the 1860s in one source, another period in another."
+     },
+     {
+      "next": "Different contexts; label each with place and date.",
+      "text": "Boats on scheduled runs: one a week to Lisbon in one place, two to four per route or 100 at Abrantes in others."
+     },
+     {
+      "next": "Keep as ranges with dates.",
+      "text": "Cargo capacities: 10-60 t by port and period against 1957 capacity classes."
+     }
+    ],
+    "gaps": [
+     "Almost all of this is single-source (Pedrosa, Gaspar, the medieval Lisbon book): good for stories, weak as fact until a second source agrees.",
+     "Tide, current and floods matter in many accounts but are not simulated."
+    ],
+    "type": "Work, trade and rules (for the stories)"
+   },
+   {
+    "agreements": [
+     "Channel marks (IALA buoys) are in the course and on the game's map; running aground is in both."
+    ],
+    "clarifications": [
+     "A 1572 rule required a compass on larger river vessels: a historical hook for navigation."
+    ],
+    "concepts": [
+     "Lateral channel marks",
+     "Aground",
+     "Right-of-way rules",
+     "Man overboard",
+     "Life jacket",
+     "Compass required on larger vessels"
+    ],
+    "conflicts": [],
+    "gaps": [
+     "Right of way, man overboard, knots and safety gear come only from the modern course: likely out of scope for a short visit."
+    ],
+    "type": "Navigation and safety (course only)"
+   },
+   {
+    "agreements": [],
+    "clarifications": [],
+    "concepts": [
+     "Heel ratio",
+     "Calm window",
+     "Busy hands",
+     "Reading time",
+     "Time pressure",
+     "Balanced sails",
+     "Difficulty levels"
+    ],
+    "conflicts": [],
+    "gaps": [
+     "About 37 'simulation only' items are the tool's own timing rules or game settings, not things to learn: they came from describing the simulation with the sailing pack's file, and should be removed from the concepts."
+    ],
+    "type": "Simulation internals"
+   }
+  ]
+ }
+}

@@ -1,0 +1,559 @@
+{
+ "basis": {
+  "bible": false,
+  "concepts": [
+   "c1",
+   "c4",
+   "c14",
+   "c201",
+   "c206",
+   "c243",
+   "c329",
+   "c487",
+   "c298",
+   "c335"
+  ],
+  "match": "related",
+  "practices": [
+   "p73",
+   "p10",
+   "p41",
+   "p49",
+   "p51",
+   "p77"
+  ],
+  "proposal": "s4"
+ },
+ "beats": [
+  {
+   "character": "k1",
+   "concept": "Reading wind and current before setting out",
+   "delivery": "story",
+   "evidence": [
+    "e9",
+    "e2",
+    "e12"
+   ],
+   "gist": "Leaving Seixal, Joaquim says the muleta does not chase fish bow-first. She will lie across wind and current and drag the tartaranha from her side.",
+   "id": "b1",
+   "part": "setup",
+   "trigger": "start"
+  },
+  {
+   "character": "k2",
+   "concept": "Holding a steady drift across wind and current",
+   "delivery": "story",
+   "evidence": [
+    "e9",
+    "e10",
+    "e1",
+    "e2"
+   ],
+   "gist": "During the slow drift with the net out, Manel and Joaquim talk about the work. Topics: the net cast to windward, the wings tied to the long poles fore and aft, and the waters the muleta fishes, from the estuaries out to the sea between Cabo da Roca and Setúbal.",
+   "id": "b2",
+   "part": "leg",
+   "trigger": "steady_leg"
+  },
+  {
+   "character": "k1",
+   "concept": "",
+   "delivery": "story",
+   "evidence": [
+    "e2",
+    "e9"
+   ],
+   "gist": "Passing Seixal, Joaquim notes that this is where the muletas are registered, even though they go out to fish the Entre-Cabos.",
+   "id": "b3",
+   "part": "place",
+   "trigger": "near_place:Seixal"
+  },
+  {
+   "character": "k1",
+   "concept": "Sail trim to balance wind and current forces",
+   "delivery": "cue",
+   "evidence": [],
+   "gist": "The sails lose their balance and flap. A short instruction tells the player to re-trim and let the boat lie across again.",
+   "id": "b4",
+   "part": "complication",
+   "trigger": "luffing_start"
+  },
+  {
+   "character": "k1",
+   "concept": "Balancing sails to hold a sideways drift",
+   "delivery": "reflection",
+   "evidence": [
+    "e10",
+    "e9"
+   ],
+   "gist": "Once the sails draw again, Joaquim explains to Manel that the sails are set to balance the boat against wind and current, so she drifts sideways and keeps the net open.",
+   "id": "b5",
+   "part": "turn",
+   "trigger": "luffing_stop"
+  },
+  {
+   "character": "k2",
+   "concept": "",
+   "delivery": "story",
+   "evidence": [
+    "e9",
+    "e12"
+   ],
+   "gist": "The net comes up with fish from the shoal. Manel finally understands the sideways drift, and Joaquim turns the boat for home without boasting.",
+   "id": "b6",
+   "part": "close",
+   "trigger": "catch"
+  },
+  {
+   "character": "k1",
+   "concept": "Lateral trawling",
+   "delivery": "curiosity",
+   "evidence": [
+    "e35",
+    "e23",
+    "e24",
+    "e25",
+    "e26"
+   ],
+   "gist": "Optional card, labelled as documented fact: 'tartaranha' named both the net and the boats that fished with it. In the late 19th century smaller boats also used it, and 'muleta' was applied loosely. Baldaque da Silva counted only one muleta in 1891, the tartaranha was tolerated until about 1920, and ",
+   "id": "b7",
+   "part": "curiosity",
+   "trigger": "net_out"
+  }
+ ],
+ "cast": [
+  {
+   "evidence": [
+    "e9",
+    "e2",
+    "e1",
+    "e10"
+   ],
+   "fictional": true,
+   "id": "k1",
+   "name": "Arrais Joaquim (fictional)",
+   "role": "Invented skipper (arrais) of a Seixal muleta in the 1880s, before the type disappeared. He fishes sideways with the tart",
+   "voice": "Dry, practical, few words. He speaks about the work, not about glory. He thinks in wind, current and net.",
+   "want": "To bring the net home full with a crew that trusts the way the sails are set."
+  },
+  {
+   "evidence": [
+    "e11",
+    "e10",
+    "e12"
+   ],
+   "fictional": true,
+   "id": "k2",
+   "name": "Manel (fictional)",
+   "role": "Invented youngest of the 5 or 6 crew aboard. He tends the net wings tied to the botalós.",
+   "voice": "Curious and quick. He asks the questions a visitor would ask.",
+   "want": "To understand why the boat goes sideways and not forward."
+  }
+ ],
+ "createdAt": "2026-11-13T07:23:34.208Z",
+ "evidence": [
+  {
+   "id": "e1",
+   "location": "[page 23]",
+   "numbers": [],
+   "origin": "m-hist-pedrosa:1tsz:p111",
+   "source": "Pedrosa",
+   "sourceId": "m-hist-pedrosa",
+   "text": "The muleta fished with the tartaranha net in the Tagus and Sado estuaries and at sea between Cabo da Roca and Setúbal. · place: Tejo and Sado estuaries; sea between Cabo da Roca and Setúbal"
+  },
+  {
+   "id": "e2",
+   "location": "2.2",
+   "numbers": [],
+   "origin": "mmwdz12sr2kq0:t59:p46",
+   "source": "Embarcações do Rio Tejo",
+   "sourceId": "mmwdz12sr2kq0",
+   "text": "Muletas are registered at south-bank ports such as Barreiro and Seixal but fish in the Embocadura waters called Entre-Cabos. · place: Barreiro, Seixal, Entre-Cabos (Raso e Espichel)"
+  },
+  {
+   "id": "e3",
+   "location": "Introduction",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p1",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "The generic term 'barca' was long used for any small river-traffic or fishing boat on the Tagus. · place: Tejo"
+  },
+  {
+   "id": "e4",
+   "location": "Introduction",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p4",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "From the early 16th century barcas began to diversify according to their functions and the routes they sailed on the Tagus. · place: Tejo · when: séc. XVI"
+  },
+  {
+   "id": "e5",
+   "location": "Introduction",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p5",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "Going upriver, entering shallow creeks, carrying varied cargo and fishing in river and sea required boats with differing keels, flat bottoms, bows, masts and sails. · place: Tejo, esteiros · cargo: various goods"
+  },
+  {
+   "id": "e6",
+   "location": "Estaleiros e Tipologias",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p10",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "Boat shapes, sizes and colours varied with function, route navigability and the style of each yard or town."
+  },
+  {
+   "id": "e7",
+   "location": "Estaleiros e Tipologias",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p11",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "Well-known passenger boats included catraio, caíque, bote, batel, canoa, falua and bote cacilheiro. · cargo: passengers"
+  },
+  {
+   "id": "e8",
+   "location": "Estaleiros e Tipologias",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p12",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "Well-known cargo boats included mill boats, Riba-Tejo boats, cargueiros, bateiras, faluas, canoa cacilheira, varinos and fragatas. · cargo: goods"
+  },
+  {
+   "id": "e9",
+   "location": "1. Introdução",
+   "numbers": [],
+   "origin": "m-hist-pedrosa:1tsz:p1",
+   "source": "Pedrosa",
+   "sourceId": "m-hist-pedrosa",
+   "text": "The muleta, emblem of Seixal and Barreiro, trawled sideways: the net (tartaranha) was cast windward and the boat drifted across wind and current. · place: Seixal; Barreiro"
+  },
+  {
+   "id": "e10",
+   "location": "1. Introdução",
+   "numbers": [],
+   "origin": "m-hist-pedrosa:1tsz:p2",
+   "source": "Pedrosa",
+   "sourceId": "m-hist-pedrosa",
+   "text": "Baldaque da Silva described the muleta's sails as arranged to balance forces by wind and current direction, with two long poles (botalós) fore and aft to set sails and tie net wings. · who: A. A. Baldaque da Silva · when: 1891"
+  },
+  {
+   "id": "e11",
+   "location": "[page 23]",
+   "numbers": [
+    "crew: 5-6 men"
+   ],
+   "origin": "m-hist-pedrosa:1tsz:p107",
+   "source": "Pedrosa",
+   "sourceId": "m-hist-pedrosa",
+   "text": "Duhamel Du Monceau says muletas trawled sideways like Mediterranean tartanas, fishing sardines at night between Peniche and Setúbal, usually hauling nets ashore; the author calls this wrong. · who: 5 or 6 crew; Duhamel Du Monceau · place: between Peniche and S"
+  },
+  {
+   "id": "e12",
+   "location": "Mar da Palha (5)",
+   "numbers": [],
+   "origin": "mmwdz12sr2kq0:t59:p31",
+   "source": "Embarcações do Rio Tejo",
+   "sourceId": "mmwdz12sr2kq0",
+   "text": "Muleta and batel boats trawled from the side using the tartaranha net. · place: Tagus estuary"
+  },
+  {
+   "id": "e13",
+   "location": "[page 2]",
+   "numbers": [],
+   "origin": "m-hist-pedrosa:1tsz:p26",
+   "source": "Pedrosa",
+   "sourceId": "m-hist-pedrosa",
+   "text": "The name muleta appeared in the 16th century for river boats; Inquisition records of 1550 mention it in Lisbon, and Fernando Oliveira noted santarém boats renamed from cervilhas to muletas. · who: Fernando Oliveira · place: Lisboa · when: séc. XVI"
+  },
+  {
+   "id": "e14",
+   "location": "4. O Regimento dos Barqueiros",
+   "numbers": [],
+   "origin": "m-hist-pedrosa:1tsz:p31",
+   "source": "Pedrosa",
+   "sourceId": "m-hist-pedrosa",
+   "text": "According to the author, all muletas were cargo boats and none were used for fishing. · when: 1572"
+  },
+  {
+   "id": "e15",
+   "location": "page 15",
+   "numbers": [],
+   "origin": "m-hist-pedrosa:1tsz:p71",
+   "source": "Pedrosa",
+   "sourceId": "m-hist-pedrosa",
+   "text": "The term muleta with rede tartaranha already appeared in 1634 and 1645, but only as a generic designation. · when: 1634 and 1645"
+  },
+  {
+   "id": "e16",
+   "location": "1.1 – Referências Históricas",
+   "numbers": [
+    "years since zabra and lancha names were unknown locally: less than 40 years"
+   ],
+   "origin": "mmwdz12sr2kq0:t59:p4",
+   "source": "Embarcações do Rio Tejo",
+   "sourceId": "mmwdz12sr2kq0",
+   "text": "Oliveira observed that Santarém boats were raising their bows higher and changing their name from cervilhas to muletas, and that names like zabra and lancha were recent. · who: Padre Fernando Oliveira · place: Santarém · when: século XVI"
+  },
+  {
+   "id": "e17",
+   "location": "4. O Regimento dos Barqueiros",
+   "numbers": [],
+   "origin": "m-hist-pedrosa:1tsz:p28",
+   "source": "Pedrosa",
+   "sourceId": "m-hist-pedrosa",
+   "text": "The 1572 Regimento dos Barqueiros regulated cargo and passenger transport on the Tagus, compiling norms of different dates, and covered muletas and other river craft. · who: barqueiros · place: rio Tejo · when: 1572 · cargo: mercadorias e pessoas"
+  },
+  {
+   "id": "e18",
+   "location": "4. O Regimento dos Barqueiros",
+   "numbers": [
+    "max people, paragraph 19: 8 people",
+    "max people, paragraph 61: 12 people"
+   ],
+   "origin": "m-hist-pedrosa:1tsz:p29",
+   "source": "Pedrosa",
+   "sourceId": "m-hist-pedrosa",
+   "text": "Batéis crossing from Lisbon to Almada may carry at most 8 people under paragraph 19, though paragraph 61 permits 12. · place: Lisboa to Almada · when: 1572 · cargo: passengers"
+  },
+  {
+   "id": "e19",
+   "location": "4. O Regimento dos Barqueiros",
+   "numbers": [],
+   "origin": "m-hist-pedrosa:1tsz:p30",
+   "source": "Pedrosa",
+   "sourceId": "m-hist-pedrosa",
+   "text": "Larger barcas and caravelões must carry a compass; muletas and small batéis are exempt. · place: rio Tejo · when: 1572"
+  },
+  {
+   "id": "e20",
+   "location": "4. O Regimento dos Barqueiros",
+   "numbers": [],
+   "origin": "m-hist-pedrosa:1tsz:p32",
+   "source": "Pedrosa",
+   "sourceId": "m-hist-pedrosa",
+   "text": "Paragraph 21: from 1 October to end of March, skippers and boatmen of lateen-rigged boats must carry carregadeiras on the yards so sails can be lowered quickly, avoiding disasters. · who: arraizes e barqueiros · place: rio Tejo · when: 1 October to end of Marc"
+  },
+  {
+   "id": "e21",
+   "location": "[page 9]",
+   "numbers": [],
+   "origin": "m-hist-pedrosa:1tsz:p36",
+   "source": "Pedrosa",
+   "sourceId": "m-hist-pedrosa",
+   "text": "Article 36 of the 1572 boatmen's regulation: muletas crossing the river must carry only a round sail for safety, with a yard no longer than the hull, and always a foresail. · who: muletas boatmen · place: Tagus river crossing · when: 1572"
+  },
+  {
+   "id": "e22",
+   "location": "[page 9]",
+   "numbers": [],
+   "origin": "m-hist-pedrosa:1tsz:p37",
+   "source": "Pedrosa",
+   "sourceId": "m-hist-pedrosa",
+   "text": "Muletas sailing the river without people or cargo may use a lateen or round sail, but must never sail without ballast. · who: muletas boatmen · place: Tagus · when: 1572"
+  },
+  {
+   "id": "e23",
+   "location": "[page 29]",
+   "numbers": [],
+   "origin": "m-hist-pedrosa:1tsz:p135",
+   "source": "Pedrosa",
+   "sourceId": "m-hist-pedrosa",
+   "text": "From the late 19th century, smaller boats (batel, bote, bateira) also trawled with the tartaranha net; the name muleta was often applied loosely to any boat fishing with it. · when: late 19th century"
+  },
+  {
+   "id": "e24",
+   "location": "[page 29]",
+   "numbers": [
+    "muletas remaining: 1 boat"
+   ],
+   "origin": "m-hist-pedrosa:1tsz:p136",
+   "source": "Pedrosa",
+   "sourceId": "m-hist-pedrosa",
+   "text": "Baldaque da Silva recorded that by 1891 only one muleta remained. · who: Baldaque da Silva · when: 1891"
+  },
+  {
+   "id": "e25",
+   "location": "[page 29]",
+   "numbers": [],
+   "origin": "m-hist-pedrosa:1tsz:p137",
+   "source": "Pedrosa",
+   "sourceId": "m-hist-pedrosa",
+   "text": "Tartaranha nets continued to be tolerated until their final extinction around 1920. · when: c. 1920"
+  },
+  {
+   "id": "e26",
+   "location": "Mar da Palha (5)",
+   "numbers": [],
+   "origin": "mmwdz12sr2kq0:t59:p32",
+   "source": "Embarcações do Rio Tejo",
+   "sourceId": "mmwdz12sr2kq0",
+   "text": "The batel replaced the muleta when the muleta became extinct."
+  },
+  {
+   "id": "e27",
+   "location": "[section: Foundations > Sailing concepts]",
+   "numbers": [
+    "approximate angle to the wind when close-hauled: 45 degrees"
+   ],
+   "origin": "m-auth-method:1",
+   "source": "Method doc",
+   "sourceId": "m-auth-method",
+   "text": "Close-hauled: “bolina” (en) — Sailing as close to the wind as the rig permits, with sails tight; the only way to gain ground upwind, done by tacking."
+  },
+  {
+   "id": "e28",
+   "location": "[page 7]",
+   "numbers": [],
+   "origin": "m-ref-veleiro:48",
+   "source": "Veleiro.net",
+   "sourceId": "m-ref-veleiro",
+   "text": "Close-hauled: “Orça Fechada” (pt-BR) — Close-hauled: sailing as close to the wind line as possible, heading against it."
+  },
+  {
+   "id": "e29",
+   "location": "[section: Foundations > Sailing concepts]",
+   "numbers": [],
+   "origin": "m-auth-method:4",
+   "source": "Method doc",
+   "sourceId": "m-auth-method",
+   "text": "In irons / head to wind: “In irons” (en) — Pointing directly into the wind, so sails flap and the boat stalls. Portuguese term not yet confirmed in the source."
+  },
+  {
+   "id": "e30",
+   "location": "[page 6]",
+   "numbers": [],
+   "origin": "m-ref-veleiro:46",
+   "source": "Veleiro.net",
+   "sourceId": "m-ref-veleiro",
+   "text": "In irons / head to wind: “Filado ao Vento” (pt-BR) — Head to wind: the bow points straight into the wind, leaving the boat with no headway or steering."
+  },
+  {
+   "id": "e31",
+   "location": "[section: Foundations > Sailing concepts]",
+   "numbers": [],
+   "origin": "m-auth-method:14",
+   "source": "Method doc",
+   "sourceId": "m-auth-method",
+   "text": "Tacking: “virar de bordo” (en) — Tacking: turning through the wind to change sides while going upwind, zigzagging between two close-hauled headings."
+  },
+  {
+   "id": "e32",
+   "location": "[page 6]",
+   "numbers": [],
+   "origin": "m-ref-veleiro:44",
+   "source": "Veleiro.net",
+   "sourceId": "m-ref-veleiro",
+   "text": "Tacking: “Cambar” (pt-BR) — Tacking: turning the bow through the wind line so the sails change sides."
+  },
+  {
+   "id": "e33",
+   "location": "Part 2 (no marker)",
+   "numbers": [],
+   "origin": "m-hist-freire:31",
+   "source": "Freire",
+   "sourceId": "m-hist-freire",
+   "text": "Muletas (fishing boat): “muletas” (pt-PT) — A fishing boat type used on the Tagus."
+  },
+  {
+   "id": "e34",
+   "location": "[section: Estaleiros e Tipologias]",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:17",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "Muletas (fishing boat): “muletas” (pt-PT) — Boat type listed among Tagus fishing boats."
+  },
+  {
+   "id": "e35",
+   "location": "[page 6]",
+   "numbers": [
+    "year the municipality gathered tartaranha nets to check mesh: 1647 year"
+   ],
+   "origin": "m-hist-pedrosa:33",
+   "source": "Pedrosa",
+   "sourceId": "m-hist-pedrosa",
+   "text": "Tartaranha net and boat: “tartaranhas” (pt-PT) — A drag net, and by semantic extension the boat fishing with it; also a boat type of the Tagus."
+  },
+  {
+   "id": "e36",
+   "location": "[page 15]",
+   "numbers": [],
+   "origin": "m-hist-pedrosa:105",
+   "source": "Pedrosa",
+   "sourceId": "m-hist-pedrosa",
+   "text": "Tartaranha net and boat: “rede tartaranha” (pt-PT) — Trawl net used by Portuguese boats near the Lisbon bar; counterpart of the French tartana net."
+  },
+  {
+   "id": "e37",
+   "location": "[page 201]",
+   "numbers": [],
+   "origin": "mmwdz10zt3xye:126",
+   "source": "jorgeGasparOsportosfluviaisdoT",
+   "sourceId": "mmwdz10zt3xye",
+   "text": "Tagus estuary: “estuaire” () — The wide tidal mouth of the Tagus near Lisbon, where river navigation is now confined."
+  },
+  {
+   "id": "e38",
+   "location": "[section: Resumo]",
+   "numbers": [],
+   "origin": "mmwdz13qounll:3",
+   "source": "barcos do tejo",
+   "sourceId": "mmwdz13qounll",
+   "text": "Tagus estuary: “estuário” () — The first of the river's navigational stretches, where conditions differ from the river upstream."
+  },
+  {
+   "id": "e39",
+   "location": "[section: Travessia Fluvial Belém - Trafaria]",
+   "numbers": [],
+   "origin": "m-hist-paisagem:2",
+   "source": "Museu da Paisagem",
+   "sourceId": "m-hist-paisagem",
+   "text": "Mouth of the Tagus: “foz do Tejo” (pt-PT) — The mouth of the Tagus, opening toward the sea, which gives the crossing a maritime character."
+  },
+  {
+   "id": "e40",
+   "location": "[page 235, note 60]",
+   "numbers": [],
+   "origin": "mmwdz15icx6en:101",
+   "source": "BOOK Territorios da Lisboa Med",
+   "sourceId": "mmwdz15icx6en",
+   "text": "Mouth of the Tagus: “foz” () — The river mouth of the Tagus, where fish and sardines were caught and from which they were shipped, subject to the tithe."
+  },
+  {
+   "id": "e41",
+   "location": "[page 8]",
+   "numbers": [
+    "year: 1572 year"
+   ],
+   "origin": "m-hist-pedrosa:42",
+   "source": "Pedrosa",
+   "sourceId": "m-hist-pedrosa",
+   "text": "Regimento dos Barqueiros (1572): “Regimento dos Barqueiros” (pt-PT) — 1572 regulation of boatmen governing river transport of goods and people on the Tagus, compiled from norms of various dates."
+  },
+  {
+   "id": "e42",
+   "location": "[page 231]",
+   "numbers": [
+    "year: 1572 year"
+   ],
+   "origin": "mmwdz15icx6en:62",
+   "source": "BOOK Territorios da Lisboa Med",
+   "sourceId": "mmwdz15icx6en",
+   "text": "Regimento dos Barqueiros (1572): “Regimento dos Barqueiros” () — 1572 regulation identifying the boat types operating on the Tagus: barca, batel, caravelão, muleta and bateira."
+  }
+ ],
+ "game": "mini.fishing",
+ "notes": "No story bible covered this activity, so the cast and beats are new. Characters are invented and must be labelled fictional; the context is documented. Period chosen: 1880s, when muletas still fished with the tartaranha, shortly before Baldaque da Silva's 1891 count of a single surviving boat (e24). Characters must not mention Baldaque da Silva or later events. No modern landmarks: bridges, Cristo Rei, Padrão and Torre Vasco da Gama postdate the period and are not in the evidence. Place beats use only Seixal, because the Seixal evidence (e2, e9) is about the muleta. I considered Barreiro but l",
+ "settings": {
+  "mode": "historical",
+  "period": "",
+  "talk": "normal"
+ },
+ "title": "Fishing with the Muleta",
+ "updatedAt": "2026-11-13T07:23:34.208Z"
+}

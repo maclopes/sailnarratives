@@ -1,0 +1,682 @@
+{
+ "basis": {
+  "bible": false,
+  "concepts": [
+   "c1",
+   "c14",
+   "c65",
+   "c81",
+   "c80",
+   "c219",
+   "c210",
+   "c221",
+   "c239",
+   "c305"
+  ],
+  "match": "related",
+  "practices": [
+   "p1",
+   "p10",
+   "p12",
+   "p30",
+   "p15",
+   "p98"
+  ],
+  "proposal": "s2"
+ },
+ "beats": [
+  {
+   "character": "k1",
+   "concept": "close-hauled: haul in the sheets and sail about 45 degrees off the wind",
+   "delivery": "story",
+   "evidence": [
+    "e2",
+    "e23",
+    "e36",
+    "e42",
+    "e44"
+   ],
+   "gist": "Leaving Lisboa with return cargo for the Ribatejo, the skipper sees the mark dead upwind and tells Zé they must haul in and work up in bordos, as sail-and-oar boats always did.",
+   "id": "b1",
+   "part": "setup",
+   "trigger": "start"
+  },
+  {
+   "character": "k1",
+   "concept": "getting out of irons: bear away until the sails fill",
+   "delivery": "cue",
+   "evidence": [],
+   "expects": [
+    "bear_away",
+    "out_of_irons"
+   ],
+   "gist": "The falua has pointed too high and stopped head to wind; the skipper gives a short instruction to bear away and fill the sails.",
+   "id": "b2",
+   "part": "complication",
+   "trigger": "enter_irons"
+  },
+  {
+   "character": "k1",
+   "concept": "beating to windward: tacking between two close-hauled headings",
+   "delivery": "reflection",
+   "evidence": [
+    "e36",
+    "e38",
+    "e41",
+    "e42",
+    "e43"
+   ],
+   "gist": "Once moving again, the skipper explains to Zé that nobody sails straight into the wind: you hold about 45 degrees, then turn the bow through the wind and zigzag, and if in doubt you ease the sheets a little.",
+   "id": "b3",
+   "part": "turn",
+   "trigger": "out_of_irons"
+  },
+  {
+   "character": "k1",
+   "concept": "holding a steady close-hauled course",
+   "delivery": "story",
+   "evidence": [
+    "e2",
+    "e5",
+    "e24",
+    "e28",
+    "e13"
+   ],
+   "gist": "On a long steady bordo the skipper talks about the work: wine, cork and cereals going down to Lisboa, salt, manufactured goods, fertiliser and news coming back. He also mentions that sailors mix up boat names: a falua has two masts, while fragatas and varinos have one.",
+   "id": "b4",
+   "part": "leg",
+   "trigger": "steady_leg"
+  },
+  {
+   "character": "k2",
+   "concept": "",
+   "delivery": "story",
+   "evidence": [
+    "e3",
+    "e14",
+    "e16",
+    "e17"
+   ],
+   "gist": "Looking back at the Lisboa quays, Zé remarks that this is where the river's goods and people arrive and leave, and the skipper adds that the river is the road for all that trade.",
+   "id": "b5",
+   "part": "place",
+   "trigger": "near_place:Lisboa"
+  },
+  {
+   "character": "k1",
+   "concept": "reaching an upwind mark by tacking",
+   "delivery": "story",
+   "evidence": [
+    "e40",
+    "e41",
+    "e45"
+   ],
+   "gist": "The mark is reached; the skipper tells Zé that ground won upwind is earned bordo by bordo, and that now the falua can carry on with her cargo upriver.",
+   "id": "b6",
+   "part": "close",
+   "trigger": "arrive"
+  },
+  {
+   "character": "k1",
+   "concept": "",
+   "delivery": "curiosity",
+   "evidence": [
+    "e31",
+    "e32"
+   ],
+   "gist": "An optional card on how we know these boats: Manuel Fernandes's carpentry book gives construction details for a falua, and João de Souza's 1785 set of 20 engravings is the first credible picture record of Tagus boat types.",
+   "id": "b7",
+   "part": "curiosity",
+   "trigger": "start"
+  },
+  {
+   "character": "k1",
+   "concept": "",
+   "delivery": "trivia",
+   "evidence": [
+    "e1",
+    "e2",
+    "e3",
+    "e4",
+    "e5",
+    "e6",
+    "e7",
+    "e8",
+    "e9",
+    "e10",
+    "e11",
+    "e12",
+    "e13",
+    "e14",
+    "e15",
+    "e16",
+    "e17",
+    "e18",
+    "e19",
+    "e20",
+    "e21",
+    "e22",
+    "e23",
+    "e24",
+    "e25",
+    "e26",
+    "e27",
+    "e28",
+    "e29",
+    "e30",
+    "e31",
+    "e32",
+    "e33",
+    "e34",
+    "e35",
+    "e36",
+    "e37",
+    "e38",
+    "e39",
+    "e40",
+    "e41",
+    "e42",
+    "e43",
+    "e44",
+    "e45"
+   ],
+   "gist": "facts for quiet moments",
+   "id": "b90",
+   "part": "trivia",
+   "trigger": "idle"
+  },
+  {
+   "character": "k1",
+   "concept": "",
+   "delivery": "ack",
+   "evidence": [],
+   "gist": "replies when the player does what was asked",
+   "id": "b91",
+   "part": "ack",
+   "trigger": "ack"
+  },
+  {
+   "character": "k2",
+   "concept": "",
+   "delivery": "ack",
+   "evidence": [],
+   "gist": "replies when the player does what was asked",
+   "id": "b92",
+   "part": "ack",
+   "trigger": "ack"
+  }
+ ],
+ "cast": [
+  {
+   "evidence": [
+    "e2",
+    "e12",
+    "e20",
+    "e28",
+    "e44"
+   ],
+   "fictional": true,
+   "id": "k1",
+   "name": "Mestre Joaquim (fictional character)",
+   "role": "Invented skipper of a cargo falua, one of the embarcados who carried goods between Lisboa and the Ribatejo. Character in",
+   "voice": "Calm, practical, dry humour; talks the long legs away; uses river words like bordo and água acima but explains them; never boastful.",
+   "want": "To work the falua upwind out of Lisboa without losing ground, so the return cargo reaches the river ports on time."
+  },
+  {
+   "evidence": [
+    "e2",
+    "e23"
+   ],
+   "fictional": true,
+   "id": "k2",
+   "name": "Zé (fictional character)",
+   "role": "Invented young deckhand on his first season aboard the falua, learning the work from the skipper. Character invented; co",
+   "voice": "Curious, a little impatient, asks the questions a visitor would ask.",
+   "want": "To understand why the boat cannot sail straight at the mark and to earn the skipper's trust at the sheets."
+  }
+ ],
+ "createdAt": "2026-11-14T10:34:44.368Z",
+ "evidence": [
+  {
+   "id": "e1",
+   "location": "Introduction",
+   "numbers": [],
+   "origin": "m-hist-blk-portos:5c1:p1",
+   "source": "mediotejo",
+   "sourceId": "m-hist-blk-portos",
+   "text": "Barcos d'água acima carried goods between the Ribatejo and Lisboa, sailing down and up the Tejo, taking produce to the capital and bringing back goods. · place: Tejo, Ribatejo to Lisboa · when: mid-20th century (remembered); for sever · cargo: all sorts of goo"
+  },
+  {
+   "id": "e2",
+   "location": "Boats section",
+   "numbers": [
+    "minimum voyage time to Lisboa: 2 days"
+   ],
+   "origin": "m-hist-blk-portos:5c1:p12",
+   "source": "mediotejo",
+   "sourceId": "m-hist-blk-portos",
+   "text": "The run to Lisboa carried wine, cork, coal, cereals, olive oil, straw, firewood and fruit; the return brought salt, manufactured goods, fertiliser and news. · who: embarcados · place: Ribatejo to Lisboa · cargo: wine, cork, coal, cereals, olive oil, straw, fir"
+  },
+  {
+   "id": "e3",
+   "location": "intro",
+   "numbers": [],
+   "origin": "m-hist-freire:jhq:p1",
+   "source": "Freire",
+   "sourceId": "m-hist-freire",
+   "text": "Quays served as meeting points where goods arrived and left; cargo of people and goods went by river to Santarém, Vila Franca de Xira and Lisbon. · place: cais na Barquinha; Santarém, Vila Franca de Xira, Lisboa · cargo: people and goods"
+  },
+  {
+   "id": "e4",
+   "location": "intro",
+   "numbers": [],
+   "origin": "m-hist-freire:jhq:p2",
+   "source": "Freire",
+   "sourceId": "m-hist-freire",
+   "text": "Upriver products were unloaded at those ports; boats returned with varied goods to Barquinha, where animal-drawn carts took them on to other territories. · place: porto da Barquinha · cargo: various goods"
+  },
+  {
+   "id": "e5",
+   "location": "Crónica",
+   "numbers": [],
+   "origin": "m-hist-freire:jhq:p3",
+   "source": "Freire",
+   "sourceId": "m-hist-freire",
+   "text": "Boats traded up and down the river, carrying forest wealth, ice from Lousã and Estrela mountains and farm produce, returning with salt, cloth and paper. · who: gentes de riba Tejo, Beiras and Alentejo · place: Tejo · cargo: forest products, ice from serras da "
+  },
+  {
+   "id": "e6",
+   "location": "Crónica",
+   "numbers": [],
+   "origin": "m-hist-freire:jhq:p4",
+   "source": "Freire",
+   "sourceId": "m-hist-freire",
+   "text": "Vila Nova da Barquinha remembers a glorious time when its fragatas sailed the Tagus down to the Mar da Palha or the open sea. · place: Vila Nova da Barquinha, Mar da Palha"
+  },
+  {
+   "id": "e7",
+   "location": "Introduction",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p1",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "The generic term 'barca' was long used for any small river-traffic or fishing boat on the Tagus. · place: Tejo"
+  },
+  {
+   "id": "e8",
+   "location": "Introduction",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p4",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "From the early 16th century barcas began to diversify according to their functions and the routes they sailed on the Tagus. · place: Tejo · when: séc. XVI"
+  },
+  {
+   "id": "e9",
+   "location": "Introduction",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p5",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "Going upriver, entering shallow creeks, carrying varied cargo and fishing in river and sea required boats with differing keels, flat bottoms, bows, masts and sails. · place: Tejo, esteiros · cargo: various goods"
+  },
+  {
+   "id": "e10",
+   "location": "Estaleiros e Tipologias",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p10",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "Boat shapes, sizes and colours varied with function, route navigability and the style of each yard or town."
+  },
+  {
+   "id": "e11",
+   "location": "Estaleiros e Tipologias",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p11",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "Well-known passenger boats included catraio, caíque, bote, batel, canoa, falua and bote cacilheiro. · cargo: passengers"
+  },
+  {
+   "id": "e12",
+   "location": "Estaleiros e Tipologias",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p12",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "Well-known cargo boats included mill boats, Riba-Tejo boats, cargueiros, bateiras, faluas, canoa cacilheira, varinos and fragatas. · cargo: goods"
+  },
+  {
+   "id": "e13",
+   "location": "Introduction",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p6",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "River traffic linked the two banks, coast and interior, and mouth and Riba-Tejo, carrying goods and people and supporting fishing, until the mid-20th century. · place: Tejo, Riba-Tejo · when: until meados do séc. XX · cargo: goods and people"
+  },
+  {
+   "id": "e14",
+   "location": "Travessia Fluvial Belém - Trafaria",
+   "numbers": [],
+   "origin": "m-hist-paisagem:3rd:p4",
+   "source": "Museu da Paisagem",
+   "sourceId": "m-hist-paisagem",
+   "text": "Historically the Tagus was the only road for national and intercontinental trade and linked the two banks; the crossing still carries this maritime heritage. · place: Tejo · cargo: trade"
+  },
+  {
+   "id": "e15",
+   "location": "Introduction",
+   "numbers": [],
+   "origin": "mmwdz14kpqwcc:azv:p6",
+   "source": "Cacilheiros no Rio Tejo",
+   "sourceId": "mmwdz14kpqwcc",
+   "text": "River traffic linked the two banks, coast and interior, carrying goods and people and supporting fishing in the river and nearby coast until the mid-20th century. · place: Tejo, Riba-Tejo · when: until mid séc. XX · cargo: goods and people"
+  },
+  {
+   "id": "e16",
+   "location": "Tipologias",
+   "numbers": [],
+   "origin": "mmwdz16aqbi7n:9p6:p8",
+   "source": "Barcos Tradicionais do Tejo e ",
+   "sourceId": "mmwdz16aqbi7n",
+   "text": "Before the bridge opened, boats carried people and goods and linked towns between Santarém and Cascais faster than other means. · place: between Santarém and Cascais · when: before 1966 · cargo: people and goods"
+  },
+  {
+   "id": "e17",
+   "location": "Tipologias",
+   "numbers": [],
+   "origin": "mmwdz16aqbi7n:9p6:p11",
+   "source": "Barcos Tradicionais do Tejo e ",
+   "sourceId": "mmwdz16aqbi7n",
+   "text": "The river was the era's motorway, busy with varied craft: fragatas, varinos, faluas, cangueiros, botes, botes de fragata, botes de pinho, barcos de água acima, canoas and catraios. · place: Tagus estuary"
+  },
+  {
+   "id": "e18",
+   "location": "Tipologias",
+   "numbers": [],
+   "origin": "mmwdz16aqbi7n:9p6:p13",
+   "source": "Barcos Tradicionais do Tejo e ",
+   "sourceId": "mmwdz16aqbi7n",
+   "text": "Smaller boats carried people and goods such as fresh produce and groceries. · cargo: fresh produce, groceries, people"
+  },
+  {
+   "id": "e19",
+   "location": "[page 2]",
+   "numbers": [],
+   "origin": "m-hist-freire:jhq:p24",
+   "source": "Freire",
+   "sourceId": "m-hist-freire",
+   "text": "Passenger transport used the catraio, caíque, bote, batel and canoa. · place: Tejo · cargo: passengers"
+  },
+  {
+   "id": "e20",
+   "location": "[page 2]",
+   "numbers": [],
+   "origin": "m-hist-freire:jhq:p25",
+   "source": "Freire",
+   "sourceId": "m-hist-freire",
+   "text": "Cargo was carried by mill boats, Riba-Tejo boats, bateiras, faluas, varinos-avieiros and fragatas. · place: Tejo · cargo: goods"
+  },
+  {
+   "id": "e21",
+   "location": "[page 2]",
+   "numbers": [],
+   "origin": "m-hist-freire:jhq:p26",
+   "source": "Freire",
+   "sourceId": "m-hist-freire",
+   "text": "Fishing used picareto, abrangel, catrafúcio (three-plank boat), saveiros and muletas. · place: Tejo · cargo: fish"
+  },
+  {
+   "id": "e22",
+   "location": "[page 2]",
+   "numbers": [],
+   "origin": "m-hist-freire:jhq:p27",
+   "source": "Freire",
+   "sourceId": "m-hist-freire",
+   "text": "Varinos-avieiros and fragatas were the most representative cargo boats of the Tejo. · place: Tejo"
+  },
+  {
+   "id": "e23",
+   "location": "[page 2]",
+   "numbers": [],
+   "origin": "m-hist-freire:jhq:p28",
+   "source": "Freire",
+   "sourceId": "m-hist-freire",
+   "text": "All navigation was then done by sail and oars. · place: Tejo"
+  },
+  {
+   "id": "e24",
+   "location": "part 2, Pinto Basto quote",
+   "numbers": [
+    "masts on falua: 2 masts",
+    "masts on fragata and varino: 1 mast"
+   ],
+   "origin": "mmwdz12sr2kq0:t59:p15",
+   "source": "Embarcações do Rio Tejo",
+   "sourceId": "mmwdz12sr2kq0",
+   "text": "Pinto Basto notes sailors confused boat names, calling fragatas and varinos 'faluas'; the falua has two masts, the others one, and they serve very different purposes. · who: A. J. Pinto Basto · place: Tejo · when: 1893"
+  },
+  {
+   "id": "e25",
+   "location": "Fragata",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p16",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "The fragata was a solid, open-mouthed, flat-sterned boat with one backward-leaning mast, a large gaff sail and one or two headsails, no oars, fixed rudder."
+  },
+  {
+   "id": "e26",
+   "location": "Fragata",
+   "numbers": [
+    "displacement: 10 to 100 tonnes",
+    "length: 20 to 25 metres",
+    "beam: 6.10 metres",
+    "depth: 2.60 metres",
+    "cabins: 2 câmaras"
+   ],
+   "origin": "m-hist-getlisbon:c4d:p18",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "Fragatas varied in size, with a keeled hull and two cabins, one forward and one aft."
+  },
+  {
+   "id": "e27",
+   "location": "Fragata",
+   "numbers": [
+    "displacement: 10 to 100 tonnes",
+    "length: 20 to 25 m",
+    "beam: 6.10 m",
+    "depth: 2.60 m"
+   ],
+   "origin": "mmwdz14kpqwcc:azv:p16",
+   "source": "Cacilheiros no Rio Tejo",
+   "sourceId": "mmwdz14kpqwcc",
+   "text": "Fragata was a sturdy keeled boat with one raked mast, large gaff sail, one or two jibs, fixed rudder and no oars."
+  },
+  {
+   "id": "e28",
+   "location": "Fragata",
+   "numbers": [],
+   "origin": "mmwdz14kpqwcc:azv:p19",
+   "source": "Cacilheiros no Rio Tejo",
+   "sourceId": "mmwdz14kpqwcc",
+   "text": "The term fragata was also commonly applied to similar-function boats such as faluas, medium-sized between bote and fragata. · place: Tejo"
+  },
+  {
+   "id": "e29",
+   "location": "Fragata",
+   "numbers": [
+    "length: 20 to 25 metres",
+    "crew: 3 men"
+   ],
+   "origin": "mmwdz1b2r29ky:1p7d:p15",
+   "source": "PORTUGAL MARÍTIMO  BARCOS TRAD",
+   "sourceId": "mmwdz1b2r29ky",
+   "text": "Described as the most emblematic Tagus boat: heavy, bulging, with gaff mainsail, two decorated cabins, and a small boat towed behind for rowing the fragata along. · who: crew of three men · place: Rio Tejo"
+  },
+  {
+   "id": "e30",
+   "location": "1.1 – Referências Históricas",
+   "numbers": [],
+   "origin": "mmwdz12sr2kq0:t59:p5",
+   "source": "Embarcações do Rio Tejo",
+   "sourceId": "mmwdz12sr2kq0",
+   "text": "Panoramic views of Lisbon by several artists, including an anonymous drawing at Leiden University, show Tagus boats, but later-period boats may be depicted in paintings of earlier events. · who: Francisco de Holanda, Amaro do Vale, Francisco Valégio · place: L"
+  },
+  {
+   "id": "e31",
+   "location": "1.2 – Bases de Dados de Imagens e seus Autores",
+   "numbers": [],
+   "origin": "mmwdz12sr2kq0:t59:p6",
+   "source": "Embarcações do Rio Tejo",
+   "sourceId": "mmwdz12sr2kq0",
+   "text": "Manuel Fernandes's carpentry book gives layout methods and construction details for a falua and a fragata, likely built at the Ribeira and probably Tagus craft. · who: Manuel Fernandes · place: Ribeira"
+  },
+  {
+   "id": "e32",
+   "location": "1.2 – Bases de Dados de Imagens e seus Autores",
+   "numbers": [
+    "engravings in the set: 20 gravuras"
+   ],
+   "origin": "mmwdz12sr2kq0:t59:p7",
+   "source": "Embarcações do Rio Tejo",
+   "sourceId": "mmwdz12sr2kq0",
+   "text": "João de Souza published a set of engravings of all Tagus boats, for cargo, transport and fishing, the first credible graphic record of Tagus boat types. · who: João de Souza · place: Rio Tejo · when: 1785"
+  },
+  {
+   "id": "e33",
+   "location": "part 2, start",
+   "numbers": [],
+   "origin": "mmwdz12sr2kq0:t59:p8",
+   "source": "Embarcações do Rio Tejo",
+   "sourceId": "mmwdz12sr2kq0",
+   "text": "J. S. Amancio published a technical plan of a closed-stern 'Hiate de Poupa fechada ou Carreira', intending to document all Tagus cargo and fishing boats; no continuation known. · who: J. S. Amancio · place: Tejo · when: 1834"
+  },
+  {
+   "id": "e34",
+   "location": "part 2, Archivo Pittoresco",
+   "numbers": [],
+   "origin": "mmwdz12sr2kq0:t59:p9",
+   "source": "Embarcações do Rio Tejo",
+   "sourceId": "mmwdz12sr2kq0",
+   "text": "Archivo Pittoresco began a series 'Marinha do Tejo' with Brito Aranha's descriptions of fishing and river transport boats, illustrated by J. Pedrozo's engravings, showing typological changes since 1785. · who: Brito Aranha; J. Pedrozo · place: Tejo · when: 186"
+  },
+  {
+   "id": "e35",
+   "location": "part 2, Monleón",
+   "numbers": [],
+   "origin": "mmwdz12sr2kq0:t59:p10",
+   "source": "Embarcações do Rio Tejo",
+   "sourceId": "mmwdz12sr2kq0",
+   "text": "Spanish painter Raphael Monleón y Torres documented Portuguese boats, especially the muleta and the 'barino' (culé, colé, monaio, barco de água-acima). · who: Raphael Monleón y Torres · when: 1863-1871"
+  },
+  {
+   "id": "e36",
+   "location": "[section: Foundations > Sailing concepts]",
+   "numbers": [
+    "approximate angle to the wind when close-hauled: 45 degrees"
+   ],
+   "origin": "m-auth-method:1",
+   "source": "Method doc",
+   "sourceId": "m-auth-method",
+   "text": "Close-hauled: “bolina” (en) — Sailing as close to the wind as the rig permits, with sails tight; the only way to gain ground upwind, done by tacking."
+  },
+  {
+   "id": "e37",
+   "location": "[page 7]",
+   "numbers": [],
+   "origin": "m-ref-veleiro:48",
+   "source": "Veleiro.net",
+   "sourceId": "m-ref-veleiro",
+   "text": "Close-hauled: “Orça Fechada” (pt-BR) — Close-hauled: sailing as close to the wind line as possible, heading against it."
+  },
+  {
+   "id": "e38",
+   "location": "[section: Foundations > Sailing concepts]",
+   "numbers": [],
+   "origin": "m-auth-method:14",
+   "source": "Method doc",
+   "sourceId": "m-auth-method",
+   "text": "Tacking: “virar de bordo” (en) — Tacking: turning through the wind to change sides while going upwind, zigzagging between two close-hauled headings."
+  },
+  {
+   "id": "e39",
+   "location": "[page 6]",
+   "numbers": [],
+   "origin": "m-ref-veleiro:44",
+   "source": "Veleiro.net",
+   "sourceId": "m-ref-veleiro",
+   "text": "Tacking: “Cambar” (pt-BR) — Tacking: turning the bow through the wind line so the sails change sides."
+  },
+  {
+   "id": "e40",
+   "location": "[page 6]",
+   "numbers": [],
+   "origin": "m-ref-veleiro:42",
+   "source": "Veleiro.net",
+   "sourceId": "m-ref-veleiro",
+   "text": "Beating to windward: “Bordejar” (pt-BR) — Beating: sailing against the wind by making a series of tacks."
+  },
+  {
+   "id": "e41",
+   "location": "[page 10]",
+   "numbers": [
+    "bow angle to wind line while beating: 45–50 degrees",
+    "turn per change of direction: 90–100 degrees"
+   ],
+   "origin": "m-ref-veleiro:69",
+   "source": "Veleiro.net",
+   "sourceId": "m-ref-veleiro",
+   "text": "Beating to windward: “Bordejando” (pt-BR) — Tacking upwind: the only way to reach a destination lying toward the wind, by sailing a series of legs with the bow crossing the wind line."
+  },
+  {
+   "id": "e42",
+   "location": "[page 10]",
+   "numbers": [],
+   "origin": "m-ref-veleiro:70",
+   "source": "Veleiro.net",
+   "sourceId": "m-ref-veleiro",
+   "text": "Leg of a zigzag course: “bordo” (pt-BR) — A leg or tack of the zigzag course; changing tack is called giving a bordo."
+  },
+  {
+   "id": "e43",
+   "location": "[page 10]",
+   "numbers": [],
+   "origin": "m-ref-veleiro:68",
+   "source": "Veleiro.net",
+   "sourceId": "m-ref-veleiro",
+   "text": "Upwind trim rule: “Velejando contra o vento” (pt-BR) — Quick rule for sailing upwind: when in doubt, ease the sheets."
+  },
+  {
+   "id": "e44",
+   "location": "[section: main text]",
+   "numbers": [],
+   "origin": "m-hist-blk-portos:13",
+   "source": "mediotejo",
+   "sourceId": "m-hist-blk-portos",
+   "text": "Upriver navigation (água acima): “água acima” (pt-PT) — Upriver. These boats were only permitted to sail in the calm river, not at sea beyond the bar."
+  },
+  {
+   "id": "e45",
+   "location": "[section: “O cais do vapor”, por Fernando Freire]",
+   "numbers": [],
+   "origin": "m-hist-freire:10",
+   "source": "Freire",
+   "sourceId": "m-hist-freire",
+   "text": "Upriver navigation (água acima): “ascenso e descenso” (pt-PT) — Travel upstream and downstream along the river, the way cargo and passengers moved between river ports."
+  }
+ ],
+ "game": "mini.upwind",
+ "notes": "No story bible coverage, so the cast and beats are new. Period is set in the remembered mid-20th century, before 1951, so the narrator must not mention Ponte Marechal Carmona, Cristo Rei, Ponte 25 de Abril, Padrão dos Descobrimentos or any later landmark. Characters are invented and labelled fictional; the context comes only from the cited evidence. Talk level is normal: 1 leg beat (b4) and 1 place beat (b5, Lisboa, which is mentioned in the evidence). A second place beat, near_place:Vila Franca de Xira (evidence e3), could be added if the course passes it, but it is unlikely within 5 minutes.",
+ "option": null,
+ "settings": {
+  "mode": "historical",
+  "period": "",
+  "talk": "normal"
+ },
+ "title": "Upwind with the Falua",
+ "updatedAt": "2026-11-14T10:35:27.188Z"
+}

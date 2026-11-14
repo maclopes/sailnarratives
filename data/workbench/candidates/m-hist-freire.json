@@ -1,0 +1,621 @@
+{
+ "items": [
+  {
+   "definition": "The master or skipper of a river vessel, who knew the river's secrets, read the stars and weather, and held an examined licence to serve.",
+   "id": "m-hist-freire:1",
+   "location": "[section: “O cais do vapor”, por Fernando Freire]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "arrais"
+  },
+  {
+   "definition": "Alternative title for the arrais: the person in command of the boat and responsible for its handling on the river.",
+   "id": "m-hist-freire:2",
+   "location": "[section: “O cais do vapor”, por Fernando Freire]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "mestre da embarcação"
+  },
+  {
+   "definition": "Traditional sailing vessels of Vila Nova da Barquinha that travelled the Tagus down to the Mar da Palha or the open sea.",
+   "id": "m-hist-freire:3",
+   "location": "[section: “O cais do vapor”, por Fernando Freire]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "fragatas"
+  },
+  {
+   "definition": "Examination licence certifying a man as fit to serve as arrais of a boat on the Tagus, issued with the naval arsenal's certification.",
+   "id": "m-hist-freire:4",
+   "location": "[section: “O cais do vapor”, por Fernando Freire]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "date",
+     "value": "15/10/1787",
+     "what": "date the example licence was issued (António Farinha)"
+    },
+    {
+     "unit": "years",
+     "value": "20",
+     "what": "age of the example arrais"
+    }
+   ],
+   "term": "Carta de examinação"
+  },
+  {
+   "definition": "Senior naval arsenal official who certified the arrais's examination licence.",
+   "id": "m-hist-freire:5",
+   "location": "[section: “O cais do vapor”, por Fernando Freire]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "patrão-mor do Arsenal da Marinha"
+  },
+  {
+   "definition": "Municipal regulations governing river and sea activity, setting the rights and duties of boat masters and of people at landing places and river ports.",
+   "id": "m-hist-freire:6",
+   "location": "[section: “O cais do vapor”, por Fernando Freire]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "posturas municipais"
+  },
+  {
+   "definition": "Municipal officials who supervised trade, enforced price lists, fined rule-breakers and could detain offenders to keep order on the river and in ports.",
+   "id": "m-hist-freire:7",
+   "location": "[section: “O cais do vapor”, por Fernando Freire]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "almotacés"
+  },
+  {
+   "definition": "Landing quay or river wharf where goods and people arrived and left; a meeting and trading point on the Tagus.",
+   "id": "m-hist-freire:8",
+   "location": "[section: “O cais do vapor”, por Fernando Freire]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "cais"
+  },
+  {
+   "definition": "One of the quays at Barquinha, whose name suggests steam vessels; the reason for the name is described as an unresolved puzzle.",
+   "id": "m-hist-freire:9",
+   "location": "[section: “O cais do vapor”, por Fernando Freire]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "cais do Vapor"
+  },
+  {
+   "definition": "Travel upstream and downstream along the river, the way cargo and passengers moved between river ports.",
+   "id": "m-hist-freire:10",
+   "location": "[section: “O cais do vapor”, por Fernando Freire]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "ascenso e descenso"
+  },
+  {
+   "definition": "The upper Tagus region and riverside lands whose people depended on river cargo, and where licensed arrais navigated.",
+   "id": "m-hist-freire:11",
+   "location": "[section: “O cais do vapor”, por Fernando Freire]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "riba Tejo"
+  },
+  {
+   "definition": "The broad estuary area of the Tagus near Lisbon that the Barquinha fragatas sailed to.",
+   "id": "m-hist-freire:12",
+   "location": "[section: “O cais do vapor”, por Fernando Freire]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Mar da Palha"
+  },
+  {
+   "definition": "Flood tides and river floods, a recurring danger faced by river people in constant peril.",
+   "id": "m-hist-freire:13",
+   "location": "[section: “O cais do vapor”, por Fernando Freire]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "marés de cheias"
+  },
+  {
+   "definition": "Steam-powered navigation, presented alongside trains and motor traffic as a modernising transport that ended rural isolation.",
+   "id": "m-hist-freire:14",
+   "location": "[section: “O cais do vapor”, por Fernando Freire]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "navegação a vapor"
+  },
+  {
+   "definition": "Animal-drawn carts that carried goods landed at Barquinha port onward to other territories.",
+   "id": "m-hist-freire:15",
+   "location": "[section: “O cais do vapor”, por Fernando Freire]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "carros de tração animal"
+  },
+  {
+   "definition": "A small boat type used on the Tagus to carry passengers.",
+   "id": "m-hist-freire:16",
+   "location": "Part 2 (no marker)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "catraio"
+  },
+  {
+   "definition": "A boat type used on the Tagus for moving passengers.",
+   "id": "m-hist-freire:17",
+   "location": "Part 2 (no marker)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "caíque"
+  },
+  {
+   "definition": "A boat type used on the Tagus for passenger transport.",
+   "id": "m-hist-freire:18",
+   "location": "Part 2 (no marker)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bote"
+  },
+  {
+   "definition": "A boat type used on the Tagus for passenger transport.",
+   "id": "m-hist-freire:19",
+   "location": "Part 2 (no marker)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "batel"
+  },
+  {
+   "definition": "A small boat used for carrying passengers on the Tagus.",
+   "id": "m-hist-freire:20",
+   "location": "Part 2 (no marker)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "canoa"
+  },
+  {
+   "definition": "Boats used on the Tagus to carry goods; listed among cargo vessels.",
+   "id": "m-hist-freire:21",
+   "location": "Part 2 (no marker)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barcos de moinhos"
+  },
+  {
+   "definition": "Cargo boats of the Tagus, named as freight carriers.",
+   "id": "m-hist-freire:22",
+   "location": "Part 2 (no marker)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barcos de Riba-Tejo"
+  },
+  {
+   "definition": "Boats used on the Tagus for transporting goods.",
+   "id": "m-hist-freire:23",
+   "location": "Part 2 (no marker)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bateiras"
+  },
+  {
+   "definition": "Sailing cargo boats of the Tagus used for goods transport.",
+   "id": "m-hist-freire:24",
+   "location": "Part 2 (no marker)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "faluas"
+  },
+  {
+   "definition": "Cargo sailing boats of the Tagus, among its most representative and emblematic vessels; also called avieiros in the text.",
+   "id": "m-hist-freire:25",
+   "location": "Part 2 (no marker)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "varinos"
+  },
+  {
+   "definition": "A fishing boat type found on the Tagus.",
+   "id": "m-hist-freire:26",
+   "location": "Part 2 (no marker)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "picareto"
+  },
+  {
+   "definition": "A fishing boat type found on the Tagus.",
+   "id": "m-hist-freire:27",
+   "location": "Part 2 (no marker)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "abrangel"
+  },
+  {
+   "definition": "A fishing boat, also called a three-plank boat.",
+   "id": "m-hist-freire:28",
+   "location": "Part 2 (no marker)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "catrafúcio"
+  },
+  {
+   "definition": "Alternative name for the catrafúcio, a fishing boat built of three planks.",
+   "id": "m-hist-freire:29",
+   "location": "Part 2 (no marker)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barco de três tábuas"
+  },
+  {
+   "definition": "A fishing boat type used on the Tagus.",
+   "id": "m-hist-freire:30",
+   "location": "Part 2 (no marker)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "saveiros"
+  },
+  {
+   "definition": "A fishing boat type used on the Tagus.",
+   "id": "m-hist-freire:31",
+   "location": "Part 2 (no marker)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "muletas"
+  },
+  {
+   "definition": "Sails, filled by the wind, which powered the emblematic Tagus boats.",
+   "id": "m-hist-freire:32",
+   "location": "Part 2 (no marker)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "velas"
+  },
+  {
+   "definition": "Before steam, all navigation on the river was done by sail and by oar.",
+   "id": "m-hist-freire:33",
+   "location": "Part 2 (no marker)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "navegação à vela e a remos"
+  },
+  {
+   "definition": "Draught: depth of hull below the waterline; steam vessels beyond the canal mouth had to draw less than a set limit.",
+   "id": "m-hist-freire:34",
+   "location": "Part 2 (no marker)",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "pés (feet)",
+     "value": "less than 4",
+     "what": "maximum draught for steam navigation beyond the Foz do Canal d'Azambuja"
+    }
+   ],
+   "term": "linha de água"
+  },
+  {
+   "definition": "Recurring silting of the Tagus, which worsened river navigation and contributed to the decline of river ports.",
+   "id": "m-hist-freire:35",
+   "location": "Part 2 (no marker)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "assoreamentos"
+  },
+  {
+   "definition": "Dams built on the Tagus and Zêzere, which hindered river traffic and cut timber transport.",
+   "id": "m-hist-freire:36",
+   "location": "Part 2 (no marker)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barragens"
+  },
+  {
+   "definition": "Steam navigation on the Tagus, regulated in 1837 and given an exclusive concession in 1851.",
+   "id": "m-hist-freire:37",
+   "location": "Part 2 (no marker)",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1837",
+     "what": "year steam vessels were regulated on the Tagus"
+    },
+    {
+     "unit": "years",
+     "value": "15",
+     "what": "duration of exclusive steam navigation concession"
+    }
+   ],
+   "term": "vapor"
+  },
+  {
+   "definition": "Silting of the river, which reduced navigable depth and stopped the first steamboat from reaching Santarém, forcing its route to end at Alqueidão.",
+   "id": "m-hist-freire:38",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "assoreamento do Tejo"
+  },
+  {
+   "definition": "Steam-powered vessels that first appeared on the Tagus estuary in the early 19th century and carried passengers and cargo upriver.",
+   "id": "m-hist-freire:39",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "início do séc. XIX (1820)",
+     "what": "year first steamboats appeared on the Tagus estuary (approx.)"
+    }
+   ],
+   "term": "barcos a vapor"
+  },
+  {
+   "definition": "The steam engine powering the first Tagus steamboat, built by Fawcett, Littledale & Co.",
+   "id": "m-hist-freire:40",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "NHP",
+     "value": "20",
+     "what": "engine power"
+    }
+   ],
+   "term": "máquina a vapor"
+  },
+  {
+   "definition": "Wooden hull, the construction of the first steamboat on the Tagus.",
+   "id": "m-hist-freire:41",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "casco de madeira"
+  },
+  {
+   "definition": "A regular scheduled service on a route, such as the Lisbon–Santarém steamboat line that began in 1821.",
+   "id": "m-hist-freire:42",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "reis",
+     "value": "480",
+     "what": "fare to Vila Franca"
+    },
+    {
+     "unit": "reis",
+     "value": "960",
+     "what": "fare to Alqueidão"
+    }
+   ],
+   "term": "carreira"
+  },
+  {
+   "definition": "Sailing vessels, which carried intercontinental transport in the 1850s but were slower than steamships.",
+   "id": "m-hist-freire:43",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "tons",
+     "value": "200 to 400",
+     "what": "vessel size"
+    },
+    {
+     "unit": "passengers",
+     "value": "100 to 200",
+     "what": "passenger capacity"
+    },
+    {
+     "unit": "weeks",
+     "value": "6",
+     "what": "average Lisbon–Rio de Janeiro crossing under sail"
+    }
+   ],
+   "term": "veleiros"
+  },
+  {
+   "definition": "Steamships that shortened voyage times compared with sailing ships in the 1870s.",
+   "id": "m-hist-freire:44",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "weeks",
+     "value": "3",
+     "what": "Lisbon–Rio crossing by steamship"
+    },
+    {
+     "unit": "weeks",
+     "value": "2",
+     "what": "non-stop Lisbon–Rio crossing by steamship"
+    }
+   ],
+   "term": "vapores"
+  },
+  {
+   "definition": "Sailing ships entering the Tagus mouth, counted alongside steamships to show how common sail still was.",
+   "id": "m-hist-freire:45",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "ships",
+     "value": "2266",
+     "what": "sailing ships entering in 1874"
+    },
+    {
+     "unit": "ships",
+     "value": "1256",
+     "what": "steamships entering in 1874"
+    }
+   ],
+   "term": "navios de vela"
+  },
+  {
+   "definition": "Registered traditional Tagus river boats, numerous at the thriving Middle Tagus ports of Abrantes and Barquinha.",
+   "id": "m-hist-freire:46",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "190",
+     "what": "avieiros registered at Abrantes in 1860"
+    },
+    {
+     "unit": "boats",
+     "value": "75",
+     "what": "avieiros registered at Barquinha in 1860"
+    },
+    {
+     "unit": "boats",
+     "value": "1143",
+     "what": "boats sailing between Lisbon and Tagus points in 1860"
+    }
+   ],
+   "term": "avieiros"
+  },
+  {
+   "definition": "Sailing boat, used to continue upstream (montante) after travellers left a steamboat at a point such as Vila Franca or Santarém.",
+   "id": "m-hist-freire:47",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barco à vela"
+  },
+  {
+   "definition": "Upstream direction; sailing boats were taken to travel against the current after the steamboat leg.",
+   "id": "m-hist-freire:48",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "montante"
+  },
+  {
+   "definition": "Upriver travel; a steamboat trip from Lisbon to Santarém in 1853 was slow.",
+   "id": "m-hist-freire:49",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "hours",
+     "value": "10",
+     "what": "steamboat journey time Lisbon to Santarém upstream"
+    }
+   ],
+   "term": "ascenso"
+  },
+  {
+   "definition": "A fresh northerly wind, noted in a traveller's account of a steamboat trip on the Tagus.",
+   "id": "m-hist-freire:50",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vento fresco de norte"
+  },
+  {
+   "definition": "Islets or sandbanks in the Tagus passed by travellers on the river route.",
+   "id": "m-hist-freire:51",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "mouchões"
+  },
+  {
+   "definition": "Return voyage obligation that chartered cargo steamboats arriving from Lisbon had to fulfil.",
+   "id": "m-hist-freire:52",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "torna-viagem"
+  },
+  {
+   "definition": "Steam-powered vessel that carried imported woollen cloth from Belgium and England to the Barquinha quay.",
+   "id": "m-hist-freire:53",
+   "location": "part 4 of 5 (paragraph on cargoes from Belgium)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barco vapor"
+  },
+  {
+   "definition": "Warehouse beside the steamboat quay where cargoes were stored before onward transfer by ox cart to the paper mills.",
+   "id": "m-hist-freire:54",
+   "location": "part 4 of 5 (paragraphs on the Prado factory warehouse)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "armazém"
+  },
+  {
+   "definition": "Ox-drawn carts used to move goods from the Barquinha quay overland to the paper factories.",
+   "id": "m-hist-freire:55",
+   "location": "part 4 of 5 (paragraph on transfer to ox carts)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "carros de bois"
+  },
+  {
+   "definition": "Railway; its arrival in the region led steamboats to stop calling at Barquinha and the quay warehouses to fall into disuse.",
+   "id": "m-hist-freire:56",
+   "location": "part 4 of 5 (paragraph on the railway's arrival)",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1862",
+     "what": "year the railway arrived at Barquinha"
+    }
+   ],
+   "term": "caminho de ferro"
+  },
+  {
+   "definition": "Towpaths along the river, used for hauling boats, whose needed works were neglected according to the engineer's proposals.",
+   "id": "m-hist-freire:57",
+   "location": "part 4 of 5 (paragraph on neglect of the river bed and towpa",
+   "measured_by": "",
+   "numbers": [],
+   "term": "sirgadouros"
+  },
+  {
+   "definition": "River bed; the text says necessary works on it and on the Tagus were left undone, affecting navigation.",
+   "id": "m-hist-freire:58",
+   "location": "part 4 of 5 (paragraph on neglect of the river bed and towpa",
+   "measured_by": "",
+   "numbers": [],
+   "term": "leito do rio"
+  },
+  {
+   "definition": "Navigation of the Tagus, which the engineer's 1861 study proposed to improve through works on the river.",
+   "id": "m-hist-freire:59",
+   "location": "part 4 of 5 (title of the engineer's 1861 work)",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1861",
+     "what": "publication year of the study on improving Tagus navigation"
+    }
+   ],
+   "term": "navegação"
+  },
+  {
+   "definition": "River port at Barquinha, used as the starting point of a journey in 1853 before the party continued on horseback.",
+   "id": "m-hist-freire:60",
+   "location": "part 4 of 5 (paragraph on Alexandre Herculano)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "porto da Barquinha"
+  }
+ ],
+ "kind": "historical",
+ "lang": "pt-PT",
+ "partsDone": [
+  0,
+  1,
+  2,
+  3,
+  4
+ ],
+ "partsTotal": 5,
+ "runAt": "2026-11-12T20:00:44.319Z",
+ "sourceId": "m-hist-freire",
+ "textChars": 25262,
+ "title": "Freire, Os cais na Barquinha"
+}

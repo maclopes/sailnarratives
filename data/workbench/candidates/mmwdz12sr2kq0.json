@@ -1,0 +1,753 @@
+{
+ "items": [
+  {
+   "definition": "Boats of the Tagus River; the source's term for traditional vessels belonging to the river and its estuary.",
+   "id": "mmwdz12sr2kq0:1",
+   "location": "[section: 1.1 – Referências Históricas]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "embarcações taganas"
+  },
+  {
+   "definition": "Boats on which the Tagus was navigable according to the ancient geographer; also a Portuguese boat type said to match the Galician 'trincados'.",
+   "id": "mmwdz12sr2kq0:2",
+   "location": "[section: 1.1 – Referências Históricas]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barcas"
+  },
+  {
+   "definition": "River craft; vessels suited to navigating inland waterways such as the Tagus.",
+   "id": "mmwdz12sr2kq0:3",
+   "location": "[section: 1.1 – Referências Históricas]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "embarcações fluviais"
+  },
+  {
+   "definition": "Dugout boats made from a single hollowed tree trunk, used by local Lusitanians to cross and navigate the estuary.",
+   "id": "mmwdz12sr2kq0:4",
+   "location": "[section: 1.1 – Referências Históricas]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pirogas monóxilas"
+  },
+  {
+   "definition": "Leather-hulled boats observed earlier, from which the dugout canoes are described as an evolution.",
+   "id": "mmwdz12sr2kq0:5",
+   "location": "[section: 1.1 – Referências Históricas]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barcos de couro"
+  },
+  {
+   "definition": "Boat-type naming systems, which changed, persisted or vanished over time and created confusion in the language describing vessels.",
+   "id": "mmwdz12sr2kq0:6",
+   "location": "[section: 1.1 – Referências Históricas]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "nomenclaturas"
+  },
+  {
+   "definition": "Large ships; the same type is called carracas in Italy and urcas in Germany, illustrating naming variation between countries.",
+   "id": "mmwdz12sr2kq0:7",
+   "location": "[section: 1.1 – Referências Históricas]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "naus"
+  },
+  {
+   "definition": "Italian name for the vessel type called naus in Spain.",
+   "id": "mmwdz12sr2kq0:8",
+   "location": "[section: 1.1 – Referências Históricas]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "carracas"
+  },
+  {
+   "definition": "German name for the vessel type called naus in Spain.",
+   "id": "mmwdz12sr2kq0:9",
+   "location": "[section: 1.1 – Referências Históricas]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "urcas"
+  },
+  {
+   "definition": "Galician name for the boats Portugal calls barcas, with little difference in form.",
+   "id": "mmwdz12sr2kq0:10",
+   "location": "[section: 1.1 – Referências Históricas]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "trincados"
+  },
+  {
+   "definition": "A boat type whose name was unknown locally until shortly before the 16th-century writer's time, then became familiar.",
+   "id": "mmwdz12sr2kq0:11",
+   "location": "[section: 1.1 – Referências Históricas]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "years",
+     "value": "less than 40",
+     "what": "time before the author's writing when the name was unknown locally"
+    }
+   ],
+   "term": "zabra"
+  },
+  {
+   "definition": "A boat type whose name only recently became familiar locally according to the 16th-century author.",
+   "id": "mmwdz12sr2kq0:12",
+   "location": "[section: 1.1 – Referências Históricas]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "years",
+     "value": "less than 40",
+     "what": "time before the author's writing when the name was unknown locally"
+    }
+   ],
+   "term": "lancha"
+  },
+  {
+   "definition": "Boats from Santarém, noted as raising their heads (bow/stem) higher over time, showing changes in form.",
+   "id": "mmwdz12sr2kq0:13",
+   "location": "[section: 1.1 – Referências Históricas]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barcos de Santarém"
+  },
+  {
+   "definition": "Older name for a type of Santarém boat, later renamed muletas.",
+   "id": "mmwdz12sr2kq0:14",
+   "location": "[section: 1.1 – Referências Históricas]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "cervilhas"
+  },
+  {
+   "definition": "Newer name that replaced cervilhas for the Santarém boats.",
+   "id": "mmwdz12sr2kq0:15",
+   "location": "[section: 1.1 – Referências Históricas]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "muletas"
+  },
+  {
+   "definition": "Pictorial depiction of boats, proposed as clearer than written names, though often artistic, unscaled and unidentified.",
+   "id": "mmwdz12sr2kq0:16",
+   "location": "[section: 1.1 – Referências Históricas]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "representação gráfica"
+  },
+  {
+   "definition": "Anachronism: a painting may show boats from its own era rather than the period depicted, such as an 18th-century view of the 12th-century conquest of Lisboa.",
+   "id": "mmwdz12sr2kq0:17",
+   "location": "[section: 1.1 – Referências Históricas]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "desfasamentos nas épocas"
+  },
+  {
+   "definition": "A traditional Tagus boat type whose layout methods and construction elements are described in an early carpentry treatise.",
+   "id": "mmwdz12sr2kq0:18",
+   "location": "[section: 1.2 – Bases de Dados de Imagens e seus Autores]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "falua"
+  },
+  {
+   "definition": "A traditional boat type, with falua, whose tracing methods and construction elements appear in the early carpentry book.",
+   "id": "mmwdz12sr2kq0:19",
+   "location": "[section: 1.2 – Bases de Dados de Imagens e seus Autores]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "fragata"
+  },
+  {
+   "definition": "Early carpentry book giving hull-layout methods and construction details; considered the oldest technical record of traditional Tagus shipbuilding.",
+   "id": "mmwdz12sr2kq0:20",
+   "location": "[section: 1.2 – Bases de Dados de Imagens e seus Autores]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Livro de Traças de Carpintaria"
+  },
+  {
+   "definition": "Collection of engravings, published in 1785, giving the first credible graphic documentation identifying Tagus boat types, without scale.",
+   "id": "mmwdz12sr2kq0:21",
+   "location": "[section: 1.2 – Bases de Dados de Imagens e seus Autores]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "engravings",
+     "value": "20",
+     "what": "number of engravings"
+    },
+    {
+     "unit": "year",
+     "value": "1785",
+     "what": "year of publication"
+    }
+   ],
+   "term": "Caderno de Todos os Barcos do Tejo"
+  },
+  {
+   "definition": "The part of a hull above the waterline, which is all that Rascasço drew of each boat's hull.",
+   "id": "mmwdz12sr2kq0:22",
+   "location": "part 2 of 7 (no page or section marker in text)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "obras mortas"
+  },
+  {
+   "definition": "The waterline, where hull meets water. Rascasço's cross-sections omitted it, which limited their technical usefulness.",
+   "id": "mmwdz12sr2kq0:23",
+   "location": "part 2 of 7 (no page or section marker in text)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "linha de água"
+  },
+  {
+   "definition": "The sail rig of a vessel, shown with each boat in Rascasço's side views.",
+   "id": "mmwdz12sr2kq0:24",
+   "location": "part 2 of 7 (no page or section marker in text)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "aparelho vélico"
+  },
+  {
+   "definition": "An open stern. For boats of this type, Rascasço added a view of the stern panel.",
+   "id": "mmwdz12sr2kq0:25",
+   "location": "part 2 of 7 (no page or section marker in text)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "popa aberta"
+  },
+  {
+   "definition": "The stern panel of a boat with an open stern, drawn as a separate view.",
+   "id": "mmwdz12sr2kq0:26",
+   "location": "part 2 of 7 (no page or section marker in text)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "painel"
+  },
+  {
+   "definition": "A Tagus vessel type with a closed stern, documented in a 1834 plan that included a geometric drawing of the hull.",
+   "id": "mmwdz12sr2kq0:27",
+   "location": "part 2 of 7 (no page or section marker in text)",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1834",
+     "what": "year of the plan's publication"
+    }
+   ],
+   "term": "Hiate de Poupa fechada ou Carreira"
+  },
+  {
+   "definition": "A geometric drawing of the hull lines, showing the technical rigour of the 1834 plan.",
+   "id": "mmwdz12sr2kq0:28",
+   "location": "part 2 of 7 (no page or section marker in text)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "traçado geométrico do casco"
+  },
+  {
+   "definition": "A half plan view, seen from above, that Rascasço added to help readers understand each boat.",
+   "id": "mmwdz12sr2kq0:29",
+   "location": "part 2 of 7 (no page or section marker in text)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "meia-vista em planta"
+  },
+  {
+   "definition": "Cross-sections of the hull. Rascasço gave three per boat, but with no waterline and not in proportion to the side view.",
+   "id": "mmwdz12sr2kq0:30",
+   "location": "part 2 of 7 (no page or section marker in text)",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "sections",
+     "value": "3",
+     "what": "cross-sections per boat in Rascasço's drawings"
+    }
+   ],
+   "term": "secções transversais"
+  },
+  {
+   "definition": "A side view of a vessel, showing its rig and the hull above the waterline.",
+   "id": "mmwdz12sr2kq0:31",
+   "location": "part 2 of 7 (no page or section marker in text)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vista lateral"
+  },
+  {
+   "definition": "Drawing scale. Many of the historical sources lack it, so vessel dimensions cannot be read from their images.",
+   "id": "mmwdz12sr2kq0:32",
+   "location": "part 2 of 7 (no page or section marker in text)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "escala"
+  },
+  {
+   "definition": "A Portuguese vessel type documented by Monleón and published in Pâris's catalogue.",
+   "id": "mmwdz12sr2kq0:33",
+   "location": "part 2 of 7 (no page or section marker in text)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "muleta"
+  },
+  {
+   "definition": "A name for the boat also called culé, colé, monaio or barco de água-acima.",
+   "id": "mmwdz12sr2kq0:34",
+   "location": "part 2 of 7 (no page or section marker in text)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barino"
+  },
+  {
+   "definition": "Another name for the barino, also known as colé, monaio or barco de água-acima.",
+   "id": "mmwdz12sr2kq0:35",
+   "location": "part 2 of 7 (no page or section marker in text)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "culé"
+  },
+  {
+   "definition": "Variant name for the same boat as the barino and culé.",
+   "id": "mmwdz12sr2kq0:36",
+   "location": "part 2 of 7 (no page or section marker in text)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "colé"
+  },
+  {
+   "definition": "Variant name for the same boat as the barino and culé.",
+   "id": "mmwdz12sr2kq0:37",
+   "location": "part 2 of 7 (no page or section marker in text)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "monaio"
+  },
+  {
+   "definition": "Name for the upriver boat, identified with the barino, culé, colé and monaio.",
+   "id": "mmwdz12sr2kq0:38",
+   "location": "part 2 of 7 (no page or section marker in text)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barco de água-acima"
+  },
+  {
+   "definition": "A two-masted vessel type. The source says it is wrongly applied to fragatas and varinos, which have one mast.",
+   "id": "mmwdz12sr2kq0:39",
+   "location": "part 2 of 7 (no page or section marker in text)",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "masts",
+     "value": "2",
+     "what": "masts on a falua"
+    }
+   ],
+   "term": "faluas"
+  },
+  {
+   "definition": "A one-masted Tagus vessel type, often confused with the falua although used for very different services.",
+   "id": "mmwdz12sr2kq0:40",
+   "location": "part 2 of 7 (no page or section marker in text)",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "mast",
+     "value": "1",
+     "what": "masts on a fragata"
+    }
+   ],
+   "term": "fragatas"
+  },
+  {
+   "definition": "A one-masted Tagus vessel type, often wrongly called faluas.",
+   "id": "mmwdz12sr2kq0:41",
+   "location": "part 2 of 7 (no page or section marker in text)",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "mast",
+     "value": "1",
+     "what": "masts on a varino"
+    }
+   ],
+   "term": "varinos"
+  },
+  {
+   "definition": "Annual regattas on the Tagus Estuary where surviving traditional boats sail, the last living examples of the Marinha do Tejo.",
+   "id": "mmwdz12sr2kq0:42",
+   "location": "part 2 of 7 (no page or section marker in text)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Regatas"
+  },
+  {
+   "definition": "The traditional working fleet of the Tagus, covering fishing and cargo or river transport vessels in many types.",
+   "id": "mmwdz12sr2kq0:43",
+   "location": "part 2 of 7 (no page or section marker in text)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Marinha do Tejo"
+  },
+  {
+   "definition": "Flat-bottomed boats, the hull type used on the Middle and Lower Tagus and in the Mouchões estuary sector.",
+   "id": "mmwdz12sr2kq0:44",
+   "location": "[section: Embarcações do Médio Tejo]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barcos de fundo chato"
+  },
+  {
+   "definition": "Keeled boats, the hull type used in the Mar da Palha estuary sector, alongside fully smooth planking.",
+   "id": "mmwdz12sr2kq0:45",
+   "location": "[section: Embarcações do Estuário do Tejo - Mar da Palha (1)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barcos de quilha"
+  },
+  {
+   "definition": "Smooth planking, where hull planks sit edge to edge with a flush outer surface, a Mediterranean-derived building method.",
+   "id": "mmwdz12sr2kq0:46",
+   "location": "[section: 2.1 – Caracterização genérica]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "century",
+     "value": "15th",
+     "what": "century from which the Mediterranean-type construction methods have been used (o"
+    }
+   ],
+   "term": "tabuado liso"
+  },
+  {
+   "definition": "Straight frames (ribs) forming the hull's internal structure in flat-bottomed Tagus boats.",
+   "id": "mmwdz12sr2kq0:47",
+   "location": "[section: Embarcações do Médio Tejo]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "cavernas direitas"
+  },
+  {
+   "definition": "L-shaped knee-like supports joining frames to the hull sides, typical of flat-bottomed Tagus boats.",
+   "id": "mmwdz12sr2kq0:48",
+   "location": "[section: Embarcações do Médio Tejo]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "braços em \"L\" (embraçados)"
+  },
+  {
+   "definition": "The stem, the upright curved timber forming the bow; absent in some Middle Tagus boats and curved in others.",
+   "id": "mmwdz12sr2kq0:49",
+   "location": "[section: Embarcações do Médio Tejo]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "roda de proa"
+  },
+  {
+   "definition": "A flat-transom stern, found on many Tagus boat types.",
+   "id": "mmwdz12sr2kq0:50",
+   "location": "[section: Embarcações do Médio Tejo]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "popa de painel"
+  },
+  {
+   "definition": "Beak-like pointed ends on which curved bow and stern posts terminate in some boats.",
+   "id": "mmwdz12sr2kq0:51",
+   "location": "[section: Embarcações do Médio Tejo]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bicas"
+  },
+  {
+   "definition": "A hooded or capped finish at the top of the curved stem on certain boats.",
+   "id": "mmwdz12sr2kq0:52",
+   "location": "[section: Embarcações do Baixo Tejo]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "capelo"
+  },
+  {
+   "definition": "A straight, raked sternpost, characteristic of the keeled estuary boats of Mar da Palha.",
+   "id": "mmwdz12sr2kq0:53",
+   "location": "[section: Embarcações do Estuário do Tejo - Mar da Palha (1)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "cadaste recto inclinado"
+  },
+  {
+   "definition": "A half-keel bottom type, mentioned for a keeled boat protected at the waterline.",
+   "id": "mmwdz12sr2kq0:54",
+   "location": "[section: Embarcações do Estuário do Tejo - Mar da Palha (5)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "meia-quilha"
+  },
+  {
+   "definition": "Oars, a propulsion method used by many Tagus boat types.",
+   "id": "mmwdz12sr2kq0:55",
+   "location": "[section: Embarcações do Médio Tejo]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "remos"
+  },
+  {
+   "definition": "Lateen sail, a triangular sail used for propulsion on some Middle Tagus cargo boats.",
+   "id": "mmwdz12sr2kq0:56",
+   "location": "[section: Embarcações do Médio Tejo]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vela latina"
+  },
+  {
+   "definition": "A staysail, set on a stay, used together with other sails on some boats.",
+   "id": "mmwdz12sr2kq0:57",
+   "location": "[section: Embarcações do Médio Tejo]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vela de estai"
+  },
+  {
+   "definition": "A type of sail used on the avieira boat type B of the Lower Tagus.",
+   "id": "mmwdz12sr2kq0:58",
+   "location": "[section: Embarcações do Baixo Tejo]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vela de pendão"
+  },
+  {
+   "definition": "A sprit sail, used on some Lower Tagus and estuary boats.",
+   "id": "mmwdz12sr2kq0:59",
+   "location": "[section: Embarcações do Baixo Tejo]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vela de espicha"
+  },
+  {
+   "definition": "A sail type named bastard sail, used on some estuary boats.",
+   "id": "mmwdz12sr2kq0:60",
+   "location": "[section: Embarcações do Estuário do Tejo - Mouchões]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vela bastarda"
+  },
+  {
+   "definition": "A gaff sail, used with staysails on some estuary cargo boats.",
+   "id": "mmwdz12sr2kq0:61",
+   "location": "[section: Embarcações do Estuário do Tejo - Mouchões]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vela de carangueja"
+  },
+  {
+   "definition": "A bastard sail variant used on Mar da Palha boats, sometimes with a jib.",
+   "id": "mmwdz12sr2kq0:62",
+   "location": "[section: Embarcações do Estuário do Tejo - Mar da Palha (4)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vela de bastardo"
+  },
+  {
+   "definition": "A sail type used on the boat type A of Mar da Palha sector (1).",
+   "id": "mmwdz12sr2kq0:63",
+   "location": "[section: Embarcações do Estuário do Tejo - Mar da Palha (1)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "catita"
+  },
+  {
+   "definition": "A jib, a headsail set forward, used with other sails on some estuary boats.",
+   "id": "mmwdz12sr2kq0:64",
+   "location": "[section: Embarcações do Estuário do Tejo - Mar da Palha (1)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bujarrona"
+  },
+  {
+   "definition": "A type of rudder used for steering on some Tagus boats.",
+   "id": "mmwdz12sr2kq0:65",
+   "location": "[section: Embarcações do Médio Tejo]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "leme de xarolo"
+  },
+  {
+   "definition": "A steering oar (esparrela) used to govern some boats instead of a rudder.",
+   "id": "mmwdz12sr2kq0:66",
+   "location": "[section: Embarcações do Baixo Tejo]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "remo de esparrela"
+  },
+  {
+   "definition": "A system for lowering the mast so upstream-bound boats could pass under the Marechal Carmona bridge.",
+   "id": "mmwdz12sr2kq0:67",
+   "location": "[section: Embarcações do Estuário do Tejo - Mouchões]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "sistema de rebatimento do mastro"
+  },
+  {
+   "definition": "Side-trawling fishing using the tartaranha net, practised by the muleta and batel at sea.",
+   "id": "mmwdz12sr2kq0:68",
+   "location": "[section: Embarcações do Estuário do Tejo - Mar da Palha (5)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pesca de arrasto lateral com a arte da tartaranha"
+  },
+  {
+   "definition": "Convention for giving average boat dimensions: length, beam (width) and depth (draught/hull depth).",
+   "id": "mmwdz12sr2kq0:69",
+   "location": "[section: 2.1 – Caracterização genérica]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "ratio",
+     "value": "1:500",
+     "what": "scale of boat images"
+    }
+   ],
+   "term": "CxBxP"
+  },
+  {
+   "definition": "Sternpost at the rear of the hull, described as curved in some boats and straight and raked in others.",
+   "id": "mmwdz12sr2kq0:70",
+   "location": "Propulso e governo (preceding text)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "cadaste"
+  },
+  {
+   "definition": "Keel running along the hull's bottom; a feature of some boat types, contrasted with flat-bottomed boats.",
+   "id": "mmwdz12sr2kq0:71",
+   "location": "2.2 – Sectores geográficos, grupos étnicos, embarcações e su",
+   "measured_by": "",
+   "numbers": [],
+   "term": "quilha"
+  },
+  {
+   "definition": "Added system of eight auxiliary sails used to manoeuvre while trawling.",
+   "id": "mmwdz12sr2kq0:72",
+   "location": "Propulso e governo",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "sails",
+     "value": "8",
+     "what": "auxiliary sails added for trawling manoeuvre"
+    }
+   ],
+   "term": "oito velas auxiliares para a manobra do arrasto"
+  },
+  {
+   "definition": "Dominant rig in the Mar da Palha: a gaff sail with one or two staysails.",
+   "id": "mmwdz12sr2kq0:73",
+   "location": "2.2 – Sectores geográficos, grupos étnicos, embarcações e su",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "sails",
+     "value": "1 to 2",
+     "what": "staysails in the fragateiro rig"
+    }
+   ],
+   "term": "aparelho fragateiro"
+  },
+  {
+   "definition": "Shallow draught, allowing varinos to navigate shallow channels and creeks.",
+   "id": "mmwdz12sr2kq0:74",
+   "location": "2.2 – Sectores geográficos, grupos étnicos, embarcações e su",
+   "measured_by": "",
+   "numbers": [],
+   "term": "baixos calados"
+  },
+  {
+   "definition": "Shallow ditches and tidal creeks that shallow-draught boats can navigate.",
+   "id": "mmwdz12sr2kq0:75",
+   "location": "2.2 – Sectores geográficos, grupos étnicos, embarcações e su",
+   "measured_by": "",
+   "numbers": [],
+   "term": "valas e esteiros"
+  },
+  {
+   "definition": "Boats used by Avieiro fishing communities of the Baixo Tejo, who also lived aboard them.",
+   "id": "mmwdz12sr2kq0:76",
+   "location": "2.2 – Sectores geográficos, grupos étnicos, embarcações e su",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bateiras"
+  },
+  {
+   "definition": "Boat type found in the Alto and Médio Tejo, where boats are rare.",
+   "id": "mmwdz12sr2kq0:77",
+   "location": "2.2 – Sectores geográficos, grupos étnicos, embarcações e su",
+   "measured_by": "",
+   "numbers": [],
+   "term": "picareto"
+  },
+  {
+   "definition": "Two-pointed ends and flat bottom, hull features typical of the Aveiro lagoon area.",
+   "id": "mmwdz12sr2kq0:78",
+   "location": "2.2 – Sectores geográficos, grupos étnicos, embarcações e su",
+   "measured_by": "",
+   "numbers": [],
+   "term": "duas bicas e fundo chato"
+  },
+  {
+   "definition": "Widest part of the estuary with harder waters, so boats there are sturdier and faster sailers.",
+   "id": "mmwdz12sr2kq0:79",
+   "location": "2.2 – Sectores geográficos, grupos étnicos, embarcações e su",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Mar da Palha"
+  },
+  {
+   "definition": "Name for the waters of the Embocadura between Cabo Raso and Cabo Espichel, where muletas fish.",
+   "id": "mmwdz12sr2kq0:80",
+   "location": "2.2 – Sectores geográficos, grupos étnicos, embarcações e su",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Entre-Cabos"
+  },
+  {
+   "definition": "Craftsmen who make hulls watertight, named among the traditional maritime trades.",
+   "id": "mmwdz12sr2kq0:81",
+   "location": "3 – Nota final",
+   "measured_by": "",
+   "numbers": [],
+   "term": "calafates"
+  },
+  {
+   "definition": "Axe-wielding shipwrights who built traditional wooden boats.",
+   "id": "mmwdz12sr2kq0:82",
+   "location": "3 – Nota final",
+   "measured_by": "",
+   "numbers": [],
+   "term": "carpinteiros de machado"
+  }
+ ],
+ "kind": "historical",
+ "lang": "",
+ "partsDone": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6
+ ],
+ "partsTotal": 7,
+ "runAt": "2026-11-12T20:20:16.882Z",
+ "sourceId": "mmwdz12sr2kq0",
+ "textChars": 37773,
+ "title": "Embarcações do Rio Tejo"
+}

@@ -1,0 +1,3037 @@
+{
+ "items": [
+  {
+   "action": "Moliceiro boats are built of pine (pinho manso and bravo) by traditional shipwrights, fitted to navigating the Ria de Aveiro and to its original economic use.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "pinho manso e bravo",
+   "id": "mmwfkg5geo1qs:1o7m:p1",
+   "kind": "description",
+   "location": "Contexto tipológico",
+   "numbers": [],
+   "period": "século XVIII",
+   "place": "Ria de Aveiro, Região de Aveiro",
+   "who": "mestres construtores"
+  },
+  {
+   "action": "Boats were used to gather moliço, aquatic plants from the lagoon bed, which served as fertilizer for farmland; this was a major regional economic activity.",
+   "boat": "Barco Moliceiro",
+   "cargo": "moliço",
+   "conditions": "",
+   "gear": "ancinhos",
+   "id": "mmwfkg5geo1qs:1o7m:p2",
+   "kind": "practice",
+   "location": "Caracterização síntese",
+   "numbers": [
+    {
+     "unit": "plants",
+     "value": "21",
+     "what": "aquatic plant species called moliço"
+    }
+   ],
+   "period": "século XVIII",
+   "place": "Ria de Aveiro",
+   "who": "População Ribeirinha da Ria de Aveiro"
+  },
+  {
+   "action": "Early moliço gatherers found their existing boats unsuited to the work, which made it harder, so masters created a new boat, the Moliceiro.",
+   "boat": "Barco Moliceiro",
+   "cargo": "moliço",
+   "conditions": "existing boats were unsuited to moliço gathering",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p3",
+   "kind": "event",
+   "location": "Caracterização síntese",
+   "numbers": [],
+   "period": "",
+   "place": "Região de Aveiro",
+   "who": "mestres da Região de Aveiro"
+  },
+  {
+   "action": "The moliceiro has a flat bottom for shallow lagoon waters and low sides so the rakes full of moliço can be pulled aboard easily.",
+   "boat": "Barco Moliceiro",
+   "cargo": "moliço",
+   "conditions": "shallow water",
+   "gear": "ancinhos",
+   "id": "mmwfkg5geo1qs:1o7m:p4",
+   "kind": "description",
+   "location": "Caracterização síntese",
+   "numbers": [],
+   "period": "",
+   "place": "Ria de Aveiro",
+   "who": ""
+  },
+  {
+   "action": "The boat acquired its present form in the late 18th century, then grew greatly in numbers in the 19th and 20th centuries with the associated economy.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p5",
+   "kind": "event",
+   "location": "Caracterização síntese",
+   "numbers": [],
+   "period": "finais do século XVIII; séculos XIX e XX",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Construction know-how, tools and skills are passed from masters to apprentices over decades, not only within families.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p6",
+   "kind": "practice",
+   "location": "Caracterização síntese",
+   "numbers": [],
+   "period": "",
+   "place": "Região de Aveiro",
+   "who": "mestres e aprendizes"
+  },
+  {
+   "action": "Masters build the whole boat using the pau-de-pontos, a handmade wooden rod serving as a ruler that only experienced builders can interpret.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "pau-de-pontos",
+   "id": "mmwfkg5geo1qs:1o7m:p7",
+   "kind": "practice",
+   "location": "Caracterização síntese",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "mestres construtores"
+  },
+  {
+   "action": "Each moliceiro carries decorated panels, each with a drawing and caption read together; no two panels repeat, and themes may be humorous, satirical, religious or other.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p8",
+   "kind": "practice",
+   "location": "Caracterização síntese",
+   "numbers": [
+    {
+     "unit": "panels",
+     "value": "4",
+     "what": "decorated panels per boat"
+    },
+    {
+     "unit": "panels",
+     "value": "2",
+     "what": "panels at bow"
+    },
+    {
+     "unit": "panels",
+     "value": "2",
+     "what": "panels at stern"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": "mestre-pintor"
+  },
+  {
+   "action": "Moliço gathering ceased in the 1980s/90s, and the boat now serves tourism, which helped avoid its loss feared in the 1990s.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p9",
+   "kind": "event",
+   "location": "Contexto tipológico; Caracterização síntese",
+   "numbers": [],
+   "period": "anos 80/90 do século XX",
+   "place": "Ria de Aveiro",
+   "who": ""
+  },
+  {
+   "action": "Building, repair work (amanhações) and panel painting occur year-round, whenever owners place new orders.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "on owners' orders",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p10",
+   "kind": "practice",
+   "location": "Contexto temporal",
+   "numbers": [],
+   "period": "ao longo do ano",
+   "place": "Região de Aveiro",
+   "who": "proprietários; mestres construtores"
+  },
+  {
+   "action": "Few practitioners remain, and only one of the active master builders is under 60, which endangers continuity of the craft.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p11",
+   "kind": "description",
+   "location": "Caracterização síntese",
+   "numbers": [
+    {
+     "unit": "people",
+     "value": "5",
+     "what": "master builders active"
+    },
+    {
+     "unit": "people",
+     "value": "1",
+     "what": "moliceiro painters"
+    },
+    {
+     "unit": "people",
+     "value": "1",
+     "what": "master builders under 60"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": "mestres construtores, pintor de moliceiros"
+  },
+  {
+   "action": "The moliceiro is described as a boat about 15 m long with 5 tonnes capacity, essential for gathering moliço and tied to a distinctive naval carpentry art.",
+   "boat": "Barco Moliceiro",
+   "cargo": "moliço",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p12",
+   "kind": "description",
+   "location": "[page 2]",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "15",
+     "what": "length"
+    },
+    {
+     "unit": "m",
+     "value": "2.50-2.60",
+     "what": "beam"
+    },
+    {
+     "unit": "m",
+     "value": "0.40-0.45",
+     "what": "depth (pontal)"
+    },
+    {
+     "unit": "tonnes",
+     "value": "5",
+     "what": "capacity"
+    }
+   ],
+   "period": "",
+   "place": "Ria de Aveiro",
+   "who": ""
+  },
+  {
+   "action": "The moliceiro is said to have acquired its present form in the late 18th century, then grew greatly in number during the 19th century.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p13",
+   "kind": "event",
+   "location": "A origem do Barco Moliceiro",
+   "numbers": [],
+   "period": "late 18th century; 19th century",
+   "place": "Ria de Aveiro",
+   "who": ""
+  },
+  {
+   "action": "The boat was born for gathering moliço, a vital complement to subsistence farming, and worked across the whole lagoon.",
+   "boat": "Barco Moliceiro",
+   "cargo": "moliço",
+   "conditions": "subsistence agriculture of the region",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p14",
+   "kind": "practice",
+   "location": "A origem do Barco Moliceiro",
+   "numbers": [],
+   "period": "",
+   "place": "whole lagoon (Ria de Aveiro)",
+   "who": ""
+  },
+  {
+   "action": "Local master carpenters designed the moliceiro, inspired by other regional boats, adapting every design feature to the lagoon and to moliço gathering.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p15",
+   "kind": "practice",
+   "location": "A origem do Barco Moliceiro",
+   "numbers": [],
+   "period": "",
+   "place": "Ria de Aveiro",
+   "who": "mestre carpinteiro lagunar"
+  },
+  {
+   "action": "Flat-bottomed and shallow-draught, the moliceiro sails the shallow lagoon without grounding, needing only about one metre of water.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "shallow water",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p16",
+   "kind": "description",
+   "location": "A origem do Barco Moliceiro",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "1",
+     "what": "water depth needed"
+    }
+   ],
+   "period": "",
+   "place": "Ria de Aveiro",
+   "who": ""
+  },
+  {
+   "action": "Boats are built of pine, which is native, abundant and performs well in humid conditions, according to Mestre Felisberto Amador.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "humid environment",
+   "gear": "pinho (pine wood)",
+   "id": "mmwfkg5geo1qs:1o7m:p17",
+   "kind": "practice",
+   "location": "A Madeira",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "Mestre Felisberto Amador"
+  },
+  {
+   "action": "Construction uses two pine types: pinheiro manso for the frames (cavernas) and arms, pinheiro-bravo for the rest of the boat.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "pinheiro manso; pinheiro-bravo",
+   "id": "mmwfkg5geo1qs:1o7m:p18",
+   "kind": "practice",
+   "location": "A Madeira",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Standard dimensions are listed: 14.50-15.00 m long, 2.50-2.60 m beam, 21 frames (11 aft, 10 forward), 5 tonnes capacity.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p19",
+   "kind": "description",
+   "location": "As Dimensões",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "14.50-15.00",
+     "what": "length"
+    },
+    {
+     "unit": "count",
+     "value": "21",
+     "what": "frames (cavernas)"
+    },
+    {
+     "unit": "count",
+     "value": "11",
+     "what": "frames aft"
+    },
+    {
+     "unit": "count",
+     "value": "10",
+     "what": "frames forward"
+    },
+    {
+     "unit": "tonnes",
+     "value": "5",
+     "what": "capacity"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "The bow is curved and covered, 4-5 m long and 2-3 m high, with a lockable door forming the forecastle.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p20",
+   "kind": "description",
+   "location": "Proa",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "4-5",
+     "what": "bow length"
+    },
+    {
+     "unit": "m",
+     "value": "2-3",
+     "what": "bow height"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "The forecastle served as sleeping quarters for crews gathering moliço, as recalled by Mestre José Rito.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p21",
+   "kind": "practice",
+   "location": "Proa",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "crews gathering moliço; Mestre José Rito"
+  },
+  {
+   "action": "Two golfiões below the bica were used to tie the towline and to rest rakes and poles at moorings.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "golfiões; sirga; ancinhos; varas",
+   "id": "mmwfkg5geo1qs:1o7m:p22",
+   "kind": "description",
+   "location": "Proa",
+   "numbers": [
+    {
+     "unit": "cm",
+     "value": "22",
+     "what": "golfião height"
+    },
+    {
+     "unit": "cm",
+     "value": "6",
+     "what": "golfião width"
+    },
+    {
+     "unit": "cm",
+     "value": "8",
+     "what": "golfião thickness"
+    }
+   ],
+   "period": "",
+   "place": "ancoradouro",
+   "who": ""
+  },
+  {
+   "action": "The stern has a small closed compartment, the cagarete, where salt, fish or salted meat was stored for the crew's consumption.",
+   "boat": "Barco Moliceiro",
+   "cargo": "salt, fish, salted meat",
+   "conditions": "",
+   "gear": "cagarete",
+   "id": "mmwfkg5geo1qs:1o7m:p23",
+   "kind": "description",
+   "location": "Ré",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "tripulantes"
+  },
+  {
+   "action": "The entremesa, a removable lid in front of the cagarete, seats the arrais steering the boat and held the water barrel.",
+   "boat": "Barco Moliceiro",
+   "cargo": "water barrel",
+   "conditions": "",
+   "gear": "entremesa",
+   "id": "mmwfkg5geo1qs:1o7m:p24",
+   "kind": "description",
+   "location": "Ré",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "arrais"
+  },
+  {
+   "action": "The rudder has several named parts and carries the builder's unique personal mark identifying who built the boat.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "leme",
+   "id": "mmwfkg5geo1qs:1o7m:p25",
+   "kind": "description",
+   "location": "Leme",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "boat builder"
+  },
+  {
+   "action": "Bottom planks, 0.02 m thick and of variable width, are fixed over the 21 frames.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p26",
+   "kind": "description",
+   "location": "Cavernas",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "0.02",
+     "what": "plank thickness"
+    },
+    {
+     "unit": "count",
+     "value": "21",
+     "what": "frames"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "The mast passes through a 20 cm hole (enora) in the thwart and its foot fits a square socket in the coicia, between frames 10 and 11.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "traste, enora, coicia, mastro",
+   "id": "mmwfkg5geo1qs:1o7m:p27",
+   "kind": "description",
+   "location": "page 3, Mastro",
+   "numbers": [
+    {
+     "unit": "cm",
+     "value": "20",
+     "what": "enora diameter"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "The mast is a thick pine or eucalyptus pole supporting the yard that carries the sail; a pulley slot at the top (cachola) carries the halyard.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "mastro, verga, cachola, roldana, ostaga",
+   "id": "mmwfkg5geo1qs:1o7m:p28",
+   "kind": "description",
+   "location": "page 3, Mastro",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "8 to 8.5",
+     "what": "mast height"
+    },
+    {
+     "unit": "m",
+     "value": "0.17",
+     "what": "mast base diameter"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "The boat is driven by a broad trapezoidal sail with named sides: valume, esteira, testa and empena (tied to the yard).",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "vela trapezoidal",
+   "id": "mmwfkg5geo1qs:1o7m:p29",
+   "kind": "description",
+   "location": "page 3, Vela",
+   "numbers": [
+    {
+     "unit": "m2",
+     "value": "24",
+     "what": "sail area"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": "Lemos (1933); Castro (1943); Senos da Fonseca (2020)"
+  },
+  {
+   "action": "Sails were made of French canvas, brim, tow or treu, in white, and in the past were decorated for river pilgrimages.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "river pilgrimages (romarias fluviais)",
+   "gear": "lona francesa, brim, estopa, treu",
+   "id": "mmwfkg5geo1qs:1o7m:p30",
+   "kind": "description",
+   "location": "page 3, Vela",
+   "numbers": [],
+   "period": "past",
+   "place": "",
+   "who": "Luiz de Magalhães (1905)"
+  },
+  {
+   "action": "On festive days sails are now decorated with flags of countries where crew members had emigrated; the older decoration custom no longer occurs.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "festive days",
+   "gear": "flags",
+   "id": "mmwfkg5geo1qs:1o7m:p31",
+   "kind": "practice",
+   "location": "page 3, Vela (Ana Maria Lopes, 1997)",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "crew (tripulantes)"
+  },
+  {
+   "action": "The toste is a pine plank that provides an anti-drift force; combined with sail thrust it moves the boat forward.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "toste, cable",
+   "id": "mmwfkg5geo1qs:1o7m:p32",
+   "kind": "description",
+   "location": "page 3, Tostes",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "2.30",
+     "what": "toste length"
+    },
+    {
+     "unit": "m",
+     "value": "0.70",
+     "what": "toste width at top"
+    },
+    {
+     "unit": "m",
+     "value": "1.00",
+     "what": "toste width at bottom"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Two tostes are used per mast: the windward one is raised while the leeward one is lowered into the water.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "sailing; windward and leeward sides",
+   "gear": "tostes",
+   "id": "mmwfkg5geo1qs:1o7m:p33",
+   "kind": "practice",
+   "location": "page 3, Tostes",
+   "numbers": [
+    {
+     "unit": "count",
+     "value": "2",
+     "what": "tostes per mast"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": "crew"
+  },
+  {
+   "action": "Crew raise the gunwale height with falcas, wooden planks fixed from bow to stern on both sides, to prevent flooding.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "to avoid flooding",
+   "gear": "falcas",
+   "id": "mmwfkg5geo1qs:1o7m:p34",
+   "kind": "practice",
+   "location": "page 3, Falcas",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "crew"
+  },
+  {
+   "action": "The stern falca runs from the stern to midships, the bow falca continues it, and a small falquim closes the gap to the bow.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "falca da ré, falca da proa, falquim",
+   "id": "mmwfkg5geo1qs:1o7m:p35",
+   "kind": "description",
+   "location": "page 3, Falcas",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "4.30",
+     "what": "stern falca length"
+    },
+    {
+     "unit": "m",
+     "value": "3.05",
+     "what": "bow falca length"
+    },
+    {
+     "unit": "m",
+     "value": "1.15",
+     "what": "falquim length"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Poling (andar à vara): crew push a pine pole against the lagoon bed from bow towards stern when windless or near quays and banks.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "no wind or near quays",
+   "gear": "pine poles; pitch and sawdust on the bow deck and gunwales for grip",
+   "id": "mmwfkg5geo1qs:1o7m:p36",
+   "kind": "practice",
+   "location": "page 3, Métodos de propulsão",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "4 to 6",
+     "what": "pole length"
+    }
+   ],
+   "period": "",
+   "place": "near cais, motas and malhadas",
+   "who": "moliceiros"
+  },
+  {
+   "action": "Towing (andar à sirga): a crew member walks the bank pulling the boat by rope in narrow channels or against tide or wind.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "against tide or wind; occasional",
+   "gear": "sirga (sisal or esparto rope) tied to the golfiões",
+   "id": "mmwfkg5geo1qs:1o7m:p37",
+   "kind": "practice",
+   "location": "page 3, Métodos de propulsão",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "0.025",
+     "what": "rope thickness"
+    }
+   ],
+   "period": "",
+   "place": "narrow channels and banks of the Ria",
+   "who": "crew member on foot"
+  },
+  {
+   "action": "Alternative towing rig: the sirga is fixed to the xarolo and passed through the bow block, so two crew can work the rudder from anywhere.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "sirga, xarolo, moitão da bica da proa",
+   "id": "mmwfkg5geo1qs:1o7m:p38",
+   "kind": "practice",
+   "location": "page 3, Métodos de propulsão",
+   "numbers": [
+    {
+     "unit": "people",
+     "value": "2",
+     "what": "crew handling rudder"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": "two crew members"
+  },
+  {
+   "action": "Sailing (andar à vela) is the usual propulsion; crew use the bolinão rope and bow block to tension the sail and gain windward.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "beating to windward",
+   "gear": "bolinão, moitão, toste, escota",
+   "id": "mmwfkg5geo1qs:1o7m:p39",
+   "kind": "practice",
+   "location": "page 3, Métodos de propulsão",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "crew"
+  },
+  {
+   "action": "The leeward toste, half-immersed and lashed to the lower mast, resists leeway; the escota adjusts sail surface and speed.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "leeward side",
+   "gear": "toste, escota",
+   "id": "mmwfkg5geo1qs:1o7m:p40",
+   "kind": "practice",
+   "location": "page 3, Métodos de propulsão",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "crew"
+  },
+  {
+   "action": "No moliceiro is considered finished until decorated; its four painted panels (two bow, two stern) make it famed as the most beautiful boat of the Ria.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "painted panels",
+   "id": "mmwfkg5geo1qs:1o7m:p41",
+   "kind": "description",
+   "location": "page 3, Os painéis de moliceiros",
+   "numbers": [
+    {
+     "unit": "count",
+     "value": "4",
+     "what": "painted panels"
+    }
+   ],
+   "period": "",
+   "place": "Ria",
+   "who": "António Rocha Madahil (1934); Claude Rivals (1988)"
+  },
+  {
+   "action": "The panels are naïf painting with vivid colour, bold outlines, everyday themes and humorous captions; borders frame the central scene.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "cercaduras (frisos, floreados)",
+   "id": "mmwfkg5geo1qs:1o7m:p42",
+   "kind": "description",
+   "location": "page 3, Os painéis de moliceiros",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "Ana Maria Lopes (1997)"
+  },
+  {
+   "action": "Painters decorate the central panel with a drawing on themes such as religion, profession, history, homeland or love, usually from their own imagination, with little input from the owner or master.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "owner or mestre does not usually intervene",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p43",
+   "kind": "description",
+   "location": "painel",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "pintor"
+  },
+  {
+   "action": "Each panel drawing comes with a caption painted on a white or pink band below the frieze, between the frieze and the main motif.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p44",
+   "kind": "description",
+   "location": "painel",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "pintor"
+  },
+  {
+   "action": "Moliceiro panels almost always use pure primary colours: yellow, green, blue, red, white and black.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p45",
+   "kind": "description",
+   "location": "painel",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Painters formerly used powder paints mixed with oil, liquid drier and turpentine; since the 1970s/80s they use enamel paints.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "tintas em pó, óleo, secante líquido, aguarrás; esmalte",
+   "id": "mmwfkg5geo1qs:1o7m:p46",
+   "kind": "practice",
+   "location": "painel",
+   "numbers": [],
+   "period": "1970s/80s onward",
+   "place": "",
+   "who": "pintor"
+  },
+  {
+   "action": "Boat building was a knowledge passed from father to son within families, creating lineages such as Lavoura, Raimundos, Tavares, Henrique de Miranda and Garridos.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "no longer the case; current masters learned from family members",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p47",
+   "kind": "practice",
+   "location": "A construção do Barco Moliceiro",
+   "numbers": [],
+   "period": "several decades",
+   "place": "Ria de Aveiro",
+   "who": "mestres construtores"
+  },
+  {
+   "action": "Castro (1943) described moliceiro building as an industry existing only in this region and so traditional that its knowledge is hereditary.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p48",
+   "kind": "description",
+   "location": "A construção do Barco Moliceiro",
+   "numbers": [],
+   "period": "1943",
+   "place": "",
+   "who": "Domingos José de Castro"
+  },
+  {
+   "action": "Shipyards are large warehouses with earth floors, now sometimes cemented, where boats are built indoors, with a big gate for launching (the bota-abaixo).",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p49",
+   "kind": "description",
+   "location": "Os Estaleiros",
+   "numbers": [],
+   "period": "",
+   "place": "estaleiros",
+   "who": "Mestre António Esteves"
+  },
+  {
+   "action": "Shipyards usually stood away from the main arms of the Ria, near streams or inside villages, often beside the builders' own homes.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p50",
+   "kind": "description",
+   "location": "Os Estaleiros",
+   "numbers": [],
+   "period": "",
+   "place": "Ria de Aveiro",
+   "who": "Mestres Arménio Almeida, Felisberto Amador"
+  },
+  {
+   "action": "Luiz de Magalhães recorded perhaps more than fifty shipyards around the Ria, mostly inland rather than near the water.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p51",
+   "kind": "event",
+   "location": "Os Estaleiros",
+   "numbers": [
+    {
+     "unit": "estaleiros",
+     "value": "more than 50",
+     "what": "shipyards"
+    }
+   ],
+   "period": "1905",
+   "place": "Ria de Aveiro",
+   "who": "Luiz de Magalhães"
+  },
+  {
+   "action": "The master begins by laying nine stakes along the boat's full length on the ground, levelled from bow to stern, spaced by the desired bottom slope.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "estacas",
+   "id": "mmwfkg5geo1qs:1o7m:p52",
+   "kind": "practice",
+   "location": "O processo de construção",
+   "numbers": [
+    {
+     "unit": "estacas",
+     "value": "9",
+     "what": "stakes"
+    }
+   ],
+   "period": "",
+   "place": "estaleiro",
+   "who": "mestre"
+  },
+  {
+   "action": "Stake tops are set at different heights: first raised 0.50 m, second 0.12 m, third 0.05 m, then level, with the last raised 0.02.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "estacas",
+   "id": "mmwfkg5geo1qs:1o7m:p53",
+   "kind": "practice",
+   "location": "O processo de construção",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "0.50",
+     "what": "first stake rise"
+    },
+    {
+     "unit": "m",
+     "value": "0.12",
+     "what": "second stake rise"
+    },
+    {
+     "unit": "m",
+     "value": "0.05",
+     "what": "third stake rise"
+    },
+    {
+     "unit": "cm (as stated)",
+     "value": "0.02",
+     "what": "last stake rise"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": "mestre"
+  },
+  {
+   "action": "The keel board is laid first, and a line is marked across it with the pau de pontos as the master line for placing the edge boards.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "tábua de quilha, pau de pontos",
+   "id": "mmwfkg5geo1qs:1o7m:p54",
+   "kind": "practice",
+   "location": "O processo de construção",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "15",
+     "what": "keel board length"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": "mestre"
+  },
+  {
+   "action": "Using the master line and pau de pontos, the builder marks the vãos and the bow and stern talões.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "vão is always the same distance, middle to middle of the cavernas",
+   "gear": "pau de pontos",
+   "id": "mmwfkg5geo1qs:1o7m:p55",
+   "kind": "practice",
+   "location": "O processo de construção",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "0.85",
+     "what": "bow talão"
+    },
+    {
+     "unit": "m",
+     "value": "0.70",
+     "what": "stern talão"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": "mestre"
+  },
+  {
+   "action": "The 21 cavernas (ribs) are fitted at set spacing, alternating with caverna arms, using galvanised nails; the boat is held by props that level the bottom.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "later fixed with wooden pegs",
+   "gear": "pregos zincados, escoras",
+   "id": "mmwfkg5geo1qs:1o7m:p56",
+   "kind": "practice",
+   "location": "O processo de construção",
+   "numbers": [
+    {
+     "unit": "cavernas",
+     "value": "21",
+     "what": "cavernas total"
+    },
+    {
+     "unit": "cavernas",
+     "value": "11",
+     "what": "cavernas aft"
+    },
+    {
+     "unit": "cavernas",
+     "value": "10",
+     "what": "cavernas forward"
+    },
+    {
+     "unit": "m",
+     "value": "0.60",
+     "what": "spacing"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": "mestre"
+  },
+  {
+   "action": "Caverna shape comes from moulds; each usually has three bottom holes called bueiros that let water pass inside the boat.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "moldes",
+   "id": "mmwfkg5geo1qs:1o7m:p57",
+   "kind": "description",
+   "location": "O processo de construção",
+   "numbers": [
+    {
+     "unit": "holes",
+     "value": "3",
+     "what": "bueiros per caverna"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": "mestre"
+  },
+  {
+   "action": "After the ribs are in place, the bow and stern posts (rodas) are fitted.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p58",
+   "kind": "practice",
+   "location": "O processo de construção",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "mestre"
+  },
+  {
+   "action": "The master boatbuilder nails the top strake (tábua de verdejar) first, fixing it through with zinc-coated nails and wooden pegs, then adds the frame arms on both sides.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "zinc nails, wooden pegs",
+   "id": "mmwfkg5geo1qs:1o7m:p59",
+   "kind": "practice",
+   "location": "[page 5]",
+   "numbers": [],
+   "period": "",
+   "place": "estaleiro",
+   "who": "mestre"
+  },
+  {
+   "action": "The master works the bow, fitting the upper planks (foliamentos) and the bow tip, then repeats the same procedure at the stern before painting.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p60",
+   "kind": "practice",
+   "location": "[page 5]",
+   "numbers": [],
+   "period": "",
+   "place": "estaleiro",
+   "who": "mestre"
+  },
+  {
+   "action": "Green-wood outer band (cinta) and inner band (draga) are fixed on the top strake with zinc nails and pegs, held for some days by clamps.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "wood used green",
+   "gear": "zinc nails, wooden pegs, clamps",
+   "id": "mmwfkg5geo1qs:1o7m:p61",
+   "kind": "practice",
+   "location": "[page 5]",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "0.11 x 0.22",
+     "what": "cinta section"
+    },
+    {
+     "unit": "m",
+     "value": "0.13 x 0.22",
+     "what": "draga section"
+    }
+   ],
+   "period": "",
+   "place": "estaleiro",
+   "who": "mestre"
+  },
+  {
+   "action": "A strong hinged cross-plank (traste) is fixed across the middle of the boat; the mast foot sits in a square socket (pia) below and passes through the traste opening (enora).",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "mast",
+   "id": "mmwfkg5geo1qs:1o7m:p62",
+   "kind": "description",
+   "location": "[page 5]",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "0.08",
+     "what": "hinge length"
+    },
+    {
+     "unit": "m",
+     "value": "0.10 x 0.10",
+     "what": "pia size"
+    },
+    {
+     "unit": "m",
+     "value": "0.20",
+     "what": "enora diameter"
+    },
+    {
+     "unit": "frames",
+     "value": "between 10th and 11th frame",
+     "what": "location of coicia"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "The bow is covered over seven arches (barrotes), one per frame; the largest, shaped on a mould, is fixed at the fifth frame from the bow, then central and side planks are nailed on.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "planks treated with protector before the gap is filled",
+   "gear": "mould",
+   "id": "mmwfkg5geo1qs:1o7m:p63",
+   "kind": "practice",
+   "location": "[page 5]",
+   "numbers": [
+    {
+     "unit": "count",
+     "value": "7",
+     "what": "bow arches (barrotes)"
+    },
+    {
+     "unit": "frame",
+     "value": "5th frame from bow",
+     "what": "main barrote position"
+    }
+   ],
+   "period": "",
+   "place": "estaleiro",
+   "who": "mestre"
+  },
+  {
+   "action": "At the stern the master fits the entremesa and cagarete bulkheads with removable panels, and uses a mould to position the rudder sockets and fit the rudder.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "rudder-door mould, xarolo for rudder ropes",
+   "id": "mmwfkg5geo1qs:1o7m:p64",
+   "kind": "practice",
+   "location": "[page 5]",
+   "numbers": [],
+   "period": "",
+   "place": "estaleiro",
+   "who": "mestre"
+  },
+  {
+   "action": "The master marks, saws and fits the closing planks, then the boat is turned onto its side (carenado) to attach the bottom closing planks, one per side.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p65",
+   "kind": "practice",
+   "location": "[page 5]",
+   "numbers": [
+    {
+     "unit": "count",
+     "value": "2",
+     "what": "bottom closing planks"
+    }
+   ],
+   "period": "",
+   "place": "estaleiro",
+   "who": "mestre"
+  },
+  {
+   "action": "All bottom planking is pegged with staggered (contrafiado) pegs, not in line, so the wood does not split.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "staggered placement to avoid splitting",
+   "gear": "wooden pegs (cavilhas)",
+   "id": "mmwfkg5geo1qs:1o7m:p66",
+   "kind": "practice",
+   "location": "[page 5]",
+   "numbers": [],
+   "period": "",
+   "place": "estaleiro",
+   "who": "mestre"
+  },
+  {
+   "action": "Three peg sizes are used: small for bottom and side without wedge; medium and large fixed with wedges and passing through bordo, strake, frame and draga.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "cavilhas, wedge",
+   "id": "mmwfkg5geo1qs:1o7m:p67",
+   "kind": "description",
+   "location": "[page 5]",
+   "numbers": [
+    {
+     "unit": "sizes",
+     "value": "3",
+     "what": "peg sizes"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Pegs are made with a base (coladeira) and a draw-knife (podão), finished with a slight facet, and driven in with an axe; medium and large ones are wedged.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "coladeira, podão, machado, cunha",
+   "id": "mmwfkg5geo1qs:1o7m:p68",
+   "kind": "practice",
+   "location": "[page 5]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "mestre"
+  },
+  {
+   "action": "With the boat upright again, the master finishes it: sanding, fitting floor panels, bow boards, ear, falcas and legs, and building the mast.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "mast, paneiros, falcas",
+   "id": "mmwfkg5geo1qs:1o7m:p69",
+   "kind": "practice",
+   "location": "[page 5]",
+   "numbers": [],
+   "period": "",
+   "place": "estaleiro",
+   "who": "mestre"
+  },
+  {
+   "action": "The boat is caulked to seal joints and keep water out, using oakum, an iron and a caulking mallet.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "estopa, ferro, maço de calafetar",
+   "id": "mmwfkg5geo1qs:1o7m:p70",
+   "kind": "practice",
+   "location": "[page 5]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "mestre"
+  },
+  {
+   "action": "Fine pitch or pez louro is applied to the sides; black pitch goes on gunwales, bow cover, frames, traste and tostes. Rock pitch is boiled with oil in a three-legged pot.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "pitch liquefied but not completely",
+   "gear": "three-legged pot, escopeiro (sheepskin applicator), fish oil",
+   "id": "mmwfkg5geo1qs:1o7m:p71",
+   "kind": "practice",
+   "location": "[page 5]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "mestre"
+  },
+  {
+   "action": "After the black pitch coat, sarrim is spread on top so crews do not slip while sailing; then the boat is ready for painting.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "sarrim",
+   "id": "mmwfkg5geo1qs:1o7m:p72",
+   "kind": "practice",
+   "location": "[page 5]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "tripulações"
+  },
+  {
+   "action": "Each master draws his own builder's mark (sino-saimão or signo-salomão) on both sides of the rudder above the chança; marks may resemble the teacher's but add a new element.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "mark made original so it is easily identified by those on the Ria",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p73",
+   "kind": "description",
+   "location": "[page 5]",
+   "numbers": [],
+   "period": "",
+   "place": "Ria",
+   "who": "mestre"
+  },
+  {
+   "action": "Early moliceiro panel painters had no artistic training and held other jobs; local artists with a knack for painting were called in by master builders.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p74",
+   "kind": "practice",
+   "location": "Decoração dos moliceiros",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "pintores locais; mestres construtores"
+  },
+  {
+   "action": "Master builders often painted the panels themselves, at the end of construction, when they had a talent for drawing.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "quando tinha jeito para o desenho",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p75",
+   "kind": "practice",
+   "location": "Decoração dos moliceiros",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "mestre construtor"
+  },
+  {
+   "action": "Painter José Oliveira, called the most famous, prolific and innovative moliceiro painter today, began painting moliceiro panels in 1989.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p76",
+   "kind": "description",
+   "location": "Decoração dos moliceiros",
+   "numbers": [],
+   "period": "1989",
+   "place": "Murtosa",
+   "who": "José de Oliveira"
+  },
+  {
+   "action": "Step 1: panel design is created in the painter's studio from images and creativity; owners seldom suggest designs; the caption joke comes before the drawing.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p77",
+   "kind": "practice",
+   "location": "Passo 1",
+   "numbers": [],
+   "period": "",
+   "place": "atelier",
+   "who": "José de Oliveira"
+  },
+  {
+   "action": "Step 2: master lines are marked on the white areas left by the builder, using a ruler (virote) and compass, to frame the central scene and borders.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "régua, virote, compasso",
+   "id": "mmwfkg5geo1qs:1o7m:p78",
+   "kind": "practice",
+   "location": "Passo 2",
+   "numbers": [
+    {
+     "unit": "areas (2 bow, 2 ster",
+     "value": "4",
+     "what": "white areas left by builder"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": "pintor"
+  },
+  {
+   "action": "Step 3: tracing paper records the available area for the central drawing, since bow and stern panels differ in size and proportion.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "bow and stern panels follow the hull shape",
+   "gear": "papel vegetal",
+   "id": "mmwfkg5geo1qs:1o7m:p79",
+   "kind": "practice",
+   "location": "Passo 3",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "pintor"
+  },
+  {
+   "action": "Step 4: floral motifs are transferred by decal or tracing paper to border areas and other zones, with freehand adjustments.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "decalque, papel vegetal",
+   "id": "mmwfkg5geo1qs:1o7m:p80",
+   "kind": "practice",
+   "location": "Passo 4",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "pintor"
+  },
+  {
+   "action": "Step 5: geometric designs are drawn with a compass at the bow, on the mast-step thwart (traste) as a frieze, and borders and flowers on the bica.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "compasso",
+   "id": "mmwfkg5geo1qs:1o7m:p81",
+   "kind": "practice",
+   "location": "Passo 5",
+   "numbers": [],
+   "period": "",
+   "place": "vertente, traste, bica da proa",
+   "who": "pintor"
+  },
+  {
+   "action": "Step 6: borders are painted in enamel paint before the central scene, in 3 or 4 strong contrasting colours, framed by lines and friezes.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "tinta de esmalte",
+   "id": "mmwfkg5geo1qs:1o7m:p82",
+   "kind": "practice",
+   "location": "Passo 6",
+   "numbers": [
+    {
+     "unit": "colours",
+     "value": "3 or 4",
+     "what": "colours per border"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": "pintor"
+  },
+  {
+   "action": "Step 7: the scene, drawn first on tracing paper, is transferred to the panel; golfiões and a flower vase on the bica base are drawn, where the painter signs.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "golfiões usually show a man and woman back to back",
+   "gear": "papel vegetal, decalque",
+   "id": "mmwfkg5geo1qs:1o7m:p83",
+   "kind": "practice",
+   "location": "Passo 7",
+   "numbers": [],
+   "period": "",
+   "place": "golfiões, bica da proa",
+   "who": "pintor"
+  },
+  {
+   "action": "Step 8: floral decorative motifs are painted on the stern entremesa and forcados panel, bow door area and bulkheads, hull side, and the builder's mark for the rudder.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p84",
+   "kind": "practice",
+   "location": "Passo 8",
+   "numbers": [],
+   "period": "",
+   "place": "entremesa, forcados, porta da proa, anteparas, costado, leme",
+   "who": "pintor"
+  },
+  {
+   "action": "Step 9: the scenes on the four panels are painted.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p85",
+   "kind": "practice",
+   "location": "Passo 9",
+   "numbers": [
+    {
+     "unit": "panels",
+     "value": "4",
+     "what": "panels"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": "pintor"
+  },
+  {
+   "action": "Step 10: shading, outlining all decorative drawings and panels in black with a fine-tipped brush called bico de pardal.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "bico de pardal",
+   "id": "mmwfkg5geo1qs:1o7m:p86",
+   "kind": "practice",
+   "location": "Passo 10",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "pintor"
+  },
+  {
+   "action": "Step 11: captions are painted on the four panels; José Oliveira uses a pink frieze and black capitals, with the saying always in quotation marks.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p87",
+   "kind": "practice",
+   "location": "Passo 11",
+   "numbers": [
+    {
+     "unit": "panels",
+     "value": "4",
+     "what": "panels with captions"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": "José Oliveira"
+  },
+  {
+   "action": "Step 12: last, the registration number (painted at the bow beside the panel) and boat name are painted using standardised metal stencils called alfabeto.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "moldes metálicos (alfabeto)",
+   "id": "mmwfkg5geo1qs:1o7m:p88",
+   "kind": "practice",
+   "location": "Passo 12",
+   "numbers": [],
+   "period": "",
+   "place": "proa",
+   "who": "pintor"
+  },
+  {
+   "action": "The bota-abaixo is the transport of the finished moliceiro from the yard to the Ria de Aveiro with a water baptism ceremony; no moliceiro is launched without it.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p89",
+   "kind": "event",
+   "location": "Os Bota-Abaixo",
+   "numbers": [],
+   "period": "",
+   "place": "estaleiro to Ria de Aveiro",
+   "who": "dono do barco; helpers"
+  },
+  {
+   "action": "At the end of each launch the boat owner offers food and wine to everyone who helped, making it a festive day for the region.",
+   "boat": "moliceiro",
+   "cargo": "comida e vinho",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p90",
+   "kind": "practice",
+   "location": "Os Bota-Abaixo",
+   "numbers": [],
+   "period": "",
+   "place": "Ria de Aveiro",
+   "who": "dono do barco"
+  },
+  {
+   "action": "Tourism growth from the early 2000s increased the number of moliceiro boats, which had declined since the 1950s, prompting construction adjustments for tourist safety and navigation of urban canals.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "tourism growth; safety and urban canal navigation",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p91",
+   "kind": "event",
+   "location": "[page 7]",
+   "numbers": [],
+   "period": "early 2000s",
+   "place": "Ria de Aveiro",
+   "who": ""
+  },
+  {
+   "action": "Boatbuilding masters keep the original naval carpentry process and method for the moliceiro, with only changes in structure and size.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p92",
+   "kind": "practice",
+   "location": "[page 7]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "Mestres"
+  },
+  {
+   "action": "The mast holding the yard and sail was removed so boats can pass through the urban canals of the Ria.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "mast, verga, sail",
+   "id": "mmwfkg5geo1qs:1o7m:p93",
+   "kind": "description",
+   "location": "[page 7]",
+   "numbers": [],
+   "period": "",
+   "place": "urban canals of the Ria de Aveiro",
+   "who": ""
+  },
+  {
+   "action": "The falcas, boards joined along the boat's side, are now fixed to give more height and safety for tourists; in the past they were removable.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "tourist safety",
+   "gear": "falcas",
+   "id": "mmwfkg5geo1qs:1o7m:p94",
+   "kind": "description",
+   "location": "[page 7]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Seats were added around the boat for tourist comfort during excursions.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "seats",
+   "id": "mmwfkg5geo1qs:1o7m:p95",
+   "kind": "description",
+   "location": "[page 7]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "tourists"
+  },
+  {
+   "action": "All frames are levelled so the floor is more stable for people walking about.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "cavername (frames)",
+   "id": "mmwfkg5geo1qs:1o7m:p96",
+   "kind": "description",
+   "location": "[page 7]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Sailing, poling and towing from the bank are no longer the main propulsion, especially in urban canals; engines were introduced as an alternative.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "vela, vara, sirga, motor",
+   "id": "mmwfkg5geo1qs:1o7m:p97",
+   "kind": "practice",
+   "location": "[page 7]",
+   "numbers": [],
+   "period": "",
+   "place": "urban canals",
+   "who": ""
+  },
+  {
+   "action": "Tourist-oriented boats are sometimes slightly longer and wider than the traditional dimensions.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "tourist use",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p98",
+   "kind": "description",
+   "location": "[page 7]",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "15",
+     "what": "traditional length"
+    },
+    {
+     "unit": "m",
+     "value": "2.50-2.60",
+     "what": "traditional beam"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "On festival days the moliceiro was specially decorated with sails and unfurled flags, and carried wildflower branches at the bow.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "festival days",
+   "gear": "sails, flags, flowers",
+   "id": "mmwfkg5geo1qs:1o7m:p99",
+   "kind": "practice",
+   "location": "[page 7]",
+   "numbers": [],
+   "period": "",
+   "place": "Região de Aveiro",
+   "who": "moliceiros"
+  },
+  {
+   "action": "The Romaria de São Paio da Torreira has always included moliceiro activities such as regattas and panel contests.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p100",
+   "kind": "event",
+   "location": "[page 7]",
+   "numbers": [],
+   "period": "",
+   "place": "Torreira",
+   "who": ""
+  },
+  {
+   "action": "Traditional moliceiro regattas have been held since the early twentieth century, important in the annual calendar for locals, enthusiasts and increasingly tourists.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p101",
+   "kind": "event",
+   "location": "[page 7]",
+   "numbers": [
+    {
+     "unit": "regattas",
+     "value": "3",
+     "what": "regattas per year today"
+    }
+   ],
+   "period": "early 20th century",
+   "place": "Ria de Aveiro",
+   "who": ""
+  },
+  {
+   "action": "Ria de Aveiro Weekend regatta, organised by the Comunidade Intermunicipal da Região de Aveiro, runs in early July from Torreira to Aveiro city.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p102",
+   "kind": "event",
+   "location": "[page 7]",
+   "numbers": [],
+   "period": "early July",
+   "place": "Torreira to Aveiro",
+   "who": "Comunidade Intermunicipal da Região de Aveiro"
+  },
+  {
+   "action": "Festa do Emigrante regatta, organised by Murtosa municipality, is held in August at the Bico quay during the Emigrant festivities.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p103",
+   "kind": "event",
+   "location": "[page 7]",
+   "numbers": [],
+   "period": "August",
+   "place": "cais do Bico",
+   "who": "Município da Murtosa"
+  },
+  {
+   "action": "São Paio da Torreira regatta, organised by Murtosa municipality, is held in September during the São Paio festivities.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p104",
+   "kind": "event",
+   "location": "[page 7]",
+   "numbers": [],
+   "period": "September",
+   "place": "Torreira",
+   "who": "Município da Murtosa"
+  },
+  {
+   "action": "Moliceiro panel contests have been held since the 1950s to celebrate local artists; two are now held yearly, in July and September.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p105",
+   "kind": "event",
+   "location": "[page 7]",
+   "numbers": [
+    {
+     "unit": "contests",
+     "value": "2",
+     "what": "annual contests"
+    }
+   ],
+   "period": "1950s",
+   "place": "Região de Aveiro",
+   "who": "local artists"
+  },
+  {
+   "action": "A regional jury of experts scores each panel on quality and symbolism/humour; the members' scores are summed to pick winners.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p106",
+   "kind": "rule",
+   "location": "[page 7]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "jury"
+  },
+  {
+   "action": "Moliço harvesting is no longer practised, but former moliceiros and ethnographic groups preserve it and regularly stage recreations of it.",
+   "boat": "",
+   "cargo": "moliço",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p107",
+   "kind": "practice",
+   "location": "[page 7]",
+   "numbers": [],
+   "period": "",
+   "place": "Ria de Aveiro",
+   "who": "antigos moliceiros, grupos etnográficos"
+  },
+  {
+   "action": "Boatbuilding skills were passed on mostly orally from master to apprentice, often father to son, in the shipyards of the Aveiro region.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "mostly oral transmission",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p108",
+   "kind": "practice",
+   "location": "Transmissão",
+   "numbers": [],
+   "period": "",
+   "place": "estaleiros da Região de Aveiro",
+   "who": "mestres construtores and apprentices"
+  },
+  {
+   "action": "Young apprentices were first given the simple task of making wooden pegs, to see whether they had talent for the craft, before taking on bigger tasks.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "cavilhas (pegs)",
+   "id": "mmwfkg5geo1qs:1o7m:p109",
+   "kind": "practice",
+   "location": "Transmissão",
+   "numbers": [],
+   "period": "in the past",
+   "place": "estaleiros",
+   "who": "Mestre Arménio Almeida; young apprentices"
+  },
+  {
+   "action": "Apprentices followed masters during construction, watching and asking questions, then were gradually given tasks from simple to complex, learning through practice and experience.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p110",
+   "kind": "practice",
+   "location": "Transmissão",
+   "numbers": [],
+   "period": "in the past",
+   "place": "estaleiros",
+   "who": "Mestre António Esteves; apprentices"
+  },
+  {
+   "action": "Today knowledge is still passed on mainly in shipyards, but demand to learn the craft is very low; occasional vocational courses connect masters with young people.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "hard work and few orders discourage young people; work depends on orders and repairs",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p111",
+   "kind": "description",
+   "location": "Transmissão",
+   "numbers": [],
+   "period": "2021",
+   "place": "Região de Aveiro",
+   "who": "mestres, young people"
+  },
+  {
+   "action": "Building and painting techniques have been recorded in books, in licensing and approval project documents detailing construction features, and in videos and documentaries with masters and painters.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p112",
+   "kind": "description",
+   "location": "Transmissão",
+   "numbers": [],
+   "period": "",
+   "place": "Região de Aveiro",
+   "who": "mestres and pintores"
+  },
+  {
+   "action": "Farmers began gathering moliço (aquatic plants) from the ria to fertilize sandy soils beside it, especially from the 18th/19th centuries.",
+   "boat": "",
+   "cargo": "moliço",
+   "conditions": "sandy soils needed organic matter",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p113",
+   "kind": "practice",
+   "location": "A Apanha do Moliço",
+   "numbers": [],
+   "period": "18th/19th centuries",
+   "place": "Região de Aveiro, ria",
+   "who": "agricultural community"
+  },
+  {
+   "action": "Moliço gathering was first done by farmers, then grew into an independent profession, the moliceiro, supplying farmers as agriculture expanded.",
+   "boat": "",
+   "cargo": "moliço",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p114",
+   "kind": "description",
+   "location": "A Apanha do Moliço",
+   "numbers": [],
+   "period": "early 19th century",
+   "place": "Região de Aveiro",
+   "who": "Agricultores, moliceiros"
+  },
+  {
+   "action": "The first known central-government decree taxed boats loaded with moliço: larger boats paid more than smaller ones.",
+   "boat": "barcos maiores and barcos menores",
+   "cargo": "moliço",
+   "conditions": "tax on loaded boats",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p115",
+   "kind": "rule",
+   "location": "A Apanha do Moliço",
+   "numbers": [
+    {
+     "unit": "réis",
+     "value": "40",
+     "what": "tax on larger loaded boats"
+    },
+    {
+     "unit": "réis",
+     "value": "20",
+     "what": "tax on smaller loaded boats"
+    }
+   ],
+   "period": "early 19th century",
+   "place": "",
+   "who": "poder central"
+  },
+  {
+   "action": "Francisco Regalla reported that moliço gathering employed 2,542 people across 1,342 registered boats.",
+   "boat": "",
+   "cargo": "moliço",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p116",
+   "kind": "event",
+   "location": "A Apanha do Moliço",
+   "numbers": [
+    {
+     "unit": "people",
+     "value": "2542",
+     "what": "people employed"
+    },
+    {
+     "unit": "boats",
+     "value": "1342",
+     "what": "registered boats"
+    }
+   ],
+   "period": "1888",
+   "place": "Região de Aveiro",
+   "who": "Francisco Regalla"
+  },
+  {
+   "action": "Until the mid-1960s moliço gathering was a main source of wealth and employment for regional families.",
+   "boat": "",
+   "cargo": "moliço",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p117",
+   "kind": "description",
+   "location": "A Apanha do Moliço",
+   "numbers": [],
+   "period": "until mid-1960s",
+   "place": "Região de Aveiro",
+   "who": "regional families"
+  },
+  {
+   "action": "Around the 1970s moliço gathering began to be abandoned; per Jaime Vilar, causes were cheaper chemical fertilizers, hard poorly paid work, emigration, heavy taxes and moliço scarcity from changing tides.",
+   "boat": "",
+   "cargo": "moliço",
+   "conditions": "chemical fertilizers, migration, tax burden, scarcity due to tide changes",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p118",
+   "kind": "event",
+   "location": "A Apanha do Moliço",
+   "numbers": [],
+   "period": "c. 1970s",
+   "place": "Região de Aveiro",
+   "who": "Jaime Vilar (1983)"
+  },
+  {
+   "action": "Gatherers first used boats they already owned, then realized they needed a new boat type to ease the very arduous work, leading to the moliceiro.",
+   "boat": "Barco Moliceiro",
+   "cargo": "moliço",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p119",
+   "kind": "event",
+   "location": "Barco Moliceiro: A sua criação e evolução",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "population of the region"
+  },
+  {
+   "action": "Aveiro shipbuilding masters developed a new boat, inspired by other navigable craft, and named it 'moliceiro' after the seaweed-gathering activity it served.",
+   "boat": "moliceiro",
+   "cargo": "moliço",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p120",
+   "kind": "event",
+   "location": "part 9, opening paragraph",
+   "numbers": [],
+   "period": "",
+   "place": "Região de Aveiro",
+   "who": "mestres (boatbuilding masters of the Região de Aveiro)"
+  },
+  {
+   "action": "The moliceiro was a main tool of the moliço-gathering trade; as more people worked in it, more boats were built and sailed on the Ria.",
+   "boat": "Barco Moliceiro",
+   "cargo": "moliço",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p121",
+   "kind": "description",
+   "location": "part 9, opening paragraph",
+   "numbers": [],
+   "period": "",
+   "place": "Ria de Aveiro",
+   "who": "moliço gatherers"
+  },
+  {
+   "action": "Fonseca Regalla stated the number of moliceiro boats on the Ria; the count stayed similar until the early 1930s.",
+   "boat": "barcos moliceiros",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p122",
+   "kind": "event",
+   "location": "part 9, boat numbers",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "1342",
+     "what": "moliceiro boats"
+    }
+   ],
+   "period": "1888",
+   "place": "Ria de Aveiro",
+   "who": "Fonseca Regalla"
+  },
+  {
+   "action": "Agostinho Simões Lopes reported the number of boats in 1925, then described a decline starting in the 1940s/50s.",
+   "boat": "barcos moliceiros",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p123",
+   "kind": "event",
+   "location": "part 9, boat numbers",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "1356",
+     "what": "moliceiro boats"
+    }
+   ],
+   "period": "1925",
+   "place": "Ria de Aveiro",
+   "who": "Agostinho Simões Lopes"
+  },
+  {
+   "action": "Moliceiro numbers on the Ria fell sharply in the mid-1950s and mid-1960s.",
+   "boat": "barcos moliceiros",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p124",
+   "kind": "event",
+   "location": "part 9, boat numbers",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "827",
+     "what": "boats in 1955"
+    },
+    {
+     "unit": "boats",
+     "value": "613",
+     "what": "boats in 1964"
+    }
+   ],
+   "period": "1955 and 1964",
+   "place": "Ria de Aveiro",
+   "who": ""
+  },
+  {
+   "action": "Eduardo Lamy Laranjeira recorded very few moliceiros remaining in 1975 and 1984.",
+   "boat": "barcos moliceiros",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p125",
+   "kind": "event",
+   "location": "part 9, boat numbers",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "30",
+     "what": "boats in 1975"
+    },
+    {
+     "unit": "boats",
+     "value": "2",
+     "what": "boats in 1984"
+    }
+   ],
+   "period": "1975 and 1984",
+   "place": "",
+   "who": "Eduardo Lamy Laranjeira"
+  },
+  {
+   "action": "A subsidy from the Junta Autónoma do Porto de Aveiro and municipalities to revive moliço gathering raised boat numbers to about ten.",
+   "boat": "barcos moliceiros",
+   "cargo": "moliço",
+   "conditions": "subsidy",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p126",
+   "kind": "event",
+   "location": "part 9, boat numbers",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "approximately 10",
+     "what": "boats"
+    }
+   ],
+   "period": "late 1980s",
+   "place": "",
+   "who": "Junta Autónoma do Porto de Aveiro; Câmaras Municipais"
+  },
+  {
+   "action": "After the subsidy was cancelled, moliço gathering was abandoned again and boat numbers fell once more.",
+   "boat": "barcos moliceiros",
+   "cargo": "moliço",
+   "conditions": "subsidy cancelled",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p127",
+   "kind": "event",
+   "location": "part 9, boat numbers",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "2",
+     "what": "boats in 1998"
+    }
+   ],
+   "period": "1998",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "From the early 2000s, tourism drove a new rise in moliceiro numbers, adapting the boat to a new socioeconomic reality.",
+   "boat": "Barco Moliceiro",
+   "cargo": "tourists",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p128",
+   "kind": "event",
+   "location": "part 9, tourism revival",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "about 30",
+     "what": "boats at end of 2010s"
+    }
+   ],
+   "period": "early 2000s onward",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Some tourist moliceiros have construction changes for passenger safety, differing from the original traditional design that sails in open ria and races in regattas.",
+   "boat": "Barco Moliceiro",
+   "cargo": "tourists",
+   "conditions": "safety adaptations",
+   "gear": "sail",
+   "id": "mmwfkg5geo1qs:1o7m:p129",
+   "kind": "description",
+   "location": "part 9, tourism revival",
+   "numbers": [],
+   "period": "late 2010s",
+   "place": "ria aberta",
+   "who": ""
+  },
+  {
+   "action": "The moliceiro has been described as a regional symbol, noted for its lines, construction and decorative panels.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "decorative panels",
+   "id": "mmwfkg5geo1qs:1o7m:p130",
+   "kind": "description",
+   "location": "Moliceiro como símbolo cultural",
+   "numbers": [],
+   "period": "",
+   "place": "Ria de Aveiro",
+   "who": "politicians, writers, artists"
+  },
+  {
+   "action": "The SNI asked Aveiro's tourism commission to collect a moliceiro bow to represent the region at an exhibition in Geneva.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p131",
+   "kind": "event",
+   "location": "Moliceiro como símbolo cultural",
+   "numbers": [],
+   "period": "1953",
+   "place": "Geneva",
+   "who": "Serviço Nacional de Informação; Comissão Municipal de Turismo de Aveiro"
+  },
+  {
+   "action": "The tourism commission bought a moliceiro with all its gear to keep moored in the Central Canal for display and possible tourist excursions.",
+   "boat": "Barco Moliceiro",
+   "cargo": "tourists",
+   "conditions": "tourists found it hard to find working moliceiros far from Aveiro",
+   "gear": "apetrechos (all equipment)",
+   "id": "mmwfkg5geo1qs:1o7m:p132",
+   "kind": "event",
+   "location": "Moliceiro como símbolo cultural",
+   "numbers": [],
+   "period": "1961",
+   "place": "Canal Central da Ria",
+   "who": "Comissão Municipal de Turismo de Aveiro"
+  },
+  {
+   "action": "Guided tourist trips in moliceiros were formally started in the late 1990s, consolidating the boat's shift to tourism.",
+   "boat": "Barco Moliceiro",
+   "cargo": "tourists",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p133",
+   "kind": "event",
+   "location": "Moliceiro como símbolo cultural",
+   "numbers": [],
+   "period": "late 1990s",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Before COVID-19, about a million people yearly took moliceiro trips, and this activity directly supported over 150 jobs.",
+   "boat": "Barco Moliceiro",
+   "cargo": "tourists",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p134",
+   "kind": "description",
+   "location": "Moliceiro como símbolo cultural",
+   "numbers": [
+    {
+     "unit": "people",
+     "value": "about 1 million",
+     "what": "passengers per year"
+    },
+    {
+     "unit": "jobs",
+     "value": "more than 150",
+     "what": "direct jobs"
+    }
+   ],
+   "period": "pre-COVID-19",
+   "place": "",
+   "who": "operadores marítimo-turísticos"
+  },
+  {
+   "action": "The regional district delegation of the national shipbuilding workers' union was established in Pardilhó, Estarreja, and stayed until 1975.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p135",
+   "kind": "event",
+   "location": "Os Mestres construtores",
+   "numbers": [],
+   "period": "March 1935 to 1975",
+   "place": "Pardilhó, Estarreja",
+   "who": "Sindicato Nacional dos Operários da Construção Naval"
+  },
+  {
+   "action": "Moliceiro building is an industry found only in this region, so traditional that skills are passed down through families.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p136",
+   "kind": "description",
+   "location": "Os Mestres construtores",
+   "numbers": [],
+   "period": "1943",
+   "place": "Região de Aveiro",
+   "who": "construction families; Domingos José de Castro"
+  },
+  {
+   "action": "Several families stood out in moliceiro building: Ferreiras da Costa (Lavouras), Henriques (Raimundos), Tavares, Henrique de Miranda and Garridos.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p137",
+   "kind": "description",
+   "location": "Os Mestres construtores",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "Ferreiras da Costa, Henriques, Tavares, Henrique de Miranda, Garridos"
+  },
+  {
+   "action": "Mestre Henrique Ferreira da Costa (Mestre Lavoura), son of José Lavoura, became a leading naval carpenter; his father has 8 moliceiro registrations on record.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p138",
+   "kind": "description",
+   "location": "Part 10, Costa family",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "8",
+     "what": "moliceiro registrations by the father"
+    }
+   ],
+   "period": "1936-1959 (father's records)",
+   "place": "Pardilhó",
+   "who": "Mestre Henrique Ferreira da Costa (Mestre Lavoura); José Lavoura"
+  },
+  {
+   "action": "Mestre Lavoura's shipyard built about 52 moliceiros plus other traditional boats of the Aveiro region, and served as a school for apprentices, the 'Escola Lavoura'.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p139",
+   "kind": "practice",
+   "location": "Part 10, Costa family",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "52",
+     "what": "moliceiros built"
+    }
+   ],
+   "period": "1955-1985",
+   "place": "Pardilhó",
+   "who": "Mestre Lavoura; apprentices"
+  },
+  {
+   "action": "The Raimundo family of Murtosa built the boats used in seaweed (moliço) gathering on the ria from the 19th century; Mestre Raimundo built 155 moliceiros per the record book.",
+   "boat": "moliceiro",
+   "cargo": "moliço",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p140",
+   "kind": "practice",
+   "location": "Part 10, Os Raimundos",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "155",
+     "what": "moliceiros built by Mestre Raimundo"
+    }
+   ],
+   "period": "19th century; 1933-1959",
+   "place": "Murtosa",
+   "who": "Raimundo family; Mestre Raimundo (Joaquim Maria Henriques Júnior, 1909-2005)"
+  },
+  {
+   "action": "Other Raimundo family builders: the father built 21 moliceiros, and brother Israel Raimundo built 6.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p141",
+   "kind": "practice",
+   "location": "Part 10, Os Raimundos",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "21",
+     "what": "moliceiros by the father"
+    },
+    {
+     "unit": "boats",
+     "value": "6",
+     "what": "moliceiros by Israel Raimundo"
+    }
+   ],
+   "period": "1915-1945; 1955-1960",
+   "place": "Murtosa",
+   "who": "Mestre Joaquim Maria da Silva Henriques; Israel Raimundo"
+  },
+  {
+   "action": "Mestre Manuel Raimundo built three moliceiros in the 1980s-90s and helped pass on knowledge to other master builders.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p142",
+   "kind": "practice",
+   "location": "Part 10, Os Raimundos",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "3",
+     "what": "moliceiros built"
+    }
+   ],
+   "period": "1988, 1990, 1998",
+   "place": "",
+   "who": "Mestre Manuel Raimundo (1923-2011)"
+  },
+  {
+   "action": "Mestre Ti Preguiça of the Henrique de Miranda family registered about 30 moliceiros; his father registered 4, in a period with gaps in the record books.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "gaps in the record books for 1922-1935",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p143",
+   "kind": "practice",
+   "location": "Part 10, Os Henrique de Miranda",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "30",
+     "what": "moliceiros by Ti Preguiça"
+    },
+    {
+     "unit": "boats",
+     "value": "4",
+     "what": "moliceiros by his father"
+    }
+   ],
+   "period": "1941-1962; 1922-1935",
+   "place": "Monte, Murtosa",
+   "who": "Mestre Ti Preguiça (José Agostinho Henriques de Miranda, 1910-1996); Manuel José"
+  },
+  {
+   "action": "Mestre Agostinho Tavares built about 57 moliceiros, a period for which the Capitania records are complete.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "Capitania records complete",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p144",
+   "kind": "practice",
+   "location": "Part 10, Os Tavares",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "57",
+     "what": "moliceiros built"
+    }
+   ],
+   "period": "1960-1994",
+   "place": "Pardilhó",
+   "who": "Mestre Agostinho Tavares (1922-1996)"
+  },
+  {
+   "action": "Other Tavares builders: Firmino Tavares built 20, Manuel Silva Tavares 40, and Francisco Tavares da Silva 3 moliceiros.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "Firmino's period has gaps in the record books",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p145",
+   "kind": "practice",
+   "location": "Part 10, Os Tavares",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "20",
+     "what": "moliceiros by Firmino"
+    },
+    {
+     "unit": "boats",
+     "value": "40",
+     "what": "moliceiros by Manuel Silva Tavares"
+    },
+    {
+     "unit": "boats",
+     "value": "3",
+     "what": "moliceiros by Francisco Tavares da Silva"
+    }
+   ],
+   "period": "1915-1959; 1943-1966; 1915-1923",
+   "place": "Pardilhó",
+   "who": "Mestre Firmino Tavares; Mestre Manuel Silva Tavares; Mestre Francisco Tavares da"
+  },
+  {
+   "action": "The Garrido brothers of Salreu built moliceiros: Luciano registered 20, Manuel Maria 15.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p146",
+   "kind": "practice",
+   "location": "Part 10, Os Garridos",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "20",
+     "what": "moliceiros by Luciano"
+    },
+    {
+     "unit": "boats",
+     "value": "15",
+     "what": "moliceiros by Manuel Maria"
+    }
+   ],
+   "period": "1927-1961; 1955-1968",
+   "place": "Salreu",
+   "who": "Mestre Luciano Rodrigues Garrido (1897-1962); Mestre Manuel Maria Rodrigues Garr"
+  },
+  {
+   "action": "Both Garrido brothers also owned moliceiros and, per records, employed professional moliceiro crews.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p147",
+   "kind": "practice",
+   "location": "Part 10, Os Garridos",
+   "numbers": [],
+   "period": "",
+   "place": "Salreu",
+   "who": "Luciano and Manuel Maria Garrido; professional moliceiros"
+  },
+  {
+   "action": "Five master builders currently work regularly: three with yards in Pardilhó and two in Torreira.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p148",
+   "kind": "description",
+   "location": "Part 10, end of builders section",
+   "numbers": [
+    {
+     "unit": "people",
+     "value": "5",
+     "what": "active master builders"
+    }
+   ],
+   "period": "present day",
+   "place": "Pardilhó; Torreira",
+   "who": "António Esteves, Arménio Almeida, Felisberto, José Rito, Marco Silva"
+  },
+  {
+   "action": "Painting of moliceiros probably arose in the late 19th century to beautify the boats and distinguish them from others, reflecting the owners' outlook.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p149",
+   "kind": "description",
+   "location": "Part 10, A pintura dos moliceiros",
+   "numbers": [],
+   "period": "late 19th century",
+   "place": "Ria de Aveiro",
+   "who": "owners"
+  },
+  {
+   "action": "Teófilo Braga (1885), quoting Carlos Faria (1882-1884), described stout moliceiros carrying algae, appearing by the hundreds at the 25 March fair, painted with figures and animals.",
+   "boat": "moliceiro",
+   "cargo": "algae (moliço)",
+   "conditions": "fair on 25 March",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p150",
+   "kind": "description",
+   "location": "Part 10, A pintura dos moliceiros",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "hundreds",
+     "what": "boats at the fair"
+    }
+   ],
+   "period": "1882-1885",
+   "place": "Ria de Aveiro",
+   "who": "Teófilo Braga; Carlos Faria"
+  },
+  {
+   "action": "In 1896 the Barão de Cadoro and engineer Melo de Matos noted the ornamental paintings on moliceiro bows as iconographic documents.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p151",
+   "kind": "description",
+   "location": "Part 10, A pintura dos moliceiros",
+   "numbers": [],
+   "period": "1896",
+   "place": "Ria de Aveiro",
+   "who": "Barão de Cadoro; Melo de Matos"
+  },
+  {
+   "action": "Luiz de Magalhães in 1905 described moliceiro bows and sterns decorated with animals, grotesque human figures, flowers, arabesques, sun and moon in bright colours.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p152",
+   "kind": "description",
+   "location": "Part 10, A pintura dos moliceiros",
+   "numbers": [],
+   "period": "1905",
+   "place": "Ria de Aveiro",
+   "who": "Luiz de Magalhães"
+  },
+  {
+   "action": "The national information service asked Aveiro's municipal tourism commission to collect a moliceiro prow to represent the region at a fair in Geneva.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p153",
+   "kind": "event",
+   "location": "page 11",
+   "numbers": [],
+   "period": "1953",
+   "place": "Geneva",
+   "who": "Serviço Nacional de Informação (SNI); Comissão Municipal de Turismo de Aveiro"
+  },
+  {
+   "action": "From the 1960s-80s international interest in the moliceiro and its paintings grew; TV channels such as BBC and Channel4 filmed documentaries, increasing visitors to the region.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p154",
+   "kind": "event",
+   "location": "page 11",
+   "numbers": [],
+   "period": "1960s-1980s",
+   "place": "Aveiro region",
+   "who": "BBC, Channel4; Diamantino Dias (witness)"
+  },
+  {
+   "action": "Panel themes have always been very varied, yet panels were never copied from other panels on the same boat or from any other boat.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "Themes could share a symbolic sphere but not be imitated",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p155",
+   "kind": "description",
+   "location": "page 11",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Moliceiro panels are renewed very frequently, some owners doing so every year, which earned them the nickname 'jornal da ria' for recording contemporary events.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p156",
+   "kind": "practice",
+   "location": "page 11",
+   "numbers": [
+    {
+     "unit": "per year",
+     "value": "1",
+     "what": "renewal frequency for some owners"
+    }
+   ],
+   "period": "",
+   "place": "ria",
+   "who": "José Rendeiro"
+  },
+  {
+   "action": "Early panel painters had no artistic training and other jobs; local talented artists were called in by master builders, or the master painted panels himself after finishing the boat.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "Painting done at the end of boat construction",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p157",
+   "kind": "practice",
+   "location": "page 11",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "local artists; mestres construtores"
+  },
+  {
+   "action": "Painters gained community prestige although panels were not signed; today José Oliveira signs on the prow near the golfiões.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p158",
+   "kind": "description",
+   "location": "page 11",
+   "numbers": [],
+   "period": "",
+   "place": "prow near the golfiões",
+   "who": "José Oliveira"
+  },
+  {
+   "action": "Lists main 20th-21st century panel painters: builder-painters (Joaquim Raimundo, Ti Preguiça, Agostinho Tavares) and many non-builder painters from Avanca, Ovar, Murtosa, Pardilhó, Torreira and elsewhere.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "José Manuel Oliveira still active",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p159",
+   "kind": "description",
+   "location": "page 11",
+   "numbers": [],
+   "period": "20th-21st century",
+   "place": "Avanca, Ovar, Sarilhos Pequenos, Pardilhó, Murtosa, Gafanha da Encarnação, Torre",
+   "who": "Mestre Joaquim Raimundo; Mestre Ti Preguiça; Mestre Agostinho Tavares; José Maji"
+  },
+  {
+   "action": "Avelino Marcela, a cabinetmaker, painted moliceiros as a sideline, drawing directly in pencil without sketches and finishing with enamel paints; prow showed knights, kings, campinos, stern showed common people.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "Prow figures in circle or curtain; stern figures in keyhole frame",
+   "gear": "pencil, enamel paints",
+   "id": "mmwfkg5geo1qs:1o7m:p160",
+   "kind": "practice",
+   "location": "page 11",
+   "numbers": [
+    {
+     "unit": "years",
+     "value": "10",
+     "what": "age when he began painting"
+    },
+    {
+     "unit": "boats",
+     "value": "20",
+     "what": "boats painted per year around 1925"
+    }
+   ],
+   "period": "1960s-1980s",
+   "place": "ria",
+   "who": "Avelino Lopes de Matos (Avelino Marcela)"
+  },
+  {
+   "action": "Jacinto Lavadeiro prepared work with sketches, mixed colours for a wide range of tones, varied borders and introduced new elements, becoming a highly innovative painter.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "No formal art training; painted diverse themes",
+   "gear": "sketches, mixed colours",
+   "id": "mmwfkg5geo1qs:1o7m:p161",
+   "kind": "practice",
+   "location": "page 11",
+   "numbers": [],
+   "period": "1939-1987",
+   "place": "Torreira",
+   "who": "Jacinto Vieira da Silva (Jacinto Lavadeiro)"
+  },
+  {
+   "action": "A moliceiro panel painter avoided errors in captions, rarely used frames such as circles, and painted across the whole panel space.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p162",
+   "kind": "description",
+   "location": "[page 12]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "painter (earlier master, name not shown in this excerpt)"
+  },
+  {
+   "action": "Working in detail, the painter needed six to seven days to finish one boat's panels.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "detailed work",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p163",
+   "kind": "practice",
+   "location": "[page 12]",
+   "numbers": [
+    {
+     "unit": "days",
+     "value": "6-7",
+     "what": "days to complete one boat"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": "painter"
+  },
+  {
+   "action": "Boat owners often hired this painter directly because they disliked the paintings that came from the shipyards.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "quality of his work",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p164",
+   "kind": "practice",
+   "location": "[page 12]",
+   "numbers": [],
+   "period": "",
+   "place": "shipyards",
+   "who": "boat owners"
+  },
+  {
+   "action": "José de Oliveira began painting moliceiro panels as Jacinto Lavadeiro had died and Avelino Marcela was old, so builders and owners sought new artists.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "death of Jacinto Lavadeiro; advanced age of Avelino Marcela",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p165",
+   "kind": "event",
+   "location": "[page 12]",
+   "numbers": [],
+   "period": "1989",
+   "place": "",
+   "who": "José de Oliveira; builders and owners of moliceiros"
+  },
+  {
+   "action": "José de Oliveira, called Zé Manel, born in Murtosa, son and grandson of moliceiro men, trained in plastic arts and works in many art forms.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p166",
+   "kind": "description",
+   "location": "[page 12]",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1969",
+     "what": "birth year"
+    }
+   ],
+   "period": "1969",
+   "place": "Murtosa",
+   "who": "José de Oliveira (Zé Manel)"
+  },
+  {
+   "action": "He estimates he has painted about 1000 panels, taking care to respect the traditional pictorial style of his predecessors.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p167",
+   "kind": "practice",
+   "location": "[page 12]",
+   "numbers": [
+    {
+     "unit": "panels",
+     "value": "1000",
+     "what": "panels painted"
+    }
+   ],
+   "period": "since 1989",
+   "place": "",
+   "who": "José de Oliveira"
+  },
+  {
+   "action": "The caption, saying or pun usually comes first, then the drawing, humorously showing everyday community themes.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p168",
+   "kind": "practice",
+   "location": "[page 12]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "José de Oliveira"
+  },
+  {
+   "action": "He paints humorous panels most, as people like them and panel-contest juries value them, though he also paints many other themes.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "panel contests",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p169",
+   "kind": "practice",
+   "location": "[page 12]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "José de Oliveira; contest juries"
+  },
+  {
+   "action": "A 2020 panel honouring professionals who helped contain the COVID pandemic became national news.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p170",
+   "kind": "event",
+   "location": "[page 12]",
+   "numbers": [],
+   "period": "2020",
+   "place": "",
+   "who": "José de Oliveira"
+  },
+  {
+   "action": "He has no fixed workplace and travels around the ria as jobs require, working in shipyards or at the water's edge.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "depends on jobs",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p171",
+   "kind": "practice",
+   "location": "[page 12]",
+   "numbers": [],
+   "period": "",
+   "place": "ria; shipyards; ria-side",
+   "who": "José de Oliveira"
+  },
+  {
+   "action": "Cultural rights over the naval carpentry art of the moliceiro are collective and customary, held by the master builders and painters of moliceiros.",
+   "boat": "moliceiro",
+   "cargo": "",
+   "conditions": "customary or traditional rights",
+   "gear": "",
+   "id": "mmwfkg5geo1qs:1o7m:p172",
+   "kind": "rule",
+   "location": "Direitos associados",
+   "numbers": [],
+   "period": "",
+   "place": "Região de Aveiro",
+   "who": "master builders and painters of moliceiros"
+  }
+ ],
+ "partsDone": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13
+ ],
+ "partsTotal": 14,
+ "runAt": "2026-11-13T23:41:35.284Z",
+ "sourceId": "mmwfkg5geo1qs",
+ "textChars": 78034,
+ "title": "moliceiro-Matriz PCI"
+}

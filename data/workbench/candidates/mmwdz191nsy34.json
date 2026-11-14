@@ -1,0 +1,1334 @@
+{
+ "items": [
+  {
+   "definition": "The lower river reach from Lisbon to Tancos, marked by continuous silting, fertile floodplain lands and a salt-marsh zone.",
+   "id": "mmwdz191nsy34:1",
+   "location": "[section: BAIXO TEJO]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "km (approx.)",
+     "value": "138",
+     "what": "length of the reach"
+    },
+    {
+     "unit": "metres (approx.)",
+     "value": "15",
+     "what": "drop in river level to Tancos"
+    }
+   ],
+   "term": "baixo Tejo"
+  },
+  {
+   "definition": "The middle reach between Tancos and Belver, a transition between the coastal lower river and the upper river.",
+   "id": "mmwdz191nsy34:2",
+   "location": "[section: TEJO MÉDIO]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "44",
+     "what": "length from Almourol to Belver"
+    },
+    {
+     "unit": "metres (approx.)",
+     "value": "15",
+     "what": "drop in level from Almourol to Belver"
+    }
+   ],
+   "term": "Tejo médio"
+  },
+  {
+   "definition": "The upper reach from Belver to the border, running between steep hills with a significant fall in level.",
+   "id": "mmwdz191nsy34:3",
+   "location": "[section: ALTO TEJO]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "km (approx.)",
+     "value": "51",
+     "what": "distance from Belver to Sever border"
+    },
+    {
+     "unit": "metres (more than)",
+     "value": "40",
+     "what": "drop in level from Belver to the border"
+    },
+    {
+     "unit": "metres (can exceed)",
+     "value": "100",
+     "what": "height of the riverbanks"
+    }
+   ],
+   "term": "alto Tejo"
+  },
+  {
+   "definition": "Build-up of silt and sediment in the riverbed, a continuous feature of the lower river that affects its depth.",
+   "id": "mmwdz191nsy34:4",
+   "location": "[section: BAIXO TEJO]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "assoreamentos"
+  },
+  {
+   "definition": "Periodic river floods that deposit fertilising silt on the valley lands.",
+   "id": "mmwdz191nsy34:5",
+   "location": "[section: BAIXO TEJO]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "cheias"
+  },
+  {
+   "definition": "Mud or silt left by floodwaters, which fertilises the surrounding land.",
+   "id": "mmwdz191nsy34:6",
+   "location": "[section: BAIXO TEJO]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "lodos"
+  },
+  {
+   "definition": "The difference in height of the river surface between two points along its course.",
+   "id": "mmwdz191nsy34:7",
+   "location": "[section: BAIXO TEJO]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "desnível"
+  },
+  {
+   "definition": "Low-lying, flood-prone alluvial plains along the Tejo, used for agriculture.",
+   "id": "mmwdz191nsy34:8",
+   "location": "[section: BAIXO TEJO]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "lezírias"
+  },
+  {
+   "definition": "Salt-affected marshy ground in the valley, unsuitable for rich crops.",
+   "id": "mmwdz191nsy34:9",
+   "location": "[section: BAIXO TEJO]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "salgados"
+  },
+  {
+   "definition": "The pattern of rainfall in a river basin, which determines how irregular or reliable a tributary's flow is.",
+   "id": "mmwdz191nsy34:10",
+   "location": "[section: BAIXO TEJO]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "regime de chuvas"
+  },
+  {
+   "definition": "The volume of water flowing in a river or tributary, which varies between rivers and years.",
+   "id": "mmwdz191nsy34:11",
+   "location": "[section: TEJO MÉDIO]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "caudal"
+  },
+  {
+   "definition": "The rate of water discharge of a river, which can be uncertain in some years.",
+   "id": "mmwdz191nsy34:12",
+   "location": "[section: TEJO MÉDIO]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "débito"
+  },
+  {
+   "definition": "A reservoir formed behind a dam, which stores water and could make the river navigable.",
+   "id": "mmwdz191nsy34:13",
+   "location": "[section: TEJO MÉDIO]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "albufeira"
+  },
+  {
+   "definition": "A dam built across the river to hold water, regulate floods and raise water level; Almourol and Belver are discussed.",
+   "id": "mmwdz191nsy34:14",
+   "location": "[section: TEJO MÉDIO]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "cota",
+     "value": "30",
+     "what": "water level (cota) from a dam at Almourol"
+    }
+   ],
+   "term": "barragem"
+  },
+  {
+   "definition": "Suitable for boats to travel; the source says a dam at Almourol would make the river navigable.",
+   "id": "mmwdz191nsy34:15",
+   "location": "[section: TEJO MÉDIO]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "navegável"
+  },
+  {
+   "definition": "A river port; Tomar could have one on the Nabão tributary.",
+   "id": "mmwdz191nsy34:16",
+   "location": "[section: TEJO MÉDIO]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "7 to 8",
+     "what": "distance from Tomar to the proposed port"
+    }
+   ],
+   "term": "porto fluvial"
+  },
+  {
+   "definition": "A tributary river that flows into the main river, such as the Sorraia, Zêzere and others named.",
+   "id": "mmwdz191nsy34:17",
+   "location": "[section: BAIXO TEJO]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "afluente"
+  },
+  {
+   "definition": "The left and right banks of the river, which differ in rainfall, tributaries and settlement.",
+   "id": "mmwdz191nsy34:18",
+   "location": "[section: BAIXO TEJO]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "margem esquerda / margem direita"
+  },
+  {
+   "definition": "The land area drained by a river and its tributaries.",
+   "id": "mmwdz191nsy34:19",
+   "location": "[section: O Tejo em Portugal]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bacia hidrográfica"
+  },
+  {
+   "definition": "The amount of rainfall in an area, which affects the flow of tributaries.",
+   "id": "mmwdz191nsy34:20",
+   "location": "[section: BAIXO TEJO]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pluviosidade"
+  },
+  {
+   "definition": "The condition of a river being made suitable for boat traffic, which the author expects to open the Tagus as a tourist route across central Iberia.",
+   "id": "mmwdz191nsy34:21",
+   "location": "[page 55]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "decades",
+     "value": "two or three",
+     "what": "expected time for the navigability programme to be carried out"
+    }
+   ],
+   "term": "navegabilidade"
+  },
+  {
+   "definition": "Irrigation of the fertile Ribatejo lands, discussed as a problem that can be combined with navigation and power generation.",
+   "id": "mmwdz191nsy34:22",
+   "location": "[page 55]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "rega"
+  },
+  {
+   "definition": "Artificial waterway proposed along the river banks, possibly serving navigation, irrigation and energy together, though its feasibility is debated.",
+   "id": "mmwdz191nsy34:23",
+   "location": "[page 55]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "canal"
+  },
+  {
+   "definition": "The left bank of the Tagus, where a canal adaptable to navigation, irrigation water transport and a power station at Muge is proposed.",
+   "id": "mmwdz191nsy34:24",
+   "location": "[page 55]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "margem esquerda"
+  },
+  {
+   "definition": "The right bank of the Tagus, where a separate irrigation canal is proposed, starting from Almourol and Castelo de Bode.",
+   "id": "mmwdz191nsy34:25",
+   "location": "[page 55]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "margem direita"
+  },
+  {
+   "definition": "Use of rivers as communication and transport routes, dating from the dawn of human activity and used by Romans and modern economies.",
+   "id": "mmwdz191nsy34:26",
+   "location": "[section: Navegação Fluvial]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "navegação fluvial"
+  },
+  {
+   "definition": "Navigable waterways, valued for carrying mass, economical transport and for influencing where industry is located.",
+   "id": "mmwdz191nsy34:27",
+   "location": "[section: Navegação Fluvial]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vias navegáveis"
+  },
+  {
+   "definition": "Low tide, the condition under which the legendary Abidis, set adrift on the Tagus, reached the bank near Santarém.",
+   "id": "mmwdz191nsy34:28",
+   "location": "[page 57]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "maré baixa"
+  },
+  {
+   "definition": "Inland navigation, used by the Romans on several rivers including the Tagus to support supply and territorial control.",
+   "id": "mmwdz191nsy34:29",
+   "location": "[page 57]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "navegação interior"
+  },
+  {
+   "definition": "Inland ports located hundreds of kilometres from the oceans in Europe and North America, some handling very large cargo volumes.",
+   "id": "mmwdz191nsy34:30",
+   "location": "[page 57]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "kilometres",
+     "value": "many hundreds",
+     "what": "distance of inland ports from the oceans"
+    },
+    {
+     "unit": "tonnes",
+     "value": "tens of millions",
+     "what": "cargo handled in some cases"
+    }
+   ],
+   "term": "portos interiores"
+  },
+  {
+   "definition": "Convoys or trains of linked barges used to move larger cargo volumes on inland waterways.",
+   "id": "mmwdz191nsy34:31",
+   "location": "[page 58]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "comboios de barcos"
+  },
+  {
+   "definition": "Unit measuring freight transport as the weight carried multiplied by the distance travelled.",
+   "id": "mmwdz191nsy34:32",
+   "location": "[page 58]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "t/km",
+     "value": "21,6 mil milhões",
+     "what": "German transport, 1913 to 1936"
+    },
+    {
+     "unit": "t/km",
+     "value": "40 mil milhões",
+     "what": "German transport in 1962"
+    },
+    {
+     "unit": "t/km per km",
+     "value": "60 milhões",
+     "what": "Traffic density on certain Rhine stretches"
+    }
+   ],
+   "term": "toneladas-quilómetro"
+  },
+  {
+   "definition": "Belgian canal linking Liège directly to Antwerp, carrying far more traffic than forecast.",
+   "id": "mmwdz191nsy34:33",
+   "location": "[page 58]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "tonnes",
+     "value": "more than 16 million",
+     "what": "traffic carried"
+    },
+    {
+     "unit": "tonnes",
+     "value": "not above 8 million",
+     "what": "estimated traffic"
+    }
+   ],
+   "term": "canal Alberto"
+  },
+  {
+   "definition": "Air-cushion vehicles that create their own cushion of air over water and can also move onto land.",
+   "id": "mmwdz191nsy34:34",
+   "location": "[page 58]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "km/h",
+     "value": "some tens",
+     "what": "speed"
+    }
+   ],
+   "term": "veículos sobre almofadas de ar"
+  },
+  {
+   "definition": "Amphibious boats foreseen for difficult river stretches, such as Cabora-Bassa on the Zambezi.",
+   "id": "mmwdz191nsy34:35",
+   "location": "[page 58]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barcos anfibios"
+  },
+  {
+   "definition": "Power stations on waterways generating electricity from water flow; one of several non-transport uses of rivers.",
+   "id": "mmwdz191nsy34:36",
+   "location": "[page 59]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "stations",
+     "value": "58",
+     "what": "stations on German waterways"
+    },
+    {
+     "unit": "kW",
+     "value": "1 million",
+     "what": "planned total power"
+    }
+   ],
+   "term": "centrais hidroeléctricas"
+  },
+  {
+   "definition": "Points where water is drawn from navigable waterways for industry and other uses.",
+   "id": "mmwdz191nsy34:37",
+   "location": "[page 59]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "intakes",
+     "value": "1800",
+     "what": "intakes in Germany"
+    },
+    {
+     "unit": "m³/s",
+     "value": "470",
+     "what": "water drawn"
+    }
+   ],
+   "term": "tomadas de água"
+  },
+  {
+   "definition": "Multipurpose dams that make rivers navigable while also producing hydroelectric power and controlling floods.",
+   "id": "mmwdz191nsy34:38",
+   "location": "[page 59]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "dams",
+     "value": "9",
+     "what": "dams on the Tennessee"
+    },
+    {
+     "unit": "km",
+     "value": "1050",
+     "what": "navigable length made"
+    },
+    {
+     "unit": "kW",
+     "value": "2 000 000",
+     "what": "combined hydroelectric power"
+    }
+   ],
+   "term": "barragens de fins múltiplos"
+  },
+  {
+   "definition": "Navigation locks in dams that raise or lower boats between water levels.",
+   "id": "mmwdz191nsy34:39",
+   "location": "[page 59]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "12,0 to 30",
+     "what": "lift per lock"
+    },
+    {
+     "unit": "m",
+     "value": "154",
+     "what": "total lift"
+    }
+   ],
+   "term": "eclusas"
+  },
+  {
+   "definition": "Flow condition of a river with highly irregular, sometimes violent discharge, as with the Tagus and Douro.",
+   "id": "mmwdz191nsy34:40",
+   "location": "[page 59]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "regime torrencial"
+  },
+  {
+   "definition": "Silting up of a river channel with sediment, which blocks navigation, as on the Mondego.",
+   "id": "mmwdz191nsy34:41",
+   "location": "[page 59]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "assoreamento"
+  },
+  {
+   "definition": "Wearing away of soil in a river basin, which feeds silting; tree planting can reduce it.",
+   "id": "mmwdz191nsy34:42",
+   "location": "[page 59]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "erosão"
+  },
+  {
+   "definition": "Planting trees across a river's drainage basin to reduce erosion and silting and improve navigability.",
+   "id": "mmwdz191nsy34:43",
+   "location": "[page 59]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "arborização da bacia hidrográfica"
+  },
+  {
+   "definition": "Towpaths along the riverbank, comfortable tracks at least three or four palmos wide, used to haul boats upstream; their total absence was a natural obstacle to Tagus navigation.",
+   "id": "mmwdz191nsy34:44",
+   "location": "[page 61]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "palmos",
+     "value": "3 to 4",
+     "what": "minimum width of a towpath"
+    }
+   ],
+   "term": "sirgadouros"
+  },
+  {
+   "definition": "Natural and man-made obstacles to river navigation, including strong currents, weirs, mills, fishing structures and similar installations.",
+   "id": "mmwdz191nsy34:45",
+   "location": "[page 61]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "embaraços naturais e artificiais"
+  },
+  {
+   "definition": "Strong currents in some stretches of the Tagus, a natural hazard that made upstream navigation difficult.",
+   "id": "mmwdz191nsy34:46",
+   "location": "[page 61]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "fortes correntes"
+  },
+  {
+   "definition": "Weirs or small dams across the river that obstruct the passage of boats.",
+   "id": "mmwdz191nsy34:47",
+   "location": "[page 61]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "açudes"
+  },
+  {
+   "definition": "Water mills built on the river, counted among the artificial obstacles to navigation.",
+   "id": "mmwdz191nsy34:48",
+   "location": "[page 61]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "azenhas"
+  },
+  {
+   "definition": "Fixed fishing structures in the river that hindered the passage of boats.",
+   "id": "mmwdz191nsy34:49",
+   "location": "[page 61]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pesqueiras"
+  },
+  {
+   "definition": "Fishing nets or fishing devices in the river listed among the artificial obstructions to navigation.",
+   "id": "mmwdz191nsy34:50",
+   "location": "[page 61]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "tarrafas"
+  },
+  {
+   "definition": "Passages or tracks listed among the obstacles to navigation on the river; the exact sense is not explained in the text.",
+   "id": "mmwdz191nsy34:51",
+   "location": "[page 61]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "carreiros"
+  },
+  {
+   "definition": "A small four-oared boat in which Antonelli travelled upstream from Alcântara to Toledo in 1582 while studying the river.",
+   "id": "mmwdz191nsy34:52",
+   "location": "[page 60]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "oars",
+     "value": "4",
+     "what": "number of oars"
+    },
+    {
+     "unit": "year",
+     "value": "1582",
+     "what": "year of the voyage"
+    }
+   ],
+   "term": "chalupa de quatro remos"
+  },
+  {
+   "definition": "A ferry-type boat at Porto do Tejo that allowed goods from the Beira region to be transferred to the south.",
+   "id": "mmwdz191nsy34:53",
+   "location": "[page 61]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barca"
+  },
+  {
+   "definition": "Flat walls built along the riverbanks as an attempt to assist navigation up to Porto do Tejo.",
+   "id": "mmwdz191nsy34:54",
+   "location": "[page 61]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "muros planos nas margens"
+  },
+  {
+   "definition": "A quay or landing place on the river, such as the surviving quay of the Barca da Amieira.",
+   "id": "mmwdz191nsy34:55",
+   "location": "[page 61]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "cais"
+  },
+  {
+   "definition": "The backwater, or upstream extent of a reservoir created by a dam, which determines how far the water is deepened.",
+   "id": "mmwdz191nsy34:56",
+   "location": "[page 60]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "regolfo"
+  },
+  {
+   "definition": "Successive stages or steps of dams along a river, used to overcome elevation difference for navigation and power generation.",
+   "id": "mmwdz191nsy34:57",
+   "location": "[page 60]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "stages",
+     "value": "3",
+     "what": "number of dam stages proposed on the Tagus (Almourol, Belver, Fratel)"
+    }
+   ],
+   "term": "escalões"
+  },
+  {
+   "definition": "Alluvial deposits of sediment accumulated by the river in its lower reaches.",
+   "id": "mmwdz191nsy34:58",
+   "location": "[page 61]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "aluviões"
+  },
+  {
+   "definition": "Build-up of sediment carried by the river, which reduces depth and obstructs channels that were once navigable.",
+   "id": "mmwdz191nsy34:59",
+   "location": "[page 62]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "deposição"
+  },
+  {
+   "definition": "River bed depths, which sediment deposition has reduced and which limit the passage of boats.",
+   "id": "mmwdz191nsy34:60",
+   "location": "[page 62]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "fundos"
+  },
+  {
+   "definition": "Water depth in the river; works of conservation are needed to guarantee a minimum depth for navigation.",
+   "id": "mmwdz191nsy34:61",
+   "location": "[page 62]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "profundidade"
+  },
+  {
+   "definition": "The state of the river that determines whether and how far vessels can navigate, studied by specialists across centuries.",
+   "id": "mmwdz191nsy34:62",
+   "location": "[page 62]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "condições de navegabilidade"
+  },
+  {
+   "definition": "The stretch of the Tagus between Lisbon and Santarém, whose navigability was examined in particular detail by specialists.",
+   "id": "mmwdz191nsy34:63",
+   "location": "[page 62]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "troço Lisboa-Santarém"
+  },
+  {
+   "definition": "Regulating the Tagus so that navigation between Lisbon and Almourol is possible, as proposed with the Almourol-Muge canal scheme.",
+   "id": "mmwdz191nsy34:64",
+   "location": "[page 63]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "regularização do rio"
+  },
+  {
+   "definition": "The water retention level at the Almourol dam, proposed for the canal scheme that would also support navigation.",
+   "id": "mmwdz191nsy34:65",
+   "location": "[page 63]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "metres",
+     "value": "30",
+     "what": "proposed retention level at Almourol"
+    }
+   ],
+   "term": "cota de retenção"
+  },
+  {
+   "definition": "The pattern of the river's flow and floods, which must be studied on site and affects navigation and surrounding land.",
+   "id": "mmwdz191nsy34:66",
+   "location": "[page 63]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "regime do rio"
+  },
+  {
+   "definition": "Steadier river flow rates, improved by works on the Zêzere and in Spain, and expected to improve further after the Alcântara dam.",
+   "id": "mmwdz191nsy34:67",
+   "location": "[page 63]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "regularidade dos débitos"
+  },
+  {
+   "definition": "Proposed canal on the left bank from the Almourol dam to the Muge stream, serving irrigation, water supply, navigation and power.",
+   "id": "mmwdz191nsy34:68",
+   "location": "[page 63]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "canal de Almourol-Muge"
+  },
+  {
+   "definition": "Elevation above sea level of a point on the river or of a reservoir surface.",
+   "id": "mmwdz191nsy34:69",
+   "location": "[part 7 of 30]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "360",
+     "what": "elevation at Talavera bridge"
+    },
+    {
+     "unit": "m",
+     "value": "30",
+     "what": "elevation at Almourol lake"
+    },
+    {
+     "unit": "m",
+     "value": "220",
+     "what": "elevation at Alcântara lake"
+    }
+   ],
+   "term": "cota"
+  },
+  {
+   "definition": "Abbreviation for the normal water level of a reservoir, used to give lake elevations in the table.",
+   "id": "mmwdz191nsy34:70",
+   "location": "[part 7 of 30]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "N. P. A."
+  },
+  {
+   "definition": "Reservoirs created by the dams, forming a continuous series of lakes along the Tagus with navigable lengths.",
+   "id": "mmwdz191nsy34:71",
+   "location": "[part 7 of 30]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "90.5",
+     "what": "length of Alcântara lake"
+    },
+    {
+     "unit": "km",
+     "value": "70",
+     "what": "length of Tejo Internacional lake"
+    },
+    {
+     "unit": "km",
+     "value": "54.5",
+     "what": "length of Valdecañas lake"
+    },
+    {
+     "unit": "km",
+     "value": "44",
+     "what": "length of Almourol lake"
+    }
+   ],
+   "term": "lagos"
+  },
+  {
+   "definition": "Distances along the river from Lisbon, defining navigable stretches of the Tagus.",
+   "id": "mmwdz191nsy34:72",
+   "location": "[part 7 of 30]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "528",
+     "what": "river distance Lisbon to Talavera de la Reina bridge"
+    },
+    {
+     "unit": "km",
+     "value": "226",
+     "what": "navigation possible in Portuguese territory"
+    },
+    {
+     "unit": "km",
+     "value": "296",
+     "what": "navigation possible to Alcântara"
+    }
+   ],
+   "term": "distâncias"
+  },
+  {
+   "definition": "River ports, which the source says are lacking on the Tagus banks despite being warranted there.",
+   "id": "mmwdz191nsy34:73",
+   "location": "[part 7 of 30]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "portos fluviais"
+  },
+  {
+   "definition": "Air-cushion propulsion over the water surface, mentioned as a recent transport innovation.",
+   "id": "mmwdz191nsy34:74",
+   "location": "[part 7 of 30]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "almofadas de ar"
+  },
+  {
+   "definition": "Sailing boat, noted as an early invention that people used to navigate rivers in Mesopotamia, before about 4000 BC.",
+   "id": "mmwdz191nsy34:75",
+   "location": "Rega, paragraph 37",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "years BC",
+     "value": "4000",
+     "what": "approximate date of the first cities, by which time sailing on the river was alr"
+    }
+   ],
+   "term": "barco à vela"
+  },
+  {
+   "definition": "Navigable waterway. It may be built only to create traffic, or serve as one link in a chain of river uses, as with the Tagus and Douro.",
+   "id": "mmwdz191nsy34:76",
+   "location": "page 69",
+   "measured_by": "",
+   "numbers": [],
+   "term": "via navegável"
+  },
+  {
+   "definition": "Transport by river, presented as important to regional economy and the balance of payments, especially when the processed product is much smaller in volume than the raw material.",
+   "id": "mmwdz191nsy34:77",
+   "location": "page 69, paragraph 36",
+   "measured_by": "",
+   "numbers": [],
+   "term": "transporte fluvial"
+  },
+  {
+   "definition": "Freight cost of carrying goods. High freight rates hold back inland areas by making poor-value products uneconomic to exploit.",
+   "id": "mmwdz191nsy34:78",
+   "location": "page 69",
+   "measured_by": "",
+   "numbers": [],
+   "term": "frete"
+  },
+  {
+   "definition": "Port of Lisbon, the reference point for placing industrial centres at strategic locations along the Tagus.",
+   "id": "mmwdz191nsy34:79",
+   "location": "page 69",
+   "measured_by": "",
+   "numbers": [],
+   "term": "porto de Lisboa"
+  },
+  {
+   "definition": "Drainage, the removal of excess water from marshy land. It was one of two linked water-management problems for early settlers in Mesopotamia.",
+   "id": "mmwdz191nsy34:80",
+   "location": "Rega, paragraph 37",
+   "measured_by": "",
+   "numbers": [],
+   "term": "drenagem"
+  },
+  {
+   "definition": "Levelling of the ground, required for building canals. It is listed among the rules and knowledge that early societies developed.",
+   "id": "mmwdz191nsy34:81",
+   "location": "Rega, paragraph 37",
+   "measured_by": "",
+   "numbers": [],
+   "term": "nivelamento"
+  },
+  {
+   "definition": "Silting up of the riverbed caused by floods, which changes the channel and makes navigation harder.",
+   "id": "mmwdz191nsy34:82",
+   "location": "[section: ESQUEMA DO RIBATEJO]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "assoreamentos provocados pelas cheias"
+  },
+  {
+   "definition": "The riverbed downstream of Tancos is uneven and shifts over time, a long-standing difficulty for boats using the river.",
+   "id": "mmwdz191nsy34:83",
+   "location": "[section: ESQUEMA DO RIBATEJO]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "irregularidade do leito do Tejo"
+  },
+  {
+   "definition": "Navigation on the Tagus is hindered by changing channels and silting, which attempts to dig channels did not durably fix.",
+   "id": "mmwdz191nsy34:84",
+   "location": "[section: ESQUEMA DO RIBATEJO]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "dificuldades na navegação"
+  },
+  {
+   "definition": "Ditches dug to ease navigation or to drain water; the author says their results were poor.",
+   "id": "mmwdz191nsy34:85",
+   "location": "[section: ESQUEMA DO RIBATEJO]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "valas"
+  },
+  {
+   "definition": "Use of the river for boat traffic, listed among the Tagus's possible uses alongside irrigation, tourism, industry and energy.",
+   "id": "mmwdz191nsy34:86",
+   "location": "[section: ESQUEMA DO RIBATEJO]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "navegação"
+  },
+  {
+   "definition": "Place on the Tagus; the riverbed below it is described as irregular and changeable.",
+   "id": "mmwdz191nsy34:87",
+   "location": "[section: ESQUEMA DO RIBATEJO]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Tancos"
+  },
+  {
+   "definition": "Place on the Tagus; the region downstream holds the country's most fertile land, which risks losing fertility.",
+   "id": "mmwdz191nsy34:88",
+   "location": "[page 79]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Almourol"
+  },
+  {
+   "definition": "River discharge or flow rates; the text says flood flows could be reduced to insignificant figures in most years.",
+   "id": "mmwdz191nsy34:89",
+   "location": "[part 13 of 30]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "débitos"
+  },
+  {
+   "definition": "The dry summer season, when improved river flow would help keep a navigable channel between Almourol and Muge.",
+   "id": "mmwdz191nsy34:90",
+   "location": "[part 13 of 30]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Estio"
+  },
+  {
+   "definition": "Silted up; the river between Almourol and the Muge stream is clogged with sediment, which hinders navigation.",
+   "id": "mmwdz191nsy34:91",
+   "location": "[part 13 of 30]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "assoreado"
+  },
+  {
+   "definition": "Contour line at 30 metres elevation; land below it could be served by gravity irrigation if water were raised to this level.",
+   "id": "mmwdz191nsy34:92",
+   "location": "[part 13 of 30]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "hectares",
+     "value": "more than 100,000",
+     "what": "land commanded by contour 30"
+    },
+    {
+     "unit": "hectares",
+     "value": "more than 30,000",
+     "what": "land commanded on the right bank"
+    }
+   ],
+   "term": "cota 30"
+  },
+  {
+   "definition": "Fertilising silt deposited by floods; its loss, along with fewer floods, threatens the Ribatejo's agriculture.",
+   "id": "mmwdz191nsy34:93",
+   "location": "[part 13 of 30]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "lodos fertilizantes"
+  },
+  {
+   "definition": "Tailrace channel carrying water away from a power station; one from Castelo do Bode could feed a smaller irrigation canal.",
+   "id": "mmwdz191nsy34:94",
+   "location": "[part 13 of 30]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "canal de fuga"
+  },
+  {
+   "definition": "Head or drop in water level used to generate power; the Almourol reservoir would cancel some of Castelo do Bode's.",
+   "id": "mmwdz191nsy34:95",
+   "location": "[part 13 of 30]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "kWh",
+     "value": "20 million",
+     "what": "energy lost at Castelo do Bode"
+    }
+   ],
+   "term": "queda"
+  },
+  {
+   "definition": "Power station proposed on the Muge stream, fed by water from the left-bank canal.",
+   "id": "mmwdz191nsy34:96",
+   "location": "[part 13 of 30]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "central"
+  },
+  {
+   "definition": "Evening out river flow across seasons and years, so water is available for turbines and irrigation in dry periods as well as wet ones.",
+   "id": "mmwdz191nsy34:97",
+   "location": "[part 19, section: QUANTIDADE DE ENERGIA, §62]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "regularização dos caudais"
+  },
+  {
+   "definition": "The amount of water passed through turbines, which together with the height of the drop determines how much energy is produced.",
+   "id": "mmwdz191nsy34:98",
+   "location": "[part 19, section: QUANTIDADE DE ENERGIA, §62]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "volume de água turbinada"
+  },
+  {
+   "definition": "The height the water falls to the turbines; with the volume of water, it determines energy output.",
+   "id": "mmwdz191nsy34:99",
+   "location": "[part 19, section: QUANTIDADE DE ENERGIA, §62]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "altura da queda"
+  },
+  {
+   "definition": "Dry, average and wet years, whose differing rainfall changes how much usable water is available each year.",
+   "id": "mmwdz191nsy34:100",
+   "location": "[part 19, section: QUANTIDADE DE ENERGIA, §62]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "anos secos, médios e húmidos"
+  },
+  {
+   "definition": "The water level where water is returned to the river after passing through a power station's turbines.",
+   "id": "mmwdz191nsy34:101",
+   "location": "[part 19, §61]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "cota",
+     "value": "25",
+     "what": "normal level at Castelo de Bode"
+    }
+   ],
+   "term": "nível de restituição"
+  },
+  {
+   "definition": "The intake point where water is drawn off from a reservoir or river into a canal or tunnel.",
+   "id": "mmwdz191nsy34:102",
+   "location": "[part 19, §61]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "cota",
+     "value": "30",
+     "what": "level at the intake for the right-bank canal"
+    }
+   ],
+   "term": "tomada de água"
+  },
+  {
+   "definition": "A proposed canal along the river's right bank, starting below the Castelo de Bode dam, to supply Lisbon, irrigate and serve towns.",
+   "id": "mmwdz191nsy34:103",
+   "location": "[part 19, §61]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "canal da margem direita"
+  },
+  {
+   "definition": "An underground water conduit; an alternative to a canal for carrying water and for diverting water from Bogas to the Padrão power station.",
+   "id": "mmwdz191nsy34:104",
+   "location": "[part 19, §61]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "kilometres",
+     "value": "17",
+     "what": "length of the tunnel from Bogas to the Padrão power station"
+    }
+   ],
+   "term": "túnel"
+  },
+  {
+   "definition": "A stage or step of the river's dam and power-station chain, such as Fratel, Belver and Almourol.",
+   "id": "mmwdz191nsy34:105",
+   "location": "[part 19, §61]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "escalão"
+  },
+  {
+   "definition": "Diverting water from one watercourse to another place, for example Bogas to Alvito or toward irrigation in the Alto Alentejo.",
+   "id": "mmwdz191nsy34:106",
+   "location": "[part 19, §61]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "desvio de água"
+  },
+  {
+   "definition": "Kilowatt-hour, the unit used to express the yearly electricity produced by each power station.",
+   "id": "mmwdz191nsy34:107",
+   "location": "[part 19, section: QUANTIDADE DE ENERGIA]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "million kWh",
+     "value": "870",
+     "what": "annual output, Castelo de Bode, Bouça and Cabril (1962-1965 average)"
+    },
+    {
+     "unit": "million kWh",
+     "value": "430",
+     "what": "annual output, Fratel"
+    },
+    {
+     "unit": "million kWh",
+     "value": "260",
+     "what": "annual output, Belver with new unit"
+    }
+   ],
+   "term": "kWh"
+  },
+  {
+   "definition": "Proposed river navigation along the upper and middle Tagus up to the Spanish border, envisioned as a tourist route past castles and landscapes.",
+   "id": "mmwdz191nsy34:108",
+   "location": "[page 106]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "kilometres",
+     "value": "more than 230",
+     "what": "navigable distance to the border"
+    },
+    {
+     "unit": "elevations",
+     "value": "3",
+     "what": "number of elevations (locks/rises) along the route"
+    }
+   ],
+   "term": "navegação do Tejo até à fronteira"
+  },
+  {
+   "definition": "A narrow gap in the mountain ridge through which the Tagus passes, beyond which the river widens into a broad area.",
+   "id": "mmwdz191nsy34:109",
+   "location": "[page 106]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Portas do Ródão"
+  },
+  {
+   "definition": "The Tagus drainage basin, the whole region for which tourism planning is proposed and in which lakes are expected.",
+   "id": "mmwdz191nsy34:110",
+   "location": "[page 106]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bacia do Tejo"
+  },
+  {
+   "definition": "River along which traffic from the centre of Portugal was carried by inland navigation until under a century ago.",
+   "id": "mmwdz191nsy34:111",
+   "location": "[page 116]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Tejo"
+  },
+  {
+   "definition": "River flow volumes; the Douro and Beira Baixa railways followed the valleys of the two rivers with the greatest flow.",
+   "id": "mmwdz191nsy34:112",
+   "location": "[page 116]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "caudais"
+  },
+  {
+   "definition": "Transport links such as roads, railways and waterways; presented as the basis of regional economic progress and of moving goods to coastal ports.",
+   "id": "mmwdz191nsy34:113",
+   "location": "[page 116]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "comunicações"
+  },
+  {
+   "definition": "Coastal ports where interior products were taken for export and consumption, requiring easy transport from inland areas.",
+   "id": "mmwdz191nsy34:114",
+   "location": "[page 116]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "portos para exportação"
+  },
+  {
+   "definition": "The Tagus estuary, where goods carried downriver are transferred to ships anchored there for export.",
+   "id": "mmwdz191nsy34:115",
+   "location": "[part 29 of 30] paragraph beginning 'A grande vantagem do va",
+   "measured_by": "",
+   "numbers": [],
+   "term": "estuário do Tejo"
+  },
+  {
+   "definition": "Dams on the Tagus and Zêzere that would create lakes suitable for tourism and nautical sports.",
+   "id": "mmwdz191nsy34:116",
+   "location": "[part 29 of 30] section 77, Polo do Entroncamento",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barragens"
+  },
+  {
+   "definition": "Water sports proposed for the lakes near Entroncamento as leisure for the industrial population.",
+   "id": "mmwdz191nsy34:117",
+   "location": "[part 29 of 30] section 77, Polo do Entroncamento",
+   "measured_by": "",
+   "numbers": [],
+   "term": "desportos náuticos"
+  },
+  {
+   "definition": "Navigation along the Tagus river, described as the fundamental basis for the development of Abrantes and its surrounding area of influence.",
+   "id": "mmwdz191nsy34:118",
+   "location": "[page 129]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "navegação do Tejo"
+  },
+  {
+   "definition": "A dam and its reservoir lake at Almourol, seen as underpinning river navigation and the economic development of the Abrantes area.",
+   "id": "mmwdz191nsy34:119",
+   "location": "[page 129]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barragem e lago de Almourol"
+  },
+  {
+   "definition": "A dam in the stretch above the Figueiró stream mouth, forming a lake that supports energy, navigation, a road bridge and irrigation water.",
+   "id": "mmwdz191nsy34:120",
+   "location": "[page 130]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barragem de Fratel"
+  },
+  {
+   "definition": "The Fratel reservoir has wide-radius bends, giving enough depth and width for river-going boats to move several kilometres upstream of Porto do Tejo.",
+   "id": "mmwdz191nsy34:121",
+   "location": "[page 130]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "lago, com curvaturas de grande raio"
+  },
+  {
+   "definition": "Depths and widths of the waterway that are needed to allow boats suited to river navigation to move.",
+   "id": "mmwdz191nsy34:122",
+   "location": "[page 130]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "fundos e larguras"
+  },
+  {
+   "definition": "Boats suited to river navigation, which the Fratel reservoir allows to operate as far as a few kilometres upstream of Porto do Tejo.",
+   "id": "mmwdz191nsy34:123",
+   "location": "[page 130]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barcos próprios para a navegação fluvial"
+  },
+  {
+   "definition": "Place on the upper Tagus on quaternary terrain, proposed as a third economic pole and the upstream limit for navigation from the Fratel lake.",
+   "id": "mmwdz191nsy34:124",
+   "location": "[page 130]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Porto do Tejo"
+  }
+ ],
+ "kind": "historical",
+ "lang": "",
+ "partsDone": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29
+ ],
+ "partsTotal": 30,
+ "runAt": "2026-11-12T20:24:59.248Z",
+ "sourceId": "mmwdz191nsy34",
+ "textChars": 177843,
+ "title": "o tejo originalsite"
+}

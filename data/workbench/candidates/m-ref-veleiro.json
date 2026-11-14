@@ -1,0 +1,1575 @@
+{
+ "items": [
+  {
+   "definition": "Lines used to hoist or raise the sails.",
+   "id": "m-ref-veleiro:1",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Adriças"
+  },
+  {
+   "definition": "Part of the boat between the beam (través) and the stern.",
+   "id": "m-ref-veleiro:2",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Alheta"
+  },
+  {
+   "definition": "Line attached to the masthead that holds up the boom, so it does not drop onto the deck when the mainsail is lowered.",
+   "id": "m-ref-veleiro:3",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Amantilho"
+  },
+  {
+   "definition": "The widest side part of a boat.",
+   "id": "m-ref-veleiro:4",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Boca"
+  },
+  {
+   "definition": "Part of the boat between the bow and the beam.",
+   "id": "m-ref-veleiro:5",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Bochecha"
+  },
+  {
+   "definition": "Port: the left side of the boat when facing the bow.",
+   "id": "m-ref-veleiro:6",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Bombordo"
+  },
+  {
+   "definition": "Starboard: the right side of the boat when facing the bow.",
+   "id": "m-ref-veleiro:7",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Boreste"
+  },
+  {
+   "definition": "Wire cables running sideways to the masthead that stop the mast moving sideways.",
+   "id": "m-ref-veleiro:8",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Brandais"
+  },
+  {
+   "definition": "Device used to pull the boom downward.",
+   "id": "m-ref-veleiro:9",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "\"Burro\""
+  },
+  {
+   "definition": "The tiller: lever that controls the rudder.",
+   "id": "m-ref-veleiro:10",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Cana de Leme"
+  },
+  {
+   "definition": "Mechanical or electric device (winch) that increases the ability to pull a line.",
+   "id": "m-ref-veleiro:11",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Catracas"
+  },
+  {
+   "definition": "Space at the back of the boat where the controls are located.",
+   "id": "m-ref-veleiro:12",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Cockpit"
+  },
+  {
+   "definition": "Cross-shaped side strut fixed to the mast that supports the shrouds (spreader).",
+   "id": "m-ref-veleiro:13",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Cruzeta"
+  },
+  {
+   "definition": "Fitting fixed to the deck used to secure (belay) lines.",
+   "id": "m-ref-veleiro:14",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Cunho"
+  },
+  {
+   "definition": "Line used to tension the lower part of the sail's front edge (luff).",
+   "id": "m-ref-veleiro:15",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Downhaul"
+  },
+  {
+   "definition": "Wire cable from the stern to the masthead that prevents the mast from moving forward.",
+   "id": "m-ref-veleiro:16",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Estai de Popa"
+  },
+  {
+   "definition": "Wire cable from the bow to the masthead that prevents the mast from moving backward.",
+   "id": "m-ref-veleiro:17",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Estai de Proa"
+  },
+  {
+   "definition": "Device used to tension the stays and shrouds.",
+   "id": "m-ref-veleiro:18",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Esticador"
+  },
+  {
+   "definition": "Fitting that connects the stays and shrouds to the deck or hull.",
+   "id": "m-ref-veleiro:19",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Fuzil"
+  },
+  {
+   "definition": "Lines that control the sails. Hauling in (caçar) brings the sail toward the centerline; easing (folgar) lets it move away.",
+   "id": "m-ref-veleiro:20",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Escotas"
+  },
+  {
+   "definition": "Triangular sail set at the bow.",
+   "id": "m-ref-veleiro:21",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Genoa"
+  },
+  {
+   "definition": "Swivelling joint connecting boom to mast, letting the boom move up, down and side to side.",
+   "id": "m-ref-veleiro:22",
+   "location": "[page 3]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Garlindéu"
+  },
+  {
+   "definition": "Wire cable guard (lifeline) running along the edge of the boat.",
+   "id": "m-ref-veleiro:23",
+   "location": "[page 4]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Guarda-Mancebo"
+  },
+  {
+   "definition": "Rudder: plate-shaped device at the stern used to steer the boat.",
+   "id": "m-ref-veleiro:24",
+   "location": "[page 4]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Leme"
+  },
+  {
+   "definition": "Rigging: the set of masts, booms, stays, shrouds and other parts supporting the sails.",
+   "id": "m-ref-veleiro:25",
+   "location": "[page 4]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Mastreação"
+  },
+  {
+   "definition": "Vertical spar that supports the sails and the boom.",
+   "id": "m-ref-veleiro:26",
+   "location": "[page 4]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Mastro"
+  },
+  {
+   "definition": "Mainsail: the principal sail, set on the main mast.",
+   "id": "m-ref-veleiro:27",
+   "location": "[page 4]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Mestra ou Vela Grande"
+  },
+  {
+   "definition": "Blocks (sets of pulleys) that guide lines in a desired direction or form purchases that reduce effort.",
+   "id": "m-ref-veleiro:28",
+   "location": "[page 4]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Moitões"
+  },
+  {
+   "definition": "Knot: unit of boat speed equal to one nautical mile per hour.",
+   "id": "m-ref-veleiro:29",
+   "location": "[page 4]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "km/h",
+     "value": "1,852",
+     "what": "speed equivalent of one knot"
+    }
+   ],
+   "term": "Nó"
+  },
+  {
+   "definition": "Line used to tension the outer edge (leech, as the source labels it) of the sail.",
+   "id": "m-ref-veleiro:30",
+   "location": "[page 4]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Outhaul ou Bicha"
+  },
+  {
+   "definition": "Foot: unit of length equal to 12 inches.",
+   "id": "m-ref-veleiro:31",
+   "location": "[page 4]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "inches",
+     "value": "12",
+     "what": "length in inches"
+    },
+    {
+     "unit": "cm",
+     "value": "30,48",
+     "what": "length in centimetres"
+    }
+   ],
+   "term": "Pé"
+  },
+  {
+   "definition": "Stern: the back part of the boat.",
+   "id": "m-ref-veleiro:32",
+   "location": "[page 4]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Popa"
+  },
+  {
+   "definition": "Bow: the front part of a boat.",
+   "id": "m-ref-veleiro:33",
+   "location": "[page 4]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Proa"
+  },
+  {
+   "definition": "Keel: finlike weight under the hull that resists sideways drift (leeway) and adds stability.",
+   "id": "m-ref-veleiro:34",
+   "location": "[page 4]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Quilha"
+  },
+  {
+   "definition": "Heeling: tilting the boat toward one side.",
+   "id": "m-ref-veleiro:35",
+   "location": "[page 6]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Adernar"
+  },
+  {
+   "definition": "Turning the bow away from the wind line; the opposite of heading up.",
+   "id": "m-ref-veleiro:36",
+   "location": "[page 6]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Arribar"
+  },
+  {
+   "definition": "Sailing with no sails set because the wind is very strong.",
+   "id": "m-ref-veleiro:37",
+   "location": "[page 6]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Árvore Seca"
+  },
+  {
+   "definition": "Sails set on opposite sides when sailing with the wind from astern (wing and wing).",
+   "id": "m-ref-veleiro:38",
+   "location": "[page 6]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Asa-de-Pombo"
+  },
+  {
+   "definition": "Port tack: the port side is the side receiving the wind (windward side).",
+   "id": "m-ref-veleiro:39",
+   "location": "[page 6]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Amuras a Bombordo"
+  },
+  {
+   "definition": "Starboard tack: the starboard side is the side receiving the wind (windward side).",
+   "id": "m-ref-veleiro:40",
+   "location": "[page 6]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Amuras a Boreste"
+  },
+  {
+   "definition": "Windward: the direction the wind comes from; opposite of leeward.",
+   "id": "m-ref-veleiro:41",
+   "location": "[page 6]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Barlavento"
+  },
+  {
+   "definition": "Beating: sailing against the wind by making a series of tacks.",
+   "id": "m-ref-veleiro:42",
+   "location": "[page 6]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Bordejar"
+  },
+  {
+   "definition": "Sheeting in: pulling the sheets to tighten the sail.",
+   "id": "m-ref-veleiro:43",
+   "location": "[page 6]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Caçar"
+  },
+  {
+   "definition": "Tacking: turning the bow through the wind line so the sails change sides.",
+   "id": "m-ref-veleiro:44",
+   "location": "[page 6]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Cambar"
+  },
+  {
+   "definition": "Gybing: turning the stern through the wind line so the sails change sides.",
+   "id": "m-ref-veleiro:45",
+   "location": "[page 6]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Dar um Jaibe"
+  },
+  {
+   "definition": "Head to wind: the bow points straight into the wind, leaving the boat with no headway or steering.",
+   "id": "m-ref-veleiro:46",
+   "location": "[page 6]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Filado ao Vento"
+  },
+  {
+   "definition": "Easing: letting out the sheets.",
+   "id": "m-ref-veleiro:47",
+   "location": "[page 7]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Folgar"
+  },
+  {
+   "definition": "Close-hauled: sailing as close to the wind line as possible, heading against it.",
+   "id": "m-ref-veleiro:48",
+   "location": "[page 7]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Orça Fechada"
+  },
+  {
+   "definition": "Close reach: sailing at a point between close-hauled and beam reach.",
+   "id": "m-ref-veleiro:49",
+   "location": "[page 7]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Orça Folgada"
+  },
+  {
+   "definition": "Heading up: turning the bow toward the wind; the opposite of bearing away.",
+   "id": "m-ref-veleiro:50",
+   "location": "[page 7]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Orçar"
+  },
+  {
+   "definition": "Luffing: the sail flapping irregularly, from over-easing the sheet or pointing closer to the wind than close-hauled.",
+   "id": "m-ref-veleiro:51",
+   "location": "[page 7]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Panejar"
+  },
+  {
+   "definition": "Running: sailing with the wind blowing in the same direction the boat is travelling.",
+   "id": "m-ref-veleiro:52",
+   "location": "[page 7]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Popa Rasa"
+  },
+  {
+   "definition": "Reefing: reducing sail area in strong wind by folding onto the boom (mainsail) or rolling onto the forestay (genoa).",
+   "id": "m-ref-veleiro:53",
+   "location": "[page 7]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Rizar"
+  },
+  {
+   "definition": "Leeward: the direction the wind is heading toward; opposite of windward.",
+   "id": "m-ref-veleiro:54",
+   "location": "[page 7]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Sotavento"
+  },
+  {
+   "definition": "Beam reach: sailing with the wind perpendicular to the boat's course.",
+   "id": "m-ref-veleiro:55",
+   "location": "[page 7]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "degrees",
+     "value": "90",
+     "what": "wind angle relative to boat's course"
+    }
+   ],
+   "term": "Través"
+  },
+  {
+   "definition": "Broad reach: sailing at a point between beam reach and running.",
+   "id": "m-ref-veleiro:56",
+   "location": "[page 7]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Través Folgado ou Alheta"
+  },
+  {
+   "definition": "True wind: wind speed and direction as measured by a stationary observer.",
+   "id": "m-ref-veleiro:57",
+   "location": "[page 7]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Vento Verdadeiro"
+  },
+  {
+   "definition": "Apparent wind: wind speed and direction as measured by an observer moving on a boat.",
+   "id": "m-ref-veleiro:58",
+   "location": "[page 7]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Vento Aparente"
+  },
+  {
+   "definition": "The sail acts like an airfoil, splitting the airflow and deflecting it toward the stern, which drives the boat forward.",
+   "id": "m-ref-veleiro:59",
+   "location": "[page 8]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Aerofólio"
+  },
+  {
+   "definition": "Thrust force produced by wind passing along the windward side of the sail.",
+   "id": "m-ref-veleiro:60",
+   "location": "[page 8]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Drive"
+  },
+  {
+   "definition": "Effect of air on the leeward side trying to pull away from the sail, creating low pressure behind it and most of upwind power.",
+   "id": "m-ref-veleiro:61",
+   "location": "[page 8]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "%",
+     "value": "approximately 70",
+     "what": "share of rig power when sailing upwind"
+    }
+   ],
+   "term": "Lift"
+  },
+  {
+   "definition": "Using the venturi effect: the genoa speeds airflow behind the mainsail, lowering pressure further and increasing lift.",
+   "id": "m-ref-veleiro:62",
+   "location": "[page 8]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Slot effect"
+  },
+  {
+   "definition": "Sail trim: sails should be neither over-sheeted nor over-eased; too loose deflects less air, too tight breaks the airflow.",
+   "id": "m-ref-veleiro:63",
+   "location": "[page 9]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "degrees",
+     "value": "90",
+     "what": "wind angle in over-sheeted example (beam wind)"
+    }
+   ],
+   "term": "Ajuste das Velas"
+  },
+  {
+   "definition": "Easing the sheets so air flows on both sides of the sail, used when sails are over-trimmed and push the boat sideways with little forward motion.",
+   "id": "m-ref-veleiro:64",
+   "location": "[page 10]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "folgar as velas"
+  },
+  {
+   "definition": "The trailing edge of the sail, whose fluttering is used to find the exact trim point when easing sails.",
+   "id": "m-ref-veleiro:65",
+   "location": "[page 10]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "valuma"
+  },
+  {
+   "definition": "Over-eased sails: the leech flutters, the boat moves slowly with little heel, and the sails need to be trimmed in to fill.",
+   "id": "m-ref-veleiro:66",
+   "location": "[page 10]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Vela folgada demais"
+  },
+  {
+   "definition": "When sailing downwind, set the sails at a right angle to the wind direction.",
+   "id": "m-ref-veleiro:67",
+   "location": "[page 10]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "degrees",
+     "value": "90",
+     "what": "sail angle to wind direction when sailing downwind"
+    }
+   ],
+   "term": "Velejando a favor do vento"
+  },
+  {
+   "definition": "Quick rule for sailing upwind: when in doubt, ease the sheets.",
+   "id": "m-ref-veleiro:68",
+   "location": "[page 10]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Velejando contra o vento"
+  },
+  {
+   "definition": "Tacking upwind: the only way to reach a destination lying toward the wind, by sailing a series of legs with the bow crossing the wind line.",
+   "id": "m-ref-veleiro:69",
+   "location": "[page 10]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "degrees",
+     "value": "45–50",
+     "what": "bow angle to wind line while beating"
+    },
+    {
+     "unit": "degrees",
+     "value": "90–100",
+     "what": "turn per change of direction"
+    }
+   ],
+   "term": "Bordejando"
+  },
+  {
+   "definition": "A leg or tack of the zigzag course; changing tack is called giving a bordo.",
+   "id": "m-ref-veleiro:70",
+   "location": "[page 10]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bordo"
+  },
+  {
+   "definition": "Tacking manoeuvre: the helmsman warns the crew, turns the tiller, the bow crosses the wind line, sails change sides, and the tiller is centred.",
+   "id": "m-ref-veleiro:71",
+   "location": "[page 11]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Cambada"
+  },
+  {
+   "definition": "The helmsman, who steers and gives commands to the crew during manoeuvres.",
+   "id": "m-ref-veleiro:72",
+   "location": "[page 11]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "timoneiro"
+  },
+  {
+   "definition": "The rudder or tiller in the centre position, set once the sail fills on the new side.",
+   "id": "m-ref-veleiro:73",
+   "location": "[page 11]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "a meio"
+  },
+  {
+   "definition": "Gybing: changing tack with the wind from astern, as the stern passes through the wind line and the sails change sides.",
+   "id": "m-ref-veleiro:74",
+   "location": "[page 11]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Jaibing"
+  },
+  {
+   "definition": "The boom; when it swings across in a gybe it can do so violently, endangering crew and rigging unless controlled.",
+   "id": "m-ref-veleiro:75",
+   "location": "[page 11]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "retranca"
+  },
+  {
+   "definition": "The mainsheet: trimmed in just before the gybe and eased just after the boat changes tack to control the boom.",
+   "id": "m-ref-veleiro:76",
+   "location": "[page 11]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "escota da vela grande"
+  },
+  {
+   "definition": "Gybe procedure: from a quartering wind, steer so the stern crosses the wind line, call the warning, trim the mainsail to centre, then readjust after.",
+   "id": "m-ref-veleiro:77",
+   "location": "[page 12]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Procedimento para o Jaibe"
+  },
+  {
+   "definition": "Wind coming from the quarter of the boat, the point of sail from which the gybe is begun.",
+   "id": "m-ref-veleiro:78",
+   "location": "[page 12]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vento pela alheta"
+  },
+  {
+   "definition": "The helmsman's command warning the crew that a gybe is about to be made.",
+   "id": "m-ref-veleiro:79",
+   "location": "[page 12]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Preparar para o Jaibe"
+  },
+  {
+   "definition": "Correct sail trim for the wind angle, which must be kept and readjusted when the wind shifts.",
+   "id": "m-ref-veleiro:80",
+   "location": "[page 13]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "mareação"
+  },
+  {
+   "definition": "A sudden wind shift that requires the sails to be readjusted; there are two types.",
+   "id": "m-ref-veleiro:81",
+   "location": "[page 13]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "rondada de vento"
+  },
+  {
+   "definition": "A shift in wind direction, here away from the bow, which over-trims the sails and usually increases heel; harder to diagnose than a shift toward the bow.",
+   "id": "m-ref-veleiro:82",
+   "location": "page 14",
+   "measured_by": "",
+   "numbers": [],
+   "term": "rondada"
+  },
+  {
+   "definition": "Wind indicator that the sailor watches closely to detect wind shifts early.",
+   "id": "m-ref-veleiro:83",
+   "location": "page 14",
+   "measured_by": "",
+   "numbers": [],
+   "term": "biruta"
+  },
+  {
+   "definition": "The amount of sail exposed to the wind, which strongly influences speed, performance and control; strong wind calls for less.",
+   "id": "m-ref-veleiro:84",
+   "location": "page 14",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Área Vélica"
+  },
+  {
+   "definition": "Technique for reducing the mainsail area to suit stronger wind conditions.",
+   "id": "m-ref-veleiro:85",
+   "location": "page 14",
+   "measured_by": "",
+   "numbers": [],
+   "term": "rizo"
+  },
+  {
+   "definition": "Furling device on the forestay used to roll up part of the genoa and reduce its area.",
+   "id": "m-ref-veleiro:86",
+   "location": "page 14",
+   "measured_by": "",
+   "numbers": [],
+   "term": "enrolador"
+  },
+  {
+   "definition": "Excessive heeling caused by too much sail area, making the boat unstable and hard to control.",
+   "id": "m-ref-veleiro:87",
+   "location": "page 14",
+   "measured_by": "",
+   "numbers": [],
+   "term": "adernamento"
+  },
+  {
+   "definition": "Drag; increases when heel submerges more hull, reducing boat speed.",
+   "id": "m-ref-veleiro:88",
+   "location": "page 14",
+   "measured_by": "",
+   "numbers": [],
+   "term": "arrasto"
+  },
+  {
+   "definition": "Sideways drift of the boat, worsened by heel as the keel resists less, hurting upwind performance.",
+   "id": "m-ref-veleiro:89",
+   "location": "page 14",
+   "measured_by": "",
+   "numbers": [],
+   "term": "deriva"
+  },
+  {
+   "definition": "Sailing upwind, the point of sailing whose performance suffers from heel and leeway.",
+   "id": "m-ref-veleiro:90",
+   "location": "page 14",
+   "measured_by": "",
+   "numbers": [],
+   "term": "contravento"
+  },
+  {
+   "definition": "Genoa cars (sheet lead positions), which must be moved forward when the headsail is reduced.",
+   "id": "m-ref-veleiro:91",
+   "location": "page 14",
+   "measured_by": "",
+   "numbers": [],
+   "term": "carrinhos de genoa"
+  },
+  {
+   "definition": "Rule-of-thumb table matching headsail size and type to wind strength: weak, moderate or strong wind.",
+   "id": "m-ref-veleiro:92",
+   "location": "page 14",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "knots",
+     "value": "0-10",
+     "what": "weak wind range"
+    },
+    {
+     "unit": "percent",
+     "value": "110%-150%",
+     "what": "genoa size in weak wind (Genoa 1)"
+    },
+    {
+     "unit": "knots",
+     "value": "11-25",
+     "what": "moderate wind range"
+    },
+    {
+     "unit": "percent",
+     "value": "90%-110%",
+     "what": "genoa size in moderate wind (Genoa 3)"
+    },
+    {
+     "unit": "knots",
+     "value": "25 or more",
+     "what": "strong wind threshold"
+    },
+    {
+     "unit": "percent",
+     "value": "60%-90%",
+     "what": "sail size in strong wind (Storm Jib)"
+    }
+   ],
+   "term": "Tabela simplificada para seleção da vela de proa"
+  },
+  {
+   "definition": "Small headsail chosen for strong wind in the simplified selection table.",
+   "id": "m-ref-veleiro:93",
+   "location": "page 14",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "knots",
+     "value": "25 or more",
+     "what": "wind speed"
+    },
+    {
+     "unit": "percent",
+     "value": "60%-90%",
+     "what": "sail size"
+    }
+   ],
+   "term": "Storm Jib"
+  },
+  {
+   "definition": "Halyard, the line used to hoist and lower a sail; released to lower the sail and reconnected to the new sail's head.",
+   "id": "m-ref-veleiro:94",
+   "location": "page 15",
+   "measured_by": "",
+   "numbers": [],
+   "term": "adriça"
+  },
+  {
+   "definition": "Head of the genoa, where the halyard connects.",
+   "id": "m-ref-veleiro:95",
+   "location": "page 15",
+   "measured_by": "",
+   "numbers": [],
+   "term": "tope da genoa"
+  },
+  {
+   "definition": "To feed or attach the new sail's luff onto the forestay when changing headsails.",
+   "id": "m-ref-veleiro:96",
+   "location": "page 15",
+   "measured_by": "",
+   "numbers": [],
+   "term": "entralhar"
+  },
+  {
+   "definition": "Tack cringle; a new one is set on the luff when reefing and secured at the gooseneck.",
+   "id": "m-ref-veleiro:97",
+   "location": "page 15",
+   "measured_by": "",
+   "numbers": [],
+   "term": "punho da amura"
+  },
+  {
+   "definition": "Clew cringle; a new one is set on the leech when reefing and secured at the end of the boom.",
+   "id": "m-ref-veleiro:98",
+   "location": "page 15",
+   "measured_by": "",
+   "numbers": [],
+   "term": "punho da escota"
+  },
+  {
+   "definition": "A reefing point on the mainsail; cruising boats commonly have several, used to reduce sail area.",
+   "id": "m-ref-veleiro:99",
+   "location": "[page 16]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "points",
+     "value": "3",
+     "what": "usual number of reef points on cruising boats"
+    }
+   ],
+   "term": "ponto de rizo"
+  },
+  {
+   "definition": "The lowest reef point, used as the first step in shortening the sail.",
+   "id": "m-ref-veleiro:100",
+   "location": "[page 16]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "primeiro rizo"
+  },
+  {
+   "definition": "The reef point following the first one, reducing the sail further.",
+   "id": "m-ref-veleiro:101",
+   "location": "[page 16]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "segundo rizo"
+  },
+  {
+   "definition": "Each reef needs its own dedicated set of lines to secure it.",
+   "id": "m-ref-veleiro:102",
+   "location": "[page 16]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "jogo de cabos próprios"
+  },
+  {
+   "definition": "The new tack corner of the reefed sail, which must be fixed firmly near the gooseneck because it is reinforced to take load.",
+   "id": "m-ref-veleiro:103",
+   "location": "[page 16]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "punho de amura"
+  },
+  {
+   "definition": "The new clew corner of the reefed sail, which must be fixed firmly near the boom end because it is reinforced to take load.",
+   "id": "m-ref-veleiro:104",
+   "location": "[page 16]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "punho de escota"
+  },
+  {
+   "definition": "Lines holding the excess reefed sail; they are not built to bear load, so tension on them can deform or tear the sail.",
+   "id": "m-ref-veleiro:105",
+   "location": "[page 16]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "cabos auxiliares"
+  },
+  {
+   "definition": "The mainsail, which should be kept reasonably flat after reefing to help control the boat.",
+   "id": "m-ref-veleiro:106",
+   "location": "[page 16]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vela grande"
+  },
+  {
+   "definition": "The sail's camber or shape, adjusted mainly through halyard tension, which affects boat performance.",
+   "id": "m-ref-veleiro:107",
+   "location": "[page 16]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "curvatura da vela"
+  },
+  {
+   "definition": "The luff of the sail; wrinkles along it show whether halyard tension is right.",
+   "id": "m-ref-veleiro:108",
+   "location": "[page 16]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "testa"
+  },
+  {
+   "definition": "A full, baggy sail resulting from too little halyard tension.",
+   "id": "m-ref-veleiro:109",
+   "location": "[page 16]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vela barriguda"
+  },
+  {
+   "definition": "Wrinkles on the luff or foot that indicate incorrect tension: vertical for too much, perpendicular for too little.",
+   "id": "m-ref-veleiro:110",
+   "location": "[page 16]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "rugas"
+  },
+  {
+   "definition": "The foot of the mainsail along the boom; same tension principle as the luff, with wrinkles showing wrong tension.",
+   "id": "m-ref-veleiro:111",
+   "location": "[page 16]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "esteira da vela grande"
+  },
+  {
+   "definition": "Mainsheet track control; easing it makes the mainsail flatter.",
+   "id": "m-ref-veleiro:112",
+   "location": "[page 16]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "traveller"
+  },
+  {
+   "definition": "Hanks or luff attachments; headsails without them make luff wrinkles harder to see.",
+   "id": "m-ref-veleiro:113",
+   "location": "[page 17]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "garrunchos"
+  },
+  {
+   "definition": "Hoisting and tightening the halyard until the luff looks smooth, which indicates correct tension.",
+   "id": "m-ref-veleiro:114",
+   "location": "[page 17]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "caçar a adriça"
+  },
+  {
+   "definition": "Stronger wind requires more halyard tension to flatten the sail.",
+   "id": "m-ref-veleiro:115",
+   "location": "[page 17]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "intensidade do vento"
+  },
+  {
+   "definition": "Trimming the sheets in; once the wind fills the sail, wrinkles may appear showing more luff tension is needed.",
+   "id": "m-ref-veleiro:116",
+   "location": "[page 17]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "caçar as escotas"
+  },
+  {
+   "definition": "Signs on a waterway, buoys and fixed beacons, that guide traffic and show where it is safe to sail.",
+   "id": "m-ref-veleiro:117",
+   "location": "[page 18]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "auxílios a navegação"
+  },
+  {
+   "definition": "Floating markers that form part of the aids to navigation.",
+   "id": "m-ref-veleiro:118",
+   "location": "[page 18]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bóias"
+  },
+  {
+   "definition": "Fixed beacons marking a channel, as opposed to floating buoys.",
+   "id": "m-ref-veleiro:119",
+   "location": "[page 18]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "balizas fixas"
+  },
+  {
+   "definition": "System marking channel sides; returning from sea, red even-numbered marks are on the right and green odd-numbered on the left.",
+   "id": "m-ref-veleiro:120",
+   "location": "[page 18]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "marcação lateral"
+  },
+  {
+   "definition": "Unlit buoys; red ones have conical tops and green ones flat tops.",
+   "id": "m-ref-veleiro:121",
+   "location": "[page 18]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bóias cegas"
+  },
+  {
+   "definition": "Buoys marking channel center where traffic keeps to the right bank, painted with vertical white and red stripes.",
+   "id": "m-ref-veleiro:122",
+   "location": "[page 18]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bóias de centro de canal"
+  },
+  {
+   "definition": "Marks used where a channel splits in two; a horizontal red or green stripe on top shows which way the main channel lies.",
+   "id": "m-ref-veleiro:123",
+   "location": "[page 19]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "marcações de junção"
+  },
+  {
+   "definition": "A green top stripe on a junction mark means the main channel continues to the right.",
+   "id": "m-ref-veleiro:124",
+   "location": "[page 19]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Verde, canal principal para a direita"
+  },
+  {
+   "definition": "A red top stripe on a junction mark means the main channel continues to the left.",
+   "id": "m-ref-veleiro:125",
+   "location": "[page 19]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Vermelha, canal principal para a esquerda"
+  },
+  {
+   "definition": "White and orange buoys marking isolated dangers, not tied to any particular channel.",
+   "id": "m-ref-veleiro:126",
+   "location": "[page 19]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bóias especiais pintadas de branco e laranja"
+  },
+  {
+   "definition": "A life jacket saves energy in the water, helping delay hypothermia; it is advisable for children and those not yet used to the sea's motion.",
+   "id": "m-ref-veleiro:127",
+   "location": "[page 19]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "°C",
+     "value": "12",
+     "what": "water temperature in the San Francisco Bay example"
+    }
+   ],
+   "term": "colete salva-vidas"
+  },
+  {
+   "definition": "Dangerous loss of body heat after falling into water, a risk even in tropical waters.",
+   "id": "m-ref-veleiro:128",
+   "location": "[page 19]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "hipotermia"
+  },
+  {
+   "definition": "Safety rule: always keep one hand holding a fixed point on the boat, using the other for tasks.",
+   "id": "m-ref-veleiro:129",
+   "location": "[page 19]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "uma mão para o trabalho no barco e a outra para você"
+  },
+  {
+   "definition": "Steel wire cables supporting the mast; they can break near the connectors, leaving dangerously sharp ends.",
+   "id": "m-ref-veleiro:130",
+   "location": "[page 19]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "estais"
+  },
+  {
+   "definition": "Seasickness, which is common; eased by keeping warm, lying down with head low and keeping the mind occupied.",
+   "id": "m-ref-veleiro:131",
+   "location": "[page 19]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "enjôo"
+  },
+  {
+   "definition": "When nearing a dock, wait until the boat is close enough to step off or on safely rather than jumping.",
+   "id": "m-ref-veleiro:132",
+   "location": "[page 19]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "aproximação de um cais"
+  },
+  {
+   "definition": "International collision-avoidance rules deciding which of two boats on a collision course has right of way.",
+   "id": "m-ref-veleiro:133",
+   "location": "[page 20]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Regras de Preferência de Passagem"
+  },
+  {
+   "definition": "The boat with right of way; it must hold its course so the other skipper can steer clear.",
+   "id": "m-ref-veleiro:134",
+   "location": "[page 20]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Com Preferência"
+  },
+  {
+   "definition": "The boat that must give way by manoeuvring to avoid the collision.",
+   "id": "m-ref-veleiro:135",
+   "location": "[page 20]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Obrigado a Manobrar"
+  },
+  {
+   "definition": "Any vessel using an engine for propulsion, including a sailboat under power with sails raised.",
+   "id": "m-ref-veleiro:136",
+   "location": "[page 20]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Barco a Motor"
+  },
+  {
+   "definition": "Limited ability to manoeuvre; such vessels (large ships in channels, towing, trawling, survey, or in difficulty) get right of way over sailboats.",
+   "id": "m-ref-veleiro:137",
+   "location": "[page 20]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "restrição de manobra"
+  },
+  {
+   "definition": "A sailboat using its auxiliary engine is treated as a power vessel and gets no sail privilege.",
+   "id": "m-ref-veleiro:138",
+   "location": "[page 20]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "motorando"
+  },
+  {
+   "definition": "When overtaking, the overtaking vessel must keep out of the way of the one being overtaken.",
+   "id": "m-ref-veleiro:139",
+   "location": "[page 20]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Ultrapassagem"
+  },
+  {
+   "definition": "Two vessels approaching head-on should both turn to starboard and pass port side to port side.",
+   "id": "m-ref-veleiro:140",
+   "location": "[page 20]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Rumos Contrários"
+  },
+  {
+   "definition": "For two power vessels on crossing courses, the one with the other on its starboard side... actually the one approaching from the other's starboard has right of way; the other alters course.",
+   "id": "m-ref-veleiro:141",
+   "location": "[page 20]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Rumos Cruzados"
+  },
+  {
+   "definition": "Sailing vessels generally have right of way over power vessels, so a sailboat under engine should yield to vessels under sail.",
+   "id": "m-ref-veleiro:142",
+   "location": "[page 20]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Veleiros"
+  },
+  {
+   "definition": "Heading for the rules between sailboats, based on which side the wind comes from (port or starboard tack); details follow in the next part.",
+   "id": "m-ref-veleiro:143",
+   "location": "[page 20]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Amuras a Bombordo X Amuras a Boreste"
+  },
+  {
+   "definition": "The side of the boat the wind comes from; whether two boats are on the same or opposite tacks determines who gives way.",
+   "id": "m-ref-veleiro:144",
+   "location": "[page 21]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "amuras"
+  },
+  {
+   "definition": "A situation in which two boats' courses will bring them together unless one changes course.",
+   "id": "m-ref-veleiro:145",
+   "location": "[page 21]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "rumo de colisão"
+  },
+  {
+   "definition": "Right of way: the status of the vessel that may hold its course, though it must still act to avoid collision.",
+   "id": "m-ref-veleiro:146",
+   "location": "[page 21]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "preferência de passagem"
+  },
+  {
+   "definition": "Windward versus leeward: when two boats are on the same tack, the leeward boat has right of way.",
+   "id": "m-ref-veleiro:147",
+   "location": "[page 21]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Barlavento X Sotavento"
+  },
+  {
+   "definition": "A ship in a narrow channel with restricted manoeuvrability and draft keeps right of way, even while overtaking.",
+   "id": "m-ref-veleiro:148",
+   "location": "[page 21]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "navio num canal estreito"
+  },
+  {
+   "definition": "Keeping a lookout both ahead and astern, since ships usually move faster than sailboats.",
+   "id": "m-ref-veleiro:149",
+   "location": "[page 21]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vigia a vante e a ré"
+  },
+  {
+   "definition": "The right-of-way vessel must manoeuvre to avoid collision if the other boat is not acting appropriately. Having priority is no excuse.",
+   "id": "m-ref-veleiro:150",
+   "location": "[page 22]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Regras Gerais"
+  },
+  {
+   "definition": "Course changes should be bold and decisive so the other skipper understands your intentions.",
+   "id": "m-ref-veleiro:151",
+   "location": "[page 22]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "alteração de rumo clara e sem hesitação"
+  },
+  {
+   "definition": "Compass bearing to another vessel. If it stays constant as boats approach, a collision is imminent.",
+   "id": "m-ref-veleiro:152",
+   "location": "[page 22]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "marcação magnética"
+  },
+  {
+   "definition": "Blind zone on the leeward side from abeam to the bow, where other boats on opposite tacks may be hidden.",
+   "id": "m-ref-veleiro:153",
+   "location": "[page 22]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "área cega"
+  },
+  {
+   "definition": "Sailing close to the wind. The genoa blind spot is greatest on this point of sail, and rescue approaches aim to end on it.",
+   "id": "m-ref-veleiro:154",
+   "location": "[page 22]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "orça"
+  },
+  {
+   "definition": "A crew member posted on the leeward side as lookout when the genoa obstructs the helmsman's view.",
+   "id": "m-ref-veleiro:155",
+   "location": "[page 22]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "tripulante de vigia"
+  },
+  {
+   "definition": "Emergency of a person falling into the water, requiring a practised rescue manoeuvre done correctly the first time.",
+   "id": "m-ref-veleiro:156",
+   "location": "[page 23]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Homem ao Mar (MOB - Man Overboard)"
+  },
+  {
+   "definition": "First step: shout immediately to alert the whole crew so everyone can take their role in the rescue.",
+   "id": "m-ref-veleiro:157",
+   "location": "[page 23]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Grite \"HOMEM AO MAR\""
+  },
+  {
+   "definition": "Cushions, lifejackets or buoys thrown close to the victim, without hitting them, to keep them afloat and visible.",
+   "id": "m-ref-veleiro:158",
+   "location": "[page 23]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "dispositivo flutuante"
+  },
+  {
+   "definition": "A crew member is assigned to keep watching the victim so the skipper can focus on handling the boat.",
+   "id": "m-ref-veleiro:159",
+   "location": "[page 23]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vigilância na posição da vítima"
+  },
+  {
+   "definition": "Lowering and securing the genoa on deck if it would be hard to control, helping keep the boat under control.",
+   "id": "m-ref-veleiro:160",
+   "location": "[page 23]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "abaixar a genoa"
+  },
+  {
+   "definition": "On larger boats, hoisting the victim aboard using a halyard or similar line.",
+   "id": "m-ref-veleiro:161",
+   "location": "[page 23]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "içar a vítima com adriça"
+  },
+  {
+   "definition": "Main goal of the manoeuvre: position the boat to approach the victim close-hauled so speed can be easily shed.",
+   "id": "m-ref-veleiro:162",
+   "location": "[page 23]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "abordagem da vítima numa orça"
+  },
+  {
+   "definition": "Pick up the victim from the leeward side after first checking wind direction.",
+   "id": "m-ref-veleiro:163",
+   "location": "[page 23]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "benefits",
+     "value": "3",
+     "what": "benefits of leeward approach"
+    }
+   ],
+   "term": "resgate pelo lado de sotavento"
+  },
+  {
+   "definition": "The leeward side usually sits lower to the water, making it easier to get the victim aboard.",
+   "id": "m-ref-veleiro:164",
+   "location": "[page 23]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "borda mais próxima da água"
+  },
+  {
+   "definition": "Fastest way to return to a person overboard when sailing with wind abeam or forward: sail one boat length, gybe, then head up toward the victim.",
+   "id": "m-ref-veleiro:165",
+   "location": "[page 24]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "boat length",
+     "value": "1",
+     "what": "distance sailed on original course before gybing"
+    }
+   ],
+   "term": "Dando um Jaibe"
+  },
+  {
+   "definition": "Final approach to the victim, easing the sheets to slow down and stop the boat alongside, lowering sails if needed to stop it restarting.",
+   "id": "m-ref-veleiro:166",
+   "location": "[page 24]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Abordagem Final"
+  },
+  {
+   "definition": "Heading up, steering closer to the wind, used to approach the victim on a close-hauled course.",
+   "id": "m-ref-veleiro:167",
+   "location": "[page 24]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "orçando"
+  },
+  {
+   "definition": "Tacking, the best way to return to the victim when sailing downwind, giving a direct close-hauled course to the person.",
+   "id": "m-ref-veleiro:168",
+   "location": "[page 24]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "boat lengths",
+     "value": "2",
+     "what": "distance sailed on original course with wind on the quarter before tacking"
+    }
+   ],
+   "term": "Cambando"
+  },
+  {
+   "definition": "Figure-eight recovery manoeuvre for strong wind or unsafe gybing, or with a small crew: cross a perpendicular line, tack, bear away, then head up to the victim.",
+   "id": "m-ref-veleiro:169",
+   "location": "[page 25]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "degrees",
+     "value": "90",
+     "what": "angle of imaginary line between victim and wind"
+    }
+   ],
+   "term": "Manobra do 8"
+  },
+  {
+   "definition": "Bearing away, turning away from the wind, used after tacking to resume the earlier sail position with tacks on the opposite side.",
+   "id": "m-ref-veleiro:170",
+   "location": "[page 25]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "arribe"
+  },
+  {
+   "definition": "Reef knot, used to tie the mainsail when reefing, secure objects to fixed points and join lines.",
+   "id": "m-ref-veleiro:171",
+   "location": "[page 26]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Nó Direito"
+  },
+  {
+   "definition": "Round turn with two half hitches, a general-purpose knot for attaching things, mostly fenders to posts and lifelines; holds under movement.",
+   "id": "m-ref-veleiro:172",
+   "location": "[page 26]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Volta Redonda com Dois Cotes"
+  },
+  {
+   "definition": "Bowline, called the king of knots; forms a loop at a line's end, secure and easy to untie, used for halyards, sheets and rings.",
+   "id": "m-ref-veleiro:173",
+   "location": "[page 27]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Lais de Guia"
+  },
+  {
+   "definition": "Figure-eight knot, a stopper knot at the ends of sheets and halyards to keep them from escaping their cars or mast slots.",
+   "id": "m-ref-veleiro:174",
+   "location": "[page 27]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Nó de 8"
+  },
+  {
+   "definition": "Clove hitch, used to tie a line to a solid point such as a dock post or the tiller.",
+   "id": "m-ref-veleiro:175",
+   "location": "[page 27]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Volta do Fiel"
+  },
+  {
+   "definition": "Sheet bend, joins two lines of similar diameter.",
+   "id": "m-ref-veleiro:176",
+   "location": "[page 28]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Nó de Escota"
+  },
+  {
+   "definition": "Double sheet bend, made with an extra turn when joining lines of very different diameters.",
+   "id": "m-ref-veleiro:177",
+   "location": "[page 28]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "nó de escota dobrado"
+  },
+  {
+   "definition": "Cleat hitch, the correct way to secure a line to a cleat.",
+   "id": "m-ref-veleiro:178",
+   "location": "[page 28]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Volta do Cunho"
+  }
+ ],
+ "kind": "reference",
+ "lang": "pt-BR",
+ "partsDone": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7
+ ],
+ "partsTotal": 8,
+ "runAt": "2026-11-12T19:49:50.108Z",
+ "sourceId": "m-ref-veleiro",
+ "textChars": 38679,
+ "title": "Veleiro.net, Curso de Vela Online (Aprenda a velejar, 7 lessons)"
+}

@@ -1,0 +1,539 @@
+{
+ "items": [
+  {
+   "definition": "Generic Tagus term for any small river-traffic or fishing boat; later differentiated by function and route.",
+   "id": "mmwdz14kpqwcc:1",
+   "location": "[section: Cacilheiros no Rio Tejo, Lisboa]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barca"
+  },
+  {
+   "definition": "The two main kinds of river-navigation boats serving Lisbon in the 16th century.",
+   "id": "mmwdz14kpqwcc:2",
+   "location": "[section: Cacilheiros no Rio Tejo, Lisboa]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "1490",
+     "what": "river boats serving Lisbon in 1552"
+    }
+   ],
+   "term": "barcas e batéis"
+  },
+  {
+   "definition": "Shallow-water inlets of the Tagus that boats had to enter, requiring suitable hull designs.",
+   "id": "mmwdz14kpqwcc:3",
+   "location": "[section: Cacilheiros no Rio Tejo, Lisboa]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "esteiros de águas rasas"
+  },
+  {
+   "definition": "Keel; a hull type chosen for certain boats depending on their function and route.",
+   "id": "mmwdz14kpqwcc:4",
+   "location": "[section: Cacilheiros no Rio Tejo, Lisboa]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "quilha"
+  },
+  {
+   "definition": "Half keel; an intermediate hull type between full keel and flat bottom.",
+   "id": "mmwdz14kpqwcc:5",
+   "location": "[section: Cacilheiros no Rio Tejo, Lisboa]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "meia quilha"
+  },
+  {
+   "definition": "Flat bottom; a hull suited to shallow waters.",
+   "id": "mmwdz14kpqwcc:6",
+   "location": "[section: Cacilheiros no Rio Tejo, Lisboa]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "fundo raso"
+  },
+  {
+   "definition": "Curved or straight bows, a design variation between boat types.",
+   "id": "mmwdz14kpqwcc:7",
+   "location": "[section: Cacilheiros no Rio Tejo, Lisboa]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "proas curvilíneas ou direitas"
+  },
+  {
+   "definition": "Masts and sail plan, which varied among boat types according to use.",
+   "id": "mmwdz14kpqwcc:8",
+   "location": "[section: Cacilheiros no Rio Tejo, Lisboa]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "mastros e velame"
+  },
+  {
+   "definition": "Caulkers, craftsmen who helped build the wooden traditional boats.",
+   "id": "mmwdz14kpqwcc:9",
+   "location": "[section: Estaleiros e Tipologias]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "calafates"
+  },
+  {
+   "definition": "Shipwrights who built the wooden traditional Tagus boats in riverside yards.",
+   "id": "mmwdz14kpqwcc:10",
+   "location": "[section: Estaleiros e Tipologias]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "carpinteiros navais"
+  },
+  {
+   "definition": "Shipyards, mostly in riverside towns, where the wooden boats were built, each with its own style.",
+   "id": "mmwdz14kpqwcc:11",
+   "location": "[section: Estaleiros e Tipologias]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "estaleiros navais"
+  },
+  {
+   "definition": "A passenger-transport boat type of the Tagus.",
+   "id": "mmwdz14kpqwcc:12",
+   "location": "[section: Estaleiros e Tipologias]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "catraio"
+  },
+  {
+   "definition": "A passenger-carrying boat type associated with Cacilhas.",
+   "id": "mmwdz14kpqwcc:13",
+   "location": "[section: Estaleiros e Tipologias]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bote cacilheiro"
+  },
+  {
+   "definition": "A cargo-carrying boat type listed among Tagus freight boats.",
+   "id": "mmwdz14kpqwcc:14",
+   "location": "[section: Estaleiros e Tipologias]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "canoa cacilheira"
+  },
+  {
+   "definition": "A boat type used for passenger transport and for fishing.",
+   "id": "mmwdz14kpqwcc:15",
+   "location": "[section: Estaleiros e Tipologias]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "caíque"
+  },
+  {
+   "definition": "Boat types used for fishing on the Tagus.",
+   "id": "mmwdz14kpqwcc:16",
+   "location": "[section: Estaleiros e Tipologias]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "saveiros e muletas"
+  },
+  {
+   "definition": "Elegant keelless cargo boat with a bulging hull, two prows, and a steeply raked mast; one of the Tagus's most emblematic vessels.",
+   "id": "mmwdz14kpqwcc:17",
+   "location": "[section: Varino]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "varino"
+  },
+  {
+   "definition": "Lateen sail, set by the varino on a mast raked strongly backward.",
+   "id": "mmwdz14kpqwcc:18",
+   "location": "[section: Varino]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pano latino"
+  },
+  {
+   "definition": "Stay, a rigging line the varino set along with its lateen sail.",
+   "id": "mmwdz14kpqwcc:19",
+   "location": "[section: Varino]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "estai"
+  },
+  {
+   "definition": "Decorative tuft topping the varino's pronounced, toothed forward prow.",
+   "id": "mmwdz14kpqwcc:20",
+   "location": "[section: Varino]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "cabeleira ou borla"
+  },
+  {
+   "definition": "Raised false bulwarks on the varino, helping to stow cargo better.",
+   "id": "mmwdz14kpqwcc:21",
+   "location": "[section: Varino]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bordas falsas"
+  },
+  {
+   "definition": "Hold fitted with removable floor boards or compartments for stowing cargo on the varino.",
+   "id": "mmwdz14kpqwcc:22",
+   "location": "[section: Varino]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "porão com paneiros"
+  },
+  {
+   "definition": "Sturdy keeled cargo vessel with open waist and flat stern, used to load and unload ships and quays; emblematic of the Tagus.",
+   "id": "mmwdz14kpqwcc:23",
+   "location": "[section: Fragata]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "tonnes",
+     "value": "10 to 100",
+     "what": "displacement"
+    },
+    {
+     "unit": "metres",
+     "value": "20 to 25",
+     "what": "length"
+    },
+    {
+     "unit": "m",
+     "value": "6.10",
+     "what": "beam (boca)"
+    },
+    {
+     "unit": "m",
+     "value": "2.60",
+     "what": "depth (pontal)"
+    },
+    {
+     "unit": "men",
+     "value": "3 to 5",
+     "what": "crew size"
+    }
+   ],
+   "term": "fragata"
+  },
+  {
+   "definition": "Gaff sail; the large main sail of the fragata, carried on a single mast raked aft.",
+   "id": "mmwdz14kpqwcc:24",
+   "location": "[section: Fragata]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vela de carangueja"
+  },
+  {
+   "definition": "One or two headsails carried forward on the fragata.",
+   "id": "mmwdz14kpqwcc:25",
+   "location": "[section: Fragata]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "sails",
+     "value": "1 or 2",
+     "what": "number of headsails"
+    }
+   ],
+   "term": "velas de proa"
+  },
+  {
+   "definition": "Fixed, secured rudder of the fragata.",
+   "id": "mmwdz14kpqwcc:26",
+   "location": "[section: Fragata]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "leme seguro"
+  },
+  {
+   "definition": "Towing by a small rowed boat, used when no favourable wind was available for the fragata.",
+   "id": "mmwdz14kpqwcc:27",
+   "location": "[section: Fragata]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "puxada a remos por um pequeno bote"
+  },
+  {
+   "definition": "Medium-sized boat between a bote and a large fragata, sometimes also called fragata for similar functions.",
+   "id": "mmwdz14kpqwcc:28",
+   "location": "[section: Fragata]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "falua"
+  },
+  {
+   "definition": "Steamers, first paddle-wheel then propeller-driven, that from the 1860s gradually displaced small passenger boats between the river banks.",
+   "id": "mmwdz14kpqwcc:29",
+   "location": "[section: Desaparecimento e Recuperação de Antigas Embarcaçõ",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "decade",
+     "value": "1860s",
+     "what": "start of steamer era"
+    }
+   ],
+   "term": "vapores"
+  },
+  {
+   "definition": "Large traditional Tagus cargo sailing vessels with billowing sails, shuttling between the two banks; remembered as the 'Queen of the Tagus Estuary' but now vanished.",
+   "id": "mmwdz14kpqwcc:30",
+   "location": "Iconografia e Memória – A Fragata Rainha do Tejo",
+   "measured_by": "",
+   "numbers": [],
+   "term": "fragatas"
+  },
+  {
+   "definition": "Traditional Tagus sailing vessels that, with the fragatas, survived almost to the present before nearly disappearing from the river.",
+   "id": "mmwdz14kpqwcc:31",
+   "location": "Text before section: Iconografia e Memória",
+   "measured_by": "",
+   "numbers": [],
+   "term": "varinos"
+  },
+  {
+   "definition": "Small traditional boats of the Tagus, some still surviving at Sarilhos Pequenos and Moita; also used for early river crossings.",
+   "id": "mmwdz14kpqwcc:32",
+   "location": "Text before section: Iconografia e Memória",
+   "measured_by": "",
+   "numbers": [],
+   "term": "botes"
+  },
+  {
+   "definition": "Traditional Tagus river craft, among the best-known boats, surviving today in a few places such as Sarilhos Pequenos and Moita.",
+   "id": "mmwdz14kpqwcc:33",
+   "location": "Iconografia e Memória – A Fragata Rainha do Tejo",
+   "measured_by": "",
+   "numbers": [],
+   "term": "canoas"
+  },
+  {
+   "definition": "Boats of the fragata type, preserved by Seixal council for tourism and recreation, once used for local traffic between quays and estuary ports.",
+   "id": "mmwdz14kpqwcc:34",
+   "location": "Text before section: Iconografia e Memória",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1914",
+     "what": "year of 'Baía do Seixal'"
+    },
+    {
+     "unit": "year",
+     "value": "1934",
+     "what": "year of 'Gaivotas'"
+    }
+   ],
+   "term": "botes-de-fragata"
+  },
+  {
+   "definition": "A restored varino, part of the Seixal Municipal Ecomuseum collection and used as a recreational vessel.",
+   "id": "mmwdz14kpqwcc:35",
+   "location": "Text before section: Iconografia e Memória",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1921",
+     "what": "year built"
+    }
+   ],
+   "term": "varino \"Amoroso\""
+  },
+  {
+   "definition": "The masters or skippers of river boats, for whom upriver navigation stopped being profitable.",
+   "id": "mmwdz14kpqwcc:36",
+   "location": "Text before section: Iconografia e Memória",
+   "measured_by": "",
+   "numbers": [],
+   "term": "arrais"
+  },
+  {
+   "definition": "Small boats that, with botes and faluas, provided early crossings to Montijo.",
+   "id": "mmwdz14kpqwcc:37",
+   "location": "Cacilheiros section",
+   "measured_by": "",
+   "numbers": [],
+   "term": "catraios"
+  },
+  {
+   "definition": "Well-known traditional boats that long ensured the link with present-day Montijo, formerly Aldeia Galega.",
+   "id": "mmwdz14kpqwcc:38",
+   "location": "Cacilheiros section",
+   "measured_by": "",
+   "numbers": [],
+   "term": "faluas"
+  },
+  {
+   "definition": "Sails filled by the wind, a defining visual feature of the fragata as it moved between the riverbanks.",
+   "id": "mmwdz14kpqwcc:39",
+   "location": "Iconografia e Memória – A Fragata Rainha do Tejo",
+   "measured_by": "",
+   "numbers": [],
+   "term": "velas enfunadas ao vento"
+  },
+  {
+   "definition": "The wide stretch of the Tagus estuary where old ferries had frightening crossings in rough sea conditions.",
+   "id": "mmwdz14kpqwcc:40",
+   "location": "Cacilheiros section",
+   "measured_by": "",
+   "numbers": [],
+   "term": "mar da Palha"
+  },
+  {
+   "definition": "Rough sea conditions that made crossings of the Mar da Palha dangerous for old boats.",
+   "id": "mmwdz14kpqwcc:41",
+   "location": "Cacilheiros section",
+   "measured_by": "",
+   "numbers": [],
+   "term": "agitação marítima"
+  },
+  {
+   "definition": "Quays or landing places along the Tagus where boats docked and crews worked.",
+   "id": "mmwdz14kpqwcc:42",
+   "location": "Cacilheiros section",
+   "measured_by": "",
+   "numbers": [],
+   "term": "cais"
+  },
+  {
+   "definition": "To berth or moor a boat at a quay, used in the verse about manoeuvring a boat.",
+   "id": "mmwdz14kpqwcc:43",
+   "location": "Zé Cacilheiro",
+   "measured_by": "",
+   "numbers": [],
+   "term": "atracar"
+  },
+  {
+   "definition": "Refers to manoeuvring a boat, mentioned in the song lyrics as the skipper's handling before mooring.",
+   "id": "mmwdz14kpqwcc:44",
+   "location": "Zé Cacilheiro",
+   "measured_by": "",
+   "numbers": [],
+   "term": "manobrei"
+  },
+  {
+   "definition": "Ferries linking the Tagus banks, named after the original Cacilhas–Lisbon route; later steam, motor and catamaran vessels.",
+   "id": "mmwdz14kpqwcc:45",
+   "location": "Cacilheiros section",
+   "measured_by": "",
+   "numbers": [],
+   "term": "cacilheiros"
+  },
+  {
+   "definition": "Motorised ferries, some carrying cars and carts, whose arrival helped displace traditional sailing boats.",
+   "id": "mmwdz14kpqwcc:46",
+   "location": "Text before section: Iconografia e Memória",
+   "measured_by": "",
+   "numbers": [],
+   "term": "ferry-boats"
+  },
+  {
+   "definition": "Steam ships introduced on the Tagus in the 19th century, later bought from various European countries.",
+   "id": "mmwdz14kpqwcc:47",
+   "location": "Cacilheiros section",
+   "measured_by": "",
+   "numbers": [],
+   "term": "navios a vapor"
+  },
+  {
+   "definition": "Modern twin-hulled vessels that replaced many older ferries, such as on the Montijo–Lisbon route from the mid-1990s.",
+   "id": "mmwdz14kpqwcc:48",
+   "location": "Cacilheiros section",
+   "measured_by": "",
+   "numbers": [],
+   "term": "catamarans"
+  },
+  {
+   "definition": "Town in Almada on the south bank of the Tagus, the departure point of the cacilheiro ferries to Lisbon.",
+   "id": "mmwdz14kpqwcc:49",
+   "location": "[no marker]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Cacilhas"
+  },
+  {
+   "definition": "Lisbon landing stage on the north bank that cacilheiros from Cacilhas serve as a destination.",
+   "id": "mmwdz14kpqwcc:50",
+   "location": "[no marker]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Cais do Sodré"
+  },
+  {
+   "definition": "Lisbon quay, the other north-bank destination for cacilheiros leaving Cacilhas.",
+   "id": "mmwdz14kpqwcc:51",
+   "location": "[no marker]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Cais das Colunas"
+  },
+  {
+   "definition": "Pontoon or landing jetty at which ferries moor, as seen at Cacilhas in the 1970 photograph caption.",
+   "id": "mmwdz14kpqwcc:52",
+   "location": "[no marker]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pontão"
+  },
+  {
+   "definition": "Vessel type carrying passengers across the river; the caption names the Monte Pragal and Setubalense ferries of SMT at Cacilhas in 1970.",
+   "id": "mmwdz14kpqwcc:53",
+   "location": "[no marker]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Ferry"
+  },
+  {
+   "definition": "Average age of the fleet operating the Cacilhas to Cais do Sodré crossing, indicating how old the working vessels are.",
+   "id": "mmwdz14kpqwcc:54",
+   "location": "[no marker]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "years",
+     "value": "38",
+     "what": "average age of the Cacilhas–Cais do Sodré fleet"
+    }
+   ],
+   "term": "idade média da frota"
+  },
+  {
+   "definition": "Moored or berthed alongside a landing, as the Monte Pragal ferry is described in the photo caption.",
+   "id": "mmwdz14kpqwcc:55",
+   "location": "[no marker]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "atracado"
+  },
+  {
+   "definition": "Bow, the front of a boat, where the song's narrator stands while navigating.",
+   "id": "mmwdz14kpqwcc:56",
+   "location": "[no marker]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "proa"
+  },
+  {
+   "definition": "To sail or travel by boat on the river, the activity described in the song and the poem.",
+   "id": "mmwdz14kpqwcc:57",
+   "location": "[no marker]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "navegar"
+  }
+ ],
+ "kind": "historical",
+ "lang": "",
+ "partsDone": [
+  0,
+  1,
+  2
+ ],
+ "partsTotal": 3,
+ "runAt": "2026-11-12T20:21:10.804Z",
+ "sourceId": "mmwdz14kpqwcc",
+ "textChars": 14251,
+ "title": "Cacilheiros no Rio Tejo, Lisboa   Portugal Memória"
+}

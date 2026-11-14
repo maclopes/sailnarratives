@@ -1,0 +1,630 @@
+{
+ "lines": [
+  {
+   "beat": "b1",
+   "claims": [
+    {
+     "claim": "The return cargo to the Ribatejo included salt, fertiliser and news.",
+     "evidence": [
+      "e2"
+     ]
+    },
+    {
+     "claim": "Close-hauled means sails tight, about 45 degrees to the wind, to gain ground upwind.",
+     "evidence": [
+      "e36"
+     ]
+    },
+    {
+     "claim": "A bordo is a leg of the zigzag course.",
+     "evidence": [
+      "e42"
+     ]
+    }
+   ],
+   "en": "Salt, fertiliser and news for the Ribatejo, Zé, and the wind right on the nose. Haul in tight: we sail about 45 degrees off it, in bordos, legs of a zigzag.",
+   "fictional": false,
+   "id": "l1",
+   "pt": "Sal, adubo e notícias para o Ribatejo, Zé, e o vento mesmo pela proa. Caça bem as velas: andamos a uns 45 graus dele, aos bordos, troços de um ziguezague.",
+   "status": "draft"
+  },
+  {
+   "beat": "b1",
+   "claims": [
+    {
+     "claim": "Navigation was done by sail and oars.",
+     "evidence": [
+      "e23"
+     ]
+    },
+    {
+     "claim": "Sails hauled tight are how a boat gains ground upwind.",
+     "evidence": [
+      "e36"
+     ]
+    },
+    {
+     "claim": "Água acima means upriver.",
+     "evidence": [
+      "e44"
+     ]
+    },
+    {
+     "claim": "A bordo is a leg of the zigzag course.",
+     "evidence": [
+      "e42"
+     ]
+    }
+   ],
+   "en": "Sail and oar is all we have, Zé. Haul the sails in tight and we go água acima, that means upriver, one bordo at a time.",
+   "fictional": false,
+   "id": "l2",
+   "pt": "Vela e remos é o que temos, Zé. Caça as velas bem e vamos água acima, quer dizer, rio acima, um bordo de cada vez.",
+   "status": "draft"
+  },
+  {
+   "beat": "b2",
+   "claims": [],
+   "en": "Bear away, Zé! Let them fill.",
+   "fictional": true,
+   "id": "l3",
+   "pt": "Arriba, Zé! Deixa encher as velas.",
+   "status": "draft"
+  },
+  {
+   "beat": "b2",
+   "claims": [],
+   "en": "Bear away until sails fill!",
+   "fictional": true,
+   "id": "l4",
+   "pt": "Arriba até as velas encherem!",
+   "status": "draft"
+  },
+  {
+   "beat": "b3",
+   "claims": [
+    {
+     "claim": "Close-hauled at about 45 degrees with tacking is the only way to gain ground upwind.",
+     "evidence": [
+      "e36",
+      "e41"
+     ]
+    },
+    {
+     "claim": "Tacking turns the bow through the wind to zigzag between two close-hauled headings.",
+     "evidence": [
+      "e38"
+     ]
+    },
+    {
+     "claim": "When in doubt sailing upwind, ease the sheets.",
+     "evidence": [
+      "e43"
+     ]
+    }
+   ],
+   "en": "See? Nobody sails straight into the wind. About 45 degrees, then virar de bordo, bow through the wind, and zigzag. In doubt, ease the sheets.",
+   "fictional": false,
+   "id": "l5",
+   "pt": "Vês? Ninguém vai direito ao vento. Uns 45 graus, depois virar de bordo, proa pelo vento, e ziguezague. Na dúvida, folga as velas.",
+   "status": "draft"
+  },
+  {
+   "beat": "b3",
+   "claims": [
+    {
+     "claim": "Close-hauled is about 45 degrees to the wind.",
+     "evidence": [
+      "e36"
+     ]
+    },
+    {
+     "claim": "Tacking turns through the wind onto the other close-hauled heading.",
+     "evidence": [
+      "e38",
+      "e41"
+     ]
+    },
+    {
+     "claim": "A bordo is a leg of the zigzag course.",
+     "evidence": [
+      "e42"
+     ]
+    },
+    {
+     "claim": "When in doubt sailing upwind, ease the sheets.",
+     "evidence": [
+      "e43"
+     ]
+    }
+   ],
+   "en": "Pointed too high, that's all. Hold about 45 degrees, then turn through the wind onto the other bordo. When unsure, ease a little.",
+   "fictional": false,
+   "id": "l6",
+   "pt": "Apontaste alto demais, só isso. Segura uns 45 graus, depois vira por davante para o outro bordo. Na dúvida, folga um pouco.",
+   "status": "draft"
+  },
+  {
+   "beat": "b4",
+   "claims": [
+    {
+     "claim": "The run to Lisboa carried wine, cork, cereals and olive oil.",
+     "evidence": [
+      "e2"
+     ]
+    },
+    {
+     "claim": "The return brought salt, manufactured goods, fertiliser and news.",
+     "evidence": [
+      "e2"
+     ]
+    },
+    {
+     "claim": "The minimum voyage time to Lisboa was 2 days.",
+     "evidence": [
+      "e2"
+     ]
+    }
+   ],
+   "en": "Down to Lisboa we carry wine, cork, cereals and olive oil; back up, salt, manufactured goods, fertiliser and news. The run to Lisboa takes two days at the least.",
+   "fictional": false,
+   "id": "l7",
+   "pt": "Para Lisboa levamos vinho, cortiça, cereais e azeite; de volta, sal, produtos manufacturados, adubo e notícias. A descida até Lisboa leva dois dias, pelo menos.",
+   "status": "draft"
+  },
+  {
+   "beat": "b4",
+   "claims": [
+    {
+     "claim": "Sailors confused boat names, calling fragatas and varinos faluas.",
+     "evidence": [
+      "e24"
+     ]
+    },
+    {
+     "claim": "The falua has two masts; fragatas and varinos have one.",
+     "evidence": [
+      "e24"
+     ]
+    },
+    {
+     "claim": "They served very different purposes.",
+     "evidence": [
+      "e24"
+     ]
+    }
+   ],
+   "en": "Folk call fragatas and varinos 'faluas', Zé, but count the masts: a falua has two, the others one. Different boats, very different work.",
+   "fictional": false,
+   "id": "l8",
+   "pt": "Há quem chame 'faluas' às fragatas e aos varinos, Zé, mas conta os mastros: a falua tem dois, as outras um. Barcos diferentes, trabalhos muito diferentes.",
+   "status": "draft"
+  },
+  {
+   "beat": "b4",
+   "claims": [
+    {
+     "claim": "Boats carried forest wealth, farm produce and ice from the Lousã and Estrela mountains.",
+     "evidence": [
+      "e5"
+     ]
+    },
+    {
+     "claim": "They returned with salt, cloth and paper.",
+     "evidence": [
+      "e5"
+     ]
+    },
+    {
+     "claim": "River traffic linked the coast and the interior.",
+     "evidence": [
+      "e13"
+     ]
+    }
+   ],
+   "en": "Upriver folk send down forest goods and farm produce, even ice from the Lousã and Estrela mountains, and take back salt, cloth and paper. This river ties the coast to the interior.",
+   "fictional": false,
+   "id": "l9",
+   "pt": "A gente de riba Tejo manda produtos da floresta e da terra, até gelo das serras da Lousã e da Estrela, e leva sal, pano e papel. Este rio liga a costa ao interior.",
+   "status": "draft"
+  },
+  {
+   "beat": "b5",
+   "claims": [
+    {
+     "claim": "Quays were meeting points where goods arrived and left, and people and goods went by river to Lisboa.",
+     "evidence": [
+      "e3"
+     ]
+    },
+    {
+     "claim": "The Tagus was the only road for trade.",
+     "evidence": [
+      "e14"
+     ]
+    }
+   ],
+   "en": "Look at the Lisboa quays, mestre! Goods and people arriving and leaving. You always say the river is the only road for all this trade.",
+   "fictional": false,
+   "id": "l10",
+   "pt": "Olhe o cais de Lisboa, mestre! Mercadorias e gente a chegar e a partir. O mestre diz sempre que o rio é a única estrada deste comércio.",
+   "status": "draft"
+  },
+  {
+   "beat": "b5",
+   "claims": [
+    {
+     "claim": "The estuary was busy with fragatas, varinos, faluas, botes, canoas and catraios.",
+     "evidence": [
+      "e17"
+     ]
+    },
+    {
+     "claim": "The river was the era's motorway.",
+     "evidence": [
+      "e17"
+     ]
+    },
+    {
+     "claim": "Boats carried people and goods.",
+     "evidence": [
+      "e3",
+      "e16"
+     ]
+    }
+   ],
+   "en": "So many boats by Lisboa: fragatas, varinos, faluas, botes, canoas, catraios. The river's a motorway, mestre, carrying people and goods.",
+   "fictional": false,
+   "id": "l11",
+   "pt": "Tanto barco junto a Lisboa: fragatas, varinos, faluas, botes, canoas, catraios. O rio é uma autoestrada, mestre, a levar gente e mercadorias.",
+   "status": "draft"
+  },
+  {
+   "beat": "b6",
+   "claims": [
+    {
+     "claim": "Beating is sailing against the wind by a series of tacks.",
+     "evidence": [
+      "e40"
+     ]
+    },
+    {
+     "claim": "Tacking legs are the only way to reach a destination toward the wind.",
+     "evidence": [
+      "e41"
+     ]
+    },
+    {
+     "claim": "Cargo moved upstream between river ports.",
+     "evidence": [
+      "e45"
+     ]
+    }
+   ],
+   "en": "There's the mark, Zé. Upwind you earn it bordo by bordo, tack after tack; there's no other way. Now she carries on água acima, upriver, with her cargo.",
+   "fictional": false,
+   "id": "l12",
+   "pt": "Aí está a marca, Zé. Contra o vento ganha-se bordo a bordo, virada após virada; não há outro caminho. Agora ela segue água acima com a carga.",
+   "status": "draft"
+  },
+  {
+   "beat": "b6",
+   "claims": [
+    {
+     "claim": "Beating means sailing legs with the bow crossing the wind line.",
+     "evidence": [
+      "e41"
+     ]
+    },
+    {
+     "claim": "Cargo travelled upstream between river ports.",
+     "evidence": [
+      "e45"
+     ]
+    }
+   ],
+   "en": "The mark is ours. Every bordo the bow crossed the wind line, and we gained ground. Now up the river to the ports, cargo and all.",
+   "fictional": false,
+   "id": "l13",
+   "pt": "A marca é nossa. Em cada bordo a proa cruzou a linha do vento, e ganhámos terreno. Agora rio acima até aos portos, com a carga toda.",
+   "status": "draft"
+  },
+  {
+   "beat": "b7",
+   "claims": [
+    {
+     "claim": "Manuel Fernandes's carpentry book gives layout methods and construction details for a falua and a fragata, likely built at the Ribeira.",
+     "evidence": [
+      "e31"
+     ]
+    },
+    {
+     "claim": "João de Souza published a set of 20 engravings of Tagus boats in 1785.",
+     "evidence": [
+      "e32"
+     ]
+    },
+    {
+     "claim": "It was the first credible graphic record of Tagus boat types.",
+     "evidence": [
+      "e32"
+     ]
+    }
+   ],
+   "en": "How do we know these boats? Manuel Fernandes's carpentry book gave layout methods and construction details for a falua and a fragata, likely built at the Ribeira. And in 1785 João de Souza published 20 engravings of Tagus boats, the first credible graphic record.",
+   "fictional": false,
+   "id": "l14",
+   "pt": "Como conhecemos estes barcos? O livro de carpintaria de Manuel Fernandes deu métodos de traçado e pormenores de construção de uma falua e de uma fragata, provavelmente construídas na Ribeira. E em 1785 João de Souza publicou 20 gravuras dos barcos do Tejo, o primeiro registo gráfico credível.",
+   "status": "draft"
+  },
+  {
+   "beat": "b7",
+   "claims": [
+    {
+     "claim": "João de Souza's 1785 set of 20 engravings showed Tagus boats for cargo, transport and fishing.",
+     "evidence": [
+      "e32"
+     ]
+    },
+    {
+     "claim": "It was the first credible graphic record of Tagus boat types.",
+     "evidence": [
+      "e32"
+     ]
+    },
+    {
+     "claim": "Manuel Fernandes's carpentry book gives construction details for a falua.",
+     "evidence": [
+      "e31"
+     ]
+    }
+   ],
+   "en": "Curious? Two sources tell us a lot. João de Souza's 1785 set of 20 engravings showed Tagus boats for cargo, transport and fishing, the first credible graphic record. And Manuel Fernandes's carpentry book explained how a falua was built.",
+   "fictional": false,
+   "id": "l15",
+   "pt": "Curioso? Duas fontes contam muito. As 20 gravuras de João de Souza, de 1785, mostraram os barcos do Tejo de carga, transporte e pesca, o primeiro registo gráfico credível. E o livro de carpintaria de Manuel Fernandes explicou como se construía uma falua.",
+   "status": "draft"
+  },
+  {
+   "beat": "b91",
+   "claims": [],
+   "en": "That's it, just so.",
+   "fictional": true,
+   "id": "l16",
+   "pt": "Isso, assim mesmo.",
+   "status": "draft"
+  },
+  {
+   "beat": "b91",
+   "claims": [],
+   "en": "Well done, lad.",
+   "fictional": true,
+   "id": "l17",
+   "pt": "Bem feito, rapaz.",
+   "status": "draft"
+  },
+  {
+   "beat": "b91",
+   "claims": [],
+   "en": "That's the way.",
+   "fictional": true,
+   "id": "l18",
+   "pt": "Assim é que é.",
+   "status": "draft"
+  },
+  {
+   "beat": "b91",
+   "claims": [],
+   "en": "Not bad. Not bad.",
+   "fictional": true,
+   "id": "l19",
+   "pt": "Nada mau. Nada mau.",
+   "status": "draft"
+  },
+  {
+   "beat": "b92",
+   "claims": [],
+   "en": "Yes! She's moving!",
+   "fictional": true,
+   "id": "l20",
+   "pt": "Isso! Já anda!",
+   "status": "draft"
+  },
+  {
+   "beat": "b92",
+   "claims": [],
+   "en": "Look, it worked!",
+   "fictional": true,
+   "id": "l21",
+   "pt": "Olha, resultou!",
+   "status": "draft"
+  },
+  {
+   "beat": "b92",
+   "claims": [],
+   "en": "Nice, we did it!",
+   "fictional": true,
+   "id": "l22",
+   "pt": "Boa, conseguimos!",
+   "status": "draft"
+  },
+  {
+   "beat": "b92",
+   "claims": [],
+   "en": "Just like that!",
+   "fictional": true,
+   "id": "l23",
+   "pt": "Assim mesmo, pois!",
+   "status": "draft"
+  },
+  {
+   "beat": "b90",
+   "claims": [
+    {
+     "claim": "The run to Lisboa carried wine, cork, coal, cereals, olive oil, straw, firewood and fruit.",
+     "evidence": [
+      "e2"
+     ]
+    },
+    {
+     "claim": "The return brought salt, manufactured goods, fertiliser and news.",
+     "evidence": [
+      "e2"
+     ]
+    }
+   ],
+   "en": "Down to Lisboa we carry wine, cork, coal, grain, olive oil, straw, firewood and fruit. Coming back it's salt, fertiliser, manufactured goods and the news, which at least weighs nothing.",
+   "fictional": false,
+   "id": "l24",
+   "pt": "Para Lisboa levamos vinho, cortiça, carvão, cereais, azeite, palha, lenha e fruta. Na volta trazemos sal, adubo, artigos fabricados e as notícias, que ao menos não pesam.",
+   "speaker": "k1",
+   "status": "draft",
+   "topic": "work"
+  },
+  {
+   "beat": "b90",
+   "claims": [
+    {
+     "claim": "The falua has two masts while fragatas and varinos have one.",
+     "evidence": [
+      "e24"
+     ]
+    },
+    {
+     "claim": "Sailors confused boat names, calling fragatas and varinos faluas.",
+     "evidence": [
+      "e24"
+     ]
+    },
+    {
+     "claim": "These boats serve very different purposes.",
+     "evidence": [
+      "e24"
+     ]
+    }
+   ],
+   "en": "The falua has two masts; the fragata and the varino only one. Even so, some boatmen call fragatas and varinos faluas. They do very different jobs.",
+   "fictional": false,
+   "id": "l25",
+   "pt": "A falua tem dois mastros; a fragata e o varino só um. Mesmo assim, há marítimos que chamam falua às fragatas e aos varinos. Servem para coisas bem diferentes.",
+   "speaker": "k1",
+   "status": "draft",
+   "topic": "boat"
+  },
+  {
+   "beat": "b90",
+   "claims": [
+    {
+     "claim": "Água acima boats were only permitted to sail in the calm river, not at sea beyond the bar.",
+     "evidence": [
+      "e44"
+     ]
+    }
+   ],
+   "en": "We're barcos de água acima, upriver boats, that is. We may only sail the calm river. Beyond the barra, out at sea, we're not allowed.",
+   "fictional": false,
+   "id": "l26",
+   "pt": "Somos barcos de água acima, quer dizer, de rio acima. Só podemos andar no rio calmo. Para lá da barra, no mar, não nos deixam ir.",
+   "speaker": "k1",
+   "status": "draft",
+   "topic": "place"
+  },
+  {
+   "beat": "b90",
+   "claims": [
+    {
+     "claim": "Vila Nova da Barquinha remembers its fragatas sailing the Tagus down to the Mar da Palha or the open sea.",
+     "evidence": [
+      "e6"
+     ]
+    }
+   ],
+   "en": "In Barquinha they say their fragatas sailed down the Tejo to the Mar da Palha, some even to the open sea. I wish I could see that!",
+   "fictional": false,
+   "id": "l27",
+   "pt": "Na Barquinha contam que as fragatas de lá desciam o Tejo até ao Mar da Palha, e algumas até ao mar largo. Quem me dera ver isso!",
+   "speaker": "k2",
+   "status": "draft",
+   "topic": "place"
+  },
+  {
+   "beat": "b90",
+   "claims": [
+    {
+     "claim": "All navigation on the Tejo was done by sail and oars.",
+     "evidence": [
+      "e23"
+     ]
+    }
+   ],
+   "en": "On the river it's all sail and oar. When the wind fails, there are still arms. And yours, Zé, are still young.",
+   "fictional": false,
+   "id": "l28",
+   "pt": "No rio é tudo navegação à vela e a remos. Quando o vento falta, sobram os braços. E os teus, Zé, ainda são novos.",
+   "speaker": "k1",
+   "status": "draft",
+   "topic": "boat"
+  },
+  {
+   "beat": "b90",
+   "claims": [
+    {
+     "claim": "Fishing on the Tejo used picareto, abrangel, catrafúcio (three-plank boat), saveiros and muletas.",
+     "evidence": [
+      "e21"
+     ]
+    }
+   ],
+   "en": "Fishing has its own boats: the picareto, the abrangel, the three-plank catrafúcio, the saveiros and the muletas. We carry cargo; they catch the fish.",
+   "fictional": false,
+   "id": "l29",
+   "pt": "Para a pesca há outros barcos: o picareto, o abrangel, o catrafúcio de três tábuas, os saveiros e as muletas. Nós carregamos; eles apanham o peixe.",
+   "speaker": "k1",
+   "status": "draft",
+   "topic": "fish"
+  },
+  {
+   "beat": "b90",
+   "claims": [
+    {
+     "claim": "Boats returned with varied goods to Barquinha, where animal-drawn carts took them on to other territories.",
+     "evidence": [
+      "e4"
+     ]
+    }
+   ],
+   "en": "At the porto da Barquinha they unload what we bring, then animal-drawn carts take it all on to other lands. The river ends, but the journey goes on!",
+   "fictional": false,
+   "id": "l30",
+   "pt": "No porto da Barquinha descarregam o que trazemos, e depois carros puxados por animais levam tudo para outras terras. O rio acaba, mas a viagem continua!",
+   "speaker": "k2",
+   "status": "draft",
+   "topic": "work"
+  },
+  {
+   "beat": "b90",
+   "claims": [
+    {
+     "claim": "People of riba Tejo, the Beiras and the Alentejo traded up and down the river.",
+     "evidence": [
+      "e5"
+     ]
+    },
+    {
+     "claim": "They carried forest wealth, ice from the Lousã and Estrela mountains and farm produce, returning with salt, cloth and paper.",
+     "evidence": [
+      "e5"
+     ]
+    }
+   ],
+   "en": "Folk from up the Tejo, the Beiras and the Alentejo traded on this river: forest wealth, ice from the Lousã and Estrela mountains, coming back with salt, cloth and paper.",
+   "fictional": false,
+   "id": "l31",
+   "pt": "Gente de riba Tejo, das Beiras e do Alentejo andava neste rio a negociar: riqueza das matas, gelo das serras da Lousã e da Estrela, e voltava com sal, pano e papel.",
+   "speaker": "k1",
+   "status": "draft",
+   "topic": "people"
+  }
+ ],
+ "updatedAt": "2026-11-14T10:35:27.668Z"
+}

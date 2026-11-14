@@ -1,0 +1,607 @@
+{
+ "lines": [
+  {
+   "beat": "b1",
+   "check": {
+    "at": "2026-11-13T07:07:07.374Z",
+    "claims": [
+     {
+      "claim": "The wind is coming from the Almada side, directly against the boat's heading",
+      "evidence": [],
+      "verdict": "unsupported"
+     },
+     {
+      "claim": "The boat crosses from one bank to the other under sail and oars",
+      "evidence": [
+       "e18",
+       "e31",
+       "e1"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "The boat beats (sails close-hauled) against the wind",
+      "evidence": [
+       "e24"
+      ],
+      "verdict": "supported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "Boats carried passengers between Lisbon and Almada",
+     "evidence": [
+      "e1"
+     ]
+    },
+    {
+     "claim": "Navigation was done by sail and oars",
+     "evidence": [
+      "e18"
+     ]
+    },
+    {
+     "claim": "Crossing from one bank of the river to the other was a Tagus route",
+     "evidence": [
+      "e31"
+     ]
+    }
+   ],
+   "en": "Wind's coming off Almada, right on our nose. We'll beat across under sail and oars, bank to bank. And you still haven't told me why you're going.",
+   "fictional": false,
+   "id": "l1",
+   "pt": "O vento vem de Almada, mesmo de frente. Vamos à bolina, à vela e a remos, de uma margem à outra. E a menina ainda não me disse ao que vai.",
+   "status": "needs work"
+  },
+  {
+   "beat": "b1",
+   "check": {
+    "at": "2026-11-13T07:07:07.383Z",
+    "claims": [
+     {
+      "claim": "Boats carried passengers from Lisbon to Almada",
+      "evidence": [
+       "e1",
+       "e14"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "The wind is ahead of the boat",
+      "evidence": [],
+      "verdict": "unsupported"
+     },
+     {
+      "claim": "The boat uses sail and oars as always",
+      "evidence": [
+       "e18"
+      ],
+      "verdict": "supported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "Boats carried passengers between Lisbon and Almada",
+     "evidence": [
+      "e1"
+     ]
+    },
+    {
+     "claim": "Navigation was done by sail and oars",
+     "evidence": [
+      "e18"
+     ]
+    }
+   ],
+   "en": "Another passenger from Lisbon to Almada. Wind ahead, sail and oars as always. So tell me, miss, what takes you to the other bank?",
+   "fictional": false,
+   "id": "l2",
+   "pt": "Mais uma passageira de Lisboa para Almada. Vento de frente, vela e remos, como sempre. Diga lá, menina, o que a leva à outra margem?",
+   "status": "needs work"
+  },
+  {
+   "beat": "b2",
+   "check": {
+    "at": "2026-11-13T07:07:07.390Z",
+    "claims": [
+     {
+      "claim": "Tacking means turning through the wind to change sides (the order to tack)",
+      "evidence": [
+       "e24",
+       "e25"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "Sheeting in (caçar) follows the tack",
+      "evidence": [],
+      "verdict": "unsupported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [],
+   "en": "Tack now! Sheet in!",
+   "fictional": true,
+   "id": "l3",
+   "pt": "Vira de bordo! Caça já!",
+   "status": "needs work"
+  },
+  {
+   "beat": "b2",
+   "check": {
+    "at": "2026-11-13T07:07:07.395Z",
+    "claims": [
+     {
+      "claim": "Bringing the bow round through the wind makes the sails change sides (tacking)",
+      "evidence": [
+       "e25",
+       "e24"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "The sail is sheeted in after the manoeuvre",
+      "evidence": [],
+      "verdict": "unsupported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [],
+   "en": "Bring her round, sheet in!",
+   "fictional": true,
+   "id": "l4",
+   "pt": "Passa a proa, caça a vela!",
+   "status": "needs work"
+  },
+  {
+   "beat": "b3",
+   "check": {
+    "at": "2026-11-13T07:07:07.415Z",
+    "claims": [
+     {
+      "claim": "You cannot sail straight into the wind; you tack, zigzagging from one side to the other",
+      "evidence": [
+       "e24"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "The river has fragatas and faluas on it and is full of traffic",
+      "evidence": [
+       "e12"
+      ],
+      "verdict": "supported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "Going upwind means tacking and zigzagging between two close-hauled headings",
+     "evidence": [
+      "e24"
+     ]
+    },
+    {
+     "claim": "The river was busy with varied craft including fragatas and faluas",
+     "evidence": [
+      "e12"
+     ]
+    }
+   ],
+   "en": "\"Why do we keep zigzagging?\" \"You can't sail straight into the wind, miss. We tack, one side then the other. Look at the fragatas and faluas: the river's full.\"",
+   "fictional": false,
+   "id": "l5",
+   "pt": "— Porque andamos aos ziguezagues? — Contra o vento não se vai a direito, menina. Vira-se de bordo, de um lado e do outro. Olhe as fragatas e as faluas: o rio está cheio.",
+   "status": "verified"
+  },
+  {
+   "beat": "b3",
+   "check": {
+    "at": "2026-11-13T07:07:07.420Z",
+    "claims": [
+     {
+      "claim": "You cannot go straight into the wind; you zigzag close-hauled on one tack then the other",
+      "evidence": [
+       "e24"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "A falua carries people",
+      "evidence": [
+       "e21",
+       "e34"
+      ],
+      "verdict": "supported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "Going upwind means zigzagging between two close-hauled headings",
+     "evidence": [
+      "e24"
+     ]
+    },
+    {
+     "claim": "Faluas also carried passengers",
+     "evidence": [
+      "e21",
+      "e34"
+     ]
+    }
+   ],
+   "en": "\"Can't we just go straight?\" \"Not into the wind. We zigzag, close-hauled on one side, then the other. That falua carries people too.\"",
+   "fictional": false,
+   "id": "l6",
+   "pt": "— E não podemos ir a direito? — Ao vento, não. Vai-se em ziguezague, à bolina de um bordo e do outro. Aquela falua também leva gente.",
+   "status": "verified"
+  },
+  {
+   "beat": "b4",
+   "check": {
+    "at": "2026-11-13T07:07:07.424Z",
+    "claims": [
+     {
+      "claim": "Bearing away, easing the sheet and letting the sail fill are the right manoeuvre/commands",
+      "evidence": [],
+      "verdict": "unsupported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [],
+   "en": "Bear away! Ease, let her fill!",
+   "fictional": true,
+   "id": "l7",
+   "pt": "Arriba! Folga, deixa encher!",
+   "status": "needs work"
+  },
+  {
+   "beat": "b4",
+   "check": {
+    "at": "2026-11-13T07:07:07.428Z",
+    "claims": [
+     {
+      "claim": "Bear off, ease the sheet, then sheet in is the correct sequence",
+      "evidence": [],
+      "verdict": "unsupported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [],
+   "en": "Bear off, ease, then sheet in.",
+   "fictional": true,
+   "id": "l8",
+   "pt": "Arriba, folga e caça depois.",
+   "status": "needs work"
+  },
+  {
+   "beat": "b5",
+   "check": {
+    "at": "2026-11-13T07:07:07.433Z",
+    "claims": [
+     {
+      "claim": "The river is the road between the banks",
+      "evidence": [
+       "e9"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "A boat was the fastest way to cross",
+      "evidence": [
+       "e11"
+      ],
+      "verdict": "supported"
+     }
+    ],
+    "mech": [
+     "PT has 26 words (max 25)"
+    ],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "The Tagus linked the two banks as a road",
+     "evidence": [
+      "e9",
+      "e8"
+     ]
+    },
+    {
+     "claim": "Boats were faster than other means",
+     "evidence": [
+      "e11"
+     ]
+    }
+   ],
+   "en": "\"Why stay at this?\" \"The river's the road between the banks, and a boat's the fastest way.\" \"I'm going to see my mother.\"",
+   "fictional": false,
+   "id": "l9",
+   "pt": "— Porque fica nisto? — O rio é a estrada entre as margens, e o barco o caminho mais rápido. — Vou ver a minha mãe.",
+   "status": "needs work"
+  },
+  {
+   "beat": "b5",
+   "check": {
+    "at": "2026-11-13T07:07:07.438Z",
+    "claims": [
+     {
+      "claim": "The river joins the two banks",
+      "evidence": [
+       "e9",
+       "e8"
+      ],
+      "verdict": "supported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "The river linked the two banks",
+     "evidence": [
+      "e9",
+      "e8"
+     ]
+    }
+   ],
+   "en": "\"Why not give this up?\" \"It's the river that joins the two banks, miss.\" \"Then hurry: my brother marries today.\"",
+   "fictional": false,
+   "id": "l10",
+   "pt": "— Porque não larga isto? — É o rio que liga as duas margens, menina. — Então leve-me depressa: o meu irmão casa hoje.",
+   "status": "verified"
+  },
+  {
+   "beat": "b6",
+   "check": {
+    "at": "2026-11-13T07:07:07.442Z",
+    "claims": [
+     {
+      "claim": "Coming alongside is done gently, controlling speed",
+      "evidence": [
+       "e22",
+       "e23"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "The boat arrives at Almada carrying passengers from Lisbon",
+      "evidence": [
+       "e1"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "Many people pass through the boat, each with their own reason",
+      "evidence": [],
+      "verdict": "unsupported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "Coming alongside means controlling speed to berth at a quay",
+     "evidence": [
+      "e22",
+      "e23"
+     ]
+    },
+    {
+     "claim": "Boats carried passengers to Almada",
+     "evidence": [
+      "e1"
+     ]
+    }
+   ],
+   "en": "Easy now, you come alongside gently. There, Almada. So many people pass through this boat, each with their own reason. Go on, miss, and good luck.",
+   "fictional": false,
+   "id": "l11",
+   "pt": "Devagar, que se acosta com jeito. Pronto, Almada. Passa tanta gente por este barco, cada uma com a sua razão. Vá, menina, e boa sorte.",
+   "status": "needs work"
+  },
+  {
+   "beat": "b6",
+   "check": {
+    "at": "2026-11-13T07:07:07.446Z",
+    "claims": [
+     {
+      "claim": "Taking the way off and easing to the quay is how you come alongside",
+      "evidence": [
+       "e22",
+       "e23"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "The boatman carries people from Lisbon to Almada",
+      "evidence": [
+       "e1"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "The passenger paid with a coin",
+      "evidence": [],
+      "verdict": "unsupported"
+     }
+    ],
+    "mech": [],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "Coming alongside a quay involves controlling speed",
+     "evidence": [
+      "e22",
+      "e23"
+     ]
+    },
+    {
+     "claim": "Boats carried passengers between Lisbon and Almada",
+     "evidence": [
+      "e1"
+     ]
+    }
+   ],
+   "en": "Take her way off, ease to the quay... we're alongside. I carry people from Lisbon to Almada, each with their own story. Thanks for the coin, miss.",
+   "fictional": false,
+   "id": "l12",
+   "pt": "Tira-lhe o seguimento, encosta ao cais... acostámos. Levo gente de Lisboa a Almada, e cada um leva a sua história. Obrigado pela moeda, menina.",
+   "status": "needs work"
+  },
+  {
+   "beat": "b7",
+   "check": {
+    "at": "2026-11-13T07:07:07.451Z",
+    "claims": [
+     {
+      "claim": "The catraio was a small Tagus boat carrying passengers",
+      "evidence": [
+       "e29",
+       "e14"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "The caíque, bote, batel and canoa also carried passengers",
+      "evidence": [
+       "e14",
+       "e6"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "River traffic linked the banks until the mid-20th century",
+      "evidence": [
+       "e8"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "Before the 1966 bridge, boats were the fastest way",
+      "evidence": [
+       "e11"
+      ],
+      "verdict": "supported"
+     }
+    ],
+    "mech": [
+     "PT and EN numbers differ"
+    ],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "The catraio was a small Tagus boat carrying passengers",
+     "evidence": [
+      "e29"
+     ]
+    },
+    {
+     "claim": "Passenger transport used the catraio, caíque, bote, batel and canoa",
+     "evidence": [
+      "e14"
+     ]
+    },
+    {
+     "claim": "River traffic linked the banks until the mid-20th century",
+     "evidence": [
+      "e8"
+     ]
+    },
+    {
+     "claim": "Before the bridge, in 1966, boats were faster than other means",
+     "evidence": [
+      "e11"
+     ]
+    }
+   ],
+   "en": "My passenger and I are invented. But the catraio was real: a small Tagus boat carrying passengers, like the caíque, bote, batel and canoa. River traffic linked the banks until the mid-20th century, and before the bridge of 1966 boats were the fastest way.",
+   "fictional": false,
+   "id": "l13",
+   "pt": "Eu e a minha passageira somos inventados. Mas o catraio existiu: um pequeno barco do Tejo que levava passageiros, tal como o caíque, o bote, o batel e a canoa. O tráfego no rio ligou as margens até meados do século XX, e antes da ponte de 1966 os barcos eram o caminho mais rápido.",
+   "status": "needs work"
+  },
+  {
+   "beat": "b7",
+   "check": {
+    "at": "2026-11-13T07:07:07.455Z",
+    "claims": [
+     {
+      "claim": "The catraio, falua and bote cacilheiro were well-known passenger boats",
+      "evidence": [
+       "e6"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "Until the mid-20th century the river carried people and goods between the banks",
+      "evidence": [
+       "e8"
+      ],
+      "verdict": "supported"
+     },
+     {
+      "claim": "Before the 1966 bridge boats beat any other means",
+      "evidence": [
+       "e11"
+      ],
+      "verdict": "supported"
+     }
+    ],
+    "mech": [
+     "PT and EN numbers differ"
+    ],
+    "warn": []
+   },
+   "claims": [
+    {
+     "claim": "The catraio, falua and bote cacilheiro were well-known passenger boats",
+     "evidence": [
+      "e6"
+     ]
+    },
+    {
+     "claim": "Until the mid-20th century river traffic carried people and goods between the banks",
+     "evidence": [
+      "e8"
+     ]
+    },
+    {
+     "claim": "Before the bridge, in 1966, boats were faster than other means",
+     "evidence": [
+      "e11"
+     ]
+    }
+   ],
+   "en": "Tio Joaquim and the passenger are fiction. Real are the catraio and other well-known passenger boats, like the falua and bote cacilheiro. Until the mid-20th century the river carried people and goods between the banks, and before the 1966 bridge boats beat any other means.",
+   "fictional": false,
+   "id": "l14",
+   "pt": "O Tio Joaquim e a passageira são ficção. Verdadeiros são o catraio e outros barcos de passageiros conhecidos, como a falua e o bote cacilheiro. Até meados do século XX, o rio levou gente e mercadorias entre as margens, e antes da ponte de 1966 os barcos ganhavam a qualquer outro meio.",
+   "status": "needs work"
+  }
+ ],
+ "updatedAt": "2026-11-13T07:07:07.455Z"
+}

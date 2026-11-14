@@ -1,0 +1,1013 @@
+{
+ "items": [
+  {
+   "definition": "Small boat carrying 20-30 passengers or cargo such as wine or sand across the river; sometimes used for fishing; flat-bottomed and keelless.",
+   "id": "mmwdz1b2r29ky:1",
+   "location": "[section: DO NORTE DE PORTUGAL]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "passengers",
+     "value": "20 to 30",
+     "what": "passenger capacity"
+    }
+   ],
+   "term": "Barquinho do Rio Minho"
+  },
+  {
+   "definition": "Square sail, one of the sail types a boat could carry; also used on the Barco Rabelo.",
+   "id": "mmwdz1b2r29ky:2",
+   "location": "[section: DO NORTE DE PORTUGAL]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vela quadrada"
+  },
+  {
+   "definition": "A sprit-type sail that the Barquinho do Rio Minho could carry as an alternative to the square sail.",
+   "id": "mmwdz1b2r29ky:3",
+   "location": "[section: DO NORTE DE PORTUGAL]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vela de espicha"
+  },
+  {
+   "definition": "Flat bottom hull form with no keel, used by river boats such as the Rabelo.",
+   "id": "mmwdz1b2r29ky:4",
+   "location": "[section: DO NORTE DE PORTUGAL]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "fundo chato"
+  },
+  {
+   "definition": "Keel; the Rabelo and the Barquinho do Rio Minho lack one, having flat bottoms.",
+   "id": "mmwdz1b2r29ky:5",
+   "location": "[section: DO NORTE DE PORTUGAL]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "quilha"
+  },
+  {
+   "definition": "Very simple boat from Vila Praia de Âncora, shaped like a wooden bread-kneading trough, used for sea, coastal and river fishing.",
+   "id": "mmwdz1b2r29ky:6",
+   "location": "[section: DO NORTE DE PORTUGAL]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "metres",
+     "value": "2,60 to 4,70",
+     "what": "boat length"
+    },
+    {
+     "unit": "men",
+     "value": "2",
+     "what": "crew"
+    }
+   ],
+   "term": "Maceira"
+  },
+  {
+   "definition": "Yard of a bastard lateen sail, set on a small mast forward on the Maceira.",
+   "id": "mmwdz1b2r29ky:7",
+   "location": "[section: DO NORTE DE PORTUGAL]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "verga de latina bastarda"
+  },
+  {
+   "definition": "Typical flat-bottomed Douro boat carrying wine casks down river to the Gaia cellars, with a square sail.",
+   "id": "mmwdz1b2r29ky:8",
+   "location": "[section: DO NORTE DE PORTUGAL]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "metres",
+     "value": "19 to 23",
+     "what": "boat length"
+    },
+    {
+     "unit": "men",
+     "value": "6 or 7",
+     "what": "crew"
+    }
+   ],
+   "term": "Barco Rabelo"
+  },
+  {
+   "definition": "Wine casks, the cargo the Rabelo carried along the Douro to the Gaia cellars.",
+   "id": "mmwdz1b2r29ky:9",
+   "location": "[section: DO NORTE DE PORTUGAL]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pipas de vinho"
+  },
+  {
+   "definition": "Raised structure rising roughly amidships and aft on the Rabelo, near where the steering oar is worked.",
+   "id": "mmwdz1b2r29ky:10",
+   "location": "[section: DO NORTE DE PORTUGAL]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "apegadas"
+  },
+  {
+   "definition": "Long steering oar of the Rabelo, worked from a raised platform, used instead of a rudder.",
+   "id": "mmwdz1b2r29ky:11",
+   "location": "[section: DO NORTE DE PORTUGAL]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "espadela"
+  },
+  {
+   "definition": "Raised platform aft on the Rabelo from which the steering oar is handled.",
+   "id": "mmwdz1b2r29ky:12",
+   "location": "[section: DO NORTE DE PORTUGAL]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "castelo"
+  },
+  {
+   "definition": "Boat from Valbom able to sail river and sea, used for fishing, cargo and ferrying passengers; has a small shelter.",
+   "id": "mmwdz1b2r29ky:13",
+   "location": "[section: DO NORTE DE PORTUGAL]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "metres",
+     "value": "about 18",
+     "what": "boat length"
+    },
+    {
+     "unit": "men",
+     "value": "2 to 3",
+     "what": "crew"
+    }
+   ],
+   "term": "Barco Valboeiro com Camareta"
+  },
+  {
+   "definition": "Small shelter on the Valboeiro protecting and comforting passengers.",
+   "id": "mmwdz1b2r29ky:14",
+   "location": "[section: DO NORTE DE PORTUGAL]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "camareta"
+  },
+  {
+   "definition": "Name given to a Valboeiro according to its cargo use (bakers' goods); the other name is barco das toucinheiras.",
+   "id": "mmwdz1b2r29ky:15",
+   "location": "[section: DO NORTE DE PORTUGAL]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barco das padeiras"
+  },
+  {
+   "definition": "Name given to a Valboeiro or Avintes boat according to its cargo use (bacon).",
+   "id": "mmwdz1b2r29ky:16",
+   "location": "[section: DO NORTE DE PORTUGAL]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barco das toucinheiras"
+  },
+  {
+   "definition": "A long-bladed steering oar used in place of a rudder on Rabelo, Valboeiro and Avintes boats.",
+   "id": "mmwdz1b2r29ky:17",
+   "location": "[section: DO NORTE DE PORTUGAL]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "remo de pá longo em vez de leme"
+  },
+  {
+   "definition": "Douro boat classified by cargo, with an awning and passenger benches, and a pendant sail on a forward mast.",
+   "id": "mmwdz1b2r29ky:18",
+   "location": "[section: DO NORTE DE PORTUGAL]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "metres",
+     "value": "17 to 18",
+     "what": "boat length"
+    },
+    {
+     "unit": "men",
+     "value": "2 to 3",
+     "what": "crew"
+    }
+   ],
+   "term": "Barco de Avintes"
+  },
+  {
+   "definition": "Pennant-type sail set on a mast forward on the Barco de Avintes.",
+   "id": "mmwdz1b2r29ky:19",
+   "location": "[section: DO NORTE DE PORTUGAL]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vela de pendão"
+  },
+  {
+   "definition": "Protective awning fitted over the Avintes boat for passengers.",
+   "id": "mmwdz1b2r29ky:20",
+   "location": "[section: DO NORTE DE PORTUGAL]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "toldo"
+  },
+  {
+   "definition": "A family of boats from Póvoa: large lancha for hake, smaller types for sardine, longline and whiting fishing; mast can be lowered.",
+   "id": "mmwdz1b2r29ky:21",
+   "location": "[section: DO NORTE DE PORTUGAL]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "metres",
+     "value": "4 to 14",
+     "what": "boat length range"
+    },
+    {
+     "unit": "oars",
+     "value": "4 to 5",
+     "what": "oars per side"
+    }
+   ],
+   "term": "Lancha Poveira"
+  },
+  {
+   "definition": "Smallest Lancha Poveira type, used to fish whiting (faneca), about 4-5 metres long.",
+   "id": "mmwdz1b2r29ky:22",
+   "location": "[section: DO NORTE DE PORTUGAL]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "metres",
+     "value": "4 to 5",
+     "what": "boat length"
+    }
+   ],
+   "term": "caíco"
+  },
+  {
+   "definition": "Trapezoid-shaped sail carried by the Lancha Poveira on a mast that rakes aft and can be unstepped.",
+   "id": "mmwdz1b2r29ky:23",
+   "location": "[section: DO NORTE DE PORTUGAL]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vela trapezoidal"
+  },
+  {
+   "definition": "Mast that could be taken down; on the Lancha Poveira it leans aft.",
+   "id": "mmwdz1b2r29ky:24",
+   "location": "[section: DO NORTE DE PORTUGAL]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "mastro que se podia desarmar"
+  },
+  {
+   "definition": "Boat of the Ria de Aveiro for gathering and carrying seaweed (moliço), also cargo and livestock; low sides, shallow draft, brightly painted bow and stern.",
+   "id": "mmwdz1b2r29ky:25",
+   "location": "[section: DO NORTE DE PORTUGAL]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Barco Moliceiro"
+  },
+  {
+   "definition": "Draft; the Moliceiro's minimal draft lets it travel the many shallow canals.",
+   "id": "mmwdz1b2r29ky:26",
+   "location": "[section: DO NORTE DE PORTUGAL]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "calado"
+  },
+  {
+   "definition": "Towing from the bank, used as a means of propulsion besides sail on the Moliceiro.",
+   "id": "mmwdz1b2r29ky:27",
+   "location": "[section: DO NORTE DE PORTUGAL]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "sirga"
+  },
+  {
+   "definition": "Pole used to push the boat along, a propulsion method of the Moliceiro besides sail.",
+   "id": "mmwdz1b2r29ky:28",
+   "location": "[section: DO NORTE DE PORTUGAL]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vara"
+  },
+  {
+   "definition": "Rudder; the Moliceiro is steered by a large rudder worked by a tiller crossing amidships.",
+   "id": "mmwdz1b2r29ky:29",
+   "location": "[section: DO NORTE DE PORTUGAL]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "leme"
+  },
+  {
+   "definition": "Entirely black, undecorated boat from Ílhavo, similar to the Moliceiro, normally crewed by three.",
+   "id": "mmwdz1b2r29ky:30",
+   "location": "[section: DO NORTE DE PORTUGAL]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "metres",
+     "value": "14 to 15",
+     "what": "boat length"
+    },
+    {
+     "unit": "men",
+     "value": "3",
+     "what": "crew"
+    }
+   ],
+   "term": "Barco de Ílhavo"
+  },
+  {
+   "definition": "Triangular sail type rigged on many of these traditional fishing boats, often several per vessel, giving speed and handling under sail.",
+   "id": "mmwdz1b2r29ky:31",
+   "location": "[section: Rasca de Pesca]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "sails",
+     "value": "4",
+     "what": "latin sails on the Rasca de Pesca"
+    }
+   ],
+   "term": "vela latina"
+  },
+  {
+   "definition": "Name of one of the lateen sails on the Rasca de Pesca's complex four-sail rig.",
+   "id": "mmwdz1b2r29ky:32",
+   "location": "[section: Rasca de Pesca]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "traquete"
+  },
+  {
+   "definition": "Main sail, listed among the four lateen sails of the Rasca de Pesca (text is truncated).",
+   "id": "mmwdz1b2r29ky:33",
+   "location": "[section: Rasca de Pesca]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vela grande"
+  },
+  {
+   "definition": "Describes a boat that sails very well; the Rasca's complex rig made it extremely fast and responsive under sail but needed a large crew.",
+   "id": "mmwdz1b2r29ky:34",
+   "location": "[section: Rasca de Pesca]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "veleiro"
+  },
+  {
+   "definition": "High freeboard, meaning the hull sides stand high above the waterline, as on the Rasca de Pesca.",
+   "id": "mmwdz1b2r29ky:35",
+   "location": "[section: Rasca de Pesca]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "borda alta"
+  },
+  {
+   "definition": "Continuous flush deck running the length of the boat, found on the Rasca de Pesca and Muleta de Arrasto.",
+   "id": "mmwdz1b2r29ky:36",
+   "location": "[section: Rasca de Pesca]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "convés corrido"
+  },
+  {
+   "definition": "The rig: the arrangement of masts and sails; a complex rig demanded a numerous crew.",
+   "id": "mmwdz1b2r29ky:37",
+   "location": "[section: Rasca de Pesca]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "aparelho"
+  },
+  {
+   "definition": "Forward rake of the masts; both masts of the Barco da Pescada leaned markedly forward and had different heights.",
+   "id": "mmwdz1b2r29ky:38",
+   "location": "[section: Barco da Pescada]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "inclinação a vante"
+  },
+  {
+   "definition": "Oars used to propel or manoeuvre the boat, arranged a set number per side.",
+   "id": "mmwdz1b2r29ky:39",
+   "location": "[section: Bateira da Figueira da Foz]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "oars",
+     "value": "2",
+     "what": "oars per side on the Bateira"
+    }
+   ],
+   "term": "remos"
+  },
+  {
+   "definition": "Mast raked slightly aft, as on the Bateira, carrying a long triangular lateen sail.",
+   "id": "mmwdz1b2r29ky:40",
+   "location": "[section: Bateira da Figueira da Foz]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "inclinado para ré"
+  },
+  {
+   "definition": "The bow, the front of the boat; its shape (curved, rounded) characterises each boat type.",
+   "id": "mmwdz1b2r29ky:41",
+   "location": "[section: Bateira da Figueira da Foz]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "proa"
+  },
+  {
+   "definition": "Covered stern section of the hull, a feature of the Bateira.",
+   "id": "mmwdz1b2r29ky:42",
+   "location": "[section: Bateira da Figueira da Foz]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "ré coberta"
+  },
+  {
+   "definition": "Bow thwart (bench) to which the mast is fixed on the Bateira and Barca da Ericeira.",
+   "id": "mmwdz1b2r29ky:43",
+   "location": "[section: Bateira da Figueira da Foz]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "banco da proa"
+  },
+  {
+   "definition": "Crew; its size varies by boat type and its work, such as fishing or rowing.",
+   "id": "mmwdz1b2r29ky:44",
+   "location": "[section: Bateira da Figueira da Foz]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "men",
+     "value": "4 to 6",
+     "what": "Bateira crew"
+    }
+   ],
+   "term": "tripulação"
+  },
+  {
+   "definition": "Type of purse-seine style fishing for which the Nazaré Galeão was used.",
+   "id": "mmwdz1b2r29ky:45",
+   "location": "[section: Galeão]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "metres",
+     "value": "10",
+     "what": "Galeão length"
+    },
+    {
+     "unit": "tonnes",
+     "value": "about 9",
+     "what": "Galeão capacity"
+    },
+    {
+     "unit": "oars",
+     "value": "3",
+     "what": "oars per side"
+    }
+   ],
+   "term": "cerco americano"
+  },
+  {
+   "definition": "Hatches on the deck giving access to the fish holds below.",
+   "id": "mmwdz1b2r29ky:46",
+   "location": "[section: Galeão]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "hatches",
+     "value": "2 to 3",
+     "what": "hatches on the Galeão"
+    },
+    {
+     "unit": "benches",
+     "value": "6",
+     "what": "benches on the deck"
+    }
+   ],
+   "term": "escotilhas"
+  },
+  {
+   "definition": "Fish holds below deck where the catch is stored.",
+   "id": "mmwdz1b2r29ky:47",
+   "location": "[section: Galeão]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "porões de peixe"
+  },
+  {
+   "definition": "Transom stern, a flat-panel stern shape, as on the Lancha da Sardinha and Canoa Caçadeira.",
+   "id": "mmwdz1b2r29ky:48",
+   "location": "[section: Lancha da Sardinha]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "popa de painel"
+  },
+  {
+   "definition": "Tiller-type rudder, mounted on the transom stern of the Lancha da Sardinha.",
+   "id": "mmwdz1b2r29ky:49",
+   "location": "[section: Lancha da Sardinha]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "men",
+     "value": "12 to 14",
+     "what": "Lancha da Sardinha crew"
+    }
+   ],
+   "term": "leme de cana"
+  },
+  {
+   "definition": "Hybrid (bastard) lateen sail, a variant of the lateen rig used on the Lancha, Barca, Caíque and Canoa.",
+   "id": "mmwdz1b2r29ky:50",
+   "location": "[section: Lancha da Sardinha]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "latino bastardo"
+  },
+  {
+   "definition": "Trawling, dragging a net while fishing; the Traineira manoeuvred with oars to keep the boat across (broadside).",
+   "id": "mmwdz1b2r29ky:51",
+   "location": "[section: Traineira de Peniche]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "arrasto"
+  },
+  {
+   "definition": "Outboard rudder mounted on the outside of the hull, as on the Traineira and Barca da Ericeira.",
+   "id": "mmwdz1b2r29ky:52",
+   "location": "[section: Barca da Ericeira]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "oars",
+     "value": "3 to 4",
+     "what": "Barca da Ericeira oars per side"
+    },
+    {
+     "unit": "men",
+     "value": "10 to 12",
+     "what": "Barca da Ericeira crew"
+    }
+   ],
+   "term": "leme por fora"
+  },
+  {
+   "definition": "Two masts angled away from each other, as on the Caíque de Traquete.",
+   "id": "mmwdz1b2r29ky:53",
+   "location": "[section: Caíque de Traquete]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "metres",
+     "value": "18 to 19",
+     "what": "Caíque length"
+    },
+    {
+     "unit": "men",
+     "value": "15 to 20",
+     "what": "Caíque crew"
+    },
+    {
+     "unit": "oars",
+     "value": "2",
+     "what": "oars per side"
+    }
+   ],
+   "term": "mastros divergentes"
+  },
+  {
+   "definition": "Two masts of unequal size or placement, markedly raked forward, carrying bastard lateen sails on the Canoa Caçadeira.",
+   "id": "mmwdz1b2r29ky:54",
+   "location": "[section: Canoa Caçadeira]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "oars",
+     "value": "3 to 4",
+     "what": "oars per side"
+    }
+   ],
+   "term": "mastros assimétricos"
+  },
+  {
+   "definition": "Trawling with the boat broadside to its direction of drag, a particular feature of the Muleta de Arrasto.",
+   "id": "mmwdz1b2r29ky:55",
+   "location": "[section: Muleta de Arrasto]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "sails",
+     "value": "6",
+     "what": "extra sails used when fishing"
+    },
+    {
+     "unit": "metres",
+     "value": "12 to 13",
+     "what": "Muleta length"
+    }
+   ],
+   "term": "arrasto pelo través"
+  },
+  {
+   "definition": "Elegant decked sardine-fishing boat of Cascais and Sesimbra, fast and seaworthy, on which the sardines were salted aboard; sometimes raced.",
+   "id": "mmwdz1b2r29ky:56",
+   "location": "[part 3 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Canoa da Picada"
+  },
+  {
+   "definition": "A large lateen-type sail variant, rigged on the foremast of the canoa da picada and used on several Tagus boats.",
+   "id": "mmwdz1b2r29ky:57",
+   "location": "[part 3 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "latina bastarda"
+  },
+  {
+   "definition": "A small aft sail (mizzen) carried in addition to the main lateen sail.",
+   "id": "mmwdz1b2r29ky:58",
+   "location": "[part 3 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "mezena"
+  },
+  {
+   "definition": "A rudder mounted inboard, as on the canoa da picada.",
+   "id": "mmwdz1b2r29ky:59",
+   "location": "[part 3 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "leme montado por dentro"
+  },
+  {
+   "definition": "Sesimbra deep-sea fishing boat with a decked hull and two spritsails; masts were lowered and oars used during fishing.",
+   "id": "mmwdz1b2r29ky:60",
+   "location": "[part 3 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Barca da Pesca do Alto"
+  },
+  {
+   "definition": "Sprit-type sails, normally two, rigged by the Barca da Pesca do Alto.",
+   "id": "mmwdz1b2r29ky:61",
+   "location": "[part 3 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "velas de espicha"
+  },
+  {
+   "definition": "Setúbal deep-sea fishing boat with a schooner-style rig, bowsprit, wide beam, decked hull and a lot of keel.",
+   "id": "mmwdz1b2r29ky:62",
+   "location": "[part 3 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Lancha do Alto"
+  },
+  {
+   "definition": "Bowsprit; a spar projecting forward from the bow, to which a small staysail is attached.",
+   "id": "mmwdz1b2r29ky:63",
+   "location": "[part 3 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "gurupés"
+  },
+  {
+   "definition": "The most emblematic Tagus vessel: a heavy, bulging cargo boat with a gaff mainsail, two cabins and a towed boat.",
+   "id": "mmwdz1b2r29ky:64",
+   "location": "[part 3 of 14]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "metres",
+     "value": "20 to 25",
+     "what": "length"
+    },
+    {
+     "unit": "men",
+     "value": "3",
+     "what": "crew"
+    }
+   ],
+   "term": "Fragata"
+  },
+  {
+   "definition": "Gaff sail, hoisted close to the mast and strongly raked aft, used as the fragata's mainsail.",
+   "id": "mmwdz1b2r29ky:65",
+   "location": "[part 3 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vela de carangueja"
+  },
+  {
+   "definition": "Stay or staysail, a sail set on a forward stay; used on many Tagus boats.",
+   "id": "mmwdz1b2r29ky:66",
+   "location": "[part 3 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "estai"
+  },
+  {
+   "definition": "A small boat towed astern, used to tow the fragata by rowing when needed.",
+   "id": "mmwdz1b2r29ky:67",
+   "location": "[part 3 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bote a reboque"
+  },
+  {
+   "definition": "Typical Tagus cargo boat, bulging yet more elegant than the fragata, keelless, with one or two staysails and a square-shaped sail.",
+   "id": "mmwdz1b2r29ky:68",
+   "location": "[part 3 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Varino"
+  },
+  {
+   "definition": "False bulwarks that allowed better stowage of cargo.",
+   "id": "mmwdz1b2r29ky:69",
+   "location": "[part 3 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bordas falsas"
+  },
+  {
+   "definition": "Hold fitted with removable floor sections for storing cargo, as in the varino.",
+   "id": "mmwdz1b2r29ky:70",
+   "location": "[part 3 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "porão com paneiros"
+  },
+  {
+   "definition": "Early-20th-century decked Tagus boat with notched bow and sloping stern, used for fishing and carrying people and cargo across the river.",
+   "id": "mmwdz1b2r29ky:71",
+   "location": "[part 3 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Batel do Tejo"
+  },
+  {
+   "definition": "Side steering blades or paddles that helped with manoeuvring the batel.",
+   "id": "mmwdz1b2r29ky:72",
+   "location": "[part 3 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "espadelas"
+  },
+  {
+   "definition": "Varino-family boat carrying people and goods across the Tagus, with a large lateen sail and a small staysail.",
+   "id": "mmwdz1b2r29ky:73",
+   "location": "[part 3 of 14]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "metres",
+     "value": "15 to 16",
+     "what": "length"
+    },
+    {
+     "unit": "men",
+     "value": "2 to 3",
+     "what": "crew"
+    }
+   ],
+   "term": "Falua com Vela Latina"
+  },
+  {
+   "definition": "Fast, one- or two-masted Tagus boat carrying cargo and passengers, rigged with bastard lateen sails.",
+   "id": "mmwdz1b2r29ky:74",
+   "location": "[part 3 of 14]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "metres",
+     "value": "14 to 15",
+     "what": "length"
+    }
+   ],
+   "term": "Falua"
+  },
+  {
+   "definition": "Fragata-like boat with a rounder bow, carrying heavy loads such as sand and stone; crew poled it in shallow water.",
+   "id": "mmwdz1b2r29ky:75",
+   "location": "[part 3 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Cangueiro"
+  },
+  {
+   "definition": "Long poles used by the crew to push the boat along in shallow water.",
+   "id": "mmwdz1b2r29ky:76",
+   "location": "[part 3 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "varas"
+  },
+  {
+   "definition": "Decorated varino-family boat carrying pine branches, with a long triangular lateen sail on a short mast set far forward.",
+   "id": "mmwdz1b2r29ky:77",
+   "location": "[part 3 of 14]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "metres",
+     "value": "14 to 15",
+     "what": "length"
+    },
+    {
+     "unit": "men",
+     "value": "2 to 4",
+     "what": "crew"
+    }
+   ],
+   "term": "Bote do Pinho"
+  },
+  {
+   "definition": "Smaller Tagus boat with a fragata-like hull whose stem curves smoothly into the keel; usually a large bastard lateen.",
+   "id": "mmwdz1b2r29ky:78",
+   "location": "[part 3 of 14]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "metres",
+     "value": "9 to 10",
+     "what": "length"
+    }
+   ],
+   "term": "Bote Cacilheiro"
+  },
+  {
+   "definition": "The stem; on the bote cacilheiro it blends continuously into the keel.",
+   "id": "mmwdz1b2r29ky:79",
+   "location": "[part 3 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "roda de proa"
+  },
+  {
+   "definition": "Smaller fragata-like boat used mainly to carry cargo and transship goods to and from anchored ships.",
+   "id": "mmwdz1b2r29ky:80",
+   "location": "[part 3 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Canoa Cacilheira"
+  },
+  {
+   "definition": "Transshipment: transferring goods between ships, the main job of the canoa cacilheira.",
+   "id": "mmwdz1b2r29ky:81",
+   "location": "[part 3 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "transbordo"
+  },
+  {
+   "definition": "A staysail set on a stay; here tacked down to a pole serving as a bowsprit.",
+   "id": "mmwdz1b2r29ky:82",
+   "location": "part 4 (text start)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vela de estai"
+  },
+  {
+   "definition": "Tacked: the forward lower corner of a sail is fixed down, here to a spar at the bow.",
+   "id": "mmwdz1b2r29ky:83",
+   "location": "part 4 (text start)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "amurada"
+  },
+  {
+   "definition": "Side steering oars or boards that greatly helped manoeuvring and navigation in the Tagus channels and creeks.",
+   "id": "mmwdz1b2r29ky:84",
+   "location": "part 4 (Barco de Riba-Tejo)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "espadelas laterais"
+  },
+  {
+   "definition": "Narrow tidal creeks of the Tagus estuary through which these boats had to navigate.",
+   "id": "mmwdz1b2r29ky:85",
+   "location": "part 4 (Barco de Riba-Tejo)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "esteiros"
+  },
+  {
+   "definition": "A large blade rudder, removable, valuable as an aid for steering in the Tagus creeks and channels.",
+   "id": "mmwdz1b2r29ky:86",
+   "location": "part 4 (Praieira)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "leme de pá"
+  },
+  {
+   "definition": "A toothed, strongly rounded bow shape characteristic of the Muleta do Seixal and echoed in the Riba-Tejo hull.",
+   "id": "mmwdz1b2r29ky:87",
+   "location": "part 4 (Muleta do Seixal)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "proa dentada"
+  },
+  {
+   "definition": "A mast strongly raked forward, from which the yard is hoisted; typical of the Muleta rig.",
+   "id": "mmwdz1b2r29ky:88",
+   "location": "part 4 (Muleta do Seixal)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "mastro inclinado para vante"
+  },
+  {
+   "definition": "A yard: the spar from which a sail is hoisted and held.",
+   "id": "mmwdz1b2r29ky:89",
+   "location": "part 4 (Muleta do Seixal)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "verga"
+  },
+  {
+   "definition": "To tack (fix the sail's forward lower corner) and to trim or sheet in a sail, done using spars extending from stern and bow.",
+   "id": "mmwdz1b2r29ky:90",
+   "location": "part 4 (Muleta do Seixal)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "amurar e caçar"
+  },
+  {
+   "definition": "Triangular lateen sails; the Caíque carries two large ones, and several other boats carry one or two.",
+   "id": "mmwdz1b2r29ky:91",
+   "location": "part 4 (Caíque do Algarve)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "velas latinas"
+  },
+  {
+   "definition": "A tiller-steered rudder mounted outside the hull, as on the Canoa do Espinel.",
+   "id": "mmwdz1b2r29ky:92",
+   "location": "part 4 (Canoa do Espinel)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "leme de cana por fora"
+  },
+  {
+   "definition": "Lowering the sails, done by the Baleeira do Pico crew when chasing a whale so they can row.",
+   "id": "mmwdz1b2r29ky:93",
+   "location": "part 4 (Baleeira do Pico)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "arriar as velas"
+  },
+  {
+   "definition": "A projecting pin or fitting at the bow that, with a pulley, helps haul in the catch.",
+   "id": "mmwdz1b2r29ky:94",
+   "location": "part 4 (Barco da Pesca do Carapau)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "malagueta"
+  },
+  {
+   "definition": "A strong pulley (block) at the bow that eases hauling in the fish catch.",
+   "id": "mmwdz1b2r29ky:95",
+   "location": "part 4 (Barco da Pesca do Carapau)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "roldana de esforço"
+  },
+  {
+   "definition": "Open-mouthed (undecked or open-waisted) hull type, as in the Canoa do Espinel and carapau boat.",
+   "id": "mmwdz1b2r29ky:96",
+   "location": "part 4 (Canoa do Espinel; Barco da Pesca do Carapau)",
+   "measured_by": "",
+   "numbers": [],
+   "term": "boca aberta"
+  }
+ ],
+ "kind": "historical",
+ "lang": "",
+ "partsDone": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13
+ ],
+ "partsTotal": 14,
+ "runAt": "2026-11-12T20:26:16.924Z",
+ "sourceId": "mmwdz1b2r29ky",
+ "textChars": 79321,
+ "title": "PORTUGAL MARÍTIMO  BARCOS TRADICIONAIS PORTUGUESES"
+}

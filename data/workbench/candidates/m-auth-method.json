@@ -1,0 +1,220 @@
+{
+ "items": [
+  {
+   "definition": "Sailing as close to the wind as the rig permits, with sails tight; the only way to gain ground upwind, done by tacking.",
+   "id": "m-auth-method:1",
+   "location": "[section: Foundations > Sailing concepts]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "degrees",
+     "value": "45",
+     "what": "approximate angle to the wind when close-hauled"
+    }
+   ],
+   "term": "bolina"
+  },
+  {
+   "definition": "Sailing with wind from the side or from abaft the side, sails eased; gives the fastest and steadiest headings.",
+   "id": "m-auth-method:2",
+   "location": "[section: Foundations > Sailing concepts]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "largo"
+  },
+  {
+   "definition": "Wind coming directly from astern, sails fully out, with a risk of accidental gybe.",
+   "id": "m-auth-method:3",
+   "location": "[section: Foundations > Sailing concepts]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "popa"
+  },
+  {
+   "definition": "Pointing directly into the wind, so sails flap and the boat stalls. Portuguese term not yet confirmed in the source.",
+   "id": "m-auth-method:4",
+   "location": "[section: Foundations > Sailing concepts]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "In irons"
+  },
+  {
+   "definition": "Pulling the sail in tighter, for example when heading up toward the wind.",
+   "id": "m-auth-method:5",
+   "location": "[section: Foundations > Sailing concepts]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "caçar"
+  },
+  {
+   "definition": "Letting the sail out, for example when bearing away or running.",
+   "id": "m-auth-method:6",
+   "location": "[section: Foundations > Sailing concepts]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "folgar"
+  },
+  {
+   "definition": "Reducing sail area as wind increases, or replacing the sail with a small storm sail.",
+   "id": "m-auth-method:7",
+   "location": "[section: Foundations > Sailing concepts]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Reefing and storm sail"
+  },
+  {
+   "definition": "A small storm sail used when the wind rises.",
+   "id": "m-auth-method:8",
+   "location": "[section: Foundations > Sailing concepts]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "caixamarim"
+  },
+  {
+   "definition": "The arrangement of masts and sails; types listed are lateen, gaff with jib, square and lug.",
+   "id": "m-auth-method:9",
+   "location": "[section: Foundations > Sailing concepts]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Rig"
+  },
+  {
+   "definition": "The gaff rig, used together with a jib.",
+   "id": "m-auth-method:10",
+   "location": "[section: Foundations > Sailing concepts]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "carangueja"
+  },
+  {
+   "definition": "The lug rig, one of the sail arrangements listed.",
+   "id": "m-auth-method:11",
+   "location": "[section: Foundations > Sailing concepts]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "catita"
+  },
+  {
+   "definition": "Steering toward the wind; if overdone, the boat ends up in irons.",
+   "id": "m-auth-method:12",
+   "location": "[section: Foundations > Sailing concepts]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "orçar"
+  },
+  {
+   "definition": "Steering away from the wind, to regain speed or turn downwind.",
+   "id": "m-auth-method:13",
+   "location": "[section: Foundations > Sailing concepts]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "arribar"
+  },
+  {
+   "definition": "Tacking: turning through the wind to change sides while going upwind, zigzagging between two close-hauled headings.",
+   "id": "m-auth-method:14",
+   "location": "[section: Foundations > Sailing concepts]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "virar de bordo"
+  },
+  {
+   "definition": "Gybing: turning with the wind astern so the sail swings across; on a lateen rig the yard passes to the other side of the mast.",
+   "id": "m-auth-method:15",
+   "location": "[section: Foundations > Sailing concepts]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "cambar"
+  },
+  {
+   "definition": "Holding the boat across wind and current, as when trawling. Portuguese term not yet confirmed.",
+   "id": "m-auth-method:16",
+   "location": "[section: Foundations > Sailing concepts]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Lying across (athwart)"
+  },
+  {
+   "definition": "Moving with current and wind without steering for speed.",
+   "id": "m-auth-method:17",
+   "location": "[section: Foundations > Sailing concepts]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Drift"
+  },
+  {
+   "definition": "Leeboard: a board lowered to reduce sideways slip in shallow water.",
+   "id": "m-auth-method:18",
+   "location": "[section: Foundations > Sailing concepts]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "tábua de bolina"
+  },
+  {
+   "definition": "Controlling speed to come alongside another boat or a quay.",
+   "id": "m-auth-method:19",
+   "location": "[section: Foundations > Sailing concepts]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Approach and dock"
+  },
+  {
+   "definition": "Moving the boat without sail: poling in shallows, towing from the bank, or rowing.",
+   "id": "m-auth-method:20",
+   "location": "[section: Foundations > Sailing concepts]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Pole, tow, row"
+  },
+  {
+   "definition": "Towing the boat from the river bank.",
+   "id": "m-auth-method:21",
+   "location": "[section: Foundations > Sailing concepts]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "sirga"
+  },
+  {
+   "definition": "Choosing a heading relative to the wind; the game shows a wind arrow and speed dial as feedback.",
+   "id": "m-auth-method:22",
+   "location": "[section: Step 2, concept table only]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Points of sail"
+  },
+  {
+   "definition": "Matching the sail setting to the heading; a marker turns green when correct.",
+   "id": "m-auth-method:23",
+   "location": "[section: Step 2, concept table only]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Trim (ease or sheet in)"
+  },
+  {
+   "definition": "The boat's lean, shown as feedback when practising sail reduction as gusts rise.",
+   "id": "m-auth-method:24",
+   "location": "[section: Step 2, concept table only]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Heel angle"
+  },
+  {
+   "definition": "A sudden increase in wind, tracked by a gust meter, prompting the player to reduce sail.",
+   "id": "m-auth-method:25",
+   "location": "[section: Step 2, concept table only]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Gust"
+  }
+ ],
+ "kind": "author",
+ "lang": "en",
+ "partsDone": [
+  0
+ ],
+ "partsTotal": 1,
+ "runAt": "2026-11-12T19:27:20.374Z",
+ "sourceId": "m-auth-method",
+ "textChars": 3061,
+ "title": "Method doc: From text to minigame (Tagus boats game)"
+}

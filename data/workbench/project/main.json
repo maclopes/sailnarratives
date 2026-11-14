@@ -1,0 +1,14 @@
+{
+ "audience": "Museum visitors",
+ "goals": "Sailing concepts the simulation shows (points of sail, trim, tacking, gybing)\nThe working life of the river's boats",
+ "name": "Boats of the Tagus",
+ "otherLanguages": [
+  "en"
+ ],
+ "primaryLanguage": "pt-PT",
+ "simplifications": "No tide or current\nNo rowing\nNo crew",
+ "subject": "Traditional sailing boats of the Tagus",
+ "tone": "Do not romanticise the whale hunt\nFiction and fact labelled: characters invented, context documented",
+ "updatedAt": "2026-11-12T12:00:00Z",
+ "visitMinutes": 5
+}

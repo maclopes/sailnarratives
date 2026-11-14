@@ -1,0 +1,620 @@
+{
+ "byConcept": {
+  "c100": {
+   "activity": "",
+   "status": "missing",
+   "why": "No sail-changing or headsail bending activity offered."
+  },
+  "c129": {
+   "activity": "",
+   "status": "missing",
+   "why": "No onboard safety or handholds mechanic in any activity."
+  },
+  "c132": {
+   "activity": "",
+   "status": "missing",
+   "why": "No stepping ashore mechanic; the anchor drill only covers stopping."
+  },
+  "c148": {
+   "activity": "",
+   "status": "missing",
+   "why": "No lookout task; busy-river routes only involve avoiding collisions."
+  },
+  "c154": {
+   "activity": "",
+   "status": "missing",
+   "why": "No man overboard scenario or rescue manoeuvre among missions or drills."
+  },
+  "c155": {
+   "activity": "",
+   "status": "missing",
+   "why": "No crew communication or emergency calling feature."
+  },
+  "c156": {
+   "activity": "",
+   "status": "missing",
+   "why": "No flotation device throwing or rescue equipment mechanic."
+  },
+  "c157": {
+   "activity": "",
+   "status": "missing",
+   "why": "No crew roles or victim-watching task exist."
+  },
+  "c159": {
+   "activity": "",
+   "status": "missing",
+   "why": "No hoisting or recovery of a person using a halyard."
+  },
+  "c16": {
+   "activity": "kind.fishing",
+   "status": "covered",
+   "why": "Muleta drifts sideways dragging a net through the shoals, essentially lying athwart."
+  },
+  "c20": {
+   "activity": "",
+   "status": "missing",
+   "why": "No poling, rowing or towing mechanic; all activities are under sail."
+  },
+  "c21": {
+   "activity": "",
+   "status": "missing",
+   "why": "No bank towing activity; river routes are sailed only."
+  },
+  "h:p1": {
+   "activity": "route.vfx-lisboa",
+   "status": "covered",
+   "why": "Cargo run down the Tagus from the lezírias to Lisbon matches freight transport."
+  },
+  "h:p100": {
+   "activity": "route.lisboa-almada",
+   "status": "covered",
+   "why": "Passengers across the river between Lisbon and Almada, as catraios did."
+  },
+  "h:p101": {
+   "activity": "route.moita-lisboa",
+   "status": "covered",
+   "why": "Cargo from the south bank; keel boat and Cacilhas origin differ slightly."
+  },
+  "h:p104": {
+   "activity": "",
+   "status": "missing",
+   "why": "Tapa-esteiros fishing with a support canoa is not offered."
+  },
+  "h:p108": {
+   "activity": "kind.fishing",
+   "status": "partly",
+   "why": "Fishing exists, but not Avieiro bateiras or life aboard."
+  },
+  "h:p109": {
+   "activity": "route.vfx-lisboa",
+   "status": "partly",
+   "why": "Freight transport near Vila Franca exists, but not in the Mouchões."
+  },
+  "h:p11": {
+   "activity": "mini.supplies",
+   "status": "covered",
+   "why": "Supply run takes goods out to a boat at sea; here ships at anchor."
+  },
+  "h:p111": {
+   "activity": "ground.barra",
+   "status": "partly",
+   "why": "Fishing at river mouth exists, but with the Muleta, not Foz/Embocadura specifically."
+  },
+  "h:p113": {
+   "activity": "",
+   "status": "missing",
+   "why": "Shipyard origins and crew recruitment are not playable activities."
+  },
+  "h:p114": {
+   "activity": "",
+   "status": "missing",
+   "why": "Northern shipyard boat building is not represented."
+  },
+  "h:p12": {
+   "activity": "mini.passengers",
+   "status": "covered",
+   "why": "Passenger and cargo routes across and along the Tagus with period boats."
+  },
+  "h:p121": {
+   "activity": "",
+   "status": "missing",
+   "why": "No towing from the bank or rapids passage in the game."
+  },
+  "h:p124": {
+   "activity": "route.moita-lisboa",
+   "status": "partly",
+   "why": "Similar south bank to Lisbon route, but Montijo itself is not a route."
+  },
+  "h:p127": {
+   "activity": "",
+   "status": "missing",
+   "why": "No car-carrying ferries or vehicle transport."
+  },
+  "h:p131": {
+   "activity": "route.moita-lisboa",
+   "status": "partly",
+   "why": "Cargo to Lisbon exists, but not cangueiro boats or specific materials."
+  },
+  "h:p132": {
+   "activity": "",
+   "status": "missing",
+   "why": "Boat decoration painting is not a game activity."
+  },
+  "h:p133": {
+   "activity": "",
+   "status": "missing",
+   "why": "No Galician caravel voyages to Cabo Branco."
+  },
+  "h:p135": {
+   "activity": "kind.fishing",
+   "status": "partly",
+   "why": "Fishing in the Tagus exists, but no tartaranha, Lent or royal supply."
+  },
+  "h:p144": {
+   "activity": "route.moita-lisboa",
+   "status": "partly",
+   "why": "South bank to Lisbon trade exists; Coina, Almada and upriver links differ."
+  },
+  "h:p145": {
+   "activity": "",
+   "status": "missing",
+   "why": "No royal travel route between Almeirim and Lisbon."
+  },
+  "h:p146": {
+   "activity": "route.vfx-lisboa",
+   "status": "partly",
+   "why": "Long haul down from the lezírias, but no melons or wine."
+  },
+  "h:p147": {
+   "activity": "route.vfx-lisboa",
+   "status": "partly",
+   "why": "Tagus ports to Lisbon cargo, but not Vila Nova da Rainha or schedules."
+  },
+  "h:p149": {
+   "activity": "",
+   "status": "missing",
+   "why": "No Alcántara ore convoys or rapids route."
+  },
+  "h:p150": {
+   "activity": "",
+   "status": "missing",
+   "why": "Rafting timber and cork is not offered."
+  },
+  "h:p153": {
+   "activity": "",
+   "status": "missing",
+   "why": "Boatmen relocating or changing careers is not playable."
+  },
+  "h:p158": {
+   "activity": "",
+   "status": "missing",
+   "why": "Boat business and building at Constância are not represented."
+  },
+  "h:p16": {
+   "activity": "mini.busy",
+   "status": "partly",
+   "why": "Fragata cargo crossing exists, but no loading or unloading of anchored ships."
+  },
+  "h:p165": {
+   "activity": "",
+   "status": "missing",
+   "why": "Land-based scrub, firewood and charcoal production is not a sailing activity."
+  },
+  "h:p169": {
+   "activity": "kind.transport",
+   "status": "partly",
+   "why": "Generic cargo exists, but no lime or north bank ports."
+  },
+  "h:p17": {
+   "activity": "",
+   "status": "missing",
+   "why": "No rowing or towing of a fragata when becalmed."
+  },
+  "h:p172": {
+   "activity": "",
+   "status": "missing",
+   "why": "Brandy distilling is not in the game."
+  },
+  "h:p177": {
+   "activity": "",
+   "status": "missing",
+   "why": "Timber felling and treatment are not sailing activities."
+  },
+  "h:p181": {
+   "activity": "route.vfx-lisboa",
+   "status": "partly",
+   "why": "Upriver cargo to Lisbon exists, but not cork or Rossio."
+  },
+  "h:p184": {
+   "activity": "",
+   "status": "missing",
+   "why": "Wholesale and redistribution at Rossio are not represented."
+  },
+  "h:p185": {
+   "activity": "",
+   "status": "missing",
+   "why": "No fuel barge runs or quay pumping."
+  },
+  "h:p188": {
+   "activity": "route.vfx-lisboa",
+   "status": "partly",
+   "why": "Goods to Lisbon from upriver, but not Rossio or wheat and cork."
+  },
+  "h:p195": {
+   "activity": "",
+   "status": "missing",
+   "why": "Flood dikes are not a sailing activity."
+  },
+  "h:p204": {
+   "activity": "",
+   "status": "missing",
+   "why": "No medieval maritime links with North Africa or Europe."
+  },
+  "h:p205": {
+   "activity": "",
+   "status": "missing",
+   "why": "Trade organisation is not a playable activity."
+  },
+  "h:p206": {
+   "activity": "route.constancia-abrantes",
+   "status": "partly",
+   "why": "Upriver runs exist, but not salt and fish cargo."
+  },
+  "h:p208": {
+   "activity": "",
+   "status": "missing",
+   "why": "Railway company labour and boat-buying policy has no gameplay equivalent."
+  },
+  "h:p209": {
+   "activity": "route.moita-lisboa",
+   "status": "partly",
+   "why": "Cargo to Lisbon exists, but not timber, rafts, or sea arrival."
+  },
+  "h:p223": {
+   "activity": "",
+   "status": "missing",
+   "why": "No poling or towing upriver; upper Tagus routes are sailed."
+  },
+  "h:p225": {
+   "activity": "route.moita-lisboa",
+   "status": "partly",
+   "why": "Tagus cargo and passenger routes exist, but not rent-time calls at Porto de Muge."
+  },
+  "h:p226": {
+   "activity": "route.vfx-lisboa",
+   "status": "partly",
+   "why": "Downriver haul from Vila Franca to Lisbon exists, but timber floating doesn't."
+  },
+  "h:p229": {
+   "activity": "route.constancia-abrantes",
+   "status": "partly",
+   "why": "Upper Tagus cargo runs exist, but no Santarém route or cereals and timber supply."
+  },
+  "h:p230": {
+   "activity": "mini.busy",
+   "status": "covered",
+   "why": "Busy Tagus cargo crossing among many boats with Fragata matches the river highway."
+  },
+  "h:p234": {
+   "activity": "",
+   "status": "missing",
+   "why": "Village water management through ditches and channels is not represented."
+  },
+  "h:p235": {
+   "activity": "kind.fishing",
+   "status": "partly",
+   "why": "Fishing exists, but with Muleta at sea, not bateis in Tagus currents."
+  },
+  "h:p243": {
+   "activity": "",
+   "status": "missing",
+   "why": "Bank and angling fishing from shore is not offered; fishing is boat-based."
+  },
+  "h:p244": {
+   "activity": "kind.fishing",
+   "status": "partly",
+   "why": "Fishing and cargo exist, but not selling at Tagus markets."
+  },
+  "h:p247": {
+   "activity": "",
+   "status": "missing",
+   "why": "Supplying a royal household with fish is not a game activity."
+  },
+  "h:p249": {
+   "activity": "",
+   "status": "missing",
+   "why": "Wasteful sale of young shad has no equivalent."
+  },
+  "h:p252": {
+   "activity": "",
+   "status": "missing",
+   "why": "Boat construction isn't playable; the game only offers sailing."
+  },
+  "h:p253": {
+   "activity": "mini.seaweed",
+   "status": "covered",
+   "why": "Gathering moliço with a Moliceiro in the Ria de Aveiro."
+  },
+  "h:p255": {
+   "activity": "",
+   "status": "missing",
+   "why": "Panel painting is not an activity."
+  },
+  "h:p26": {
+   "activity": "",
+   "status": "missing",
+   "why": "Overland ox-cart transport is not a sailing activity in the game."
+  },
+  "h:p261": {
+   "activity": "mini.seaweed",
+   "status": "partly",
+   "why": "Moliceiro sailing exists, but poling and towing are not described."
+  },
+  "h:p262": {
+   "activity": "",
+   "status": "missing",
+   "why": "Shipyard lineages and building knowledge aren't gameplay."
+  },
+  "h:p263": {
+   "activity": "",
+   "status": "missing",
+   "why": "Laying out hull stakes isn't offered."
+  },
+  "h:p264": {
+   "activity": "",
+   "status": "missing",
+   "why": "Hull construction isn't offered."
+  },
+  "h:p265": {
+   "activity": "",
+   "status": "missing",
+   "why": "Caulking and pitching isn't offered."
+  },
+  "h:p269": {
+   "activity": "",
+   "status": "missing",
+   "why": "Festival decoration with flags and branches isn't offered."
+  },
+  "h:p272": {
+   "activity": "mini.seaweed",
+   "status": "partly",
+   "why": "Museum mini-game recreates moliço gathering, though not as a staged ethnographic display."
+  },
+  "h:p273": {
+   "activity": "",
+   "status": "missing",
+   "why": "Oral transmission of boatbuilding skills isn't gameplay."
+  },
+  "h:p282": {
+   "activity": "",
+   "status": "missing",
+   "why": "Adapting tools and boats for loading moliço isn't represented."
+  },
+  "h:p290": {
+   "activity": "",
+   "status": "missing",
+   "why": "Right bank forestry has no game activity."
+  },
+  "h:p298": {
+   "activity": "",
+   "status": "missing",
+   "why": "Roman inland navigation has no game equivalent."
+  },
+  "h:p303": {
+   "activity": "route.barquinha-almourol",
+   "status": "partly",
+   "why": "Passenger river travel exists, but not on Barca da Amieira or Flor da Rosa."
+  },
+  "h:p307": {
+   "activity": "",
+   "status": "missing",
+   "why": "Industrial siting near waterways is not represented."
+  },
+  "h:p311": {
+   "activity": "",
+   "status": "missing",
+   "why": "Nile irrigation is outside the game's places and activities."
+  },
+  "h:p320": {
+   "activity": "",
+   "status": "missing",
+   "why": "Agricultural and wine-economy policy; no matching game activity."
+  },
+  "h:p321": {
+   "activity": "",
+   "status": "missing",
+   "why": "Dam and irrigation engineering proposal; the game has nothing comparable."
+  },
+  "h:p325": {
+   "activity": "",
+   "status": "missing",
+   "why": "River flow regulation by afforestation and dams is not a sailing activity."
+  },
+  "h:p327": {
+   "activity": "",
+   "status": "missing",
+   "why": "Medical spa treatment at springs; no game equivalent."
+  },
+  "h:p329": {
+   "activity": "route.moita-lisboa",
+   "status": "partly",
+   "why": "Cargo to Lisbon is similar, but not transfer to estuary ships."
+  },
+  "h:p333": {
+   "activity": "mini.passengers",
+   "status": "partly",
+   "why": "River passenger and cargo crossings exist, but not on the Minho or with this boat."
+  },
+  "h:p334": {
+   "activity": "kind.fishing",
+   "status": "partly",
+   "why": "Fishing exists, but with the Muleta, not the Maceira at Âncora."
+  },
+  "h:p335": {
+   "activity": "route.vfx-lisboa",
+   "status": "partly",
+   "why": "River cargo haul exists on the Tagus, not wine barrels down the Douro."
+  },
+  "h:p336": {
+   "activity": "kind.transport",
+   "status": "partly",
+   "why": "Carrying goods and passengers between banks exists, but not on the Douro."
+  },
+  "h:p337": {
+   "activity": "kind.fishing",
+   "status": "partly",
+   "why": "Fishing is offered, but not Poveira boats or their different fisheries."
+  },
+  "h:p339": {
+   "activity": "ground.cascais",
+   "status": "partly",
+   "why": "Cascais fishing ground exists, but not sardine picking or Canoa da Picada racing."
+  },
+  "h:p340": {
+   "activity": "kind.fishing",
+   "status": "partly",
+   "why": "Fishing exists, but not deep-sea fishing with oars off Sesimbra."
+  },
+  "h:p341": {
+   "activity": "kind.transport",
+   "status": "partly",
+   "why": "Cargo transport exists on the Tagus, but not pine branches by Bote do Pinho."
+  },
+  "h:p343": {
+   "activity": "kind.fishing",
+   "status": "partly",
+   "why": "Fishing exists, but not espinel line fishing at Olhão."
+  },
+  "h:p344": {
+   "activity": "kind.supply",
+   "status": "covered",
+   "why": "Supply run ferries goods and fish between a fishing boat and shore."
+  },
+  "h:p345": {
+   "activity": "kind.whaling",
+   "status": "covered",
+   "why": "Whaling mission with Azorean whalers approaching a sperm whale from astern."
+  },
+  "h:p346": {
+   "activity": "kind.fishing",
+   "status": "partly",
+   "why": "Fishing exists, but not Azorean mackerel fishing with oars and bow pulley."
+  },
+  "h:p347": {
+   "activity": "kind.fishing",
+   "status": "partly",
+   "why": "Fishing exists, but not beach launching at Costa de Caparica."
+  },
+  "h:p35": {
+   "activity": "kind.transport",
+   "status": "partly",
+   "why": "Passenger routes exist, but not by steamer or Santarém route."
+  },
+  "h:p353": {
+   "activity": "route.lisboa-almada",
+   "status": "partly",
+   "why": "Passenger crossing of the Tagus exists, but not bathers going to Trafaria."
+  },
+  "h:p354": {
+   "activity": "",
+   "status": "missing",
+   "why": "Settlement history of fishing communities; no game activity."
+  },
+  "h:p357": {
+   "activity": "",
+   "status": "missing",
+   "why": "Hamlet huts and housing; no sailing activity matches."
+  },
+  "h:p36": {
+   "activity": "",
+   "status": "missing",
+   "why": "No steam cargo boats or quay warehouse trade at Barquinha."
+  },
+  "h:p38": {
+   "activity": "",
+   "status": "missing",
+   "why": "Ox-cart haulage to paper mills is overland, not in the game."
+  },
+  "h:p60": {
+   "activity": "",
+   "status": "missing",
+   "why": "No bar pilotage or assisting India ships by fishermen."
+  },
+  "h:p64": {
+   "activity": "",
+   "status": "missing",
+   "why": "Historical proposals to introduce the tartana are not playable."
+  },
+  "h:p65": {
+   "activity": "",
+   "status": "missing",
+   "why": "Tartana rigging and foreign crews are not represented."
+  },
+  "h:p66": {
+   "activity": "",
+   "status": "missing",
+   "why": "Early illustrations are documentary, with no matching game activity."
+  },
+  "h:p67": {
+   "activity": "",
+   "status": "missing",
+   "why": "Leeboard history is not an activity, though the Muleta may have one."
+  },
+  "h:p73": {
+   "activity": "mini.fishing",
+   "status": "covered",
+   "why": "Muleta drags net over Tagus shoals, with Seixal and barra grounds."
+  },
+  "h:p8": {
+   "activity": "",
+   "status": "missing",
+   "why": "No crew roles or hierarchy (arrais, camaradas, moços) in any game activity."
+  },
+  "h:p81": {
+   "activity": "kind.supply",
+   "status": "partly",
+   "why": "Supply run goes out to sea, but not trading cargo beyond the bar."
+  },
+  "h:p82": {
+   "activity": "",
+   "status": "missing",
+   "why": "No Algarve or Moroccan coastal trading routes for the Muleta."
+  },
+  "h:p83": {
+   "activity": "",
+   "status": "missing",
+   "why": "No option to rig a Muleta as an iate."
+  },
+  "h:p84": {
+   "activity": "",
+   "status": "missing",
+   "why": "Furling with brails and climbing the yard is not modelled."
+  },
+  "h:p86": {
+   "activity": "mini.fishing",
+   "status": "partly",
+   "why": "Net dragging exists, but not paying out cable or hours-long hand hauling."
+  },
+  "h:p87": {
+   "activity": "",
+   "status": "missing",
+   "why": "Beach-hauled xávega net fishing is not offered."
+  },
+  "h:p92": {
+   "activity": "mini.supplies",
+   "status": "partly",
+   "why": "Bringing fish home exists, but not landing catches at Lisbon."
+  },
+  "h:p93": {
+   "activity": "",
+   "status": "missing",
+   "why": "No cod ship dories or daily rowing from the fishing ground."
+  },
+  "h:p99": {
+   "activity": "route.barquinha-almourol",
+   "status": "partly",
+   "why": "Middle Tagus routes exist, but not the flat-bottomed boats or river fishing."
+  }
+ },
+ "updatedAt": "2026-11-14T10:59:10.202Z"
+}

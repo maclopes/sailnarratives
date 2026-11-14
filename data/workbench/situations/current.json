@@ -1,0 +1,2585 @@
+{
+ "activities": [
+  {
+   "area": "medio",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "The barcos d'água acima are not in the game; the fragata is a Tagus cargo boat and is the closest match (p1 lists fragatas among its boats).",
+   "concepts": [
+    "c221",
+    "c239",
+    "c2",
+    "c3",
+    "c23",
+    "c223"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "new map area",
+    "cargo loading and weight"
+   ],
+   "goal": "Sail a Tagus cargo boat from the Ribatejo quay at Vila Nova da Barquinha down to Lisboa, using the wind to keep the boat moving.",
+   "id": "s1",
+   "level": 1,
+   "minutes": 5,
+   "needs": "A continuous map from the Ribatejo to Lisboa would be needed to sail the whole run.",
+   "practice": "p1",
+   "premise": "The visitor sails a boat that carried goods from the Ribatejo down the Tejo to Lisboa, taking advantage of a fair wind.",
+   "route": "Vila Nova da Barquinha, Constância, Abrantes",
+   "simplifications": [
+    "No cargo is loaded and no weight is simulated",
+    "No crew",
+    "No current or tide",
+    "Only the upper river is used because the map has no Ribatejo-to-Lisboa continuous route"
+   ],
+   "success": "Reach Lisboa within 5 minutes of game time, spending at least 60% of the time on a reach or run (c2, c3) and not staying in irons (c4) for more than 5 seconds.",
+   "title": "Fair Wind to Lisbon"
+  },
+  {
+   "area": "tejo",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "The closest game boat to the barcos d'água acima.",
+   "concepts": [
+    "c1",
+    "c14",
+    "c65",
+    "c81",
+    "c80",
+    "c219"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [
+    "tide and current"
+   ],
+   "goal": "Sail from a Tagus quay upriver by tacking, as the boats did when returning with goods.",
+   "id": "s2",
+   "level": 2,
+   "minutes": 6,
+   "needs": "Current is needed to make going upriver truly harder.",
+   "practice": "p1",
+   "premise": "The visitor sails a boat bringing goods back upriver from Lisboa towards the Ribatejo.",
+   "route": "Lisboa, Vila Franca de Xira",
+   "simplifications": [
+    "No current against the player",
+    "No cargo",
+    "No crew"
+   ],
+   "success": "Reach the destination quay within 6 minutes, completing at least 2 tacks (c14), each leg on a close-hauled heading (c1).",
+   "title": "Back Upriver with the Wind"
+  },
+  {
+   "area": "medio",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "A Tagus boat of the kind the arrais commanded.",
+   "concepts": [
+    "c216",
+    "c82",
+    "c25",
+    "c89",
+    "c23",
+    "c35"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [
+    "crew and tasks aboard"
+   ],
+   "goal": "Steer as the arrais would, keeping the boat on a steady heading and trimming the sails as the wind changes.",
+   "id": "s3",
+   "level": 1,
+   "minutes": 4,
+   "needs": "",
+   "practice": "p8",
+   "premise": "The visitor takes the place of the arrais who commanded and steered, and learns to read the wind.",
+   "route": "Vila Nova da Barquinha, Tancos, Castelo de Almourol",
+   "simplifications": [
+    "No camaradas or moços aboard",
+    "No weather forecasting by the stars"
+   ],
+   "success": "Hold a chosen point of sail within 10 degrees for 90 seconds in gusty wind, reaching the target port.",
+   "title": "The Arrais at the Helm"
+  },
+  {
+   "area": "tejo",
+   "boat": "Catraio",
+   "boatInGame": true,
+   "boatNote": "Catraios are listed among the small boats in p11.",
+   "concepts": [
+    "c554",
+    "c418",
+    "c19",
+    "c14"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [
+    "cargo loading and weight"
+   ],
+   "goal": "Sail a small boat out to an anchored ship off Lisboa and bring it back to the quay.",
+   "id": "s4",
+   "level": 2,
+   "minutes": 4,
+   "needs": "A cargo transfer step.",
+   "practice": "p11",
+   "premise": "The visitor works one of the small boats that supplied ships anchored off Lisboa.",
+   "route": "Lisboa, Almada",
+   "simplifications": [
+    "No cargo transfer",
+    "No crew",
+    "No other ships anchored (only a buoy)"
+   ],
+   "success": "Reach the marked buoy standing for the ship, then return and dock at the Lisboa quay within 5 minutes.",
+   "title": "Supply Run to the Anchored Ship"
+  },
+  {
+   "area": "tejo",
+   "boat": "Falua",
+   "boatInGame": true,
+   "boatNote": "",
+   "concepts": [
+    "c601",
+    "c286",
+    "c14",
+    "c15",
+    "c2"
+   ],
+   "decision": "draft",
+   "feasibility": "full",
+   "features": [],
+   "goal": "Cross the Tagus from one bank to the other, carrying people and goods as river traffic did.",
+   "id": "s5",
+   "level": 2,
+   "minutes": 4,
+   "needs": "",
+   "practice": "p12",
+   "premise": "The visitor makes the river crossing that linked the two banks of the Tagus until the mid-20th century.",
+   "route": "Lisboa, Almada, Seixal",
+   "simplifications": [
+    "No current",
+    "No passengers or goods shown"
+   ],
+   "success": "Cross from Lisboa to Almada and then back to Lisboa within 5 minutes of game time, using at least one tack or gybe (c14, c15).",
+   "title": "Crossing Between the Banks"
+  },
+  {
+   "area": "tejo",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "",
+   "concepts": [
+    "c19",
+    "c284",
+    "c6",
+    "c67",
+    "c4"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [
+    "steam and motor traffic",
+    "cargo loading and weight"
+   ],
+   "goal": "Bring a fragata alongside a quay in Lisbon harbour at low speed.",
+   "id": "s6",
+   "level": 2,
+   "minutes": 4,
+   "needs": "Steam traffic to add a moving obstacle.",
+   "practice": "p16",
+   "premise": "The visitor brings a fragata to a Lisbon quay, as the frigates did at Cais das Colunas.",
+   "route": "Lisboa",
+   "simplifications": [
+    "No steamer departing",
+    "No cargo handling",
+    "No crew"
+   ],
+   "success": "Arrive at the Lisboa quay at under 1 knot (c54) without overshooting, within 4 minutes of starting.",
+   "title": "Docking at Cais das Colunas"
+  },
+  {
+   "area": "tejo",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "",
+   "concepts": [
+    "c284",
+    "c653",
+    "c637",
+    "c6"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "rowing and poling",
+    "towing",
+    "crew and tasks aboard"
+   ],
+   "goal": "Make progress across the estuary when the wind is weak, and see why a fragata needed a rowed tow.",
+   "id": "s7",
+   "level": 2,
+   "minutes": 5,
+   "needs": "A towed boat that rows the fragata.",
+   "practice": "p17",
+   "premise": "The visitor sails a fragata that, without favourable wind, was rowed along by a small boat towed behind it.",
+   "route": "Lisboa, Barreiro",
+   "simplifications": [
+    "No rowing or towing is possible in the game, so the player can only wait for the wind"
+   ],
+   "success": "Reach the opposite bank within 6 minutes with the wind at a low setting, and note the time lost compared with a normal wind.",
+   "title": "Becalmed Fragata"
+  },
+  {
+   "area": "tejo",
+   "boat": "Falua",
+   "boatInGame": true,
+   "boatNote": "A passenger boat of the Tagus.",
+   "concepts": [
+    "c254",
+    "c257",
+    "c238",
+    "c14",
+    "c62",
+    "c63"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [
+    "steam and motor traffic",
+    "new map area"
+   ],
+   "goal": "Continue upstream under sail from the place where the steamer left the traveller.",
+   "id": "s8",
+   "level": 2,
+   "minutes": 5,
+   "needs": "Steamer traffic and a map extending to Santarém.",
+   "practice": "p35",
+   "premise": "The visitor takes a sailing boat upstream after the traveller changed from a steamer, against a fresh north wind.",
+   "route": "Vila Franca de Xira, Alverca do Ribatejo",
+   "simplifications": [
+    "No steamer in the game",
+    "The destination is a nearby port, not Santarém"
+   ],
+   "success": "Sail from Vila Franca de Xira up to the destination port, tacking against a fresh northerly wind (c257) with at least 2 legs (c81) on starboard and port tack (c62, c63).",
+   "title": "Sailing Boat Upstream After the Steamer"
+  },
+  {
+   "area": "medio",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "The steam cargo boats are not in the game, so a sailing Tagus cargo boat takes their place at the quay.",
+   "concepts": [
+    "c223",
+    "c265",
+    "c19",
+    "c239"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "new boat",
+    "steam and motor traffic"
+   ],
+   "goal": "Bring a boat alongside the quay at Barquinha, as the cargo boats from Lisbon did.",
+   "id": "s9",
+   "level": 2,
+   "minutes": 3,
+   "needs": "A steam boat to sail.",
+   "practice": "p36",
+   "premise": "The visitor brings a cargo boat to the quay at Barquinha, where goods arrived and left.",
+   "route": "Tancos, Vila Nova da Barquinha",
+   "simplifications": [
+    "The steam boat is replaced by a sailing boat",
+    "No cargo",
+    "No warehouse or return-trip rule"
+   ],
+   "success": "Dock at Vila Nova da Barquinha at under 1 knot within 4 minutes of leaving Tancos.",
+   "title": "Quay of the Steam Cargo Boats"
+  },
+  {
+   "area": "tejo",
+   "boat": "Muleta",
+   "boatInGame": true,
+   "boatNote": "",
+   "concepts": [
+    "c243",
+    "c220",
+    "c324",
+    "c356",
+    "c14"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "river bar and pilotage",
+    "water depth and shallows",
+    "new boat"
+   ],
+   "goal": "Sail a muleta out past the river mouth bar to meet a ship and lead it back in.",
+   "id": "s10",
+   "level": 3,
+   "minutes": 6,
+   "needs": "A bar with shallows and a ship to follow.",
+   "practice": "p60",
+   "premise": "The visitor sails a muleta like the offshore fishing boats whose crews acted as pilots at the Lisbon bar.",
+   "route": "Lisboa, Trafaria, Cascais",
+   "simplifications": [
+    "No bar, shoals or waves",
+    "No ship to lead"
+   ],
+   "success": "Reach the buoy beyond the bar, then return to the Cascais port within 6 minutes without being in irons for more than 5 seconds.",
+   "title": "Pilot Across the Bar"
+  },
+  {
+   "area": "tejo",
+   "boat": "Muleta",
+   "boatInGame": true,
+   "boatNote": "The tartana is not in the game; the muleta is the closest boat with extra sails for trawling (c359).",
+   "concepts": [
+    "c359",
+    "c69",
+    "c23",
+    "c646",
+    "c542"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "fishing net and catch",
+    "rig changes",
+    "new boat"
+   ],
+   "goal": "Sail a boat with a lateen main and extra sails, trimming them as for trawling.",
+   "id": "s11",
+   "level": 3,
+   "minutes": 4,
+   "needs": "A trawl net and the full set of trawling sails.",
+   "practice": "p65",
+   "premise": "The visitor trims the sails of a boat that carried extra sails for trawl fishing.",
+   "route": "Cascais, Cabo Espichel",
+   "simplifications": [
+    "No net or catch",
+    "No crew for the extra sails",
+    "Only the main sail and a few others"
+   ],
+   "success": "Hold a beam reach (c69) with the sails trimmed so the boat keeps at least 2 knots for 60 seconds.",
+   "title": "Trawling Sails Trim"
+  },
+  {
+   "area": "tejo",
+   "boat": "Muleta",
+   "boatInGame": true,
+   "boatNote": "",
+   "concepts": [
+    "c18",
+    "c95",
+    "c1",
+    "c364",
+    "c24"
+   ],
+   "decision": "draft",
+   "feasibility": "full",
+   "features": [],
+   "goal": "Sail a muleta close to the wind with the leeboard lowered on the leeward side, and see how it limits drift.",
+   "id": "s12",
+   "level": 1,
+   "minutes": 3,
+   "needs": "",
+   "practice": "p67",
+   "premise": "The visitor sails a muleta whose leeboard reduces leeward drift, lowered on one side.",
+   "route": "Lisboa, Barreiro",
+   "simplifications": [
+    "The leeboard is lowered automatically or by one control",
+    "No flat-bottomed comparison with round-rigged boats"
+   ],
+   "success": "Sail a close-hauled leg (c1) and keep leeway (c95) below a set angle for 60 seconds.",
+   "title": "Leeboard Down"
+  },
+  {
+   "area": "tejo",
+   "boat": "Muleta",
+   "boatInGame": true,
+   "boatNote": "",
+   "concepts": [
+    "c2",
+    "c5",
+    "c6",
+    "c23",
+    "c324",
+    "c803"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [
+    "fishing net and catch"
+   ],
+   "goal": "Sail the muleta from Barreiro out to the Entre-Cabos waters near Cabo Espichel and hold a steady course to simulate working the grounds.",
+   "id": "s13",
+   "level": 2,
+   "minutes": 5,
+   "needs": "Fishing net and catch to feel the drag of the trawl",
+   "practice": "p73",
+   "premise": "The visitor sails a muleta registered at a south-bank port out to the Entre-Cabos waters where the tartaranha net was worked.",
+   "route": "Barreiro, Seixal, Cabo Espichel",
+   "simplifications": [
+    "No net is shot or hauled",
+    "No catch",
+    "No crew",
+    "No tide or current"
+   ],
+   "success": "Reach Cabo Espichel from Barreiro, then hold a beam reach or broad reach (c2) at 2 to 4 knots for 60 seconds.",
+   "title": "Entre-Cabos Fishing Run"
+  },
+  {
+   "area": "tejo",
+   "boat": "Muleta",
+   "boatInGame": true,
+   "boatNote": "The rasca is not in the game, so the muleta stands in; both ventured beyond the bar.",
+   "concepts": [
+    "c220",
+    "c382",
+    "c14",
+    "c1",
+    "c22",
+    "c23"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [
+    "river bar and pilotage",
+    "cargo loading and weight",
+    "new boat"
+   ],
+   "goal": "Sail a muleta from the river out past the bar into the open sea and return.",
+   "id": "s14",
+   "level": 2,
+   "minutes": 6,
+   "needs": "Bar and pilotage and a cargo to carry",
+   "practice": "p81",
+   "premise": "The visitor leaves river navigation and crosses the bar into the ocean, as muletas and rascas did when seeking cargo.",
+   "route": "Lisboa, Cascais, Cabo Espichel",
+   "simplifications": [
+    "No bar hazards or pilotage",
+    "No cargo of figs or fish",
+    "No Algarve ports"
+   ],
+   "success": "Reach Cabo Espichel from Lisboa and return to Lisboa within 6 minutes, using tacking (c14) on at least one upwind leg.",
+   "title": "Over the Bar"
+  },
+  {
+   "area": "tejo",
+   "boat": "Muleta",
+   "boatInGame": true,
+   "boatNote": "The Algarve and Moroccan ports are not in the game, so a Tagus coastal leg stands in.",
+   "concepts": [
+    "c382",
+    "c2",
+    "c70",
+    "c23",
+    "c437"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "new map area",
+    "cargo loading and weight"
+   ],
+   "goal": "Sail along the coast on a trading voyage from the Tagus toward the Algarve and back with cargo.",
+   "id": "s15",
+   "level": 1,
+   "minutes": 5,
+   "needs": "Algarve and Moroccan map area and cargo",
+   "practice": "p82",
+   "premise": "The visitor sails a muleta on coastal trade, as muletas carried Algarve products to the Tagus or exchanged them at Moroccan ports.",
+   "route": "Cascais, Cabo Espichel, Sesimbra",
+   "simplifications": [
+    "Algarve and Moroccan ports are missing",
+    "No cargo exchange"
+   ],
+   "success": "Sail from Cascais to Sesimbra along the coast and back, holding a reach for at least half the time.",
+   "title": "Coastal Trade Leg"
+  },
+  {
+   "area": "tejo",
+   "boat": "Muleta",
+   "boatInGame": true,
+   "boatNote": "",
+   "concepts": [
+    "c307",
+    "c513",
+    "c23",
+    "c91"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "rig changes"
+   ],
+   "goal": "Compare how the muleta sails with its usual rig and with a two or three-masted iate rig.",
+   "id": "s16",
+   "level": 3,
+   "minutes": 4,
+   "needs": "Switchable rigs for the muleta",
+   "practice": "p83",
+   "premise": "The visitor sails a muleta rigged as an iate with two or three masts for a commercial commission.",
+   "route": "Lisboa, Almada, Seixal",
+   "simplifications": [
+    "No commercial commission",
+    "No crew to handle the extra masts"
+   ],
+   "success": "Complete the same short course twice with different rigs and finish both within 20 percent of each other's time.",
+   "title": "Change the Rig"
+  },
+  {
+   "area": "tejo",
+   "boat": "Muleta",
+   "boatInGame": true,
+   "boatNote": "",
+   "concepts": [
+    "c91",
+    "c6",
+    "c24",
+    "c93",
+    "c25"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [
+    "rig changes",
+    "crew and tasks aboard"
+   ],
+   "goal": "Reduce sail area as the wind grows so the muleta stays under control.",
+   "id": "s17",
+   "level": 1,
+   "minutes": 3,
+   "needs": "Reefing and furling with crew",
+   "practice": "p84",
+   "premise": "The visitor reduces the sail area of a muleta, the task that crew did by climbing the yard in dangerous work.",
+   "route": "Lisboa, Trafaria",
+   "simplifications": [
+    "No climbing the yard",
+    "No brails or rolling the cloth by hand",
+    "No crew"
+   ],
+   "success": "Keep heel (c24) below the excessive heeling threshold (c93) for 90 seconds in gusty wind by easing the sheets (c6).",
+   "title": "Shorten Sail"
+  },
+  {
+   "area": "tejo",
+   "boat": "Muleta",
+   "boatInGame": true,
+   "boatNote": "",
+   "concepts": [
+    "c803",
+    "c69",
+    "c6",
+    "c660",
+    "c324"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "fishing net and catch",
+    "crew and tasks aboard"
+   ],
+   "goal": "Sail slowly and steadily across the wind as a muleta did when trawling with the tartaranha net.",
+   "id": "s18",
+   "level": 3,
+   "minutes": 4,
+   "needs": "Net drag and hauling mechanism",
+   "practice": "p86",
+   "premise": "The visitor sails a muleta beyond the bar while paying out cable so the net reaches the bottom.",
+   "route": "Cabo Espichel, Sesimbra",
+   "simplifications": [
+    "No net, cable or windlass",
+    "The source itself doubts hauling by hand"
+   ],
+   "success": "Hold a beam reach (c69) at 1 to 2 knots for 90 seconds with the sails balanced.",
+   "title": "Haul the Net Broadside"
+  },
+  {
+   "area": "tejo",
+   "boat": "Muleta",
+   "boatInGame": true,
+   "boatNote": "",
+   "concepts": [
+    "c563",
+    "c626",
+    "c625",
+    "c19",
+    "c223"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [
+    "cargo loading and weight"
+   ],
+   "goal": "Bring a muleta from the fishing waters to Lisbon to land the catch.",
+   "id": "s19",
+   "level": 2,
+   "minutes": 4,
+   "needs": "Cargo to unload",
+   "practice": "p92",
+   "premise": "The visitor brings fish to Lisbon, where muletes unloaded a huge quantity.",
+   "route": "Cascais, Oeiras, Lisboa",
+   "simplifications": [
+    "No fish cargo",
+    "No market"
+   ],
+   "success": "Sail from Cascais to Lisboa and dock (c19) within 4 minutes.",
+   "title": "Fish to the Ribeira"
+  },
+  {
+   "area": "tejo",
+   "boat": "Catraio",
+   "boatInGame": true,
+   "boatNote": "Dories and the cod ships' boats are not in the game, so a small boat stands in.",
+   "concepts": [
+    "c676",
+    "c554",
+    "c382",
+    "c19"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "new boat",
+    "fishing net and catch",
+    "new map area"
+   ],
+   "goal": "Sail a small boat out from a fishing ground at dawn and return at dusk with a catch.",
+   "id": "s20",
+   "level": 1,
+   "minutes": 4,
+   "needs": "Fishing grounds and a mother ship",
+   "practice": "p93",
+   "premise": "The visitor sails a small boat from the fishing ground at dawn and returns at dusk with the catch.",
+   "route": "Setúbal, Cabo Espichel",
+   "simplifications": [
+    "No cod fishing grounds",
+    "No line and hooks",
+    "No mother ship"
+   ],
+   "success": "Sail out from Setúbal, then return to the same port before the in-game dusk.",
+   "title": "Dawn Out, Dusk Home"
+  },
+  {
+   "area": "tejo",
+   "boat": "Canoa",
+   "boatInGame": true,
+   "boatNote": "",
+   "concepts": [
+    "c601",
+    "c495",
+    "c211",
+    "c19",
+    "c223"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [
+    "rowing and poling",
+    "water depth and shallows"
+   ],
+   "goal": "Make a shallow-water river crossing in a small boat and land at the far bank.",
+   "id": "s21",
+   "level": 1,
+   "minutes": 3,
+   "needs": "Rowing and shallows",
+   "practice": "p99",
+   "premise": "The visitor works a river boat across the Tagus, as boats did for fishing, transport and crossings.",
+   "route": "Seixal, Lisboa",
+   "simplifications": [
+    "No oars",
+    "No shallow-water hazard",
+    "No bridge passage"
+   ],
+   "success": "Cross between Seixal and Lisboa and dock at the far landing within 3 minutes.",
+   "title": "Cross and Carry"
+  },
+  {
+   "area": "tejo",
+   "boat": "Falua",
+   "boatInGame": true,
+   "boatNote": "The bote is not in the game, so the falua is the closest passenger boat.",
+   "concepts": [
+    "c238",
+    "c601",
+    "c19",
+    "c23"
+   ],
+   "decision": "draft",
+   "feasibility": "full",
+   "features": [],
+   "goal": "Carry passengers across the river from Cacilhas side to Lisbon.",
+   "id": "s22",
+   "level": 1,
+   "minutes": 3,
+   "needs": "",
+   "practice": "p100",
+   "premise": "The visitor carries passengers between Cacilhas, Almada and Lisbon in a bote.",
+   "route": "Almada, Lisboa",
+   "simplifications": [
+    "No passengers aboard",
+    "No timetable"
+   ],
+   "success": "Sail from Almada to Lisboa and dock without luffing (c67) for more than 5 seconds.",
+   "title": "Ferry to Lisbon"
+  },
+  {
+   "area": "tejo",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "The types C and D keel boats are not in the game, so the fragata stands in.",
+   "concepts": [
+    "c239",
+    "c223",
+    "c14",
+    "c1",
+    "c19",
+    "c59"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [
+    "cargo loading and weight"
+   ],
+   "goal": "Sail a larger keel boat upriver with a load toward the Ribatejo ports.",
+   "id": "s23",
+   "level": 2,
+   "minutes": 6,
+   "needs": "Cargo weight",
+   "practice": "p101",
+   "premise": "The visitor carries people and cargo from Cacilhas toward the Ribatejo ports and the south bank.",
+   "route": "Almada, Alhos Vedros, Alcochete, Vila Franca de Xira",
+   "simplifications": [
+    "No cargo weight",
+    "No current",
+    "No passengers"
+   ],
+   "success": "Sail from Almada to Vila Franca de Xira with an upwind leg and dock within 6 minutes.",
+   "title": "Upriver with Cargo"
+  },
+  {
+   "area": "tejo",
+   "boat": "Canoa",
+   "boatInGame": true,
+   "boatNote": "The bote and canoa das redes are not in the game, so the canoa stands in.",
+   "concepts": [
+    "c234",
+    "c613",
+    "c606",
+    "c4",
+    "c211"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "fishing net and catch",
+    "new boat",
+    "water depth and shallows"
+   ],
+   "goal": "Sail the small boat to the fishing spot and hold position for the net.",
+   "id": "s24",
+   "level": 3,
+   "minutes": 4,
+   "needs": "Net and a second supporting boat",
+   "practice": "p104",
+   "premise": "The visitor sails the fishing bote that worked with support from the canoa das redes in the Mar da Palha.",
+   "route": "Alcochete, Montijo",
+   "simplifications": [
+    "No supporting second boat",
+    "No net",
+    "No creeks (esteiros)"
+   ],
+   "success": "Reach the Mar da Palha near Alcochete and hold within a small zone for 60 seconds, close to head to wind.",
+   "title": "Net Boat in the Mar da Palha"
+  },
+  {
+   "area": "tejo",
+   "boat": "Canoa",
+   "boatInGame": true,
+   "boatNote": "The bateira is not in the game, so the canoa is the closest river boat.",
+   "concepts": [
+    "c608",
+    "c606",
+    "c495",
+    "c223",
+    "c19"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [
+    "new boat",
+    "fishing net and catch"
+   ],
+   "goal": "Sail a bateira along the lower Tagus to a fishing spot and tie up for the night.",
+   "id": "s25",
+   "level": 1,
+   "minutes": 3,
+   "needs": "Bateira and fishing",
+   "practice": "p108",
+   "premise": "The visitor sails like the Avieiros, who fished almost exclusively in the river, living aboard bateiras.",
+   "route": "Vila Franca de Xira, Alverca do Ribatejo",
+   "simplifications": [
+    "No stilt-house villages",
+    "No fishing",
+    "No living aboard"
+   ],
+   "success": "Sail from Vila Franca de Xira to a landing place and dock, with the sail eased or sheeted correctly.",
+   "title": "Avieiro Day on the River"
+  },
+  {
+   "area": "aveiro",
+   "boat": "Moliceiro",
+   "boatInGame": true,
+   "boatNote": "p111 mentions keeled transom-stern boats and double-ended flat-bottomed Aveiro-lagoon boats. The Moliceiro is the nearest to the flat-bottomed lagoon type; no keeled transom-stern fishing boat is in t",
+   "concepts": [
+    "c324",
+    "c382",
+    "c2",
+    "c22",
+    "c23"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [],
+   "goal": "Sail a fishing boat from the river mouth out to a buoy beyond the bar and return to port, using coastal navigation.",
+   "id": "s26",
+   "level": 1,
+   "minutes": 5,
+   "needs": "",
+   "practice": "p111",
+   "premise": "The visitor sails a fishing boat out of the river mouth to the sea fishing grounds beyond the bar and back, as fishermen from many parts of Portugal did.",
+   "route": "Barra, outer buoy, Costa Nova",
+   "simplifications": [
+    "No river bar hazard or pilotage",
+    "No fishing or catch",
+    "No crew from different regions",
+    "Only one hull type"
+   ],
+   "success": "Reach the outer buoy and return to the home port within 5 minutes, holding a reaching point of sail (c2) on at least one leg.",
+   "title": "Out Past the Bar"
+  },
+  {
+   "area": "tejo",
+   "boat": "Muleta",
+   "boatInGame": true,
+   "boatNote": "Fishing boat of the Tagus, in the game.",
+   "concepts": [
+    "c19",
+    "c4",
+    "c14",
+    "c243"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "crew and tasks aboard"
+   ],
+   "goal": "Take a boat from a shipyard town to the fishing port where its crew would be based.",
+   "id": "s27",
+   "level": 2,
+   "minutes": 4,
+   "needs": "crew and shipyard content to show the people",
+   "practice": "p113",
+   "premise": "The visitor sails a boat from the Seixal and Barreiro shipyard area to Trafaria, where residents supplied most of the fishing crews.",
+   "route": "Seixal, Barreiro, Trafaria",
+   "simplifications": [
+    "No crew, so the companha is not shown",
+    "No shipyard scene"
+   ],
+   "success": "Sail from Seixal to Trafaria and dock within 5 minutes without being in irons (c4) for more than 10 seconds.",
+   "title": "Shipyard to Fishing Grounds"
+  },
+  {
+   "area": "tejo",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "The northern shipyards (Esposende, Figueira, Porto) are outside the game's maps; the Fragata is a large Tagus boat used as the closest stand-in.",
+   "concepts": [
+    "c14",
+    "c15",
+    "c284",
+    "c550"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "new map area",
+    "crew and tasks aboard"
+   ],
+   "goal": "Sail a larger boat on a delivery route and compare how it handles against a smaller one.",
+   "id": "s28",
+   "level": 2,
+   "minutes": 4,
+   "needs": "a northern coastal map area and crew size",
+   "practice": "p114",
+   "premise": "The visitor handles one of the largest boats, of the kind built in northern coastal shipyards and needing the most crew.",
+   "route": "Lisboa, Seixal, Barreiro",
+   "simplifications": [
+    "Northern coast not on a map",
+    "No crew size shown"
+   ],
+   "success": "Complete a tack (c14) and a gybe (c15) without losing control and reach the destination port.",
+   "title": "Skills of the Largest Boats"
+  },
+  {
+   "area": "medio",
+   "boat": "Rabelo",
+   "boatInGame": true,
+   "boatNote": "Douro rabelo is in development; used as the closest river cargo boat.",
+   "concepts": [
+    "c21",
+    "c422",
+    "c423",
+    "c20"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "towing",
+    "tide and current",
+    "water depth and shallows",
+    "new map area"
+   ],
+   "goal": "Get a boat past a rapids stretch by being towed from the bank.",
+   "id": "s29",
+   "level": 3,
+   "minutes": 4,
+   "needs": "towing, current and rapids",
+   "practice": "p121",
+   "premise": "The visitor brings a boat past the Cachão do Cabril rapids while it is hauled by towing from the riverbank.",
+   "route": "Constância, Abrantes",
+   "simplifications": [
+    "No rapids, current or riverbank paths"
+   ],
+   "success": "Reach the upstream marker of the rapids section within 4 minutes using tow and sheet-trim decisions.",
+   "title": "Hauled Past the Rapids"
+  },
+  {
+   "area": "tejo",
+   "boat": "Falua",
+   "boatInGame": true,
+   "boatNote": "",
+   "concepts": [
+    "c286",
+    "c601",
+    "c2",
+    "c19",
+    "c23"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [],
+   "goal": "Carry passengers by falua from Lisbon to Montijo.",
+   "id": "s30",
+   "level": 2,
+   "minutes": 5,
+   "needs": "",
+   "practice": "p124",
+   "premise": "The visitor sails a falua on the regular passenger link between Lisbon and Montijo, once called Aldeia Galega.",
+   "route": "Lisboa, Montijo",
+   "simplifications": [
+    "No tide or current",
+    "No passengers shown",
+    "No botes"
+   ],
+   "success": "Sail from Lisboa to Montijo and dock within 5 minutes, holding a close reach or beam reach (c66, c69) for at least 30 seconds.",
+   "title": "Falua to Aldeia Galega"
+  },
+  {
+   "area": "tejo",
+   "boat": "Catraio",
+   "boatInGame": true,
+   "boatNote": "",
+   "concepts": [
+    "c554",
+    "c601",
+    "c24",
+    "c93"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [],
+   "goal": "Cross the river by catraio between the two banks.",
+   "id": "s31",
+   "level": 1,
+   "minutes": 3,
+   "needs": "",
+   "practice": "p124",
+   "premise": "The visitor crosses the Tagus in a catraio, one of the small boats that linked Lisbon with the south bank.",
+   "route": "Lisboa, Almada",
+   "simplifications": [
+    "No tide",
+    "No passengers"
+   ],
+   "success": "Reach the far bank port within 3 minutes while heeling (c24) less than the excessive limit.",
+   "title": "Small Catraio Crossing"
+  },
+  {
+   "area": "tejo",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "The steam or motor ferries of p127 are not in the game; a Fragata is the nearest large Tagus boat. The activity cannot show the motor ferry itself.",
+   "concepts": [
+    "c601",
+    "c93",
+    "c19"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "steam and motor traffic",
+    "cargo loading and weight",
+    "new boat"
+   ],
+   "goal": "Make a crossing between two banks with a heavy load, keeping the boat steady.",
+   "id": "s32",
+   "level": 2,
+   "minutes": 4,
+   "needs": "motor ferry and vehicle cargo",
+   "practice": "p127",
+   "premise": "The visitor crosses the river on a route used by ferries that carried cars and donkey-drawn vegetable carts.",
+   "route": "Trafaria, Lisboa",
+   "simplifications": [
+    "Sail replaces the ferry engine",
+    "No cars or carts shown"
+   ],
+   "success": "Cross from Trafaria to Lisboa and dock within 5 minutes, keeping heel below the excessive heeling limit (c93).",
+   "title": "Ferry Crossing with Cargo"
+  },
+  {
+   "area": "tejo",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "Cangueiros are not in the game; a Fragata is the closest cargo boat.",
+   "concepts": [
+    "c239",
+    "c3",
+    "c70",
+    "c19"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "cargo loading and weight",
+    "new boat"
+   ],
+   "goal": "Bring a heavy cargo boat downriver to Lisbon with a fair wind.",
+   "id": "s33",
+   "level": 2,
+   "minutes": 5,
+   "needs": "cargo loading and weight",
+   "practice": "p131",
+   "premise": "The visitor hauls a heavy cargo of building materials, sand, stone and pine to Lisbon.",
+   "route": "Seixal, Lisboa",
+   "simplifications": [
+    "No cargo weight effect",
+    "No crew"
+   ],
+   "success": "Sail from Seixal to Lisboa and dock within 5 minutes with the load, keeping a broad reach or running (c70, c3) for at least half of the time.",
+   "title": "Heavy Load to Lisbon"
+  },
+  {
+   "area": "tejo",
+   "boat": "Falua",
+   "boatInGame": true,
+   "boatNote": "Varino is not in the game; Falua and Fragata are.",
+   "concepts": [
+    "c286",
+    "c284",
+    "c19"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "other",
+    "new boat"
+   ],
+   "goal": "Identify and sail the most decorated boats by choosing a falua, fragata, or varino.",
+   "id": "s34",
+   "level": 1,
+   "minutes": 3,
+   "needs": "painted mast tops and a new boat",
+   "practice": "p132",
+   "premise": "The visitor chooses among the most decorated Tagus boats, whose painted upper mast showed origin and ownership.",
+   "route": "Lisboa, Almada",
+   "simplifications": [
+    "Painting is a visual choice, not a sailing skill"
+   ],
+   "success": "Sail to a named port and pick the boat whose colour sequence matches the clue, then dock there.",
+   "title": "Spot the Painted Boats"
+  },
+  {
+   "area": "azores",
+   "boat": "Baleeiro",
+   "boatInGame": true,
+   "boatNote": "The lateen caravel is not in the game; a Baleeiro is the closest sea-going boat.",
+   "concepts": [
+    "c324",
+    "c382",
+    "c23",
+    "c67"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "new boat",
+    "fishing net and catch",
+    "new map area"
+   ],
+   "goal": "Make a long voyage along the coast to distant fishing grounds.",
+   "id": "s35",
+   "level": 2,
+   "minutes": 5,
+   "needs": "caravel and fishing",
+   "practice": "p133",
+   "premise": "The visitor sails to far-off fishing grounds, as Galician caravels did to fish sharks and mullets that were dried in the sun.",
+   "route": "Horta, outer marker",
+   "simplifications": [
+    "No Galician origin",
+    "No fish drying",
+    "No fishing"
+   ],
+   "success": "Reach the far marker and return, keeping the sail trimmed on each point of sail without luffing (c67) for more than 10 seconds at a time.",
+   "title": "Sail to the Distant Fishing Banks"
+  },
+  {
+   "area": "tejo",
+   "boat": "Muleta",
+   "boatInGame": true,
+   "boatNote": "Tartaranhas are not in the game; a Muleta is the closest Tagus fishing boat.",
+   "concepts": [
+    "c243",
+    "c19",
+    "c54"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "fishing net and catch",
+    "new boat"
+   ],
+   "goal": "Sail out, fish flatfish in the estuary, and bring them to Lisbon.",
+   "id": "s36",
+   "level": 3,
+   "minutes": 5,
+   "needs": "fishing net and catch",
+   "practice": "p135",
+   "premise": "The visitor fishes azevias and linguados in the Tagus estuary during Lent, in spite of the ban on tartaranhas, to supply the king.",
+   "route": "Alcochete, Lisboa",
+   "simplifications": [
+    "No ban or enforcement",
+    "No net or catch"
+   ],
+   "success": "Reach the fishing area, hold a slow speed for 20 seconds, then dock at Lisboa within 5 minutes.",
+   "title": "Lenten Fishing in Secret"
+  },
+  {
+   "area": "tejo",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "No boat of the 15th century is in the game; the Fragata is the nearest cargo boat.",
+   "concepts": [
+    "c14",
+    "c65",
+    "c81",
+    "c624",
+    "c144"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "cargo loading and weight",
+    "new map area",
+    "tide and current"
+   ],
+   "goal": "Carry goods from Lisbon upriver by sailing against the wind.",
+   "id": "s37",
+   "level": 2,
+   "minutes": 6,
+   "needs": "a map area for the upper river and cargo",
+   "practice": "p144",
+   "premise": "The visitor carries salt, fish and cloth upriver from Lisbon toward Santarém, Abrantes and Punhete.",
+   "route": "Lisboa, Vila Franca de Xira",
+   "simplifications": [
+    "No tide, though the practice mentions tide felt from Sabugueiro",
+    "Only the lower Tagus map; Santarém is not a port",
+    "No cargo"
+   ],
+   "success": "Reach Abrantes from Lisboa within 6 minutes, with at least two tacks (c14) on beating legs (c65).",
+   "title": "Upriver with Salt and Cloth"
+  },
+  {
+   "area": "medio",
+   "boat": "Falua",
+   "boatInGame": true,
+   "boatNote": "The text says only 'barco'; a Falua is a suitable passenger boat.",
+   "concepts": [
+    "c437",
+    "c286",
+    "c23"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "new map area"
+   ],
+   "goal": "Carry the royal party between Almeirim and Lisbon.",
+   "id": "s38",
+   "level": 2,
+   "minutes": 6,
+   "needs": "a map area covering Almeirim",
+   "practice": "p145",
+   "premise": "The visitor takes the king by boat between the Royal Palace of Almeirim and Lisbon.",
+   "route": "Abrantes, Lisboa",
+   "simplifications": [
+    "Almeirim is not a game port",
+    "Route spans two areas"
+   ],
+   "success": "Complete the voyage between the two places within 6 minutes without any luffing longer than 5 seconds.",
+   "title": "The King's Boat"
+  },
+  {
+   "area": "tejo",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "Barcas are not in the game; the Fragata is the closest.",
+   "concepts": [
+    "c266",
+    "c79",
+    "c3"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [
+    "cargo loading and weight"
+   ],
+   "goal": "Carry produce downriver to Lisbon on a schedule.",
+   "id": "s39",
+   "level": 1,
+   "minutes": 4,
+   "needs": "cargo loading",
+   "practice": "p146",
+   "premise": "The visitor carries melons and wine by barca to Lisbon, as boats from Muge and Azambuja did several times a week.",
+   "route": "Vila Franca de Xira, Lisboa",
+   "simplifications": [
+    "Muge and Azambuja are not game ports",
+    "No cargo"
+   ],
+   "success": "Reach Lisboa from Vila Franca de Xira within 4 minutes, with the sail set correctly for a downwind leg (c79).",
+   "title": "Melons and Wine to the City"
+  },
+  {
+   "area": "tejo",
+   "boat": "Catraio",
+   "boatInGame": true,
+   "boatNote": "Barcas and batéis are not in the game; the Catraio is a small river boat.",
+   "concepts": [
+    "c266",
+    "c267",
+    "c14",
+    "c15"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [],
+   "goal": "Run a scheduled barca service to Lisbon from a Tagus port.",
+   "id": "s40",
+   "level": 2,
+   "minutes": 4,
+   "needs": "",
+   "practice": "p147",
+   "premise": "The visitor runs a barca or batel between a Tagus port and Lisbon, as the boats serving Lisbon did several times a week.",
+   "route": "Alverca do Ribatejo, Sacavém, Lisboa",
+   "simplifications": [
+    "No cargo of firewood, wheat, straw or people",
+    "No timetable pressure from other boats"
+   ],
+   "success": "Reach Lisboa from Alverca do Ribatejo within 4 minutes, using at least one tack or gybe.",
+   "title": "Market Run on a Timetable"
+  },
+  {
+   "area": "medio",
+   "boat": "Rabelo",
+   "boatInGame": true,
+   "boatNote": "The Rabelo is in development; used as the closest river cargo boat.",
+   "concepts": [
+    "c239",
+    "c424",
+    "c674"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "towing",
+    "tide and current",
+    "crew and tasks aboard",
+    "new map area"
+   ],
+   "goal": "Keep a convoy of boats together so crews can help each other at rapids.",
+   "id": "s41",
+   "level": 3,
+   "minutes": 5,
+   "needs": "towing, current and rapids",
+   "practice": "p149",
+   "premise": "The visitor sails in a convoy of at least ten boats carrying Alcántara ore to Lisbon so that crews could help each other tow at the rapids.",
+   "route": "Abrantes, Constância",
+   "simplifications": [
+    "No rapids or towing"
+   ],
+   "success": "Keep within a set distance of the other boats until the destination, with no boat left behind.",
+   "title": "Ore Convoy Through the Rapids"
+  },
+  {
+   "area": "medio",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "Rafts (jangadas) are not in the game, so the fragata stands in as the closest Tagus cargo boat. Valada is not a named port in the game, so Praia do Ribatejo to Abrantes is used as the route.",
+   "concepts": [
+    "c22",
+    "c23",
+    "c5",
+    "c6",
+    "c211",
+    "c239"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "new boat",
+    "water depth and shallows",
+    "cargo loading and weight",
+    "new map area"
+   ],
+   "goal": "Sail a boat from Praia do Ribatejo down to Valada, as when timber and cork were moved in the dry season.",
+   "id": "s42",
+   "level": 1,
+   "minutes": 4,
+   "needs": "Raft boat, shallows, and a Valada place",
+   "practice": "p150",
+   "premise": "The visitor moves timber and cork down the Tagus in the dry season, when larger boats could not work, toward Salvaterra de Magos and Valada.",
+   "route": "Praia do Ribatejo, Constância, Abrantes",
+   "simplifications": [
+    "No raft",
+    "No low-water depth limit",
+    "No transshipment at Valada",
+    "Valada replaced by a nearby named port"
+   ],
+   "success": "Reach the Valada area from Praia do Ribatejo within 5 minutes, with no more than 2 periods in irons.",
+   "title": "Rafts to Valada"
+  },
+  {
+   "area": "tejo",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "The 60 t boat is not a game boat, so the fragata is the closest cargo boat on the Tagus.",
+   "concepts": [
+    "c2",
+    "c70",
+    "c23",
+    "c239",
+    "c410",
+    "c19"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [
+    "cargo loading and weight"
+   ],
+   "goal": "Sail a heavy cargo boat between Barreiro and Lisbon on the lower Tagus and hold a steady course.",
+   "id": "s43",
+   "level": 2,
+   "minutes": 4,
+   "needs": "",
+   "practice": "p158",
+   "premise": "The visitor sails a 60 t boat carrying goods between Barreiro and Lisbon, as the boat's owner did when he carried fertilisers and sulphates.",
+   "route": "Barreiro, Seixal, Almada, Lisboa",
+   "simplifications": [
+    "No cargo weight",
+    "Santarém is outside the tejo area, so the route is shortened to Barreiro and Lisbon",
+    "No train link"
+   ],
+   "success": "Reach Lisboa from Barreiro in under 5 minutes while holding a reach or broad reach for at least 50% of the time.",
+   "title": "Timber to Lisbon, then fertiliser to Santarém"
+  },
+  {
+   "area": "tejo",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "The 60 t boat is not in the game, so the fragata stands in.",
+   "concepts": [
+    "c19",
+    "c223",
+    "c14",
+    "c239",
+    "c54"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [],
+   "goal": "Carry wine across the river to Lisbon and dock at the quay.",
+   "id": "s44",
+   "level": 2,
+   "minutes": 4,
+   "needs": "",
+   "practice": "p158",
+   "premise": "The visitor carries wine to Lisbon and delivers it to the waterfront, as the boat's owner did for the Lisbon markets.",
+   "route": "Alcochete, Montijo, Lisboa",
+   "simplifications": [
+    "No cargo",
+    "Starting ports are replaced by Alcochete and Montijo",
+    "Only the final quay docking is judged"
+   ],
+   "success": "Dock at Lisboa within 5 minutes, arriving at less than 1 knot.",
+   "title": "Wine for the Lisbon markets"
+  },
+  {
+   "area": "tejo",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "No boat is named in the record; the fragata is a cargo boat of the Tagus.",
+   "concepts": [
+    "c458",
+    "c24",
+    "c93",
+    "c23",
+    "c223"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [
+    "cargo loading and weight"
+   ],
+   "goal": "Carry a load of brushwood and firewood from the south bank to Lisbon.",
+   "id": "s45",
+   "level": 1,
+   "minutes": 3,
+   "needs": "Cargo load that raises heel",
+   "practice": "p165",
+   "premise": "The visitor ships firewood from the south bank of the Tagus to Lisbon, the trade that moved closer to the river as transport costs changed.",
+   "route": "Seixal, Almada, Lisboa",
+   "simplifications": [
+    "No cargo weight",
+    "The charcoal change in the economics is not shown"
+   ],
+   "success": "Reach Lisboa from Seixal within 5 minutes with heel kept below an excessive level.",
+   "title": "Firewood boat to Lisbon"
+  },
+  {
+   "area": "tejo",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "No boat is named in the record. Vila Nova da Rainha is not a game port, so Alverca do Ribatejo or Vila Franca de Xira stands in.",
+   "concepts": [
+    "c223",
+    "c486",
+    "c2",
+    "c23",
+    "c19"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [
+    "new map area"
+   ],
+   "goal": "Carry lime from the north-bank port of Vila Nova da Rainha down to Lisbon.",
+   "id": "s46",
+   "level": 1,
+   "minutes": 4,
+   "needs": "",
+   "practice": "p169",
+   "premise": "The visitor ships lime from the north bank of the Tagus to Lisbon through the nearest river port.",
+   "route": "Vila Franca de Xira, Alverca do Ribatejo, Sacavém, Lisboa",
+   "simplifications": [
+    "No cargo",
+    "Substitute port for Vila Nova da Rainha",
+    "Only one port instead of the several named lime ports"
+   ],
+   "success": "Reach Lisboa from Alverca do Ribatejo or Vila Franca de Xira within 5 minutes.",
+   "title": "Lime to Lisbon from Vila Nova da Rainha"
+  },
+  {
+   "area": "medio",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "No boat is named in the record; the fragata is a Tagus cargo boat. Constância is a game port, but the beach is not a named place.",
+   "concepts": [
+    "c19",
+    "c223",
+    "c239",
+    "c452"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "cargo loading and weight",
+    "other"
+   ],
+   "goal": "Sail to the beach below the Zêzere confluence at Constância and collect timber for Lisbon.",
+   "id": "s47",
+   "level": 2,
+   "minutes": 4,
+   "needs": "Log floating and loading",
+   "practice": "p177",
+   "premise": "The visitor collects timber floated down the Zêzere at a beach below the confluence and embarks it for Lisbon.",
+   "route": "Constância, Vila Nova da Barquinha, Abrantes",
+   "simplifications": [
+    "No log floating",
+    "No ox carts",
+    "No loading step"
+   ],
+   "success": "Dock at Constância, then reach Lisboa within the time limit.",
+   "title": "Timber at the Zêzere beach"
+  },
+  {
+   "area": "medio",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "Rossio is not a named place, so Abrantes is used. No boat is named in the record, so the fragata stands in.",
+   "concepts": [
+    "c3",
+    "c15",
+    "c70",
+    "c239",
+    "c79"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [],
+   "goal": "Sail a cork cargo from Abrantes toward Lisbon in winter, when boats rather than rafts carried it.",
+   "id": "s48",
+   "level": 2,
+   "minutes": 4,
+   "needs": "",
+   "practice": "p181",
+   "premise": "The visitor ships cork from the Rossio quay at Abrantes by boat toward the Lisbon area.",
+   "route": "Abrantes, Tramagal, Constância",
+   "simplifications": [
+    "No cargo",
+    "No rafts",
+    "Only the upper river is covered, not the full trip to Lisbon"
+   ],
+   "success": "Leave Abrantes and reach Constância on a broad reach or running course within 4 minutes, with fewer than 2 gybes.",
+   "title": "Winter cork run from Rossio"
+  },
+  {
+   "area": "medio",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "The 50-70 t boats are not in the game; the fragata is the closest.",
+   "concepts": [
+    "c65",
+    "c14",
+    "c81",
+    "c219",
+    "c410"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [
+    "tide and current",
+    "cargo loading and weight"
+   ],
+   "goal": "Sail a boat upstream to Abrantes against the wind, bringing salt and fish.",
+   "id": "s49",
+   "level": 2,
+   "minutes": 5,
+   "needs": "River current to show the real difficulty of going upstream",
+   "practice": "p184",
+   "premise": "The visitor brings salt, salted fish and other goods upriver to Rossio, the upper limit for boats of 50-70 t where upstream navigation became much harder.",
+   "route": "Constância, Tramagal, Abrantes",
+   "simplifications": [
+    "No current",
+    "No cargo",
+    "Rossio replaced by Abrantes"
+   ],
+   "success": "Reach Abrantes from Constância by beating to windward, with at least 3 tacks completed.",
+   "title": "Upriver to the Rossio wholesalers"
+  },
+  {
+   "area": "medio",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "Barges (barcaças) are not in the game, so the fragata stands in.",
+   "concepts": [
+    "c19",
+    "c223",
+    "c239",
+    "c54"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "new boat",
+    "crew and tasks aboard",
+    "cargo loading and weight"
+   ],
+   "goal": "Bring a fuel barge from Lisbon to the Rossio quay at Abrantes and dock.",
+   "id": "s50",
+   "level": 2,
+   "minutes": 3,
+   "needs": "Barge boat and a pumping task",
+   "practice": "p185",
+   "premise": "The visitor brings liquid fuel by barge from Lisbon to the Rossio quay at Abrantes, where pumps moved it into depots beside the railway station.",
+   "route": "Constância, Tramagal, Abrantes",
+   "simplifications": [
+    "No pumping or depots",
+    "Only the final upper reach is shown"
+   ],
+   "success": "Dock at Abrantes at less than 1 knot.",
+   "title": "Fuel barge to the Rossio quay"
+  },
+  {
+   "area": "medio",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "The record names only barcos; the fragata is the closest Tagus cargo boat.",
+   "concepts": [
+    "c239",
+    "c485",
+    "c23",
+    "c2"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [],
+   "goal": "Sail the Alentejo freight boat from Abrantes toward Lisbon.",
+   "id": "s51",
+   "level": 1,
+   "minutes": 3,
+   "needs": "",
+   "practice": "p188",
+   "premise": "The visitor carries Alentejo goods to Lisbon, wheat before the railway and cork as its trade grew.",
+   "route": "Abrantes, Tramagal, Constância",
+   "simplifications": [
+    "No cargo",
+    "Only the upper river is covered"
+   ],
+   "success": "Reach the next port downstream within 4 minutes, with the sheets set correctly for the wind.",
+   "title": "Wheat and cork freight to Lisbon"
+  },
+  {
+   "area": "tejo",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "Medieval merchant ships are not in the game, so the fragata is the closest. Santarém is not on the map.",
+   "concepts": [
+    "c382",
+    "c14",
+    "c22",
+    "c305"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "new map area",
+    "new boat"
+   ],
+   "goal": "Sail a merchant vessel far up the Tagus, as Santarém ships once did.",
+   "id": "s52",
+   "level": 1,
+   "minutes": 5,
+   "needs": "Santarém and the upper river",
+   "practice": "p204",
+   "premise": "The visitor navigates far up the Tagus, which merchant ships once did to reach Santarém.",
+   "route": "Lisboa, Alverca do Ribatejo, Vila Franca de Xira",
+   "simplifications": [
+    "No Santarém",
+    "No sea voyage to North Africa or Flanders"
+   ],
+   "success": "Complete the route along the Tagus without grounding within 6 minutes.",
+   "title": "Sail upriver to Santarém"
+  },
+  {
+   "area": "tejo",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "The record names no boat; the fragata is a Tagus cargo boat.",
+   "concepts": [
+    "c96",
+    "c65",
+    "c3",
+    "c239",
+    "c485"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [
+    "cargo loading and weight"
+   ],
+   "goal": "Sail a two-way run: carry goods up the Tagus and bring forest goods back down.",
+   "id": "s53",
+   "level": 2,
+   "minutes": 6,
+   "needs": "",
+   "practice": "p206",
+   "premise": "The visitor carries salt, fish and manufactured goods up the Tagus, with agricultural and forest products going downstream to Lisbon.",
+   "route": "Lisboa, Sacavém, Alverca do Ribatejo, Vila Franca de Xira",
+   "simplifications": [
+    "No current",
+    "No cargo",
+    "Short distance"
+   ],
+   "success": "Complete a trip upriver to Vila Franca de Xira and back to Lisboa within 6 minutes, using both upwind and downwind sailing.",
+   "title": "Salt and fish upriver, timber down"
+  },
+  {
+   "area": "medio",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "The record names no boat; the fragata is the Tagus cargo boat tied to Vila Nova da Barquinha in the concept list (c227).",
+   "concepts": [
+    "c1",
+    "c14",
+    "c19",
+    "c223",
+    "c227"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [],
+   "goal": "Sail a boat upriver to Abrantes before the railway makes the trip pointless, then reach the home port.",
+   "id": "s54",
+   "level": 2,
+   "minutes": 5,
+   "needs": "",
+   "practice": "p208",
+   "premise": "The visitor sails a Tagus boat upstream of Vila Nova da Barquinha towards Abrantes, the stretch where railways ended navigation.",
+   "route": "Vila Nova da Barquinha, Tancos, Constância, Abrantes",
+   "simplifications": [
+    "No railway shown",
+    "No boatmen's employment choice",
+    "No current"
+   ],
+   "success": "Reach Abrantes from Vila Nova da Barquinha within 5 minutes, then return to Vila Nova da Barquinha and dock.",
+   "title": "Last Sail Upriver"
+  },
+  {
+   "area": "tejo",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "Barges and rafts are not in the game; the fragata is the closest Tagus cargo boat.",
+   "concepts": [
+    "c2",
+    "c3",
+    "c382",
+    "c221",
+    "c239"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [
+    "cargo loading and weight"
+   ],
+   "goal": "Sail along the coast and into the Tagus to reach Lisbon with a cargo of timber.",
+   "id": "s55",
+   "level": 1,
+   "minutes": 4,
+   "needs": "Cargo loading and weight to show timber",
+   "practice": "p209",
+   "premise": "The visitor carries timber by coastal navigation from the western coast to Lisbon, which lowered transport costs.",
+   "route": "Cascais, Oeiras, Lisboa",
+   "simplifications": [
+    "No timber cargo or weight",
+    "No rafts or log floating",
+    "No tidal limit"
+   ],
+   "success": "Reach Lisboa from Cascais within 5 minutes while holding a reach (c2) or running (c3) for at least half the time.",
+   "title": "Timber Coaster to Lisbon"
+  },
+  {
+   "area": "medio",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "Barcos de água acima are not in the game; the fragata is the closest upriver cargo boat.",
+   "concepts": [
+    "c210",
+    "c211",
+    "c219"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "tide and current",
+    "water depth and shallows",
+    "rowing and poling",
+    "towing",
+    "crew and tasks aboard"
+   ],
+   "goal": "Get a cargo boat upriver against winter current and past summer sandbanks using poles and towing from the bank.",
+   "id": "s56",
+   "level": 3,
+   "minutes": 6,
+   "needs": "Current, shallows, poling and towing",
+   "practice": "p223",
+   "premise": "The visitor pushes the boat upriver with poles or tows it from the bank, fighting winter current and summer sandbanks and often running aground.",
+   "route": "Vila Nova da Barquinha, Constância, Abrantes",
+   "simplifications": [
+    "Crew effort shown as a simple control"
+   ],
+   "success": "Reach Abrantes from Vila Nova da Barquinha without running aground more than twice, within 6 minutes.",
+   "title": "Poling Upriver"
+  },
+  {
+   "area": "medio",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "Barcas are not in the game and Porto de Muge is not a game port; the fragata is the closest Tagus boat, and a port in the medio area would stand in until Muge is added.",
+   "concepts": [
+    "c266",
+    "c223",
+    "c19",
+    "c2"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "new map area"
+   ],
+   "goal": "Sail a barca to Porto de Muge and dock before rent-collection time ends.",
+   "id": "s57",
+   "level": 2,
+   "minutes": 4,
+   "needs": "Porto de Muge on the map",
+   "practice": "p225",
+   "premise": "At rent-collection time the visitor calls at a customary landing place, preferably Porto de Muge, so tenant farmers can meet their obligations.",
+   "route": "Vila Nova da Barquinha, Constância, Abrantes (Porto de Muge to be added)",
+   "simplifications": [
+    "Stand-in port",
+    "No rents or tenants"
+   ],
+   "success": "Dock at Porto de Muge within the time limit with speed under 1 knot at contact.",
+   "title": "Rent Day at Porto de Muge"
+  },
+  {
+   "area": "tejo",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "The record names no boat; the fragata is the closest Tagus cargo boat.",
+   "concepts": [
+    "c239",
+    "c674",
+    "c3",
+    "c70"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [
+    "cargo loading and weight",
+    "tide and current"
+   ],
+   "goal": "Take timber down the Lower Tagus to Lisbon without obstructing other boats.",
+   "id": "s58",
+   "level": 1,
+   "minutes": 4,
+   "needs": "Timber cargo",
+   "practice": "p226",
+   "premise": "The visitor brings timber down the river to the tercenas in Lisbon, where it was a massive presence on the Lower Tejo.",
+   "route": "Vila Franca de Xira, Alverca do Ribatejo, Sacavém, Lisboa",
+   "simplifications": [
+    "Timber shown as a boat, not floated logs",
+    "No current"
+   ],
+   "success": "Reach Lisboa from Vila Franca de Xira within 5 minutes without touching other boats or buoys.",
+   "title": "Timber to the Tercenas"
+  },
+  {
+   "area": "tejo",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "The record names no boat; the fragata is the closest cargo boat. Santarém is not on the game map, so Vila Franca de Xira stands in.",
+   "concepts": [
+    "c239",
+    "c305",
+    "c2",
+    "c3"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "new map area",
+    "cargo loading and weight"
+   ],
+   "goal": "Sail a cargo from the Santarém region to Lisbon.",
+   "id": "s59",
+   "level": 1,
+   "minutes": 5,
+   "needs": "Santarém on the map",
+   "practice": "p229",
+   "premise": "The visitor supplies Lisbon with cereals and timber from the Santarém region.",
+   "route": "Vila Franca de Xira, Lisboa",
+   "simplifications": [
+    "Stand-in start port",
+    "No cargo"
+   ],
+   "success": "Reach Lisboa from Vila Franca de Xira within 6 minutes, holding a reach or run for most of the leg.",
+   "title": "Cereals and Timber for Lisbon"
+  },
+  {
+   "area": "tejo",
+   "boat": "Falua",
+   "boatInGame": true,
+   "boatNote": "The record says only embarcações; the falua is a general Tagus boat.",
+   "concepts": [
+    "c600",
+    "c601",
+    "c674",
+    "c22"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [],
+   "goal": "Cross and travel the river among other boats, using routes up, down and across.",
+   "id": "s60",
+   "level": 1,
+   "minutes": 5,
+   "needs": "",
+   "practice": "p230",
+   "premise": "The visitor sails the busy river highway, with routes up, down and across.",
+   "route": "Lisboa, Almada, Seixal, Barreiro",
+   "simplifications": [
+    "Modern ports, not medieval ones",
+    "Santarém not reached"
+   ],
+   "success": "Visit three named ports, including one crossing between banks, within 5 minutes.",
+   "title": "Liquid Highway"
+  },
+  {
+   "area": "tejo",
+   "boat": "Catraio",
+   "boatInGame": true,
+   "boatNote": "The batel is not in the game; the catraio is a small Tagus boat.",
+   "concepts": [
+    "c267",
+    "c608",
+    "c606",
+    "c1",
+    "c2"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [
+    "fishing net and catch",
+    "tide and current"
+   ],
+   "goal": "Leave a riverside port in a small boat and work a fishing ground.",
+   "id": "s61",
+   "level": 1,
+   "minutes": 4,
+   "needs": "Fishing nets, catch and current",
+   "practice": "p235",
+   "premise": "The visitor leaves a riverside port in a small boat to fish the river, as the fishermen of Vila Franca de Xira did.",
+   "route": "Vila Franca de Xira, Alverca do Ribatejo",
+   "simplifications": [
+    "No nets or catch",
+    "No current"
+   ],
+   "success": "Reach a marked fishing ground from Vila Franca de Xira and hold a close-hauled or reaching heading for 30 seconds.",
+   "title": "Out with the Batel"
+  },
+  {
+   "area": "tejo",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "Barcos and barcas are not in the game; the fragata is the closest.",
+   "concepts": [
+    "c625",
+    "c626",
+    "c239",
+    "c266",
+    "c24"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [
+    "cargo loading and weight",
+    "new map area"
+   ],
+   "goal": "Carry fish caught at the Tagus mouth to the markets upriver or in Lisbon.",
+   "id": "s62",
+   "level": 2,
+   "minutes": 4,
+   "needs": "Cargo and Santarém",
+   "practice": "p244",
+   "premise": "The visitor carries sea fish from the Tagus mouth by boat to market, where it competed with river fish.",
+   "route": "Cascais, Oeiras, Lisboa",
+   "simplifications": [
+    "No fish cargo",
+    "Santarém not on the map"
+   ],
+   "success": "Deliver the fish to Lisboa (Ribeira) from Cascais within 5 minutes without excessive heel.",
+   "title": "Sea Fish for Santarém"
+  },
+  {
+   "area": "tejo",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "The record names no boat; the fragata is the closest cargo boat.",
+   "concepts": [
+    "c625",
+    "c239",
+    "c2",
+    "c3"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "new map area",
+    "cargo loading and weight"
+   ],
+   "goal": "Bring fresh fish and shellfish by river to the royal household before they spoil.",
+   "id": "s63",
+   "level": 1,
+   "minutes": 5,
+   "needs": "Santarém on the map and cargo",
+   "practice": "p247",
+   "premise": "The visitor brings sea fish and shellfish to Santarém by river for the royal table.",
+   "route": "Cascais, Lisboa, Vila Franca de Xira (Santarém to be added)",
+   "simplifications": [
+    "Stand-in port",
+    "No spoilage"
+   ],
+   "success": "Reach the destination port within a time limit with a smooth, steady passage.",
+   "title": "Fish for the King's Table"
+  },
+  {
+   "area": "aveiro",
+   "boat": "Moliceiro",
+   "boatInGame": true,
+   "boatNote": "",
+   "concepts": [
+    "c211",
+    "c269",
+    "c870",
+    "c69"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [],
+   "goal": "Handle a flat-bottomed moliceiro in the lagoon and note how it behaves under sail.",
+   "id": "s64",
+   "level": 1,
+   "minutes": 3,
+   "needs": "",
+   "practice": "p252",
+   "premise": "The visitor sails a flat-bottomed, low-sided moliceiro built for the shallow Ria de Aveiro.",
+   "route": "Aveiro, Cais do Bico",
+   "simplifications": [
+    "Construction itself is not shown",
+    "Depth not modelled"
+   ],
+   "success": "Sail from Aveiro to Cais do Bico and hold a beam reach for 20 seconds.",
+   "title": "Shallow Lagoon Boat"
+  },
+  {
+   "area": "aveiro",
+   "boat": "Moliceiro",
+   "boatInGame": true,
+   "boatNote": "",
+   "concepts": [
+    "c936",
+    "c964",
+    "c14",
+    "c865",
+    "c1"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [],
+   "goal": "Sail a moliceiro to the moliço grounds and back to the farmland shore.",
+   "id": "s65",
+   "level": 2,
+   "minutes": 5,
+   "needs": "",
+   "practice": "p253",
+   "premise": "The visitor sails a moliceiro across the lagoon to gather moliço, the aquatic plant used to fertilize the sandy farmland.",
+   "route": "Murtosa, Cais do Bico, Torreira",
+   "simplifications": [
+    "No moliço gathering",
+    "No depth",
+    "No load weight"
+   ],
+   "success": "Reach a marked moliço ground and return to Murtosa within 5 minutes, using at least two tacks.",
+   "title": "Moliço Run"
+  },
+  {
+   "area": "aveiro",
+   "boat": "Moliceiro",
+   "boatInGame": true,
+   "boatNote": "",
+   "concepts": [
+    "c2",
+    "c22",
+    "c23",
+    "c865"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [],
+   "goal": "Sail the moliceiro from Murtosa to Aveiro, holding a steady reach so the decorated boat arrives in good time.",
+   "id": "s66",
+   "level": 1,
+   "minutes": 4,
+   "needs": "",
+   "practice": "p255",
+   "premise": "The visitor sails a moliceiro, a boat that is not considered finished until its painted panels are done, from Murtosa towards Aveiro.",
+   "route": "Murtosa, Cais do Bico, Aveiro",
+   "simplifications": [
+    "No painting is done; the panels are only the reason for the trip",
+    "No tide or current",
+    "No crew"
+   ],
+   "success": "Reach Aveiro from Murtosa within 4 minutes, spending at least 50% of the time on a reach (c2, c69 or c70).",
+   "title": "Sail to the painted boat's festival"
+  },
+  {
+   "area": "aveiro",
+   "boat": "Moliceiro",
+   "boatInGame": true,
+   "boatNote": "",
+   "concepts": [
+    "c1",
+    "c14",
+    "c65",
+    "c81",
+    "c19",
+    "c932"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [
+    "rowing and poling",
+    "towing",
+    "crew and tasks aboard"
+   ],
+   "goal": "Sail the moliceiro to windward along a narrow channel by tacking, then dock at a quay.",
+   "id": "s67",
+   "level": 2,
+   "minutes": 5,
+   "needs": "Poling and towing to cover the full practice",
+   "practice": "p261",
+   "premise": "The visitor sails a moliceiro to windward in the narrow channels of the Ria, where crews otherwise pole or tow the boat when it beats to windward or is near quays.",
+   "route": "Aveiro, Cais do Bico, Murtosa",
+   "simplifications": [
+    "Poling and towing are left out, so the player only uses sail",
+    "No tide or current",
+    "No crew"
+   ],
+   "success": "Reach the destination port directly upwind with at least 2 tacks (c14) and finish docking (c19) at speed below 1 knot within 5 minutes.",
+   "title": "No wind at the quay: beat up the channel"
+  },
+  {
+   "area": "aveiro",
+   "boat": "Moliceiro",
+   "boatInGame": true,
+   "boatNote": "The yard and launching gate are not in the game, so the start is placed at a port near Murtosa.",
+   "concepts": [
+    "c66",
+    "c67",
+    "c80",
+    "c23"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "new map area",
+    "other"
+   ],
+   "goal": "Take a newly built moliceiro from the yard's launch gate to open water and sail it on a close reach.",
+   "id": "s68",
+   "level": 1,
+   "minutes": 3,
+   "needs": "A shipyard scene with launching",
+   "practice": "p262",
+   "premise": "The visitor sails a moliceiro just after launch, from a region where shipyards hand building knowledge down from father to son.",
+   "route": "Murtosa, Cais do Bico",
+   "simplifications": [
+    "The shipyard and its bota-abaixo gate are not shown",
+    "No building knowledge is conveyed by play"
+   ],
+   "success": "Leave the shipyard area and hold a close reach (c66) for 30 seconds without luffing (c67).",
+   "title": "Launch day at the shipyard"
+  },
+  {
+   "area": "aveiro",
+   "boat": "Moliceiro",
+   "boatInGame": true,
+   "boatNote": "",
+   "concepts": [
+    "c1",
+    "c59",
+    "c95",
+    "c364",
+    "c870"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [
+    "other"
+   ],
+   "goal": "Sail a moliceiro and see how its keel and hull shape affect sideways drift when the sails are trimmed.",
+   "id": "s69",
+   "level": 1,
+   "minutes": 3,
+   "needs": "A build scene to do the construction itself",
+   "practice": "p264",
+   "premise": "The visitor sails a boat whose keel board is laid first and whose 21 ribs are then fitted, and feels how that hull handles.",
+   "route": "Aveiro, Costa Nova",
+   "simplifications": [
+    "Hull construction itself is not played",
+    "Rib fitting and measuring are left out"
+   ],
+   "success": "Hold a close-hauled course (c1) for 60 seconds with leeway (c95) below a set limit shown by the game.",
+   "title": "Keel and ribs: why the hull matters"
+  },
+  {
+   "area": "aveiro",
+   "boat": "Moliceiro",
+   "boatInGame": true,
+   "boatNote": "",
+   "concepts": [
+    "c3",
+    "c15",
+    "c86",
+    "c79",
+    "c865"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [
+    "other"
+   ],
+   "goal": "Sail the moliceiro downwind with the sail set wing and wing to arrive at the festival port.",
+   "id": "s70",
+   "level": 2,
+   "minutes": 4,
+   "needs": "Flags and flowers as visuals",
+   "practice": "p269",
+   "premise": "The visitor sails a moliceiro on a festival day, when it was decorated with sails, flags and wildflower branches at the bow.",
+   "route": "Aveiro, Gafanha da Nazaré, Costa Nova",
+   "simplifications": [
+    "Flags and wildflower branches are not shown on the boat unless added as decoration",
+    "No crew"
+   ],
+   "success": "Hold a run (c3) or broad reach (c70) for at least 60% of the leg to the destination, with a gybe (c15) at the mark.",
+   "title": "Festival day regatta run"
+  },
+  {
+   "area": "aveiro",
+   "boat": "Moliceiro",
+   "boatInGame": true,
+   "boatNote": "",
+   "concepts": [
+    "c4",
+    "c19",
+    "c964",
+    "c936"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "cargo loading and weight",
+    "water depth and shallows",
+    "crew and tasks aboard"
+   ],
+   "goal": "Sail out to the grounds and back as in a recreation, keeping the boat steady while moliço is gathered.",
+   "id": "s71",
+   "level": 2,
+   "minutes": 5,
+   "needs": "Raking and loading moliço, shallow grounds",
+   "practice": "p272",
+   "premise": "The visitor takes part in a recreation of moliço harvesting, which former moliceiros and ethnographic groups still stage on the Ria de Aveiro.",
+   "route": "Aveiro, Murtosa",
+   "simplifications": [
+    "No raking or loading of moliço",
+    "No depth or shallows"
+   ],
+   "success": "Reach the harvest spot in the Ria, hold the boat nearly stopped (below 1 knot) for 30 seconds, then return to the start port within 5 minutes.",
+   "title": "Staged moliço harvest outing"
+  },
+  {
+   "area": "aveiro",
+   "boat": "Moliceiro",
+   "boatInGame": true,
+   "boatNote": "The adapted fishing and transport boats are not separate game boats, so the moliceiro stands in.",
+   "concepts": [
+    "c24",
+    "c93",
+    "c91",
+    "c23"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "cargo loading and weight",
+    "new boat"
+   ],
+   "goal": "Carry a load of moliço from the grounds to a port without too much heel.",
+   "id": "s72",
+   "level": 2,
+   "minutes": 5,
+   "needs": "Cargo weight that changes heel and boat handling",
+   "practice": "p282",
+   "premise": "The visitor carries moliço in a boat of the kind that farmers modified to make loading it easier.",
+   "route": "Murtosa, Aveiro",
+   "simplifications": [
+    "Loading is not played",
+    "The boat modification is not shown"
+   ],
+   "success": "Deliver the cargo to the port with heel (c24) kept below the excessive level (c93) for the whole trip, within 5 minutes.",
+   "title": "Low-sided loading run"
+  },
+  {
+   "area": "tejo",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "The record only mentions boats native to Vila Franca de Xira, with no named type. The fragata is the closest Tagus cargo boat in the game.",
+   "concepts": [
+    "c239",
+    "c223",
+    "c19",
+    "c2",
+    "c5",
+    "c6",
+    "c23"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [],
+   "goal": "Sail a cargo boat from the Mouchões area to Vila Franca de Xira, keeping the boat moving and making a clean landing at the port.",
+   "id": "s73",
+   "level": 2,
+   "minutes": 4,
+   "needs": "",
+   "practice": "p109",
+   "premise": "The visitor sails a cargo boat to carry freight to the river port, as the boats native to Vila Franca de Xira did when traffic and freight transport were the main activity in the Mouchões.",
+   "route": "Alverca do Ribatejo, Vila Franca de Xira",
+   "simplifications": [
+    "No cargo is loaded or weighed",
+    "No crew",
+    "No tide or current",
+    "The Mouchões islets and sandbanks are not modelled, so the start point is just open water"
+   ],
+   "success": "Reach the port of Vila Franca de Xira and dock at the landing within 5 minutes, with speed below 1 knot at the moment of docking.",
+   "title": "Freight run from the Mouchões"
+  },
+  {
+   "area": "tejo",
+   "boat": "Barca",
+   "boatInGame": false,
+   "boatNote": "The game has no boat named barca. The fragata is the closest Tagus cargo boat, so use the fragata (id Fragata).",
+   "concepts": [
+    "c223",
+    "c19",
+    "c2",
+    "c5",
+    "c6"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [
+    "cargo loading and weight"
+   ],
+   "goal": "Sail goods to a river landing place, where in the practice they would have arrived by ox cart over poor roads, and handle the boat to dock.",
+   "id": "s74",
+   "level": 2,
+   "minutes": 3,
+   "needs": "",
+   "practice": "p26",
+   "premise": "The visitor takes goods by water to a river port of the riba Tejo, the landing place where goods arrived after the hard overland haul by ox-drawn cart because no reasonable roads linked municipalities.",
+   "route": "Seixal, Barreiro",
+   "simplifications": [
+    "The ox-cart leg on land is not shown",
+    "The record names the riba Tejo ports but no specific ones, so Seixal and Barreiro are placeholders for the player's rout",
+    "No cargo loading"
+   ],
+   "success": "Reach a landing place on the Tagus and dock within 4 minutes, with speed below 1 knot at the moment of docking.",
+   "title": "Goods for the river port"
+  },
+  {
+   "area": "medio",
+   "boat": "Fragata",
+   "boatInGame": true,
+   "boatNote": "The record names no boat, only ox carts. The fragata is used because fragatas are linked to Vila Nova da Barquinha in the game's concepts (c227).",
+   "concepts": [
+    "c223",
+    "c227",
+    "c265",
+    "c19",
+    "c2",
+    "c5",
+    "c6"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [
+    "cargo loading and weight"
+   ],
+   "goal": "Sail from the river port at Vila Nova da Barquinha to a landing place and dock, as the goods would pass between warehouse, cart and river.",
+   "id": "s75",
+   "level": 2,
+   "minutes": 4,
+   "needs": "",
+   "practice": "p38",
+   "premise": "The visitor works the river side of a trade in which goods were moved from the warehouse onto ox carts and taken along the macadam district road to the paper mills.",
+   "route": "Vila Nova da Barquinha, Tancos",
+   "simplifications": [
+    "The ox-cart and macadam road leg to the paper mills is not simulated",
+    "No cargo loading",
+    "No crew"
+   ],
+   "success": "Dock at the Vila Nova da Barquinha landing within 4 minutes, with speed below 1 knot at the moment of docking.",
+   "title": "From warehouse to river landing"
+  },
+  {
+   "area": "tejo",
+   "boat": "Muleta",
+   "boatInGame": true,
+   "boatNote": "The record concerns the tartaranha and tartana, which are not in the game. The muleta is the closest fishing boat.",
+   "concepts": [
+    "c2",
+    "c14",
+    "c67",
+    "c243",
+    "c631"
+   ],
+   "decision": "draft",
+   "feasibility": "needs feature",
+   "features": [
+    "new boat",
+    "fishing net and catch"
+   ],
+   "goal": "Sail a muleta as a fishing vessel out of Lisbon and hold a steady course to show how it handles under sail.",
+   "id": "s76",
+   "level": 2,
+   "minutes": 4,
+   "needs": "A new boat and a fishing net with a catch to compare net types",
+   "practice": "p64",
+   "premise": "The visitor handles a fishing vessel out of Lisbon, the kind of vessel the French wanted to introduce, which fishermen would find hard to tell apart from their own.",
+   "route": "Lisboa, Trafaria",
+   "simplifications": [
+    "No nets, mesh or catch are shown",
+    "The debate between the king, the Lisbon senate and French petitioners is not part of the play",
+    "The tartana and tartaranha vessels are not in the game"
+   ],
+   "success": "Hold a beam reach or broad reach for 60 seconds without luffing, then tack once.",
+   "title": "Which vessel is which?"
+  },
+  {
+   "area": "aveiro",
+   "boat": "Moliceiro",
+   "boatInGame": true,
+   "boatNote": "",
+   "concepts": [
+    "c936",
+    "c870",
+    "c1",
+    "c66",
+    "c23",
+    "c24",
+    "c93"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [],
+   "goal": "Take a newly caulked and pitched moliceiro out on the water and sail it with the leeboards down.",
+   "id": "s77",
+   "level": 1,
+   "minutes": 4,
+   "needs": "",
+   "practice": "p265",
+   "premise": "The visitor sails a moliceiro after it has been caulked and pitched, with tostes among the parts coated with black pitch, and the crew can sail without slipping.",
+   "route": "Aveiro, Murtosa",
+   "simplifications": [
+    "Caulking and pitching are not shown",
+    "The sarrim non-slip surface is not simulated"
+   ],
+   "success": "Sail from Aveiro to Murtosa, holding close-hauled or a close reach for at least 30 seconds, with heel kept below the excessive-heel limit.",
+   "title": "Sailing the finished moliceiro"
+  },
+  {
+   "area": "aveiro",
+   "boat": "Moliceiro",
+   "boatInGame": true,
+   "boatNote": "",
+   "concepts": [
+    "c788",
+    "c69",
+    "c23",
+    "c936"
+   ],
+   "decision": "draft",
+   "feasibility": "simplified",
+   "features": [
+    "other"
+   ],
+   "goal": "Sail a newly built moliceiro, whose hull shape was set out on stakes by the master, and feel how it handles.",
+   "id": "s78",
+   "level": 1,
+   "minutes": 3,
+   "needs": "A shipyard building step",
+   "practice": "p263",
+   "premise": "The visitor sails the moliceiro that began on the ground as nine stakes laid out by the master along its full length.",
+   "route": "Aveiro, Cais do Bico",
+   "simplifications": [
+    "The shipyard work of laying out stakes is not shown",
+    "Hull slope is not a game variable"
+   ],
+   "success": "Reach Cais do Bico from Aveiro, holding a beam reach for at least 30 seconds.",
+   "title": "Launch of a new moliceiro"
+  }
+ ],
+ "basis": {
+  "conceptsAt": "2026-11-13T23:15:49.697Z",
+  "inputs": "history practices, concepts and their game links, the game's boats, areas and ports; not the game's activities",
+  "practicesAt": "2026-11-14T10:22:13.300Z",
+  "shownConcepts": 229
+ },
+ "createdAt": "2026-11-14T10:25:44.371Z",
+ "skipped": [
+  {
+   "practice": "p153",
+   "why": "The record describes boatmen leaving the river for jobs such as the railway or lorry driving, with no boat or water activity the player could do."
+  },
+  {
+   "practice": "p66",
+   "why": "The record is about illustrations of the tartana and muleta in albums, which is pictures only, with no water activity."
+  },
+  {
+   "practice": "p87",
+   "why": "The xávega is a beach-hauled net and the record names no boat or sailing, so there is no sailing action to build on."
+  },
+  {
+   "practice": "p172",
+   "why": "Distilling wine into brandy is land processing to cut freight cost, with no boat or water activity."
+  },
+  {
+   "practice": "p195",
+   "why": "Flood dikes are land engineering, with no boat or water activity."
+  },
+  {
+   "practice": "p205",
+   "why": "The record is about trade organisation at Abrantes, with no boat or water action described."
+  },
+  {
+   "practice": "p234",
+   "why": "Managing fresh water through ditches and canals while working fields is land and irrigation work, with no boat activity."
+  },
+  {
+   "practice": "p243",
+   "why": "Riverbank angling is done from the shore, with no boat."
+  },
+  {
+   "practice": "p249",
+   "why": "Selling and wasting young shad is a market and catch practice, with no boat or sailing action."
+  },
+  {
+   "practice": "p273",
+   "why": "p273 is about how boatbuilding skills were passed from master to apprentice in shipyards (making wooden pegs, watching and then taking on tasks from simple to c"
+  }
+ ]
+}

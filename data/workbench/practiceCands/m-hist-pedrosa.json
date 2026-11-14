@@ -1,0 +1,3309 @@
+{
+ "items": [
+  {
+   "action": "The muleta, emblem of Seixal and Barreiro, trawled sideways: the net (tartaranha) was cast windward and the boat drifted across wind and current.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "drifting broadside to wind and current",
+   "gear": "tartaranha net",
+   "id": "m-hist-pedrosa:1tsz:p1",
+   "kind": "description",
+   "location": "1. Introdução",
+   "numbers": [],
+   "period": "",
+   "place": "Seixal; Barreiro",
+   "who": ""
+  },
+  {
+   "action": "Baldaque da Silva described the muleta's sails as arranged to balance forces by wind and current direction, with two long poles (botalós) fore and aft to set sails and tie net wings.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "",
+   "gear": "botalós (long poles), sails, net wings (alares)",
+   "id": "m-hist-pedrosa:1tsz:p2",
+   "kind": "description",
+   "location": "1. Introdução",
+   "numbers": [],
+   "period": "1891",
+   "place": "",
+   "who": "A. A. Baldaque da Silva"
+  },
+  {
+   "action": "Author argues sideways trawling existed in France with a boat and net both called tartane; the net is documented in Portugal as tartaranha from the 15th century.",
+   "boat": "tartane",
+   "cargo": "",
+   "conditions": "",
+   "gear": "tartaranha net",
+   "id": "m-hist-pedrosa:1tsz:p3",
+   "kind": "description",
+   "location": "1. Introdução",
+   "numbers": [],
+   "period": "séc. XV",
+   "place": "France; Portugal",
+   "who": "Fernando Gomes Pedrosa"
+  },
+  {
+   "action": "The word muleta appeared in the 16th century as a generic name for various vessels.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p4",
+   "kind": "event",
+   "location": "1. Introdução",
+   "numbers": [],
+   "period": "séc. XVI",
+   "place": "Portugal",
+   "who": ""
+  },
+  {
+   "action": "Some Frenchmen introduced a new tartane model to Portugal, fishing with the tartaranha net; the Seixal/Barreiro muleta is therefore no earlier than the 17th century.",
+   "boat": "tartane",
+   "cargo": "",
+   "conditions": "",
+   "gear": "tartaranha net",
+   "id": "m-hist-pedrosa:1tsz:p5",
+   "kind": "event",
+   "location": "1. Introdução",
+   "numbers": [],
+   "period": "second half of séc. XVII",
+   "place": "Portugal; Seixal; Barreiro",
+   "who": "French fishermen"
+  },
+  {
+   "action": "Muleta name is traced to Latin for mullet; in France mulet was also a river boat. Maurolico's 1543 manuscript mentions mullet fishing.",
+   "boat": "mulet",
+   "cargo": "mullet",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p6",
+   "kind": "description",
+   "location": "2. A Pesca de Tainha",
+   "numbers": [],
+   "period": "1543",
+   "place": "Messina; France",
+   "who": "Francesco Maurolico"
+  },
+  {
+   "action": "Many mullet species were abundant in Portugal, entering rivers in huge shoals; they suited salting, drying and smoking and were among the most fished and traded.",
+   "boat": "",
+   "cargo": "mullet (tainha, fataça, negrão, etc.)",
+   "conditions": "salting, drying and smoking preservation",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p7",
+   "kind": "description",
+   "location": "2. A Pesca de Tainha",
+   "numbers": [],
+   "period": "",
+   "place": "Portugal",
+   "who": ""
+  },
+  {
+   "action": "Italians Lourenço Berardi and Giovanni Morosini took part in the mullet fishery in Portugal.",
+   "boat": "",
+   "cargo": "mullet",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p8",
+   "kind": "event",
+   "location": "2. A Pesca de Tainha",
+   "numbers": [
+    {
+     "unit": "",
+     "value": "1460",
+     "what": "year"
+    }
+   ],
+   "period": "1460",
+   "place": "Portugal",
+   "who": "Lourenço Berardi; Giovanni Morosini"
+  },
+  {
+   "action": "Seville ordinance required a pound of albur (mullet) to sell at the same price as a pound of mutton, confirming an older one.",
+   "boat": "",
+   "cargo": "albur (mullet)",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p9",
+   "kind": "rule",
+   "location": "2. A Pesca de Tainha",
+   "numbers": [
+    {
+     "unit": "",
+     "value": "1527",
+     "what": "ordinance year"
+    }
+   ],
+   "period": "1527",
+   "place": "Sevilha",
+   "who": ""
+  },
+  {
+   "action": "King João I banned fishing shad and mullet for anyone not leasing the fishery; the 1433 Cortes asked for the order's revocation.",
+   "boat": "",
+   "cargo": "shad (sável) and mullet",
+   "conditions": "fishing allowed only to those holding a lease",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p10",
+   "kind": "rule",
+   "location": "2. A Pesca de Tainha",
+   "numbers": [
+    {
+     "unit": "",
+     "value": "1433",
+     "what": "year"
+    }
+   ],
+   "period": "1433",
+   "place": "Portugal",
+   "who": "D. João I; Cortes"
+  },
+  {
+   "action": "Mullet fishing was important enough to justify voyages to Terra Alta, Arguim and Cabo Branco on Africa's west coast.",
+   "boat": "",
+   "cargo": "mullet",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p11",
+   "kind": "practice",
+   "location": "2. A Pesca de Tainha",
+   "numbers": [],
+   "period": "",
+   "place": "Terra Alta; Arguim; Cabo Branco",
+   "who": ""
+  },
+  {
+   "action": "Lisbon's Casa do Pescado collected the sisa tax on salted mullet from Terra Alta.",
+   "boat": "",
+   "cargo": "salted mullet",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p12",
+   "kind": "rule",
+   "location": "2. A Pesca de Tainha",
+   "numbers": [
+    {
+     "unit": "",
+     "value": "1593",
+     "what": "year"
+    }
+   ],
+   "period": "1593",
+   "place": "Lisboa",
+   "who": "Casa do Pescado de Lisboa"
+  },
+  {
+   "action": "The Casa de Bragança won a judgment against the Count of Atouguia over the tithe on mullet from Arguim castle and coast.",
+   "boat": "",
+   "cargo": "mullet",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p13",
+   "kind": "event",
+   "location": "2. A Pesca de Tainha",
+   "numbers": [
+    {
+     "unit": "",
+     "value": "1603",
+     "what": "year"
+    }
+   ],
+   "period": "1603",
+   "place": "Arguim",
+   "who": "Casa de Bragança; conde de Atouguia"
+  },
+  {
+   "action": "Royal letter of 6 Nov 1487 ordered that fish caught by Lisbon's deep-sea fishermen be exempt from the fixed sale price (taxa).",
+   "boat": "",
+   "cargo": "fish",
+   "conditions": "taxa is the sale price set by the almotacé",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p14",
+   "kind": "rule",
+   "location": "[page 1]",
+   "numbers": [],
+   "period": "1487",
+   "place": "Lisboa",
+   "who": "pescadores do alto, de Lisboa"
+  },
+  {
+   "action": "Second royal letter of 28 Nov 1487: deep-sea fishermen sell without price-setting or weighing; price rules apply only to river fishermen, chinchas and tartaranhas.",
+   "boat": "chinchas, tartaranhas",
+   "cargo": "fish",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p15",
+   "kind": "rule",
+   "location": "[page 1]",
+   "numbers": [],
+   "period": "1487",
+   "place": "Lisboa",
+   "who": "pescadores do alto; pescadores do rio, das chinchas e tartaranhas"
+  },
+  {
+   "action": "In Lisbon, deep-sea fishing (pesca do alto) meant fishing from the bar outward, not at a fixed distance from the coast.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p16",
+   "kind": "description",
+   "location": "[page 1]",
+   "numbers": [],
+   "period": "",
+   "place": "Lisboa, barra",
+   "who": "pescadores do alto"
+  },
+  {
+   "action": "The chincha net dominated Lisbon fishing, so fishermen were called linheiros (line and hook) or chincheiros (any kind of net: gillnet, trawl, encircling).",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "linha e aparelhos de anzol; redes chincha, de emalhar, arrasto, cerco",
+   "id": "m-hist-pedrosa:1tsz:p17",
+   "kind": "description",
+   "location": "[page 1]",
+   "numbers": [],
+   "period": "",
+   "place": "Lisboa",
+   "who": "linheiros, chincheiros"
+  },
+  {
+   "action": "João Brandão reported 15 chinchas on the river, each with eight men, fishing by turns either as enviadas (carrying fish) or with tartaranha nets.",
+   "boat": "chinchas, enviadas",
+   "cargo": "fish",
+   "conditions": "enviadas carry fish to unloading places",
+   "gear": "tartaranhas",
+   "id": "m-hist-pedrosa:1tsz:p18",
+   "kind": "description",
+   "location": "[page 1]",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "15",
+     "what": "chinchas on the river"
+    },
+    {
+     "unit": "men",
+     "value": "8",
+     "what": "men per chincha"
+    }
+   ],
+   "period": "1552",
+   "place": "rio Tejo, Lisboa",
+   "who": "João Brandão (source); chincha crews"
+  },
+  {
+   "action": "In Alfama, linheiros and chincheiros had separate brotherhoods in different churches: Espírito Santo at São Miguel, and Nossa Senhora dos Remédios at the Remédios chapel.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p19",
+   "kind": "description",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "",
+   "place": "Alfama, Lisboa",
+   "who": "linheiros, chincheiros"
+  },
+  {
+   "action": "Linheiros fishing beyond the bar were called pescadores do alto or altieiros; chincheiros do alto fished the open sea with nets.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "linha, anzol, redes",
+   "id": "m-hist-pedrosa:1tsz:p20",
+   "kind": "description",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "",
+   "place": "fora da barra",
+   "who": "linheiros, altieiros, chincheiros do alto"
+  },
+  {
+   "action": "By royal order the Lisbon council gathered tartaranha nets at the chapel of Nossa Senhora dos Remédios in Alfama to check mesh size.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "inspection of malhagem",
+   "gear": "redes tartaranhas",
+   "id": "m-hist-pedrosa:1tsz:p21",
+   "kind": "event",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "1647",
+   "place": "ermida de Nossa Senhora dos Remédios, Alfama",
+   "who": "câmara de Lisboa; tartaranheiros"
+  },
+  {
+   "action": "Council ordinance set minimum mesh for chinchorros and other nets and required baked-clay balls instead of lead weights to avoid disturbing the bottom and catching young fish.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "protect spawn and juvenile fish; clay lighter than lead",
+   "gear": "chinchorro (beach seine), bolas de barro cozido",
+   "id": "m-hist-pedrosa:1tsz:p22",
+   "kind": "rule",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "12 October 1591",
+   "place": "Lisboa",
+   "who": "câmara de Lisboa"
+  },
+  {
+   "action": "In 1610 the council justified mesh rules because dragging chinchorros along the bottom took roe and young fish, causing their loss.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "chinchorros",
+   "id": "m-hist-pedrosa:1tsz:p23",
+   "kind": "description",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "1610",
+   "place": "Lisboa",
+   "who": "câmara de Lisboa"
+  },
+  {
+   "action": "Royal decree confirmed a Cascais council ordinance banning tartaranha barcas from sailing between São Julião and Cabo da Roca, because of harm to Cascais fishermen.",
+   "boat": "barcas tartaranhas",
+   "cargo": "",
+   "conditions": "ordinance of 12 March 1592, alvará of 11 July 1592",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p24",
+   "kind": "rule",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "1592",
+   "place": "São Julião to Cabo da Roca",
+   "who": "câmara de Cascais; pescadores de Cascais"
+  },
+  {
+   "action": "The boat fishing with the tartaranha net was variously named chincha, barca, barco, tartaranha or chinchorro across documents.",
+   "boat": "chincha, barca, barco, tartaranha, chinchorro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "rede tartaranha",
+   "id": "m-hist-pedrosa:1tsz:p25",
+   "kind": "description",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "1552-1686",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "The name muleta appeared in the 16th century for river boats; Inquisition records of 1550 mention it in Lisbon, and Fernando Oliveira noted santarém boats renamed from cervilhas to muletas.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p26",
+   "kind": "description",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "séc. XVI",
+   "place": "Lisboa",
+   "who": "Fernando Oliveira"
+  },
+  {
+   "action": "Moors chased Portuguese swimmers in two zavras, built like muletas, after the loss of Santa Cruz do Cabo de Gué castle.",
+   "boat": "zavras, muletas",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p27",
+   "kind": "event",
+   "location": "[page 2]",
+   "numbers": [
+    {
+     "unit": "men",
+     "value": "5",
+     "what": "men per zavra"
+    },
+    {
+     "unit": "boats",
+     "value": "2",
+     "what": "zavras"
+    }
+   ],
+   "period": "1541",
+   "place": "castelo de Santa Cruz do Cabo de Gué",
+   "who": "mouros, portugueses"
+  },
+  {
+   "action": "The 1572 Regimento dos Barqueiros regulated cargo and passenger transport on the Tagus, compiling norms of different dates, and covered muletas and other river craft.",
+   "boat": "muletas",
+   "cargo": "mercadorias e pessoas",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p28",
+   "kind": "rule",
+   "location": "4. O Regimento dos Barqueiros",
+   "numbers": [],
+   "period": "1572",
+   "place": "rio Tejo",
+   "who": "barqueiros"
+  },
+  {
+   "action": "Batéis crossing from Lisbon to Almada may carry at most 8 people under paragraph 19, though paragraph 61 permits 12.",
+   "boat": "batéis",
+   "cargo": "passengers",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p29",
+   "kind": "rule",
+   "location": "4. O Regimento dos Barqueiros",
+   "numbers": [
+    {
+     "unit": "people",
+     "value": "8",
+     "what": "max people, paragraph 19"
+    },
+    {
+     "unit": "people",
+     "value": "12",
+     "what": "max people, paragraph 61"
+    }
+   ],
+   "period": "1572",
+   "place": "Lisboa to Almada",
+   "who": ""
+  },
+  {
+   "action": "Larger barcas and caravelões must carry a compass; muletas and small batéis are exempt.",
+   "boat": "barcas, caravelões, muletas, bateis pequenos",
+   "cargo": "",
+   "conditions": "",
+   "gear": "agulha de marear",
+   "id": "m-hist-pedrosa:1tsz:p30",
+   "kind": "rule",
+   "location": "4. O Regimento dos Barqueiros",
+   "numbers": [],
+   "period": "1572",
+   "place": "rio Tejo",
+   "who": ""
+  },
+  {
+   "action": "According to the author, all muletas were cargo boats and none were used for fishing.",
+   "boat": "muletas",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p31",
+   "kind": "description",
+   "location": "4. O Regimento dos Barqueiros",
+   "numbers": [],
+   "period": "1572",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Paragraph 21: from 1 October to end of March, skippers and boatmen of lateen-rigged boats must carry carregadeiras on the yards so sails can be lowered quickly, avoiding disasters.",
+   "boat": "barca, caravelão, muleta, batel pequeno de vela latina",
+   "cargo": "",
+   "conditions": "winter season; disasters when sails cannot be lowered",
+   "gear": "carregadeiras nas vergas; roldana na cabeça do mastro",
+   "id": "m-hist-pedrosa:1tsz:p32",
+   "kind": "rule",
+   "location": "4. O Regimento dos Barqueiros",
+   "numbers": [],
+   "period": "1 October to end of March, each year",
+   "place": "rio Tejo",
+   "who": "arraizes e barqueiros"
+  },
+  {
+   "action": "Cerveira de Aguilar explains the mast head (calcês) has two sheaves on large vessels, through which halyards (ostagas) pass to hoist and lower yards; small vessels may have one.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "two sheaves on large vessels, one on small",
+   "gear": "calcês, ostagas, yards",
+   "id": "m-hist-pedrosa:1tsz:p33",
+   "kind": "description",
+   "location": "[page 9]",
+   "numbers": [
+    {
+     "unit": "sheaves",
+     "value": "2",
+     "what": "sheaves on calcês of large vessels"
+    }
+   ],
+   "period": "c. 1640",
+   "place": "",
+   "who": "Marcos Cerveira de Aguilar"
+  },
+  {
+   "action": "Aguilar lists four ways of rigging halyards, including the calcês, the cachola with sheaves under the crosspieces, and blocks on iron straps under a wooden cepo on the mast head.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "cachola used when no calcês",
+   "gear": "calcês, cacholas, cepos, blocks, iron straps",
+   "id": "m-hist-pedrosa:1tsz:p34",
+   "kind": "description",
+   "location": "[page 9]",
+   "numbers": [
+    {
+     "unit": "ways",
+     "value": "4",
+     "what": "ways of working halyards"
+    }
+   ],
+   "period": "c. 1640",
+   "place": "",
+   "who": "Marcos Cerveira de Aguilar"
+  },
+  {
+   "action": "Jerónimo Osório describes the lateen caravel as having no crow's nests, with oblique yards hanging from a sling below the mast head.",
+   "boat": "caravela latina",
+   "cargo": "",
+   "conditions": "",
+   "gear": "alça, yards",
+   "id": "m-hist-pedrosa:1tsz:p35",
+   "kind": "description",
+   "location": "[page 9]",
+   "numbers": [],
+   "period": "same era as Aguilar (c. 1640 era, 16th c",
+   "place": "",
+   "who": "Jerónimo Osório"
+  },
+  {
+   "action": "Article 36 of the 1572 boatmen's regulation: muletas crossing the river must carry only a round sail for safety, with a yard no longer than the hull, and always a foresail.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "muletas cannot tack 'por dentro' like caravelões and large barcas, risking sail falling on the mast",
+   "gear": "round sail, traquete (foresail), yard",
+   "id": "m-hist-pedrosa:1tsz:p36",
+   "kind": "rule",
+   "location": "[page 9]",
+   "numbers": [],
+   "period": "1572",
+   "place": "Tagus river crossing",
+   "who": "muletas boatmen"
+  },
+  {
+   "action": "Muletas sailing the river without people or cargo may use a lateen or round sail, but must never sail without ballast.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "only when empty of people and cargo",
+   "gear": "lateen or round sail, ballast",
+   "id": "m-hist-pedrosa:1tsz:p37",
+   "kind": "rule",
+   "location": "[page 9]",
+   "numbers": [],
+   "period": "1572",
+   "place": "Tagus",
+   "who": "muletas boatmen"
+  },
+  {
+   "action": "Author explains tacking 'dar por davante' means turning the bow through the wind; muletas with lateen sails could not pass the sail across because it fell on the mast.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "alternative was wearing ('virar em roda'), passing the stern through the wind",
+   "gear": "lateen sail",
+   "id": "m-hist-pedrosa:1tsz:p38",
+   "kind": "description",
+   "location": "[page 9]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Hernâni Amaral Xavier proposes caravelões and large barcas hoisted lateen sails between shrouds and mast, muletas outside the shrouds; the author calls this very risky.",
+   "boat": "muleta, caravelão, barca",
+   "cargo": "",
+   "conditions": "",
+   "gear": "lateen sail, shrouds (ovéns)",
+   "id": "m-hist-pedrosa:1tsz:p39",
+   "kind": "description",
+   "location": "[page 10]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "Hernâni Amaral Xavier"
+  },
+  {
+   "action": "The regulation implies two masts with round sails, main and foresail, whereas known illustrations show muletas with a very long yard and large sail. Pinto Basto notes flat bottom and stone-and-lime ballast.",
+   "boat": "muleta",
+   "cargo": "stone and lime ballast",
+   "conditions": "flat bottom, wide mouth give stability",
+   "gear": "round sails, long yard",
+   "id": "m-hist-pedrosa:1tsz:p40",
+   "kind": "description",
+   "location": "[page 10]",
+   "numbers": [
+    {
+     "unit": "masts",
+     "value": "2",
+     "what": "masts implied"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": "A. J. Pinto Basto"
+  },
+  {
+   "action": "A Lisbon council consultation attached a copy of a bylaw repeating the rule that muletas crossing the river use only round sails, showing the regulation partly endured.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "muletas cannot tack 'por dentro'",
+   "gear": "round sail",
+   "id": "m-hist-pedrosa:1tsz:p41",
+   "kind": "event",
+   "location": "[page 10]",
+   "numbers": [],
+   "period": "1703",
+   "place": "Lisbon, Tagus",
+   "who": "câmara de Lisboa"
+  },
+  {
+   "action": "The 1572 regulation uses vague terms: larger vessels are barcas and caravelões, smaller ones muletas and batéis.",
+   "boat": "barca, caravelão, muleta, batel",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p42",
+   "kind": "description",
+   "location": "[page 10]",
+   "numbers": [],
+   "period": "1572",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Article 41 sets the maximum freight for boatmen of Abrantes, Tancos, Punhete and Santarém sailing from Lisbon by muleta; beyond Santarém price is agreed with customers.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "for the largest muleta, ten moios or more; above Santarém freight by agreement",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p43",
+   "kind": "rule",
+   "location": "[page 10]",
+   "numbers": [
+    {
+     "unit": "réis",
+     "value": "800",
+     "what": "maximum freight Lisbon to Santarém, largest muleta"
+    },
+    {
+     "unit": "moios",
+     "value": "10 or more",
+     "what": "capacity of largest muleta"
+    }
+   ],
+   "period": "1572",
+   "place": "Lisbon to Santarém",
+   "who": "barqueiros of Abrantes, Tancos, Punhete, Santarém"
+  },
+  {
+   "action": "No boat or bateira may carry a person or goods meant for the scheduled service boat until the Arraiz da Molleta has been paid his freight, unless the service boat has already left; penalty applies.",
+   "boat": "barco da carreira, bateira, molleta",
+   "cargo": "passengers and other goods",
+   "conditions": "Exception only after the carreira boat has departed; offender pays the Arrais what he earned plus a ",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p44",
+   "kind": "rule",
+   "location": "A Muleta e a Tartaranha, Alverca posturas",
+   "numbers": [
+    {
+     "unit": "réis",
+     "value": "200",
+     "what": "fine to the council"
+    }
+   ],
+   "period": "second half of 18th century (undated reg",
+   "place": "Alverca",
+   "who": "Arraiz da Molleta; boatmen of Alverca"
+  },
+  {
+   "action": "Boatmen bound to the carreira each serve the town one week in turn, going to Lisbon every day; on night runs they must stay aboard to take charge of passengers' baggage until the boat leaves the esteiro.",
+   "boat": "barco da carreira, moleta",
+   "cargo": "passengers' baggage (fato)",
+   "conditions": "One week per boatman by custom; night departures require staying aboard",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p45",
+   "kind": "rule",
+   "location": "A Muleta e a Tartaranha, Alverca posturas",
+   "numbers": [
+    {
+     "unit": "week",
+     "value": "1",
+     "what": "duty period per boatman"
+    }
+   ],
+   "period": "second half of 18th century",
+   "place": "Alverca to Lisbon; esteiro",
+   "who": "barqueiros of Alverca"
+  },
+  {
+   "action": "Each week one boat or bateira was designated to run the scheduled service to Lisbon and became the 'molleta' of the carreira for that week.",
+   "boat": "barcos and bateiras, molleta",
+   "cargo": "",
+   "conditions": "Rotation weekly",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p46",
+   "kind": "practice",
+   "location": "A Muleta e a Tartaranha, Alverca posturas",
+   "numbers": [
+    {
+     "unit": "week",
+     "value": "1",
+     "what": "duration of designation"
+    }
+   ],
+   "period": "second half of 18th century",
+   "place": "Alverca to Lisbon",
+   "who": "boatmen of Alverca"
+  },
+  {
+   "action": "Smaller muletas carrying goods were allowed to settle by agreement with parties, provided the sum did not reach 800 réis (fragment of a freight rule near Santarém).",
+   "boat": "muletas mais pequenas",
+   "cargo": "",
+   "conditions": "Agreement with the parties, limited to under the stated amount",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p47",
+   "kind": "description",
+   "location": "top of text, before note 36",
+   "numbers": [
+    {
+     "unit": "réis",
+     "value": "800",
+     "what": "upper limit of sum"
+    }
+   ],
+   "period": "",
+   "place": "Santarém",
+   "who": ""
+  },
+  {
+   "action": "Santarém boatmen petitioned that the river was heavily silted, so large caravelões and barcas no longer came, only smaller batéis and muletas.",
+   "boat": "batéis, muletas, caravelões, barcas",
+   "cargo": "",
+   "conditions": "River silting",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p48",
+   "kind": "event",
+   "location": "5. A Muleta Pequena",
+   "numbers": [],
+   "period": "1596",
+   "place": "Santarém, Tagus",
+   "who": "barqueiros of Santarém"
+  },
+  {
+   "action": "Nicolau de Oliveira noted many small boats called moletas in Lisbon that fished continually in the river.",
+   "boat": "moletas",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p49",
+   "kind": "description",
+   "location": "5. A Muleta Pequena",
+   "numbers": [],
+   "period": "1620",
+   "place": "Lisbon, Tagus",
+   "who": "Nicolau de Oliveira (observer)"
+  },
+  {
+   "action": "Freight rates for carrying goods from Lisbon to Alcochete: large barca cost more than a muleta or similar vessel.",
+   "boat": "barca grande; muleta",
+   "cargo": "goods",
+   "conditions": "Rate depends on vessel size",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p50",
+   "kind": "rule",
+   "location": "5. A Muleta Pequena",
+   "numbers": [
+    {
+     "unit": "réis",
+     "value": "1200",
+     "what": "freight, large barca"
+    },
+    {
+     "unit": "réis",
+     "value": "500",
+     "what": "freight, muleta or equal vessel"
+    }
+   ],
+   "period": "1611",
+   "place": "Lisbon to Alcochete",
+   "who": ""
+  },
+  {
+   "action": "The regulation on fish tithes of the Casa de Bragança mentions 'river sardine muletas', showing muletas used for sardine fishing.",
+   "boat": "muletas de sardinha do rio",
+   "cargo": "sardines",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p51",
+   "kind": "rule",
+   "location": "5. A Muleta Pequena",
+   "numbers": [],
+   "period": "13 November 1633",
+   "place": "Tagus",
+   "who": "Casa de Bragança"
+  },
+  {
+   "action": "Engineer Leonardo Turriano's opinion foresaw Lisbon muletas going to the Guadalquivir and Seville, likening them to shallow-draft flat boats of Flanders and Italy.",
+   "boat": "muletas de Lisboa",
+   "cargo": "",
+   "conditions": "Flat boats drawing little water; canal to suit two masted boats",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p52",
+   "kind": "event",
+   "location": "5. A Muleta Pequena",
+   "numbers": [
+    {
+     "unit": "pés",
+     "value": "12",
+     "what": "canal depth"
+    },
+    {
+     "unit": "pés",
+     "value": "30",
+     "what": "canal width at low water surface"
+    },
+    {
+     "unit": "pés",
+     "value": "40",
+     "what": "canal width at high water"
+    }
+   ],
+   "period": "1624",
+   "place": "Guadalquivir, Seville, Guadalete",
+   "who": "Leonardo Turriano, engenheiro mayor de Portugal"
+  },
+  {
+   "action": "Padre Manuel Godinho described Persian Gulf terradas and terranquis as like Tagus muletas but wider and keelless, low bow, very high stern, one mast, lateen sail, oars, no deck.",
+   "boat": "terradas, terranquís",
+   "cargo": "",
+   "conditions": "Sail taken off the yard whenever the wind changes; a canopy with a bed sits on the stern",
+   "gear": "lateen sail, oars, rudder steered by cords",
+   "id": "m-hist-pedrosa:1tsz:p53",
+   "kind": "description",
+   "location": "5. A Muleta Pequena",
+   "numbers": [
+    {
+     "unit": "mast",
+     "value": "1",
+     "what": "masts"
+    }
+   ],
+   "period": "1663 (voyage), published 1665",
+   "place": "Port of Congo, Persian Gulf",
+   "who": "Padre Manuel Godinho"
+  },
+  {
+   "action": "Other sources compare terradas to Alcochete barcas or large boats fought from by 25 to 30 men, too vague to identify the type.",
+   "boat": "terradas",
+   "cargo": "",
+   "conditions": "Vague information",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p54",
+   "kind": "description",
+   "location": "5. A Muleta Pequena",
+   "numbers": [
+    {
+     "unit": "men",
+     "value": "25 to 30",
+     "what": "men fighting from a boat"
+    }
+   ],
+   "period": "",
+   "place": "Alcochete",
+   "who": ""
+  },
+  {
+   "action": "Corsairs are described using narrow, light, hence unsafe vessels called terradas, sailing with very large lateral (lateen) sails and rowing with twelve or fifteen oars per side.",
+   "boat": "terradas",
+   "cargo": "",
+   "conditions": "",
+   "gear": "velas latinas, remos",
+   "id": "m-hist-pedrosa:1tsz:p55",
+   "kind": "description",
+   "location": "[page 12]",
+   "numbers": [
+    {
+     "unit": "oars",
+     "value": "12 or 15",
+     "what": "oars per side"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": "corsários"
+  },
+  {
+   "action": "The tartaranha was the first trawl net to be banned, in the 15th century; the ban stayed rigorous on paper but was tolerated after fishermen's pleas until the 20th century.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "strictly forbidden yet tolerated after fishermen's appeals",
+   "gear": "tartaranha",
+   "id": "m-hist-pedrosa:1tsz:p56",
+   "kind": "rule",
+   "location": "6. Os Pilotos da Barra",
+   "numbers": [],
+   "period": "séc. XV-XX",
+   "place": "",
+   "who": "pescadores"
+  },
+  {
+   "action": "The term muleta first appears for a boat fishing with the tartaranha in documents of 1634 and 1645; muletas were smaller than barcas.",
+   "boat": "muleta, barca",
+   "cargo": "",
+   "conditions": "",
+   "gear": "tartaranha",
+   "id": "m-hist-pedrosa:1tsz:p57",
+   "kind": "practice",
+   "location": "6. Os Pilotos da Barra",
+   "numbers": [],
+   "period": "1634, 1645",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Lisbon council reported excessive tartaranha fishing, saying no other fishing method was used any more, whether in barcas or in the smaller muletas.",
+   "boat": "barcas, muletas",
+   "cargo": "",
+   "conditions": "",
+   "gear": "tartaranhas",
+   "id": "m-hist-pedrosa:1tsz:p58",
+   "kind": "event",
+   "location": "6. Os Pilotos da Barra",
+   "numbers": [],
+   "period": "1634",
+   "place": "Lisboa",
+   "who": "câmara de Lisboa"
+  },
+  {
+   "action": "An almotacé saw two muletas with tartaranha nets near Belém Tower and requested soldiers; the soldiers disobeyed his orders and resisted.",
+   "boat": "muletas",
+   "cargo": "",
+   "conditions": "",
+   "gear": "redes tartaranhas",
+   "id": "m-hist-pedrosa:1tsz:p59",
+   "kind": "event",
+   "location": "6. Os Pilotos da Barra",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "2",
+     "what": "muletas seen"
+    }
+   ],
+   "period": "4 February 1645",
+   "place": "Torre de Belém",
+   "who": "almotacé, soldados"
+  },
+  {
+   "action": "The king ordered a Lisbon councillor to proclaim a ban on tartaranha boats and nets in every river and sea of the kingdom, with severe penalties, including keeping nets at home.",
+   "boat": "barco de tartaranha",
+   "cargo": "",
+   "conditions": "penalties: flogging, fines and exile; applied to everyone regardless of status",
+   "gear": "rede de tartaranha",
+   "id": "m-hist-pedrosa:1tsz:p60",
+   "kind": "rule",
+   "location": "6. Os Pilotos da Barra",
+   "numbers": [],
+   "period": "14 June 1646",
+   "place": "rios e mar do reino",
+   "who": "o rei, vereador da câmara de Lisboa"
+  },
+  {
+   "action": "The king ordered an inquiry into whether fish stocks had grown after one year of the ban on tartaranhas.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "tartaranhas",
+   "id": "m-hist-pedrosa:1tsz:p61",
+   "kind": "event",
+   "location": "p. 14",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1",
+     "what": "duration of ban"
+    }
+   ],
+   "period": "8 June 1647",
+   "place": "",
+   "who": "o rei"
+  },
+  {
+   "action": "Lisbon council found tartaranhas harmful in the river because tight dragged nets take young fish and roe; they should fish only in open months, with the legal mesh and light gear.",
+   "boat": "tartaranha, barca de Cascais",
+   "cargo": "",
+   "conditions": "closed months March, April, May (spawning); free fishing allowed below São Julião tower",
+   "gear": "clay balls instead of lead weights, cork floats, regulated mesh",
+   "id": "m-hist-pedrosa:1tsz:p62",
+   "kind": "rule",
+   "location": "p. 14",
+   "numbers": [
+    {
+     "unit": "months",
+     "value": "3",
+     "what": "closed months"
+    }
+   ],
+   "period": "8 July 1647",
+   "place": "rio Tejo",
+   "who": "câmara de Lisboa"
+  },
+  {
+   "action": "The king agreed and authorised tartaranha fishing outside the bar.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "tartaranha",
+   "id": "m-hist-pedrosa:1tsz:p63",
+   "kind": "rule",
+   "location": "p. 14",
+   "numbers": [],
+   "period": "1647",
+   "place": "fora da barra, torre de São Julião",
+   "who": "o rei"
+  },
+  {
+   "action": "Baked clay balls are lighter than lead and press less on the seabed.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "bolas de barro cozido",
+   "id": "m-hist-pedrosa:1tsz:p64",
+   "kind": "description",
+   "location": "p. 14",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Tartaranha fishermen supplied fish to Lisbon and acted as bar pilots assisting India ships, royal fleets and merchant ships.",
+   "boat": "naus da Índia, armadas, naus mercantes",
+   "cargo": "fish",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p65",
+   "kind": "practice",
+   "location": "p. 14",
+   "numbers": [],
+   "period": "1647",
+   "place": "barra de Lisboa",
+   "who": "pescadores das tartaranhas, chincheiros do alto"
+  },
+  {
+   "action": "A royal charter confirmed permission for tartaranhas outside the bar, in response to representations from the fishermen, also called pilots of the bar.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "tartaranhas",
+   "id": "m-hist-pedrosa:1tsz:p66",
+   "kind": "rule",
+   "location": "p. 14",
+   "numbers": [],
+   "period": "27 September 1647",
+   "place": "fora da barra",
+   "who": "o rei, pescadores das tartaranhas"
+  },
+  {
+   "action": "The first regulation for Lisbon bar pilotage admitted as pilots only those with ten years of continuous experience on offshore fishing boats.",
+   "boat": "barcos de pescaria de barra em fora",
+   "cargo": "",
+   "conditions": "ten years' successive practice required",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p67",
+   "kind": "rule",
+   "location": "p. 14",
+   "numbers": [
+    {
+     "unit": "years",
+     "value": "10",
+     "what": "required experience"
+    }
+   ],
+   "period": "1824",
+   "place": "barra de Lisboa",
+   "who": "Pilotos da Barra"
+  },
+  {
+   "action": "An English parliamentary fleet blockaded the Tagus near the bar and on 13 June seized Portuguese fishing boats, after a royalist fleet took refuge in Lisbon.",
+   "boat": "barcos de pesca portugueses",
+   "cargo": "",
+   "conditions": "blockade from late March to late September 1650",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p68",
+   "kind": "event",
+   "location": "7. Tartanas na Pesca em 1650",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "16",
+     "what": "boats seized (English source)"
+    },
+    {
+     "unit": "boats",
+     "value": "2",
+     "what": "escaped"
+    },
+    {
+     "unit": "boats",
+     "value": "14",
+     "what": "boats per king's letter, 7 Aug 1650"
+    }
+   ],
+   "period": "13 June 1650",
+   "place": "barra do Tejo",
+   "who": "armada do parlamento inglês"
+  },
+  {
+   "action": "On 24 June King João IV wrote to the Algarve governor and the Count of Ericeira that the English had seized tartanas that were fishing.",
+   "boat": "tartanas",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p69",
+   "kind": "event",
+   "location": "page 15",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "14",
+     "what": "tartanas seized"
+    },
+    {
+     "unit": "boats",
+     "value": "2",
+     "what": "tartanas that escaped"
+    },
+    {
+     "unit": "boats",
+     "value": "16",
+     "what": "tartanas fishing near the bar, at least"
+    }
+   ],
+   "period": "",
+   "place": "near the Lisbon bar",
+   "who": "King D. João IV; English"
+  },
+  {
+   "action": "Fishing with the tartaranha net was done from boats that the sources first typed as tartanas; earlier they were called barca, barco, tartaranha, chincha or chinchorro.",
+   "boat": "tartana",
+   "cargo": "",
+   "conditions": "",
+   "gear": "rede tartaranha",
+   "id": "m-hist-pedrosa:1tsz:p70",
+   "kind": "practice",
+   "location": "page 15",
+   "numbers": [],
+   "period": "",
+   "place": "near the Lisbon bar",
+   "who": "fishermen"
+  },
+  {
+   "action": "The term muleta with rede tartaranha already appeared in 1634 and 1645, but only as a generic designation.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "",
+   "gear": "rede tartaranha",
+   "id": "m-hist-pedrosa:1tsz:p71",
+   "kind": "description",
+   "location": "page 15",
+   "numbers": [],
+   "period": "1634 and 1645",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "A Lisbon council ordinance allowed muletas fishing with chinchorros, being smaller than chinchas, to use lead weights on the net's two sides, but clay balls along the whole cuada.",
+   "boat": "muletas de chinchorros",
+   "cargo": "",
+   "conditions": "clay balls kept on the cuada because it drags the young fish and destroys the roe; bulky nets on the",
+   "gear": "chinchorro nets, clay balls, lead weights",
+   "id": "m-hist-pedrosa:1tsz:p72",
+   "kind": "rule",
+   "location": "page 15",
+   "numbers": [],
+   "period": "1672",
+   "place": "Lisbon",
+   "who": "câmara de Lisboa; muleta crews"
+  },
+  {
+   "action": "The smaller mesh gauge set earlier applied only to tartaranhas, not to chinchas and chinchorros, which needed mesh able to catch sardine, their main purpose.",
+   "boat": "chinchas, chinchorros",
+   "cargo": "sardine",
+   "conditions": "",
+   "gear": "nets with mesh gauge",
+   "id": "m-hist-pedrosa:1tsz:p73",
+   "kind": "rule",
+   "location": "page 15",
+   "numbers": [],
+   "period": "1672",
+   "place": "Lisbon",
+   "who": "câmara de Lisboa"
+  },
+  {
+   "action": "A trawl net consists mainly of a bag and two sleeves (mãos), which hold the bag and channel fish into it; the cuada is the bag's narrow-meshed end.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "rede de arrasto, saco, mangas, cuada",
+   "id": "m-hist-pedrosa:1tsz:p74",
+   "kind": "description",
+   "location": "page 16",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "An anonymous 17th-century author proposed stretching an iron chain across the Tagus to block a seaborne attack on Lisbon, using old boats or muletas as floats.",
+   "boat": "barcos velhos ou muletas",
+   "cargo": "",
+   "conditions": "",
+   "gear": "iron chain",
+   "id": "m-hist-pedrosa:1tsz:p75",
+   "kind": "event",
+   "location": "page 16",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "40",
+     "what": "old boats or muletas needed as buoys"
+    }
+   ],
+   "period": "17th century",
+   "place": "Tagus, between the two banks",
+   "who": "anonymous author"
+  },
+  {
+   "action": "Beam trawling with a boat and net both called tartana is of Provençal French origin, documented from 1301; it appeared in Catalonia and Mallorca in the late 14th century.",
+   "boat": "tartana",
+   "cargo": "",
+   "conditions": "",
+   "gear": "rede tartana",
+   "id": "m-hist-pedrosa:1tsz:p76",
+   "kind": "description",
+   "location": "page 16",
+   "numbers": [],
+   "period": "1301; late 14th century",
+   "place": "Provence; Catalonia; Mallorca",
+   "who": "Provençal fishermen"
+  },
+  {
+   "action": "From the late 16th century Provençal fishermen, especially from Martigues, migrated to Ligurian, Tuscan and Lazio waters with the tartana, called martingana.",
+   "boat": "tartana (martingana)",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p77",
+   "kind": "practice",
+   "location": "page 16",
+   "numbers": [],
+   "period": "late 16th century",
+   "place": "Liguria, Tuscany, Lazio",
+   "who": "Provençal fishermen from Martigues"
+  },
+  {
+   "action": "A document at Pesaro mentions the new tartana fishing method, spread by French fishermen in several parts of the world.",
+   "boat": "tartana",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p78",
+   "kind": "event",
+   "location": "page 16",
+   "numbers": [],
+   "period": "1610",
+   "place": "Pesaro",
+   "who": "French fishermen"
+  },
+  {
+   "action": "The 'several parts of the world' meant a restricted Mediterranean zone between Catalonia and the Adriatic and, in the Atlantic, only Portugal.",
+   "boat": "tartana",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p79",
+   "kind": "description",
+   "location": "page 17",
+   "numbers": [],
+   "period": "",
+   "place": "Mediterranean; Portugal",
+   "who": ""
+  },
+  {
+   "action": "A boat made for use as a tartana was sold at Pesaro.",
+   "boat": "barca fatta ad uso di tartana",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p80",
+   "kind": "event",
+   "location": "page 17",
+   "numbers": [],
+   "period": "1621",
+   "place": "Pesaro",
+   "who": ""
+  },
+  {
+   "action": "A flat-bottomed fishing boat, the nascara, was sold at Chioggia for tartana use; its inventory listed two tartana nets. Italian boats were adapted for beam trawling.",
+   "boat": "nascara",
+   "cargo": "",
+   "conditions": "",
+   "gear": "two tartana nets",
+   "id": "m-hist-pedrosa:1tsz:p81",
+   "kind": "event",
+   "location": "page 17",
+   "numbers": [
+    {
+     "unit": "nets",
+     "value": "2",
+     "what": "tartana nets in inventory"
+    }
+   ],
+   "period": "1650",
+   "place": "Chioggia",
+   "who": ""
+  },
+  {
+   "action": "During João IV's reign some Frenchmen sought to introduce a new model of tartaranha with a vessel also of a new type.",
+   "boat": "tartaranha",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p82",
+   "kind": "event",
+   "location": "page 17",
+   "numbers": [],
+   "period": "1640-1656",
+   "place": "",
+   "who": "Frenchmen"
+  },
+  {
+   "action": "A king used the word tartana (vessel) together with tartaranha (net) in a letter, after deep-sea line-and-hook fishermen had opposed a French fishing proposal and the king refused it.",
+   "boat": "tartana",
+   "cargo": "",
+   "conditions": "",
+   "gear": "tartaranha (net); linhas e aparelhos de anzol",
+   "id": "m-hist-pedrosa:1tsz:p83",
+   "kind": "practice",
+   "location": "[page 17]",
+   "numbers": [],
+   "period": "1650",
+   "place": "",
+   "who": "the king; pescadores do alto"
+  },
+  {
+   "action": "Two Frenchmen again asked to introduce the new tartaranha net and vessel; the king passed the request to Lisbon's city senate, which advised against it and the king refused.",
+   "boat": "tartana",
+   "cargo": "",
+   "conditions": "Senate said the new nets were more harmful, with smaller mesh and a much larger bag circumference",
+   "gear": "new tartaranha net",
+   "id": "m-hist-pedrosa:1tsz:p84",
+   "kind": "practice",
+   "location": "[page 17]",
+   "numbers": [],
+   "period": "1670-1671",
+   "place": "Lisboa",
+   "who": "two Frenchmen; senado da câmara de Lisboa; the king"
+  },
+  {
+   "action": "The senate argued French tartanas resembled the launches of Moorish corsairs who raided the coast, so fishermen might mistake them and confront them by accident.",
+   "boat": "tartanas; lanchas dos corsários mouros",
+   "cargo": "",
+   "conditions": "Fishermen would find it hard to tell the vessels apart",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p85",
+   "kind": "practice",
+   "location": "[page 17]",
+   "numbers": [],
+   "period": "1671",
+   "place": "coast of Portugal; Estreito de Gibraltar",
+   "who": "senado da câmara de Lisboa; Moorish corsairs"
+  },
+  {
+   "action": "Estevam da Luz asked leave to build four large vessels at his own expense to fish far out at sea; the king granted a four-year exclusive licence.",
+   "boat": "four large vessels",
+   "cargo": "",
+   "conditions": "Nobody else could arm a similar vessel for four years",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p86",
+   "kind": "practice",
+   "location": "[page 17]",
+   "numbers": [
+    {
+     "unit": "vessels",
+     "value": "4",
+     "what": "vessels to be built"
+    },
+    {
+     "unit": "leagues",
+     "value": "8",
+     "what": "fishing distance offshore"
+    },
+    {
+     "unit": "years",
+     "value": "4",
+     "what": "exclusive licence duration"
+    }
+   ],
+   "period": "1694",
+   "place": "eight leagues out to sea",
+   "who": "Estevam da Luz, resident of Lisboa; the king"
+  },
+  {
+   "action": "The Espírito Santo brotherhood, representing deep-sea fishermen, again opposed the petition, but the senate called the invention very useful and favoured it.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p87",
+   "kind": "practice",
+   "location": "[page 17-18]",
+   "numbers": [],
+   "period": "1694",
+   "place": "",
+   "who": "confraria do Espírito Santo; pescadores do alto; senado"
+  },
+  {
+   "action": "The senate's favourable opinion ran for three years, after which natives were free to use the invention; the king approved, limiting each vessel to two Frenchmen.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "Each vessel could carry no more than two Frenchmen",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p88",
+   "kind": "practice",
+   "location": "[page 18]",
+   "numbers": [
+    {
+     "unit": "years",
+     "value": "3",
+     "what": "exclusive period before free use"
+    },
+    {
+     "unit": "",
+     "value": "2",
+     "what": "maximum Frenchmen per vessel"
+    }
+   ],
+   "period": "1694",
+   "place": "",
+   "who": "senado; the king; Frenchmen"
+  },
+  {
+   "action": "Spanish author Veitia Linage described tartanas as lateen-sailed Levantine-crewed vessels suited to fishing at sea, some sent to the Indies; foreign sailors were needed for the sails.",
+   "boat": "tartana",
+   "cargo": "",
+   "conditions": "Spaniards did not understand the rigging; three or four foreign sailors had to be allowed",
+   "gear": "lateen sails",
+   "id": "m-hist-pedrosa:1tsz:p89",
+   "kind": "practice",
+   "location": "[page 18]",
+   "numbers": [
+    {
+     "unit": "sailors",
+     "value": "3-4",
+     "what": "foreign sailors needed"
+    }
+   ],
+   "period": "1672",
+   "place": "Indies",
+   "who": "Veitia Linage; foreign (French) sailors"
+  },
+  {
+   "action": "The tartana had lateen sails for navigating and extra sails for trawl fishing, which required foreign (French) sailors.",
+   "boat": "tartana",
+   "cargo": "",
+   "conditions": "",
+   "gear": "lateen sails; complementary sails for trawling",
+   "id": "m-hist-pedrosa:1tsz:p90",
+   "kind": "practice",
+   "location": "[page 18]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "foreign sailors (French)"
+  },
+  {
+   "action": "The oldest known illustration of the French fishing tartana appears in an album by Jean Jouve of Marseilles.",
+   "boat": "tartana",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p91",
+   "kind": "practice",
+   "location": "[page 18]",
+   "numbers": [],
+   "period": "1679",
+   "place": "Marseilles",
+   "who": "Jean Jouve"
+  },
+  {
+   "action": "The earliest illustration of the muleta, not yet mentioned by Portuguese authors, appears in Gueroult du Pas's album published in Paris, which also shows the tartana for fishing off Provence and Italy.",
+   "boat": "muleta; tartana",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p92",
+   "kind": "practice",
+   "location": "[page 18, section 10]",
+   "numbers": [],
+   "period": "1710",
+   "place": "Paris; coasts of Provença and Itália",
+   "who": "J. P. Gueroult du Pas"
+  },
+  {
+   "action": "Figure 2 shows three tartanas: one with a single mast and lateen sail, one with an extra triangular sail on a pole, one fully rigged for beam trawling.",
+   "boat": "tartana",
+   "cargo": "",
+   "conditions": "",
+   "gear": "mast, yard, lateen sail, triangular sail, pole; trawl rig",
+   "id": "m-hist-pedrosa:1tsz:p93",
+   "kind": "practice",
+   "location": "[page 18]",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "3",
+     "what": "tartanas shown"
+    }
+   ],
+   "period": "1710",
+   "place": "coasts of Provença and Itália",
+   "who": ""
+  },
+  {
+   "action": "The muleta is shown under way without trawl rigging, with a forward-leaning mast, lateen sail, forward boom with a square sail, raised inward-curving ends and a leeboard on each quarter.",
+   "boat": "muleta (Bateau pêcheur Portugais nommé mulet)",
+   "cargo": "",
+   "conditions": "",
+   "gear": "lateen sail; botaló with quadrangular sail (cevadeira); two leeboards",
+   "id": "m-hist-pedrosa:1tsz:p94",
+   "kind": "practice",
+   "location": "[page 18-20]",
+   "numbers": [
+    {
+     "unit": "boards",
+     "value": "2",
+     "what": "leeboards"
+    }
+   ],
+   "period": "1710",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "This is the first documentation of the leeboard in Portugal; it appears on other vessels only later, in the Caderno de todos os barcos do Tejo.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "",
+   "gear": "tábua de bolina (leeboard)",
+   "id": "m-hist-pedrosa:1tsz:p95",
+   "kind": "practice",
+   "location": "[page 20]",
+   "numbers": [],
+   "period": "1710; 1785",
+   "place": "Portugal; Tejo",
+   "who": ""
+  },
+  {
+   "action": "The muleta has three features never seen on French fishing tartanas: inward-curving bow and stern, forward-leaning mast, and leeboard. The 1710 album shows leeboards only on Atlantic boats.",
+   "boat": "muleta; French tartanas",
+   "cargo": "",
+   "conditions": "Mediterranean boats had no leeboards",
+   "gear": "leeboard",
+   "id": "m-hist-pedrosa:1tsz:p96",
+   "kind": "practice",
+   "location": "[page 20]",
+   "numbers": [
+    {
+     "unit": "features",
+     "value": "3",
+     "what": "distinctive features"
+    }
+   ],
+   "period": "1710",
+   "place": "Holanda, Inglaterra, Flandres, França",
+   "who": ""
+  },
+  {
+   "action": "The leeboard reduces leeward drift and prevents capsizing; it is needed only on flat or nearly flat-bottomed lateen-rigged boats, not on round-rigged ones, and is lowered on one side.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "Flat-bottomed boats with lateen rig",
+   "gear": "tábua de bolina (leeboard, lateral centreboard)",
+   "id": "m-hist-pedrosa:1tsz:p97",
+   "kind": "practice",
+   "location": "[page 20]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Two theories exist on the leeboard's origin in Europe; one holds it is Chinese and reached Holland in the late 16th century.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "leeboard",
+   "id": "m-hist-pedrosa:1tsz:p98",
+   "kind": "practice",
+   "location": "[page 20]",
+   "numbers": [],
+   "period": "late 16th century",
+   "place": "Holanda",
+   "who": "some authors"
+  },
+  {
+   "action": "Dutch leeboard (zwaard) described as three planks stacked and cut in a shoe-sole shape; Dutch and English fishing and trading vessels of the 17th-18th centuries used it, some with four boards, two per side.",
+   "boat": "Dutch and English fishing and trading vessels",
+   "cargo": "",
+   "conditions": "",
+   "gear": "leeboard (zwaard)",
+   "id": "m-hist-pedrosa:1tsz:p99",
+   "kind": "description",
+   "location": "[page 20]",
+   "numbers": [
+    {
+     "unit": "planks",
+     "value": "3",
+     "what": "planks making up one leeboard"
+    },
+    {
+     "unit": "boards",
+     "value": "4",
+     "what": "leeboards on some vessels"
+    }
+   ],
+   "period": "17th-18th centuries",
+   "place": "",
+   "who": "Dutch authorities; Dutch and English fishing and trading vessels"
+  },
+  {
+   "action": "Per Nicolas Aubin, leeboard dimensions followed set proportions: length twice the vessel's depth, width half the length, thickness twice the hull planking.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "leeboard",
+   "id": "m-hist-pedrosa:1tsz:p100",
+   "kind": "rule",
+   "location": "[page 20]",
+   "numbers": [
+    {
+     "unit": "times",
+     "value": "2",
+     "what": "leeboard length relative to vessel depth"
+    },
+    {
+     "unit": "ratio",
+     "value": "0.5",
+     "what": "leeboard width relative to its length"
+    },
+    {
+     "unit": "times",
+     "value": "2",
+     "what": "leeboard thickness relative to hull planking"
+    }
+   ],
+   "period": "1702",
+   "place": "",
+   "who": "Nicolas Aubin"
+  },
+  {
+   "action": "Leeboards were made slightly wider for rivers and shallow water, slightly longer and narrower for deep, rough water, and narrower still for ocean-going ships; many exceptions existed.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "little water under the keel makes boats turn more easily",
+   "gear": "leeboard",
+   "id": "m-hist-pedrosa:1tsz:p101",
+   "kind": "rule",
+   "location": "[page 21]",
+   "numbers": [],
+   "period": "",
+   "place": "rivers, shallow waters, deep waters, high seas",
+   "who": ""
+  },
+  {
+   "action": "The muleta's leeboard took several different shapes, while the Dutch yacht (jachten) sailing the Indian Ocean had a very large one.",
+   "boat": "muleta; Dutch jachten",
+   "cargo": "",
+   "conditions": "",
+   "gear": "leeboard",
+   "id": "m-hist-pedrosa:1tsz:p102",
+   "kind": "description",
+   "location": "[page 21]",
+   "numbers": [],
+   "period": "",
+   "place": "Indian Ocean",
+   "who": ""
+  },
+  {
+   "action": "The muleta used its leeward leeboard while sailing to reduce leeway, one board on each side; Portuguese authors name it variously (tábua de bolina, pau de borda, pá de borda, esparrela de deriva, tábua de abatimento).",
+   "boat": "muleta; saveiros",
+   "cargo": "",
+   "conditions": "sailing with the wind; leeward side",
+   "gear": "tábua de bolina / pau de borda",
+   "id": "m-hist-pedrosa:1tsz:p103",
+   "kind": "practice",
+   "location": "[page 21]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "Portuguese authors (Tengarrinha Pires, Castello Branco, Lixa Filgueiras, Baldaqu"
+  },
+  {
+   "action": "Duhamel Du Monceau published an engraving of the Portuguese muleta, shaped like a gondola with raised bow and stern, rowers placed amidships.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "",
+   "gear": "oars",
+   "id": "m-hist-pedrosa:1tsz:p104",
+   "kind": "event",
+   "location": "[page 21]",
+   "numbers": [],
+   "period": "1772",
+   "place": "",
+   "who": "M. Duhamel Du Monceau"
+  },
+  {
+   "action": "The 1772 muleta engraving shows a steeply raked mid-mast with lateen sail, a triangular bow sail, net ends tied to two booms, a huge rudder worked by tackles and a transverse tiller.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "under sail, not rigged for trawling",
+   "gear": "lateen sail, triangular sail, net, booms, rudder with tackles, leeboards",
+   "id": "m-hist-pedrosa:1tsz:p105",
+   "kind": "description",
+   "location": "[page 22]",
+   "numbers": [],
+   "period": "1772",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "The muleta's bow carried a crest of iron points, described as a strong iron bar nailed to the bow's outer face to protect it, as other European boats did at quays.",
+   "boat": "muleta; Venetian gondola",
+   "cargo": "",
+   "conditions": "protection when boats hit the quay, often head-on",
+   "gear": "iron bar with pointed nail heads",
+   "id": "m-hist-pedrosa:1tsz:p106",
+   "kind": "description",
+   "location": "[page 22]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "Manuel Leitão, Ferdinando Simões, A. Marques da Silva"
+  },
+  {
+   "action": "Duhamel Du Monceau says muletas trawled sideways like Mediterranean tartanas, fishing sardines at night between Peniche and Setúbal, usually hauling nets ashore; the author calls this wrong.",
+   "boat": "muleta",
+   "cargo": "sardine",
+   "conditions": "at night",
+   "gear": "nets; fire for night fishing (candeio)",
+   "id": "m-hist-pedrosa:1tsz:p107",
+   "kind": "practice",
+   "location": "[page 23]",
+   "numbers": [
+    {
+     "unit": "men",
+     "value": "5-6",
+     "what": "crew"
+    }
+   ],
+   "period": "1772",
+   "place": "between Peniche and Setúbal",
+   "who": "5 or 6 crew; Duhamel Du Monceau"
+  },
+  {
+   "action": "The author states that the muleta with tartaranha net was not meant for sardine fishing and fished beyond the Tagus and the sea between Cabo da Roca and Cabo Espichel; 1758 parish records mention Setúbal muletas.",
+   "boat": "muleta, tartaranha",
+   "cargo": "",
+   "conditions": "",
+   "gear": "tartaranha net",
+   "id": "m-hist-pedrosa:1tsz:p108",
+   "kind": "description",
+   "location": "[page 23]",
+   "numbers": [],
+   "period": "1758",
+   "place": "Tagus; Cabo da Roca to Cabo Espichel; Setúbal",
+   "who": "Memórias Paroquiais"
+  },
+  {
+   "action": "Royal order banned use of tartaranha boats and nets for fishing in any river or sea of the kingdom, hinting they were already on the Sado.",
+   "boat": "barco de tartaranha",
+   "cargo": "",
+   "conditions": "",
+   "gear": "rede de tartaranha",
+   "id": "m-hist-pedrosa:1tsz:p109",
+   "kind": "rule",
+   "location": "[page 23]",
+   "numbers": [],
+   "period": "1646",
+   "place": "every river and sea of the kingdom",
+   "who": "the king"
+  },
+  {
+   "action": "Prince regent's decree banned dragging nets (tarrafas, chinchorros, mugeiras, tartaranhas) in the Lisbon and Setúbal rivers and within five leagues of their mouths, citing harm to fish breeding.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "to protect fish breeding; applies at sea and on beaches",
+   "gear": "tarrafas, bugigangas, chinchorros, mugeiras, tartaranhas",
+   "id": "m-hist-pedrosa:1tsz:p110",
+   "kind": "rule",
+   "location": "[page 23]",
+   "numbers": [
+    {
+     "unit": "leagues",
+     "value": "5",
+     "what": "ban distance from river mouths"
+    }
+   ],
+   "period": "3 May 1802",
+   "place": "rios de Lisboa e Setúbal, and five leagues from their mouths",
+   "who": "príncipe regente"
+  },
+  {
+   "action": "The muleta fished with the tartaranha net in the Tagus and Sado estuaries and at sea between Cabo da Roca and Setúbal.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "",
+   "gear": "rede tartaranha",
+   "id": "m-hist-pedrosa:1tsz:p111",
+   "kind": "practice",
+   "location": "[page 23]",
+   "numbers": [],
+   "period": "",
+   "place": "Tejo and Sado estuaries; sea between Cabo da Roca and Setúbal",
+   "who": ""
+  },
+  {
+   "action": "The muleta in the 1785 Caderno has a short mast raked forward, lateen sail, triangular jib, two booms, arched bow with iron spikes, receding stern, two leeboards.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "",
+   "gear": "lateen sail, triangular bow sail, leeboards, metal bow band with iron spikes",
+   "id": "m-hist-pedrosa:1tsz:p112",
+   "kind": "description",
+   "location": "[page 23]",
+   "numbers": [
+    {
+     "unit": "boards",
+     "value": "2",
+     "what": "leeboards"
+    },
+    {
+     "unit": "booms",
+     "value": "2",
+     "what": "booms"
+    }
+   ],
+   "period": "1785",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Barco de Riba Tejo, thought to be the cargo variant of the muleta, closely resembles it.",
+   "boat": "Barco de Riba Tejo",
+   "cargo": "cargo",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p113",
+   "kind": "description",
+   "location": "[page 23]",
+   "numbers": [],
+   "period": "1785",
+   "place": "Tejo",
+   "who": ""
+  },
+  {
+   "action": "The Batel de Pesca shares the muleta's forward-raked mast, sails, metal bow band with iron spikes and leeboards.",
+   "boat": "Batel de Pesca",
+   "cargo": "",
+   "conditions": "",
+   "gear": "leeboards, metal bow band with iron spikes",
+   "id": "m-hist-pedrosa:1tsz:p114",
+   "kind": "description",
+   "location": "[page 24]",
+   "numbers": [],
+   "period": "1785",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "An engraving by João Pedroso published in 1866 showed a muleta very like the 1785 one; a model was also built that year.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p115",
+   "kind": "event",
+   "location": "[page 24, 12 A Muleta do Séc. XIX]",
+   "numbers": [],
+   "period": "1866",
+   "place": "",
+   "who": "João Pedroso"
+  },
+  {
+   "action": "Muleta designs of 1710 and 1772 had features absent from French fishing tartanas: raised ends, forward-raked mast, leeboards, tackle-operated rudder, iron-spike crest on bow.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "",
+   "gear": "leeboards, rudder worked by tackles, iron spikes",
+   "id": "m-hist-pedrosa:1tsz:p116",
+   "kind": "description",
+   "location": "[page 25]",
+   "numbers": [],
+   "period": "1710, 1772",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Writers described the muleta hull as broad and flat-bottomed with a rounded, raised bow, comparing it to a Norman naveta or Greek ship.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p117",
+   "kind": "description",
+   "location": "[page 25]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "Baldaque da Silva; Octávio Lixa Filgueiras"
+  },
+  {
+   "action": "Origin of the muleta is uncertain; in 17th-century Italy local boats were adapted to trawl sideways with tartana nets, and this may have happened in Portugal.",
+   "boat": "muleta; tartana",
+   "cargo": "",
+   "conditions": "",
+   "gear": "rede tartana",
+   "id": "m-hist-pedrosa:1tsz:p118",
+   "kind": "description",
+   "location": "[page 26]",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1679",
+     "what": "first known illustration of French fishing tartana"
+    }
+   ],
+   "period": "17th century; 15th century",
+   "place": "Italy; Tejo",
+   "who": ""
+  },
+  {
+   "action": "The 1572 boatmen's regulation states only that muleta yards were very long.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "",
+   "gear": "verga",
+   "id": "m-hist-pedrosa:1tsz:p119",
+   "kind": "rule",
+   "location": "[page 26]",
+   "numbers": [],
+   "period": "1572",
+   "place": "Tejo",
+   "who": "barqueiros"
+  },
+  {
+   "action": "Father Manuel Godinho compared Persian Gulf terradas to Tagus muletas, though the terradas differ, with low bow and very high stern.",
+   "boat": "terrada; muleta",
+   "cargo": "",
+   "conditions": "",
+   "gear": "lateen sail, rudder steered by cords",
+   "id": "m-hist-pedrosa:1tsz:p120",
+   "kind": "description",
+   "location": "[page 26]",
+   "numbers": [],
+   "period": "1665",
+   "place": "Golfo Pérsico",
+   "who": "padre Manuel Godinho"
+  },
+  {
+   "action": "To ease sideways trawling and use shallow draught, muleta and Barco de Riba Tejo had flat or inward-curving bottoms so the keel sat tangent.",
+   "boat": "muleta; Barco de Riba Tejo",
+   "cargo": "",
+   "conditions": "shallow draught; sideways trawling",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p121",
+   "kind": "description",
+   "location": "[page 26]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Trawling with two boats dragging a large bagged net astern developed in the Mediterranean, called parelha, bou or chalut; in France it was called 'aux boeufs'.",
+   "boat": "two boats",
+   "cargo": "",
+   "conditions": "",
+   "gear": "large bagged trawl net",
+   "id": "m-hist-pedrosa:1tsz:p122",
+   "kind": "description",
+   "location": "[page 27]",
+   "numbers": [],
+   "period": "",
+   "place": "Mediterranean; France",
+   "who": ""
+  },
+  {
+   "action": "The bou reached the Gulf of Cádiz, brought by Valencians, and spread across southern Spain as far as Ayamonte.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "bou net",
+   "id": "m-hist-pedrosa:1tsz:p123",
+   "kind": "event",
+   "location": "[page 27]",
+   "numbers": [],
+   "period": "1755",
+   "place": "Gulf of Cádiz; Ayamonte",
+   "who": "Valencians"
+  },
+  {
+   "action": "Bou nets were highly productive because their small mesh formed a 'wall' once the doubled, heavily weighted lead lines touched bottom; xávega and 'arte' nets were similar.",
+   "boat": "",
+   "cargo": "fish",
+   "conditions": "",
+   "gear": "small-mesh net with double heavy leads",
+   "id": "m-hist-pedrosa:1tsz:p124",
+   "kind": "description",
+   "location": "[page 28]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "The Spanish king ordered the Catalan bou banned in Galicia without banning xávega; the two were judged similar, bou hauling aboard and xávega to the beach.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "bou; xávega",
+   "id": "m-hist-pedrosa:1tsz:p125",
+   "kind": "rule",
+   "location": "[page 28]",
+   "numbers": [],
+   "period": "1785",
+   "place": "Galicia",
+   "who": "King of Spain"
+  },
+  {
+   "action": "The Archbishop of Thessalonica reported Valencians fitting out bou boats in the Algarve, and Portuguese imitating them with similar boats and nets, depleting fish stocks.",
+   "boat": "bou boats",
+   "cargo": "fish",
+   "conditions": "",
+   "gear": "Mão, Copo, Quada, Saco, Chinchorro, Nova Arte nets",
+   "id": "m-hist-pedrosa:1tsz:p126",
+   "kind": "event",
+   "location": "[page 28]",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "40",
+     "what": "Valencian bou boats in the Algarve"
+    }
+   ],
+   "period": "1787",
+   "place": "Algarve",
+   "who": "Valencians; Portuguese; archbishop of Thessalonica"
+  },
+  {
+   "action": "A letter from the viscount of Vila Nova de Cerveira reported similar transgressions by fishermen of the northern provinces, Sesimbra and Setúbal.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p127",
+   "kind": "event",
+   "location": "[page 28]",
+   "numbers": [],
+   "period": "1787",
+   "place": "Northern provinces; Sesimbra; Setúbal",
+   "who": "viscount of Vila Nova de Cerveira"
+  },
+  {
+   "action": "Mão, saco (copo) and cuada are the parts of a trawl net; chinchorro is a trawl net; Nova Arte is the Algarve xávega and the west coast 'arte'.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "trawl net",
+   "id": "m-hist-pedrosa:1tsz:p128",
+   "kind": "description",
+   "location": "[page 28]",
+   "numbers": [],
+   "period": "",
+   "place": "Algarve; west coast",
+   "who": ""
+  },
+  {
+   "action": "A document criticised Lisbon's city senate for tolerating many three-mesh-order trawl nets that catch all young fish; it counted the boats fishing this way.",
+   "boat": "barcos, batéis, saveiros",
+   "cargo": "fish",
+   "conditions": "",
+   "gear": "nets of three mesh orders (mão, copo, saco)",
+   "id": "m-hist-pedrosa:1tsz:p129",
+   "kind": "event",
+   "location": "[page 28]",
+   "numbers": [
+    {
+     "unit": "barcos",
+     "value": "132",
+     "what": "boats and saveiros fishing"
+    },
+    {
+     "unit": "saveiros",
+     "value": "12",
+     "what": "saveiros"
+    },
+    {
+     "unit": "boats",
+     "value": "24",
+     "what": "Barreiro boats"
+    },
+    {
+     "unit": "boats",
+     "value": "22",
+     "what": "Seixal boats"
+    },
+    {
+     "unit": "boats",
+     "value": "18",
+     "what": "Arrentela boats"
+    },
+    {
+     "unit": "boats",
+     "value": "18",
+     "what": "Paio Pires boats"
+    }
+   ],
+   "period": "17 August 1779",
+   "place": "Barreiro, Seixal, Arrentela, Paio Pires, Sacavém, river, Costa",
+   "who": "senado da câmara de Lisboa"
+  },
+  {
+   "action": "The 12 saveiros off the Costa de Caparica fished with xávegas; the other boats likely used chinchorros and/or tartaranhas.",
+   "boat": "saveiros",
+   "cargo": "fish",
+   "conditions": "",
+   "gear": "xávega; chinchorro; tartaranha",
+   "id": "m-hist-pedrosa:1tsz:p130",
+   "kind": "practice",
+   "location": "[page 28]",
+   "numbers": [
+    {
+     "unit": "saveiros",
+     "value": "12",
+     "what": "saveiros"
+    }
+   ],
+   "period": "1779",
+   "place": "Costa de Caparica",
+   "who": ""
+  },
+  {
+   "action": "The muleta (tartaranha net) and other trawls like bou were strictly forbidden yet tolerated after fishermen's pleas.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "officially prohibited but tolerated",
+   "gear": "muleta; bou",
+   "id": "m-hist-pedrosa:1tsz:p131",
+   "kind": "rule",
+   "location": "14. As Limitações à Pesca com a Muleta e o Bou",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "fishermen"
+  },
+  {
+   "action": "A Portugal–Spain fishing reciprocity convention barred bou, parelha, chalut and similar trawls, and Portuguese muletas, within 12 miles of the other's coast; confirmed in 1885.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "bou, parelha, chalut, muletas",
+   "id": "m-hist-pedrosa:1tsz:p132",
+   "kind": "rule",
+   "location": "[page 28]",
+   "numbers": [
+    {
+     "unit": "miles",
+     "value": "12",
+     "what": "minimum distance from coast"
+    }
+   ],
+   "period": "14 July 1878",
+   "place": "Portuguese and Spanish waters",
+   "who": "Portugal; Spain"
+  },
+  {
+   "action": "A survey found Portuguese customarily fished in Spanish waters using gear prohibited in Spain.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "prohibited nets",
+   "id": "m-hist-pedrosa:1tsz:p133",
+   "kind": "event",
+   "location": "[page 28]",
+   "numbers": [],
+   "period": "1877",
+   "place": "Spanish waters",
+   "who": "Portuguese fishermen"
+  },
+  {
+   "action": "The tartana, used for fishing and cargo, is documented at Sanlúcar de Barrameda since the 18th century; a c.1910-1920 photo shows a muleta-like one-mast lateen rig.",
+   "boat": "tartana",
+   "cargo": "goods",
+   "conditions": "",
+   "gear": "inclined mast, yard, triangular lateen sail",
+   "id": "m-hist-pedrosa:1tsz:p134",
+   "kind": "description",
+   "location": "[page 28]",
+   "numbers": [],
+   "period": "18th century; c. 1910-1920",
+   "place": "Sanlúcar de Barrameda",
+   "who": ""
+  },
+  {
+   "action": "From the late 19th century, smaller boats (batel, bote, bateira) also trawled with the tartaranha net; the name muleta was often applied loosely to any boat fishing with it.",
+   "boat": "batel, bote, bateira, muleta",
+   "cargo": "",
+   "conditions": "",
+   "gear": "tartaranha net",
+   "id": "m-hist-pedrosa:1tsz:p135",
+   "kind": "practice",
+   "location": "[page 29]",
+   "numbers": [],
+   "period": "late 19th century",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Baldaque da Silva recorded that by 1891 only one muleta remained.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p136",
+   "kind": "event",
+   "location": "[page 29]",
+   "numbers": [
+    {
+     "unit": "boat",
+     "value": "1",
+     "what": "muletas remaining"
+    }
+   ],
+   "period": "1891",
+   "place": "",
+   "who": "Baldaque da Silva"
+  },
+  {
+   "action": "Tartaranha nets continued to be tolerated until their final extinction around 1920.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "tolerated until extinction",
+   "gear": "tartaranha net",
+   "id": "m-hist-pedrosa:1tsz:p137",
+   "kind": "rule",
+   "location": "[page 29]",
+   "numbers": [],
+   "period": "c. 1920",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Brito Aranha reported muletas crewed by 6, 10, 12 or 16 men, depending on the fishing intended and the boat's size.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "crew depends on type of fishing and size",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p138",
+   "kind": "description",
+   "location": "[page 29]",
+   "numbers": [
+    {
+     "unit": "men",
+     "value": "6, 10, 12 or 16",
+     "what": "crew range"
+    }
+   ],
+   "period": "1866",
+   "place": "",
+   "who": "Brito Aranha"
+  },
+  {
+   "action": "Seixal muletas had larger crews, and the biggest were about 20 metres long.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p139",
+   "kind": "description",
+   "location": "[page 29]",
+   "numbers": [
+    {
+     "unit": "men",
+     "value": "15 to 20",
+     "what": "crew"
+    },
+    {
+     "unit": "m",
+     "value": "20",
+     "what": "length of largest"
+    }
+   ],
+   "period": "",
+   "place": "Seixal",
+   "who": "Manuel de Oliveira Rebelo"
+  },
+  {
+   "action": "The smaller tartaranha botes were 12 m long, with a beam of 3.60 m, depth of 1.50 m and a crew of 15.",
+   "boat": "bote de tartaranha",
+   "cargo": "",
+   "conditions": "",
+   "gear": "tartaranha net",
+   "id": "m-hist-pedrosa:1tsz:p140",
+   "kind": "description",
+   "location": "[page 29]",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "12",
+     "what": "length"
+    },
+    {
+     "unit": "m",
+     "value": "3.60",
+     "what": "beam"
+    },
+    {
+     "unit": "m",
+     "value": "1.50",
+     "what": "depth"
+    },
+    {
+     "unit": "men",
+     "value": "15",
+     "what": "crew"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "The cargo muleta was practically the Barco de Riba Tejo, and the two are hard to tell apart.",
+   "boat": "muleta de carga, Barco de Riba Tejo",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p141",
+   "kind": "description",
+   "location": "15. A Muleta de Carga",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Rascasço made 79 drawings in three notebooks, Costumes das nossas embarcações, including the Alhandra cargo muleta.",
+   "boat": "muleta de carregar de Alhandra",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p142",
+   "kind": "event",
+   "location": "[page 29]",
+   "numbers": [
+    {
+     "unit": "drawings",
+     "value": "79",
+     "what": "drawings"
+    },
+    {
+     "unit": "notebooks",
+     "value": "3",
+     "what": "notebooks"
+    }
+   ],
+   "period": "1882/1883",
+   "place": "Alhandra",
+   "who": "Rascasço"
+  },
+  {
+   "action": "Muletas and rascas ventured beyond the bar, sometimes many miles out, seeking cargo from abundant ocean fisheries.",
+   "boat": "muleta, rasca",
+   "cargo": "fish from fisheries",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p143",
+   "kind": "practice",
+   "location": "[page 29]",
+   "numbers": [],
+   "period": "1866",
+   "place": "outside the Tagus bar, ocean",
+   "who": ""
+  },
+  {
+   "action": "Muletas did coastal trading to the Algarve, bringing its products to the Tagus or exchanging them at Moroccan ports.",
+   "boat": "muleta",
+   "cargo": "Algarve products",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p144",
+   "kind": "practice",
+   "location": "[page 29]",
+   "numbers": [],
+   "period": "1866",
+   "place": "Algarve, Tagus, Moroccan ports",
+   "who": ""
+  },
+  {
+   "action": "A muleta could be rigged as a yacht (iate) with two or three masts for some commercial commission.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p145",
+   "kind": "practice",
+   "location": "[pages 29-30]",
+   "numbers": [
+    {
+     "unit": "masts",
+     "value": "2 or 3",
+     "what": "masts when rigged as iate"
+    }
+   ],
+   "period": "1872",
+   "place": "",
+   "who": "Brito Aranha"
+  },
+  {
+   "action": "A two-masted fishing muleta appears in a Pierre Ozanne engraving, probably from the late 18th century.",
+   "boat": "muleta de pesca",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p146",
+   "kind": "description",
+   "location": "[page 30]",
+   "numbers": [
+    {
+     "unit": "masts",
+     "value": "2",
+     "what": "masts"
+    }
+   ],
+   "period": "late 18th century",
+   "place": "Lisbon",
+   "who": "Pierre Ozanne"
+  },
+  {
+   "action": "The 19th-century muleta had an enormous yard and huge lateen sail, which became dangerous in strong wind.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "strong wind",
+   "gear": "lateen sail, yard",
+   "id": "m-hist-pedrosa:1tsz:p147",
+   "kind": "description",
+   "location": "[page 30]",
+   "numbers": [],
+   "period": "19th century",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Furling the sail: crew climbed the yard, first reducing sail area with brails, then rolling the cloth by hand and securing it.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "dangerous work; men climbed in reverse order of weight",
+   "gear": "carregadeiras (brails), yard, tomadouro",
+   "id": "m-hist-pedrosa:1tsz:p148",
+   "kind": "practice",
+   "location": "[page 30]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "crew"
+  },
+  {
+   "action": "Unlike the Mediterranean, Portugal did not shrink the yard or switch to square sails; its large lateen sails impressed foreign authors.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "lateen sail",
+   "id": "m-hist-pedrosa:1tsz:p149",
+   "kind": "description",
+   "location": "[page 30]",
+   "numbers": [],
+   "period": "",
+   "place": "Portugal",
+   "who": ""
+  },
+  {
+   "action": "Duhamel Du Monceau said the French tartana could trawl with four to ten sails, though known images show fewer.",
+   "boat": "tartana",
+   "cargo": "",
+   "conditions": "",
+   "gear": "sails",
+   "id": "m-hist-pedrosa:1tsz:p150",
+   "kind": "description",
+   "location": "16. As Velas e a Rede",
+   "numbers": [
+    {
+     "unit": "sails",
+     "value": "4 to 10",
+     "what": "sails"
+    }
+   ],
+   "period": "1769",
+   "place": "France",
+   "who": "Duhamel Du Monceau"
+  },
+  {
+   "action": "Baldaque da Silva described the late-19th-century Portuguese muleta carrying 9 or 10 sails: main sail, two varredoura triangles aft, and six or seven small sails on stays.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "",
+   "gear": "vela grande, varredoura de cima, varredoura de baixo, toldos, muletins, cozinhei",
+   "id": "m-hist-pedrosa:1tsz:p151",
+   "kind": "description",
+   "location": "[page 30]",
+   "numbers": [
+    {
+     "unit": "sails",
+     "value": "9 or 10",
+     "what": "sails"
+    },
+    {
+     "unit": "sails",
+     "value": "6 to 7",
+     "what": "small sails on stays"
+    }
+   ],
+   "period": "late 19th century",
+   "place": "",
+   "who": "Baldaque da Silva"
+  },
+  {
+   "action": "The tartaranha bote, last boat to fish with this net, had somewhat different sails.",
+   "boat": "bote da tartaranha",
+   "cargo": "",
+   "conditions": "",
+   "gear": "tartaranha net",
+   "id": "m-hist-pedrosa:1tsz:p152",
+   "kind": "description",
+   "location": "[page 30]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "The muleta carries a very large number of small sails, said to set it apart from boats anywhere in the world; the sail plan is shown for the tartaranha boat.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "",
+   "gear": "sails (varredoura, grande, polaca, cozinheira, toldo)",
+   "id": "m-hist-pedrosa:1tsz:p153",
+   "kind": "description",
+   "location": "[page 31-32]",
+   "numbers": [],
+   "period": "",
+   "place": "Tagus",
+   "who": ""
+  },
+  {
+   "action": "William Henry Smyth reported that the muleta often set as many as twenty different sails, high and low, puzzling unfamiliar seamen.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "",
+   "gear": "sails",
+   "id": "m-hist-pedrosa:1tsz:p154",
+   "kind": "description",
+   "location": "[page 32]",
+   "numbers": [
+    {
+     "unit": "sails",
+     "value": "20",
+     "what": "sails set"
+    }
+   ],
+   "period": "1867",
+   "place": "",
+   "who": "William Henry Smyth"
+  },
+  {
+   "action": "The Marquis de Folin described at least twenty, sometimes more, small sails of all shapes, giving a fantastic look; the rig was already old-fashioned.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "fishermen later learned to trawl with fewer sails",
+   "gear": "sails",
+   "id": "m-hist-pedrosa:1tsz:p155",
+   "kind": "description",
+   "location": "[page 32]",
+   "numbers": [
+    {
+     "unit": "at least",
+     "value": "20",
+     "what": "sails"
+    }
+   ],
+   "period": "1892",
+   "place": "",
+   "who": "marquês de Folin"
+  },
+  {
+   "action": "The tartaranha net bag was cone-shaped, as shown in the sail plan figure of the tartaranha boat.",
+   "boat": "bote da tartaranha",
+   "cargo": "",
+   "conditions": "",
+   "gear": "rede tartaranha, conical bag",
+   "id": "m-hist-pedrosa:1tsz:p156",
+   "kind": "description",
+   "location": "[page 32]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "In the late 19th century the conical net was replaced by a rectangular net made of seams, following an opinion of the Comissão Central de Pescarias.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "",
+   "gear": "rectangular net of seams",
+   "id": "m-hist-pedrosa:1tsz:p157",
+   "kind": "event",
+   "location": "[page 32]",
+   "numbers": [],
+   "period": "late 19th century; 17 June 1896",
+   "place": "",
+   "who": "Comissão Central de Pescarias"
+  },
+  {
+   "action": "A decree replaced the conical tartaranha net with the rectangular seamed net.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "rectangular net",
+   "id": "m-hist-pedrosa:1tsz:p158",
+   "kind": "rule",
+   "location": "[page 32]",
+   "numbers": [],
+   "period": "16 October 1896",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Rebelo says muletas paid out cable so the net reached the bottom, hauls lasted hours and the net was hauled by hand; the author doubts this.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "author argues a windlass or other device would have been used",
+   "gear": "cable, net",
+   "id": "m-hist-pedrosa:1tsz:p159",
+   "kind": "practice",
+   "location": "[page 32]",
+   "numbers": [
+    {
+     "unit": "braças",
+     "value": "300",
+     "what": "cable paid out"
+    },
+    {
+     "unit": "hours",
+     "value": "8",
+     "what": "average haul duration"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": "Manuel de Oliveira Rebelo"
+  },
+  {
+   "action": "Comparable boats used hoisting gear for nets: the lancha poveira had a windlass, and Dutch fishing ships show nets rigged to cables going to the masthead.",
+   "boat": "lancha poveira; Dutch fishing ships",
+   "cargo": "",
+   "conditions": "",
+   "gear": "molinete (windlass), cables to masthead",
+   "id": "m-hist-pedrosa:1tsz:p160",
+   "kind": "description",
+   "location": "[page 32]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "The author corrects other writers: the beach-hauled net described at Costa de Caparica is the xávega, not the tartaranha net.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "xávega (arte)",
+   "id": "m-hist-pedrosa:1tsz:p161",
+   "kind": "practice",
+   "location": "[page 32]",
+   "numbers": [],
+   "period": "",
+   "place": "Costa de Caparica",
+   "who": "J. A. Neves Cabral"
+  },
+  {
+   "action": "Other fishing methods of muletas are undocumented but were probably gillnets, handlines, multi-hook lines and possibly stern or pair trawling.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "",
+   "gear": "gillnets, handlines, multi-hook lines",
+   "id": "m-hist-pedrosa:1tsz:p162",
+   "kind": "description",
+   "location": "[page 32]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Bluteau defined muleta as a Lisbon river boat for fishing or carrying goods, with side boards he took for rudders; the author says they are leeboards.",
+   "boat": "muleta",
+   "cargo": "some goods",
+   "conditions": "",
+   "gear": "leeboards",
+   "id": "m-hist-pedrosa:1tsz:p163",
+   "kind": "description",
+   "location": "[page 32]",
+   "numbers": [],
+   "period": "1716-1728",
+   "place": "rio de Lisboa",
+   "who": "Rafael Bluteau"
+  },
+  {
+   "action": "Bluteau defined the tartaranha as a fishing boat with a lateen sail and two long poles from bow and stern, used on the Tagus.",
+   "boat": "tartaranha",
+   "cargo": "",
+   "conditions": "",
+   "gear": "lateen sail",
+   "id": "m-hist-pedrosa:1tsz:p164",
+   "kind": "description",
+   "location": "[page 32]",
+   "numbers": [],
+   "period": "1716-1728",
+   "place": "rio Tejo",
+   "who": "Rafael Bluteau"
+  },
+  {
+   "action": "Bluteau described the varredoura net as very fine-meshed, used by muletas to catch even the smallest fish; the author resolves the confusion of terms.",
+   "boat": "muleta",
+   "cargo": "small fish",
+   "conditions": "",
+   "gear": "rede varredoura",
+   "id": "m-hist-pedrosa:1tsz:p165",
+   "kind": "description",
+   "location": "[page 33]",
+   "numbers": [],
+   "period": "1716-1728",
+   "place": "",
+   "who": "Rafael Bluteau"
+  },
+  {
+   "action": "Moraes Silva's dictionary defined muleta as a small Tagus fishing boat and muletim as its small sail.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "",
+   "gear": "muletim sail",
+   "id": "m-hist-pedrosa:1tsz:p166",
+   "kind": "description",
+   "location": "[page 33]",
+   "numbers": [],
+   "period": "1789",
+   "place": "Tejo",
+   "who": "António de Moraes Silva"
+  },
+  {
+   "action": "Per Moraes Silva, boats from Lisbon to Belém could carry only one sail plus a muletim.",
+   "boat": "botes de Lisboa a Belém",
+   "cargo": "",
+   "conditions": "",
+   "gear": "one sail and a muletim",
+   "id": "m-hist-pedrosa:1tsz:p167",
+   "kind": "rule",
+   "location": "[page 33]",
+   "numbers": [
+    {
+     "unit": "sail plus muletim",
+     "value": "1",
+     "what": "sails allowed"
+    }
+   ],
+   "period": "1789",
+   "place": "Lisboa–Belém",
+   "who": ""
+  },
+  {
+   "action": "Vieira's dictionary described the muleta as a small fishing boat launched outside the Tagus bar, with the muletim as its only sail.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "",
+   "gear": "muletim",
+   "id": "m-hist-pedrosa:1tsz:p168",
+   "kind": "description",
+   "location": "[page 33]",
+   "numbers": [],
+   "period": "1873",
+   "place": "fora da barra do Tejo",
+   "who": "Domingos Vieira"
+  },
+  {
+   "action": "French dictionaries from 1687 called the mulet a medium Portuguese ship with three lateen-rigged masts; the author thinks they confused it with the tartane.",
+   "boat": "mulet; tartana",
+   "cargo": "",
+   "conditions": "known engravings show the muleta with one mast",
+   "gear": "lateen sails",
+   "id": "m-hist-pedrosa:1tsz:p169",
+   "kind": "description",
+   "location": "[page 33]",
+   "numbers": [
+    {
+     "unit": "masts",
+     "value": "3",
+     "what": "masts claimed"
+    }
+   ],
+   "period": "from 1687",
+   "place": "Portugal",
+   "who": ""
+  },
+  {
+   "action": "English dictionaries from 1701 called the single-masted fishing boat muleta a 'bean-cod', supposedly from its resemblance; the term later covered small lateen-rigged boats of the Tagus estuary.",
+   "boat": "muleta (bean-cod)",
+   "cargo": "",
+   "conditions": "",
+   "gear": "lateen sail",
+   "id": "m-hist-pedrosa:1tsz:p170",
+   "kind": "description",
+   "location": "[page 35]",
+   "numbers": [],
+   "period": "1701",
+   "place": "Tagus estuary",
+   "who": "English lexicographers"
+  },
+  {
+   "action": "Small lateen-sail boats sailed constantly past Lisbon in any wind or tide, as described by Edward Clarke in a letter.",
+   "boat": "bean-cods, small boats",
+   "cargo": "",
+   "conditions": "any wind or tide",
+   "gear": "lateen sail",
+   "id": "m-hist-pedrosa:1tsz:p171",
+   "kind": "practice",
+   "location": "[page 35]",
+   "numbers": [],
+   "period": "January 1762",
+   "place": "in front of Lisbon",
+   "who": "Edward Clarke (observer)"
+  },
+  {
+   "action": "A 1730 description of Lisbon reports a huge quantity of fish unloaded by caravelles and muletes.",
+   "boat": "caravelles & muletes",
+   "cargo": "fish",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p172",
+   "kind": "practice",
+   "location": "[page 36]",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "200 to 300",
+     "what": "boats unloading fish"
+    }
+   ],
+   "period": "1730",
+   "place": "Lisbon",
+   "who": ""
+  },
+  {
+   "action": "Each cod-fishing ship carried several small boats that left at dawn daily from the fishing ground and returned at dusk with the catch.",
+   "boat": "small boats carried by bacalhoeiro ships",
+   "cargo": "cod",
+   "conditions": "daily, dawn to dusk",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p173",
+   "kind": "practice",
+   "location": "[page 36]",
+   "numbers": [],
+   "period": "",
+   "place": "fishing grounds",
+   "who": "cod fishing ships' crews"
+  },
+  {
+   "action": "Around 1875 the small boats carried by cod ships became dories; before that they were larger and heavier.",
+   "boat": "doris",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p174",
+   "kind": "event",
+   "location": "[page 36]",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1875",
+     "what": "approximate year of change to dories"
+    }
+   ],
+   "period": "c. 1875",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Falconer's 1769 dictionary describes the bean-cod as a small fishing or pilot boat with a sharp, curved, iron-plated stem and large lateen sail good for sailing to windward.",
+   "boat": "bean-cod / muleta",
+   "cargo": "",
+   "conditions": "sails well to windward",
+   "gear": "iron-plated stem with bolts; large lateen sail",
+   "id": "m-hist-pedrosa:1tsz:p175",
+   "kind": "description",
+   "location": "[page 36]",
+   "numbers": [],
+   "period": "1769",
+   "place": "coasts and rivers of Portugal",
+   "who": "William Falconer"
+  },
+  {
+   "action": "Muleta crews also performed pilotage services.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p176",
+   "kind": "practice",
+   "location": "[page 36]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "muleta crews"
+  },
+  {
+   "action": "A 1794 English work compared the one-masted Portuguese bean-cod to the French tartan, as a fishing or pilot boat.",
+   "boat": "bean-cod",
+   "cargo": "",
+   "conditions": "",
+   "gear": "one mast",
+   "id": "m-hist-pedrosa:1tsz:p177",
+   "kind": "description",
+   "location": "[page 36]",
+   "numbers": [
+    {
+     "unit": "mast",
+     "value": "1",
+     "what": "masts"
+    }
+   ],
+   "period": "1794",
+   "place": "",
+   "who": "David Steel"
+  },
+  {
+   "action": "In 1892 the marquis de Folin held that all boats around Lisbon derived from the muleta, extending the name to all Portuguese craft.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p178",
+   "kind": "description",
+   "location": "[page 36]",
+   "numbers": [],
+   "period": "1892",
+   "place": "around Lisbon",
+   "who": "Marquês de Folin"
+  },
+  {
+   "action": "Willaumez described two models: the one-masted mulette or moulète, and the mulet with two or three forward-leaning masts and lateen sails.",
+   "boat": "mulette / moulète; mulet",
+   "cargo": "",
+   "conditions": "",
+   "gear": "lateen sails; forward-raked masts",
+   "id": "m-hist-pedrosa:1tsz:p179",
+   "kind": "description",
+   "location": "[page 36]",
+   "numbers": [
+    {
+     "unit": "masts",
+     "value": "2 or 3",
+     "what": "masts on mulet"
+    }
+   ],
+   "period": "1831",
+   "place": "",
+   "who": "Jean-Baptiste-Philibert Willaumez"
+  },
+  {
+   "action": "The pinque closely resembles the mulet, differing mainly in its vertical main mast.",
+   "boat": "pinque",
+   "cargo": "",
+   "conditions": "",
+   "gear": "vertical main mast",
+   "id": "m-hist-pedrosa:1tsz:p180",
+   "kind": "description",
+   "location": "[page 37]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "The muleta was known to French and English writers; its drag-style rig set it apart from boats elsewhere, and it resembled the French tartane.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "",
+   "gear": "drag sails (velame de arrasto)",
+   "id": "m-hist-pedrosa:1tsz:p181",
+   "kind": "description",
+   "location": "page 37",
+   "numbers": [],
+   "period": "18th-19th century",
+   "place": "Lisbon",
+   "who": ""
+  },
+  {
+   "action": "The muleta served as the boat of the pilots of the Lisbon bar, in the main Portuguese port where sailors from everywhere passed.",
+   "boat": "muleta",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p182",
+   "kind": "practice",
+   "location": "page 37",
+   "numbers": [],
+   "period": "",
+   "place": "porto de Lisboa",
+   "who": "pilotos da barra de Lisboa"
+  },
+  {
+   "action": "The caravela, long a generic name for small and medium ships and boats, stopped being mentioned in the second half of the 18th century; the muleta took its place.",
+   "boat": "caravela; muleta",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p183",
+   "kind": "event",
+   "location": "page 37",
+   "numbers": [],
+   "period": "second half of séc. XVIII",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Caravels from Galicia sailed to Cabo Branco to fish sharks and mullets, which were dried in the sun like cod from Newfoundland.",
+   "boat": "caravelas",
+   "cargo": "chiens de mer (sharks), mullets, other fish",
+   "conditions": "fish dried in the sun",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p184",
+   "kind": "practice",
+   "location": "[page 4]",
+   "numbers": [],
+   "period": "1582",
+   "place": "Cabo Branco",
+   "who": "Galician caravel crews"
+  },
+  {
+   "action": "Beam trawling is thought to have originated in Provence, using a boat and a net both called tartane.",
+   "boat": "tartane",
+   "cargo": "",
+   "conditions": "",
+   "gear": "tartane net",
+   "id": "m-hist-pedrosa:1tsz:p185",
+   "kind": "description",
+   "location": "3. A Tartana e a Tartaranha",
+   "numbers": [],
+   "period": "",
+   "place": "Agde, Martigues, Marseille (Provence)",
+   "who": "Provençal fishermen"
+  },
+  {
+   "action": "Earliest document mentioning the tartane dates from 1301; the net was soon judged harmful because narrow meshes dragged along the bottom destroyed small fish and young.",
+   "boat": "tartane",
+   "cargo": "",
+   "conditions": "narrow meshes dragging on the bottom",
+   "gear": "tartane net",
+   "id": "m-hist-pedrosa:1tsz:p186",
+   "kind": "event",
+   "location": "[page 5]",
+   "numbers": [],
+   "period": "1301",
+   "place": "Canalem veterem",
+   "who": ""
+  },
+  {
+   "action": "Fishermen of the Seneschalty of Beaucaire protested against tartane fishermen for destroying fish; the tartanas were banned from Easter to All Saints' Day.",
+   "boat": "tartanas",
+   "cargo": "",
+   "conditions": "ban from Easter to All Saints' Day",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p187",
+   "kind": "event",
+   "location": "[page 5]",
+   "numbers": [],
+   "period": "1337",
+   "place": "Siniscalcato de Beaucaire (Provence)",
+   "who": "pescadors de las tartanas; fishermen of Beaucaire"
+  },
+  {
+   "action": "The tartane net was called tartaranha in Portugal, a bird of prey name; tartane means falcon in modern Provençal. It was the first trawl net banned in Portugal.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "tartaranha net",
+   "id": "m-hist-pedrosa:1tsz:p188",
+   "kind": "description",
+   "location": "[page 5]",
+   "numbers": [],
+   "period": "",
+   "place": "Portugal",
+   "who": ""
+  },
+  {
+   "action": "Royal letter responded to Lisbon officials' complaints about tartaranha fishermen using fine meshes that caught young fish; it ordered no fine nets beyond previous custom.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "fish shortage blamed on young fish being caught",
+   "gear": "redes miúdas (fine-mesh nets)",
+   "id": "m-hist-pedrosa:1tsz:p189",
+   "kind": "rule",
+   "location": "[page 5]",
+   "numbers": [],
+   "period": "10 April 1470",
+   "place": "Lisboa",
+   "who": "vereadores, procurador and procuradores dos mesteres of Lisbon; tartaranha fishe"
+  },
+  {
+   "action": "The tartaranha targeted flatfish living on sand (azevias, linguados, solhas) but also caught other species from seabed to surface.",
+   "boat": "",
+   "cargo": "azevias, linguados, solhas",
+   "conditions": "",
+   "gear": "tartaranha net",
+   "id": "m-hist-pedrosa:1tsz:p190",
+   "kind": "description",
+   "location": "[page 5]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "The net had cork floats on the upper line and weights (lead, clay or stones) below, near the bag that trapped fish; floats and weights set pressure on the seabed.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "pressure on seabed depends on floats and weights",
+   "gear": "cork floats, lead, clay or stone weights, bag",
+   "id": "m-hist-pedrosa:1tsz:p191",
+   "kind": "description",
+   "location": "[page 5]",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Duhamel Du Monceau described French fishermen adjusting corks, lead and stones to the seabed; on sand they added more lead to force flatfish up to swim.",
+   "boat": "",
+   "cargo": "azevias, linguados, solhas (flatfish)",
+   "conditions": "depends on nature of seabed; sand bottom is hard and firm",
+   "gear": "tartane net, cork, lead, stones",
+   "id": "m-hist-pedrosa:1tsz:p192",
+   "kind": "practice",
+   "location": "[page 5]",
+   "numbers": [],
+   "period": "1769",
+   "place": "France",
+   "who": "French fishermen"
+  },
+  {
+   "action": "Another rigging used much cork on the top line and only light stones on the bottom, spaced fathom by fathom, so the net floats mid-water.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "net floats mid-water or lightly touches bottom",
+   "gear": "cork, stones",
+   "id": "m-hist-pedrosa:1tsz:p193",
+   "kind": "practice",
+   "location": "[page 5-6]",
+   "numbers": [
+    {
+     "unit": "libras",
+     "value": "40 to 50",
+     "what": "cork on upper part"
+    },
+    {
+     "unit": "libras",
+     "value": "8 to 10",
+     "what": "weight of each stone"
+    }
+   ],
+   "period": "1769",
+   "place": "France",
+   "who": "French fishermen"
+  },
+  {
+   "action": "Despite the ban, each Lent some tartaranhas in the Tagus estuary fished azevias and linguados to supply the king in Madrid.",
+   "boat": "tartaranhas",
+   "cargo": "azevias and linguados for the king's Lenten table",
+   "conditions": "tartaranhas banned; Lent, a strict fasting period",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p194",
+   "kind": "practice",
+   "location": "[page 6]",
+   "numbers": [],
+   "period": "c. 1620",
+   "place": "estuário do Tejo",
+   "who": "tartaranha fishermen; Lisbon câmara"
+  },
+  {
+   "action": "Lisbon's câmara stated the yearly fishing of azevias and linguados for His Majesty's Lenten meals.",
+   "boat": "",
+   "cargo": "azevias and linguados",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p195",
+   "kind": "event",
+   "location": "[page 6]",
+   "numbers": [],
+   "period": "7 March 1620",
+   "place": "Lisboa",
+   "who": "câmara de Lisboa"
+  },
+  {
+   "action": "A possibly 14th-century summary of goods exempt from or subject to royal and municipal duties in Lisbon lists fish branches, possibly including the tartaranha.",
+   "boat": "",
+   "cargo": "pescado da messa, azevias e linguados, chinchas",
+   "conditions": "part of the text is illegible",
+   "gear": "",
+   "id": "m-hist-pedrosa:1tsz:p196",
+   "kind": "rule",
+   "location": "[page 6]",
+   "numbers": [],
+   "period": "séc. XIV ?",
+   "place": "Lisboa",
+   "who": ""
+  }
+ ],
+ "partsDone": [
+  0,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  1
+ ],
+ "partsTotal": 15,
+ "runAt": "2026-11-13T23:13:58.508Z",
+ "sourceId": "m-hist-pedrosa",
+ "textChars": 85283,
+ "title": "Pedrosa, A Muleta e a Tartaranha (sec. XV-XX)"
+}

@@ -1,0 +1,548 @@
+{
+ "basis": {
+  "bible": false,
+  "concepts": [
+   "c19",
+   "c186",
+   "c187",
+   "c192",
+   "c190",
+   "c243",
+   "c563",
+   "c626",
+   "c625",
+   "c269"
+  ],
+  "match": "related",
+  "practices": [
+   "p92",
+   "p19",
+   "p10",
+   "p12",
+   "p30",
+   "p99"
+  ],
+  "proposal": "s7"
+ },
+ "beats": [
+  {
+   "character": "k1",
+   "concept": "Getting under way: trimming the sail for the first leg out",
+   "delivery": "story",
+   "evidence": [
+    "e14",
+    "e16",
+    "e19",
+    "e24"
+   ],
+   "gist": "Manuel loads the canoa at Trafaria with bread, water and ice for Ti Joaquim's muleta, which is out fishing. He explains that boats like his are how goods and people move on the river, by sail and oars.",
+   "id": "b1",
+   "part": "setup",
+   "trigger": "start"
+  },
+  {
+   "character": "k1",
+   "concept": "Holding a steady course and point of sail",
+   "delivery": "story",
+   "evidence": [
+    "e8",
+    "e9",
+    "e10",
+    "e11",
+    "e17",
+    "e18",
+    "e20"
+   ],
+   "gist": "On the long calm leg out, Manuel talks about the work: one word, barca, once covered every small boat. Boats came to differ by job and route, his canoa carries people and small goods, and the river is the busiest road there is.",
+   "id": "b2",
+   "part": "leg",
+   "trigger": "steady_leg"
+  },
+  {
+   "character": "k1",
+   "concept": "Approach and dock: controlling speed to come alongside another boat",
+   "delivery": "cue",
+   "evidence": [
+    "e32",
+    "e33"
+   ],
+   "gist": "Short instruction as the canoa closes on the muleta: slow down and come alongside without ramming her.",
+   "id": "b3",
+   "part": "complication",
+   "trigger": "approach_target"
+  },
+  {
+   "character": "k2",
+   "concept": "Approach and dock (acostar): holding position alongside",
+   "delivery": "reflection",
+   "evidence": [
+    "e22",
+    "e33",
+    "e34",
+    "e40"
+   ],
+   "gist": "Once the player is alongside and slow, Ti Joaquim grudgingly approves the approach. The supplies go over, his fish comes across into the canoa, and he says the catch must reach the waterfront fresh.",
+   "id": "b4",
+   "part": "turn",
+   "trigger": "alongside"
+  },
+  {
+   "character": "k1",
+   "concept": "",
+   "delivery": "story",
+   "evidence": [
+    "e1"
+   ],
+   "gist": "With the city in view, Manuel says fishing boats like the muletas have long unloaded great quantities of fish here, and an old account speaks of hundreds of boats doing it.",
+   "id": "b5",
+   "part": "place",
+   "trigger": "near_place:Lisbon"
+  },
+  {
+   "character": "k1",
+   "concept": "",
+   "delivery": "story",
+   "evidence": [
+    "e37",
+    "e38",
+    "e39",
+    "e40"
+   ],
+   "gist": "Manuel brings the fish to the Ribeira, the waterfront where boats load and unload all day and goods are traded. From there fish travels on by water, and his canoa is just one small link in that daily traffic.",
+   "id": "b6",
+   "part": "close",
+   "trigger": "mission_end"
+  }
+ ],
+ "cast": [
+  {
+   "evidence": [
+    "e12",
+    "e13",
+    "e19",
+    "e20",
+    "e24",
+    "e25"
+   ],
+   "fictional": true,
+   "id": "k1",
+   "name": "Manuel Rosa (fictional)",
+   "role": "Invented skipper of a small canoa working out of Trafaria under sail and oars, carrying people and small goods across th",
+   "voice": "Practical, dry, a little impatient with the wind. He speaks in short working sentences and names boats precisely, because he knows sailors mix up their names.",
+   "want": "To get the supplies out to the muleta and its catch back while the fish is still worth selling."
+  },
+  {
+   "evidence": [
+    "e22",
+    "e34",
+    "e35",
+    "e36"
+   ],
+   "fictional": true,
+   "id": "k2",
+   "name": "Ti Joaquim (fictional)",
+   "role": "Invented master of a muleta, a documented Tagus fishing boat type. He stays out fishing and depends on boats from the ri",
+   "voice": "Gruff and weathered, few words, judges a skipper by how he comes alongside.",
+   "want": "To keep fishing without losing a day going in, and to see his fish reach the waterfront."
+  }
+ ],
+ "createdAt": "2026-11-13T07:21:28.811Z",
+ "evidence": [
+  {
+   "id": "e1",
+   "location": "[page 36]",
+   "numbers": [
+    "boats unloading fish: 200 to 300 boats"
+   ],
+   "origin": "m-hist-pedrosa:1tsz:p172",
+   "source": "Pedrosa",
+   "sourceId": "m-hist-pedrosa",
+   "text": "A 1730 description of Lisbon reports a huge quantity of fish unloaded by caravelles and muletes. · place: Lisbon · when: 1730 · cargo: fish"
+  },
+  {
+   "id": "e2",
+   "location": "[page 2]",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p24",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "Thanks to the dedication of enthusiasts and local councils, some botes and canoas still survive as local heritage. · who: local councils, enthusiasts · place: Sarilhos Pequenos, Moita"
+  },
+  {
+   "id": "e3",
+   "location": "[page 2]",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p25",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "Seixal council restored old local-traffic boats for tourism; they had served between quays and ports of the estuary until the early 1970s. · who: Câmara do Seixal · place: Seixal, Tagus estuary · when: until early 1970s"
+  },
+  {
+   "id": "e4",
+   "location": "[page 2]",
+   "numbers": [
+    "year of 'Baía do Seixal': 1914 year",
+    "year of 'Gaivotas': 1934 year",
+    "year of 'Amoroso': 1921 year"
+   ],
+   "origin": "m-hist-getlisbon:c4d:p26",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "Botes-de-fragata 'Baía do Seixal' and 'Gaivotas' and varino 'Amoroso' belong to the Seixal Ecomuseum's collection as pleasure craft. · who: Ecomuseu Municipal do Seixal · place: Seixal"
+  },
+  {
+   "id": "e5",
+   "location": "[page 2]",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p27",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "Other riverside municipalities also had surviving boats restored and preserved. · who: municipalities of Moita, Alcochete, Vila Franca de Xira, Azambuja · place: Moita, Alcochete, Vila Franca de Xira, Azambuja"
+  },
+  {
+   "id": "e6",
+   "location": "Iconografia e Memória",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p28",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "Fragatas, varinos and canoas were the best-known Tagus boats; today they survive in oral memory, images, literature, and models in municipal museums. · place: Tagus riverside towns"
+  },
+  {
+   "id": "e7",
+   "location": "part 2, Maufroy de Seixas",
+   "numbers": [],
+   "origin": "mmwdz12sr2kq0:t59:p17",
+   "source": "Embarcações do Rio Tejo",
+   "sourceId": "mmwdz12sr2kq0",
+   "text": "Surviving traditional boats take part in annual regattas on the Tagus estuary, the last living examples of a once colourful riverside scene. · place: Estuário do Tejo · when: present"
+  },
+  {
+   "id": "e8",
+   "location": "Introduction",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p1",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "The generic term 'barca' was long used for any small river-traffic or fishing boat on the Tagus. · place: Tejo"
+  },
+  {
+   "id": "e9",
+   "location": "Introduction",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p4",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "From the early 16th century barcas began to diversify according to their functions and the routes they sailed on the Tagus. · place: Tejo · when: séc. XVI"
+  },
+  {
+   "id": "e10",
+   "location": "Introduction",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p5",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "Going upriver, entering shallow creeks, carrying varied cargo and fishing in river and sea required boats with differing keels, flat bottoms, bows, masts and sails. · place: Tejo, esteiros · cargo: various goods"
+  },
+  {
+   "id": "e11",
+   "location": "Estaleiros e Tipologias",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p10",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "Boat shapes, sizes and colours varied with function, route navigability and the style of each yard or town."
+  },
+  {
+   "id": "e12",
+   "location": "Estaleiros e Tipologias",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p11",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "Well-known passenger boats included catraio, caíque, bote, batel, canoa, falua and bote cacilheiro. · cargo: passengers"
+  },
+  {
+   "id": "e13",
+   "location": "Estaleiros e Tipologias",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p12",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "Well-known cargo boats included mill boats, Riba-Tejo boats, cargueiros, bateiras, faluas, canoa cacilheira, varinos and fragatas. · cargo: goods"
+  },
+  {
+   "id": "e14",
+   "location": "Introduction",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:c4d:p6",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "River traffic linked the two banks, coast and interior, and mouth and Riba-Tejo, carrying goods and people and supporting fishing, until the mid-20th century. · place: Tejo, Riba-Tejo · when: until meados do séc. XX · cargo: goods and people"
+  },
+  {
+   "id": "e15",
+   "location": "Travessia Fluvial Belém - Trafaria",
+   "numbers": [],
+   "origin": "m-hist-paisagem:3rd:p4",
+   "source": "Museu da Paisagem",
+   "sourceId": "m-hist-paisagem",
+   "text": "Historically the Tagus was the only road for national and intercontinental trade and linked the two banks; the crossing still carries this maritime heritage. · place: Tejo · cargo: trade"
+  },
+  {
+   "id": "e16",
+   "location": "Introduction",
+   "numbers": [],
+   "origin": "mmwdz14kpqwcc:azv:p6",
+   "source": "Cacilheiros no Rio Tejo",
+   "sourceId": "mmwdz14kpqwcc",
+   "text": "River traffic linked the two banks, coast and interior, carrying goods and people and supporting fishing in the river and nearby coast until the mid-20th century. · place: Tejo, Riba-Tejo · when: until mid séc. XX · cargo: goods and people"
+  },
+  {
+   "id": "e17",
+   "location": "Tipologias",
+   "numbers": [],
+   "origin": "mmwdz16aqbi7n:9p6:p8",
+   "source": "Barcos Tradicionais do Tejo e ",
+   "sourceId": "mmwdz16aqbi7n",
+   "text": "Before the bridge opened, boats carried people and goods and linked towns between Santarém and Cascais faster than other means. · place: between Santarém and Cascais · when: before 1966 · cargo: people and goods"
+  },
+  {
+   "id": "e18",
+   "location": "Tipologias",
+   "numbers": [],
+   "origin": "mmwdz16aqbi7n:9p6:p11",
+   "source": "Barcos Tradicionais do Tejo e ",
+   "sourceId": "mmwdz16aqbi7n",
+   "text": "The river was the era's motorway, busy with varied craft: fragatas, varinos, faluas, cangueiros, botes, botes de fragata, botes de pinho, barcos de água acima, canoas and catraios. · place: Tagus estuary"
+  },
+  {
+   "id": "e19",
+   "location": "Tipologias",
+   "numbers": [],
+   "origin": "mmwdz16aqbi7n:9p6:p13",
+   "source": "Barcos Tradicionais do Tejo e ",
+   "sourceId": "mmwdz16aqbi7n",
+   "text": "Smaller boats carried people and goods such as fresh produce and groceries. · cargo: fresh produce, groceries, people"
+  },
+  {
+   "id": "e20",
+   "location": "[page 2]",
+   "numbers": [],
+   "origin": "m-hist-freire:jhq:p24",
+   "source": "Freire",
+   "sourceId": "m-hist-freire",
+   "text": "Passenger transport used the catraio, caíque, bote, batel and canoa. · place: Tejo · cargo: passengers"
+  },
+  {
+   "id": "e21",
+   "location": "[page 2]",
+   "numbers": [],
+   "origin": "m-hist-freire:jhq:p25",
+   "source": "Freire",
+   "sourceId": "m-hist-freire",
+   "text": "Cargo was carried by mill boats, Riba-Tejo boats, bateiras, faluas, varinos-avieiros and fragatas. · place: Tejo · cargo: goods"
+  },
+  {
+   "id": "e22",
+   "location": "[page 2]",
+   "numbers": [],
+   "origin": "m-hist-freire:jhq:p26",
+   "source": "Freire",
+   "sourceId": "m-hist-freire",
+   "text": "Fishing used picareto, abrangel, catrafúcio (three-plank boat), saveiros and muletas. · place: Tejo · cargo: fish"
+  },
+  {
+   "id": "e23",
+   "location": "[page 2]",
+   "numbers": [],
+   "origin": "m-hist-freire:jhq:p27",
+   "source": "Freire",
+   "sourceId": "m-hist-freire",
+   "text": "Varinos-avieiros and fragatas were the most representative cargo boats of the Tejo. · place: Tejo"
+  },
+  {
+   "id": "e24",
+   "location": "[page 2]",
+   "numbers": [],
+   "origin": "m-hist-freire:jhq:p28",
+   "source": "Freire",
+   "sourceId": "m-hist-freire",
+   "text": "All navigation was then done by sail and oars. · place: Tejo"
+  },
+  {
+   "id": "e25",
+   "location": "part 2, Pinto Basto quote",
+   "numbers": [
+    "masts on falua: 2 masts",
+    "masts on fragata and varino: 1 mast"
+   ],
+   "origin": "mmwdz12sr2kq0:t59:p15",
+   "source": "Embarcações do Rio Tejo",
+   "sourceId": "mmwdz12sr2kq0",
+   "text": "Pinto Basto notes sailors confused boat names, calling fragatas and varinos 'faluas'; the falua has two masts, the others one, and they serve very different purposes. · who: A. J. Pinto Basto · place: Tejo · when: 1893"
+  },
+  {
+   "id": "e26",
+   "location": "Embarcações do Médio Tejo",
+   "numbers": [],
+   "origin": "mmwdz12sr2kq0:t59:p19",
+   "source": "Embarcações do Rio Tejo",
+   "sourceId": "mmwdz12sr2kq0",
+   "text": "Boats of the Middle Tagus worked river fishing, transport and crossings between Vila Velha de Rodão and Constância, using oars. · place: Vila Velha de Rodão to Constância"
+  },
+  {
+   "id": "e27",
+   "location": "Embarcações do Baixo Tejo",
+   "numbers": [],
+   "origin": "mmwdz12sr2kq0:t59:p21",
+   "source": "Embarcações do Rio Tejo",
+   "sourceId": "mmwdz12sr2kq0",
+   "text": "Lower Tagus boats did river fishing, transport and crossings between Constância and Santarém. · place: Constância to Santarém"
+  },
+  {
+   "id": "e28",
+   "location": "Embarcações do Baixo Tejo",
+   "numbers": [],
+   "origin": "mmwdz12sr2kq0:t59:p22",
+   "source": "Embarcações do Rio Tejo",
+   "sourceId": "mmwdz12sr2kq0",
+   "text": "Avieira boats were used for river fishing and as dwellings between Santarém and Sacavém. · who: avieiros · place: Santarém to Sacavém"
+  },
+  {
+   "id": "e29",
+   "location": "Embarcações do Baixo Tejo",
+   "numbers": [],
+   "origin": "mmwdz12sr2kq0:t59:p23",
+   "source": "Embarcações do Rio Tejo",
+   "sourceId": "mmwdz12sr2kq0",
+   "text": "Lower Tagus boats are listed with types such as canoa, bateira, catrafuço, culé, barco do tráfego and varino, with dimensions given. · place: Baixo Tejo"
+  },
+  {
+   "id": "e30",
+   "location": "Embarcações do Estuário - Mouchões",
+   "numbers": [],
+   "origin": "mmwdz12sr2kq0:t59:p24",
+   "source": "Embarcações do Rio Tejo",
+   "sourceId": "mmwdz12sr2kq0",
+   "text": "Around Vila Franca de Xira, small boats did river fishing, carried fish and small goods, and ferried people. · place: Vila Franca de Xira area, Mouchões · cargo: fish, small goods"
+  },
+  {
+   "id": "e31",
+   "location": "Embarcações do Estuário - Mouchões",
+   "numbers": [],
+   "origin": "mmwdz12sr2kq0:t59:p25",
+   "source": "Embarcações do Rio Tejo",
+   "sourceId": "mmwdz12sr2kq0",
+   "text": "Cargo boats carried goods upstream and downstream from Vila Franca de Xira; upstream boats lowered the mast to pass under the Marechal Carmona bridge. · place: Vila Franca de Xira, Ponte Marechal Carmona · cargo: goods"
+  },
+  {
+   "id": "e32",
+   "location": "[section: Foundations > Sailing concepts]",
+   "numbers": [],
+   "origin": "m-auth-method:19",
+   "source": "Method doc",
+   "sourceId": "m-auth-method",
+   "text": "Approach and docking: “Approach and dock” (en) — Controlling speed to come alongside another boat or a quay."
+  },
+  {
+   "id": "e33",
+   "location": "[section: main text]",
+   "numbers": [],
+   "origin": "m-hist-blk-portos:17",
+   "source": "mediotejo",
+   "sourceId": "m-hist-blk-portos",
+   "text": "Approach and docking: “acostar” (pt-PT) — To come alongside or berth at a quay or bank."
+  },
+  {
+   "id": "e34",
+   "location": "Part 2 (no marker)",
+   "numbers": [],
+   "origin": "m-hist-freire:31",
+   "source": "Freire",
+   "sourceId": "m-hist-freire",
+   "text": "Muletas (fishing boat): “muletas” (pt-PT) — A fishing boat type used on the Tagus."
+  },
+  {
+   "id": "e35",
+   "location": "[section: Estaleiros e Tipologias]",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:17",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "Muletas (fishing boat): “muletas” (pt-PT) — Boat type listed among Tagus fishing boats."
+  },
+  {
+   "id": "e36",
+   "location": "[section: Estaleiros e Tipologias]",
+   "numbers": [],
+   "origin": "mmwdz14kpqwcc:16",
+   "source": "Cacilheiros no Rio Tejo",
+   "sourceId": "mmwdz14kpqwcc",
+   "text": "Saveiros and muletas (fishing): “saveiros e muletas” () — Boat types used for fishing on the Tagus."
+  },
+  {
+   "id": "e37",
+   "location": "[page 235, note 62]",
+   "numbers": [],
+   "origin": "mmwdz15icx6en:104",
+   "source": "BOOK Territorios da Lisboa Med",
+   "sourceId": "mmwdz15icx6en",
+   "text": "Ribeira (Lisbon waterfront market): “Ribeira” () — Lisbon's waterfront market zone where boats unloaded, goods were loaded and traded, and commerce went on all day."
+  },
+  {
+   "id": "e38",
+   "location": "[page 235, note 62]",
+   "numbers": [],
+   "origin": "mmwdz15icx6en:106",
+   "source": "BOOK Territorios da Lisboa Med",
+   "sourceId": "mmwdz15icx6en",
+   "text": "Ribeira (Lisbon waterfront market): “cargas e descargas” () — Loading and unloading of cargo at the waterfront, a constant daily activity of river and sea trade."
+  },
+  {
+   "id": "e39",
+   "location": "[page 235, note 61]",
+   "numbers": [],
+   "origin": "mmwdz15icx6en:102",
+   "source": "BOOK Territorios da Lisboa Med",
+   "sourceId": "mmwdz15icx6en",
+   "text": "Fish transport by water: “per mar pera fora do Reino” () — Transport of purchased fish by sea out of the kingdom, and from Lisbon to Santarém and elsewhere by water."
+  },
+  {
+   "id": "e40",
+   "location": "[page 235, note 61]",
+   "numbers": [],
+   "origin": "mmwdz15icx6en:103",
+   "source": "BOOK Territorios da Lisboa Med",
+   "sourceId": "mmwdz15icx6en",
+   "text": "Fish transport by water: “pela aauga” () — Carrying fish by water, i.e. river transport from Lisbon to Santarém and other places."
+  },
+  {
+   "id": "e41",
+   "location": "[section: Breve História das Embarcações do Estuário do Tejo",
+   "numbers": [],
+   "origin": "m-hist-getlisbon:5",
+   "source": "getLISBON",
+   "sourceId": "m-hist-getlisbon",
+   "text": "Flat bottom hull: “fundo raso” (pt-PT) — Flat bottom: hull type suited to navigating the shallow-water creeks of the Tagus."
+  },
+  {
+   "id": "e42",
+   "location": "[page 20]",
+   "numbers": [],
+   "origin": "m-hist-pedrosa:125",
+   "source": "Pedrosa",
+   "sourceId": "m-hist-pedrosa",
+   "text": "Flat bottom hull: “fundo plano” (pt-PT) — Flat or nearly flat hull bottom, the kind of boat that needs a leeboard, especially with lateen rig."
+  }
+ ],
+ "game": "mini.supplies",
+ "notes": "No story bible entry existed, so the cast and beats are new. Characters are invented and must be labelled fictional on screen. The context is drawn from the evidence ids listed. Period: the sail-and-oars era of Tagus river traffic, before the mid-20th century (e14, e16, e24). The narrator must not mention bridges, Cristo Rei, motor ferries or anything else that did not exist then. The modern restoration and ecomuseum facts (e2 to e7) are deliberately unused because they lie outside the narrator's period. Gaps the author should know about: bread, water and ice as supplies, and the practice of c",
+ "settings": {
+  "mode": "historical",
+  "period": "",
+  "talk": "normal"
+ },
+ "title": "Supplies with the Canoa",
+ "updatedAt": "2026-11-13T07:21:28.811Z"
+}

@@ -1,0 +1,222 @@
+{
+ "items": [
+  {
+   "definition": "A cast or haul of fishing from the shore, here the title image for launching a boat to sea and seeking a catch.",
+   "id": "mmwdz1c0k1712:1",
+   "location": "[section: O último \"lance\"...]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "lance"
+  },
+  {
+   "definition": "The crew of fishermen who join together to man a boat and face the rough sea.",
+   "id": "mmwdz1c0k1712:2",
+   "location": "[section: O último \"lance\"...]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Companha"
+  },
+  {
+   "definition": "A traditional crescent-shaped sailing boat type, used here as a post tag linked to the coastal fishing poem.",
+   "id": "mmwdz1c0k1712:3",
+   "location": "[section: O último \"lance\"...]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Saveiro meia lua"
+  },
+  {
+   "definition": "A wave; the text notes that none breaks on the sand when the sea is calm.",
+   "id": "mmwdz1c0k1712:4",
+   "location": "[section: O último \"lance\"...]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vaga"
+  },
+  {
+   "definition": "The sandy beach from which boats were launched and onto which they were hauled.",
+   "id": "mmwdz1c0k1712:5",
+   "location": "[section: O último \"lance\"...]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "areal"
+  },
+  {
+   "definition": "A strong gale or storm wind, dangerous for those at sea.",
+   "id": "mmwdz1c0k1712:6",
+   "location": "[section: O último \"lance\"...]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vendaval"
+  },
+  {
+   "definition": "Fishing by dragging a net to shore, the main activity possible on the open beaches.",
+   "id": "mmwdz1c0k1712:7",
+   "location": "[section: Mais visitadas / Os meus blogues]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "xávega"
+  },
+  {
+   "definition": "Beach seining: hauling the fishing net in from the sea to the shore.",
+   "id": "mmwdz1c0k1712:8",
+   "location": "[section: Os meus blogues]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "arrasto para terra"
+  },
+  {
+   "definition": "The sport of sailing, which the Mare Nostrum club was founded mainly to promote and develop among its members.",
+   "id": "mmwdz1c0k1712:9",
+   "location": "Clube Náutico Mare Nostrum",
+   "measured_by": "",
+   "numbers": [],
+   "term": "desporto da vela"
+  },
+  {
+   "definition": "A traditional beach seine fishing practice of the Caparica coast, mentioned only as a subject tag with no explanation in the text.",
+   "id": "mmwdz1c0k1712:10",
+   "location": "Temas",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Arte xávega"
+  },
+  {
+   "definition": "A sandy spit or bar at the Tagus mouth, also called the 'golada do Tejo', shown in a 1953 image caption.",
+   "id": "mmwdz1c0k1712:11",
+   "location": "Caption: O cabedelo, dito golada do Tejo, a ponte cais...",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1953",
+     "what": "year of the image"
+    }
+   ],
+   "term": "cabedelo"
+  },
+  {
+   "definition": "Alternative name for the cabedelo, the sandbar at the Tagus entrance, as given in the image caption.",
+   "id": "mmwdz1c0k1712:12",
+   "location": "Caption: O cabedelo, dito golada do Tejo, a ponte cais...",
+   "measured_by": "",
+   "numbers": [],
+   "term": "golada do Tejo"
+  },
+  {
+   "definition": "River and sea processes that shaped the shore, creating emerged sands where bathing settlements could be established at Cova do Vapor.",
+   "id": "mmwdz1c0k1712:13",
+   "location": "Cova do Vapor and Lisboa Praia passage",
+   "measured_by": "",
+   "numbers": [],
+   "term": "dinâmica fluvial e marítima"
+  },
+  {
+   "definition": "The seasonal advance and retreat of the dune ridge, to which early seasonal settlements adapted by relocating their buildings.",
+   "id": "mmwdz1c0k1712:14",
+   "location": "Cova do Vapor and Lisboa Praia passage",
+   "measured_by": "",
+   "numbers": [],
+   "term": "avanço e recuo do cordão dunar"
+  },
+  {
+   "definition": "The river boat link departing from Belém that gave access to the Cova do Vapor bathing area.",
+   "id": "mmwdz1c0k1712:15",
+   "location": "Cova do Vapor and Lisboa Praia passage",
+   "measured_by": "",
+   "numbers": [],
+   "term": "ligação fluvial"
+  },
+  {
+   "definition": "Public maritime domain, the shoreline space where people could occupy land by paying an annual licence.",
+   "id": "mmwdz1c0k1712:16",
+   "location": "Cova do Vapor and Lisboa Praia passage",
+   "measured_by": "",
+   "numbers": [],
+   "term": "domínio público marítimo"
+  },
+  {
+   "definition": "A capsizing of a fishing boat at sea, after which the crew of the boat had to be rescued by another company's fishermen.",
+   "id": "mmwdz1c0k1712:17",
+   "location": "Anjinhos da Costa",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1863",
+     "what": "year of the capsizing and rescue involving master Reguinga's crew (António Corre"
+    }
+   ],
+   "term": "virada"
+  },
+  {
+   "definition": "The master of a fishing crew, in charge of the boat and its company, such as masters Reguinga and Vitorino José da Silva.",
+   "id": "mmwdz1c0k1712:18",
+   "location": "Anjinhos da Costa",
+   "measured_by": "",
+   "numbers": [],
+   "term": "mestre"
+  },
+  {
+   "definition": "A shipwreck, here the loss of master Manuel Reguinga's boat, dated differently by two sources and linked to a devotion to Our Lady.",
+   "id": "mmwdz1c0k1712:19",
+   "location": "Anjinhos da Costa",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1824",
+     "what": "year of master Manuel Reguinga's shipwreck (Manuel Lourenço Soares's version)"
+    }
+   ],
+   "term": "naufrágio"
+  },
+  {
+   "definition": "A small bay or inlet of the sea, which the author believes the sandspit formed around 1750.",
+   "id": "mmwdz1c0k1712:20",
+   "location": "Convento dos Capuchos, 1952 (post on the cabedelo)",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1750",
+     "what": "approximate year the cabedelo formed an inlet"
+    }
+   ],
+   "term": "enseada"
+  },
+  {
+   "definition": "Beach fish markets or auction places where the catch was sold, and where money was raised for the fishermen's festival.",
+   "id": "mmwdz1c0k1712:21",
+   "location": "Anjinhos da Costa",
+   "measured_by": "",
+   "numbers": [],
+   "term": "lotas"
+  }
+ ],
+ "kind": "historical",
+ "lang": "",
+ "partsDone": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16
+ ],
+ "partsTotal": 17,
+ "runAt": "2026-11-12T20:26:57.387Z",
+ "sourceId": "mmwdz1c0k1712",
+ "textChars": 98407,
+ "title": "Mar da Costa"
+}

@@ -1,0 +1,1853 @@
+{
+ "items": [
+  {
+   "definition": "Group of 21 aquatic plants growing on the submerged bed of the Ria de Aveiro, harvested and used as farmland fertilizer.",
+   "id": "mmwfkg5geo1qs:1o7m:1",
+   "location": "[section: Caracterização síntese]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "plants",
+     "value": "21",
+     "what": "number of aquatic plant species grouped as moliço"
+    }
+   ],
+   "term": "moliço"
+  },
+  {
+   "definition": "Traditional harvesting of moliço from the Ria, the economic activity for which the moliceiro boat was originally designed.",
+   "id": "mmwfkg5geo1qs:1o7m:2",
+   "location": "[section: Contexto tipológico]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "century",
+     "value": "18th",
+     "what": "century the activity began"
+    }
+   ],
+   "term": "apanha do moliço"
+  },
+  {
+   "definition": "Flat bottom of the hull, allowing the boat to sail in the shallow waters of the Ria.",
+   "id": "mmwfkg5geo1qs:1o7m:3",
+   "location": "[section: Caracterização síntese]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "fundo chato"
+  },
+  {
+   "definition": "Low sides of the hull, making it easier to bring the moliço-gathering rakes and their catch into the boat.",
+   "id": "mmwfkg5geo1qs:1o7m:4",
+   "location": "[section: Caracterização síntese]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "costados baixos"
+  },
+  {
+   "definition": "Rakes used to gather moliço from the Ria bed and haul it into the boat.",
+   "id": "mmwfkg5geo1qs:1o7m:5",
+   "location": "[section: Caracterização síntese]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "ancinhos"
+  },
+  {
+   "definition": "Two kinds of pine, the woods used to build the moliceiro, chosen as part of its distinctive construction.",
+   "id": "mmwfkg5geo1qs:1o7m:6",
+   "location": "[section: Contexto tipológico]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pinho manso e bravo"
+  },
+  {
+   "definition": "Simple handcrafted wooden rod acting as the master builders' ruler for building the whole boat; only experienced builders can interpret it.",
+   "id": "mmwfkg5geo1qs:1o7m:7",
+   "location": "[section: Caracterização síntese]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pau-de-pontos"
+  },
+  {
+   "definition": "Decorated panels on the boat, each pairing a drawing with a caption that must be read together to convey a message.",
+   "id": "mmwfkg5geo1qs:1o7m:8",
+   "location": "[section: Caracterização síntese]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "panels",
+     "value": "4",
+     "what": "decorated panels per boat"
+    },
+    {
+     "unit": "panels",
+     "value": "2",
+     "what": "panels at the bow"
+    },
+    {
+     "unit": "panels",
+     "value": "2",
+     "what": "panels at the stern"
+    }
+   ],
+   "term": "painéis"
+  },
+  {
+   "definition": "Bow, the front of the boat, where two of the decorated panels are placed.",
+   "id": "mmwfkg5geo1qs:1o7m:9",
+   "location": "[section: Caracterização síntese]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "proa"
+  },
+  {
+   "definition": "Stern, the rear of the boat, where the other two decorated panels are placed.",
+   "id": "mmwfkg5geo1qs:1o7m:10",
+   "location": "[section: Caracterização síntese]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "ré"
+  },
+  {
+   "definition": "Maintenance or fitting-out work on moliceiro boats, carried out throughout the year whenever owners request it.",
+   "id": "mmwfkg5geo1qs:1o7m:11",
+   "location": "[section: Contexto temporal]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "amanhações"
+  },
+  {
+   "definition": "Master boatbuilder who builds moliceiros and passes the craft knowledge on to apprentices.",
+   "id": "mmwfkg5geo1qs:1o7m:12",
+   "location": "[section: Caracterização síntese]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "people",
+     "value": "5",
+     "what": "active master builders"
+    }
+   ],
+   "term": "mestre construtor"
+  },
+  {
+   "definition": "Master painter who decorates the moliceiro panels.",
+   "id": "mmwfkg5geo1qs:1o7m:13",
+   "location": "[section: Contexto social]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "person",
+     "value": "1",
+     "what": "active moliceiro painters"
+    }
+   ],
+   "term": "mestre-pintor"
+  },
+  {
+   "definition": "Traditional naval carpentry craft that gives the moliceiro its distinctive structure, set apart from other boats of the Ria.",
+   "id": "mmwfkg5geo1qs:1o7m:14",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Arte de Carpintaria Naval"
+  },
+  {
+   "definition": "Flat bottom and shallow draught allowing navigation in shallow lagoon waters without running aground.",
+   "id": "mmwfkg5geo1qs:1o7m:15",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "about 1",
+     "what": "water depth sufficient to navigate"
+    }
+   ],
+   "term": "fundo plano e pouco calado"
+  },
+  {
+   "definition": "To run aground in shallow water, a risk the boat's hull shape is designed to avoid.",
+   "id": "mmwfkg5geo1qs:1o7m:16",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "encalhar"
+  },
+  {
+   "definition": "Pine wood, native and abundant locally, used for building because it performs well in humid environments.",
+   "id": "mmwfkg5geo1qs:1o7m:17",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pinho"
+  },
+  {
+   "definition": "Stone pine, used for the ribs (cavernas) and the braços of the boat.",
+   "id": "mmwfkg5geo1qs:1o7m:18",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pinheiro manso"
+  },
+  {
+   "definition": "Maritime pine, used for all parts of the boat other than the ribs and braços.",
+   "id": "mmwfkg5geo1qs:1o7m:19",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pinheiro-bravo"
+  },
+  {
+   "definition": "Overall length of the moliceiro hull.",
+   "id": "mmwfkg5geo1qs:1o7m:20",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "14,50/15,00",
+     "what": "length"
+    }
+   ],
+   "term": "Comprimento"
+  },
+  {
+   "definition": "Maximum beam (width) of the boat.",
+   "id": "mmwfkg5geo1qs:1o7m:21",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "2,50/2,60",
+     "what": "beam"
+    }
+   ],
+   "term": "Boca"
+  },
+  {
+   "definition": "Depth of the hull, measured as its height at the side.",
+   "id": "mmwfkg5geo1qs:1o7m:22",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "0,40/0,45",
+     "what": "depth"
+    }
+   ],
+   "term": "Pontal"
+  },
+  {
+   "definition": "Cargo-carrying capacity of the boat, essential for gathering moliço.",
+   "id": "mmwfkg5geo1qs:1o7m:23",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "tonnes",
+     "value": "5",
+     "what": "cargo capacity"
+    }
+   ],
+   "term": "Capacidade"
+  },
+  {
+   "definition": "The complete set of ribs of the hull, divided between stern and bow.",
+   "id": "mmwfkg5geo1qs:1o7m:24",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "cavernas",
+     "value": "21",
+     "what": "total ribs"
+    },
+    {
+     "unit": "cavernas",
+     "value": "11",
+     "what": "ribs toward stern"
+    },
+    {
+     "unit": "cavernas",
+     "value": "10",
+     "what": "ribs toward bow"
+    }
+   ],
+   "term": "Cavername"
+  },
+  {
+   "definition": "Ribs of the hull, on which the bottom planks are fixed.",
+   "id": "mmwfkg5geo1qs:1o7m:25",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "cavernas",
+     "value": "21",
+     "what": "number of ribs"
+    }
+   ],
+   "term": "Cavernas"
+  },
+  {
+   "definition": "Bottom planks fixed over the ribs, of variable width.",
+   "id": "mmwfkg5geo1qs:1o7m:26",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "0,02",
+     "what": "plank thickness"
+    }
+   ],
+   "term": "pranchas do fundo"
+  },
+  {
+   "definition": "Covered, lockable bow compartment that served as sleeping quarters for crews gathering moliço.",
+   "id": "mmwfkg5geo1qs:1o7m:27",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "castelo da proa"
+  },
+  {
+   "definition": "Curved piece ending the highest point of the bow; the stern's highest point is also called bica.",
+   "id": "mmwfkg5geo1qs:1o7m:28",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bica"
+  },
+  {
+   "definition": "Two opposed wooden pieces below the bica, used to tie the towline and rest rakes and poles at moorings.",
+   "id": "mmwfkg5geo1qs:1o7m:29",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "cm",
+     "value": "22",
+     "what": "height"
+    },
+    {
+     "unit": "cm",
+     "value": "6",
+     "what": "width"
+    },
+    {
+     "unit": "cm",
+     "value": "8",
+     "what": "thickness"
+    }
+   ],
+   "term": "golfiões"
+  },
+  {
+   "definition": "Towline tied to the golfiões of the bow.",
+   "id": "mmwfkg5geo1qs:1o7m:30",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "sirga"
+  },
+  {
+   "definition": "Poles rested on the golfiões at the mooring.",
+   "id": "mmwfkg5geo1qs:1o7m:31",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "varas"
+  },
+  {
+   "definition": "A fitting on the bow, named but not described in this part.",
+   "id": "mmwfkg5geo1qs:1o7m:32",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Orelha"
+  },
+  {
+   "definition": "A fitting on the bow, named but not described in this part.",
+   "id": "mmwfkg5geo1qs:1o7m:33",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Argolão"
+  },
+  {
+   "definition": "The highest point of the stern.",
+   "id": "mmwfkg5geo1qs:1o7m:34",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bica da ré"
+  },
+  {
+   "definition": "Small closed compartment inside the stern where salt, fish or salted meat was stored for the crew.",
+   "id": "mmwfkg5geo1qs:1o7m:35",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "cagarete"
+  },
+  {
+   "definition": "Removable lid in front of the cagarete, serving as the helmsman's seat and the place for the water barrel.",
+   "id": "mmwfkg5geo1qs:1o7m:36",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "entremesa da ré"
+  },
+  {
+   "definition": "The skipper or helmsman who controls the boat.",
+   "id": "mmwfkg5geo1qs:1o7m:37",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "arrais"
+  },
+  {
+   "definition": "Movable platform over the ribs at the helmsman's feet.",
+   "id": "mmwfkg5geo1qs:1o7m:38",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "paneiro da ré"
+  },
+  {
+   "definition": "The rudder, whose lines harmonise with the boat; divided into blade, head, macho, chança and builder's mark.",
+   "id": "mmwfkg5geo1qs:1o7m:39",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Leme"
+  },
+  {
+   "definition": "Part passing through the head (cabeça) of the rudder.",
+   "id": "mmwfkg5geo1qs:1o7m:40",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Xarolo"
+  },
+  {
+   "definition": "Transverse timber in the hull with a hole through which the mast passes.",
+   "id": "mmwfkg5geo1qs:1o7m:41",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "traste"
+  },
+  {
+   "definition": "The round hole in the traste through which the mast is passed.",
+   "id": "mmwfkg5geo1qs:1o7m:42",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "cm",
+     "value": "20",
+     "what": "hole diameter"
+    }
+   ],
+   "term": "enora"
+  },
+  {
+   "definition": "Fore-and-aft piece set low in the hull between two frames, with a square hole receiving the mast foot.",
+   "id": "mmwfkg5geo1qs:1o7m:43",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "cavernas",
+     "value": "10th and 11th",
+     "what": "position between frames"
+    }
+   ],
+   "term": "coicia"
+  },
+  {
+   "definition": "Thick pine or eucalyptus pole that holds the yard from which the sail hangs; it passes through the enora and sits in the coicia.",
+   "id": "mmwfkg5geo1qs:1o7m:44",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "8 to 8.5",
+     "what": "height"
+    },
+    {
+     "unit": "m",
+     "value": "0.17",
+     "what": "diameter at base"
+    }
+   ],
+   "term": "Mastro"
+  },
+  {
+   "definition": "Upper end of the mast, with a rectangular slot running port to starboard for the halyard.",
+   "id": "mmwfkg5geo1qs:1o7m:45",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "cachola"
+  },
+  {
+   "definition": "Rectangular slot in the masthead acting as a sheave through which the ostaga runs.",
+   "id": "mmwfkg5geo1qs:1o7m:46",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "roldana"
+  },
+  {
+   "definition": "Rope that runs through the slot at the top of the mast.",
+   "id": "mmwfkg5geo1qs:1o7m:47",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "ostaga"
+  },
+  {
+   "definition": "Yard carried by the mast, from which the sail hangs.",
+   "id": "mmwfkg5geo1qs:1o7m:48",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "verga"
+  },
+  {
+   "definition": "Broad white trapezoidal sail that moves the boat; formerly decorated for river pilgrimages, now with flags on festive days.",
+   "id": "mmwfkg5geo1qs:1o7m:49",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "m2",
+     "value": "24",
+     "what": "sail area"
+    }
+   ],
+   "term": "Vela"
+  },
+  {
+   "definition": "Rear side of the trapezoidal sail.",
+   "id": "mmwfkg5geo1qs:1o7m:50",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "valume"
+  },
+  {
+   "definition": "Lower side of the sail.",
+   "id": "mmwfkg5geo1qs:1o7m:51",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "esteira"
+  },
+  {
+   "definition": "Front side of the sail.",
+   "id": "mmwfkg5geo1qs:1o7m:52",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "testa"
+  },
+  {
+   "definition": "Upper side of the sail, tied to the yard.",
+   "id": "mmwfkg5geo1qs:1o7m:53",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "empena"
+  },
+  {
+   "definition": "Trapezoidal pine boards lowered into the water that create a force against leeway; combined with sail thrust they drive the boat forward.",
+   "id": "mmwfkg5geo1qs:1o7m:54",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "2.30",
+     "what": "length"
+    },
+    {
+     "unit": "m",
+     "value": "0.70",
+     "what": "width at top"
+    },
+    {
+     "unit": "m",
+     "value": "1.00",
+     "what": "width at bottom edge"
+    },
+    {
+     "unit": "count",
+     "value": "2",
+     "what": "tostes per mast"
+    }
+   ],
+   "term": "Tostes"
+  },
+  {
+   "definition": "Rope passing through two holes in the toste head that ties it to the mast.",
+   "id": "mmwfkg5geo1qs:1o7m:55",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "cabo da toste"
+  },
+  {
+   "definition": "Windward side; one toste is raised on this side.",
+   "id": "mmwfkg5geo1qs:1o7m:56",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barlavento"
+  },
+  {
+   "definition": "Leeward side; the other toste is half-immersed on this side to resist drifting.",
+   "id": "mmwfkg5geo1qs:1o7m:57",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "sotavento"
+  },
+  {
+   "definition": "Sideways drift of the boat, which the toste's anti-drift component cancels.",
+   "id": "mmwfkg5geo1qs:1o7m:58",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "caimento transversal"
+  },
+  {
+   "definition": "Wooden boards fixed along both sides from bow to stern to raise the sides and prevent flooding.",
+   "id": "mmwfkg5geo1qs:1o7m:59",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "4.30",
+     "what": "rear falca length"
+    },
+    {
+     "unit": "m",
+     "value": "3.05",
+     "what": "bow falca length"
+    }
+   ],
+   "term": "Falcas"
+  },
+  {
+   "definition": "Small final board closing the side up to the bow, after the two main falcas.",
+   "id": "mmwfkg5geo1qs:1o7m:60",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "1.15",
+     "what": "length"
+    }
+   ],
+   "term": "falquim"
+  },
+  {
+   "definition": "Propulsion by pushing a pole against the lagoon bed, used in calm or near quays; deck is treated for grip.",
+   "id": "mmwfkg5geo1qs:1o7m:61",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "4 to 6",
+     "what": "pole length"
+    }
+   ],
+   "term": "Andar à vara"
+  },
+  {
+   "definition": "Pitch and sawdust applied to the bow deck and sides to give grip and stop slipping while poling.",
+   "id": "mmwfkg5geo1qs:1o7m:62",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "breu e serradura"
+  },
+  {
+   "definition": "Towing the boat by a rope from the bank, used occasionally in narrow channels or against tide or wind.",
+   "id": "mmwfkg5geo1qs:1o7m:63",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Andar à sirga"
+  },
+  {
+   "definition": "The usual method of propulsion, sailing under the sail.",
+   "id": "mmwfkg5geo1qs:1o7m:64",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Andar à vela"
+  },
+  {
+   "definition": "Rope attached to the sail and to the bow block, used to tension the sail so the boat gains ground to windward.",
+   "id": "mmwfkg5geo1qs:1o7m:65",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bolinão"
+  },
+  {
+   "definition": "Pulley at the bow spout used to control sail tension when sailing close to the wind.",
+   "id": "mmwfkg5geo1qs:1o7m:66",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "moitão"
+  },
+  {
+   "definition": "Sailing close to the wind to gain windward distance.",
+   "id": "mmwfkg5geo1qs:1o7m:67",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bolinar"
+  },
+  {
+   "definition": "Small rope at the sail's lower part adjusting the exposed surface and so regulating the boat's speed.",
+   "id": "mmwfkg5geo1qs:1o7m:68",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "escota"
+  },
+  {
+   "definition": "Leeward drift of the boat, resisted by the half-immersed toste.",
+   "id": "mmwfkg5geo1qs:1o7m:69",
+   "location": "[file: moliceiro-Matriz PCI]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "descaimento"
+  },
+  {
+   "definition": "Boatyards, usually large warehouses with earthen floors and a big gate, where moliceiros are built indoors, often next to the master builder's home.",
+   "id": "mmwfkg5geo1qs:1o7m:70",
+   "location": "[section: Os Estaleiros]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "boatyards",
+     "value": "more than 50",
+     "what": "estimated number of boatyards around the ria (Magalhães, 1905)"
+    }
+   ],
+   "term": "estaleiros"
+  },
+  {
+   "definition": "The launching of a newly built boat into the water, through the boatyard's large gate.",
+   "id": "mmwfkg5geo1qs:1o7m:71",
+   "location": "[section: Os Estaleiros]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bota-abaixo"
+  },
+  {
+   "definition": "Stakes set on the ground along the boat's length and levelled to set the bottom's slope before building starts.",
+   "id": "mmwfkg5geo1qs:1o7m:72",
+   "location": "[section: O processo de construção]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "stakes",
+     "value": "9",
+     "what": "number of stakes"
+    },
+    {
+     "unit": "m",
+     "value": "0,50",
+     "what": "height of first stake top above bottom level"
+    },
+    {
+     "unit": "m",
+     "value": "0,12",
+     "what": "height of second stake top"
+    },
+    {
+     "unit": "m",
+     "value": "0,05",
+     "what": "height of third stake top"
+    },
+    {
+     "unit": "cm",
+     "value": "0,02",
+     "what": "height of last stake top"
+    }
+   ],
+   "term": "estacas"
+  },
+  {
+   "definition": "The first plank laid on the stakes, forming the keel board along which the boat's bottom is laid out.",
+   "id": "mmwfkg5geo1qs:1o7m:73",
+   "location": "[section: O processo de construção]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "15",
+     "what": "length of keel board"
+    }
+   ],
+   "term": "tábua de quilha"
+  },
+  {
+   "definition": "A marking stick used to draw the central line on the keel board and to mark spacings and distances.",
+   "id": "mmwfkg5geo1qs:1o7m:74",
+   "location": "[section: O processo de construção]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pau de pontos"
+  },
+  {
+   "definition": "The main line drawn across the keel board, used as reference for placing the edge planks and marking other measurements.",
+   "id": "mmwfkg5geo1qs:1o7m:75",
+   "location": "[section: O processo de construção]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "linha mestra"
+  },
+  {
+   "definition": "Planks at the sides of the bottom, laid relative to the master line, which give the boat's lateral outline.",
+   "id": "mmwfkg5geo1qs:1o7m:76",
+   "location": "[section: O processo de construção]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "tábuas das arestas"
+  },
+  {
+   "definition": "The constant distance between the middle of one frame and the middle of the next.",
+   "id": "mmwfkg5geo1qs:1o7m:77",
+   "location": "[section: O processo de construção]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "0,60",
+     "what": "spacing between frames"
+    }
+   ],
+   "term": "vãos"
+  },
+  {
+   "definition": "The measured distance from the golfiões to the forward end of the bow stem piece.",
+   "id": "mmwfkg5geo1qs:1o7m:78",
+   "location": "[section: O processo de construção]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "0,85",
+     "what": "bow talão, forward of the forcado"
+    }
+   ],
+   "term": "talão da proa"
+  },
+  {
+   "definition": "The measured distance from the stern forcado to the end of the stern stem piece.",
+   "id": "mmwfkg5geo1qs:1o7m:79",
+   "location": "[section: O processo de construção]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "0,70",
+     "what": "stern talão length"
+    }
+   ],
+   "term": "talão da ré"
+  },
+  {
+   "definition": "Arms that alternate with the frames and are later aligned with and joined to their respective frame.",
+   "id": "mmwfkg5geo1qs:1o7m:80",
+   "location": "[section: O processo de construção]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "braços das cavernas"
+  },
+  {
+   "definition": "Props that hold the boat steady and keep its bottom levelled during early construction.",
+   "id": "mmwfkg5geo1qs:1o7m:81",
+   "location": "[section: O processo de construção]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "escoras"
+  },
+  {
+   "definition": "Wooden pegs that later fix the frames, replacing the temporary galvanised nails.",
+   "id": "mmwfkg5geo1qs:1o7m:82",
+   "location": "[section: O processo de construção]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "cavilhas de madeira"
+  },
+  {
+   "definition": "Templates used to obtain the shape of the frames.",
+   "id": "mmwfkg5geo1qs:1o7m:83",
+   "location": "[section: O processo de construção]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "moldes"
+  },
+  {
+   "definition": "Holes at the bottom of the frames that let water pass inside the boat.",
+   "id": "mmwfkg5geo1qs:1o7m:84",
+   "location": "[section: O processo de construção]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "holes",
+     "value": "3",
+     "what": "usual holes per frame"
+    }
+   ],
+   "term": "bueiros"
+  },
+  {
+   "definition": "The stem pieces at the bow and stern, fitted after the frame set is applied.",
+   "id": "mmwfkg5geo1qs:1o7m:85",
+   "location": "[section: O processo de construção]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "rodas da proa e da ré"
+  },
+  {
+   "definition": "A stern reference point from which the stern talão is measured.",
+   "id": "mmwfkg5geo1qs:1o7m:86",
+   "location": "[section: O processo de construção]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "forcado da ré"
+  },
+  {
+   "definition": "The uppermost side plank, fitted first on the hull side and nailed right through with zinc-coated nails and wooden pegs.",
+   "id": "mmwfkg5geo1qs:1o7m:87",
+   "location": "[part 5 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "tábua de verdejar"
+  },
+  {
+   "definition": "Planks above the top plank at the bow, also called foliamentos or foliado; a similar set is fitted at the stern.",
+   "id": "mmwfkg5geo1qs:1o7m:88",
+   "location": "[part 5 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "tábuas de foliar"
+  },
+  {
+   "definition": "Timber fitted on the outside over the top plank, using green wood, forming the upper outer edge of the hull side.",
+   "id": "mmwfkg5geo1qs:1o7m:89",
+   "location": "[part 5 of 14]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "0,11 x 0,22",
+     "what": "cross-section of cinta"
+    }
+   ],
+   "term": "cinta"
+  },
+  {
+   "definition": "Timber fitted inside, running from first to last frame and encircling the whole boat along its upper line.",
+   "id": "mmwfkg5geo1qs:1o7m:90",
+   "location": "[part 5 of 14]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "0,13 x 0,22",
+     "what": "cross-section of draga"
+    }
+   ],
+   "term": "draga"
+  },
+  {
+   "definition": "Clamps that hold the cinta and draga tight for several days while fixed.",
+   "id": "mmwfkg5geo1qs:1o7m:91",
+   "location": "[part 5 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "grampos"
+  },
+  {
+   "definition": "Square socket in the coicia into which the mast foot is inserted.",
+   "id": "mmwfkg5geo1qs:1o7m:92",
+   "location": "[part 5 of 14]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "0,10 x 0,10",
+     "what": "socket size"
+    }
+   ],
+   "term": "pia"
+  },
+  {
+   "definition": "Seven arches supporting and strengthening the bow cover, one per frame.",
+   "id": "mmwfkg5geo1qs:1o7m:93",
+   "location": "[part 5 of 14]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "arches",
+     "value": "7",
+     "what": "number of barrotes"
+    }
+   ],
+   "term": "barrotes"
+  },
+  {
+   "definition": "The largest outer bow arch, built from a mould and fixed at the fifth frame from the bow.",
+   "id": "mmwfkg5geo1qs:1o7m:94",
+   "location": "[part 5 of 14]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "th frame",
+     "value": "5",
+     "what": "frame position from bow"
+    }
+   ],
+   "term": "barrote, batente ou vertente da proa"
+  },
+  {
+   "definition": "Small hatch set in the bulkhead lined at the bow arch.",
+   "id": "mmwfkg5geo1qs:1o7m:95",
+   "location": "[part 5 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "portinhola"
+  },
+  {
+   "definition": "Side boards of the bow cover, shaped outside like the gunwale, laid either side of the central board.",
+   "id": "mmwfkg5geo1qs:1o7m:96",
+   "location": "[part 5 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "beiradas"
+  },
+  {
+   "definition": "Stern bulkhead compartment closed with removable panels so the space can be used.",
+   "id": "mmwfkg5geo1qs:1o7m:97",
+   "location": "[part 5 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "entremesa"
+  },
+  {
+   "definition": "Female sockets on the stern post and male pins on the rudder that join the rudder to the boat.",
+   "id": "mmwfkg5geo1qs:1o7m:98",
+   "location": "[part 5 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "fêmeas e espigões (machos)"
+  },
+  {
+   "definition": "Closing plank marked, sawn and shaped for the hull bottom; one on each side, port and starboard.",
+   "id": "mmwfkg5geo1qs:1o7m:99",
+   "location": "[part 5 of 14]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "planks",
+     "value": "2",
+     "what": "closing planks"
+    }
+   ],
+   "term": "tábua de fechar"
+  },
+  {
+   "definition": "Turning the boat over in the yard onto one side to expose the bottom for fitting closing planks.",
+   "id": "mmwfkg5geo1qs:1o7m:100",
+   "location": "[part 5 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "carenado"
+  },
+  {
+   "definition": "Pegging of all bottom planking, done staggered so the wood does not split.",
+   "id": "mmwfkg5geo1qs:1o7m:101",
+   "location": "[part 5 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "encavilhamento"
+  },
+  {
+   "definition": "Staggered placement of pegs, not in line, to avoid splitting the wood.",
+   "id": "mmwfkg5geo1qs:1o7m:102",
+   "location": "[part 5 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "contrafiado"
+  },
+  {
+   "definition": "Wooden pegs in three sizes according to location; smallest for bottom and sides without wedge, larger ones wedged.",
+   "id": "mmwfkg5geo1qs:1o7m:103",
+   "location": "[part 5 of 14]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "sizes",
+     "value": "3",
+     "what": "peg sizes"
+    }
+   ],
+   "term": "cavilhas"
+  },
+  {
+   "definition": "Wedge driven into medium and large pegs to fix them permanently.",
+   "id": "mmwfkg5geo1qs:1o7m:104",
+   "location": "[part 5 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "cunha"
+  },
+  {
+   "definition": "Base used when making pegs, along with the podão (shaping tool).",
+   "id": "mmwfkg5geo1qs:1o7m:105",
+   "location": "[part 5 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "coladeira"
+  },
+  {
+   "definition": "Tool used to shape pegs, leaving a slight facet at the tip.",
+   "id": "mmwfkg5geo1qs:1o7m:106",
+   "location": "[part 5 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "podão"
+  },
+  {
+   "definition": "Boards placed to cover the boat's bottom during finishing.",
+   "id": "mmwfkg5geo1qs:1o7m:107",
+   "location": "[part 5 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "paneiros"
+  },
+  {
+   "definition": "Caulking: sealing the joints to keep water out, using oakum, an iron and a caulking mallet.",
+   "id": "mmwfkg5geo1qs:1o7m:108",
+   "location": "[part 5 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "calafetagem"
+  },
+  {
+   "definition": "Pitch melted with oil in a three-legged pot; fine pitch for hull sides, black pitch for gunwales, bow cover, frames, traste and thwarts.",
+   "id": "mmwfkg5geo1qs:1o7m:109",
+   "location": "[part 5 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "breu"
+  },
+  {
+   "definition": "Applicator: wooden handle with sheepskin nailed at one end, used to spread pitch on the boat.",
+   "id": "mmwfkg5geo1qs:1o7m:110",
+   "location": "[part 5 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "escopeiro"
+  },
+  {
+   "definition": "Material scattered on the second pitch coat to give grip and prevent crews slipping while sailing.",
+   "id": "mmwfkg5geo1qs:1o7m:111",
+   "location": "[part 5 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "sarrim"
+  },
+  {
+   "definition": "Builder's symbol drawn on both sides of the rudder above the chança, unique to each master and identifying his boats.",
+   "id": "mmwfkg5geo1qs:1o7m:112",
+   "location": "[part 5 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "marca do construtor (sino-saimão ou signo-salomão)"
+  },
+  {
+   "definition": "Guiding lines drawn on the white panel area that define the composition, separating the central scene from the borders.",
+   "id": "mmwfkg5geo1qs:1o7m:113",
+   "location": "[section: 2 - Traçado das linhas mestras]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "linhas mestras"
+  },
+  {
+   "definition": "A ruler marked by the artist with incisions and notes, used to draw the guiding lines.",
+   "id": "mmwfkg5geo1qs:1o7m:114",
+   "location": "[section: 2 - Traçado das linhas mestras]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "virote"
+  },
+  {
+   "definition": "Compass used to draw guiding lines, geometric designs, and the border and floral motifs on the bow's bica.",
+   "id": "mmwfkg5geo1qs:1o7m:115",
+   "location": "[section: 2 - Traçado das linhas mestras]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "compasso"
+  },
+  {
+   "definition": "Tracing paper used to record the available area and to transfer floral motifs and scenes onto the boat.",
+   "id": "mmwfkg5geo1qs:1o7m:116",
+   "location": "[section: 3 - Cálculo da área para o desenho central]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "papel vegetal"
+  },
+  {
+   "definition": "Decorative borders around each panel, made of floral or geometric motifs, painted before the central scene.",
+   "id": "mmwfkg5geo1qs:1o7m:117",
+   "location": "[section: 6 - Pintura das cercaduras]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "colours",
+     "value": "3 or 4",
+     "what": "strong contrasting colours used in borders"
+    }
+   ],
+   "term": "cercaduras"
+  },
+  {
+   "definition": "Transfer technique for moving drawn motifs or scenes onto the boat surface, alternative to freehand work.",
+   "id": "mmwfkg5geo1qs:1o7m:118",
+   "location": "[section: 4 - Desenho dos motivos florais]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "decalque"
+  },
+  {
+   "definition": "Part of the bow where the painter traces geometric designs with the compass.",
+   "id": "mmwfkg5geo1qs:1o7m:119",
+   "location": "[section: 5 - Traçado de desenhos geométricos]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vertente"
+  },
+  {
+   "definition": "The bow's prow tip, decorated with a border and floral motifs; the panel contour ends here.",
+   "id": "mmwfkg5geo1qs:1o7m:120",
+   "location": "[section: 5 - Traçado de desenhos geométricos]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bica da proa"
+  },
+  {
+   "definition": "Enamel paint, used for all decoration of the boat.",
+   "id": "mmwfkg5geo1qs:1o7m:121",
+   "location": "[section: 6 - Pintura das cercaduras]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "tinta de esmalte"
+  },
+  {
+   "definition": "Frame of vertical and horizontal lines and contrasting coloured friezes that delimits a border.",
+   "id": "mmwfkg5geo1qs:1o7m:122",
+   "location": "[section: 6 - Pintura das cercaduras]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "caixilho"
+  },
+  {
+   "definition": "Stern area whose panel is painted with floral motifs.",
+   "id": "mmwfkg5geo1qs:1o7m:123",
+   "location": "[section: 8 - Pintura dos motivos decorativos]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "entremesa e forcados"
+  },
+  {
+   "definition": "Fine-tipped brush used to outline all decorative drawings and panels in black, shading them before finishing.",
+   "id": "mmwfkg5geo1qs:1o7m:124",
+   "location": "[section: 10 - Sombrear]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bico de pardal"
+  },
+  {
+   "definition": "Captions or witty sayings on the four panels, always in quotation marks; this painter uses a pink frieze and black capitals.",
+   "id": "mmwfkg5geo1qs:1o7m:125",
+   "location": "[section: 11 - Pintura das legendas nos painéis]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "panels",
+     "value": "4",
+     "what": "panels with captions"
+    }
+   ],
+   "term": "legendas"
+  },
+  {
+   "definition": "Boat registration number, painted at the bow beside the panel, usually among the last tasks.",
+   "id": "mmwfkg5geo1qs:1o7m:126",
+   "location": "[section: 12 - Nome e matrícula]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "matrícula"
+  },
+  {
+   "definition": "Metal stencils with standard measurements used to paint the registration and boat name.",
+   "id": "mmwfkg5geo1qs:1o7m:127",
+   "location": "[section: 12 - Nome e matrícula]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "alfabeto"
+  },
+  {
+   "definition": "How the boat is moved; the motor has been introduced as an alternative to sail, pole and towing.",
+   "id": "mmwfkg5geo1qs:1o7m:128",
+   "location": "[part 7 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Método de propulsão"
+  },
+  {
+   "definition": "Overall size; tourist-era boats are sometimes slightly longer and wider than the traditional dimensions.",
+   "id": "mmwfkg5geo1qs:1o7m:129",
+   "location": "[part 7 of 14]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "15",
+     "what": "traditional boat length"
+    },
+    {
+     "unit": "m",
+     "value": "2,50/2,60",
+     "what": "traditional beam (boca)"
+    }
+   ],
+   "term": "Tamanho da embarcação"
+  },
+  {
+   "definition": "Races of traditional moliceiro boats held on the Ria de Aveiro since the early twentieth century.",
+   "id": "mmwfkg5geo1qs:1o7m:130",
+   "location": "[part 7 of 14]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "regattas",
+     "value": "3",
+     "what": "regattas held per year"
+    }
+   ],
+   "term": "regatas de moliceiros"
+  },
+  {
+   "definition": "The traditional craft of building wooden boats in the Aveiro region, tied to the moliceiro and passed on mainly by spoken teaching from master to apprentice.",
+   "id": "mmwfkg5geo1qs:1o7m:131",
+   "location": "Transmissão activo - Descrição",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Arte da Carpintaria Naval"
+  },
+  {
+   "definition": "The traditional Aveiro lagoon boat built for gathering moliço (aquatic plant matter), whose construction and painting techniques are the knowledge being passed on.",
+   "id": "mmwfkg5geo1qs:1o7m:132",
+   "location": "Transmissão activo - Descrição",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Barco Moliceiro"
+  },
+  {
+   "definition": "Master craftsman who builds boats and teaches apprentices by letting them watch and practise during construction.",
+   "id": "mmwfkg5geo1qs:1o7m:133",
+   "location": "Transmissão activo - Descrição",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Mestre"
+  },
+  {
+   "definition": "Master painter who holds and shares the techniques of decorating moliceiro boats.",
+   "id": "mmwfkg5geo1qs:1o7m:134",
+   "location": "Modo de transmissão oral e escrita",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Mestre Pintor"
+  },
+  {
+   "definition": "The profession of the person who gathers moliço and supplies it to farmers; it emerged as a separate trade in the early 19th century.",
+   "id": "mmwfkg5geo1qs:1o7m:135",
+   "location": "Origem / Historial - A Apanha do Moliço",
+   "measured_by": "",
+   "numbers": [],
+   "term": "moliceiro"
+  },
+  {
+   "definition": "Changes in the tides, cited as a cause of moliço becoming scarce, which contributed to the decline of the activity.",
+   "id": "mmwfkg5geo1qs:1o7m:136",
+   "location": "Origem / Historial - A Apanha do Moliço",
+   "measured_by": "",
+   "numbers": [],
+   "term": "alterações das marés"
+  },
+  {
+   "definition": "Larger and smaller boats loaded with moliço, which were taxed at different rates under an early 19th-century decree.",
+   "id": "mmwfkg5geo1qs:1o7m:137",
+   "location": "Origem / Historial - A Apanha do Moliço",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "réis",
+     "value": "40",
+     "what": "tax on larger boats loaded with moliço"
+    },
+    {
+     "unit": "réis",
+     "value": "20",
+     "what": "tax on smaller boats loaded with moliço"
+    }
+   ],
+   "term": "barcos maiores e barcos menores"
+  },
+  {
+   "definition": "Registered boats in the moliço trade, counted in 1888 along with the people employed in the activity.",
+   "id": "mmwfkg5geo1qs:1o7m:138",
+   "location": "Origem / Historial - A Apanha do Moliço",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "1342",
+     "what": "registered boats in 1888"
+    },
+    {
+     "unit": "people",
+     "value": "2542",
+     "what": "people employed in 1888"
+    }
+   ],
+   "term": "embarcações registadas"
+  },
+  {
+   "definition": "Open waters of the Ria where the traditional moliceiro sails under canvas, as opposed to adapted tourist versions.",
+   "id": "mmwfkg5geo1qs:1o7m:139",
+   "location": "[part 9 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "ria aberta"
+  },
+  {
+   "definition": "Sailing races in which the traditional, sail-powered moliceiro takes part.",
+   "id": "mmwfkg5geo1qs:1o7m:140",
+   "location": "[part 9 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "regatas"
+  },
+  {
+   "definition": "Decorative panels that help make the moliceiro unique and a cultural emblem of the Ria de Aveiro.",
+   "id": "mmwfkg5geo1qs:1o7m:141",
+   "location": "[part 9 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "painéis decorativos"
+  },
+  {
+   "definition": "Anchored; a moliceiro was kept anchored in the Central Canal in 1961 for display and possible tourist trips.",
+   "id": "mmwfkg5geo1qs:1o7m:142",
+   "location": "[part 9 of 14]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1961",
+     "what": "year of the boat's acquisition"
+    }
+   ],
+   "term": "fundeado"
+  },
+  {
+   "definition": "Shipbuilding carpentry, the craft of the Aveiro region, regarded as a national and international reference in the 19th and 20th centuries.",
+   "id": "mmwfkg5geo1qs:1o7m:143",
+   "location": "[part 9 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "carpintaria naval"
+  },
+  {
+   "definition": "Master builders who built moliceiros, with skills passed down through families such as the Lavouras, Raimundos, Tavares, Henrique de Miranda and Garridos.",
+   "id": "mmwfkg5geo1qs:1o7m:144",
+   "location": "[part 9 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "mestres construtores"
+  },
+  {
+   "definition": "Structural changes made to some tourist moliceiros for passenger safety, moving them away from the original traditional design.",
+   "id": "mmwfkg5geo1qs:1o7m:145",
+   "location": "[part 9 of 14]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "30",
+     "what": "approximate number of moliceiros at end of the 2010s"
+    }
+   ],
+   "term": "adaptações construtivas"
+  },
+  {
+   "definition": "Traditional Ria de Aveiro boats used to gather and carry moliço, the algae harvested from the lagoon.",
+   "id": "mmwfkg5geo1qs:1o7m:146",
+   "location": "[no marker]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barcos moliceiros"
+  },
+  {
+   "definition": "Boatyard where moliceiros and other traditional vessels were built by master builders and where apprentices learned the craft.",
+   "id": "mmwfkg5geo1qs:1o7m:147",
+   "location": "[no marker]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "years",
+     "value": "1955-1985",
+     "what": "years Mestre Lavoura's yard was active"
+    },
+    {
+     "unit": "boats",
+     "value": "about 52",
+     "what": "moliceiros built at Mestre Lavoura's yard"
+    }
+   ],
+   "term": "estaleiro"
+  },
+  {
+   "definition": "Name now given to the knowledge-sharing and teaching tradition that took place at Mestre Lavoura's boatyard over decades.",
+   "id": "mmwfkg5geo1qs:1o7m:148",
+   "location": "[no marker]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Escola Lavoura"
+  },
+  {
+   "definition": "Registry books of boat construction kept at the Capitania, used to document how many moliceiros each builder made.",
+   "id": "mmwfkg5geo1qs:1o7m:149",
+   "location": "[no marker]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "155",
+     "what": "moliceiros recorded for Mestre Ti Raimundo"
+    },
+    {
+     "unit": "years",
+     "value": "1933-1959",
+     "what": "period of Mestre Ti Raimundo's recorded builds"
+    },
+    {
+     "unit": "years",
+     "value": "1960-1994",
+     "what": "period with complete Capitania records"
+    }
+   ],
+   "term": "livros de registos"
+  },
+  {
+   "definition": "The maritime authority office holding the official registers of moliceiro construction.",
+   "id": "mmwfkg5geo1qs:1o7m:150",
+   "location": "[no marker]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Capitania"
+  },
+  {
+   "definition": "Family of boatbuilders from Murtosa, active since the 19th century, among the main builders of early moliceiros.",
+   "id": "mmwfkg5geo1qs:1o7m:151",
+   "location": "[no marker]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Os Raimundos"
+  },
+  {
+   "definition": "A branch of the Henriques family from Monte, Murtosa, without the Raimundo nickname, and important regional shipbuilders.",
+   "id": "mmwfkg5geo1qs:1o7m:152",
+   "location": "[no marker]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "about 30",
+     "what": "boats registered by Mestre Ti Preguiça"
+    },
+    {
+     "unit": "years",
+     "value": "1941-1962",
+     "what": "period of Mestre Ti Preguiça's registrations"
+    }
+   ],
+   "term": "Os Henrique de Miranda"
+  },
+  {
+   "definition": "Major family of moliceiro master builders whose boatyard was in Pardilhó.",
+   "id": "mmwfkg5geo1qs:1o7m:153",
+   "location": "[no marker]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "about 57",
+     "what": "moliceiros built by Mestre Agostinho Tavares"
+    }
+   ],
+   "term": "Os Tavares"
+  },
+  {
+   "definition": "Family of builders from Salreu who were also boat owners and employed professional moliceiro crews.",
+   "id": "mmwfkg5geo1qs:1o7m:154",
+   "location": "[no marker]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "20",
+     "what": "moliceiros built by Mestre Luciano Garrido"
+    },
+    {
+     "unit": "boats",
+     "value": "15",
+     "what": "moliceiros built by Mestre Manuel Maria Garrido"
+    }
+   ],
+   "term": "Os Garridos"
+  },
+  {
+   "definition": "Professional moliceiro workers employed by the Garrido brothers on their boats.",
+   "id": "mmwfkg5geo1qs:1o7m:155",
+   "location": "[no marker]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "moliceiros profissionais"
+  },
+  {
+   "definition": "Decorative painting of moliceiros, appearing probably in the late 19th century to beautify and distinguish them and reflect owners' outlook.",
+   "id": "mmwfkg5geo1qs:1o7m:156",
+   "location": "[section: A pintura dos moliceiros]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "A pintura dos moliceiros"
+  },
+  {
+   "definition": "The stern of the boat, described in the 1880s account as painted with figures.",
+   "id": "mmwfkg5geo1qs:1o7m:157",
+   "location": "[section: A pintura dos moliceiros]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "popa"
+  },
+  {
+   "definition": "Ornamental paintings on moliceiro bows, described as iconographic records preserving the forms of the boats.",
+   "id": "mmwfkg5geo1qs:1o7m:158",
+   "location": "[section: A pintura dos moliceiros]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pinturas ornamentais"
+  },
+  {
+   "definition": "Bright multicolour painting style of the decorations, featuring animals, human figures, flowers, arabesques, sun and moon.",
+   "id": "mmwfkg5geo1qs:1o7m:159",
+   "location": "[section: A pintura dos moliceiros]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "polichromias"
+  },
+  {
+   "definition": "Early description of the moliceiro hull as broad and rounded in the middle with narrowed bow and stern.",
+   "id": "mmwfkg5geo1qs:1o7m:160",
+   "location": "[section: A pintura dos moliceiros]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "construções obesas, de proa e ré contraídas"
+  },
+  {
+   "definition": "Painted decorative panels on the bow and stern of the moliceiro boat, showing varied themes and never copied from other panels or boats.",
+   "id": "mmwfkg5geo1qs:1o7m:161",
+   "location": "[part 11 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "painéis de moliceiros"
+  },
+  {
+   "definition": "Nickname for the panels, which are frequently renewed and record contemporary events such as politics, sport, television and music.",
+   "id": "mmwfkg5geo1qs:1o7m:162",
+   "location": "[part 11 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "jornal da ria"
+  },
+  {
+   "definition": "The frequent repainting of panels, which some owners do every year.",
+   "id": "mmwfkg5geo1qs:1o7m:163",
+   "location": "[part 11 of 14]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "per year",
+     "value": "1",
+     "what": "renewal frequency stated for one owner"
+    }
+   ],
+   "term": "renovação dos painéis"
+  },
+  {
+   "definition": "Painters who were also boatbuilders, such as Mestre Joaquim Raimundo, Mestre Ti Preguiça and Mestre Agostinho Tavares.",
+   "id": "mmwfkg5geo1qs:1o7m:164",
+   "location": "[part 11 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pintores-construtores"
+  },
+  {
+   "definition": "Painters who decorated moliceiro panels without building the boats, including Avelino Marcela, Jacinto Lavadeiro and José Oliveira.",
+   "id": "mmwfkg5geo1qs:1o7m:165",
+   "location": "[part 11 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pintores não construtores"
+  },
+  {
+   "definition": "Enamel paints used by Avelino Marcela to complete panels after drawing his ideas directly in pencil.",
+   "id": "mmwfkg5geo1qs:1o7m:166",
+   "location": "[part 11 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "tintas de esmalte"
+  },
+  {
+   "definition": "Preparatory sketches that Jacinto Lavadeiro drew before painting, unlike Avelino Marcela, who sketched directly.",
+   "id": "mmwfkg5geo1qs:1o7m:167",
+   "location": "[part 11 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "esboços"
+  },
+  {
+   "definition": "Colour mixing, used often by Jacinto Lavadeiro to obtain a wider range of tones.",
+   "id": "mmwfkg5geo1qs:1o7m:168",
+   "location": "[part 11 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "mistura de cores"
+  },
+  {
+   "definition": "Keyhole-shaped frame used by Avelino Marcela around the ordinary-people figures on the stern.",
+   "id": "mmwfkg5geo1qs:1o7m:169",
+   "location": "[part 11 of 14]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "buraco de fechadura"
+  },
+  {
+   "definition": "Decorated panel on a moliceiro's bow and stern, painted with humorous or thematic scenes and captions, central to the boat's traditional decoration.",
+   "id": "mmwfkg5geo1qs:1o7m:170",
+   "location": "[part 12 of 14: José de Oliveira biography]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "panels",
+     "value": "1000",
+     "what": "approximate number of moliceiro panels painted by José de Oliveira"
+    },
+    {
+     "unit": "days",
+     "value": "six to seven",
+     "what": "days needed by the earlier painter to finish one boat"
+    }
+   ],
+   "term": "painel"
+  },
+  {
+   "definition": "The caption, saying, joke or pun on a panel; for this painter it usually comes first and inspires the drawing.",
+   "id": "mmwfkg5geo1qs:1o7m:171",
+   "location": "[part 12 of 14: José de Oliveira biography]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "legenda/dizer/piada/trocadilho"
+  },
+  {
+   "definition": "Humorous panels, the type most painted, favoured by viewers and valued by judges in panel competitions.",
+   "id": "mmwfkg5geo1qs:1o7m:172",
+   "location": "[part 12 of 14: José de Oliveira biography]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "painéis humorísticos"
+  },
+  {
+   "definition": "The traditional painting style handed down by earlier moliceiro panel painters, which later painters aim to respect.",
+   "id": "mmwfkg5geo1qs:1o7m:173",
+   "location": "[part 12 of 14: José de Oliveira biography]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "linha pictórica tradicional"
+  },
+  {
+   "definition": "Competitions in which juries judge moliceiro panels, rewarding certain themes such as humour.",
+   "id": "mmwfkg5geo1qs:1o7m:174",
+   "location": "[part 12 of 14: José de Oliveira biography]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "concursos de painéis"
+  },
+  {
+   "definition": "The traditional shipwright craft of building the moliceiro, whose cultural rights are held collectively by master builders and painters.",
+   "id": "mmwfkg5geo1qs:1o7m:175",
+   "location": "[part 12 of 14: Direitos associados]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Arte da Carpintaria Naval do Barco Moliceiro"
+  }
+ ],
+ "kind": "historical",
+ "lang": "",
+ "partsDone": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13
+ ],
+ "partsTotal": 14,
+ "runAt": "2026-11-13T23:09:59.945Z",
+ "sourceId": "mmwfkg5geo1qs",
+ "textChars": 78034,
+ "title": "moliceiro-Matriz PCI"
+}

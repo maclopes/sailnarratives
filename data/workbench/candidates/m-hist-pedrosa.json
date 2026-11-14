@@ -1,0 +1,2145 @@
+{
+ "items": [
+  {
+   "definition": "Traditional Seixal and Barreiro fishing boat that trawled sideways to the wind and current; the name is also linked to a Latin word for mullet.",
+   "id": "m-hist-pedrosa:1",
+   "location": "[section: 1. Introdução]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "muleta"
+  },
+  {
+   "definition": "Trawling with the boat lying across the wind and current, letting it drift while the net is dragged.",
+   "id": "m-hist-pedrosa:2",
+   "location": "[section: 1. Introdução]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pesca de arrasto pelo través"
+  },
+  {
+   "definition": "The trawl net used by the muleta, shot from the windward side; documented in Portugal since the 15th century.",
+   "id": "m-hist-pedrosa:3",
+   "location": "[section: 1. Introdução]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "century",
+     "value": "15th",
+     "what": "century from which the net is documented in Portugal"
+    }
+   ],
+   "term": "tartaranha"
+  },
+  {
+   "definition": "The windward side, from which the net is released before the boat drifts.",
+   "id": "m-hist-pedrosa:4",
+   "location": "[section: 1. Introdução]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barlavento"
+  },
+  {
+   "definition": "To drift sideways, leeway-like, lying across the wind and current while trawling.",
+   "id": "m-hist-pedrosa:5",
+   "location": "[section: 1. Introdução]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "abater"
+  },
+  {
+   "definition": "The sail plan, arranged so forces can be easily balanced according to wind and current direction and strength.",
+   "id": "m-hist-pedrosa:6",
+   "location": "[section: 1. Introdução]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "velame"
+  },
+  {
+   "definition": "Balancing of forces on the sails according to the direction and strength of wind and currents.",
+   "id": "m-hist-pedrosa:7",
+   "location": "[section: 1. Introdução]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "compensação de forças"
+  },
+  {
+   "definition": "Two long poles projecting at bow and stern, used to haul the sail tacks and sheets and to tie the net's wings.",
+   "id": "m-hist-pedrosa:8",
+   "location": "[section: 1. Introdução]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "botalós"
+  },
+  {
+   "definition": "To secure the windward lower corner of a sail (set the tack), done using the botalós.",
+   "id": "m-hist-pedrosa:9",
+   "location": "[section: 1. Introdução]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "amurar"
+  },
+  {
+   "definition": "To trim or sheet in a sail, done using the botalós.",
+   "id": "m-hist-pedrosa:10",
+   "location": "[section: 1. Introdução]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "caçar"
+  },
+  {
+   "definition": "The net's wing lines, tied to the ends of the botalós.",
+   "id": "m-hist-pedrosa:11",
+   "location": "[section: 1. Introdução]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "alares da rede"
+  },
+  {
+   "definition": "French name for both a boat and a net used in sideways trawling; the muleta originated as a French tartane.",
+   "id": "m-hist-pedrosa:12",
+   "location": "[section: 1. Introdução]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "century",
+     "value": "second half of 17th",
+     "what": "period when French introduced a new tartane model to Portugal"
+    }
+   ],
+   "term": "tartane"
+  },
+  {
+   "definition": "French word for mullet; also a river boat in France.",
+   "id": "m-hist-pedrosa:13",
+   "location": "[section: 2 A Pesca de Tainha (Muge)]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "mulet"
+  },
+  {
+   "definition": "Mullet, a heavily fished and traded species in Portuguese rivers, suited to salting, drying and smoking.",
+   "id": "m-hist-pedrosa:14",
+   "location": "[section: 2 A Pesca de Tainha (Muge)]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "tainha (muge)"
+  },
+  {
+   "definition": "Dragging the net along the seabed, which with narrow meshes was held to destroy small fish and young stock.",
+   "id": "m-hist-pedrosa:15",
+   "location": "[section: 3. A Tartana e a Tartaranha]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "arrastando pelo fundo"
+  },
+  {
+   "definition": "Mesh openings of the net; very small meshes let no juvenile fish escape, which was the reason for the ban.",
+   "id": "m-hist-pedrosa:16",
+   "location": "[section: 3. A Tartana e a Tartaranha]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "malhas"
+  },
+  {
+   "definition": "Flatfish living on sandy bottoms (azevias, linguados, solhas), the net's main target.",
+   "id": "m-hist-pedrosa:17",
+   "location": "[section: 3. A Tartana e a Tartaranha]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "peixe areado"
+  },
+  {
+   "definition": "Upper rope of the net, carrying corks or other floats to hold the top of the net up.",
+   "id": "m-hist-pedrosa:18",
+   "location": "[section: 3. A Tartana e a Tartaranha]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "tralha superior"
+  },
+  {
+   "definition": "Cork floats fitted to the upper part of the net to provide buoyancy.",
+   "id": "m-hist-pedrosa:19",
+   "location": "[section: 3. A Tartana e a Tartaranha]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "libras",
+     "value": "40 a 50",
+     "what": "weight of cork on the upper part of the net (Duhamel du Monceau's description)"
+    }
+   ],
+   "term": "cortiças"
+  },
+  {
+   "definition": "Floats of cork or other material that lift the net and reduce its pressure on the bottom.",
+   "id": "m-hist-pedrosa:20",
+   "location": "[section: 3. A Tartana e a Tartaranha]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "flutuadores"
+  },
+  {
+   "definition": "Lead weights on the lower part of the net; more lead forces flatfish off a sandy bottom to swim.",
+   "id": "m-hist-pedrosa:21",
+   "location": "[section: 3. A Tartana e a Tartaranha]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "chumbos"
+  },
+  {
+   "definition": "Stones used as weights on the lower part of the net, spaced along it.",
+   "id": "m-hist-pedrosa:22",
+   "location": "[section: 3. A Tartana e a Tartaranha]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "libras",
+     "value": "8 a 10",
+     "what": "weight of each stone on the lower part"
+    },
+    {
+     "unit": "one per fathom (braç",
+     "value": "de braça a braça",
+     "what": "spacing of the stones"
+    }
+   ],
+   "term": "pedras"
+  },
+  {
+   "definition": "The bag at the lower part of the net that traps the catch; its pressure on the seabed depends on floats and weights.",
+   "id": "m-hist-pedrosa:23",
+   "location": "[section: 3. A Tartana e a Tartaranha]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "saco"
+  },
+  {
+   "definition": "How hard the bag presses on the seabed, adjusted by the amount of floats and weights according to the type of bottom.",
+   "id": "m-hist-pedrosa:24",
+   "location": "[section: 3. A Tartana e a Tartaranha]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pressão sobre o fundo"
+  },
+  {
+   "definition": "Net floating at mid-depth, or at least bearing little on the bottom, achieved with much cork and light stones.",
+   "id": "m-hist-pedrosa:25",
+   "location": "[section: 3. A Tartana e a Tartaranha]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "a meia-água"
+  },
+  {
+   "definition": "Type of seabed (e.g. hard, firm sand), which determines how floats and weights are balanced on the net.",
+   "id": "m-hist-pedrosa:26",
+   "location": "[section: 3. A Tartana e a Tartaranha]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "natureza do fundo"
+  },
+  {
+   "definition": "Selling price for fish fixed by the almotacé (market official); high-sea fishermen were exempt, river fishermen were not.",
+   "id": "m-hist-pedrosa:27",
+   "location": "[page 6]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "taxa"
+  },
+  {
+   "definition": "High sea; in Lisbon of that era, fishing 'do alto' meant fishing beyond the river bar, not at a set distance from the coast.",
+   "id": "m-hist-pedrosa:28",
+   "location": "[page 6]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "alto"
+  },
+  {
+   "definition": "A fishing net that dominated Lisbon fishing; the name was also extended to the boats that normally fished with it.",
+   "id": "m-hist-pedrosa:29",
+   "location": "[page 6]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "15",
+     "what": "chinchas operating on the river in 1552"
+    },
+    {
+     "unit": "men",
+     "value": "8",
+     "what": "men per chincha boat in 1552"
+    }
+   ],
+   "term": "chincha"
+  },
+  {
+   "definition": "Fishermen working with line and hook gear, as distinct from those using nets.",
+   "id": "m-hist-pedrosa:30",
+   "location": "[page 6]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "linheiros"
+  },
+  {
+   "definition": "Fishermen using nets of any kind (gillnet, trawl, encircling or other); tartaranha fishermen were counted among them.",
+   "id": "m-hist-pedrosa:31",
+   "location": "[page 6]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "chincheiros"
+  },
+  {
+   "definition": "Vessels that carry the catch to unloading places.",
+   "id": "m-hist-pedrosa:32",
+   "location": "[page 6]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "enviadas"
+  },
+  {
+   "definition": "A drag net, and by semantic extension the boat fishing with it; also a boat type of the Tagus.",
+   "id": "m-hist-pedrosa:33",
+   "location": "[page 6]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1647",
+     "what": "year the municipality gathered tartaranha nets to check mesh"
+    }
+   ],
+   "term": "tartaranhas"
+  },
+  {
+   "definition": "Line-and-hook fishermen working in the high sea, outside the bar; also called pescadores do alto.",
+   "id": "m-hist-pedrosa:34",
+   "location": "[page 7]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "altieiros"
+  },
+  {
+   "definition": "Fishermen who fished beyond the bar using nets such as chinchas, tartaranhas or gillnets.",
+   "id": "m-hist-pedrosa:35",
+   "location": "[page 7]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "chincheiros do alto"
+  },
+  {
+   "definition": "Fishermen of the tartaranha net, grouped with the chincheiros.",
+   "id": "m-hist-pedrosa:36",
+   "location": "[page 7]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "tartaranheiros"
+  },
+  {
+   "definition": "Mesh size of a net, checked and regulated by authorities to protect young fish.",
+   "id": "m-hist-pedrosa:37",
+   "location": "[page 7]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "malhagem"
+  },
+  {
+   "definition": "A beach drag net often mentioned alongside tartaranhas; the name was also applied to the boat using it.",
+   "id": "m-hist-pedrosa:38",
+   "location": "[page 7]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1591",
+     "what": "year of ordinance setting minimum mesh"
+    },
+    {
+     "unit": "year",
+     "value": "1686",
+     "what": "year the boat was called chinchorro"
+    }
+   ],
+   "term": "chinchorro"
+  },
+  {
+   "definition": "Baked clay balls used instead of lead weights; lighter, they press less on the seabed and avoid stirring it up.",
+   "id": "m-hist-pedrosa:39",
+   "location": "[page 7]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bolas de barro cozido"
+  },
+  {
+   "definition": "Boats fishing with the tartaranha net, banned from sailing between São Julião and Cabo da Roca because of harm to Cascais fishermen.",
+   "id": "m-hist-pedrosa:40",
+   "location": "[page 7]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1592",
+     "what": "year of ban"
+    }
+   ],
+   "term": "barcas tartaranhas"
+  },
+  {
+   "definition": "Boats, here described as similar to muletas, used by Moors in pursuit of fleeing Portuguese.",
+   "id": "m-hist-pedrosa:41",
+   "location": "[page 8]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "men",
+     "value": "5",
+     "what": "men per zavra"
+    }
+   ],
+   "term": "zavras"
+  },
+  {
+   "definition": "1572 regulation of boatmen governing river transport of goods and people on the Tagus, compiled from norms of various dates.",
+   "id": "m-hist-pedrosa:42",
+   "location": "[page 8]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1572",
+     "what": "year"
+    }
+   ],
+   "term": "Regimento dos Barqueiros"
+  },
+  {
+   "definition": "Small boat crossing the Tagus between Lisbon and Almada, with a legal limit on passengers.",
+   "id": "m-hist-pedrosa:43",
+   "location": "[page 8]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "persons",
+     "value": "8",
+     "what": "passenger limit, paragraph 19"
+    },
+    {
+     "unit": "persons",
+     "value": "12",
+     "what": "passenger limit, paragraph 61"
+    }
+   ],
+   "term": "batel"
+  },
+  {
+   "definition": "Larger river vessels required to carry a compass.",
+   "id": "m-hist-pedrosa:44",
+   "location": "[page 8]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barcas"
+  },
+  {
+   "definition": "Larger river vessels, like barcas, required to carry a compass.",
+   "id": "m-hist-pedrosa:45",
+   "location": "[page 8]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "caravelões"
+  },
+  {
+   "definition": "Mariner's compass, mandatory on larger vessels but not on muletas and small batéis.",
+   "id": "m-hist-pedrosa:46",
+   "location": "[page 8]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "agulha de marear"
+  },
+  {
+   "definition": "Lateen sail, rig of the barcas, caravelões, muletas and small batéis sailing the river.",
+   "id": "m-hist-pedrosa:47",
+   "location": "[page 8]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vela latina"
+  },
+  {
+   "definition": "Masters or skippers of boats, obliged by regulation to carry specified safety gear.",
+   "id": "m-hist-pedrosa:48",
+   "location": "[page 8]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "arraizes"
+  },
+  {
+   "definition": "Lines on the yards required in winter so sails could be lowered quickly, avoiding accidents.",
+   "id": "m-hist-pedrosa:49",
+   "location": "[page 8]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "each year",
+     "value": "1 October to end of March",
+     "what": "period obligatory"
+    }
+   ],
+   "term": "carregadeiras"
+  },
+  {
+   "definition": "Yards, the spars carrying the sail, on which the carregadeiras were fitted.",
+   "id": "m-hist-pedrosa:50",
+   "location": "[page 8]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vergas"
+  },
+  {
+   "definition": "To lower or strike the sail, which could fail in emergencies without proper gear.",
+   "id": "m-hist-pedrosa:51",
+   "location": "[page 8]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "amainar"
+  },
+  {
+   "definition": "Pulley fitted at the masthead as part of the sail-lowering arrangement.",
+   "id": "m-hist-pedrosa:52",
+   "location": "[page 8]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "roldana"
+  },
+  {
+   "definition": "The head of the mast, fitted with sheaves (wheels) through which the halyards run; two sheaves on large vessels, one on small ones.",
+   "id": "m-hist-pedrosa:53",
+   "location": "[part 4 of 15, opening paragraph]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "wheels",
+     "value": "2",
+     "what": "sheaves in the masthead on large vessels"
+    },
+    {
+     "unit": "wheel",
+     "value": "1",
+     "what": "sheaves in the masthead on small vessels"
+    }
+   ],
+   "term": "calcês"
+  },
+  {
+   "definition": "Ropes tied to the yards, run through masthead sheaves, used to hoist and lower the yards and sails.",
+   "id": "m-hist-pedrosa:54",
+   "location": "[part 4 of 15, opening paragraph]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "ways",
+     "value": "4",
+     "what": "ways of rigging the ostagas, according to Aguilar"
+    }
+   ],
+   "term": "ostagas"
+  },
+  {
+   "definition": "Alternative to the masthead: wedges fixed below the crossbeams against the mast, with two sheaves between wedges and mast for the halyards.",
+   "id": "m-hist-pedrosa:55",
+   "location": "[part 4 of 15, Aguilar quotation]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "wheels",
+     "value": "2",
+     "what": "sheaves between the wedges and the mast"
+    }
+   ],
+   "term": "cacholas"
+  },
+  {
+   "definition": "Wooden blocks placed on top of the mast heads, another way of arranging the halyards.",
+   "id": "m-hist-pedrosa:56",
+   "location": "[part 4 of 15, Aguilar quotation]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "cepos"
+  },
+  {
+   "definition": "Pulley blocks hung in iron straps below the block (cepo), through which the halyards run.",
+   "id": "m-hist-pedrosa:57",
+   "location": "[part 4 of 15, Aguilar quotation]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "blocks",
+     "value": "2",
+     "what": "blocks under the cepo"
+    }
+   ],
+   "term": "moitões"
+  },
+  {
+   "definition": "A sling holding the yards below the masthead so they hang obliquely, as in the Latin caravel, instead of at right angles.",
+   "id": "m-hist-pedrosa:58",
+   "location": "[part 4 of 15, Osório quotation]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "alça"
+  },
+  {
+   "definition": "Square (round) sail that the regulation required for muletas crossing the river, for the safety of the people aboard.",
+   "id": "m-hist-pedrosa:59",
+   "location": "[part 4 of 15, article 36]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vela redonda"
+  },
+  {
+   "definition": "Foremast sail that muletas were required to always carry for greater safety, alongside the main sail.",
+   "id": "m-hist-pedrosa:60",
+   "location": "[part 4 of 15, article 36]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "masts",
+     "value": "2",
+     "what": "masts with square sails (main and fore)"
+    }
+   ],
+   "term": "traquete"
+  },
+  {
+   "definition": "Yard carrying the sail; regulation limited it on muletas to the boat's length from wheel to wheel, though illustrations show very long ones.",
+   "id": "m-hist-pedrosa:61",
+   "location": "[part 4 of 15, article 36 and commentary]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "verga"
+  },
+  {
+   "definition": "Tacking by bringing the bow toward the wind line; the manoeuvre muletas with Latin sails could not perform.",
+   "id": "m-hist-pedrosa:62",
+   "location": "[part 4 of 15, commentary on article 36]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "virar por dentro"
+  },
+  {
+   "definition": "Old term for the modern 'virar por davante': turning the bow through the wind until it comes from the opposite side.",
+   "id": "m-hist-pedrosa:63",
+   "location": "[part 4 of 15, commentary on article 36]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "dar por davante"
+  },
+  {
+   "definition": "Changing tack, so the wind that came from one side now comes from the other and the sail passes across.",
+   "id": "m-hist-pedrosa:64",
+   "location": "[part 4 of 15, commentary on article 36]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "virar de bordo"
+  },
+  {
+   "definition": "The other way of changing tack, passing the stern through the wind line.",
+   "id": "m-hist-pedrosa:65",
+   "location": "[part 4 of 15, commentary on article 36]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "virar em roda"
+  },
+  {
+   "definition": "Port side of the vessel; wind coming from it shifts to the other side after tacking.",
+   "id": "m-hist-pedrosa:66",
+   "location": "[part 4 of 15, commentary on article 36]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bombordo"
+  },
+  {
+   "definition": "Starboard side of the vessel, where the wind comes from after tacking from port.",
+   "id": "m-hist-pedrosa:67",
+   "location": "[part 4 of 15, commentary on article 36]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "estibordo"
+  },
+  {
+   "definition": "Shrouds supporting the mast; scholars debate whether Latin sails were hoisted between them and the mast or outside them.",
+   "id": "m-hist-pedrosa:68",
+   "location": "[part 4 of 15, Xavier discussion]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "ovéns"
+  },
+  {
+   "definition": "Ballast carried in the bottom of the boat; required for muletas, which have flat bottoms and gain stability from it and their wide beam.",
+   "id": "m-hist-pedrosa:69",
+   "location": "[part 4 of 15, Pinto Basto quotation]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "lastro"
+  },
+  {
+   "definition": "The wide beam of the muleta, which together with ballast gives the flat-bottomed hull stability.",
+   "id": "m-hist-pedrosa:70",
+   "location": "[part 4 of 15, Pinto Basto quotation]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "boca"
+  },
+  {
+   "definition": "A large barge-type vessel, among the biggest on the river, used for freight and charging higher fares than a muleta.",
+   "id": "m-hist-pedrosa:71",
+   "location": "[section: 5. A Muleta Pequena]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "réis",
+     "value": "1$200",
+     "what": "freight charged in 1611 for a large barca from Lisbon to Alcochete"
+    }
+   ],
+   "term": "barca grande"
+  },
+  {
+   "definition": "Small boats of lesser size that remained in use on the silted river alongside muletas.",
+   "id": "m-hist-pedrosa:72",
+   "location": "[section: 5. A Muleta Pequena]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "batéis"
+  },
+  {
+   "definition": "Silted up: a river clogged with sediment, reducing depth and preventing larger vessels from navigating.",
+   "id": "m-hist-pedrosa:73",
+   "location": "[section: 5. A Muleta Pequena]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "assoreado"
+  },
+  {
+   "definition": "A flat-bottomed boat able to float in shallow water, describing the muleta's small draught.",
+   "id": "m-hist-pedrosa:74",
+   "location": "[section: 5. A Muleta Pequena]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barco chato que nada em pouca água"
+  },
+  {
+   "definition": "Draught: the depth of a vessel below the waterline; the muleta has a small one, suiting shallow waters.",
+   "id": "m-hist-pedrosa:75",
+   "location": "[section: 5. A Muleta Pequena]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "calado"
+  },
+  {
+   "definition": "The scheduled service boat on the Lisbon run; one boat per week was designated to carry passengers and goods, and was called the muleta.",
+   "id": "m-hist-pedrosa:76",
+   "location": "[section: A MULETA E A TARTARANHA (SÉCULOS XV-XX)]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barco da carreira"
+  },
+  {
+   "definition": "The fee paid for carrying goods or passengers by boat, which had to be paid to the master before other boats could carry the load.",
+   "id": "m-hist-pedrosa:77",
+   "location": "[section: A MULETA E A TARTARANHA (SÉCULOS XV-XX)]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "réis",
+     "value": "200",
+     "what": "fine to the council for carrying cargo belonging to the service boat without pay"
+    }
+   ],
+   "term": "frete"
+  },
+  {
+   "definition": "The master or skipper of a boat, here the one in charge of the service muleta who was owed the freight.",
+   "id": "m-hist-pedrosa:78",
+   "location": "[section: A MULETA E A TARTARANHA (SÉCULOS XV-XX)]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Arraiz"
+  },
+  {
+   "definition": "A small boat that, with barcos, took turns each week to serve as the Lisbon service boat.",
+   "id": "m-hist-pedrosa:79",
+   "location": "[section: A MULETA E A TARTARANHA (SÉCULOS XV-XX)]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bateira"
+  },
+  {
+   "definition": "Persian Gulf boats compared to Tagus muletas but beamier and keelless, with low bow, very high stern, one mast and a lateen sail.",
+   "id": "m-hist-pedrosa:80",
+   "location": "[section: 5. A Muleta Pequena]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "terradas"
+  },
+  {
+   "definition": "Persian Gulf boats similar to terradas, like muletas but wider and without a keel.",
+   "id": "m-hist-pedrosa:81",
+   "location": "[section: 5. A Muleta Pequena]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "terranquís"
+  },
+  {
+   "definition": "The keel, the structural spine along the bottom of a hull; terradas and terranquís lacked one.",
+   "id": "m-hist-pedrosa:82",
+   "location": "[section: 5. A Muleta Pequena]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "quilha"
+  },
+  {
+   "definition": "The rudder, which on terradas was steered from inside the boat by cords or tackles leading out amidships.",
+   "id": "m-hist-pedrosa:83",
+   "location": "[section: 5. A Muleta Pequena]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "leme"
+  },
+  {
+   "definition": "Tackles: rope-and-block arrangements used to work the rudder of a terrada from within the boat.",
+   "id": "m-hist-pedrosa:84",
+   "location": "[section: 5. A Muleta Pequena]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "talhas"
+  },
+  {
+   "definition": "Ropes used to control the rudder, as in the terradas of the Persian Gulf.",
+   "id": "m-hist-pedrosa:85",
+   "location": "[section: 5. A Muleta Pequena]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "gualdropes"
+  },
+  {
+   "definition": "Oars, used on terradas as an additional means of propulsion alongside the sail.",
+   "id": "m-hist-pedrosa:86",
+   "location": "[section: 5. A Muleta Pequena]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "remos"
+  },
+  {
+   "definition": "The deck; terradas were low and had none.",
+   "id": "m-hist-pedrosa:87",
+   "location": "[section: 5. A Muleta Pequena]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "coberta"
+  },
+  {
+   "definition": "The bow, the front of the boat; on terradas it was low.",
+   "id": "m-hist-pedrosa:88",
+   "location": "[section: 5. A Muleta Pequena]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "proa"
+  },
+  {
+   "definition": "The stern, the rear of the boat; on terradas it was excessively high, with a platform for a bed.",
+   "id": "m-hist-pedrosa:89",
+   "location": "[section: 5. A Muleta Pequena]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "popa"
+  },
+  {
+   "definition": "Boats carrying topmasts, mentioned as vessels that a canal could let pass each other without obstruction.",
+   "id": "m-hist-pedrosa:90",
+   "location": "[section: 5. A Muleta Pequena]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "pés",
+     "value": "12",
+     "what": "canal depth"
+    },
+    {
+     "unit": "pés",
+     "value": "30",
+     "what": "canal width at low water surface"
+    },
+    {
+     "unit": "pés",
+     "value": "40",
+     "what": "canal width at high water surface"
+    },
+    {
+     "unit": "pés",
+     "value": "5",
+     "what": "canal bank slope"
+    }
+   ],
+   "term": "barcos masteleros"
+  },
+  {
+   "definition": "Tartaranha nets carried by muletas, seen by an almotacé near the Belém tower in 1645.",
+   "id": "m-hist-pedrosa:91",
+   "location": "[section: 6. Os Pilotos da Barra]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "redes tartaranhas"
+  },
+  {
+   "definition": "A net dragged along the bottom; the source treats the tartaranha as the first such net to be banned.",
+   "id": "m-hist-pedrosa:92",
+   "location": "[section: 6. Os Pilotos da Barra]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "rede de arrasto"
+  },
+  {
+   "definition": "Young fish stock, which tight dragged nets would take along with the roe, threatening the river's fish supply.",
+   "id": "m-hist-pedrosa:93",
+   "location": "[section: 6. Os Pilotos da Barra]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "criação do peixe"
+  },
+  {
+   "definition": "Fish roe, taken by tight drag nets and so harmful to the reproduction of fish in the river.",
+   "id": "m-hist-pedrosa:94",
+   "location": "[section: 6. Os Pilotos da Barra]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "ova"
+  },
+  {
+   "definition": "Closed fishing months during the spawning period of the species, when fishing was not allowed.",
+   "id": "m-hist-pedrosa:95",
+   "location": "[section: 6. Os Pilotos da Barra]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "months",
+     "value": "March, April and May",
+     "what": "closed months"
+    }
+   ],
+   "term": "meses defesos"
+  },
+  {
+   "definition": "The legally set mesh size that nets had to respect for fishing to be allowed.",
+   "id": "m-hist-pedrosa:96",
+   "location": "[section: 6. Os Pilotos da Barra]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "malha da bitola"
+  },
+  {
+   "definition": "Baked clay balls used instead of lead weights on nets; lighter, so they press less on the seabed.",
+   "id": "m-hist-pedrosa:97",
+   "location": "[section: 6. Os Pilotos da Barra]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bolas de barro cozidas"
+  },
+  {
+   "definition": "Cork floats that keep the net up on the water so it cannot drag along the bottom.",
+   "id": "m-hist-pedrosa:98",
+   "location": "[section: 6. Os Pilotos da Barra]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bóias de cortiça"
+  },
+  {
+   "definition": "The bar or entrance of the Tagus at Lisbon, where fishing outside it was authorised and pilots worked.",
+   "id": "m-hist-pedrosa:99",
+   "location": "[section: 6. Os Pilotos da Barra]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "barra"
+  },
+  {
+   "definition": "Landmark marking the limit: from this tower outward, fishing was free.",
+   "id": "m-hist-pedrosa:100",
+   "location": "[section: 6. Os Pilotos da Barra]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "torre de São Julião"
+  },
+  {
+   "definition": "Bar pilots who guided ships across the Lisbon bar; tartaranha fishermen near the bar served in this role into the 19th century.",
+   "id": "m-hist-pedrosa:101",
+   "location": "[section: 6. Os Pilotos da Barra]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "years",
+     "value": "10",
+     "what": "required successive practice in offshore fishing boats (1824 regulation)"
+    }
+   ],
+   "term": "pilotos da barra"
+  },
+  {
+   "definition": "The pilotage service for the Lisbon bar, first regulated in 1824, assisting India ships, royal fleets and merchant ships.",
+   "id": "m-hist-pedrosa:102",
+   "location": "[section: 6. Os Pilotos da Barra]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1824",
+     "what": "year of first regulation"
+    }
+   ],
+   "term": "pilotagem da barra"
+  },
+  {
+   "definition": "Lateen sails; very large ones powered the light corsair terradas.",
+   "id": "m-hist-pedrosa:103",
+   "location": "[section: 6. Os Pilotos da Barra]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "velas latinas"
+  },
+  {
+   "definition": "Fishing boat type, of French origin, that trawls sideways using a net of the same name; first used to specifically identify boats fishing with the tartaranha net.",
+   "id": "m-hist-pedrosa:104",
+   "location": "[section: 8. A Difusão da Tartana Francesa]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1301",
+     "what": "earliest documented use of tartana trawling in Provence"
+    }
+   ],
+   "term": "tartana"
+  },
+  {
+   "definition": "Trawl net used by Portuguese boats near the Lisbon bar; counterpart of the French tartana net.",
+   "id": "m-hist-pedrosa:105",
+   "location": "[page 15]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "rede tartaranha"
+  },
+  {
+   "definition": "French trawl net used by the French tartana boat for fishing.",
+   "id": "m-hist-pedrosa:106",
+   "location": "[page 15]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "rede tartana"
+  },
+  {
+   "definition": "Each of the two sleeves of a trawl net that hold the bag and channel fish into it; also called mão, banda, perna or pernada.",
+   "id": "m-hist-pedrosa:107",
+   "location": "[page 16]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "manga"
+  },
+  {
+   "definition": "Name for each sleeve of the net; also the name for the net's side walls, 'rede de mão'.",
+   "id": "m-hist-pedrosa:108",
+   "location": "[page 16]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "mão"
+  },
+  {
+   "definition": "Final part of the net's bag, where the mesh is narrowest; it drags up the young fish and breaks up the roe.",
+   "id": "m-hist-pedrosa:109",
+   "location": "[page 16]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "cuada"
+  },
+  {
+   "definition": "Clay balls used as weights on the net; bulky, so they can put small boats at some risk.",
+   "id": "m-hist-pedrosa:110",
+   "location": "[page 15]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bolas de barro"
+  },
+  {
+   "definition": "Lead weights allowed on the two side walls of the net in place of clay balls on small muletas.",
+   "id": "m-hist-pedrosa:111",
+   "location": "[page 15]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "chumbadas"
+  },
+  {
+   "definition": "Legal gauge of net mesh size; the smaller gauge applied only to tartaranhas, not to chinchas and chinchorros.",
+   "id": "m-hist-pedrosa:112",
+   "location": "[page 15]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bitola da malhagem"
+  },
+  {
+   "definition": "Name given in Italy to the tartana of Provençal fishermen, alluding to their home town of Martigues.",
+   "id": "m-hist-pedrosa:113",
+   "location": "[section: 8. A Difusão da Tartana Francesa]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "martingana"
+  },
+  {
+   "definition": "Flat-bottomed Italian boat that was adapted to trawl sideways with tartana nets.",
+   "id": "m-hist-pedrosa:114",
+   "location": "[section: 8. A Difusão da Tartana Francesa]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1650",
+     "what": "year a nascara was sold at Chioggia as a tartana-style boat"
+    }
+   ],
+   "term": "nascara"
+  },
+  {
+   "definition": "Trawl fishing, dragging a net behind the boat, for which the tartana carried additional sails.",
+   "id": "m-hist-pedrosa:115",
+   "location": "[page 18]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pesca de arrasto"
+  },
+  {
+   "definition": "Vertical spar carrying the sail; on the muleta it is inclined forward.",
+   "id": "m-hist-pedrosa:116",
+   "location": "[page 18]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "mastro"
+  },
+  {
+   "definition": "Mast raked forward, a feature of the muleta never seen on French fishing tartanas.",
+   "id": "m-hist-pedrosa:117",
+   "location": "[page 20]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "mastro inclinado para vante"
+  },
+  {
+   "definition": "Pole projecting forward from the bow, used to set a forward sail.",
+   "id": "m-hist-pedrosa:118",
+   "location": "[page 18]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "botaló"
+  },
+  {
+   "definition": "Quadrangular sail set on the forward boom of the muleta.",
+   "id": "m-hist-pedrosa:119",
+   "location": "[page 18]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "cevadeira"
+  },
+  {
+   "definition": "Extra triangular sail set ahead of the mast on a pole, as on one of the illustrated tartanas.",
+   "id": "m-hist-pedrosa:120",
+   "location": "[page 18]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vela triangular a vante do mastro"
+  },
+  {
+   "definition": "Raised bow and stern curving inward, a hull feature of the muleta absent from French tartanas.",
+   "id": "m-hist-pedrosa:121",
+   "location": "[page 18]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "proa e popa elevadas, curvando para dentro"
+  },
+  {
+   "definition": "Board lowered into the water on one side to resist leeway and prevent capsizing; a lateral keel.",
+   "id": "m-hist-pedrosa:122",
+   "location": "[page 20]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1710",
+     "what": "year of first Portuguese documentation (muleta album)"
+    },
+    {
+     "unit": "year",
+     "value": "1785",
+     "what": "year of later appearance on other boats (Caderno de todos os barcos do Tejo)"
+    }
+   ],
+   "term": "tábua de bolina"
+  },
+  {
+   "definition": "Leeway: the sideways drift of a boat downwind, which the leeboard reduces.",
+   "id": "m-hist-pedrosa:123",
+   "location": "[page 20]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "abatimento"
+  },
+  {
+   "definition": "The side away from the wind, toward which the boat drifts.",
+   "id": "m-hist-pedrosa:124",
+   "location": "[page 20]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "sotavento"
+  },
+  {
+   "definition": "Flat or nearly flat hull bottom, the kind of boat that needs a leeboard, especially with lateen rig.",
+   "id": "m-hist-pedrosa:125",
+   "location": "[page 20]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "fundo plano"
+  },
+  {
+   "definition": "Lateen rig; combined with a flat bottom it makes a leeboard necessary.",
+   "id": "m-hist-pedrosa:126",
+   "location": "[page 20]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "armação latina"
+  },
+  {
+   "definition": "Square or round rig, on which leeboards do not appear.",
+   "id": "m-hist-pedrosa:127",
+   "location": "[page 20]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "armação redonda"
+  },
+  {
+   "definition": "English term for the tábua de bolina, a dagger-shaped board lowered on one side to resist leeway.",
+   "id": "m-hist-pedrosa:128",
+   "location": "[page 20]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "leeboard"
+  },
+  {
+   "definition": "English term used alongside leeboard for the board lowered into the water to oppose leeway.",
+   "id": "m-hist-pedrosa:129",
+   "location": "[page 20]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "daggerboard"
+  },
+  {
+   "definition": "Board set amidships on the longitudinal centreline; in Portuguese, patilhão.",
+   "id": "m-hist-pedrosa:130",
+   "location": "[page 20]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "centreboard"
+  },
+  {
+   "definition": "Centreboard on the boat's centreline; the leeboard is therefore a lateral version of it.",
+   "id": "m-hist-pedrosa:131",
+   "location": "[page 20]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "patilhão"
+  },
+  {
+   "definition": "Quarter of the hull near the stern, where the muleta's leeboards were fitted, one on each side.",
+   "id": "m-hist-pedrosa:132",
+   "location": "[page 18]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "alheta"
+  },
+  {
+   "definition": "Seamanship or rigging handling; the source says Spaniards did not understand the sail handling of the tartana, needing foreign sailors.",
+   "id": "m-hist-pedrosa:133",
+   "location": "[page 18]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "sailors",
+     "value": "three or four",
+     "what": "foreign sailors needed for the sails"
+    }
+   ],
+   "term": "mareage"
+  },
+  {
+   "definition": "Dutch word for leeboard, said to be a set of three planks stacked and cut in the shape of a shoe sole.",
+   "id": "m-hist-pedrosa:134",
+   "location": "[page 21]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "planks",
+     "value": "3",
+     "what": "number of stacked planks in a zwaard"
+    }
+   ],
+   "term": "zwaard"
+  },
+  {
+   "definition": "Alternative Portuguese name for the leeboard, used where a boat lacks a keel.",
+   "id": "m-hist-pedrosa:135",
+   "location": "[page 21]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pau de borda"
+  },
+  {
+   "definition": "Alternative name for the leeboard on the muleta, one on each side.",
+   "id": "m-hist-pedrosa:136",
+   "location": "[page 21]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pau de bolina"
+  },
+  {
+   "definition": "Name Filgueiras gave the leeboard, which stops the boat rolling sideways in the wind while sailing.",
+   "id": "m-hist-pedrosa:137",
+   "location": "[page 21]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pá de borda"
+  },
+  {
+   "definition": "Name Baldaque da Silva used for the leeboard.",
+   "id": "m-hist-pedrosa:138",
+   "location": "[page 21]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "esparrela de deriva"
+  },
+  {
+   "definition": "Name Manuel Leitão used for the leeboard, referring to its role against leeway.",
+   "id": "m-hist-pedrosa:139",
+   "location": "[page 21]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "tábua de abatimento"
+  },
+  {
+   "definition": "Flat bottom of a hull, one type of muleta bottom that lacks a proper keel.",
+   "id": "m-hist-pedrosa:140",
+   "location": "[page 21]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "fundo chato"
+  },
+  {
+   "definition": "Depth of the hull; Aubin gave leeboard length as a multiple of it.",
+   "id": "m-hist-pedrosa:141",
+   "location": "[page 21]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "times",
+     "value": "2",
+     "what": "leeboard length relative to hull depth (pontal)"
+    },
+    {
+     "unit": "ratio",
+     "value": "0.5",
+     "what": "leeboard width relative to its length"
+    },
+    {
+     "unit": "times",
+     "value": "2",
+     "what": "leeboard thickness relative to hull planking thickness"
+    }
+   ],
+   "term": "pontal"
+  },
+  {
+   "definition": "Hull planking, used as the reference for leeboard thickness.",
+   "id": "m-hist-pedrosa:142",
+   "location": "[page 21]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "tabuado do casco"
+  },
+  {
+   "definition": "Shallow waters, for which leeboards were made somewhat wider; deep, rough waters called for longer, narrower ones.",
+   "id": "m-hist-pedrosa:143",
+   "location": "[page 21]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "águas pouco profundas"
+  },
+  {
+   "definition": "Gondola-like hull shape with strongly raised bow and stern, as in the 1772 Portuguese muleta engraving.",
+   "id": "m-hist-pedrosa:144",
+   "location": "[page 21]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "gondolé"
+  },
+  {
+   "definition": "Rowers, who in the 1772 muleta sat amidships because the ends were raised.",
+   "id": "m-hist-pedrosa:145",
+   "location": "[page 21]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "remadores"
+  },
+  {
+   "definition": "Strong transverse bar used instead of a tiller to steer the rudder.",
+   "id": "m-hist-pedrosa:146",
+   "location": "[page 22]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "charolo"
+  },
+  {
+   "definition": "Iron bar with pointed studs on the bow's outer face, protecting it when hitting quays.",
+   "id": "m-hist-pedrosa:147",
+   "location": "[page 22]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "crista de pontas de ferro"
+  },
+  {
+   "definition": "Night fishing with a light or fire to attract fish.",
+   "id": "m-hist-pedrosa:148",
+   "location": "[page 22]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "candeio"
+  },
+  {
+   "definition": "Crew size of a muleta fishing for sardines according to Duhamel Du Monceau.",
+   "id": "m-hist-pedrosa:149",
+   "location": "[page 22]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "men",
+     "value": "5 or 6",
+     "what": "crew of the muleta"
+    }
+   ],
+   "term": "tripulação"
+  },
+  {
+   "definition": "The sail plan of the muleta: a latin sail on a yard, plus a triangular sail at the bow.",
+   "id": "m-hist-pedrosa:150",
+   "location": "[page 23]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "velame de navegação"
+  },
+  {
+   "definition": "A triangular sail set at the bow, part of the muleta's sail plan.",
+   "id": "m-hist-pedrosa:151",
+   "location": "[page 23]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vela triangular à proa"
+  },
+  {
+   "definition": "A bow curving backwards, a hull feature of the muleta in the 1772 and 1785 depictions.",
+   "id": "m-hist-pedrosa:152",
+   "location": "[page 23]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "proa arqueada para ré"
+  },
+  {
+   "definition": "A metal band on the bow, fitted with iron points.",
+   "id": "m-hist-pedrosa:153",
+   "location": "[page 23]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "banda metálica"
+  },
+  {
+   "definition": "Iron spikes forming a crest on the bow of the muleta; not seen on French fishing tartanas.",
+   "id": "m-hist-pedrosa:154",
+   "location": "[page 23]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "picos de ferro"
+  },
+  {
+   "definition": "A stern set back, as in 1785, unlike the projecting arched sterns of 1710 and 1772.",
+   "id": "m-hist-pedrosa:155",
+   "location": "[page 23]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "popa recuada"
+  },
+  {
+   "definition": "Rectangular leeboards, one on each side of the hull, used by the muleta; not found on French tartanas.",
+   "id": "m-hist-pedrosa:156",
+   "location": "[page 23]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "boards",
+     "value": "2",
+     "what": "number of leeboards"
+    }
+   ],
+   "term": "tábuas de bolina"
+  },
+  {
+   "definition": "A cargo-carrying variant of the muleta with a very similar design, and a shallow flattish hull.",
+   "id": "m-hist-pedrosa:157",
+   "location": "[page 23]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Barco de Riba Tejo"
+  },
+  {
+   "definition": "A fishing boat similar to the muleta, with the same forward-raked mast, sail plan, bow band with iron points and leeboards.",
+   "id": "m-hist-pedrosa:158",
+   "location": "[page 23]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Batel de Pesca"
+  },
+  {
+   "definition": "A rudder worked by tackles (block-and-rope purchases), a feature of the 1772 muleta absent from tartanas.",
+   "id": "m-hist-pedrosa:159",
+   "location": "[section: 12 A Muleta do Séc. XIX]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1772",
+     "what": "year of the muleta showing this feature"
+    }
+   ],
+   "term": "leme manobrado por talhas"
+  },
+  {
+   "definition": "Sideways trawling with the net, which the muleta's hull form was designed to facilitate.",
+   "id": "m-hist-pedrosa:160",
+   "location": "[section: 12 A Muleta do Séc. XIX]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "arrasto pelo través"
+  },
+  {
+   "definition": "A flat or inward-curving bottom toward the keel, making sideways trawling easier and allowing shallow draught.",
+   "id": "m-hist-pedrosa:161",
+   "location": "[section: 12 A Muleta do Séc. XIX]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "fundo chato ou reentrante para a quilha"
+  },
+  {
+   "definition": "Draught, the depth of hull below the waterline; the muleta's bottom shape kept it small.",
+   "id": "m-hist-pedrosa:162",
+   "location": "[section: 12 A Muleta do Séc. XIX]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "tirantes de água"
+  },
+  {
+   "definition": "A very old Portuguese net dragged to the beach.",
+   "id": "m-hist-pedrosa:163",
+   "location": "[section: 13. A Xávega Moderna e o Bou]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "xávega"
+  },
+  {
+   "definition": "Name for the same dragnet fishing method on the west coast of Portugal; equivalent to the Algarve xávega.",
+   "id": "m-hist-pedrosa:164",
+   "location": "[page 27]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "arte"
+  },
+  {
+   "definition": "Fishing with two boats towing a large bagged net astern along the seabed; also called bou or chalut.",
+   "id": "m-hist-pedrosa:165",
+   "location": "[page 27]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "parelha"
+  },
+  {
+   "definition": "Pair-trawling method dragging the net aboard the boats; name comes from the Catalan word for ox, by analogy with a pair of oxen ploughing.",
+   "id": "m-hist-pedrosa:166",
+   "location": "[page 27]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1755",
+     "what": "year the method reached the Gulf of Cádiz"
+    },
+    {
+     "unit": "boats",
+     "value": "40",
+     "what": "Valencian bou boats armed in the Algarve (1787)"
+    }
+   ],
+   "term": "bou"
+  },
+  {
+   "definition": "French-derived name for the pair-trawling method also called parelha or bou.",
+   "id": "m-hist-pedrosa:167",
+   "location": "[page 27]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "chalut"
+  },
+  {
+   "definition": "French name for pair trawling along the seabed, likened to a pair of oxen pulling a plough.",
+   "id": "m-hist-pedrosa:168",
+   "location": "[page 27]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "aux boeufs"
+  },
+  {
+   "definition": "Lead weights on the net, described as doubled and very heavily loaded, so the net sinks to the bottom and walls in fish.",
+   "id": "m-hist-pedrosa:169",
+   "location": "[page 28]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "plomadas"
+  },
+  {
+   "definition": "Synonym of saco for the bag part of a dragnet; in one 1779 document it is used as a synonym of saco.",
+   "id": "m-hist-pedrosa:170",
+   "location": "[page 28]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "copo"
+  },
+  {
+   "definition": "Name equating to the Algarve xávega and the west coast arte.",
+   "id": "m-hist-pedrosa:171",
+   "location": "[page 28]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Nova Arte"
+  },
+  {
+   "definition": "Dragnets made of three mesh orders: the arms (mangas or mãos), the bag (saco) and the cuada.",
+   "id": "m-hist-pedrosa:172",
+   "location": "[page 28]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "vessels",
+     "value": "132 boats and 12 saveiros",
+     "what": "boats and saveiros fishing with these nets in the 1779 document (Lisbon area)"
+    }
+   ],
+   "term": "redes de três ordens de malhas"
+  },
+  {
+   "definition": "Boats working off the Costa de Caparica, fishing with xávegas.",
+   "id": "m-hist-pedrosa:173",
+   "location": "[page 28]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "12",
+     "what": "saveiros on the Costa"
+    }
+   ],
+   "term": "saveiros"
+  },
+  {
+   "definition": "Small boat that trawled with the tartaranha in the late 19th century.",
+   "id": "m-hist-pedrosa:174",
+   "location": "[section: A MULETA E A TARTARANHA (SÉCULOS XV-XX)]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bote"
+  },
+  {
+   "definition": "Boat smaller than the muleta, the last type to fish with the tartaranha net, with somewhat different sails.",
+   "id": "m-hist-pedrosa:175",
+   "location": "[section: A MULETA E A TARTARANHA (SÉCULOS XV-XX)]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "12",
+     "what": "length"
+    },
+    {
+     "unit": "m",
+     "value": "3.60",
+     "what": "beam (boca)"
+    },
+    {
+     "unit": "m",
+     "value": "1.50",
+     "what": "depth (pontal)"
+    },
+    {
+     "unit": "men",
+     "value": "15",
+     "what": "crew"
+    }
+   ],
+   "term": "bote de tartaranha"
+  },
+  {
+   "definition": "Cargo version of the muleta, practically indistinguishable from the Barco de Riba Tejo; sailed to the Algarve and North Africa.",
+   "id": "m-hist-pedrosa:176",
+   "location": "[section: 15. A Muleta de Carga]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "muleta de carga"
+  },
+  {
+   "definition": "Boat type that, like the muleta, ventured beyond the bar and along the coast seeking cargo.",
+   "id": "m-hist-pedrosa:177",
+   "location": "[section: 15. A Muleta de Carga]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "rasca"
+  },
+  {
+   "definition": "Coastal navigation, such as trips to the Algarve to fetch produce or trade with Moroccan ports.",
+   "id": "m-hist-pedrosa:178",
+   "location": "[section: 15. A Muleta de Carga]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "navegação costeira"
+  },
+  {
+   "definition": "Rigging the muleta as a yacht-style vessel for commercial voyages, possibly with two or three masts.",
+   "id": "m-hist-pedrosa:179",
+   "location": "[section: 15. A Muleta de Carga]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "masts",
+     "value": "2 or 3",
+     "what": "possible number of masts"
+    }
+   ],
+   "term": "armar em iate"
+  },
+  {
+   "definition": "Dangerous manoeuvre of reducing and furling lateen sails, with sailors climbing astride the yards.",
+   "id": "m-hist-pedrosa:180",
+   "location": "[section: 15. A Muleta de Carga]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "carregar e ferrar as velas"
+  },
+  {
+   "definition": "Lashing passed after the sail cloth is secured to the yard when furling.",
+   "id": "m-hist-pedrosa:181",
+   "location": "[section: 15. A Muleta de Carga]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "tomadouro"
+  },
+  {
+   "definition": "Crew who climb the yard to furl the mainsail, ordered inversely by each man's weight.",
+   "id": "m-hist-pedrosa:182",
+   "location": "[section: 15. A Muleta de Carga]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "guarnição"
+  },
+  {
+   "definition": "Main sail of the muleta, furled by the crew climbing the yard.",
+   "id": "m-hist-pedrosa:183",
+   "location": "[section: 15. A Muleta de Carga]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "vela grande"
+  },
+  {
+   "definition": "Upper end of the main lateen sail, where a triangular sail is hoisted.",
+   "id": "m-hist-pedrosa:184",
+   "location": "[section: 16. As Velas e a Rede]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pena"
+  },
+  {
+   "definition": "Upper triangular sail aft, hoisted on the peak of the mainsail and sheeted to the boom end.",
+   "id": "m-hist-pedrosa:185",
+   "location": "[section: 16. As Velas e a Rede]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "varredoura de cima"
+  },
+  {
+   "definition": "Lower triangular sail set beneath the upper varredoura at the stern.",
+   "id": "m-hist-pedrosa:186",
+   "location": "[section: 16. As Velas e a Rede]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "varredoura de baixo"
+  },
+  {
+   "definition": "Stays running from the masthead to the stem and forward boom, on which small sails are hoisted.",
+   "id": "m-hist-pedrosa:187",
+   "location": "[section: 16. As Velas e a Rede]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "sails",
+     "value": "6 to 7",
+     "what": "small sails hoisted on the stays"
+    }
+   ],
+   "term": "estais"
+  },
+  {
+   "definition": "The stem at the bow, to which the stays run from the masthead.",
+   "id": "m-hist-pedrosa:188",
+   "location": "[section: 16. As Velas e a Rede]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "roda de proa"
+  },
+  {
+   "definition": "One of the small sails set on the forestays of the muleta.",
+   "id": "m-hist-pedrosa:189",
+   "location": "[section: 16. As Velas e a Rede]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "toldos"
+  },
+  {
+   "definition": "One of the small sails set on the forestays of the muleta.",
+   "id": "m-hist-pedrosa:190",
+   "location": "[section: 16. As Velas e a Rede]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "muletins"
+  },
+  {
+   "definition": "One of the small sails set on the forestays of the muleta.",
+   "id": "m-hist-pedrosa:191",
+   "location": "[section: 16. As Velas e a Rede]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "cozinheira"
+  },
+  {
+   "definition": "Figure showing the sail layout of the tartaranha boat, labelling its many small sails; it also shows the conical net bag.",
+   "id": "m-hist-pedrosa:192",
+   "location": "[page 32]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Plano vélico do bote da tartaranha"
+  },
+  {
+   "definition": "Main large sail listed in the tartaranha boat's sail plan (item 3 in Figure 8).",
+   "id": "m-hist-pedrosa:193",
+   "location": "[page 32]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Grande"
+  },
+  {
+   "definition": "Sail named in the sail plan, apparently set on a spar (item 4 in Figure 8).",
+   "id": "m-hist-pedrosa:194",
+   "location": "[page 32]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Pano da vara"
+  },
+  {
+   "definition": "Sail listed in the sail plan (item 5 in Figure 8).",
+   "id": "m-hist-pedrosa:195",
+   "location": "[page 32]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Polaca"
+  },
+  {
+   "definition": "Bow varredoura sail in the sail plan (item 6 in Figure 8).",
+   "id": "m-hist-pedrosa:196",
+   "location": "[page 32]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Varredoura da proa"
+  },
+  {
+   "definition": "Awning or cover listed as item 9 in the sail plan.",
+   "id": "m-hist-pedrosa:197",
+   "location": "[page 32]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "Toldo"
+  },
+  {
+   "definition": "Bag of the tartaranha net, originally conical, later replaced by a rectangular form with seams.",
+   "id": "m-hist-pedrosa:198",
+   "location": "[page 32]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "late 19th century (1896 decree",
+     "what": "period of change to rectangular net"
+    }
+   ],
+   "term": "saco da rede tartaranha"
+  },
+  {
+   "definition": "A net haul or set; said by one author to last about eight hours on average, a claim the author doubts.",
+   "id": "m-hist-pedrosa:199",
+   "location": "[page 33]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "hours",
+     "value": "8",
+     "what": "average haul duration (Rebelo's claim)"
+    }
+   ],
+   "term": "lanço"
+  },
+  {
+   "definition": "Fathoms, unit of line length; muletas reportedly paid out this much line so the net reached the bottom.",
+   "id": "m-hist-pedrosa:200",
+   "location": "[page 33]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "braças",
+     "value": "300",
+     "what": "line paid out (Rebelo's claim)"
+    }
+   ],
+   "term": "braças"
+  },
+  {
+   "definition": "Windlass, a mechanical device that could be used to haul and hoist nets or weights.",
+   "id": "m-hist-pedrosa:201",
+   "location": "[page 33]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "molinete"
+  },
+  {
+   "definition": "Gillnets, probably among other fishing methods used by muletas.",
+   "id": "m-hist-pedrosa:202",
+   "location": "[page 33]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "redes de emalhar"
+  },
+  {
+   "definition": "Handlines, probably used by muletas for fishing.",
+   "id": "m-hist-pedrosa:203",
+   "location": "[page 33]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "linhas de mão"
+  },
+  {
+   "definition": "Lines with many hooks, a probable muleta fishing method.",
+   "id": "m-hist-pedrosa:204",
+   "location": "[page 33]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "linhas com muitos anzóis"
+  },
+  {
+   "definition": "Possible trawling methods: towing astern and pair trawling with two boats.",
+   "id": "m-hist-pedrosa:205",
+   "location": "[page 33]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "arrasto à popa e em parelha"
+  },
+  {
+   "definition": "Small Indian fishing craft of sewn planks with a small sail, compared by Bluteau to the Ribatejo muleta.",
+   "id": "m-hist-pedrosa:206",
+   "location": "[page 33]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "sado"
+  },
+  {
+   "definition": "Fine-meshed net that catches even the smallest fish, used by muletas.",
+   "id": "m-hist-pedrosa:207",
+   "location": "[page 33]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "rede varredoura"
+  },
+  {
+   "definition": "Supposed type of muleta with only one small sail.",
+   "id": "m-hist-pedrosa:208",
+   "location": "[page 34]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "sail",
+     "value": "1",
+     "what": "sails"
+    }
+   ],
+   "term": "muleta do Ribatejo"
+  },
+  {
+   "definition": "Small sail of the muleta; Lisbon-Belém boats could carry only one such sail besides the main.",
+   "id": "m-hist-pedrosa:209",
+   "location": "[page 34]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "sail",
+     "value": "1",
+     "what": "sails allowed on Lisbon-Belém boats, besides the muletim"
+    }
+   ],
+   "term": "muletim"
+  },
+  {
+   "definition": "Three-masted lateen-rigged caravel, which French authors may have confused with the muleta.",
+   "id": "m-hist-pedrosa:210",
+   "location": "[page 34]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "masts",
+     "value": "3",
+     "what": "masts"
+    }
+   ],
+   "term": "caravela latina"
+  },
+  {
+   "definition": "English name for the muleta, later applied to all small lateen-rigged boats of the Tagus estuary; possibly a joke about hull shape resembling a bean pod.",
+   "id": "m-hist-pedrosa:211",
+   "location": "[page 34]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "bean-cod"
+  },
+  {
+   "definition": "Willaumez's name for the one-masted muleta, also spelled moulète, as distinct from the multi-masted mulet.",
+   "id": "m-hist-pedrosa:212",
+   "location": "[page 36]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "mast",
+     "value": "1",
+     "what": "number of masts"
+    }
+   ],
+   "term": "mulette"
+  },
+  {
+   "definition": "Aftmost mast of the mulet, vertical and carrying a small lateen sail.",
+   "id": "m-hist-pedrosa:213",
+   "location": "[page 36]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "mezena"
+  },
+  {
+   "definition": "Vessel very similar to the three-masted mulet; the only notable difference is a vertical main mast.",
+   "id": "m-hist-pedrosa:214",
+   "location": "[page 37]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pinque"
+  },
+  {
+   "definition": "Small fishing craft carried by cod ships, launched at dawn and returning at dusk; before about 1875 these boats were larger and heavier.",
+   "id": "m-hist-pedrosa:215",
+   "location": "[page 35]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1875",
+     "what": "approximate year doris replaced earlier small boats"
+    }
+   ],
+   "term": "doris"
+  },
+  {
+   "definition": "Pilot service performed by muleta crews, guiding vessels.",
+   "id": "m-hist-pedrosa:216",
+   "location": "[page 35]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pilotagem"
+  },
+  {
+   "definition": "Drag-type sail plan of the muleta, said to distinguish it from boats anywhere in the world.",
+   "id": "m-hist-pedrosa:217",
+   "location": "[page 37]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "velame de arrasto"
+  },
+  {
+   "definition": "Pilots who guided ships across the Lisbon bar; the muleta was their working boat.",
+   "id": "m-hist-pedrosa:218",
+   "location": "[page 37]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "pilotos da barra de Lisboa"
+  },
+  {
+   "definition": "Word long used generically for small and medium ships and boats; it stopped being mentioned in the later 18th century, its place taken by the muleta.",
+   "id": "m-hist-pedrosa:219",
+   "location": "[page 37]",
+   "measured_by": "",
+   "numbers": [
+    {
+     "unit": "century",
+     "value": "second half of the 18th centur",
+     "what": "period when caravela ceased to be mentioned"
+    }
+   ],
+   "term": "caravela"
+  },
+  {
+   "definition": "English word for mullet fish (tainha, muge), familiar to the English and similar to the name muleta.",
+   "id": "m-hist-pedrosa:220",
+   "location": "[page 37]",
+   "measured_by": "",
+   "numbers": [],
+   "term": "mullet"
+  }
+ ],
+ "kind": "historical",
+ "lang": "pt-PT",
+ "partsDone": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14
+ ],
+ "partsTotal": 15,
+ "runAt": "2026-11-12T20:17:40.426Z",
+ "sourceId": "m-hist-pedrosa",
+ "textChars": 85283,
+ "title": "Pedrosa, A Muleta e a Tartaranha (sec. XV-XX)"
+}

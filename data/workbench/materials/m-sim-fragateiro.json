@@ -1,0 +1,9 @@
+{
+ "createdAt": "2026-11-12T12:00:00Z",
+ "kind": "simulation",
+ "language": "en",
+ "notes": "CC0. Vendored read-only copy in domains/sailing/vendor. Physics documented in docs/PHYSICS.md.",
+ "read": "full",
+ "title": "fragateiro web game: sailing physics (src/physics)",
+ "url": "https://github.com/TagusNavyVirtualMuseum/fragateiro"
+}

@@ -1,0 +1,108 @@
+{
+ "items": [
+  {
+   "action": "Regular ferry crossing links Belém, Porto Brandão and Trafaria across the Tagus mouth, a short distance from the Atlantic; the trip takes about 30 minutes.",
+   "boat": "catamaran / ferry",
+   "cargo": "passengers, some cars",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-paisagem:3rd:p1",
+   "kind": "practice",
+   "location": "Travessia Fluvial Belém - Trafaria",
+   "numbers": [
+    {
+     "unit": "minutes",
+     "value": "30",
+     "what": "crossing duration"
+    }
+   ],
+   "period": "",
+   "place": "Belém, Porto Brandão, Trafaria",
+   "who": ""
+  },
+  {
+   "action": "Belém river station, with simple architecture, black-and-white marble floor and wooden benches, was built in 1940 as a quay supporting the Exposição do Mundo Português.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-paisagem:3rd:p2",
+   "kind": "description",
+   "location": "Travessia Fluvial Belém - Trafaria",
+   "numbers": [],
+   "period": "1940",
+   "place": "Estação Fluvial de Belém",
+   "who": ""
+  },
+  {
+   "action": "Very few passengers travel to the south bank from Belém; the large ferry carries little cargo and sometimes no cars.",
+   "boat": "ferry de grandes proporções",
+   "cargo": "few people, little cargo, sometimes no cars",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-paisagem:3rd:p3",
+   "kind": "description",
+   "location": "Travessia Fluvial Belém - Trafaria",
+   "numbers": [],
+   "period": "",
+   "place": "Belém",
+   "who": "passengers"
+  },
+  {
+   "action": "Historically the Tagus was the only road for national and intercontinental trade and linked the two banks; the crossing still carries this maritime heritage.",
+   "boat": "",
+   "cargo": "trade",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-paisagem:3rd:p4",
+   "kind": "description",
+   "location": "Travessia Fluvial Belém - Trafaria",
+   "numbers": [],
+   "period": "",
+   "place": "Tejo",
+   "who": ""
+  },
+  {
+   "action": "Intense river and maritime activity lasted until the 1970s; building the Ponte 25 de Abril abruptly changed this landscape.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "m-hist-paisagem:3rd:p5",
+   "kind": "event",
+   "location": "Travessia Fluvial Belém - Trafaria",
+   "numbers": [],
+   "period": "anos 70 do século passado",
+   "place": "Tejo",
+   "who": ""
+  },
+  {
+   "action": "On a morning crossing toward Lisbon, about twenty cars and people were seen travelling; the boats take something from the south bank but bring little back.",
+   "boat": "",
+   "cargo": "cars, people",
+   "conditions": "morning",
+   "gear": "",
+   "id": "m-hist-paisagem:3rd:p6",
+   "kind": "description",
+   "location": "Travessia Fluvial Belém - Trafaria",
+   "numbers": [
+    {
+     "unit": "count",
+     "value": "about 20",
+     "what": "cars and people seen"
+    }
+   ],
+   "period": "",
+   "place": "Trafaria, Porto Brandão to Lisbon",
+   "who": ""
+  }
+ ],
+ "partsDone": [
+  0
+ ],
+ "partsTotal": 1,
+ "runAt": "2026-11-13T01:43:10.952Z",
+ "sourceId": "m-hist-paisagem",
+ "textChars": 4873,
+ "title": "Museu da Paisagem, Belém–Trafaria"
+}

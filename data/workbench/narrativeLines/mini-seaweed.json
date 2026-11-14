@@ -1,0 +1,633 @@
+{
+ "lines": [
+  {
+   "beat": "b1",
+   "claims": [
+    {
+     "claim": "Moliço is gathered on shallow grounds of the ria",
+     "evidence": [
+      "e32",
+      "e43"
+     ]
+    },
+    {
+     "claim": "Gaining ground upwind is done close-hauled, by tacking",
+     "evidence": [
+      "e37",
+      "e33"
+     ]
+    },
+    {
+     "claim": "Farmers use moliço to fertilise sandy soil",
+     "evidence": [
+      "e3",
+      "e1"
+     ]
+    }
+   ],
+   "en": "Cast off, Zé. The moliço grows up on the shallow grounds, and the wind comes from there. We go close-hauled and tack. The farmers need it to feed their sandy soil.",
+   "fictional": false,
+   "id": "l1",
+   "pt": "Larga, Zé. O moliço está nas praias de moliço, lá para cima, e o vento vem de lá. Vamos à bolina, a virar de bordo. Os lavradores precisam dele para a areia.",
+   "status": "draft"
+  },
+  {
+   "beat": "b1",
+   "claims": [
+    {
+     "claim": "Going upwind means sailing close-hauled and tacking from side to side",
+     "evidence": [
+      "e37",
+      "e33"
+     ]
+    },
+    {
+     "claim": "Moliço fertilises the sandy farmland",
+     "evidence": [
+      "e3",
+      "e43"
+     ]
+    }
+   ],
+   "en": "Sheet in, boy. You don't go straight into the wind: close-hauled, then tack, side to side. The farmers are waiting for the moliço. Their sandy land needs it.",
+   "fictional": false,
+   "id": "l2",
+   "pt": "Caça a vela, rapaz. Contra o vento não se vai a direito: bolina e virar de bordo, de um lado para o outro. Os lavradores esperam pelo moliço. A terra arenosa precisa dele.",
+   "status": "draft"
+  },
+  {
+   "beat": "b2",
+   "claims": [
+    {
+     "claim": "Low sides let full rakes of moliço be pulled aboard easily",
+     "evidence": [
+      "e25"
+     ]
+    },
+    {
+     "claim": "The moliceiro has a flat bottom for shallow water",
+     "evidence": [
+      "e25"
+     ]
+    },
+    {
+     "claim": "The boat is about 15 m long with 5 tonnes capacity",
+     "evidence": [
+      "e29"
+     ]
+    },
+    {
+     "claim": "The hull is built of pine",
+     "evidence": [
+      "e24"
+     ]
+    }
+   ],
+   "en": "Why such low sides? So a full rake comes aboard easily, Zé. Flat bottom for shallow water. Fifteen metres of pine, and she carries five tonnes when full.",
+   "fictional": false,
+   "id": "l3",
+   "pt": "Porquê tão baixo de borda? Para o ancinho cheio entrar sem custo, Zé. Fundo chato para a pouca água. Quinze metros de pinho, e leva cinco toneladas quando vai cheio.",
+   "status": "draft"
+  },
+  {
+   "beat": "b2",
+   "claims": [
+    {
+     "claim": "The pine hull is coated in black pitch to aid caulking and protect the wood",
+     "evidence": [
+      "e21"
+     ]
+    },
+    {
+     "claim": "Sarrim is spread over the pitch so crews do not slip",
+     "evidence": [
+      "e20"
+     ]
+    }
+   ],
+   "en": "That black is pitch, Zé, for caulking and to keep water off the wood. On top, sarrim, so you don't slip. You fell once already. Enough.",
+   "fictional": false,
+   "id": "l4",
+   "pt": "Esse negro é breu, Zé, para calafetar e guardar a madeira da água. Por cima, o sarrim, para não escorregares. Já caíste uma vez. Chega.",
+   "status": "draft"
+  },
+  {
+   "beat": "b2",
+   "claims": [
+    {
+     "claim": "Moliço gathering was a main source of employment for regional families",
+     "evidence": [
+      "e5"
+     ]
+    },
+    {
+     "claim": "As more people worked in the trade, more boats were built",
+     "evidence": [
+      "e6"
+     ]
+    },
+    {
+     "claim": "A broad white sail moves the boat",
+     "evidence": [
+      "e35"
+     ]
+    }
+   ],
+   "en": "Many families live from moliço, Zé. More people in the trade, more boats on the ria. And that broad white sail is what moves us. Keep it full.",
+   "fictional": false,
+   "id": "l5",
+   "pt": "Muitas famílias vivem do moliço, Zé. Mais gente no ofício, mais barcos na ria. E essa vela larga e branca é que nos leva. Mantém-na cheia.",
+   "status": "draft"
+  },
+  {
+   "beat": "b3",
+   "claims": [
+    {
+     "claim": "As more people worked in the trade, more boats were built and sailed",
+     "evidence": [
+      "e6"
+     ]
+    },
+    {
+     "claim": "The moliceiros worked across the whole lagoon",
+     "evidence": [
+      "e2"
+     ]
+    }
+   ],
+   "en": "So many moliceiros, Ti Manuel! I know: the more people in the trade, the more boats get built. And they work across the whole ria.",
+   "fictional": false,
+   "id": "l6",
+   "pt": "Tantos moliceiros, Ti Manuel! Já sei: quanto mais gente no ofício, mais barcos se fazem. E andam por toda a ria.",
+   "status": "draft"
+  },
+  {
+   "beat": "b3",
+   "claims": [
+    {
+     "claim": "Moliço gathering was first done by farmers, then became an independent profession supplying farmers",
+     "evidence": [
+      "e4"
+     ]
+    }
+   ],
+   "en": "Look at them all! First it was the farmers who gathered the moliço. Now some live only from this and sell it to the farmers, right?",
+   "fictional": false,
+   "id": "l7",
+   "pt": "Olhe aqueles todos! Primeiro eram os lavradores a apanhar o moliço. Agora há quem viva só disto e o venda aos lavradores, não é?",
+   "status": "draft"
+  },
+  {
+   "beat": "b4",
+   "claims": [],
+   "en": "Ease the sail and push!",
+   "fictional": true,
+   "id": "l8",
+   "pt": "Folga a vela e empurra!",
+   "status": "draft"
+  },
+  {
+   "beat": "b4",
+   "claims": [],
+   "en": "Ease off! Push us free, Zé!",
+   "fictional": true,
+   "id": "l9",
+   "pt": "Folga! Empurra para fora, Zé!",
+   "status": "draft"
+  },
+  {
+   "beat": "b5",
+   "claims": [
+    {
+     "claim": "Moliço is harvested in the shallow areas of the ria",
+     "evidence": [
+      "e32"
+     ]
+    },
+    {
+     "claim": "The moliceiro has a flat bottom for shallow water",
+     "evidence": [
+      "e25"
+     ]
+    },
+    {
+     "claim": "A wide, shallow rudder was needed to steer in the shallow moliço grounds",
+     "evidence": [
+      "e31"
+     ]
+    }
+   ],
+   "en": "Moliço likes the lowest water. That's why the boat is flat and the rudder wide and shallow. You learn the ria's bottom like this.",
+   "fictional": false,
+   "id": "l10",
+   "pt": "O moliço gosta da água mais baixa. Por isso o barco é chato e o leme largo e raso. O fundo da ria aprende-se assim.",
+   "status": "draft"
+  },
+  {
+   "beat": "b5",
+   "claims": [
+    {
+     "claim": "A wide, shallow rudder was needed to steer in shallow waters",
+     "evidence": [
+      "e31"
+     ]
+    },
+    {
+     "claim": "The flat bottom suits shallow water",
+     "evidence": [
+      "e25"
+     ]
+    }
+   ],
+   "en": "In shallow water, only a wide, shallow rudder steers. Flat bottom, little water. The rest, Zé, you learn by running aground.",
+   "fictional": false,
+   "id": "l11",
+   "pt": "Nas águas baixas, só um leme largo e raso governa. Fundo chato, pouca água. O resto, Zé, aprende-se a encalhar.",
+   "status": "draft"
+  },
+  {
+   "beat": "b6",
+   "claims": [
+    {
+     "claim": "The moliceiro supplies moliço to farmers",
+     "evidence": [
+      "e4",
+      "e30"
+     ]
+    },
+    {
+     "claim": "Moliço serves as fertiliser for farmland",
+     "evidence": [
+      "e1"
+     ]
+    }
+   ],
+   "en": "Boat full. This goes to the farmers, to fertilise the sand. My back aches, as always. But the fields are waiting for us. You've earned your place, Zé.",
+   "fictional": false,
+   "id": "l12",
+   "pt": "Barco cheio. Isto vai para os lavradores, para estrumar a areia. Doem-me as costas, como sempre. Mas os campos esperam por nós. Ganhaste o teu lugar, Zé.",
+   "status": "draft"
+  },
+  {
+   "beat": "b6",
+   "claims": [
+    {
+     "claim": "The moliceiro gathers moliço and supplies it to farmers",
+     "evidence": [
+      "e30",
+      "e4"
+     ]
+    },
+    {
+     "claim": "Moliço gathering was a main source of employment for regional families",
+     "evidence": [
+      "e5"
+     ]
+    }
+   ],
+   "en": "The farmers are waiting. We gather, they fertilise. Many families live from this, Zé. It isn't pretty, it's needed. Tomorrow you come back with me.",
+   "fictional": false,
+   "id": "l13",
+   "pt": "Os lavradores estão à espera. Nós apanhamos, eles estrumam. Muitas famílias vivem disto, Zé. Não é bonito, é preciso. Amanhã voltas comigo.",
+   "status": "draft"
+  },
+  {
+   "beat": "b7",
+   "claims": [
+    {
+     "claim": "Each moliceiro has four panels, two at the bow and two at the stern",
+     "evidence": [
+      "e7",
+      "e8"
+     ]
+    },
+    {
+     "claim": "Each panel has a drawing and a caption, and no two panels repeat",
+     "evidence": [
+      "e7"
+     ]
+    },
+    {
+     "claim": "The panels use pure primary colours: yellow, green, blue, red, white and black",
+     "evidence": [
+      "e12"
+     ]
+    },
+    {
+     "claim": "No moliceiro is considered finished until decorated",
+     "evidence": [
+      "e8"
+     ]
+    }
+   ],
+   "en": "Look at the panels, Ti Manuel! Two at the bow, two at the stern, each with a drawing and caption. Yellow, green, blue, red, white and black, pure colours. And no two alike. A boat isn't finished without its painting, is it?",
+   "fictional": false,
+   "id": "l14",
+   "pt": "Olhe os painéis, Ti Manuel! Dois à proa, dois à popa, cada um com desenho e legenda. Amarelo, verde, azul, vermelho, branco e preto, cores puras. E nenhum é igual a outro. Um barco sem pintura não está acabado, pois não?",
+   "status": "draft"
+  },
+  {
+   "beat": "b7",
+   "claims": [
+    {
+     "claim": "Painters usually draw from their own imagination with little input from the owner",
+     "evidence": [
+      "e10"
+     ]
+    },
+    {
+     "claim": "The panels have vivid colour, bold outlines and humorous captions",
+     "evidence": [
+      "e9"
+     ]
+    },
+    {
+     "claim": "The caption is painted on a white or pink band below the frieze",
+     "evidence": [
+      "e11"
+     ]
+    },
+    {
+     "claim": "Panel themes may be religious, humorous or satirical",
+     "evidence": [
+      "e7",
+      "e10"
+     ]
+    }
+   ],
+   "en": "This panel is funny! The painter invents the drawing from his own head, hardly asking the owner. Vivid colours, bold outlines, and the caption on a white or pink band below. There are panels with saints and others poking fun.",
+   "fictional": false,
+   "id": "l15",
+   "pt": "Este painel tem graça! O pintor inventa o desenho da cabeça dele, quase sem perguntar ao dono. Cores vivas, contornos fortes, e a legenda numa faixa branca ou cor-de-rosa por baixo. Há painéis de santos e outros a fazer troça.",
+   "status": "draft"
+  },
+  {
+   "beat": "b91",
+   "claims": [],
+   "en": "That's it.",
+   "fictional": true,
+   "id": "l16",
+   "pt": "Isso.",
+   "status": "draft"
+  },
+  {
+   "beat": "b91",
+   "claims": [],
+   "en": "Just like that.",
+   "fictional": true,
+   "id": "l17",
+   "pt": "Assim mesmo.",
+   "status": "draft"
+  },
+  {
+   "beat": "b91",
+   "claims": [],
+   "en": "Not bad.",
+   "fictional": true,
+   "id": "l18",
+   "pt": "Não está mal.",
+   "status": "draft"
+  },
+  {
+   "beat": "b91",
+   "claims": [],
+   "en": "Well done, lad.",
+   "fictional": true,
+   "id": "l19",
+   "pt": "Bem feito, rapaz.",
+   "status": "draft"
+  },
+  {
+   "beat": "b92",
+   "claims": [],
+   "en": "Yes! We did it!",
+   "fictional": true,
+   "id": "l20",
+   "pt": "Boa! Conseguimos!",
+   "status": "draft"
+  },
+  {
+   "beat": "b92",
+   "claims": [],
+   "en": "Look, it worked!",
+   "fictional": true,
+   "id": "l21",
+   "pt": "Olha, resultou!",
+   "status": "draft"
+  },
+  {
+   "beat": "b92",
+   "claims": [],
+   "en": "That was great!",
+   "fictional": true,
+   "id": "l22",
+   "pt": "Isso foi fixe!",
+   "status": "draft"
+  },
+  {
+   "beat": "b92",
+   "claims": [],
+   "en": "That's the way!",
+   "fictional": true,
+   "id": "l23",
+   "pt": "Assim é que é!",
+   "status": "draft"
+  },
+  {
+   "beat": "b90",
+   "claims": [
+    {
+     "claim": "Moliço is gathered from the lagoon bed.",
+     "evidence": [
+      "e1",
+      "e43"
+     ]
+    },
+    {
+     "claim": "Moliço is used to fertilize the sandy farmland beside the ria.",
+     "evidence": [
+      "e3",
+      "e43"
+     ]
+    }
+   ],
+   "en": "Moliço comes off the lagoon bed. It goes to the farmers to feed their sandy fields. Without it, sand gives nothing.",
+   "fictional": false,
+   "id": "l24",
+   "pt": "O moliço vem do fundo da ria. Vai para os lavradores, para adubar as terras de areia. Sem ele, a areia não dá nada.",
+   "speaker": "k1",
+   "status": "draft",
+   "topic": "work"
+  },
+  {
+   "beat": "b90",
+   "claims": [
+    {
+     "claim": "The moliceiro has a flat bottom for the shallow lagoon waters.",
+     "evidence": [
+      "e25"
+     ]
+    },
+    {
+     "claim": "Its low sides let rakes full of moliço be pulled aboard easily.",
+     "evidence": [
+      "e25"
+     ]
+    }
+   ],
+   "en": "Flat bottom, for shallow water. Low sides, so you can haul a full rake aboard without breaking your back.",
+   "fictional": false,
+   "id": "l25",
+   "pt": "Fundo chato, para a água baixa. Borda baixa, para puxar o ancinho cheio para dentro sem partir as costas.",
+   "speaker": "k1",
+   "status": "draft",
+   "topic": "boat"
+  },
+  {
+   "beat": "b90",
+   "claims": [
+    {
+     "claim": "A moliceiro has four painted panels, two at the bow and two at the stern.",
+     "evidence": [
+      "e8"
+     ]
+    },
+    {
+     "claim": "It is famed as the most beautiful boat of the Ria.",
+     "evidence": [
+      "e8"
+     ]
+    },
+    {
+     "claim": "No moliceiro is considered finished until it is decorated.",
+     "evidence": [
+      "e8"
+     ]
+    }
+   ],
+   "en": "Four painted panels, two at the bow and two at the stern! They say it's the most beautiful boat on the Ria, and it isn't finished until it's painted.",
+   "fictional": false,
+   "id": "l26",
+   "pt": "Quatro painéis pintados, dois à proa e dois à ré! Dizem que é o barco mais bonito da Ria, e que sem pintura nem está acabado.",
+   "speaker": "k2",
+   "status": "draft",
+   "topic": "boat"
+  },
+  {
+   "beat": "b90",
+   "claims": [
+    {
+     "claim": "Moliço gathering was first done by farmers.",
+     "evidence": [
+      "e4"
+     ]
+    },
+    {
+     "claim": "It grew into an independent profession, the moliceiro, who supplies moliço to farmers.",
+     "evidence": [
+      "e4",
+      "e30"
+     ]
+    }
+   ],
+   "en": "Farmers used to gather the moliço themselves. Then it became a trade of its own. The moliceiro gathers, the farmer buys. That's how I live.",
+   "fictional": false,
+   "id": "l27",
+   "pt": "Antes eram os próprios lavradores a apanhar o moliço. Depois passou a ofício à parte. O moliceiro apanha, o lavrador compra. Assim vivo eu.",
+   "speaker": "k1",
+   "status": "draft",
+   "topic": "people"
+  },
+  {
+   "beat": "b90",
+   "claims": [
+    {
+     "claim": "Painters choose panel themes such as religion, profession or love, usually from their own imagination.",
+     "evidence": [
+      "e10"
+     ]
+    },
+    {
+     "claim": "Each drawing has a caption painted on a white or pink band.",
+     "evidence": [
+      "e11"
+     ]
+    }
+   ],
+   "en": "The painter picks the drawing from his own head: saints, trades, sweethearts... And underneath he paints a caption on a white or pink band.",
+   "fictional": false,
+   "id": "l28",
+   "pt": "O pintor é que escolhe o desenho, da cabeça dele: santos, ofícios, amores... E por baixo pinta uma legenda numa faixa branca ou cor-de-rosa.",
+   "speaker": "k2",
+   "status": "draft",
+   "topic": "people"
+  },
+  {
+   "beat": "b90",
+   "claims": [
+    {
+     "claim": "Moliceiros are built of pine by traditional shipwrights.",
+     "evidence": [
+      "e24"
+     ]
+    },
+    {
+     "claim": "Masters use the pau-de-pontos, a handmade wooden rod used as a ruler that only experienced builders can interpret.",
+     "evidence": [
+      "e27"
+     ]
+    }
+   ],
+   "en": "Pine boat, made by a master. He measures it all with the pau-de-pontos. A plain stick. Only someone with long years at the trade can read it.",
+   "fictional": false,
+   "id": "l29",
+   "pt": "Barco de pinho, feito por mestre. Mede tudo com o pau-de-pontos. Pau simples. Só quem tem muitos anos de ofício o sabe ler.",
+   "speaker": "k1",
+   "status": "draft",
+   "topic": "boat"
+  },
+  {
+   "beat": "b90",
+   "claims": [
+    {
+     "claim": "Moliço was harvested in shallow areas of the ria.",
+     "evidence": [
+      "e32"
+     ]
+    },
+    {
+     "claim": "In the shallow moliço grounds a wide, shallow rudder was needed to steer effectively.",
+     "evidence": [
+      "e31"
+     ]
+    }
+   ],
+   "en": "On the moliço grounds the water's shallow. That's why the rudder is wide and shallow. A deep rudder would be no use here.",
+   "fictional": false,
+   "id": "l30",
+   "pt": "Nas praias de moliço a água é baixa. Por isso o leme é largo e raso. Leme fundo aqui não servia de nada.",
+   "speaker": "k1",
+   "status": "draft",
+   "topic": "place"
+  },
+  {
+   "beat": "b90",
+   "claims": [
+    {
+     "claim": "Moliço is a group of 21 aquatic plants growing on the submerged bed of the Ria de Aveiro.",
+     "evidence": [
+      "e42"
+     ]
+    }
+   ],
+   "en": "I thought moliço was just one weed! Turns out it's twenty-one plants, all growing on the bed of the Ria de Aveiro.",
+   "fictional": false,
+   "id": "l31",
+   "pt": "Pensava que o moliço era uma erva só! Afinal são vinte e uma plantas, todas a crescer no fundo da Ria de Aveiro.",
+   "speaker": "k2",
+   "status": "draft",
+   "topic": "place"
+  }
+ ],
+ "updatedAt": "2026-11-14T10:35:56.236Z"
+}

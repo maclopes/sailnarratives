@@ -1,0 +1,4222 @@
+{
+ "items": [
+  {
+   "action": "Before the railway, transport by boat, sea or river, was the only means of widening markets; navigable rivers extended trading areas along their courses.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p1",
+   "kind": "description",
+   "location": "[page 154]",
+   "numbers": [],
+   "period": "before the railway",
+   "place": "Tagus and Portuguese navigable rivers",
+   "who": ""
+  },
+  {
+   "action": "Luiz Ferrari de Mordau argued that land transport cost about ten times more than water transport, so river navigation should grow and canals link rivers.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p2",
+   "kind": "description",
+   "location": "[page 155]",
+   "numbers": [
+    {
+     "unit": "times",
+     "value": "10",
+     "what": "land transport cost relative to water"
+    }
+   ],
+   "period": "late 18th century (1782)",
+   "place": "",
+   "who": "Luiz Ferrari de Mordau"
+  },
+  {
+   "action": "Proposal to open a canal linking the Tagus and Sado rivers, between Moita and Setúbal.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p3",
+   "kind": "event",
+   "location": "[page 155]",
+   "numbers": [],
+   "period": "late 18th century",
+   "place": "Moita and Setúbal",
+   "who": "Luiz Ferrari de Mordau"
+  },
+  {
+   "action": "The Tagus held major importance as the longest, most easily navigable river and central artery of the Peninsula, until the railway reduced some traffic.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p4",
+   "kind": "description",
+   "location": "[page 155]",
+   "numbers": [],
+   "period": "until the advent of the railway",
+   "place": "Tagus",
+   "who": ""
+  },
+  {
+   "action": "Road haulage by lorry finally destroyed river transport along the Tagus completely.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p5",
+   "kind": "event",
+   "location": "[page 155]",
+   "numbers": [],
+   "period": "",
+   "place": "Tagus",
+   "who": ""
+  },
+  {
+   "action": "Remaining Tagus traffic is estuary navigation within tidal waters, insignificant beyond 20-30 km upstream of Lisbon.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "tidal territory",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p6",
+   "kind": "description",
+   "location": "[page 156]",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "20-30",
+     "what": "distance upstream where traffic becomes insignificant"
+    }
+   ],
+   "period": "",
+   "place": "Tagus estuary, upstream of Lisbon",
+   "who": ""
+  },
+  {
+   "action": "Figure 1 shows the area that sent its products to Lisbon by the Tagus at the end of the 18th century, with ports such as Santarém, Abrantes and Benavente.",
+   "boat": "",
+   "cargo": "products",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p7",
+   "kind": "description",
+   "location": "[page 156]",
+   "numbers": [],
+   "period": "end of 18th century",
+   "place": "Lisbon, Santarém, Abrantes, Tancos, Punhete, Barquinha, Benavente",
+   "who": "Bacelar Chichorro (source)"
+  },
+  {
+   "action": "A 1957 study calculated the total navigable stretches of Portuguese rivers, including 50 km of the Ria de Aveiro.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p8",
+   "kind": "event",
+   "location": "[page 157]",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "885",
+     "what": "total navigable river stretches"
+    },
+    {
+     "unit": "km",
+     "value": "50",
+     "what": "Ria de Aveiro navigable"
+    }
+   ],
+   "period": "1957",
+   "place": "Portuguese rivers",
+   "who": "Faria Lapa and Torroais Valente"
+  },
+  {
+   "action": "Only some stretches were permanently navigable by boats over 40 tonnes: Tagus system, Sado and Guadiana shares.",
+   "boat": "boats over 40 tonnes",
+   "cargo": "",
+   "conditions": "permanent navigation",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p9",
+   "kind": "description",
+   "location": "[page 157]",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "260",
+     "what": "total permanently navigable for boats over 40 t"
+    },
+    {
+     "unit": "km",
+     "value": "85",
+     "what": "Tagus and adjuvant system"
+    },
+    {
+     "unit": "km",
+     "value": "60",
+     "what": "Sado"
+    },
+    {
+     "unit": "km",
+     "value": "52",
+     "what": "Guadiana"
+    }
+   ],
+   "period": "1957",
+   "place": "Tagus and adjuvant system, Sado, Guadiana",
+   "who": ""
+  },
+  {
+   "action": "The Tagus was temporarily navigable for about two months along a longer stretch.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "temporary, during 2 months",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p10",
+   "kind": "description",
+   "location": "[page 157]",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "160",
+     "what": "temporarily navigable length"
+    },
+    {
+     "unit": "months",
+     "value": "2",
+     "what": "duration"
+    }
+   ],
+   "period": "1957",
+   "place": "Tagus",
+   "who": ""
+  },
+  {
+   "action": "Tradition holds that the Tancos quay, dated to the first half of the 16th century, was built over an earlier, probably Roman, quay.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "according to tradition",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p11",
+   "kind": "description",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "first half of the 16th century",
+   "place": "Tancos",
+   "who": ""
+  },
+  {
+   "action": "Santarém was a seaport under the Romans, the Muslims and in the early Portuguese monarchy; in the 13th-14th centuries it traded directly by boat with North Africa and Flanders.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p12",
+   "kind": "description",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "13th-14th centuries",
+   "place": "Santarém",
+   "who": ""
+  },
+  {
+   "action": "During the Almohad siege of Santarém, Afonso Henriques went up the river with a fleet of crusaders to relieve the city.",
+   "boat": "armada of crusaders",
+   "cargo": "",
+   "conditions": "siege by the Almohads",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p13",
+   "kind": "event",
+   "location": "[page 2]",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1090",
+     "what": "year of siege"
+    }
+   ],
+   "period": "1090",
+   "place": "Santarém",
+   "who": "D. Afonso Henriques"
+  },
+  {
+   "action": "According to Severim de Faria, the Templars, defenders of the Tagus line, were first to undertake works to make navigation easier.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p14",
+   "kind": "event",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "",
+   "place": "Tagus",
+   "who": "Templars"
+  },
+  {
+   "action": "After the definitive conquest of the Algarve, the Tagus grew in importance as a communication axis, and Lisbon became capital.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "political stabilisation",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p15",
+   "kind": "event",
+   "location": "[page 2]",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1253",
+     "what": "year of Algarve conquest"
+    }
+   ],
+   "period": "1253",
+   "place": "Tagus; Lisbon",
+   "who": ""
+  },
+  {
+   "action": "D. Dinis promoted works on the Tagus and its tributary system and founded Salvaterra de Magos and Muge, boosting river navigation.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p16",
+   "kind": "event",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "",
+   "place": "Tagus, Salvaterra de Magos, Muge",
+   "who": "D. Dinis"
+  },
+  {
+   "action": "In the early 15th century Almada and Ribatejo (Montijo) linked Lisbon with the south, with Coina also important; fish from Setúbal and Arrábida came through them.",
+   "boat": "",
+   "cargo": "dried and salted fish",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p17",
+   "kind": "practice",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "first half of the 15th century",
+   "place": "Almada, Ribatejo (Montijo), Coina",
+   "who": ""
+  },
+  {
+   "action": "People and goods from the Alentejo, mainly firewood from Montijo and Canha districts for Lisbon fuel, came via Ribatejo; some fish went on to Santarém and upriver ports.",
+   "boat": "",
+   "cargo": "firewood, fish",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p18",
+   "kind": "practice",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "first half of the 15th century",
+   "place": "Ribatejo, Coina, Santarém",
+   "who": ""
+  },
+  {
+   "action": "Salt, fish (dried, salted, smoked or fresh) and cloth were the main goods carried upriver from Lisbon to Santarém, Abrantes and Punhete.",
+   "boat": "",
+   "cargo": "salt, fish, cloth",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p19",
+   "kind": "practice",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "1401-1450",
+   "place": "Lisbon to Santarém, Abrantes, Punhete",
+   "who": ""
+  },
+  {
+   "action": "Goods sent downriver to Lisbon included timber, olive oil, wine, hides, honey, wax, iron and river fish (shad, azevias, lampreys).",
+   "boat": "",
+   "cargo": "timber, olive oil, wine, hides, honey, wax, iron, shad, azevias, lampreys",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p20",
+   "kind": "practice",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "1401-1450",
+   "place": "middle Tagus to Lisbon",
+   "who": ""
+  },
+  {
+   "action": "Santarém was the most important middle Tagus port, followed by Abrantes and Punhete; the author defines the middle Tagus as Abrantes to Sabugueiro, where tide begins.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "tide felt from Sabugueiro",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p21",
+   "kind": "description",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "",
+   "place": "Santarém, Abrantes, Punhete, Sabugueiro",
+   "who": ""
+  },
+  {
+   "action": "The 16th century saw a surge in Tagus navigation, with D. Manuel I's works including the imposing Tancos quay.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p22",
+   "kind": "event",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "16th century",
+   "place": "Tancos",
+   "who": "D. Manuel I"
+  },
+  {
+   "action": "The king travelled by boat between the Royal Palace of Almeirim and Lisbon (Paço de Xabregas or Paço da Ribeira).",
+   "boat": "",
+   "cargo": "",
+   "conditions": "court frequently resident at Almeirim",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p23",
+   "kind": "practice",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "16th century",
+   "place": "Almeirim to Lisbon",
+   "who": "the king"
+  },
+  {
+   "action": "A 1552 count listed river boats at Lisbon and Tagus ports, with Abrantes holding 180, split between regular service and fishing.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "author notes the figures are probably exaggerated",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p24",
+   "kind": "event",
+   "location": "[page 2]",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "1490",
+     "what": "river boats in Lisbon and Tagus ports"
+    },
+    {
+     "unit": "boats",
+     "value": "180",
+     "what": "Abrantes boats"
+    },
+    {
+     "unit": "boats",
+     "value": "100",
+     "what": "Abrantes regular-service boats"
+    },
+    {
+     "unit": "boats",
+     "value": "80",
+     "what": "Abrantes fishing boats"
+    }
+   ],
+   "period": "1552",
+   "place": "Abrantes",
+   "who": ""
+  },
+  {
+   "action": "In 1552 Tancos had 100 boats, Punhete with Asseiceira and Carvoeira 120, and Santarém 100, the main middle Tagus ports.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p25",
+   "kind": "description",
+   "location": "[page 2]",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "100",
+     "what": "Tancos boats"
+    },
+    {
+     "unit": "boats",
+     "value": "120",
+     "what": "Punhete, Asseiceira and Carvoeira boats"
+    },
+    {
+     "unit": "boats",
+     "value": "100",
+     "what": "Santarém boats"
+    }
+   ],
+   "period": "1552",
+   "place": "Tancos, Punhete, Asseiceira, Carvoeira, Santarém",
+   "who": ""
+  },
+  {
+   "action": "Large quantities of melons from the Santarém and Abrantes lezírias were carried to Lisbon as a new item; wine arrived by river, named after loading ports.",
+   "boat": "",
+   "cargo": "melons, wine",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p26",
+   "kind": "practice",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "16th century",
+   "place": "Santarém, Abrantes, Punhete, Lisbon",
+   "who": ""
+  },
+  {
+   "action": "Four barcas came from Muge to Lisbon two to three times a week, and likewise from Azambuja.",
+   "boat": "barcas",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p27",
+   "kind": "practice",
+   "location": "[page 2]",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "4",
+     "what": "barcas"
+    },
+    {
+     "unit": "trips",
+     "value": "2-3",
+     "what": "trips per week"
+    }
+   ],
+   "period": "second half of the 16th century",
+   "place": "Muge, Azambuja to Lisbon",
+   "who": ""
+  },
+  {
+   "action": "Three barcas and batéis came from Vila Nova da Rainha to Lisbon two to three times a week.",
+   "boat": "barcas and batéis",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p28",
+   "kind": "practice",
+   "location": "[page 2]",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "3",
+     "what": "boats"
+    },
+    {
+     "unit": "trips",
+     "value": "2-3",
+     "what": "trips per week"
+    }
+   ],
+   "period": "second half of the 16th century",
+   "place": "Vila Nova da Rainha to Lisbon",
+   "who": ""
+  },
+  {
+   "action": "Four barcas came from Benavente to Lisbon three to four times a week.",
+   "boat": "barcas",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p29",
+   "kind": "practice",
+   "location": "[page 2]",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "4",
+     "what": "barcas"
+    },
+    {
+     "unit": "trips",
+     "value": "3-4",
+     "what": "trips per week"
+    }
+   ],
+   "period": "second half of the 16th century",
+   "place": "Benavente to Lisbon",
+   "who": ""
+  },
+  {
+   "action": "Brandão gives data only for the lower Tagus, probably because middle and upper river voyages were more irregular owing to various constraints.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "irregular voyages upriver",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p30",
+   "kind": "description",
+   "location": "[page 2]",
+   "numbers": [],
+   "period": "",
+   "place": "lower, middle and upper Tagus",
+   "who": "João Brandão (de Buarcos)"
+  },
+  {
+   "action": "Table of boats serving Lisbon by port lists Sacavém, Alhandra and Lisbon and surroundings, totalling 1490 boats and batéis serving Lisbon.",
+   "boat": "barco de Sacavém; boats and batéis",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p31",
+   "kind": "description",
+   "location": "page start",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "130",
+     "what": "boats at Sacavém"
+    },
+    {
+     "unit": "boats",
+     "value": "60",
+     "what": "boats at Alhandra"
+    },
+    {
+     "unit": "boats",
+     "value": "300",
+     "what": "boats at Lisboa e arrabaldes"
+    },
+    {
+     "unit": "boats",
+     "value": "1490",
+     "what": "total boats and batéis serving Lisbon"
+    }
+   ],
+   "period": "",
+   "place": "Sacavém, Alhandra, Lisboa e arrabaldes",
+   "who": ""
+  },
+  {
+   "action": "Boats carried firewood, wheat and straw, plus people and other goods, on weekly runs.",
+   "boat": "",
+   "cargo": "lenha, trigo, palha, pessoas",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p32",
+   "kind": "practice",
+   "location": "page start",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "River traffic above Abrantes was of little importance before the Philippine period; Punhete and Abrantes were the upstream ports named in the 15th century, Santarém further downstream.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p33",
+   "kind": "description",
+   "location": "page 160",
+   "numbers": [],
+   "period": "século XV",
+   "place": "Abrantes, Punhete, Santarém",
+   "who": ""
+  },
+  {
+   "action": "Abrantes is the furthest upstream port named in the 1552 Lisbon statistics.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p34",
+   "kind": "description",
+   "location": "page 160",
+   "numbers": [],
+   "period": "1552",
+   "place": "Abrantes",
+   "who": ""
+  },
+  {
+   "action": "Philip II promoted major works to improve Tagus navigation, entrusting study and execution to engineer Joan Baustista Antonelli, removing obstacles between Lisbon and Alcántara.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p35",
+   "kind": "event",
+   "location": "page 160",
+   "numbers": [],
+   "period": "período filipino; 1581 memoir",
+   "place": "Tejo, Lisboa to Alcántara",
+   "who": "Filipe II; Antonelli"
+  },
+  {
+   "action": "In the mid-19th century Portuguese boats, mostly from Rossio de Abrantes, Pego and Alvega, carried Alcántara ore to Lisbon in convoys of at least ten boats so crews could help each other with towing at rapids.",
+   "boat": "barcos",
+   "cargo": "minério",
+   "conditions": "rapids; some boats lost in disasters",
+   "gear": "sirga",
+   "id": "mmwdz10zt3xye:28dp:p36",
+   "kind": "practice",
+   "location": "page 160",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "at least 10",
+     "what": "boats per convoy"
+    },
+    {
+     "unit": "t",
+     "value": "20-30",
+     "what": "capacity per boat"
+    }
+   ],
+   "period": "meados do século passado",
+   "place": "Alcántara to Lisboa; rápidos",
+   "who": "tripulações do Rossio de Abrantes, Pego, Alvega"
+  },
+  {
+   "action": "Towpaths (sirgadouros) were built at the hardest river points and some rocks removed, allowing Estremoz marble to be shipped by river to the Escorial.",
+   "boat": "",
+   "cargo": "mármores",
+   "conditions": "",
+   "gear": "sirgadouros",
+   "id": "mmwdz10zt3xye:28dp:p37",
+   "kind": "event",
+   "location": "page 160",
+   "numbers": [],
+   "period": "período filipino",
+   "place": "Tejo; Estremoz to Escorial",
+   "who": ""
+  },
+  {
+   "action": "Larger boats could not navigate in dry season, even at Abrantes; in summer timber and cork went by raft to Salvaterra de Magos or Valada, then by boat to Lisbon.",
+   "boat": "jangadas; barcos",
+   "cargo": "madeira, cortiça",
+   "conditions": "dry season, low water",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p38",
+   "kind": "practice",
+   "location": "page 161",
+   "numbers": [],
+   "period": "século passado (summer)",
+   "place": "Salvaterra de Magos, Valada, Abrantes, Lisboa",
+   "who": ""
+  },
+  {
+   "action": "Antonelli died in 1588; successors including Carduchi and Martelli published the Corografia del Rio Tajo (1641), the first survey with a plan of the Tagus from Toledo to Lisbon.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p39",
+   "kind": "event",
+   "location": "page 161",
+   "numbers": [],
+   "period": "1588; 1641",
+   "place": "Toledo to Lisboa",
+   "who": "Carduchi, Martelli"
+  },
+  {
+   "action": "Table of Tagus port boats in 1620 shows Abrantes (Rossio) as the main river port, with more boats than Santarém, followed by Tancos and Punhete; Barquinha not yet mentioned.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p40",
+   "kind": "description",
+   "location": "page 161",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "70",
+     "what": "boats at Santarém"
+    },
+    {
+     "unit": "boats",
+     "value": "10",
+     "what": "boats at Vila Franca"
+    },
+    {
+     "unit": "boats",
+     "value": "3",
+     "what": "boats at Chamusca"
+    }
+   ],
+   "period": "1620",
+   "place": "Abrantes, Santarém, Tancos, Punhete, Muge, Salvaterra, Benavente, Chamusca, Vila",
+   "who": "Frei Nicolau de Oliveira"
+  },
+  {
+   "action": "Wars of the Restoration set back Tagus transport, as relations with Spain disappeared or greatly declined.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p41",
+   "kind": "event",
+   "location": "page 162",
+   "numbers": [],
+   "period": "guerras da Restauração",
+   "place": "Tejo",
+   "who": ""
+  },
+  {
+   "action": "Spanish technicians carried out reconnaissance studies of the Tagus to improve links between Extremadura, Castile and the Atlantic.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "political upheavals undermined the Lisbon-interior link",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p42",
+   "kind": "event",
+   "location": "page 162",
+   "numbers": [],
+   "period": "1740, 1755",
+   "place": "Tejo",
+   "who": "técnicos espanhóis"
+  },
+  {
+   "action": "A Tagus navigation plan by Carlos Simon Pontero appeared, and Brigadier Cabanes drew up a steam navigation project from Aranjuez to Lisbon, requesting licences from both governments.",
+   "boat": "steam navigation",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p43",
+   "kind": "event",
+   "location": "page 162",
+   "numbers": [],
+   "period": "1828",
+   "place": "Aranjuez to Lisboa",
+   "who": "D. Carlos Simon Pontero; D. Francisco Xavier Cabanes"
+  },
+  {
+   "action": "Treaty signed in Lisbon by Ferdinand VII and Miguel I legalised the Aranjuez-Lisbon navigation project.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p44",
+   "kind": "rule",
+   "location": "page 163",
+   "numbers": [],
+   "period": "31 August 1829",
+   "place": "Lisboa; Aranjuez",
+   "who": "Fernando VII; Miguel I"
+  },
+  {
+   "action": "Architect Augustin Martin made the Aranjuez-Lisbon voyage, taking 31 days to Alcántara and 9 more to Lisbon, and 138 days in total on the return.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p45",
+   "kind": "event",
+   "location": "page 163",
+   "numbers": [
+    {
+     "unit": "days",
+     "value": "31",
+     "what": "Aranjuez to Alcántara"
+    },
+    {
+     "unit": "days",
+     "value": "9",
+     "what": "Alcántara to Lisbon"
+    },
+    {
+     "unit": "days",
+     "value": "138",
+     "what": "return trip total"
+    }
+   ],
+   "period": "after 1829",
+   "place": "Aranjuez, Alcántara, Lisboa",
+   "who": "D. Augustin Martin"
+  },
+  {
+   "action": "Manuel Bermudes de Castro, heir of the concessionaires, renewed the contract, provoking protests in the Portuguese press.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p46",
+   "kind": "event",
+   "location": "page 163",
+   "numbers": [],
+   "period": "1845",
+   "place": "",
+   "who": "D. Manuel Bermudes de Castro"
+  },
+  {
+   "action": "A writer argues a Tagus navigation company would not endanger Portugal's independence, with half the sailors Portuguese and a third of shares reserved for Portuguese investors.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p47",
+   "kind": "event",
+   "location": "[page 4]",
+   "numbers": [
+    {
+     "unit": "",
+     "value": "half",
+     "what": "share of sailors who would be Portuguese"
+    },
+    {
+     "unit": "",
+     "value": "one third",
+     "what": "share of shares reserved for Portuguese capitalists"
+    }
+   ],
+   "period": "",
+   "place": "Tagus",
+   "who": ""
+  },
+  {
+   "action": "Ayres de Sá Nogueira requested a 40-year concession for Tagus navigation up to the frontier; the reply says extending navigation to Toledo would be more useful.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p48",
+   "kind": "rule",
+   "location": "[page 4]",
+   "numbers": [
+    {
+     "unit": "years",
+     "value": "40",
+     "what": "concession length requested"
+    }
+   ],
+   "period": "1844",
+   "place": "Tagus to the frontier, Toledo",
+   "who": "Ayres de Sá Nogueira"
+  },
+  {
+   "action": "Marble from Estremoz bound for the Escorial was carried by boat up the Tagus as far as Toledo despite difficulties.",
+   "boat": "",
+   "cargo": "marble",
+   "conditions": "difficult river",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p49",
+   "kind": "practice",
+   "location": "[page 4]",
+   "numbers": [],
+   "period": "",
+   "place": "Estremoz, Toledo, Tagus",
+   "who": ""
+  },
+  {
+   "action": "Until the late 19th century some improvements were made to regularise the Tagus and ease navigation; many other proposed works were never carried out.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p50",
+   "kind": "event",
+   "location": "[page 4]",
+   "numbers": [],
+   "period": "late 19th century",
+   "place": "Tagus",
+   "who": ""
+  },
+  {
+   "action": "By the end of the 19th century the Portuguese Tagus had masonry towing-path walls, though dams and dikes were still needed.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "towpaths (sirgadouros)",
+   "id": "mmwdz10zt3xye:28dp:p51",
+   "kind": "description",
+   "location": "[page 4]",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "26700",
+     "what": "length of masonry towpath walls"
+    }
+   ],
+   "period": "end of 19th century",
+   "place": "Portuguese Tagus",
+   "who": ""
+  },
+  {
+   "action": "Spanish engineer Filipe de Mora published a study projecting canalisation of the Manzanares, Jarama and Tagus for 300 t boats between Madrid and Lisboa.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p52",
+   "kind": "event",
+   "location": "[page 4]",
+   "numbers": [
+    {
+     "unit": "t",
+     "value": "300",
+     "what": "projected boat capacity"
+    }
+   ],
+   "period": "1909",
+   "place": "Madrid to Lisboa",
+   "who": "D. Filipe de Mora"
+  },
+  {
+   "action": "Railways competed with river navigation on several stretches but never proved superior; they won outright only upriver of Abrantes and near Entroncamento, ruining Vila Nova da Barquinha and Moita.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p53",
+   "kind": "description",
+   "location": "[page 4]",
+   "numbers": [],
+   "period": "",
+   "place": "Abrantes, Entroncamento, Vila Nova da Barquinha, Moita",
+   "who": ""
+  },
+  {
+   "action": "After the Second World War boats left Tagus ports, first in the middle course and later the lower course, as road transport outcompeted river navigation.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "competition from lorries",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p54",
+   "kind": "event",
+   "location": "[page 4]",
+   "numbers": [],
+   "period": "after the Second World War",
+   "place": "Tagus ports",
+   "who": ""
+  },
+  {
+   "action": "Boatmen leaving upriver ports moved their boats to work on the lower Tagus; others sold boats and became lorry operators, merchants or retirees.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p55",
+   "kind": "practice",
+   "location": "[page 4]",
+   "numbers": [],
+   "period": "",
+   "place": "lower Tagus, Sabugueiro to Lisboa",
+   "who": "barqueiros from Abrantes, Rio de Moinhos, Constância, Chamusca"
+  },
+  {
+   "action": "Many mariners from Vila Nova da Barquinha and Moita took jobs at the railway company in Entroncamento, leaving the river.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p56",
+   "kind": "event",
+   "location": "[page 4]",
+   "numbers": [],
+   "period": "1920-1930",
+   "place": "Vila Nova da Barquinha, Moita, Entroncamento",
+   "who": "maritimos"
+  },
+  {
+   "action": "Ruined warehouses, guesthouses and inns at Barquinha, Constância and Rossio still show the riverside life once tied to river traffic.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p57",
+   "kind": "description",
+   "location": "[page 4]",
+   "numbers": [],
+   "period": "",
+   "place": "Barquinha, Constância, Rossio",
+   "who": ""
+  },
+  {
+   "action": "Balbi's statistics list boats and crew at Tagus ports: Barquinha, Porto de Tancos, Abrantes, Constância, Paio de Pele, Tancos and Atalaia.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p58",
+   "kind": "description",
+   "location": "[page 4]",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "25",
+     "what": "Barquinha boats"
+    },
+    {
+     "unit": "people",
+     "value": "75",
+     "what": "Barquinha crew"
+    },
+    {
+     "unit": "boats",
+     "value": "12",
+     "what": "Porto de Tancos boats"
+    },
+    {
+     "unit": "people",
+     "value": "42",
+     "what": "Porto de Tancos crew"
+    },
+    {
+     "unit": "boats",
+     "value": "40",
+     "what": "Abrantes boats"
+    },
+    {
+     "unit": "people",
+     "value": "80",
+     "what": "Abrantes crew"
+    }
+   ],
+   "period": "1821",
+   "place": "Barquinha, Tancos, Abrantes, Constância, Paio de Pele, Atalaia",
+   "who": "Adrien Balbi"
+  },
+  {
+   "action": "Constância, Paio de Pele and Rio de Moinhos had mostly fishermen and seafolk, with few farm workers.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p59",
+   "kind": "description",
+   "location": "[page 4]",
+   "numbers": [
+    {
+     "unit": "people",
+     "value": "313",
+     "what": "Constância fishermen and seafolk"
+    },
+    {
+     "unit": "people",
+     "value": "22",
+     "what": "Constância rural workers"
+    },
+    {
+     "unit": "people",
+     "value": "318",
+     "what": "Paio de Pele fishermen and seafolk"
+    },
+    {
+     "unit": "people",
+     "value": "18",
+     "what": "Paio de Pele rural workers"
+    },
+    {
+     "unit": "people",
+     "value": "123",
+     "what": "Rio de Moinhos fishermen and seafolk"
+    },
+    {
+     "unit": "people",
+     "value": "176",
+     "what": "Rio de Moinhos rural workers"
+    }
+   ],
+   "period": "1823",
+   "place": "Constância, Paio de Pele, Rio de Moinhos",
+   "who": "pescadores e gente do mar"
+  },
+  {
+   "action": "Constância had a growing population, mostly working in navigation; farm and grape-harvest labour came from nearby villages, Vila de Rei and Cardigos.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p60",
+   "kind": "description",
+   "location": "[page 4]",
+   "numbers": [
+    {
+     "unit": "inhabitants",
+     "value": "1610",
+     "what": "Constância population"
+    },
+    {
+     "unit": "vizinhos",
+     "value": "403",
+     "what": "households"
+    }
+   ],
+   "period": "1823",
+   "place": "Constância, Vila de Rei, Cardigos",
+   "who": ""
+  },
+  {
+   "action": "Tancos, then an important port, had a workforce dominated by sailors and boat owners, per the 1763 tax record studied by Jorge Borges de Macedo.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p61",
+   "kind": "description",
+   "location": "[page 4]",
+   "numbers": [
+    {
+     "unit": "people",
+     "value": "143",
+     "what": "taxpayers"
+    },
+    {
+     "unit": "people",
+     "value": "96",
+     "what": "sailors and boat owners"
+    },
+    {
+     "unit": "taxpayers",
+     "value": "2",
+     "what": "inns"
+    },
+    {
+     "unit": "taxpayers",
+     "value": "8",
+     "what": "commerce"
+    },
+    {
+     "unit": "people",
+     "value": "26",
+     "what": "artisans"
+    },
+    {
+     "unit": "people",
+     "value": "7",
+     "what": "agriculture"
+    }
+   ],
+   "period": "1763",
+   "place": "Tancos",
+   "who": "marinheiros e donos de barcos"
+  },
+  {
+   "action": "Tancos suffered heavy damage in the French invasions and many inhabitants emigrated to Lisbon; Abrantes and Barquinha gained its traffic, including Alentejo wheat.",
+   "boat": "",
+   "cargo": "wheat from Alentejo",
+   "conditions": "French invasions",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p62",
+   "kind": "event",
+   "location": "[page 4]",
+   "numbers": [],
+   "period": "",
+   "place": "Tancos, Abrantes, Barquinha",
+   "who": ""
+  },
+  {
+   "action": "The author introduces summaries of his 1969-1970 interviews in former river ports, beginning with Pedro Maria Duarte, a retired boat builder at Rossio.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p63",
+   "kind": "description",
+   "location": "[page 4]",
+   "numbers": [
+    {
+     "unit": "years",
+     "value": "76",
+     "what": "age of Pedro Maria Duarte"
+    }
+   ],
+   "period": "1969-1970",
+   "place": "Rossio",
+   "who": "Pedro Maria Duarte, boat builder"
+  },
+  {
+   "action": "A boatbuilder, whose father and grandfather also built boats at Barreiras do Tejo, was the last to stop working in the Abrantes area; some of his boats still work around Lisbon.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p64",
+   "kind": "description",
+   "location": "[page 5]",
+   "numbers": [],
+   "period": "1943",
+   "place": "Abrantes; Barreiras do Tejo; Lisboa",
+   "who": "boatbuilder from Barreiras do Tejo"
+  },
+  {
+   "action": "His grandfather had carried ore from Alcántara by boat; the railway stopped upstream traffic beyond Alvega.",
+   "boat": "",
+   "cargo": "ore",
+   "conditions": "railway ended upstream traffic",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p65",
+   "kind": "practice",
+   "location": "[page 5]",
+   "numbers": [],
+   "period": "",
+   "place": "Alcántara; Alvega",
+   "who": "boatbuilder's grandfather"
+  },
+  {
+   "action": "The railway initially raised the importance of the river port of Rossio de Abrantes, which around 1920 had many large boats; trucks then began its decline.",
+   "boat": "boats over 20 t",
+   "cargo": "",
+   "conditions": "decline with road haulage",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p66",
+   "kind": "description",
+   "location": "[page 5]",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "40",
+     "what": "boats over 20 t"
+    }
+   ],
+   "period": "c. 1920",
+   "place": "Rossio de Abrantes",
+   "who": ""
+  },
+  {
+   "action": "River traffic at Rossio revived somewhat during the Second World War, but ended completely by the early 1950s.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p67",
+   "kind": "event",
+   "location": "[page 5]",
+   "numbers": [],
+   "period": "1939-1945; early 1950s",
+   "place": "Rossio de Abrantes",
+   "who": ""
+  },
+  {
+   "action": "Boat trips from Rossio to Lisbon took about 4 days on average, ranging from 2 to 5 days; the return varied from 2 to 30 days.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "downstream by sail or oar; return by sail and pole",
+   "gear": "sail, oars downstream; sail and pole upstream",
+   "id": "mmwdz10zt3xye:28dp:p68",
+   "kind": "practice",
+   "location": "[page 5]",
+   "numbers": [
+    {
+     "unit": "days",
+     "value": "4",
+     "what": "average trip Rossio to Lisbon"
+    },
+    {
+     "unit": "days",
+     "value": "2",
+     "what": "shortest trip"
+    },
+    {
+     "unit": "days",
+     "value": "5",
+     "what": "longest trip"
+    },
+    {
+     "unit": "days",
+     "value": "2-30",
+     "what": "return trip range"
+    }
+   ],
+   "period": "",
+   "place": "Rossio; Lisboa",
+   "who": ""
+  },
+  {
+   "action": "José da Silva, a former boat businessman, had a 60 t boat built at Constância by the Zêzere in 1945 and sold it to Alcochete two years before the interview.",
+   "boat": "60 t boat",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p69",
+   "kind": "event",
+   "location": "[page 5]",
+   "numbers": [
+    {
+     "unit": "t",
+     "value": "60",
+     "what": "boat capacity"
+    }
+   ],
+   "period": "1945",
+   "place": "Constância; Alcochete",
+   "who": "José da Silva"
+  },
+  {
+   "action": "His last freight of timber from Constância to Lisbon was 23 years earlier; afterwards he carried fertilisers and sulphates from CUF Barreiro to Santarém for onward rail transport.",
+   "boat": "",
+   "cargo": "timber; fertilisers, sulphates",
+   "conditions": "goods continued by train from Santarém",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p70",
+   "kind": "practice",
+   "location": "[page 5]",
+   "numbers": [
+    {
+     "unit": "years",
+     "value": "23",
+     "what": "years since last timber freight"
+    }
+   ],
+   "period": "",
+   "place": "Constância; Lisboa; Barreiro; Santarém",
+   "who": "José da Silva"
+  },
+  {
+   "action": "He later worked the Lisbon markets, carrying wine from Sabugueiro, Cartaxo, Salvaterra and Vala do Carregado to Lisbon and Cacilhas (Ginjal); he sold his boat in 1958 and retired.",
+   "boat": "",
+   "cargo": "wine",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p71",
+   "kind": "practice",
+   "location": "[page 5]",
+   "numbers": [],
+   "period": "1958",
+   "place": "Sabugueiro; Cartaxo; Salvaterra; Vala do Carregado; Lisboa; Cacilhas",
+   "who": "José da Silva"
+  },
+  {
+   "action": "Until the late 1950s boats up to 30 t left Rossio de Abrantes with cork and timber for Lisbon.",
+   "boat": "boats up to 30 t",
+   "cargo": "cork, timber",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p72",
+   "kind": "practice",
+   "location": "[page 5]",
+   "numbers": [
+    {
+     "unit": "t",
+     "value": "30",
+     "what": "maximum boat capacity"
+    }
+   ],
+   "period": "late 1950s",
+   "place": "Rossio de Abrantes; Lisboa",
+   "who": ""
+  },
+  {
+   "action": "Constância to Lisbon could take a day and a half; the round trip averaged 15 days. Floods could hold boats up to 18 days at Sabugueiro, where tidal waters begin.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "floods; tidal waters start at Sabugueiro",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p73",
+   "kind": "practice",
+   "location": "[page 5]",
+   "numbers": [
+    {
+     "unit": "days",
+     "value": "1.5",
+     "what": "fastest trip"
+    },
+    {
+     "unit": "days",
+     "value": "15",
+     "what": "average round trip"
+    },
+    {
+     "unit": "days",
+     "value": "18",
+     "what": "maximum flood delay"
+    }
+   ],
+   "period": "",
+   "place": "Constância; Lisboa; Sabugueiro",
+   "who": ""
+  },
+  {
+   "action": "Around 1930 Constância had about 30 boats of 25-40 t and as many of 10-12 t; Rossio had more; Barquinha, Amoreira and Rio de Moinhos about 10 each.",
+   "boat": "boats of 25-40 t and 10-12 t",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p74",
+   "kind": "description",
+   "location": "[page 5]",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "30",
+     "what": "large boats at Constância"
+    },
+    {
+     "unit": "boats",
+     "value": "30",
+     "what": "small boats at Constância"
+    },
+    {
+     "unit": "boats",
+     "value": "10",
+     "what": "boats at Barquinha, Amoreira, Rio de Moinhos each"
+    }
+   ],
+   "period": "c. 1930",
+   "place": "Constância; Rossio; Barquinha; Amoreira; Rio de Moinhos",
+   "who": ""
+  },
+  {
+   "action": "In the 1930s seamen of Barquinha and Moita moved to the railway; C.P. bought some boats at Vila Nova da Barquinha, and José da Silva bought one there.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p75",
+   "kind": "event",
+   "location": "[page 5]",
+   "numbers": [],
+   "period": "1930s",
+   "place": "Vila Nova da Barquinha; Moita",
+   "who": "seamen of Barquinha and Moita; C. P."
+  },
+  {
+   "action": "Timber rafts went from Praia do Ribatejo to Valada or Salvaterra until 1950.",
+   "boat": "timber rafts (jangadas)",
+   "cargo": "timber",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p76",
+   "kind": "practice",
+   "location": "[page 5]",
+   "numbers": [],
+   "period": "until 1950",
+   "place": "Praia do Ribatejo; Valada; Salvaterra",
+   "who": ""
+  },
+  {
+   "action": "In José da Silva's childhood the Zêzere was navigable for 15 t boats up to Barca Nova.",
+   "boat": "15 t boats",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p77",
+   "kind": "description",
+   "location": "[page 5]",
+   "numbers": [
+    {
+     "unit": "t",
+     "value": "15",
+     "what": "boat capacity"
+    }
+   ],
+   "period": "",
+   "place": "Zêzere; Barca Nova",
+   "who": "José da Silva"
+  },
+  {
+   "action": "Until the 1930s Constância was a town of seafarers and traders who bought goods in the Beiras, Alentejo and Alta Estremadura to sell in Lisbon; ground-floor shops and taverns hosted card and chinquilho games.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p78",
+   "kind": "description",
+   "location": "[page 5]",
+   "numbers": [],
+   "period": "until 1930s",
+   "place": "Constância",
+   "who": "gente marítima, comerciantes"
+  },
+  {
+   "action": "Floods seldom caused great damage on Rua Grande; in summer the Tejo was so low that a boat with a 20 m mast showed no mast.",
+   "boat": "boat with 20 m mast",
+   "cargo": "",
+   "conditions": "summer low water",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p79",
+   "kind": "description",
+   "location": "[page 5]",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "20",
+     "what": "mast height"
+    }
+   ],
+   "period": "",
+   "place": "Constância; Tejo",
+   "who": "José da Silva"
+  },
+  {
+   "action": "Of 15 Constância boatmen recalled, 4 opened taverns, 1 went to the lower Tejo and returned, 1 became a river contractor, 1 farmed, and 8 took boats to Lisbon and worked for others.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "after decline of boat trade",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p80",
+   "kind": "event",
+   "location": "[page 5]",
+   "numbers": [
+    {
+     "unit": "people",
+     "value": "15",
+     "what": "boatmen recalled"
+    },
+    {
+     "unit": "people",
+     "value": "4",
+     "what": "opened taverns"
+    },
+    {
+     "unit": "people",
+     "value": "8",
+     "what": "went to Lisbon"
+    },
+    {
+     "unit": "boats",
+     "value": "3",
+     "what": "still has boats"
+    }
+   ],
+   "period": "",
+   "place": "Constância; baixo Tejo; Lisboa; Castanheira do Ribatejo",
+   "who": "15 boatmen of Constância"
+  },
+  {
+   "action": "Manuel da Fonseca and his brother left boating for the railways 47 years earlier; their father, who owned 2 upstream boats, sold the last one 40 years ago.",
+   "boat": "2 boats",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p81",
+   "kind": "event",
+   "location": "[page 5]",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "2",
+     "what": "father's boats"
+    },
+    {
+     "unit": "years",
+     "value": "47",
+     "what": "years since joining railways"
+    },
+    {
+     "unit": "years",
+     "value": "40",
+     "what": "years since last boat sold"
+    }
+   ],
+   "period": "",
+   "place": "Vila Nova da Barquinha",
+   "who": "Manuel da Fonseca; his father"
+  },
+  {
+   "action": "Many Barquinha boat owners lived in Moita village; Barquinha was always seen as dead because Entroncamento took its trade and fair.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p82",
+   "kind": "description",
+   "location": "[page 5]",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "2",
+     "what": "distance Moita to port"
+    }
+   ],
+   "period": "",
+   "place": "Barquinha; Moita; Entroncamento",
+   "who": "boat owners"
+  },
+  {
+   "action": "José Bragança, ferry concessionaire at Vila Nova da Barquinha, said Barquinha was the first port to die; the last boat, Alfredo Condesso's, lasted until the late 1930s.",
+   "boat": "barca de passagem",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p83",
+   "kind": "description",
+   "location": "[page 5]",
+   "numbers": [],
+   "period": "late 1930s",
+   "place": "Vila Nova da Barquinha; Moita",
+   "who": "José Bragança; Alfredo Condesso"
+  },
+  {
+   "action": "Bartolomeu Pereira da Silva moved to the lower Tejo and does river works contracting; his few fragatas mainly carry building materials, since freights to Salvaterra or Benavente are scarce.",
+   "boat": "fragatas",
+   "cargo": "construction materials",
+   "conditions": "freights growing scarce and unprofitable",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p84",
+   "kind": "practice",
+   "location": "[page 5]",
+   "numbers": [
+    {
+     "unit": "years",
+     "value": "20",
+     "what": "years since moving to lower Tejo"
+    }
+   ],
+   "period": "",
+   "place": "Castanheira do Ribatejo; Salvaterra; Benavente",
+   "who": "Bartolomeu Pereira da Silva"
+  },
+  {
+   "action": "Study limited to the period before railways and cars, expecting river (Tagus) and sea transport to distort Von Thünen's circular land-use model around Lisbon.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p85",
+   "kind": "description",
+   "location": "page 7, opening paragraphs",
+   "numbers": [],
+   "period": "before the railway and automobile",
+   "place": "Tagus; Lisbon",
+   "who": ""
+  },
+  {
+   "action": "Fig. 5 maps land-use organisation around Lisbon before the railway, showing how each product's tolerance for transport cost shaped production for the Lisbon market.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p86",
+   "kind": "description",
+   "location": "page 7, Fig. 5 and legend",
+   "numbers": [],
+   "period": "before the railway",
+   "place": "Lisbon",
+   "who": ""
+  },
+  {
+   "action": "Glass factories were forbidden within a set distance of Lisbon.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p87",
+   "kind": "rule",
+   "location": "page 7, Fig. 5 legend",
+   "numbers": [
+    {
+     "unit": "léguas",
+     "value": "7",
+     "what": "limit within which glass factories could not exist"
+    }
+   ],
+   "period": "1562",
+   "place": "Lisbon",
+   "who": ""
+  },
+  {
+   "action": "Lisbon's jurisdiction for supplying itself with meat (1564) and wheat (1574) extended to a set limit, running along the river to Abrantes.",
+   "boat": "",
+   "cargo": "meat; wheat",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p88",
+   "kind": "rule",
+   "location": "page 7, Fig. 5 legend",
+   "numbers": [
+    {
+     "unit": "léguas",
+     "value": "10",
+     "what": "jurisdiction limit for supply"
+    }
+   ],
+   "period": "1564, 1574",
+   "place": "Lisbon; river up to Abrantes",
+   "who": "Lisbon"
+  },
+  {
+   "action": "In 1705 a wider limit applied to Lisbon's supply of meat, firewood and other provisions.",
+   "boat": "",
+   "cargo": "meat, firewood, other provisions",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p89",
+   "kind": "rule",
+   "location": "page 7, Fig. 5 legend",
+   "numbers": [
+    {
+     "unit": "léguas",
+     "value": "20",
+     "what": "jurisdiction limit"
+    }
+   ],
+   "period": "1705",
+   "place": "Lisbon",
+   "who": "Lisbon"
+  },
+  {
+   "action": "Évora had its own smaller zones of market gardens, firewood, vines, cereal and cork-oak woodland, showing similar systems within each territory.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p90",
+   "kind": "description",
+   "location": "page 7",
+   "numbers": [],
+   "period": "",
+   "place": "Évora",
+   "who": ""
+  },
+  {
+   "action": "Around Lisbon's built-up area lay a ring of market gardens, then vineyards for the city's immediate wine consumption.",
+   "boat": "",
+   "cargo": "vegetables, wine",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p91",
+   "kind": "description",
+   "location": "page 7, p. 175",
+   "numbers": [],
+   "period": "",
+   "place": "Lisbon periphery",
+   "who": ""
+  },
+  {
+   "action": "Wine from Caparica, Barreiro, Alhos Vedros and Seixal was the first large-scale activity on the south bank.",
+   "boat": "",
+   "cargo": "wine",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p92",
+   "kind": "description",
+   "location": "page 7, p. 175",
+   "numbers": [],
+   "period": "",
+   "place": "south bank of the Tagus",
+   "who": ""
+  },
+  {
+   "action": "Milk and fresh dairy products (butter, fresh cheese) were produced close to the city for immediate consumption.",
+   "boat": "",
+   "cargo": "milk, butter, fresh cheese",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p93",
+   "kind": "description",
+   "location": "page 7, p. 175",
+   "numbers": [],
+   "period": "",
+   "place": "Lisbon periphery",
+   "who": ""
+  },
+  {
+   "action": "Wine from Lisbon's own district had market advantages: priority in sale and lower taxes, though its price was among the highest.",
+   "boat": "",
+   "cargo": "wine",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p94",
+   "kind": "rule",
+   "location": "page 7, footnote",
+   "numbers": [],
+   "period": "1765",
+   "place": "Lisbon",
+   "who": ""
+  },
+  {
+   "action": "Firewood was essential for households and industries; being bulky and cheap, it needed low transport costs, so production lay near the market.",
+   "boat": "",
+   "cargo": "firewood",
+   "conditions": "bulky, low price at buyer",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p95",
+   "kind": "description",
+   "location": "page 7, p. 175",
+   "numbers": [],
+   "period": "",
+   "place": "south bank of the Tagus",
+   "who": ""
+  },
+  {
+   "action": "A long firewood-producing belt ran along the left bank to Benavente and inland near Vendas Novas, with no matching belt to the north.",
+   "boat": "",
+   "cargo": "firewood",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p96",
+   "kind": "description",
+   "location": "page 7, p. 175",
+   "numbers": [],
+   "period": "",
+   "place": "left bank of the Tagus; Benavente; Vendas Novas",
+   "who": ""
+  },
+  {
+   "action": "Firewood supply areas on Lisbon's right bank were destroyed; Monsanto was totally deforested by accelerated consumption and several lime kilns.",
+   "boat": "",
+   "cargo": "firewood",
+   "conditions": "",
+   "gear": "lime kilns",
+   "id": "mmwdz10zt3xye:28dp:p97",
+   "kind": "event",
+   "location": "page 7, p. 175",
+   "numbers": [],
+   "period": "",
+   "place": "Serra de Monsanto; right bank",
+   "who": ""
+  },
+  {
+   "action": "Lisbon's council consulted the king on regulating coal and firewood supply, naming the main supplying districts and towns, including Castanheira do Ribatejo.",
+   "boat": "",
+   "cargo": "coal, firewood",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p98",
+   "kind": "event",
+   "location": "page 7, p. 176",
+   "numbers": [],
+   "period": "1707",
+   "place": "Banda d'Além, Ribatejo, Almada, Aldeia Gallega, Benavente, Samora, Canha, Castan",
+   "who": "Câmara de Lisboa; El-Rei"
+  },
+  {
+   "action": "Lime-kiln owners complained about the price of brushwood; the council asked the king to order nearby councils to make bundles per old regulations.",
+   "boat": "",
+   "cargo": "brushwood bundles",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p99",
+   "kind": "event",
+   "location": "page 7, p. 176",
+   "numbers": [],
+   "period": "1673",
+   "place": "Almada, Alhos Vedros, Aldeia Galega, Alcochete",
+   "who": "lime-kiln owners; Câmara de Lisboa"
+  },
+  {
+   "action": "The king gave orders to judges of several south-bank towns in similar circumstances concerning supply.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p100",
+   "kind": "event",
+   "location": "page 7, p. 176",
+   "numbers": [],
+   "period": "1692",
+   "place": "Aldeia Galega, Almada, Palmela, Moita, Alcochete",
+   "who": "the king; judges"
+  },
+  {
+   "action": "Pine poles were being fetched from woods near Vendas Novas, far from the Tagus, and cartage cost more than the wood once did.",
+   "boat": "",
+   "cargo": "pine poles (firewood)",
+   "conditions": "cartage costlier than before",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p101",
+   "kind": "description",
+   "location": "page 7, p. 176",
+   "numbers": [
+    {
+     "unit": "léguas",
+     "value": "more than 7",
+     "what": "distance from the Tagus"
+    }
+   ],
+   "period": "1731",
+   "place": "Vendas Novas",
+   "who": "Câmara de Lisboa"
+  },
+  {
+   "action": "Early in the 17th century, Lisbon's supply area reportedly extended little beyond Alcochete.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p102",
+   "kind": "description",
+   "location": "page 7, p. 176",
+   "numbers": [],
+   "period": "early 17th century",
+   "place": "Alcochete",
+   "who": "Luiz Mendes de Vasconcellos"
+  },
+  {
+   "action": "The king repeatedly legislated to manage recurring firewood supply crises to Lisbon; crises are noted in 1456, 1562, 1685 and 1726.",
+   "boat": "",
+   "cargo": "firewood",
+   "conditions": "recurring supply crises",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p103",
+   "kind": "rule",
+   "location": "[page 8] footnote on firewood crises",
+   "numbers": [],
+   "period": "1456, 1562, 1685, 1726",
+   "place": "Lisbon",
+   "who": "the king"
+  },
+  {
+   "action": "Heath scrub on the poor sandy charneca was kept productive for firewood and charcoal, with the king caring for it as the most profitable use for the nation.",
+   "boat": "",
+   "cargo": "firewood, charcoal",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p104",
+   "kind": "description",
+   "location": "[page 8]",
+   "numbers": [],
+   "period": "",
+   "place": "charneca, south bank of the Tagus",
+   "who": "the king; Luiz Mendes de Vasconcellos (author)"
+  },
+  {
+   "action": "In the 19th century other products became more profitable than scrub, and vineyards gradually replaced it in the Poceirão-Taipadas-Canha area.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "changed economic conditions",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p105",
+   "kind": "event",
+   "location": "[page 8]",
+   "numbers": [],
+   "period": "19th century",
+   "place": "Poceirão-Taipadas-Canha",
+   "who": ""
+  },
+  {
+   "action": "When transporting firewood stopped paying, it was made into charcoal; charcoal-burning areas on the periphery moved closer to the river and stopped exporting firewood to Lisbon.",
+   "boat": "",
+   "cargo": "firewood, charcoal",
+   "conditions": "transport cost no longer worthwhile",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p106",
+   "kind": "practice",
+   "location": "[page 8]",
+   "numbers": [],
+   "period": "",
+   "place": "Charneca, towards the Tagus",
+   "who": "charcoal burners"
+  },
+  {
+   "action": "Distant areas with good sea access supplied charcoal to Lisbon: the coast from Feira to Buarcos, the Algarve and the Alentejo coast.",
+   "boat": "",
+   "cargo": "charcoal",
+   "conditions": "good access by sea",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p107",
+   "kind": "practice",
+   "location": "[page 8]",
+   "numbers": [],
+   "period": "",
+   "place": "Feira to Buarcos coast, Algarve, Alentejo coast to Lisbon",
+   "who": ""
+  },
+  {
+   "action": "Even more distant areas shipped ash, a more processed, cheaper-to-transport product made from firewood; ash from the Alentejo reached Lisbon through Tagus ports.",
+   "boat": "",
+   "cargo": "ash",
+   "conditions": "high transport cost over distance",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p108",
+   "kind": "practice",
+   "location": "[page 8]",
+   "numbers": [],
+   "period": "",
+   "place": "Alentejo, Tagus ports, Lisbon",
+   "who": ""
+  },
+  {
+   "action": "The king more than once banned glass furnaces within seven leagues of Lisbon, measures aimed mainly at the south bank.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "fuel consumption",
+   "gear": "glass furnaces",
+   "id": "mmwdz10zt3xye:28dp:p109",
+   "kind": "rule",
+   "location": "[page 8] footnote 2",
+   "numbers": [
+    {
+     "unit": "leagues",
+     "value": "7",
+     "what": "ban radius from Lisbon"
+    }
+   ],
+   "period": "",
+   "place": "within seven leagues of Lisbon, mainly Outra Banda",
+   "who": "the king"
+  },
+  {
+   "action": "Soap works in the 18th century were mostly along the Tagus, using ash arriving by river, while others inland used local raw material.",
+   "boat": "",
+   "cargo": "ash",
+   "conditions": "ash delivered by river",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p110",
+   "kind": "description",
+   "location": "[page 8]",
+   "numbers": [],
+   "period": "18th century",
+   "place": "along the Tagus and inland",
+   "who": "soap makers"
+  },
+  {
+   "action": "Tile and brick kilns stood from Almada to Almeirim on the south bank and from Azambuja to Lisbon on the north, mostly by the river, later using south-bank firewood.",
+   "boat": "",
+   "cargo": "tiles, bricks, firewood",
+   "conditions": "need for large amounts of fuel",
+   "gear": "kilns",
+   "id": "mmwdz10zt3xye:28dp:p111",
+   "kind": "description",
+   "location": "[page 8]",
+   "numbers": [],
+   "period": "",
+   "place": "Almada to Almeirim; Azambuja to Lisbon",
+   "who": "tile and brick makers"
+  },
+  {
+   "action": "Lime kilns on the north side, where suitable limestone exists, sent lime to Lisbon through the nearest river ports.",
+   "boat": "",
+   "cargo": "lime",
+   "conditions": "limestone only on the north",
+   "gear": "lime kilns",
+   "id": "mmwdz10zt3xye:28dp:p112",
+   "kind": "practice",
+   "location": "[page 8]",
+   "numbers": [],
+   "period": "",
+   "place": "north bank of the Tagus to Lisbon",
+   "who": "lime producers"
+  },
+  {
+   "action": "Lime kilns at Alenquer, Ota, Atouguia das Cabras and Portela shipped lime to Lisbon via the port of Vila Nova da Rainha.",
+   "boat": "",
+   "cargo": "lime",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p113",
+   "kind": "practice",
+   "location": "[page 8]",
+   "numbers": [],
+   "period": "second half of 18th century",
+   "place": "Vila Nova da Rainha, upstream of Alverca",
+   "who": "lime producers"
+  },
+  {
+   "action": "Lime from Aveiras went out through Virtudes; from Pontével and Cartaxo through Vale da Pedra; from Almoster through Porto de Muge.",
+   "boat": "",
+   "cargo": "lime",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p114",
+   "kind": "practice",
+   "location": "[page 8]",
+   "numbers": [],
+   "period": "second half of 18th century",
+   "place": "Virtudes, Vale da Pedra, Porto de Muge",
+   "who": "lime producers"
+  },
+  {
+   "action": "Far from the Tagus and other river routes (Sado, Guadiana), scrub had no use beyond sparse goat grazing and beekeeping; Silveira in 1789 described Alentejo heaths.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "remote from river routes",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p115",
+   "kind": "description",
+   "location": "[page 8]",
+   "numbers": [
+    {
+     "unit": "leagues",
+     "value": "more than 30",
+     "what": "circumference of heaths described"
+    }
+   ],
+   "period": "1789",
+   "place": "Alentejo; Sado and Guadiana areas",
+   "who": "A. H. Silveira"
+  },
+  {
+   "action": "Land near the Tagus once held cork oaks that gave owners good income; they sold the trees to charcoal makers and left sterile goat pasture.",
+   "boat": "",
+   "cargo": "cork oaks sold for charcoal",
+   "conditions": "owners wanted a single year's returns from many years",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p116",
+   "kind": "description",
+   "location": "page 9, start",
+   "numbers": [],
+   "period": "",
+   "place": "terrain near the Tagus",
+   "who": "landowners (senhorios)"
+  },
+  {
+   "action": "Lisbon's outskirts wines could compete with Torres Vedras and Tagus Lezírias supply only through privileges and better quality; the Lezírias were the main supply area.",
+   "boat": "",
+   "cargo": "wine",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p117",
+   "kind": "description",
+   "location": "page 9, wine supply",
+   "numbers": [],
+   "period": "",
+   "place": "Lisbon, Torres Vedras, Lezírias do Tejo",
+   "who": ""
+  },
+  {
+   "action": "Wines from distant Alentejo and Douro could compete in Lisbon only through high quality, and sources always praise them.",
+   "boat": "",
+   "cargo": "wine",
+   "conditions": "distance raised transport cost",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p118",
+   "kind": "description",
+   "location": "page 9, wine supply",
+   "numbers": [],
+   "period": "",
+   "place": "Alentejo, Douro valley, Lisbon",
+   "who": ""
+  },
+  {
+   "action": "Lisbon's municipal council consulted the king about vine growers of Valada, Santarém, Golegã, Torres Vedras, Azeitão and Lisbon, noting field vines were tended every four years.",
+   "boat": "",
+   "cargo": "wine",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p119",
+   "kind": "event",
+   "location": "page 9, footnote",
+   "numbers": [
+    {
+     "unit": "years",
+     "value": "4",
+     "what": "years between vine tending in the fields"
+    }
+   ],
+   "period": "27/9/1765",
+   "place": "Campos de Valada, Santarém, Golegã, Torres Vedras, Azeitão, Lisbon",
+   "who": "Câmara de Lisboa, vinhateiros"
+  },
+  {
+   "action": "When wine came from too far and quality could not cover freight, it was turned into brandy to cut mass and cargo cost.",
+   "boat": "",
+   "cargo": "aguardente (brandy)",
+   "conditions": "surplus Douro wine that could not be exported",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p120",
+   "kind": "practice",
+   "location": "page 9, p.180",
+   "numbers": [],
+   "period": "18th century",
+   "place": "Douro, Madeira, S. Miguel, Pico, Faial, Lisbon",
+   "who": ""
+  },
+  {
+   "action": "Timber near Lisbon was exhausted early, so from the monarchy's start new forests were sown in areas with easy drainage of products.",
+   "boat": "",
+   "cargo": "timber",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p121",
+   "kind": "description",
+   "location": "page 9, p.180",
+   "numbers": [],
+   "period": "",
+   "place": "around Lisbon",
+   "who": ""
+  },
+  {
+   "action": "Timber was brought to Lisbon by sea from Alfeizerão.",
+   "boat": "",
+   "cargo": "timber",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p122",
+   "kind": "practice",
+   "location": "page 9, p.180",
+   "numbers": [],
+   "period": "14th century",
+   "place": "Alfeizerão",
+   "who": ""
+  },
+  {
+   "action": "Timber kept coming from Alfeizerão-Alcobaça, and also from Leiria and Torres Vedras overland, probably mixed road and river transport.",
+   "boat": "",
+   "cargo": "timber",
+   "conditions": "overland for Leiria and Torres Vedras",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p123",
+   "kind": "practice",
+   "location": "page 9, p.180",
+   "numbers": [],
+   "period": "15th century",
+   "place": "Alfeizerão, Alcobaça, Leiria, Torres Vedras",
+   "who": ""
+  },
+  {
+   "action": "Timber from the Zêzere basin reached the Tagus by floating or ox carts, then was loaded onto rafts or boats; the area drove river transport.",
+   "boat": "jangadas (rafts) and boats",
+   "cargo": "timber",
+   "conditions": "river floating conditions on the Zêzere",
+   "gear": "ox carts",
+   "id": "mmwdz10zt3xye:28dp:p124",
+   "kind": "practice",
+   "location": "page 9, p.180",
+   "numbers": [],
+   "period": "until the end of the first half of the 2",
+   "place": "Zêzere basin, Tagus",
+   "who": ""
+  },
+  {
+   "action": "Leiria and Zêzere-middle Tagus forests were well placed, so Lisbon never had serious timber shortages, unlike many European cities.",
+   "boat": "",
+   "cargo": "timber",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p125",
+   "kind": "description",
+   "location": "page 9, pp.180-181",
+   "numbers": [],
+   "period": "",
+   "place": "Leiria, Zêzere-Tagus, Lisbon",
+   "who": ""
+  },
+  {
+   "action": "England imported timber from Scandinavia, Russia and North America because its oak forests lay too far from coast or waterways.",
+   "boat": "",
+   "cargo": "timber",
+   "conditions": "overland timber transport limit",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p126",
+   "kind": "description",
+   "location": "page 9, p.181",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "32",
+     "what": "usual limit of land transport for timber"
+    }
+   ],
+   "period": "before the railway",
+   "place": "England",
+   "who": ""
+  },
+  {
+   "action": "Wheat for Lisbon's market stays profitable over longer distances; it grows near Lisbon and in the Ribatejo lezírias, which supply earliest thanks to higher yields.",
+   "boat": "",
+   "cargo": "wheat",
+   "conditions": "ecological advantages of the area",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p127",
+   "kind": "description",
+   "location": "page 9, p.181",
+   "numbers": [],
+   "period": "",
+   "place": "Lisbon, Ribatejo lezírias",
+   "who": ""
+  },
+  {
+   "action": "Alentejo has the large extensive cereal production, more intensive near local centres, good river or sea access and fertile soils.",
+   "boat": "",
+   "cargo": "cereals",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p128",
+   "kind": "description",
+   "location": "page 9, p.181",
+   "numbers": [],
+   "period": "",
+   "place": "Alentejo",
+   "who": ""
+  },
+  {
+   "action": "Olive growing spread as monoculture far from Lisbon because olive oil is cheap to transport relative to its value, though much output was sent to Lisbon.",
+   "boat": "",
+   "cargo": "olive oil",
+   "conditions": "transport cost low relative to value",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p129",
+   "kind": "description",
+   "location": "page 10, start (181-182)",
+   "numbers": [],
+   "period": "",
+   "place": "areas far from Lisbon",
+   "who": ""
+  },
+  {
+   "action": "Wine warehouses and wine-processing installations stayed beside Tagus river ports, some still in places unsuited to present transport, such as Ginjal at Cacilhas and Poço do Bispo.",
+   "boat": "",
+   "cargo": "wine",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p130",
+   "kind": "description",
+   "location": "page 183",
+   "numbers": [],
+   "period": "",
+   "place": "Vala do Carregado, Cacilhas (Ginjal), Poço do Bispo, Sacavém, Rossio de Abrantes",
+   "who": ""
+  },
+  {
+   "action": "Lisbon's municipal council complained to the king that large wine losses and frauds occurred in warehouses, especially foreigners', between Cacilhas and Trafaria.",
+   "boat": "",
+   "cargo": "wine",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p131",
+   "kind": "event",
+   "location": "footnote, page 183",
+   "numbers": [],
+   "period": "27 September 1765",
+   "place": "Cacilhas to Trafaria",
+   "who": "Câmara de Lisboa, foreign merchants"
+  },
+  {
+   "action": "Foreigners stored wine in warehouses at the entrance of the Trancão river at Sacavém, ready for shipment, as the parish priest reported.",
+   "boat": "",
+   "cargo": "wine",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p132",
+   "kind": "practice",
+   "location": "footnote, page 183",
+   "numbers": [],
+   "period": "1758",
+   "place": "Sacavém (entrada do Trancão)",
+   "who": "foreigners; parish priest of Sacavém"
+  },
+  {
+   "action": "A soap factory still operates at Rossio de Abrantes, probably linked to the origin of its raw materials, ash and vegetable fats.",
+   "boat": "",
+   "cargo": "ash and vegetable fats",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p133",
+   "kind": "description",
+   "location": "page 183",
+   "numbers": [],
+   "period": "",
+   "place": "Rossio de Abrantes",
+   "who": ""
+  },
+  {
+   "action": "Timber received first treatment at the felling site: felled trees were cleaned and trunks sorted by size, reducing mass and transport cost before shipping.",
+   "boat": "",
+   "cargo": "timber",
+   "conditions": "transport cheap but processing still worthwhile",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p134",
+   "kind": "practice",
+   "location": "page 183",
+   "numbers": [],
+   "period": "",
+   "place": "extraction sites",
+   "who": ""
+  },
+  {
+   "action": "Trunks were carried to the Tagus by ox carts, or floated down the Zêzere, then embarked at river points for Lisbon.",
+   "boat": "",
+   "cargo": "timber trunks",
+   "conditions": "",
+   "gear": "ox carts; flotation",
+   "id": "mmwdz10zt3xye:28dp:p135",
+   "kind": "practice",
+   "location": "pages 183-184",
+   "numbers": [],
+   "period": "",
+   "place": "Tagus, Zêzere",
+   "who": ""
+  },
+  {
+   "action": "Embarkation points on the Tagus became sites of timber industry and trade, linking pine forests of Alto Ribatejo and Beira Baixa to Lisbon, the main market and export centre.",
+   "boat": "",
+   "cargo": "timber",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p136",
+   "kind": "description",
+   "location": "page 184",
+   "numbers": [
+    {
+     "unit": "places",
+     "value": "3",
+     "what": "main timber entrepôts named"
+    }
+   ],
+   "period": "",
+   "place": "Abrantes (Alferrarede, port Barreiras do Tejo), Rio de Moinhos, Praia do Ribatej",
+   "who": ""
+  },
+  {
+   "action": "Amoreira was an important timber embarkation point for Lisbon but developed no related industry; Rio de Moinhos dominated the timber trade, and nearby Montalvo got a sawmill.",
+   "boat": "",
+   "cargo": "timber",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p137",
+   "kind": "description",
+   "location": "page 184",
+   "numbers": [],
+   "period": "",
+   "place": "Amoreira, Rio de Moinhos, Montalvo",
+   "who": ""
+  },
+  {
+   "action": "Lisbon's timber industry first located according to river transport; timber yards and sawmills still line the port at Xabregas, Cais do Tojo, Poço do Bispo and Alcântara.",
+   "boat": "",
+   "cargo": "timber",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p138",
+   "kind": "description",
+   "location": "page 184",
+   "numbers": [],
+   "period": "",
+   "place": "Lisbon: Xabregas, Cais do Tojo, Poço do Bispo, Alcântara",
+   "who": ""
+  },
+  {
+   "action": "Queen Elizabeth I of England banned ironworkers from using trees over 30 cm in diameter within 22 km of the sea, cited as a precedent.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p139",
+   "kind": "rule",
+   "location": "page 181 footnote",
+   "numbers": [
+    {
+     "unit": "cm",
+     "value": "30",
+     "what": "maximum tree diameter"
+    },
+    {
+     "unit": "km",
+     "value": "22",
+     "what": "distance from sea"
+    }
+   ],
+   "period": "",
+   "place": "England",
+   "who": "Isabel I de Inglaterra; ferreiros"
+  },
+  {
+   "action": "Specialised timber men guided floating logs down the Zêzere from the banks using a pole tipped with a curved iron hook, until the Castelo de Bode dam was built.",
+   "boat": "",
+   "cargo": "logs (toros)",
+   "conditions": "",
+   "gear": "pole with curved iron hook (gravato)",
+   "id": "mmwdz10zt3xye:28dp:p140",
+   "kind": "practice",
+   "location": "page 184",
+   "numbers": [],
+   "period": "until the Castelo de Bode dam",
+   "place": "Zêzere",
+   "who": "madeireiros"
+  },
+  {
+   "action": "In the rainy season boats went up the Zêzere as far as Barca Nova to load brushwood bundles (fachina).",
+   "boat": "boats displacing up to 15 tonnes",
+   "cargo": "fachina",
+   "conditions": "rainy season",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p141",
+   "kind": "practice",
+   "location": "page 184",
+   "numbers": [
+    {
+     "unit": "tonnes",
+     "value": "15",
+     "what": "maximum boat displacement"
+    }
+   ],
+   "period": "early years of the 20th century",
+   "place": "Zêzere to Barca Nova",
+   "who": ""
+  },
+  {
+   "action": "Timber was taken from the riverbed at a large sandbank below the confluence, loaded on rafts to Valada or Salvaterra, then carried by boat to Lisbon.",
+   "boat": "rafts (jangadas) and boats",
+   "cargo": "timber",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p142",
+   "kind": "practice",
+   "location": "page 184",
+   "numbers": [],
+   "period": "",
+   "place": "sandbank below Zêzere confluence, Valada, Salvaterra, Lisbon",
+   "who": ""
+  },
+  {
+   "action": "A small sawmill industry using hand saws developed at Praia do Ribatejo; steam saws were later introduced and the industry expanded.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "hand saws, steam saw",
+   "id": "mmwdz10zt3xye:28dp:p143",
+   "kind": "event",
+   "location": "page 184",
+   "numbers": [],
+   "period": "19th century",
+   "place": "Praia do Ribatejo",
+   "who": "first industrialist"
+  },
+  {
+   "action": "Around 1900 a relative of the first industrialist set up a second sawmill; both lasted to the present day of the text.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p144",
+   "kind": "event",
+   "location": "page 184",
+   "numbers": [],
+   "period": "turn of the century",
+   "place": "Praia do Ribatejo",
+   "who": "relative of first industrialist"
+  },
+  {
+   "action": "A sawmill from Abrantes opened a branch at Praia do Ribatejo, which lasted until the end of the first quarter of the 20th century.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p145",
+   "kind": "event",
+   "location": "page 184",
+   "numbers": [],
+   "period": "19th century to c. 1925",
+   "place": "Praia do Ribatejo",
+   "who": "Abrantes sawmill company"
+  },
+  {
+   "action": "Railways served the sawmills for some products, but rafts and boats stayed in use until the Second World War, after which lorries ended river traffic.",
+   "boat": "jangadas and barcos",
+   "cargo": "timber",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p146",
+   "kind": "practice",
+   "location": "page 184",
+   "numbers": [],
+   "period": "19th century to after WWII",
+   "place": "Praia do Ribatejo, Rio de Moinhos",
+   "who": ""
+  },
+  {
+   "action": "Rio de Moinhos timber merchants hauled wood by ox cart to the Tagus, then shipped it to Lisbon by boat and raft.",
+   "boat": "boats and rafts",
+   "cargo": "timber",
+   "conditions": "",
+   "gear": "ox carts",
+   "id": "mmwdz10zt3xye:28dp:p147",
+   "kind": "practice",
+   "location": "page 184",
+   "numbers": [],
+   "period": "",
+   "place": "Rio de Moinhos to Tagus to Lisbon",
+   "who": "timber merchants of Rio de Moinhos"
+  },
+  {
+   "action": "A fine quay far from the village, built early in the century, served almost solely for timber export; a plaque dates it to 28-11-1903.",
+   "boat": "",
+   "cargo": "timber",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p148",
+   "kind": "description",
+   "location": "page 184",
+   "numbers": [],
+   "period": "1903",
+   "place": "Rio de Moinhos, Tagus bank",
+   "who": ""
+  },
+  {
+   "action": "Each Rio de Moinhos sawmill owned boats and organised rafts to carry timber downriver; the largest also had a depot at Valada receiving rafted timber for boats to Lisbon.",
+   "boat": "boats and rafts",
+   "cargo": "timber",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p149",
+   "kind": "practice",
+   "location": "page 185",
+   "numbers": [
+    {
+     "unit": "sawmills",
+     "value": "3",
+     "what": "sawmills built at Rio de Moinhos"
+    },
+    {
+     "unit": "sawmills",
+     "value": "2",
+     "what": "sawmills still working"
+    }
+   ],
+   "period": "",
+   "place": "Rio de Moinhos, Valada, Lisbon",
+   "who": "sawmills of Rio de Moinhos"
+  },
+  {
+   "action": "The largest firm also had a depot at Praia do Ribatejo by the Zêzere-Tagus confluence, abandoned a little over twenty years before the text.",
+   "boat": "",
+   "cargo": "timber",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p150",
+   "kind": "description",
+   "location": "page 185",
+   "numbers": [
+    {
+     "unit": "years",
+     "value": "just over 20",
+     "what": "years since abandonment"
+    }
+   ],
+   "period": "",
+   "place": "Praia do Ribatejo",
+   "who": "largest Rio de Moinhos sawmill"
+  },
+  {
+   "action": "The two surviving Rio de Moinhos sawmills were founded late in the 19th century by two partners from an Alferrarede sawmill, exploiting the ox cart to boat transfer point.",
+   "boat": "",
+   "cargo": "timber",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p151",
+   "kind": "event",
+   "location": "page 185",
+   "numbers": [],
+   "period": "end of 19th century",
+   "place": "Rio de Moinhos",
+   "who": "two partners from Alferrarede"
+  },
+  {
+   "action": "During the Second World War the firm Zeferino Álvaro Pereira & Herdeiros built a new boat replacing an identical one; it made two Lisbon trips and was sold to Lisbon shipowners.",
+   "boat": "new 55-tonne boat",
+   "cargo": "",
+   "conditions": "firm already owned a producer-gas lorry",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p152",
+   "kind": "event",
+   "location": "page 185",
+   "numbers": [
+    {
+     "unit": "tonnes",
+     "value": "55",
+     "what": "boat capacity"
+    },
+    {
+     "unit": "voyages",
+     "value": "2",
+     "what": "voyages to Lisbon"
+    }
+   ],
+   "period": "Second World War",
+   "place": "Rio de Moinhos, Lisbon",
+   "who": "Zeferino Álvaro Pereira & Herdeiros, Lda."
+  },
+  {
+   "action": "The firm now works only with lorries, from pine woods to factory and to markets, with main clients at Xabregas, Moscavide and Alcântara along Lisbon harbour.",
+   "boat": "",
+   "cargo": "timber",
+   "conditions": "",
+   "gear": "lorries",
+   "id": "mmwdz10zt3xye:28dp:p153",
+   "kind": "description",
+   "location": "page 185",
+   "numbers": [],
+   "period": "",
+   "place": "Xabregas, Moscavide, Alcântara",
+   "who": "Zeferino Álvaro Pereira & Herdeiros, Lda."
+  },
+  {
+   "action": "Cork industry is discussed through two examples tied to river transport, Rossio ao Sul do Tejo and Chamusca; large-scale cork industrialisation coincided with the railway.",
+   "boat": "",
+   "cargo": "cork",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p154",
+   "kind": "description",
+   "location": "page 186",
+   "numbers": [],
+   "period": "mid-19th century onward",
+   "place": "Rossio ao Sul do Tejo, Chamusca",
+   "who": ""
+  },
+  {
+   "action": "Most cork reached Rossio de Abrantes by rail, then went by boat, more rarely by raft, to the Lisbon area.",
+   "boat": "boats, rarely rafts",
+   "cargo": "cork",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p155",
+   "kind": "practice",
+   "location": "page 187",
+   "numbers": [],
+   "period": "railway era",
+   "place": "Rossio de Abrantes to Lisbon area",
+   "who": ""
+  },
+  {
+   "action": "Cork from Alto Alentejo reached Rossio de Abrantes by rail from Ponte de Sor or on mule carts, often owned by Algarvians who came up for the cork harvest.",
+   "boat": "",
+   "cargo": "cork",
+   "conditions": "",
+   "gear": "mule carts; railway",
+   "id": "mmwdz10zt3xye:28dp:p156",
+   "kind": "practice",
+   "location": "page 12 (start)",
+   "numbers": [],
+   "period": "",
+   "place": "Rossio de Abrantes; Ponte de Sor",
+   "who": "algarvios"
+  },
+  {
+   "action": "Railway ended boat traffic upstream of Abrantes (Alvega) but increased goods reaching Rossio from the Alentejo, notably cork, coal and cereals, per a former boat builder.",
+   "boat": "barcos de rio acima",
+   "cargo": "cork, coal, cereals",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p157",
+   "kind": "event",
+   "location": "page 12 (start)",
+   "numbers": [
+    {
+     "unit": "year",
+     "value": "1943",
+     "what": "year the builder stopped working"
+    }
+   ],
+   "period": "builder worked until 1943",
+   "place": "Rossio de Abrantes; Alvega",
+   "who": "antigo construtor de barcos de rio acima, do Rossio"
+  },
+  {
+   "action": "Road transport finally destroyed the remaining river and rail-linked traffic at Rossio about twenty years before the text was written.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p158",
+   "kind": "event",
+   "location": "page 12",
+   "numbers": [
+    {
+     "unit": "years (approx.)",
+     "value": "20",
+     "what": "years since traffic ended"
+    }
+   ],
+   "period": "about twenty years before writing",
+   "place": "Rossio de Abrantes",
+   "who": ""
+  },
+  {
+   "action": "Cork was taken to riverside warehouses in summer and shipped by boat in winter; summer rafts, mainly used for timber, carried much less cork. It left raw.",
+   "boat": "barcos; jangadas",
+   "cargo": "raw cork",
+   "conditions": "summer by warehouse, winter by boat",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p159",
+   "kind": "practice",
+   "location": "page 12",
+   "numbers": [],
+   "period": "",
+   "place": "Tejo",
+   "who": ""
+  },
+  {
+   "action": "In the 19th century an English firm with a depot at Rossio founded a small plant for first processing of cork into planks.",
+   "boat": "",
+   "cargo": "cork planks",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p160",
+   "kind": "event",
+   "location": "page 12",
+   "numbers": [],
+   "period": "19th century",
+   "place": "Rossio de Abrantes",
+   "who": "firma inglesa"
+  },
+  {
+   "action": "A small cork industry boom early in the 20th century, also at Ponte de Sor, made transport to Lisbon cheaper.",
+   "boat": "",
+   "cargo": "cork",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p161",
+   "kind": "event",
+   "location": "page 12",
+   "numbers": [],
+   "period": "early 20th century",
+   "place": "Rossio de Abrantes; Ponte de Sor",
+   "who": ""
+  },
+  {
+   "action": "Cork industry grew most about thirty years earlier; a dozen factories now make planks, stoppers, panels and agglomerates, employing roughly ten to just over fifty workers each.",
+   "boat": "",
+   "cargo": "cork products",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p162",
+   "kind": "description",
+   "location": "page 12 (187)",
+   "numbers": [
+    {
+     "unit": "factories",
+     "value": "12",
+     "what": "cork factories"
+    },
+    {
+     "unit": "workers",
+     "value": "10 to just over 50",
+     "what": "workers per factory"
+    }
+   ],
+   "period": "about thirty years before writing",
+   "place": "Rossio de Abrantes",
+   "who": "operários"
+  },
+  {
+   "action": "Rossio's cork industry boom was driven largely by Spanish capital and technicians from Catalonia and San Vicente de Alcántara; local river-trade capital also converted into it.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p163",
+   "kind": "description",
+   "location": "page 12 (187)",
+   "numbers": [],
+   "period": "",
+   "place": "Rossio de Abrantes",
+   "who": "Spanish investors and technicians; local capitalists"
+  },
+  {
+   "action": "Chamusca was a smaller cork shipping port with a narrower catchment, lacking a railway; cork came to the river by ox or mule carts.",
+   "boat": "",
+   "cargo": "cork",
+   "conditions": "no railway",
+   "gear": "ox carts; mule carts",
+   "id": "mmwdz10zt3xye:28dp:p164",
+   "kind": "practice",
+   "location": "page 12 (188)",
+   "numbers": [],
+   "period": "",
+   "place": "Chamusca",
+   "who": ""
+  },
+  {
+   "action": "Chamusca had a specialised cork wharf where the product was stored; trade was dominated by English and Americans. River traffic ended with cars after the Second World War.",
+   "boat": "",
+   "cargo": "cork",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p165",
+   "kind": "description",
+   "location": "page 12 (188)",
+   "numbers": [],
+   "period": "after the Second World War",
+   "place": "Chamusca",
+   "who": "Ingleses e Americanos"
+  },
+  {
+   "action": "Chamusca's cork industry predates 1876; the 1890 survey found one small unit with 3 workers. A factory by the cork port stopped working decades ago.",
+   "boat": "",
+   "cargo": "cork",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p166",
+   "kind": "description",
+   "location": "page 12 (188)",
+   "numbers": [
+    {
+     "unit": "workers",
+     "value": "3",
+     "what": "workers in 1890 survey"
+    }
+   ],
+   "period": "before 1876; 1890",
+   "place": "Chamusca",
+   "who": ""
+  },
+  {
+   "action": "Rossio was the upper limit for boats of 50-70 t, with upstream navigation much harder, so it became an intense wholesale centre supplying the Alentejo and Beira Baixa muleteers.",
+   "boat": "",
+   "cargo": "foodstuffs",
+   "conditions": "upstream navigation much more difficult",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p167",
+   "kind": "practice",
+   "location": "page 12 (189)",
+   "numbers": [
+    {
+     "unit": "tonnes",
+     "value": "50 to 70",
+     "what": "boat tonnage reaching Rossio"
+    }
+   ],
+   "period": "",
+   "place": "Rossio de Abrantes",
+   "who": "almocreves; grossistas"
+  },
+  {
+   "action": "Boats returning upriver from Lisbon carried salt, salted fish, other food and manufactures to Rossio; wine came mainly from Almeirim and Chamusca.",
+   "boat": "",
+   "cargo": "salt, salted fish (sardine, tuna, dogfish), food, manufactures, wine",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p168",
+   "kind": "practice",
+   "location": "page 12 (189)",
+   "numbers": [],
+   "period": "",
+   "place": "Lisboa; Rossio de Abrantes; Almeirim; Chamusca",
+   "who": ""
+  },
+  {
+   "action": "Rossio redistributed goods to local trade and to muleteers from the Alentejo and Beira, who brought back olive oil, potatoes, cheese and other goods.",
+   "boat": "",
+   "cargo": "olive oil, potatoes, cheese",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p169",
+   "kind": "practice",
+   "location": "page 12 (189-190)",
+   "numbers": [],
+   "period": "",
+   "place": "Rossio de Abrantes",
+   "who": "almocreves do Alentejo e da Beira"
+  },
+  {
+   "action": "The railway reduced and nearly ended the flow of muleteers from the Beiras and Alentejo, though Rossio kept its wholesale role.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p170",
+   "kind": "event",
+   "location": "page 12 (190)",
+   "numbers": [],
+   "period": "",
+   "place": "Rossio de Abrantes",
+   "who": "almocreves"
+  },
+  {
+   "action": "Liquid fuel was carried by barge from Lisbon to Abrantes; at the Rossio quay, pumps and piping moved it from boats into depots beside the railway station.",
+   "boat": "barcaças",
+   "cargo": "liquid fuel",
+   "conditions": "depots were built next to the railway station",
+   "gear": "pumps and piping",
+   "id": "mmwdz10zt3xye:28dp:p171",
+   "kind": "practice",
+   "location": "page 13, start of excerpt",
+   "numbers": [],
+   "period": "20th century",
+   "place": "Rossio quay, Abrantes",
+   "who": ""
+  },
+  {
+   "action": "Many wholesalers of groceries, wine and salt left Rossio; new truck-based wholesalers set up along main roads instead of at the quay.",
+   "boat": "",
+   "cargo": "groceries, wine, salt",
+   "conditions": "abandoned warehouses beside the old quay remain",
+   "gear": "trucks (camioneta)",
+   "id": "mmwdz10zt3xye:28dp:p172",
+   "kind": "event",
+   "location": "page 13, start of excerpt",
+   "numbers": [],
+   "period": "",
+   "place": "Rossio de Abrantes",
+   "who": "wholesalers (grossistas)"
+  },
+  {
+   "action": "Main river ports of the intermediate Tagus are spaced at similar distances, excluding the stretch above Abrantes and below Azambuja; the groups listed include Constância, Tancos, Barquinha-Chamusca, Santarém, Sabugueiro, Valada and Salvaterra.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "Sabugueiro, Valada and Salvaterra lie in tidal waters",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p173",
+   "kind": "description",
+   "location": "Localização, sítio e morfologia das aglomerações portuárias ",
+   "numbers": [],
+   "period": "",
+   "place": "Tagus between Abrantes and Azambuja",
+   "who": ""
+  },
+  {
+   "action": "Port location is determined mainly by the areas the port serves; the 1807 road map shows each port commanded the road network converging on it.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "some authors link ports to old fords used by armies",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p174",
+   "kind": "description",
+   "location": "Localização, sítio e morfologia das aglomerações portuárias ",
+   "numbers": [],
+   "period": "1807",
+   "place": "Tagus ports",
+   "who": ""
+  },
+  {
+   "action": "Local site factors for ports: a ford, a raised spot near the bed protecting from floods and enemies, a confluence of two navigable rivers, or deeper water allowing quays.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p175",
+   "kind": "description",
+   "location": "Localização, sítio e morfologia das aglomerações portuárias ",
+   "numbers": [],
+   "period": "",
+   "place": "Tagus river ports",
+   "who": ""
+  },
+  {
+   "action": "Abrantes sits on a defensive hilltop away from the river, linked to its quay at Barreiras do Tejo by a steep direct path, the caminho da barca.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "quay on the shallow side; water reaches it only in the wet season, far from the water in summer",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p176",
+   "kind": "description",
+   "location": "page 13, Abrantes-Rossio",
+   "numbers": [],
+   "period": "",
+   "place": "Abrantes, Barreiras do Tejo",
+   "who": ""
+  },
+  {
+   "action": "Because a quay was feasible only on the left bank, Rossio de Abrantes developed as the long-distance port serving Abrantes and handling goods to and from the Alentejo.",
+   "boat": "",
+   "cargo": "goods from and to the Alentejo",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p177",
+   "kind": "description",
+   "location": "page 13, Abrantes-Rossio",
+   "numbers": [],
+   "period": "",
+   "place": "Rossio de Abrantes",
+   "who": ""
+  },
+  {
+   "action": "Rossio and Abrantes were connected by a rudimentary bridge in summer and by small boats between Rossio and Barreiras do Tejo the rest of the year.",
+   "boat": "pequenas embarcações",
+   "cargo": "",
+   "conditions": "bridge in summer, boats otherwise",
+   "gear": "rudimentary bridge",
+   "id": "mmwdz10zt3xye:28dp:p178",
+   "kind": "practice",
+   "location": "page 13, Abrantes-Rossio",
+   "numbers": [],
+   "period": "",
+   "place": "Rossio to Barreiras do Tejo",
+   "who": ""
+  },
+  {
+   "action": "Boats carried goods to Lisbon, mostly from the Alentejo: wheat before the railway, then cork as its trade grew.",
+   "boat": "barcos",
+   "cargo": "wheat, cork",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p179",
+   "kind": "practice",
+   "location": "page 13, Abrantes-Rossio",
+   "numbers": [],
+   "period": "before and after the railway",
+   "place": "Rossio de Abrantes to Lisbon",
+   "who": ""
+  },
+  {
+   "action": "Timber from areas north of the Tagus was the main export by volume from Abrantes, but mostly travelled on rafts rather than boats.",
+   "boat": "jangadas (rafts)",
+   "cargo": "timber",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p180",
+   "kind": "practice",
+   "location": "page 13, Abrantes-Rossio",
+   "numbers": [],
+   "period": "",
+   "place": "Abrantes",
+   "who": ""
+  },
+  {
+   "action": "Abrantes' quay area sits in the seasonal flood bed, while the town lies on the flat terrace above; an old ruined bridge lies upstream of the late-19th-century bridge.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p181",
+   "kind": "description",
+   "location": "page 13, Abrantes-Rossio and footnote",
+   "numbers": [],
+   "period": "end of 19th century (current bridge)",
+   "place": "Abrantes and Rossio",
+   "who": ""
+  },
+  {
+   "action": "Punhete (Constância) was built on the right bank at the confluence with the Zêzere, where the Tagus is deepest, with its civic centre by the quay in the flood bed.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "port areas duplicated; town spreads along the slopes of the Tagus and Zêzere",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p182",
+   "kind": "description",
+   "location": "page 13, Constância",
+   "numbers": [],
+   "period": "",
+   "place": "Punhete (Constância)",
+   "who": ""
+  },
+  {
+   "action": "Timber from the north floated down the Zêzere and was collected on a beach just downstream of the confluence with the Tejo.",
+   "boat": "",
+   "cargo": "timber",
+   "conditions": "floated downriver",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p183",
+   "kind": "practice",
+   "location": "[page 14] Constância and Praia do Ribatejo",
+   "numbers": [],
+   "period": "",
+   "place": "Zêzere; beach downstream of confluence (Constância)",
+   "who": ""
+  },
+  {
+   "action": "Praia do Ribatejo developed as a secondary port specialised in exporting timber, sent down the Tejo by boats and especially rafts, mainly in summer.",
+   "boat": "barcos and jangadas (rafts)",
+   "cargo": "timber",
+   "conditions": "summer, when water was too shallow to load boats",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p184",
+   "kind": "practice",
+   "location": "[page 14] Constância and Praia do Ribatejo",
+   "numbers": [],
+   "period": "",
+   "place": "Praia do Ribatejo",
+   "who": ""
+  },
+  {
+   "action": "A small quay opposite Praia do Ribatejo exported coal from the Alentejo but was never important and produced no settlement.",
+   "boat": "",
+   "cargo": "coal from the Alentejo",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p185",
+   "kind": "description",
+   "location": "[page 14] Constância and Praia do Ribatejo",
+   "numbers": [],
+   "period": "",
+   "place": "Praia do Ribatejo, opposite quay",
+   "who": ""
+  },
+  {
+   "action": "In the early 19th century Tancos's port functions were split between Abrantes and Barquinha; Punhete probably also benefited from Tancos's decline.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p186",
+   "kind": "event",
+   "location": "[page 14] Vila Nova da Barquinha",
+   "numbers": [],
+   "period": "early 19th century",
+   "place": "Tancos, Abrantes, Barquinha, Punhete",
+   "who": ""
+  },
+  {
+   "action": "Heavy silting left Vila Nova da Barquinha's original quay far from the river, so landing places linked to the town by perpendicular roads had to be created.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "silting of the riverbed",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p187",
+   "kind": "description",
+   "location": "[page 14] Fig. 9",
+   "numbers": [],
+   "period": "",
+   "place": "Vila Nova da Barquinha (porto do Dr. Pombeiro, porto da Barca, porto da Fábrica ",
+   "who": ""
+  },
+  {
+   "action": "Santarém's important port lay on the same bank as the city, giving rise to the Ribeira de Santarém suburb in the river's flood bed.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "flood bed",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p188",
+   "kind": "description",
+   "location": "[page 14]",
+   "numbers": [],
+   "period": "",
+   "place": "Santarém, Ribeira de Santarém",
+   "who": ""
+  },
+  {
+   "action": "At Valada, where the Tejo becomes tidal, timber rafted down in summer was transshipped to boats that carried it to Lisboa.",
+   "boat": "jangadas, barcos",
+   "cargo": "timber",
+   "conditions": "summer; tidal reach begins",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p189",
+   "kind": "practice",
+   "location": "[page 14] Valada",
+   "numbers": [],
+   "period": "",
+   "place": "Valada",
+   "who": ""
+  },
+  {
+   "action": "Valada was an important stopping point on river traffic, so much that the king had a palace there.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p190",
+   "kind": "description",
+   "location": "[page 14] Valada",
+   "numbers": [],
+   "period": "",
+   "place": "Valada",
+   "who": "the king"
+  },
+  {
+   "action": "Dikes were built to protect Valada from floods; the present embankment is recent but probably follows earlier ones.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "floods",
+   "gear": "dikes",
+   "id": "mmwdz10zt3xye:28dp:p191",
+   "kind": "practice",
+   "location": "[page 14] Valada",
+   "numbers": [],
+   "period": "",
+   "place": "Valada",
+   "who": ""
+  },
+  {
+   "action": "Salvaterra de Magos and Benavente were tidal river ports; Salvaterra on an improved small tributary, Benavente by the Sorraia and the artificial Vala Nova canal.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "tides",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p192",
+   "kind": "description",
+   "location": "[page 14]",
+   "numbers": [],
+   "period": "",
+   "place": "Salvaterra de Magos, Benavente, Sorraia, Vala Nova",
+   "who": ""
+  },
+  {
+   "action": "Ports near the Tejo mouth, such as Vila Franca, Alhandra, Póvoa de Santa Iria and Sacavém, behave more like sea ports in a gentle gulf.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "tidal influence",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p193",
+   "kind": "description",
+   "location": "[page 14]",
+   "numbers": [],
+   "period": "",
+   "place": "Vila Franca, Alhandra, Póvoa de Santa Iria, Sacavém, south bank ports",
+   "who": ""
+  },
+  {
+   "action": "Amoreira and Rio de Moinhos have linear layouts perpendicular to a distant river; their quays only export raw materials, namely timber, and never grew into settlements.",
+   "boat": "",
+   "cargo": "timber",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p194",
+   "kind": "description",
+   "location": "[page 14]",
+   "numbers": [],
+   "period": "",
+   "place": "Amoreira, Rio de Moinhos",
+   "who": ""
+  },
+  {
+   "action": "Abrantes's Rossio is organised around a quay running along the river, with three perpendicular streets serving two urban nuclei linked by Rua Direita.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p195",
+   "kind": "description",
+   "location": "[page 14] Fig. 10",
+   "numbers": [
+    {
+     "unit": "m",
+     "value": "1000",
+     "what": "quay length"
+    },
+    {
+     "unit": "streets",
+     "value": "3",
+     "what": "streets running from quay"
+    }
+   ],
+   "period": "late 19th century (link to new bridge)",
+   "place": "Rossio de Abrantes",
+   "who": ""
+  },
+  {
+   "action": "Rossio de Abrantes grew along a riverside street parallel to the Tagus, with a series of squares at the centre of each urban nucleus, between the quays and the interior.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p196",
+   "kind": "description",
+   "location": "[page 15]",
+   "numbers": [],
+   "period": "",
+   "place": "Rossio de Abrantes",
+   "who": ""
+  },
+  {
+   "action": "Main buildings of three or four floors, plus commerce especially upstream and along Rua Direita, were built around the squares mostly in the previous century.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p197",
+   "kind": "description",
+   "location": "[page 15]",
+   "numbers": [
+    {
+     "unit": "floors",
+     "value": "3 to 4",
+     "what": "floors in main buildings"
+    }
+   ],
+   "period": "previous century",
+   "place": "Rossio de Abrantes, Rua Direita",
+   "who": ""
+  },
+  {
+   "action": "Warehouses tied to river traffic stood beside the quay and on transverse streets; some survive today in ruins of varying decay.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "ruined, decaying",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p198",
+   "kind": "description",
+   "location": "[page 15]",
+   "numbers": [],
+   "period": "",
+   "place": "Rossio de Abrantes quay",
+   "who": ""
+  },
+  {
+   "action": "A road bridge was built downstream and the settlement extended slightly in that direction.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p199",
+   "kind": "event",
+   "location": "[page 15]",
+   "numbers": [],
+   "period": "",
+   "place": "Rossio de Abrantes",
+   "who": ""
+  },
+  {
+   "action": "Railway construction created a suburb (Carvalhal) beside the station, which later merged with the Rossio as motor traffic grew.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p200",
+   "kind": "event",
+   "location": "[page 15]",
+   "numbers": [],
+   "period": "",
+   "place": "Carvalhal, Rossio de Abrantes",
+   "who": ""
+  },
+  {
+   "action": "Banks, cafés, clothes shops and the main pension moved to the national road linking Ponte de Sor, Abrantes and Lisbon, reversing the earlier habit of locating near the station.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p201",
+   "kind": "description",
+   "location": "[page 15]",
+   "numbers": [],
+   "period": "late 19th century to present",
+   "place": "Rossio de Abrantes",
+   "who": ""
+  },
+  {
+   "action": "A new road to Gavião-Nisa-Portalegre was built and road traffic grew as river traffic declined, so the Rossio centre moved up toward the national road.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "river traffic in decline",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p202",
+   "kind": "event",
+   "location": "[page 15]",
+   "numbers": [],
+   "period": "",
+   "place": "Rossio de Abrantes",
+   "who": ""
+  },
+  {
+   "action": "Rossio de Abrantes is presented as a typical Tagus port settlement on flat ground, shaped by river activities, later pulled toward station and highways.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "flat topography",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p203",
+   "kind": "description",
+   "location": "[page 15]",
+   "numbers": [],
+   "period": "",
+   "place": "Rossio de Abrantes",
+   "who": ""
+  },
+  {
+   "action": "At Samora Correia on the Sorraia, the motor car replaced the boat for local transport, so urban change was simpler, without a railway.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "road runs parallel to river",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p204",
+   "kind": "event",
+   "location": "[page 15]",
+   "numbers": [],
+   "period": "",
+   "place": "Samora Correia, Sorraia left bank",
+   "who": ""
+  },
+  {
+   "action": "Samora Correia's life slid inland parallel to the river; it is now being drawn toward the Porto Alto crossroads where two national roads meet.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p205",
+   "kind": "description",
+   "location": "[page 15]",
+   "numbers": [],
+   "period": "recent",
+   "place": "Samora Correia, Porto Alto",
+   "who": ""
+  },
+  {
+   "action": "Ports on steep slopes such as Constância, Tancos and Vila Nova da Barquinha show a similar pattern: quayside square, with a parallel road above attracting commerce and services.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "abrupt slopes",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p206",
+   "kind": "description",
+   "location": "[page 15]",
+   "numbers": [],
+   "period": "",
+   "place": "Constância, Tancos, Vila Nova da Barquinha",
+   "who": ""
+  },
+  {
+   "action": "Constância sits where two rivers meet on uneven ground; its riverside square is more important and the parallel road runs one way, away from the confluence.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "confluence of two rivers",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p207",
+   "kind": "description",
+   "location": "[page 15]",
+   "numbers": [],
+   "period": "",
+   "place": "Constância",
+   "who": ""
+  },
+  {
+   "action": "The French summary says Tagus navigation survived railway competition but succumbed to motor transport; it notes the state of navigable Portuguese rivers in 1957.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p208",
+   "kind": "description",
+   "location": "[page 15] Résumé",
+   "numbers": [],
+   "period": "1957",
+   "place": "Tagus",
+   "who": ""
+  },
+  {
+   "action": "Boats of 50 to 60 tonnes had long sailed the Tagus up to Abrantes, the main economic axis supporting Lisbon's growth.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p209",
+   "kind": "description",
+   "location": "[page 15] Résumé",
+   "numbers": [
+    {
+     "unit": "tonnes",
+     "value": "50 to 60",
+     "what": "boat tonnage"
+    }
+   ],
+   "period": "",
+   "place": "Tagus to Abrantes",
+   "who": ""
+  },
+  {
+   "action": "In the Middle Ages the port of Santarém kept direct maritime links with North Africa and central Europe.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p210",
+   "kind": "practice",
+   "location": "[page 15] Résumé",
+   "numbers": [],
+   "period": "Middle Ages",
+   "place": "Santarém",
+   "who": ""
+  },
+  {
+   "action": "Abrantes organised foreign trade for much of the Beira and Upper Alentejo.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p211",
+   "kind": "practice",
+   "location": "[page 15] Résumé",
+   "numbers": [],
+   "period": "",
+   "place": "Abrantes",
+   "who": ""
+  },
+  {
+   "action": "Goods carried upriver on the Tagus were mainly food, especially salt and fish, and manufactured products.",
+   "boat": "",
+   "cargo": "salt, fish, manufactured goods",
+   "conditions": "upstream",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p212",
+   "kind": "practice",
+   "location": "[page 15] Résumé",
+   "numbers": [],
+   "period": "",
+   "place": "Tagus",
+   "who": ""
+  },
+  {
+   "action": "Farm, livestock and forest products travelled down the Tagus to Lisbon; a 17th-century author's map shows the regions that shipped goods this way.",
+   "boat": "",
+   "cargo": "agricultural, livestock and forest products",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p213",
+   "kind": "description",
+   "location": "page 16, opening",
+   "numbers": [],
+   "period": "17th century",
+   "place": "Tagus, Lisbon",
+   "who": ""
+  },
+  {
+   "action": "Philippe II made a major effort to create river links between Lisbon and central Iberia (Aranjuez), after having the river's course studied.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p214",
+   "kind": "event",
+   "location": "page 16",
+   "numbers": [],
+   "period": "1580",
+   "place": "Tagus, Lisbon to Aranjuez",
+   "who": "Philippe II"
+  },
+  {
+   "action": "Works removed reefs, built towpaths and improved quays, making navigation possible from Abrantes to the frontier.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "towpaths",
+   "id": "mmwdz10zt3xye:28dp:p215",
+   "kind": "event",
+   "location": "page 16",
+   "numbers": [],
+   "period": "1580",
+   "place": "Abrantes to the frontier",
+   "who": "Philippe II"
+  },
+  {
+   "action": "Until the railway arrived, the Spanish town of Alcantara exported its ores down the Tagus to Lisbon.",
+   "boat": "",
+   "cargo": "ores",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p216",
+   "kind": "practice",
+   "location": "page 16",
+   "numbers": [],
+   "period": "until the railway",
+   "place": "Alcantara, Tagus, Lisbon",
+   "who": ""
+  },
+  {
+   "action": "The railway ended all navigation upstream of Abrantes and nearly killed the port of Vila Nova da Barquinha, near a major rail junction.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p217",
+   "kind": "event",
+   "location": "page 16",
+   "numbers": [],
+   "period": "",
+   "place": "upstream of Abrantes, Vila Nova da Barquinha",
+   "who": "railway company"
+  },
+  {
+   "action": "The railway company offered boatmen jobs and advantages, sometimes buying their boats.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p218",
+   "kind": "practice",
+   "location": "page 16",
+   "numbers": [],
+   "period": "",
+   "place": "Vila Nova da Barquinha",
+   "who": "railway company, bateliers"
+  },
+  {
+   "action": "Lorries, mainly since the last war, finished river navigation, now limited to the estuary.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p219",
+   "kind": "event",
+   "location": "page 16",
+   "numbers": [],
+   "period": "since the last war",
+   "place": "Tagus estuary",
+   "who": ""
+  },
+  {
+   "action": "Boatmen's fates differed: some moved to the estuary with their boats, some turned to trade or farming at home, some drive lorries.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "lorry",
+   "id": "mmwdz10zt3xye:28dp:p220",
+   "kind": "practice",
+   "location": "page 16",
+   "numbers": [],
+   "period": "",
+   "place": "estuary and home regions",
+   "who": "bateliers"
+  },
+  {
+   "action": "Transport cost distance mainly shaped land use around Lisbon, as in Von Thünen's model: market gardens, quality wine, firewood, charcoal, cheap wine and wheat in rings.",
+   "boat": "",
+   "cargo": "vegetables, wine, firewood, charcoal, wheat",
+   "conditions": "ecology only a minor adjustment",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p221",
+   "kind": "description",
+   "location": "page 16, p.201",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "about 100",
+     "what": "distance of cheap wine and wheat zone from Lisbon"
+    }
+   ],
+   "period": "",
+   "place": "around Lisbon, Tagus",
+   "who": ""
+  },
+  {
+   "action": "Timber from interior regions was floated down the Zêzere, then rafted on the Tagus to the tidal limit, where boats carried it to Lisbon.",
+   "boat": "boats, rafts",
+   "cargo": "timber",
+   "conditions": "to the limit of the tide",
+   "gear": "rafts",
+   "id": "mmwdz10zt3xye:28dp:p222",
+   "kind": "practice",
+   "location": "page 16, p.201",
+   "numbers": [],
+   "period": "",
+   "place": "Zêzere, Tagus, Lisbon",
+   "who": ""
+  },
+  {
+   "action": "Timber from the western coast reached Lisbon by sea, lowering transport costs.",
+   "boat": "",
+   "cargo": "timber",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p223",
+   "kind": "practice",
+   "location": "page 16, p.201",
+   "numbers": [],
+   "period": "",
+   "place": "western coast, Lisbon",
+   "who": ""
+  },
+  {
+   "action": "Goods from farthest away bore transport costs best: ashes, olive oil, meat and cheese.",
+   "boat": "",
+   "cargo": "ashes, olive oil, meat, cheese",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p224",
+   "kind": "description",
+   "location": "page 16, p.201",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Wheat from nearby Tagus areas reached Lisbon at harvest time; wheat from distant Alentejo arrived later.",
+   "boat": "",
+   "cargo": "wheat",
+   "conditions": "harvest season",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p225",
+   "kind": "description",
+   "location": "page 16, p.201",
+   "numbers": [],
+   "period": "",
+   "place": "Tagus, Alentejo, Lisbon",
+   "who": ""
+  },
+  {
+   "action": "Wholesale wine merchants' warehouses have for centuries stood on the south shore opposite Lisbon and in ports just upstream.",
+   "boat": "",
+   "cargo": "wine",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p226",
+   "kind": "description",
+   "location": "page 16, p.202",
+   "numbers": [],
+   "period": "for centuries",
+   "place": "south bank of Tagus estuary, upstream ports",
+   "who": "wine wholesalers"
+  },
+  {
+   "action": "Some industries and wholesalers once on Lisbon's riverfront moved to the city's northern edge, following rail and lorry transport.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p227",
+   "kind": "event",
+   "location": "page 16, p.202",
+   "numbers": [],
+   "period": "",
+   "place": "Lisbon",
+   "who": ""
+  },
+  {
+   "action": "Sawmills at Rio de Moinhos stand on a former timber-loading port for Lisbon; those at Praia do Ribatejo are where floated logs from the Zêzere stopped.",
+   "boat": "",
+   "cargo": "timber",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p228",
+   "kind": "description",
+   "location": "page 16, p.202",
+   "numbers": [],
+   "period": "",
+   "place": "Rio de Moinhos, Praia do Ribatejo",
+   "who": ""
+  },
+  {
+   "action": "The cork industry settled at Rossio de Abrantes and Chamusca, river ports where cork was the main export.",
+   "boat": "",
+   "cargo": "cork",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p229",
+   "kind": "description",
+   "location": "page 16, p.202",
+   "numbers": [],
+   "period": "",
+   "place": "Rossio de Abrantes, Chamusca",
+   "who": ""
+  },
+  {
+   "action": "Rossio de Abrantes became a leading wholesale grocery centre thanks to its port, which outlasted the railway; road traffic now replaces it.",
+   "boat": "",
+   "cargo": "groceries",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p230",
+   "kind": "description",
+   "location": "page 16, p.202",
+   "numbers": [],
+   "period": "",
+   "place": "Rossio de Abrantes",
+   "who": ""
+  },
+  {
+   "action": "Before cars, customers, mainly muleteers, came to the wholesaler; now wholesalers visit clients from Beira to Alentejo.",
+   "boat": "",
+   "cargo": "groceries",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p231",
+   "kind": "practice",
+   "location": "page 16, p.202",
+   "numbers": [],
+   "period": "",
+   "place": "Rossio de Abrantes, Beira to Alentejo",
+   "who": "muleteers, wholesalers"
+  },
+  {
+   "action": "The last chapter presents the situation, site and plan of Tagus ports: Rossio de Abrantes-Barreiras do Tejo, Constância-Praia do Ribatejo, and Chamusca.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p232",
+   "kind": "description",
+   "location": "page 16, last chapter",
+   "numbers": [],
+   "period": "",
+   "place": "Rossio de Abrantes, Barreiras do Tejo, Constância, Praia do Ribatejo, Chamusca",
+   "who": ""
+  },
+  {
+   "action": "Port town plans show life shaped by the main activity; services clustered in streets parallel to the river and on riverside squares.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p233",
+   "kind": "description",
+   "location": "page 16, last chapter",
+   "numbers": [],
+   "period": "",
+   "place": "Tagus port towns",
+   "who": ""
+  },
+  {
+   "action": "Tagus was navigable by craft of limited tonnage and served as the main economic axis, linking inland harbours, Lisbon and foreign countries; Santarém and Abrantes were key trading ports.",
+   "boat": "craft up to 50 to 60 tons as far as Abrantes",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p234",
+   "kind": "description",
+   "location": "[page 17] Summary",
+   "numbers": [
+    {
+     "unit": "tons",
+     "value": "50 to 60",
+     "what": "maximum craft tonnage as far as Abrantes"
+    }
+   ],
+   "period": "Middle Ages",
+   "place": "Tagus; Santarém; Abrantes",
+   "who": ""
+  },
+  {
+   "action": "Salt, fish and manufactured goods were carried up the Tagus; agricultural, livestock and forest products went downstream to Lisbon.",
+   "boat": "",
+   "cargo": "salt, fish, manufactured products upstream; agricultural, livestock and forest p",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p235",
+   "kind": "practice",
+   "location": "[page 17] Summary",
+   "numbers": [],
+   "period": "",
+   "place": "Tagus to Lisbon",
+   "who": ""
+  },
+  {
+   "action": "Philip II ordered the river studied and works done (clearing obstacles, towing paths, better piers) to make it navigable from Abrantes to the frontier, linking Lisbon with Aranjuez.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "towing paths, riverside piers",
+   "id": "mmwdz10zt3xye:28dp:p236",
+   "kind": "event",
+   "location": "[page 17] Summary",
+   "numbers": [],
+   "period": "1580",
+   "place": "Tagus, Abrantes to the frontier",
+   "who": "Phillip II"
+  },
+  {
+   "action": "Before railways, the Spanish town of Alcantara exported its ore down the Tagus via Lisbon.",
+   "boat": "",
+   "cargo": "ore",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p237",
+   "kind": "practice",
+   "location": "[page 17] Summary",
+   "numbers": [],
+   "period": "before railways",
+   "place": "Tagus; Lisbon",
+   "who": "Alcantara"
+  },
+  {
+   "action": "Railways ended all navigation upstream of Abrantes and nearly killed Vila Nova da Barquinha's port; the railway company gave boat owners jobs and advantages, sometimes buying their boats.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "proximity to an important railway junction",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p238",
+   "kind": "event",
+   "location": "[page 17] Summary",
+   "numbers": [],
+   "period": "",
+   "place": "Abrantes; Vila Nova da Barquinha",
+   "who": "rivercraft owners; railway company"
+  },
+  {
+   "action": "Since the last war, trucks replaced rivercraft, whose traffic is now limited to the estuary; owners moved to the estuary, trade, farming or became truck drivers.",
+   "boat": "rivercraft",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p239",
+   "kind": "event",
+   "location": "[page 17] Summary",
+   "numbers": [],
+   "period": "since the last war",
+   "place": "Tagus estuary",
+   "who": "rivercraft owners"
+  },
+  {
+   "action": "Land use around Lisbon followed a Von Thünen pattern shaped by transport cost: vegetables nearest, then quality wine, firewood, charcoal, then cheap wine and wheat along the Tagus.",
+   "boat": "",
+   "cargo": "vegetables, wine, firewood, charcoal, wheat",
+   "conditions": "distance and transport cost",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p240",
+   "kind": "description",
+   "location": "[page 17] Summary",
+   "numbers": [
+    {
+     "unit": "km",
+     "value": "100",
+     "what": "distance from Lisbon for cheap wine and wheat zone"
+    }
+   ],
+   "period": "",
+   "place": "Lisbon hinterland; Tagus up to 100 km from Lisbon",
+   "who": ""
+  },
+  {
+   "action": "Timber from distant regions reached Lisbon by coastal shipping from the western coast, or by log-floating on the Zêzere, rafts on the Tagus, then barges from the tidal limit.",
+   "boat": "barges; rafts",
+   "cargo": "timber, logs",
+   "conditions": "low transport cost",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p241",
+   "kind": "practice",
+   "location": "[page 17] Summary",
+   "numbers": [],
+   "period": "",
+   "place": "Zêzere; Tagus; Lisbon",
+   "who": ""
+  },
+  {
+   "action": "Goods from the most distant regions, such as ashes, olive oil, meat and cheese, best bore transport costs.",
+   "boat": "",
+   "cargo": "ashes, olive oil, meat, cheese",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p242",
+   "kind": "description",
+   "location": "[page 17] Summary",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Vintners' stores long stood on the south bank opposite Lisbon and in upstream harbours; some riverside industries and wholesalers later moved to northern Lisbon because of railway and haulage.",
+   "boat": "",
+   "cargo": "wine",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p243",
+   "kind": "description",
+   "location": "[page 17] Summary",
+   "numbers": [],
+   "period": "",
+   "place": "south bank of Tagus estuary opposite Lisbon",
+   "who": "vintners; wholesalers"
+  },
+  {
+   "action": "Saw-mills at Rio de Moinhos stand at an old timber-loading harbour for Lisbon; Praia do Ribatejo's are at the Tagus–Zêzere confluence where logs floated.",
+   "boat": "",
+   "cargo": "timber, logs",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p244",
+   "kind": "description",
+   "location": "[page 17] Summary",
+   "numbers": [],
+   "period": "",
+   "place": "Rio de Moinhos (near Abrantes); Praia do Ribatejo",
+   "who": "saw-mills"
+  },
+  {
+   "action": "Cork industry was set up at Rossio de Abrantes and Chamusca, both river harbours whose main export was cork.",
+   "boat": "",
+   "cargo": "cork",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p245",
+   "kind": "description",
+   "location": "[page 18]",
+   "numbers": [],
+   "period": "",
+   "place": "Rossio de Abrantes; Chamusca",
+   "who": ""
+  },
+  {
+   "action": "Rossio de Abrantes is a major wholesale grocery centre of the interior, a specialization owed to its harbour, which outlasted the railway.",
+   "boat": "",
+   "cargo": "groceries",
+   "conditions": "harbour survived the arrival of the railway, now superseded by road transport",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p246",
+   "kind": "description",
+   "location": "[page 18]",
+   "numbers": [],
+   "period": "",
+   "place": "Rossio de Abrantes",
+   "who": ""
+  },
+  {
+   "action": "Before motor vehicles, clients, chiefly mule-drivers, came to the wholesaler at Rossio de Abrantes to buy goods.",
+   "boat": "",
+   "cargo": "groceries",
+   "conditions": "",
+   "gear": "mules",
+   "id": "mmwdz10zt3xye:28dp:p247",
+   "kind": "practice",
+   "location": "[page 18]",
+   "numbers": [],
+   "period": "before motor vehicles",
+   "place": "Rossio de Abrantes",
+   "who": "mule-drivers; wholesaler"
+  },
+  {
+   "action": "Now the wholesaler travels to clients scattered over a north-south strip from Beira to the Alentejo, reversing the former distribution pattern.",
+   "boat": "",
+   "cargo": "groceries",
+   "conditions": "",
+   "gear": "motor vehicles",
+   "id": "mmwdz10zt3xye:28dp:p248",
+   "kind": "practice",
+   "location": "[page 18]",
+   "numbers": [],
+   "period": "modern",
+   "place": "Beira to Alentejo",
+   "who": "wholesaler"
+  },
+  {
+   "action": "The last chapter analyses location, site and morphology of Tagus harbours, including Rossio de Abrantes-Barreiras do Tejo, Constância-Praia do Ribatejo and Chamusca.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p249",
+   "kind": "description",
+   "location": "[page 18]",
+   "numbers": [
+    {
+     "unit": "figures (7, 8, 6)",
+     "value": "3",
+     "what": "figures cited for harbour analyses"
+    }
+   ],
+   "period": "",
+   "place": "Rossio de Abrantes; Barreiras do Tejo; Constância; Praia do Ribatejo; Chamusca",
+   "who": ""
+  },
+  {
+   "action": "Town plans of Tagus harbour towns show their life was shaped by their main activity; tertiary activities lay on riverside-parallel streets and squares.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p250",
+   "kind": "description",
+   "location": "[page 18]",
+   "numbers": [
+    {
+     "unit": "figures (9, 10, 11)",
+     "value": "3",
+     "what": "town plan figures"
+    }
+   ],
+   "period": "",
+   "place": "Tagus harbour towns",
+   "who": ""
+  },
+  {
+   "action": "Old civic and trade centres survived only in slumbering towns like Constância; in dynamic Rossio the old centre was deserted and activity moved near modern transport.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p251",
+   "kind": "description",
+   "location": "[page 18]",
+   "numbers": [],
+   "period": "",
+   "place": "Constância; Rossio de Abrantes",
+   "who": ""
+  },
+  {
+   "action": "Plates show views of Constância, the Zêzere-Tejo confluence, Vila Nova da Barquinha, Tancos, Rossio de Abrantes buildings with ground-floor warehouses, and ruins near the old quay at Barreiras do Tejo.",
+   "boat": "",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz10zt3xye:28dp:p252",
+   "kind": "description",
+   "location": "Plates list",
+   "numbers": [],
+   "period": "",
+   "place": "Constância; Vila Nova da Barquinha; Tancos; Rossio de Abrantes; Barreiras do Tej",
+   "who": ""
+  }
+ ],
+ "partsDone": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17
+ ],
+ "partsTotal": 18,
+ "runAt": "2026-11-13T23:17:58.182Z",
+ "sourceId": "mmwdz10zt3xye",
+ "textChars": 104173,
+ "title": "jorgeGasparOsportosfluviaisdoTejo"
+}

@@ -1,0 +1,702 @@
+{
+ "items": [
+  {
+   "action": "Small boat used to carry passengers across the river between banks, or mixed cargo such as wine or sand; sometimes used for fishing.",
+   "boat": "Barquinho do Rio Minho",
+   "cargo": "wine, sand, passengers",
+   "conditions": "",
+   "gear": "square sail or spiked sail",
+   "id": "mmwdz1b2r29ky:1p7d:p1",
+   "kind": "practice",
+   "location": "Barquinho do Rio Minho",
+   "numbers": [
+    {
+     "unit": "passengers",
+     "value": "20 to 30",
+     "what": "passenger capacity"
+    }
+   ],
+   "period": "",
+   "place": "Rio Minho",
+   "who": ""
+  },
+  {
+   "action": "Flat-bottomed, keel-less boat, notable for not being built in a shipyard but on the riverbank.",
+   "boat": "Barquinho do Rio Minho",
+   "cargo": "",
+   "conditions": "flat bottom, no keel",
+   "gear": "",
+   "id": "mmwdz1b2r29ky:1p7d:p2",
+   "kind": "description",
+   "location": "Barquinho do Rio Minho",
+   "numbers": [],
+   "period": "",
+   "place": "riverbank",
+   "who": ""
+  },
+  {
+   "action": "Small wooden-box-shaped boat from Vila Praia de Âncora used for deep-sea, coastal and river fishing, handled by two men.",
+   "boat": "Maceira",
+   "cargo": "",
+   "conditions": "",
+   "gear": "small mast forward with a bastard lateen yard",
+   "id": "mmwdz1b2r29ky:1p7d:p3",
+   "kind": "practice",
+   "location": "Maceira",
+   "numbers": [
+    {
+     "unit": "men",
+     "value": "2",
+     "what": "crew"
+    },
+    {
+     "unit": "metres",
+     "value": "2.60 to 4.70",
+     "what": "length"
+    }
+   ],
+   "period": "",
+   "place": "Vila Praia de Âncora",
+   "who": "crew of 2 men"
+  },
+  {
+   "action": "Carried barrels of wine down the Douro to the Gaia wine cellars.",
+   "boat": "Barco Rabelo",
+   "cargo": "wine barrels (pipas)",
+   "conditions": "flat bottom, no keel",
+   "gear": "square sail; long steering oar (espadela) worked from a raised platform aft",
+   "id": "mmwdz1b2r29ky:1p7d:p4",
+   "kind": "practice",
+   "location": "Barco Rabelo",
+   "numbers": [
+    {
+     "unit": "men",
+     "value": "6 to 7",
+     "what": "crew"
+    },
+    {
+     "unit": "metres",
+     "value": "19 to 23",
+     "what": "length"
+    }
+   ],
+   "period": "",
+   "place": "Douro, Gaia",
+   "who": "crew of 6 or 7 men"
+  },
+  {
+   "action": "Boat from the Valbom area sailed on river and sea, used for fishing and for carrying goods and passengers between banks.",
+   "boat": "Barco Valboeiro com Camareta",
+   "cargo": "goods, passengers",
+   "conditions": "",
+   "gear": "long paddle-like oar instead of a rudder; small shelter (camareta) for passenger",
+   "id": "mmwdz1b2r29ky:1p7d:p5",
+   "kind": "practice",
+   "location": "Barco Valboeiro",
+   "numbers": [
+    {
+     "unit": "men",
+     "value": "2 to 3",
+     "what": "crew"
+    },
+    {
+     "unit": "metres",
+     "value": "about 18",
+     "what": "length"
+    }
+   ],
+   "period": "",
+   "place": "Valbom, river and sea",
+   "who": "crew of 2 to 3 men"
+  },
+  {
+   "action": "Boats were named by their cargo: bakers' boat (barco das padeiras) and bacon-sellers' boat (barco das toucinheiras).",
+   "boat": "Barco Valboeiro",
+   "cargo": "bread, bacon",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz1b2r29ky:1p7d:p6",
+   "kind": "description",
+   "location": "Barco Valboeiro",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Douro boats classed by cargo like the Valboeiro; carried passengers on benches under a protective awning, steered by a long paddle instead of a rudder.",
+   "boat": "Barco de Avintes",
+   "cargo": "passengers",
+   "conditions": "",
+   "gear": "awning, benches, pendant sail on forward mast",
+   "id": "mmwdz1b2r29ky:1p7d:p7",
+   "kind": "practice",
+   "location": "Barco de Avintes",
+   "numbers": [
+    {
+     "unit": "metres",
+     "value": "17 to 18",
+     "what": "length"
+    },
+    {
+     "unit": "men",
+     "value": "2 to 3",
+     "what": "crew"
+    }
+   ],
+   "period": "",
+   "place": "Douro",
+   "who": "crew of 2 to 3 men"
+  },
+  {
+   "action": "Different Poveira boat types served different fisheries: large lancha for hake, batel and small lancha for sardine and longline, caíco for whiting.",
+   "boat": "Lancha Poveira",
+   "cargo": "hake, sardine, whiting",
+   "conditions": "",
+   "gear": "espinel (longline); removable mast raked aft, trapezoidal sail; 4 to 5 oars per ",
+   "id": "mmwdz1b2r29ky:1p7d:p8",
+   "kind": "practice",
+   "location": "Lancha Poveira",
+   "numbers": [
+    {
+     "unit": "metres",
+     "value": "4 to 14",
+     "what": "length range"
+    },
+    {
+     "unit": "oars",
+     "value": "4 to 5",
+     "what": "oars per side"
+    }
+   ],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Harvested and carried moliço (aquatic weed), also cargo and livestock, through the canals of the Ria de Aveiro.",
+   "boat": "Barco Moliceiro",
+   "cargo": "moliço, cargo, livestock",
+   "conditions": "very low sides and minimal draught suit the canals",
+   "gear": "sail, towing line (sirga), pole (vara), large rudder",
+   "id": "mmwdz1b2r29ky:1p7d:p9",
+   "kind": "practice",
+   "location": "Barco Moliceiro",
+   "numbers": [],
+   "period": "",
+   "place": "Ria de Aveiro",
+   "who": ""
+  },
+  {
+   "action": "Annual regatta on the ria that still gathers more than twenty moliceiro boats.",
+   "boat": "Barco Moliceiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz1b2r29ky:1p7d:p10",
+   "kind": "event",
+   "location": "Barco Moliceiro",
+   "numbers": [
+    {
+     "unit": "boats",
+     "value": "more than 20",
+     "what": "boats in regatta"
+    }
+   ],
+   "period": "annual",
+   "place": "Ria de Aveiro",
+   "who": ""
+  },
+  {
+   "action": "Completely black, undecorated boat from Ílhavo, similar to the Moliceiro, usually crewed by three.",
+   "boat": "Barco de Ílhavo",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz1b2r29ky:1p7d:p11",
+   "kind": "description",
+   "location": "Barco de Ílhavo",
+   "numbers": [
+    {
+     "unit": "metres",
+     "value": "14 to 15",
+     "what": "length"
+    },
+    {
+     "unit": "men",
+     "value": "3",
+     "what": "crew"
+    }
+   ],
+   "period": "",
+   "place": "Ílhavo",
+   "who": "crew of three"
+  },
+  {
+   "action": "Used for sardine fishing, where sardines were picked and salted aboard; sailed fast and were sometimes raced in sporting regattas against one another.",
+   "boat": "Canoa da Picada",
+   "cargo": "sardines, salted on board",
+   "conditions": "",
+   "gear": "bastard lateen sail on foremast, small mizzen",
+   "id": "mmwdz1b2r29ky:1p7d:p12",
+   "kind": "practice",
+   "location": "Canoa da Picada",
+   "numbers": [],
+   "period": "",
+   "place": "Cascais and Sesimbra",
+   "who": ""
+  },
+  {
+   "action": "Deep-sea fishing between Cabo da Roca and São Vicente; masts were lowered onto the benches and oars used during fishing work.",
+   "boat": "Barca da Pesca do Alto",
+   "cargo": "",
+   "conditions": "masts lowered onto benches during fishing",
+   "gear": "two spritsails, oars",
+   "id": "mmwdz1b2r29ky:1p7d:p13",
+   "kind": "practice",
+   "location": "Barca da Pesca do Alto",
+   "numbers": [
+    {
+     "unit": "oars",
+     "value": "2 to 3",
+     "what": "oars per side"
+    }
+   ],
+   "period": "",
+   "place": "Sesimbra; Cabo da Roca to São Vicente",
+   "who": ""
+  },
+  {
+   "action": "Elegant deep-sea fishing boat from Setúbal with schooner-like rig, bowsprit, continuous hull, wide mouth and two symmetrical masts raked slightly aft.",
+   "boat": "Lancha do Alto",
+   "cargo": "",
+   "conditions": "",
+   "gear": "two masts, bowsprit",
+   "id": "mmwdz1b2r29ky:1p7d:p14",
+   "kind": "description",
+   "location": "Lancha do Alto",
+   "numbers": [],
+   "period": "",
+   "place": "Setúbal",
+   "who": ""
+  },
+  {
+   "action": "Described as the most emblematic Tagus boat: heavy, bulging, with gaff mainsail, two decorated cabins, and a small boat towed behind for rowing the fragata along.",
+   "boat": "Fragata",
+   "cargo": "",
+   "conditions": "",
+   "gear": "stay, gaff mainsail, towed small boat with oars",
+   "id": "mmwdz1b2r29ky:1p7d:p15",
+   "kind": "description",
+   "location": "Fragata",
+   "numbers": [
+    {
+     "unit": "metres",
+     "value": "20 to 25",
+     "what": "length"
+    },
+    {
+     "unit": "men",
+     "value": "3",
+     "what": "crew"
+    }
+   ],
+   "period": "",
+   "place": "Rio Tejo",
+   "who": "crew of three men"
+  },
+  {
+   "action": "Elegant, decorated cargo vessel of the late 19th century, like a large two-ended bateira, descended from a boat the Ílhavo people left on the Tagus.",
+   "boat": "Varino (1880)",
+   "cargo": "",
+   "conditions": "",
+   "gear": "stay and lateen sail on strongly raked mast",
+   "id": "mmwdz1b2r29ky:1p7d:p16",
+   "kind": "description",
+   "location": "Varino (1880)",
+   "numbers": [],
+   "period": "1880",
+   "place": "Tejo",
+   "who": "ílhavos (origin)"
+  },
+  {
+   "action": "Typical Tagus cargo carrier, keel-less and bulging but more elegant than the fragata, with false bulwarks and a hold with baskets for stowing cargo.",
+   "boat": "Varino",
+   "cargo": "cargo stowed in paneiros",
+   "conditions": "",
+   "gear": "one or two stay sails, quadrangular sail",
+   "id": "mmwdz1b2r29ky:1p7d:p17",
+   "kind": "practice",
+   "location": "Varino",
+   "numbers": [],
+   "period": "",
+   "place": "Tejo",
+   "who": ""
+  },
+  {
+   "action": "Used for fishing and carrying people and cargo between the two river banks; side leeboards helped manoeuvring.",
+   "boat": "Batel do Tejo",
+   "cargo": "people and cargo",
+   "conditions": "",
+   "gear": "large bastard lateen, small stay on bowsprit, side leeboards",
+   "id": "mmwdz1b2r29ky:1p7d:p18",
+   "kind": "practice",
+   "location": "Batel do Tejo",
+   "numbers": [],
+   "period": "early 20th century",
+   "place": "Tejo, between the two banks",
+   "who": ""
+  },
+  {
+   "action": "Mainly carried people between the two Tagus banks, and also served Lisbon's markets; lateen-rigged and from the varino family.",
+   "boat": "Falua com Vela Latina",
+   "cargo": "people, goods for Lisbon markets",
+   "conditions": "",
+   "gear": "large bastard lateen, small stay",
+   "id": "mmwdz1b2r29ky:1p7d:p19",
+   "kind": "practice",
+   "location": "Falua com Vela Latina",
+   "numbers": [
+    {
+     "unit": "metres",
+     "value": "15 to 16",
+     "what": "length"
+    },
+    {
+     "unit": "men",
+     "value": "2 to 3",
+     "what": "crew"
+    }
+   ],
+   "period": "",
+   "place": "Rio Tejo",
+   "who": "crew of two to three men"
+  },
+  {
+   "action": "Normally carried cargo and passengers between the two banks; fast, single- or two-masted with bastard lateens.",
+   "boat": "Falua",
+   "cargo": "cargo and passengers",
+   "conditions": "",
+   "gear": "bastard lateen sails",
+   "id": "mmwdz1b2r29ky:1p7d:p20",
+   "kind": "practice",
+   "location": "Falua",
+   "numbers": [
+    {
+     "unit": "metres",
+     "value": "14 to 15",
+     "what": "length"
+    }
+   ],
+   "period": "",
+   "place": "Tejo",
+   "who": ""
+  },
+  {
+   "action": "Carried heavy cargo such as sand and stone for construction; a support boat with oars helped manoeuvring, and crew poled the boat in shallows.",
+   "boat": "Cangueiro",
+   "cargo": "sand and stone for construction",
+   "conditions": "shallow water",
+   "gear": "support boat, oars, large poles",
+   "id": "mmwdz1b2r29ky:1p7d:p21",
+   "kind": "practice",
+   "location": "Cangueiro",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": "crew"
+  },
+  {
+   "action": "Almost exclusively carried pine branches arriving from the south bank; decorated, with false bulwarks to stow cargo.",
+   "boat": "Bote do Pinho",
+   "cargo": "pine branches",
+   "conditions": "",
+   "gear": "long triangular lateen sail on short forward mast",
+   "id": "mmwdz1b2r29ky:1p7d:p22",
+   "kind": "practice",
+   "location": "Bote do Pinho",
+   "numbers": [
+    {
+     "unit": "metres",
+     "value": "14 to 15",
+     "what": "length"
+    },
+    {
+     "unit": "men",
+     "value": "2 to 4",
+     "what": "crew"
+    }
+   ],
+   "period": "",
+   "place": "south bank of the Tagus",
+   "who": "crew of 2 to 4 men"
+  },
+  {
+   "action": "Smaller Tagus boat with fragata-like hull, stem joined smoothly to the keel, usually with a large bastard lateen.",
+   "boat": "Bote Cacilheiro",
+   "cargo": "",
+   "conditions": "",
+   "gear": "large bastard lateen; some with stay sail",
+   "id": "mmwdz1b2r29ky:1p7d:p23",
+   "kind": "description",
+   "location": "Bote Cacilheiro",
+   "numbers": [
+    {
+     "unit": "metres",
+     "value": "9 to 10",
+     "what": "length"
+    }
+   ],
+   "period": "",
+   "place": "Tejo",
+   "who": "crew of two or more"
+  },
+  {
+   "action": "Smaller fragata-like boat whose main role was carrying cargo and transshipping goods between anchored ships.",
+   "boat": "Canoa Cacilheira",
+   "cargo": "goods transshipped between anchored ships",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz1b2r29ky:1p7d:p24",
+   "kind": "practice",
+   "location": "Canoa Cacilheira",
+   "numbers": [],
+   "period": "",
+   "place": "",
+   "who": ""
+  },
+  {
+   "action": "Riba-Tejo boat began as a fishing craft, then gradually served as cargo and coastal trade vessel; steeply raked mast carried a long bastard lateen sail.",
+   "boat": "Barco de Riba-Tejo",
+   "cargo": "",
+   "conditions": "side espadelas helped manoeuvring and navigation in the Tejo's channels and creeks",
+   "gear": "long latino bastardo sail; lateral espadelas",
+   "id": "mmwdz1b2r29ky:1p7d:p25",
+   "kind": "description",
+   "location": "Barco de Riba-Tejo",
+   "numbers": [],
+   "period": "",
+   "place": "Tejo",
+   "who": ""
+  },
+  {
+   "action": "Praieira is a flat-bottomed, fully decked bateira-type boat with a large removable rudder that aids navigation of Tejo creeks and channels; waxed shelter aft stores utensils and rests crew.",
+   "boat": "Praieira",
+   "cargo": "",
+   "conditions": "navigating creeks and channels of the Tejo",
+   "gear": "espicha sail, small stay, removable blade rudder",
+   "id": "mmwdz1b2r29ky:1p7d:p26",
+   "kind": "description",
+   "location": "Praieira",
+   "numbers": [],
+   "period": "",
+   "place": "Tejo",
+   "who": "crew"
+  },
+  {
+   "action": "Fishermen used the Muleta do Seixal solely for the tarantanha fishing method; it had a wide flat bottom and a steeply forward-raked mast.",
+   "boat": "Muleta do Seixal",
+   "cargo": "",
+   "conditions": "",
+   "gear": "tarantanha; raked mast with yard",
+   "id": "mmwdz1b2r29ky:1p7d:p27",
+   "kind": "practice",
+   "location": "Muleta do Seixal",
+   "numbers": [],
+   "period": "",
+   "place": "Seixal, Barreiro, Cascais",
+   "who": "fishermen of Seixal, Barreiro and Cascais"
+  },
+  {
+   "action": "Caíque do Algarve is a typical vessel of the Algarve leeward coast with two diverging masts and two large lateen sails; some say it descends from discovery-era caravels.",
+   "boat": "Caíque do Algarve",
+   "cargo": "",
+   "conditions": "",
+   "gear": "two lateen sails, diverging masts",
+   "id": "mmwdz1b2r29ky:1p7d:p28",
+   "kind": "description",
+   "location": "Caíque do Algarve",
+   "numbers": [
+    {
+     "unit": "metres",
+     "value": "15 to 20",
+     "what": "length"
+    },
+    {
+     "unit": "men",
+     "value": "30",
+     "what": "maximum crew"
+    }
+   ],
+   "period": "",
+   "place": "Algarve, between Faro and Vila Real de Santo António",
+   "who": "crew"
+  },
+  {
+   "action": "Reports say caíques sailed as far as Brazil and southern Angola; ashore, two water dogs reportedly guarded them while the crew was on land.",
+   "boat": "Caíque do Algarve",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz1b2r29ky:1p7d:p29",
+   "kind": "event",
+   "location": "Caíque do Algarve",
+   "numbers": [],
+   "period": "",
+   "place": "Brazil, southern Angola",
+   "who": "crews"
+  },
+  {
+   "action": "Olhão's Canoa do Espinel was meant for espinel line fishing, though sometimes it carried the catch between ports.",
+   "boat": "Canoa do Espinel",
+   "cargo": "fish catch",
+   "conditions": "",
+   "gear": "espinel; two lateen sails; cane rudder",
+   "id": "mmwdz1b2r29ky:1p7d:p30",
+   "kind": "practice",
+   "location": "Canoa do Espinel",
+   "numbers": [],
+   "period": "",
+   "place": "Olhão",
+   "who": ""
+  },
+  {
+   "action": "Enviada da Arte da Chávega, from Monte Gordo, also ferried the catch between offshore boats and land, giving it its name.",
+   "boat": "Enviada da Arte da Chávega",
+   "cargo": "fish catch",
+   "conditions": "",
+   "gear": "four oars, two per side",
+   "id": "mmwdz1b2r29ky:1p7d:p31",
+   "kind": "practice",
+   "location": "Enviada da Arte da Chávega",
+   "numbers": [
+    {
+     "unit": "oars",
+     "value": "4",
+     "what": "oars"
+    },
+    {
+     "unit": "men",
+     "value": "6 to 8",
+     "what": "crew"
+    }
+   ],
+   "period": "",
+   "place": "Monte Gordo",
+   "who": "crew"
+  },
+  {
+   "action": "Enviado do Atum of Vila Real de Santo António was used for tuna fishing and also carried the catch, hence its name.",
+   "boat": "Enviado do Atum",
+   "cargo": "tuna catch",
+   "conditions": "",
+   "gear": "two diverging masts with lateen sails; oars",
+   "id": "mmwdz1b2r29ky:1p7d:p32",
+   "kind": "practice",
+   "location": "Enviado do Atum",
+   "numbers": [
+    {
+     "unit": "oars",
+     "value": "2 to 3",
+     "what": "oars per side"
+    }
+   ],
+   "period": "",
+   "place": "Vila Real de Santo António",
+   "who": ""
+  },
+  {
+   "action": "Baleeira do Pico was used for whale hunting on Pico and Faial; during the chase sails were lowered and part of the crew rowed.",
+   "boat": "Baleeira do Pico",
+   "cargo": "",
+   "conditions": "sails lowered during whale pursuit",
+   "gear": "small lateen sail; 6 oars",
+   "id": "mmwdz1b2r29ky:1p7d:p33",
+   "kind": "practice",
+   "location": "Baleeira do Pico",
+   "numbers": [
+    {
+     "unit": "oars",
+     "value": "6",
+     "what": "oars"
+    }
+   ],
+   "period": "",
+   "place": "Pico and Faial, Azores",
+   "who": "crew"
+  },
+  {
+   "action": "During Semana do Mar, held at Faial in the first week of August, the Pico whaleboat can still be seen.",
+   "boat": "Baleeira do Pico",
+   "cargo": "",
+   "conditions": "",
+   "gear": "",
+   "id": "mmwdz1b2r29ky:1p7d:p34",
+   "kind": "event",
+   "location": "Baleeira do Pico",
+   "numbers": [],
+   "period": "first week of August",
+   "place": "Faial",
+   "who": ""
+  },
+  {
+   "action": "Azorean mackerel-fishing boat carried a crew who could use oars; a projecting cleat and pulley at the bow helped haul in the catch.",
+   "boat": "Barco da Pesca do Carapau",
+   "cargo": "fish",
+   "conditions": "",
+   "gear": "4 oars; bow pulley",
+   "id": "mmwdz1b2r29ky:1p7d:p35",
+   "kind": "practice",
+   "location": "Barco da Pesca do Carapau",
+   "numbers": [
+    {
+     "unit": "men",
+     "value": "8 to 10",
+     "what": "crew"
+    },
+    {
+     "unit": "oars",
+     "value": "4",
+     "what": "oars"
+    }
+   ],
+   "period": "",
+   "place": "Azores",
+   "who": "crew"
+  },
+  {
+   "action": "After whales became scarce in mainland waters, whaling continued in Madeira and the Azores, using the Câmara de Lobos whaleboat in Madeira.",
+   "boat": "Baleeira da Câmara de Lobos",
+   "cargo": "",
+   "conditions": "whales scarce in mainland waters",
+   "gear": "",
+   "id": "mmwdz1b2r29ky:1p7d:p36",
+   "kind": "practice",
+   "location": "Baleeira da Câmara de Lobos",
+   "numbers": [],
+   "period": "",
+   "place": "Madeira, Azores",
+   "who": ""
+  }
+ ],
+ "partsDone": [
+  0,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13
+ ],
+ "partsTotal": 14,
+ "runAt": "2026-11-14T10:17:08.600Z",
+ "sourceId": "mmwdz1b2r29ky",
+ "textChars": 79321,
+ "title": "PORTUGAL MARÍTIMO  BARCOS TRADICIONAIS PORTUGUESES"
+}
