@@ -1,4 +1,4 @@
-<title>Materials Intake</title>
+<title>Narrative Workbench</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
@@ -130,9 +130,9 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
 <div class="wrap">
   <div class="top">
     <div>
-      <div class="eyebrow">Narrative Workbench · step 0</div>
-      <h1>Materials intake</h1>
-      <p class="sub">Tell the tool what you are working with. It records each material, then reports what the materials allow and what is missing before any work starts.</p>
+      <div class="eyebrow">Grounded narrative for simulation games</div>
+      <h1>Narrative workbench</h1>
+      <p class="sub">From the sources to the lines a game says: the project, its sources, what they say (concepts, practices, boats and places), the activities they suggest, the narrative, and a report on the game.</p>
     </div>
     <div><div class="save" id="saveState">Connecting…</div><div class="save" id="buildTag"></div></div>
   </div>
@@ -141,11 +141,18 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
   <div class="tabs" role="tablist">
     <button role="tab" id="tab-project" aria-selected="true" data-tab="project"><span class="n">1</span>Project</button>
     <button role="tab" id="tab-materials" aria-selected="false" data-tab="materials"><span class="n">2</span>Sources</button>
-    <button role="tab" id="tab-concepts" aria-selected="false" data-tab="concepts"><span class="n">3</span>Concepts</button>
-    <button role="tab" id="tab-history" aria-selected="false" data-tab="history"><span class="n">4</span>History, boats and places</button>
-    <button role="tab" id="tab-situations" aria-selected="false" data-tab="situations"><span class="n">5</span>Situations</button>
-    <button role="tab" id="tab-narrative" aria-selected="false" data-tab="narrative"><span class="n">6</span>Narrative</button>
-    <button role="tab" id="tab-report" aria-selected="false" data-tab="report"><span class="n">7</span>Game report</button>
+    <button role="tab" id="tab-knowledge" aria-selected="false" data-tab="knowledge"><span class="n">3</span>Knowledge</button>
+    <button role="tab" id="tab-situations" aria-selected="false" data-tab="situations"><span class="n">4</span>Situations</button>
+    <button role="tab" id="tab-narrative" aria-selected="false" data-tab="narrative"><span class="n">5</span>Narrative</button>
+    <button role="tab" id="tab-report" aria-selected="false" data-tab="report"><span class="n">6</span>Game report</button>
+  </div>
+  <div class="panel" id="kHead" hidden>
+    <p class="sub" style="margin-bottom:8px">What the sources say, in three views of one knowledge base: the <b>concepts</b> a visitor can learn, the <b>practices</b> people carried out, and the <b>boats and places</b> they name. Each card groups what different sources say about one thing; you fix the groups and decide what to keep. The later steps and the game report read these views.</p>
+    <div class="chips" id="kViews" role="tablist">
+      <button class="chip" data-kview="concepts" aria-pressed="true">Concepts</button>
+      <button class="chip" data-kview="history" aria-pressed="false">Practices</button>
+      <button class="chip" data-kview="entities" aria-pressed="false">Boats and places</button>
+    </div>
   </div>
 
   <!-- 1 Project -->
@@ -232,17 +239,20 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
       <div id="hList"></div>
     </div>
     <div class="section">
+      <h2>Review sheet for one source</h2>
+      <p class="sub">For a historian checking one document: every claim the tool took from it, in paraphrase with its page, and the questions where other sources disagree or facts are missing.</p>
+      <div class="row" style="margin-top:8px"><select id="hSheetSrc" style="width:auto;max-width:100%"></select><button class="btn" id="hSheetCopy">Copy</button><button class="btn" id="hSheetDl">Download</button></div>
+      <pre id="hSheet" style="margin-top:8px"></pre>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-entities" role="tabpanel" hidden>
+    <div>
       <div class="row" style="justify-content:space-between"><h2>Boats and places</h2><span class="hint" id="eMeta"></span></div>
       <p class="sub">Every boat and place the sources name, one card per boat type or place: the names the sources use for it are merged by fixed rules (no Claude), and the game report reads this list. If a name is in the wrong card, use <b>Move to…</b>; set the kind (boat, place, or region: a country, sea or whole river) and the place's map area where they are wrong. <b>Leave out</b> keeps a card out of the report.</p>
       <div class="row"><button class="btn" id="eBuild">Update the list</button><span class="hint" id="eRun"></span></div>
       <div class="chips" id="eChips"></div>
       <div id="eList"></div>
-    </div>
-    <div class="section">
-      <h2>Review sheet for one source</h2>
-      <p class="sub">For a historian checking one document: every claim the tool took from it, in paraphrase with its page, and the questions where other sources disagree or facts are missing.</p>
-      <div class="row" style="margin-top:8px"><select id="hSheetSrc" style="width:auto;max-width:100%"></select><button class="btn" id="hSheetCopy">Copy</button><button class="btn" id="hSheetDl">Download</button></div>
-      <pre id="hSheet" style="margin-top:8px"></pre>
     </div>
   </section>
 
@@ -312,23 +322,32 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":
 function toast(msg){const t=$("toast");t.textContent=msg;t.hidden=false;clearTimeout(toast.h);toast.h=setTimeout(()=>t.hidden=true,2600);}
 function setSave(msg){$("saveState").textContent=msg;}
 
-const BUILD="2026-11-14 · version 32";
+const BUILD="2026-11-14 · version 33";
 $("buildTag").textContent=BUILD;
 // ---------- tabs ----------
+let kview="concepts"; try{ kview=localStorage.getItem("intake.kview")||"concepts"; }catch{}
 function showTab(name){
   if (name==="readiness") name="materials"; // Readiness is now part of Sources
+  // Concepts, Practices and Boats and places are the three views of the Knowledge tab
+  if (["concepts","history","entities"].includes(name)) { kview=name; name="knowledge"; }
   for (const b of document.querySelectorAll(".tabs button")) b.setAttribute("aria-selected", String(b.dataset.tab===name));
-  for (const p of ["project","materials","concepts","history","situations","narrative","report"]) $("panel-"+p).hidden = p!==name;
+  $("kHead").hidden = name!=="knowledge";
+  for (const b of document.querySelectorAll("#kViews [data-kview]")) b.setAttribute("aria-pressed", String(b.dataset.kview===kview));
+  const panel = name==="knowledge" ? kview : name;
+  for (const p of ["project","materials","concepts","history","entities","situations","narrative","report"]) $("panel-"+p).hidden = p!==panel;
+  try{localStorage.setItem("intake.kview",kview);}catch{}
   try{localStorage.setItem("intake.tab",name);}catch{}
   if (!["project","materials"].includes(name)) startHeavy();
   if (name==="materials") renderReadiness();
-  if (name==="concepts") renderConcepts();
+  if (panel==="concepts") renderConcepts();
+  if (panel==="entities") renderEntities();
   if (name==="report") renderReport();
-  if (name==="history") renderHistory();
+  if (panel==="history") renderHistory();
   if (name==="situations") renderSituations();
   if (name==="narrative") renderNarrative();
 }
-document.querySelectorAll(".tabs button").forEach(b=>b.addEventListener("click",()=>showTab(b.dataset.tab)));
+document.querySelectorAll(".tabs button").forEach(b=>b.addEventListener("click",()=>showTab(b.dataset.tab==="knowledge"?kview:b.dataset.tab)));
+document.querySelectorAll("#kViews [data-kview]").forEach(b=>b.addEventListener("click",()=>showTab(b.dataset.kview)));
 
 // ---------- project ----------
 $("p-primary").innerHTML = `<option value="">Choose…</option>` + PROJECT_LANGS.map(c=>`<option value="${c}">${esc(LANGS[c])}</option>`).join("") + `<option value="pt">${esc(LANGS.pt)}</option><option value="en">${esc(LANGS.en)}</option>`;
@@ -1241,7 +1260,7 @@ async function findPractices(){
 }
 async function linkPractices(onlyNew){
   if(!sample||!hstate.set?.practices?.length) return;
-  if(!cstate.set?.concepts?.length){ $("hRun").textContent="Build the concept table first (Concepts tab)."; return; }
+  if(!cstate.set?.concepts?.length){ $("hRun").textContent="Build the concept table first (Knowledge, Concepts)."; return; }
   const concepts=cstate.set.concepts.filter(c=>c.decision!=="rejected"&&!(c.scope==="out"&&c.decision!=="accepted")).map(c=>({id:c.id,label:c.label}));
   const valid=new Set(concepts.map(c=>c.id)), idx=hIndex();
   const todo=hstate.set.practices.filter(p=>!(onlyNew&&p.linkedAt)&&p.decision!=="rejected");
@@ -1339,7 +1358,7 @@ function sheetText(srcId){
 $("hSheetSrc").addEventListener("change",()=>{ $("hSheet").textContent=sheetText($("hSheetSrc").value); });
 $("hSheetCopy").addEventListener("click",async()=>{ const t=sheetText($("hSheetSrc").value); if(!t){ toast("Choose a source first."); return; } try{ await navigator.clipboard.writeText(t); toast("Copied"); }catch{ toast("Copy is not available here; use Download."); } });
 $("hSheetDl").addEventListener("click",async()=>{ const id=$("hSheetSrc").value, t=sheetText(id); if(!t){ toast("Choose a source first."); return; } if(!downloads){ toast("Downloads are not available here; use Copy."); return; } try{ await downloads.save({filename:`review-sheet-${norm(SHORT(state.materials.find(m=>m.id===id)||{title:id})).replace(/[^a-z0-9]+/g,"-")}.md`, data:t}); }catch(e){ if(e.code!=="declined") toast("Could not save: "+(e.message||e.code)); } });
-function renderHistory(){ renderHSources(); renderHTable(); renderEntities(); }
+function renderHistory(){ renderHSources(); renderHTable(); }
 
 // ---------- boats and places (one list, built by rules from the concepts and the practices) ----------
 const estate={set:null, filter:"boat", renaming:null, running:false};
@@ -2038,7 +2057,7 @@ function matchBoat(name){
 async function saveR(path,data){ if(db) await db.doc(path).set(data); }
 async function buildReport(){
   if(!rstate.world){ $("rState").textContent="The game's world list is not loaded."; return; }
-  const rows=conceptRows(); if(!rows.length){ $("rState").textContent="Run Find concepts first (Concepts tab)."; return; }
+  const rows=conceptRows(); if(!rows.length){ $("rState").textContent="Run Find concepts first (Knowledge, Concepts)."; return; }
   rstate.running=true; $("rBuild").disabled=true;
   const fatal=(e)=>e?.code==="not_granted"||e?.code==="rate_limited"||e?.code==="unavailable";
   const ask=async(prompt)=>{ for(let a=0;a<2;a++){ try{ return await sample.json(prompt,{modelTier:"default"}); }catch(e){ if(fatal(e)||a===1) throw e; } } };
@@ -2048,7 +2067,7 @@ async function buildReport(){
     // checked before kinds existed keep the kind the earlier reports gave them
     const cls=(x)=>x.c.kind?{category:x.c.kind, needs:x.c.needs||""}:(rstate.classes[x.c.id]||{category:"other", unsorted:true});
     const unsorted=info.filter(x=>cls(x).unsorted).length;
-    // 2. boats and places: the list in the History tab, built again by rules (keeps the author's changes)
+    // 2. boats and places: the Boats and places view of Knowledge, built again by rules (keeps the author's changes)
     buildEntities(); await saveEntities();
     const hidx0=hIndex(), evOf=(e)=>e.practices.slice(0,3).flatMap(pid=>{ const p=hstate.set?.practices?.find(q=>q.id===pid); const m0=p&&hidx0[p.members[0]]; return m0?[`- ${srcTitle(m0.sourceId)}${m0.location?" ("+m0.location+")":""}: ${m0.action}`]:[]; });
     const live=estate.set.entities.filter(e=>e.decision!=="rejected");
@@ -2106,7 +2125,7 @@ function issueDrafts(r, min){
 function renderReport(){
   const out=$("rOut"); const r=rstate.report;
   if(!rstate.world){ out.innerHTML=`<div class="empty" style="margin-top:12px">The game's world list (ports, places, boats, activities) is not loaded.</div>`; return; }
-  if(!r){ out.innerHTML=`<div class="empty" style="margin-top:12px">No report yet. Press Build report. It uses the concept table from the Concepts tab and ${rstate.world.game} at commit ${esc(String(rstate.world.commit).slice(0,7))}.</div>`; return; }
+  if(!r){ out.innerHTML=`<div class="empty" style="margin-top:12px">No report yet. Press Build report. It uses the Knowledge tab (concepts, practices, boats and places) and ${rstate.world.game} at commit ${esc(String(rstate.world.commit).slice(0,7))}.</div>`; return; }
   const min=Number($("rMin").value)||1, prev=rstate.history.find(h=>h.id!==r.id && h.createdAt<r.createdAt);
   const d=(k,good)=>{ if(!prev) return ""; const v=r.counts[k]-(prev.counts?.[k]??0); if(!v) return `<span class="delta hint">±0</span>`; return `<span class="delta" style="color:var(--${(v>0)===good?"good":"bad"})">${v>0?"+":""}${v}</span>`; };
   const tile=(n,label,k,good,extra="")=>`<div class="tile"><b>${n}</b><span>${label}</span> ${k?d(k,good):""}${extra}</div>`;
@@ -2284,7 +2303,7 @@ try{ const t=localStorage.getItem("intake.tab"); if(t) showTab(t); }catch{}
   const cRefresh=()=>{ if(!$("panel-concepts").hidden && !cstate.running) renderConcepts(); };
   db.collection("texts").onSnapshot(s=>{ cstate.texts=Object.fromEntries(s.docs.map(d=>[d.id,own(d.data())])); cRefresh(); }, ()=>{});
   db.collection("candidates").onSnapshot(s=>{ cstate.cands=Object.fromEntries(s.docs.map(d=>[d.id,own(d.data())])); cRefresh(); }, ()=>{});
-  const hRefresh=()=>{ if(!$("panel-history").hidden && !hstate.running) renderHistory(); };
+  const hRefresh=()=>{ if(!$("panel-history").hidden && !hstate.running) renderHistory(); if(!$("panel-entities").hidden) renderEntities(); };
   db.collection("practiceCands").onSnapshot(s=>{ if(!hstate.running){ hstate.cands=Object.fromEntries(s.docs.map(d=>[d.id,own(d.data())])); hRefresh(); } }, ()=>{});
   db.doc("practices/current").onSnapshot(s=>{ if(!hstate.running){ hstate.set=s.exists?own(s.data()):null; hRefresh(); } }, ()=>{});
   db.doc("entities/current").onSnapshot(s=>{ estate.set=s.exists?own(s.data()):null; if(!estate.set?.moves&&estate.set) estate.set.moves={}; hRefresh(); }, ()=>{});
