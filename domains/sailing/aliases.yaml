@@ -10,3 +10,9 @@ areas:
   pasaia: [Pasaia, Pasajes, Pasaia bay]
   azores: [Açores, Azores]
   madeira: [Madeira]
+# Other names of the game's places (English exonyms and older spellings), so a line written for
+# "Lisbon" plays at the game's port "Lisboa".
+places:
+  Lisboa: [Lisbon, Lisbonne]
+  Setúbal: [Setubal]
+  Almada: [Cacilhas]

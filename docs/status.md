@@ -26,8 +26,11 @@ Updated 2026-11-14. Read this first when starting a new session.
 
 ## Next steps
 
-1. Workbench export writes `from-tool/lines/<mini-game>.json` in the contract format, with the
-   same checks as the game's test; first bank: Passengers.
+1. Line banks: `tagus-export-banks DUMP_DIR <game>/content/narrative --include verified` writes
+   them from a dump of the workbench's records. First export (2026-11-14, game branch
+   `claude/kind-ptolemy-rribn8`): Fishing 12 lines, Supplies 9, Passengers 3, all "verified",
+   none approved yet. Next: approve lines in the workbench and export again; check Seaweed's
+   lines; a download button in the workbench for the same files.
 2. Runtime in `runtime/`: observer split (generic engine + sailing rules) and scheduler, with
    scripted-sail tests; Playtest view in the workbench.
 3. Game integration behind `?narrative=on` (captions, hooks, place watcher), then speech

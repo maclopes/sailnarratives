@@ -2925,6 +2925,18 @@
    "madeira": [
     "Madeira"
    ]
+  },
+  "places": {
+   "Lisboa": [
+    "Lisbon",
+    "Lisbonne"
+   ],
+   "Setúbal": [
+    "Setubal"
+   ],
+   "Almada": [
+    "Cacilhas"
+   ]
   }
  }
 }

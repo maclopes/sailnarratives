@@ -25,6 +25,7 @@ dev = [
 [project.scripts]
 tagus-validate = "tagus_narrative.validate:main"
 tagus-linkcheck = "tagus_narrative.linkcheck:main"
+tagus-export-banks = "tagus_narrative.export_banks:main"
 
 [tool.setuptools.packages.find]
 where = ["pipeline/src"]
