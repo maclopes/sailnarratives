@@ -1,0 +1,130 @@
+# Items shown to the experts in step 3 of the interview (the tool's findings), in European
+# Portuguese. Each item points to the tool's data ("ref"), so the answers can be compared with
+# the tool. Sources counts are filled in by build_materials.py from data/workbench/.
+# Snapshot: 14 November 2026; game report r20261114105910; game commit 1d66225.
+
+version: 1
+
+# A. Boats named in the sources and missing from the game (game report, by sources)
+boats:
+  - {id: A1, ref: "boat:Barco d'água acima", pt: "Barco d'água acima (barcos do Ribatejo)"}
+  - {id: A2, ref: "boat:Varino", pt: "Varino"}
+  - {id: A3, ref: "boat:Barca", pt: "Barca"}
+  - {id: A4, ref: "boat:Bote", pt: "Bote"}
+  - {id: A5, ref: "boat:Batel", pt: "Batel"}
+  - {id: A6, ref: "boat:Bateira", pt: "Bateira"}
+  - {id: A7, ref: "boat:Vapor", pt: "Vapor (barco a vapor)"}
+  - {id: A8, ref: "boat:Saveiro", pt: "Saveiro"}
+  - {id: A9, ref: "boat:Bote cacilheiro", pt: "Bote cacilheiro"}
+  - {id: A10, ref: "boat:Bote de fragata", pt: "Bote de fragata"}
+  - {id: A11, ref: "boat:Cangueiro", pt: "Cangueiro"}
+  - {id: A12, ref: "boat:Barco de Riba Tejo", pt: "Barco de Riba-Tejo (é o mesmo que o barco d'água acima?)"}
+
+# B. Places named in the sources that the game lacks or cannot place (game report)
+places:
+  - {id: B1, ref: "place:Mouchões", pt: "Mouchões"}
+  - {id: B2, ref: "place:Mar da Palha", pt: "Mar da Palha"}
+  - {id: B3, ref: "place:Barra do Tejo", pt: "Barra do Tejo"}
+  - {id: B4, ref: "place:Cais das Colunas", pt: "Cais das Colunas"}
+  - {id: B5, ref: "place:Cacilhas", pt: "Cacilhas (no jogo só como marca de navegação)"}
+  - {id: B6, ref: "place:Mar entre o Cabo da Roca e Setúbal", pt: "Pesqueiros entre o Cabo da Roca e Setúbal (Entre-Cabos)"}
+  - {id: B7, ref: "place:Santarém", pt: "Santarém"}
+  - {id: B8, ref: "place:Chamusca", pt: "Chamusca"}
+  - {id: B9, ref: "place:Azambuja", pt: "Azambuja"}
+  - {id: B10, ref: "place:Porto do Sabugueiro", pt: "Porto do Sabugueiro"}
+  - {id: B11, ref: "place:Valada", pt: "Valada"}
+  - {id: B12, ref: "place:Muge", pt: "Muge"}
+  - {id: B13, ref: "place:Porto de Arraiolos", pt: "Porto de Arraiolos (a ferramenta não o conseguiu situar: onde fica?)"}
+  - {id: B14, ref: "place:Portos dos Frades", pt: "Portos dos Frades (onde fica?)"}
+
+# C. Practices (what people did), as the tool grouped them
+practices:
+  - {id: C1, ref: "practice:p12", pt: "Tráfego entre as margens do Tejo até meados do séc. XX (fragatas, varinos, faluas, cangueiros, botes, canoas, catraios)"}
+  - {id: C2, ref: "practice:p1", pt: "Barcos d'água acima a levar carga do Ribatejo para Lisboa"}
+  - {id: C3, ref: "practice:p11", pt: "Abastecimento dos navios fundeados no porto de Lisboa"}
+  - {id: C4, ref: "practice:p73", pt: "Pesqueiros da muleta com a rede de tartaranha (Tejo, Sado e mar entre o Cabo da Roca e Setúbal)"}
+  - {id: C5, ref: "practice:p8", pt: "Tripulação do barco d'água acima: arrais, camaradas e moços"}
+  - {id: C6, ref: "practice:p16", pt: "Fragatas a carregar e descarregar navios no porto de Lisboa"}
+  - {id: C7, ref: "practice:p17", pt: "Fragata rebocada pelo seu bote a remos quando não havia vento"}
+  - {id: C8, ref: "practice:p81", pt: "Muletas e rascas a comerciar fora da barra (até ao Algarve)"}
+  - {id: C9, ref: "practice:p83", pt: "Muleta armada em hiate"}
+  - {id: C10, ref: "practice:p100", pt: "Carreira de botes Cacilhas–Almada–Lisboa"}
+  - {id: C11, ref: "practice:p108", pt: "Avieiros a pescar e a viver nas bateiras"}
+  - {id: C12, ref: "practice:p124", pt: "Carreira Lisboa–Montijo (Aldeia Galega) com botes, catraios e faluas"}
+  - {id: C13, ref: "practice:p131", pt: "Cangueiros a levar carga pesada para Lisboa"}
+  - {id: C14, ref: "practice:p60", pt: "Pescadores da tartaranha como pilotos da barra de Lisboa"}
+  - {id: C15, ref: "practice:p104", pt: "Pesca de tapa-esteiros no Mar da Palha"}
+  - {id: C16, ref: "practice:p36", pt: "Vapores de carga e armazéns no cais da Barquinha (fim do séc. XIX)"}
+
+# D. Conflicts between sources: which version is right?
+conflicts:
+  - id: D1
+    ref: "practice:p2"
+    pt: "Fim do transporte de carga à vela no Tejo"
+    options: ["1951 e 1966 (getLISBON)", "Até aos anos 70, com a Ponte 25 de Abril (Museu da Paisagem)", "Primeiro quartel do séc. XX, por causa do transporte por estrada (Freire)"]
+  - id: D2
+    ref: "practice:p51"
+    pt: "Regimento dos Barqueiros de 1572: quantas pessoas podia levar um batel de Lisboa para Almada?"
+    options: ["8 pessoas (parágrafo 19)", "12 pessoas (parágrafo 61)"]
+  - id: D3
+    ref: "practice:p53"
+    pt: "Quantas velas podia armar uma muleta?"
+    options: ["9 ou 10 (Baldaque da Silva, fim do séc. XIX)", "Até 20 ou mais (Smyth 1867; Folin 1892)"]
+  - id: D4
+    ref: "practice:p41"
+    pt: "A muleta pescava sardinha entre Peniche e Setúbal?"
+    options: ["Sim (Duhamel du Monceau, séc. XVIII)", "Não: a tartaranha era para peixe chato (Pedrosa)"]
+  - id: D5
+    ref: "practice:p49"
+    pt: "A muleta foi sempre barco de pesca?"
+    options: ["Não: era barco de carga e nunca pescou (Pedrosa)", "Sim: há documentos de muletas a pescar (1620, 1633, 1634–1645)"]
+  - id: D6
+    ref: "concept:c18"
+    pt: "A tábua de bolina da muleta era:"
+    options: ["Uma tábua que se baixava em águas pouco fundas", "Uma quilha lateral fixa, uma de cada lado"]
+  - id: D7
+    ref: "concept:c278"
+    pt: "O que era uma bateira no Tejo?"
+    options: ["Um barco de carga", "O barco dos avieiros, onde também viviam", "Um pequeno barco da carreira de Lisboa", "Eram barcos diferentes com o mesmo nome"]
+  - id: D8
+    ref: "practice:p4"
+    pt: "Os 1490 barcos contados em 1552 eram:"
+    options: ["Todos os barcos do Tejo, com o estuário (mediotejo)", "Só os barcos que serviam Lisboa (getLISBON)"]
+  - id: D9
+    ref: "concept:c408"
+    pt: "Extensão do Tejo navegável todo o ano:"
+    options: ["85 km", "65 km"]
+  - id: D10
+    ref: "concept:c406"
+    pt: "Até onde ia o tráfego regular acima de Lisboa?"
+    options: ["20 a 30 km acima de Lisboa", "Até onde chega a maré (Porto do Sabugueiro)"]
+  - id: D11
+    ref: "practice:p157"
+    pt: "Últimos barcos do Rossio de Abrantes:"
+    options: ["Barcos de mais de 20 t, até ao início dos anos 50", "Barcos até 30 t, até ao fim dos anos 50"]
+  - id: D12
+    ref: "concept:c1"
+    pt: "Quão perto do vento bolinava um barco do Tejo (falua)?"
+    options: ["45 a 50 graus (curso de vela)", "Cerca de 36 graus (o jogo)"]
+  - id: D13
+    ref: "practice:p359"
+    pt: "Naufrágio do mestre Reguinga e origem da festa (Costa da Caparica):"
+    options: ["1863", "1 de julho de 1824"]
+
+# E. Terms: which word did the sailors of the Tagus use?
+terms:
+  - {id: E1, ref: "concept:Tacking", pt: "Mudar de bordo passando a proa pelo vento", options: ["virar por davante", "virar de bordo", "dar por davante", "cambar"]}
+  - {id: E2, ref: "concept:Gybing", pt: "Mudar de bordo passando a popa pelo vento", options: ["virar em roda", "cambar", "jaibe / dar um jaibe"]}
+  - {id: E3, ref: "concept:Starboard side", pt: "O lado direito do barco", options: ["estibordo", "boreste"]}
+  - {id: E4, ref: "concept:Shrouds", pt: "Os cabos que seguram o mastro dos lados", options: ["ovéns", "brandais", "enxárcia"]}
+  - {id: E5, ref: "concept:Leeway (sideways drift)", pt: "O barco a deslizar de lado com o vento", options: ["abater / abatimento", "deriva", "descair"]}
+  - {id: E6, ref: "concept:Sheeting in", pt: "Puxar a escota para fechar a vela", options: ["caçar", "cazar", "meter dentro"]}
+
+# F. Lines the tool wrote for the game (historically correct? would a sailor say it?)
+lines:
+  - {id: F1, ref: "line:mini-fishing:l1", status: verified}
+  - {id: F2, ref: "line:mini-fishing:l4", status: verified}
+  - {id: F3, ref: "line:mini-fishing:l5", status: "needs work"}
+  - {id: F4, ref: "line:mini-supplies:l8", status: "needs work"}
+  - {id: F5, ref: "line:mini-passengers:l7", status: "needs work"}
+  - {id: F6, ref: "line:mini-passengers:l12", status: "needs work"}

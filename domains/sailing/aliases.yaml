@@ -16,6 +16,9 @@ places:
   Lisboa: [Lisbon, Lisbonne, Porto de Lisboa, Port of Lisbon, Ribeira de Lisboa, Lisbon harbour]
   Setúbal: [Setubal]
   Almada: [Cacilhas]
+  Montijo: [Aldeia Galega, Aldeagalega, Aldegalega]
+  Constância: [Punhete, Constança]
+  Vila Nova da Barquinha: [Barquinha, porto da Barquinha]
 # Boat names: generic words in front of a type ("Barco Moliceiro" = Moliceiro, "boat Catraio" =
 # Catraio; "barco de água acima" keeps its "barco", which is part of the name), and other names
 # of one type.
