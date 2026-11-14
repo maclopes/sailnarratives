@@ -140,13 +140,12 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
 
   <div class="tabs" role="tablist">
     <button role="tab" id="tab-project" aria-selected="true" data-tab="project"><span class="n">1</span>Project</button>
-    <button role="tab" id="tab-materials" aria-selected="false" data-tab="materials"><span class="n">2</span>Materials</button>
-    <button role="tab" id="tab-readiness" aria-selected="false" data-tab="readiness"><span class="n">3</span>Readiness</button>
-    <button role="tab" id="tab-concepts" aria-selected="false" data-tab="concepts"><span class="n">4</span>Concepts</button>
-    <button role="tab" id="tab-history" aria-selected="false" data-tab="history"><span class="n">5</span>History</button>
-    <button role="tab" id="tab-situations" aria-selected="false" data-tab="situations"><span class="n">6</span>Situations</button>
-    <button role="tab" id="tab-narrative" aria-selected="false" data-tab="narrative"><span class="n">7</span>Narrative</button>
-    <button role="tab" id="tab-report" aria-selected="false" data-tab="report"><span class="n">8</span>Game report</button>
+    <button role="tab" id="tab-materials" aria-selected="false" data-tab="materials"><span class="n">2</span>Sources</button>
+    <button role="tab" id="tab-concepts" aria-selected="false" data-tab="concepts"><span class="n">3</span>Concepts</button>
+    <button role="tab" id="tab-history" aria-selected="false" data-tab="history"><span class="n">4</span>History, boats and places</button>
+    <button role="tab" id="tab-situations" aria-selected="false" data-tab="situations"><span class="n">5</span>Situations</button>
+    <button role="tab" id="tab-narrative" aria-selected="false" data-tab="narrative"><span class="n">6</span>Narrative</button>
+    <button role="tab" id="tab-report" aria-selected="false" data-tab="report"><span class="n">7</span>Game report</button>
   </div>
 
   <!-- 1 Project -->
@@ -169,7 +168,7 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
   <!-- 2 Materials -->
   <section class="panel" id="panel-materials" role="tabpanel" hidden>
     <div class="kinds" id="kindCounts"></div>
-    <div class="row"><button class="btn primary" id="addBtn">Add material</button><span class="hint">Materials can be added at any time; the readiness report updates.</span></div>
+    <div class="row"><button class="btn primary" id="addBtn">Add material</button><span class="hint">Sources can be added at any time; the readiness checks below update.</span></div>
     <details class="linkimp" id="driveImp"><summary>Import from Google Drive</summary>
       <p class="hint">Reads the files in a Drive folder with your Google Drive connector, adds them as materials (or attaches them to matching ones) and stores their text for the next steps. Files stay in your Drive.</p>
       <div class="row"><input type="text" id="driveFolder" placeholder="Folder link, path (My Drive\projects\…) or name" style="flex:1;min-width:200px"><button class="btn" id="driveList">List files</button></div>
@@ -180,27 +179,25 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
       <textarea id="linkJson" placeholder='{"results":[{"url":"https://…","status":"ok"}]}'></textarea>
       <div class="row" style="margin-top:8px"><button class="btn" id="linkApply">Apply results</button><span class="hint" id="linkState"></span></div>
     </details>
+    <div class="section" id="readinessBox"><h2>Readiness</h2><p class="sub">Whether the sources can support each part of the work: fixed checks on the list below, updated as you add or edit sources.</p>
+    <div class="overall" id="overall"></div>
+    <div class="bases" id="bases"></div>
+    <details class="linkimp"><summary>A second look by Claude</summary>
+      <p class="sub">The checks above are fixed rules. Claude can read the same list and suggest other gaps. Its suggestions are drafts for you to judge.</p>
+      <div class="row" style="margin-top:10px"><button class="btn" id="aiBtn">Ask Claude to review the materials</button><span class="hint" id="aiState"></span></div>
+      <div class="ai" id="aiOut"></div>
+    </details>
+    <details class="linkimp"><summary>Domain pack manifest (domain.yaml)</summary>
+      <p class="sub">The intake's output: <span style="font-family:var(--f-mono)">domain.yaml</span> for the pack folder. The later steps read it.</p>
+      <div class="row" style="margin:10px 0"><button class="btn primary" id="dlBtn">Download domain.yaml</button><button class="btn" id="copyBtn">Copy</button></div>
+      <pre id="yaml"></pre>
+    </details>
+    </div>
     <div id="formHost"></div>
     <div id="groups"></div>
   </section>
 
   <!-- 3 Readiness -->
-  <section class="panel" id="panel-readiness" role="tabpanel" hidden>
-    <div class="overall" id="overall"></div>
-    <div class="bases" id="bases"></div>
-    <div class="section">
-      <h2>A second look</h2>
-      <p class="sub">The checks above are fixed rules. Claude can read the same list and suggest other gaps. Its suggestions are drafts for you to judge.</p>
-      <div class="row" style="margin-top:10px"><button class="btn" id="aiBtn">Ask Claude to review the materials</button><span class="hint" id="aiState"></span></div>
-      <div class="ai" id="aiOut"></div>
-    </div>
-    <div class="section">
-      <h2>Domain pack manifest</h2>
-      <p class="sub">The intake's output: <span style="font-family:var(--f-mono)">domain.yaml</span> for the pack folder. The later steps read it.</p>
-      <div class="row" style="margin:10px 0"><button class="btn primary" id="dlBtn">Download domain.yaml</button><button class="btn" id="copyBtn">Copy</button></div>
-      <pre id="yaml"></pre>
-    </div>
-  </section>
 
   <!-- 4 Concepts -->
   <section class="panel" id="panel-concepts" role="tabpanel" hidden>
@@ -233,6 +230,13 @@ pre{font-family:var(--f-mono);font-size:12.5px;background:var(--sunk);border:1px
       <div class="chips" id="hChips"></div>
       <p class="hint">Each card is one practice: passages from different sources that the tool thinks describe the same thing people did. If a passage is in the wrong card, use <b>Move to…</b> on its row. <b>Group is right</b> confirms the card; <b>Leave out</b> drops it from later steps. Cards you have not decided on are still used. Changing a card's passages sends it back to undecided.</p>
       <div id="hList"></div>
+    </div>
+    <div class="section">
+      <div class="row" style="justify-content:space-between"><h2>Boats and places</h2><span class="hint" id="eMeta"></span></div>
+      <p class="sub">Every boat and place the sources name, one card per boat type or place: the names the sources use for it are merged by fixed rules (no Claude), and the game report reads this list. If a name is in the wrong card, use <b>Move to…</b>; set the kind (boat, place, or region: a country, sea or whole river) and the place's map area where they are wrong. <b>Leave out</b> keeps a card out of the report.</p>
+      <div class="row"><button class="btn" id="eBuild">Update the list</button><span class="hint" id="eRun"></span></div>
+      <div class="chips" id="eChips"></div>
+      <div id="eList"></div>
     </div>
     <div class="section">
       <h2>Review sheet for one source</h2>
@@ -308,15 +312,16 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":
 function toast(msg){const t=$("toast");t.textContent=msg;t.hidden=false;clearTimeout(toast.h);toast.h=setTimeout(()=>t.hidden=true,2600);}
 function setSave(msg){$("saveState").textContent=msg;}
 
-const BUILD="2026-11-14 · version 30";
+const BUILD="2026-11-14 · version 31";
 $("buildTag").textContent=BUILD;
 // ---------- tabs ----------
 function showTab(name){
+  if (name==="readiness") name="materials"; // Readiness is now part of Sources
   for (const b of document.querySelectorAll(".tabs button")) b.setAttribute("aria-selected", String(b.dataset.tab===name));
-  for (const p of ["project","materials","readiness","concepts","history","situations","narrative","report"]) $("panel-"+p).hidden = p!==name;
+  for (const p of ["project","materials","concepts","history","situations","narrative","report"]) $("panel-"+p).hidden = p!==name;
   try{localStorage.setItem("intake.tab",name);}catch{}
-  if (!["project","materials","readiness"].includes(name)) startHeavy();
-  if (name==="readiness") renderReadiness();
+  if (!["project","materials"].includes(name)) startHeavy();
+  if (name==="materials") renderReadiness();
   if (name==="concepts") renderConcepts();
   if (name==="report") renderReport();
   if (name==="history") renderHistory();
@@ -1330,7 +1335,93 @@ function sheetText(srcId){
 $("hSheetSrc").addEventListener("change",()=>{ $("hSheet").textContent=sheetText($("hSheetSrc").value); });
 $("hSheetCopy").addEventListener("click",async()=>{ const t=sheetText($("hSheetSrc").value); if(!t){ toast("Choose a source first."); return; } try{ await navigator.clipboard.writeText(t); toast("Copied"); }catch{ toast("Copy is not available here; use Download."); } });
 $("hSheetDl").addEventListener("click",async()=>{ const id=$("hSheetSrc").value, t=sheetText(id); if(!t){ toast("Choose a source first."); return; } if(!downloads){ toast("Downloads are not available here; use Copy."); return; } try{ await downloads.save({filename:`review-sheet-${norm(SHORT(state.materials.find(m=>m.id===id)||{title:id})).replace(/[^a-z0-9]+/g,"-")}.md`, data:t}); }catch(e){ if(e.code!=="declined") toast("Could not save: "+(e.message||e.code)); } });
-function renderHistory(){ renderHSources(); renderHTable(); }
+function renderHistory(){ renderHSources(); renderHTable(); renderEntities(); }
+
+// ---------- boats and places (one list, built by rules from the concepts and the practices) ----------
+const estate={set:null, filter:"boat", renaming:null, running:false};
+const EKINDS={boat:"boat", place:"place", region:"region"};
+const splitNames=(t)=>String(t||"").split(/\s*;\s*|\s+\/\s+/).map(x=>x.trim()).filter(Boolean);
+const isRouteOrList=(t)=>/;/.test(t)||(/\b(to|até)\b|->|–/.test(String(t))&&!isAreaItself(t));
+function placeOwn(name){ for(const [own,others] of Object.entries(rstate.world?.aliases?.places||{})) if(others.some(o=>spell(o)===spell(name))) return own; return name; }
+function entityKey(kind,name){ return kind+"|"+(kind==="boat"?boatKey(name):nameKey(kind==="place"?placeOwn(name):name)); }
+function guessArea(name){ const w=rstate.world; if(!w) return "unknown"; const k=norm(placeOwn(name)); const eq=(l)=>(l||[]).some(x=>norm(x)===k);
+  for(const [a,ps] of Object.entries(w.ports||{})) if(eq(ps)) return a;
+  for(const [a,mf] of Object.entries(w.map_files||{})) if(eq(w.map_places?.[mf])) return a;
+  for(const a of Object.keys(w.ports||{})) if(eq(w.map_places?.[a])) return a;
+  return "unknown"; }
+/** The names the sources give, each with its kind, area, sources and where it came from. */
+function entityMentions(){
+  const out=[], cls=rstate.classes||{}, hidx=hIndex();
+  for(const r of conceptRows()){ if(r.c.decision==="rejected") continue; const k=cls[r.c.id]; if(!k||!EKINDS[k.category]) continue;
+    const name=k.name||r.c.label; if(isRouteOrList(name)) continue;
+    out.push({kind:k.category, name, area:k.area||"unknown", sources:[...new Set(r.ms.filter(x=>x.kind!=="simulation").map(x=>x.sourceId))], concept:r.c.id}); }
+  for(const p of (hstate.set?.practices||[]).filter(p=>p.decision!=="rejected")){ const srcs=[...new Set(p.members.map(id=>hidx[id]?.sourceId).filter(Boolean))];
+    for(const [field,list] of [["boat",p.boats||[]],["place",p.places||[]]]) for(const nm of list.flatMap(splitNames)){
+      const k=cls[(field==="boat"?"hb:":"hp:")+norm(nm).slice(0,60)]; const kind=k&&EKINDS[k.category]?k.category:(k&&k.category==="other"?null:field); if(!kind) continue;
+      const name=(k&&k.name)||nm; if(isRouteOrList(name)) continue;
+      out.push({kind, name, area:(k&&k.area&&k.area!=="unknown")?k.area:guessArea(name), sources:srcs, practice:p.id}); } }
+  return out;
+}
+/** Group the mentions into cards by rules, keeping the author's moves, names, kinds, areas and decisions. */
+function buildEntities(){
+  const prev=estate.set||{entities:[], moves:{}}, moves=prev.moves||{}, byKey={};
+  for(const m of entityMentions()){
+    const mk=entityKey(m.kind,m.name); const key=moves[mk]||mk;
+    const e=(byKey[key] ||= {key, kind:m.kind, names:{}, areas:{}, sources:new Set(), practices:new Set(), concepts:new Set()});
+    e.names[m.name]=(e.names[m.name]||0)+1; if(m.area&&m.area!=="unknown") e.areas[m.area]=(e.areas[m.area]||0)+1;
+    m.sources.forEach(x=>e.sources.add(x)); if(m.practice) e.practices.add(m.practice); if(m.concept) e.concepts.add(m.concept); }
+  const old=Object.fromEntries((prev.entities||[]).map(e=>[e.key,e]));
+  const entities=Object.values(byKey).map(e=>{ const o=old[e.key]||{}; const order=Object.keys(e.names).sort((a,b)=>e.names[b]-e.names[a]||a.length-b.length), names=Object.fromEntries(order.map(n=>[n,e.names[n]]));
+    const gb=e.kind==="boat"&&rstate.world?.boats.find(b=>boatKey(b.name)===boatKey(order[0]));
+    const area=o.areaSet||Object.entries(e.areas).sort((a,b)=>b[1]-a[1])[0]?.[0]||(Object.keys(e.areas).length?"":"unknown");
+    return {key:e.key, kind:o.kindSet||e.kind, ...(o.kindSet?{kindSet:o.kindSet}:{}), name:o.label||(gb?gb.name:(e.kind==="place"?placeOwn(order[0]):order[0])), ...(o.label?{label:o.label}:{}),
+      names, area:area||"unknown", ...(o.areaSet?{areaSet:o.areaSet}:{}), sources:[...e.sources], practices:[...e.practices].slice(0,30), concepts:[...e.concepts].slice(0,30), decision:o.decision||"draft"}; });
+  entities.sort((a,b)=>b.sources.length-a.sources.length||a.name.localeCompare(b.name));
+  estate.set={entities, moves, builtAt:new Date().toISOString()};
+  return estate.set;
+}
+async function saveEntities(){ estate.set.updatedAt=new Date().toISOString(); try{ await saveDoc("entities/current", JSON.parse(JSON.stringify(estate.set))); }catch(e){ toast("Could not save: "+(e.message||e.code)); } }
+function entityStatus(e){ if(e.kind==="region") return "region"; if(e.kind==="boat") return rstate.world?matchBoat(e.name):""; return rstate.world?matchPlace(e.name,e.area):""; }
+function renderEntities(){
+  const set=estate.set, list=$("eList"); if(!list) return;
+  if(!set?.entities?.length){ $("eChips").innerHTML=""; $("eMeta").textContent=""; list.innerHTML=`<div class="empty">No list yet. Press Update the list (it uses the practices and the concept table; no Claude requests).</div>`; return; }
+  const es=set.entities, st=Object.fromEntries(es.map(e=>[e.key,entityStatus(e)]));
+  const IN=["in game","in development","port","landmark","on map"];
+  const filters=[["boat","Boats",e=>e.kind==="boat"],["place","Places",e=>e.kind==="place"&&st[e.key]!=="the river or area itself"],["region","Regions and the river",e=>e.kind==="region"||st[e.key]==="the river or area itself"],["notin","Not in the game",e=>e.kind!=="region"&&!IN.includes(st[e.key])&&st[e.key]!=="the river or area itself"],["out","Left out",e=>e.decision==="rejected"]];
+  $("eMeta").textContent=`${es.filter(e=>e.kind==="boat").length} boats · ${es.filter(e=>e.kind==="place").length} places · ${es.filter(e=>e.kind==="region").length} regions · built ${new Date(set.builtAt).toLocaleString()}`;
+  $("eChips").innerHTML=filters.map(([k,l,f])=>`<button class="chip" data-efilter="${k}" aria-pressed="${estate.filter===k}">${esc(l)} · ${es.filter(e=>f(e)&&(k==="out"||e.decision!=="rejected")).length}</button>`).join("");
+  const f=(filters.find(x=>x[0]===estate.filter)||filters[0])[2];
+  const shown=es.filter(e=>f(e)&&(estate.filter==="out"||e.decision!=="rejected")).slice(0,150);
+  const areas=["unknown","outside",...Object.keys(rstate.world?.ports||{})];
+  list.innerHTML=shown.map(e=>{ const s2=st[e.key];
+    return `<div class="concept${e.decision==="rejected"?" rejected":""}"><div class="concept-h">
+      ${estate.renaming===e.key?`<div class="row"><input type="text" id="eRenameBox" value="${esc(e.name)}" style="width:auto"><button class="btn small primary" data-erenamesave="${esc(e.key)}">Save</button></div>`:`<h3>${esc(e.name)}</h3>`}
+      <div class="row"><span class="pill">${e.sources.length} source${e.sources.length===1?"":"s"}</span>${s2?`<span class="pill ${RSTAT[s2]||""}">${esc(s2)}</span>`:""}${e.decision!=="draft"?`<span class="pill ${e.decision==="accepted"?"p-good":"p-bad"}">${e.decision==="accepted"?"group is right":"left out"}</span>`:""}</div></div>
+      <div class="row hint" style="margin-top:6px">
+        <label>Kind <select data-ekind="${esc(e.key)}">${Object.keys(EKINDS).map(k=>`<option${k===e.kind?" selected":""}>${k}</option>`).join("")}</select></label>
+        ${e.kind==="place"?`<label>Area <select data-earea="${esc(e.key)}">${areas.map(a=>`<option value="${esc(a)}"${a===e.area?" selected":""}>${esc(rstate.world?.area_names?.[a]||a)}</option>`).join("")}</select></label>`:""}
+        <span title="${esc(e.sources.map(srcTitle).join("; "))}">${esc(e.sources.map(srcTitle).slice(0,4).join(", "))}${e.sources.length>4?"…":""}</span></div>
+      <div style="overflow-x:auto"><table class="members"><tr><th>Written in the sources</th><th>Times</th><th></th></tr>
+      ${Object.entries(e.names).map(([n,c])=>`<tr><td class="term">${esc(n)}</td><td class="hint">${c}</td><td><select data-emove="${esc(e.kind+"|"+n)}" aria-label="Move to another card"><option value="">Move to…</option><option value="__new">A new card</option></select></td></tr>`).join("")}</table></div>
+      <div class="row" style="margin-top:8px"><button class="btn small${e.decision==="accepted"?" primary":""}" data-edecide="accepted" data-ekey="${esc(e.key)}">Group is right</button><button class="btn small" data-edecide="rejected" data-ekey="${esc(e.key)}">Leave out</button>${e.decision!=="draft"?`<button class="btn small" data-edecide="draft" data-ekey="${esc(e.key)}">Undecided</button>`:""}<button class="btn small" data-erename="${esc(e.key)}">Rename</button></div>
+    </div>`; }).join("")+(es.filter(e=>f(e)).length>150?`<div class="hint">Showing the 150 with most sources.</div>`:"");
+}
+$("eBuild").addEventListener("click",async()=>{ if(!hstate.set?.practices?.length&&!cstate.set?.concepts?.length){ $("eRun").textContent="Run Concepts or History first."; return; }
+  buildEntities(); await saveEntities(); $("eRun").textContent=`Built ${estate.set.entities.length} cards from the practices and the concept table.`; renderEntities(); });
+$("eChips").addEventListener("click",(ev)=>{ const b=ev.target.closest("[data-efilter]"); if(!b) return; estate.filter=b.dataset.efilter; renderEntities(); });
+$("eList").addEventListener("click",async(ev)=>{ const b=ev.target.closest("button"); if(!b||!estate.set) return;
+  const key=b.dataset.ekey||b.dataset.erename||b.dataset.erenamesave; const e=estate.set.entities.find(x=>x.key===key); if(!e) return;
+  if(b.dataset.edecide){ e.decision=b.dataset.edecide; await saveEntities(); renderEntities(); }
+  else if(b.dataset.erename){ estate.renaming=e.key; renderEntities(); $("eRenameBox")?.focus(); }
+  else if(b.dataset.erenamesave){ const v=$("eRenameBox").value.trim(); if(v){ e.name=v.slice(0,80); e.label=e.name; } estate.renaming=null; await saveEntities(); renderEntities(); } });
+$("eList").addEventListener("change",async(ev)=>{ const t=ev.target; if(!estate.set) return; const d=t.dataset;
+  if(d.ekind){ const e=estate.set.entities.find(x=>x.key===d.ekind); e.kind=t.value; e.kindSet=t.value; await saveEntities(); renderEntities(); }
+  else if(d.earea){ const e=estate.set.entities.find(x=>x.key===d.earea); e.area=t.value; e.areaSet=t.value; await saveEntities(); renderEntities(); }
+  else if(d.emove&&t.value){ const [kind,...rest]=d.emove.split("|"), name=rest.join("|"); const mk=entityKey(kind,name);
+    estate.set.moves[mk]= t.value==="__new" ? mk+"#"+Date.now().toString(36) : t.value; buildEntities(); await saveEntities(); renderEntities(); toast("Moved"); } });
+// the "Move to…" list of a name is filled when opened (cards of the same kind)
+for(const t of ["pointerdown","touchstart","focusin","keydown"]) $("eList").addEventListener(t,(ev)=>{ const sel=ev.target.closest?.("select[data-emove]"); if(!sel||sel.dataset.filled||!estate.set) return;
+  const kind=sel.dataset.emove.split("|")[0]; sel.insertAdjacentHTML("beforeend", estate.set.entities.filter(e=>e.kind===kind).map(e=>`<option value="${esc(e.key)}">${esc(e.name)}</option>`).join("")); sel.dataset.filled="1"; },{passive:true});
 
 
 // ---------- situations: activity proposals and the blind comparison ----------
@@ -1883,7 +1974,7 @@ function matchPlace(name, area){
   return "missing";
 }
 // one key for spellings of one name: no accents or case, "d'água" = "de água", no plural s
-const spell=(t)=>norm(String(t||"").replace(/\bd['’]\s?/gi,"de "));
+const spell=(t)=>norm(String(t||"").replace(/\bd['’]\s?/gi,"de ").replace(/[-‐–]/g," "));
 const nameKey=(t)=>spell(t).replace(/s$/,"");
 const GENERIC=new Set("direita esquerda right left rio river estuario estuary foz mouth baixo lower alto upper medio middle vale valley margem margens margin margins riverbank riverbanks riverbed bank banks channel channels canal canais bacia basin leziria lezirias sul norte south north esteiros aguas waters of the do da de dos das em at ao a e and".split(" "));
 const STRETCH=new Set("between entre below above abaixo acima stretch troco from to ate desde".split(" "));
@@ -1923,14 +2014,9 @@ async function buildReport(){
     const info=rows.filter(r=>r.c.decision!=="rejected" && !(r.c.scope==="out" && r.c.decision!=="accepted")).map(r=>({c:r.c, ms:r.ms, sim:r.ms.some(x=>x.kind==="simulation")||(r.c.simLinks||[]).length>0, srcs:[...new Set(r.ms.filter(x=>x.kind!=="simulation").map(x=>x.sourceId))]}));
     // 1. sort concepts into categories (only those not sorted yet); check every answer came back
     const asItem=(x)=>({id:x.c.id, label:x.c.label, terms:[...new Set(x.ms.map(m=>m.term))].slice(0,5), meaning:String(x.ms.find(m=>m.kind!=="simulation")?.definition||x.ms[0]?.definition||"").slice(0,80), sources:x.srcs.length, sim:x.sim});
-    // boats and places named in the history's practices, sorted the same way
-    const hidx0=hIndex(), named={};
-    for(const p of (hstate.set?.practices||[]).filter(p=>p.decision!=="rejected")){ const srcs=[...new Set(p.members.map(id=>hidx0[id]?.sourceId).filter(Boolean))];
-      for(const [kind,list] of [["boat",p.boats||[]],["place",p.places||[]]]) for(const nm of list.flatMap(x=>String(x).split(/\s*;\s*|\s+\/\s+/)).map(x=>x.trim()).filter(Boolean)){ const k=(kind==="boat"?"hb:":"hp:")+norm(nm).slice(0,60); (named[k] ||= {id:k, label:nm, kind, srcs:new Set(), practices:[]}); srcs.forEach(x=>named[k].srcs.add(x)); named[k].practices.push(p.id); } }
-    const namedItems=Object.values(named).map(n=>({id:n.id, label:n.label, terms:[n.label], meaning:n.kind==="boat"?"a boat named in a historical source":"a place named in a historical source", sources:n.srcs.size, sim:false}));
-    // sort again what an older prompt put in boat, place or other (version 2 adds regions and one name per boat)
     const stale=(id)=>{ const k=rstate.classes[id]; return !k || ((k.v||1)<CLASS_V && ["boat","place","other"].includes(k.category)); };
-    let pending=[...info.filter(x=>stale(x.c.id)).map(asItem), ...namedItems.filter(n=>stale(n.id))];
+    // only concepts are sorted; boats and places come from the Boats and places list (History tab)
+    let pending=info.filter(x=>stale(x.c.id)).map(asItem);
     const total=pending.length; let unsorted=0;
     for(const size of [40,15]){
       const left=[];
@@ -1945,26 +2031,14 @@ async function buildReport(){
     }
     unsorted=pending.length;
     const cls=(x)=>rstate.classes[x.c.id]||{category:"other"};
-    // 2. boats and places, grouped by name
-    const group=(cat,keyf)=>{ const g={}; for(const x of info.filter(x=>cls(x).category===cat)){ const k=keyf(x); if(!k) continue; (g[k] ||= {xs:[]}).xs.push(x); } return Object.values(g); };
-    // boats and places from the concepts and from the history's practices, merged by name
-    const ents={};
-    const addEnt=(cat,c0,label,srcs,conceptId,evidence)=>{ let name=c0.name||label;
-      if(cat==="place") for(const [own,others] of Object.entries(rstate.world.aliases?.places||{})) if(others.some(o=>spell(o)===spell(name))) name=own; const key=cat+"|"+(cat==="boat"?boatKey(name):nameKey(name))+(cat==="place"?"|"+c0.area:"");
-      const e=(ents[key] ||= {cat, name, area:c0.area, sources:new Set(), concepts:[], evidence:[]}); (e.names ||= new Set()).add(name); srcs.forEach(x=>e.sources.add(x)); if(conceptId) e.concepts.push(conceptId); if(evidence) e.evidence.push(...evidence); };
-    const isList=(t)=>/;/.test(t)||/^\S.* (to|a|até|->|–) \S/.test(String(t))&&!isAreaItself(t)&&/\b(to|até)\b|->|–/.test(String(t)); // lists and routes are not one place
-    for(const x of info){ const c0=cls(x); if((c0.category==="boat"||c0.category==="place")&&!isList(c0.name||x.c.label)) addEnt(c0.category,c0,x.c.label,x.srcs,x.c.id,null); }
-    for(const n of Object.values(named)){ const c0=rstate.classes[n.id]; if(!c0||(c0.category!=="boat"&&c0.category!=="place")||isList(c0.name||n.label)) continue;
-      const ev=n.practices.slice(0,3).flatMap(pid=>{ const p=hstate.set.practices.find(q=>q.id===pid); const m0=p&&hidx0[p.members[0]]; return m0?[`- ${srcTitle(m0.sourceId)}${m0.location?" ("+m0.location+")":""}: ${m0.action}`]:[]; });
-      addEnt(c0.category,c0,n.label,[...n.srcs],null,ev); }
-    for(const [k,e] of Object.entries(ents)){ if(e.cat!=="place"||!["","unknown","outside"].includes(e.area||"")) continue;
-      const other=Object.entries(ents).find(([k2,e2])=>k2!==k&&e2.cat==="place"&&nameKey(e2.name)===nameKey(e.name)&&!["","unknown"].includes(e2.area||"")&&!(e.area==="outside"&&e2.area==="outside"));
-      if(other){ const t=other[1]; e.sources.forEach(x=>t.sources.add(x)); t.concepts.push(...e.concepts); t.evidence.push(...e.evidence); delete ents[k]; } }
-    const regionNames=[...new Set([...info.filter(x=>cls(x).category==="region").map(x=>cls(x).name||x.c.label), ...Object.values(named).filter(n=>rstate.classes[n.id]?.category==="region").map(n=>rstate.classes[n.id].name||n.label)])].sort();
-    const finish=(e)=>({name:e.name, area:e.area, sources:[...e.sources], concepts:[...new Set(e.concepts)], ...(e.concepts.length?{}:{evidence:e.evidence.slice(0,6)})});
-    const boats=Object.values(ents).filter(e=>e.cat==="boat").map(e=>{ const gb=rstate.world.boats.find(b=>boatKey(b.name)===boatKey(e.name)); const names=[...(e.names||[e.name])];
-      return {...finish(e), name:gb?gb.name:names.sort((a,b)=>a.length-b.length)[0], also:names.filter(n=>norm(n)!==norm(gb?gb.name:names[0])).slice(0,6), status:matchBoat(e.name)}; });
-    const places=Object.values(ents).filter(e=>e.cat==="place").map(e=>({...finish(e), status:matchPlace(e.name,e.area)}));
+    // 2. boats and places: the list in the History tab, built again by rules (keeps the author's changes)
+    buildEntities(); await saveEntities();
+    const hidx0=hIndex(), evOf=(e)=>e.practices.slice(0,3).flatMap(pid=>{ const p=hstate.set?.practices?.find(q=>q.id===pid); const m0=p&&hidx0[p.members[0]]; return m0?[`- ${srcTitle(m0.sourceId)}${m0.location?" ("+m0.location+")":""}: ${m0.action}`]:[]; });
+    const live=estate.set.entities.filter(e=>e.decision!=="rejected");
+    const asRow=(e)=>({name:e.name, area:e.area, sources:e.sources, concepts:e.concepts, also:Object.keys(e.names).filter(n=>norm(n)!==norm(e.name)).slice(0,6), ...(e.concepts.length?{}:{evidence:evOf(e).slice(0,6)})});
+    const boats=live.filter(e=>e.kind==="boat").map(e=>({...asRow(e), status:matchBoat(e.name)}));
+    const places=live.filter(e=>e.kind==="place").map(e=>({...asRow(e), status:matchPlace(e.name,e.area)}));
+    const regionNames=live.filter(e=>e.kind==="region").map(e=>e.name).sort();
     // 3. sailing behaviour and boat parts
     const physics=info.filter(x=>["sailing","hull"].includes(cls(x).category)).map(x=>({name:x.c.label, kind:cls(x).category, status:x.sim?"shown":(/out of scope/i.test(cls(x).needs)?"out of scope":"not shown"), needs:x.sim?"":cls(x).needs, sources:x.srcs, concepts:[x.c.id]}));
     // 4. historical practices against the game's activities
@@ -2184,7 +2258,7 @@ for(const id of ["cList","hList"]) for(const t of ["pointerdown","touchstart","f
 let heavyStarted=false, heavyWanted=false, startHeavy=()=>{ heavyWanted=true; };
 const own=(x)=>x==null?x:JSON.parse(JSON.stringify(x));
 // ---------- boot ----------
-function renderAll(){ renderProject(); renderMaterials(); renderForm(); if(!$("panel-readiness").hidden) renderReadiness(); if(!$("panel-concepts").hidden) renderConcepts(); if(!$("panel-history").hidden) renderHistory(); }
+function renderAll(){ renderProject(); renderMaterials(); renderForm(); if(!$("panel-materials").hidden) renderReadiness(); if(!$("panel-concepts").hidden) renderConcepts(); if(!$("panel-history").hidden) renderHistory(); }
 renderAll();
 try{ const t=localStorage.getItem("intake.tab"); if(t) showTab(t); }catch{}
 
@@ -2196,9 +2270,9 @@ try{ const t=localStorage.getItem("intake.tab"); if(t) showTab(t); }catch{}
   if($("f-store")) $("f-store").textContent=storeHint();
   if(!db){ localOnly=true; $("localBanner").hidden=false; setSave("Not saved (this view)"); return; }
   const timer=setTimeout(()=>setSave("Still connecting…"),10000);
-  db.doc("project/main").onSnapshot(s=>{ clearTimeout(timer); state.project=s.exists?(own(s.data())||{}):{}; setSave("Saved"); renderProject(); if(!$("panel-readiness").hidden) renderReadiness(); },
+  db.doc("project/main").onSnapshot(s=>{ clearTimeout(timer); state.project=s.exists?(own(s.data())||{}):{}; setSave("Saved"); renderProject(); if(!$("panel-materials").hidden) renderReadiness(); },
     e=>{ clearTimeout(timer); setSave("Could not load: "+(e.message||e.code)); });
-  db.collection("materials").onSnapshot(s=>{ clearTimeout(timer); state.materials=s.docs.map(d=>({id:d.id,...own(d.data())})); renderMaterials(); if(!$("panel-readiness").hidden) renderReadiness(); if(!$("panel-concepts").hidden) renderConcepts(); },
+  db.collection("materials").onSnapshot(s=>{ clearTimeout(timer); state.materials=s.docs.map(d=>({id:d.id,...own(d.data())})); renderMaterials(); if(!$("panel-materials").hidden) renderReadiness(); if(!$("panel-concepts").hidden) renderConcepts(); },
     e=>{ clearTimeout(timer); setSave("Could not load: "+(e.message||e.code)); });
   startHeavy=()=>{ if(heavyStarted) return; heavyStarted=true;
   const cRefresh=()=>{ if(!$("panel-concepts").hidden && !cstate.running) renderConcepts(); };
@@ -2207,6 +2281,7 @@ try{ const t=localStorage.getItem("intake.tab"); if(t) showTab(t); }catch{}
   const hRefresh=()=>{ if(!$("panel-history").hidden && !hstate.running) renderHistory(); };
   db.collection("practiceCands").onSnapshot(s=>{ if(!hstate.running){ hstate.cands=Object.fromEntries(s.docs.map(d=>[d.id,own(d.data())])); hRefresh(); } }, ()=>{});
   db.doc("practices/current").onSnapshot(s=>{ if(!hstate.running){ hstate.set=s.exists?own(s.data()):null; hRefresh(); } }, ()=>{});
+  db.doc("entities/current").onSnapshot(s=>{ estate.set=s.exists?own(s.data()):null; if(!estate.set?.moves&&estate.set) estate.set.moves={}; hRefresh(); }, ()=>{});
   const nRefresh=()=>{ if(!$("panel-narrative").hidden && !nstate.running && !nstate.editing) renderNarrative(); };
   db.doc("world/events").onSnapshot(s=>{ nstate.events=s.exists?own(s.data()):null; nRefresh(); }, ()=>{});
   db.collection("narrativeSettings").onSnapshot(s=>{ for(const doc of s.docs) nstate.settings[doc.id]=own(doc.data()); nRefresh(); }, ()=>{});

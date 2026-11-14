@@ -24,6 +24,16 @@ Updated 2026-11-14. Read this first when starting a new session.
   on a better computer, possibly with a local model.
 - No pull requests unless asked.
 
+## Simplification (proposed 2026-11-14)
+
+Eight tabs become six: Sources (Materials + Readiness + one reading pass), Knowledge (Concepts +
+History + Boats and places), Activities (Situations + the report's practice comparison),
+Narrative, and a Game report that assembles without Claude requests. Stage 1 is done (workbench
+version 31): Readiness is part of Sources, and boats and places are one reviewed list built by
+rules, which the report reads. Next: stage 2 (report as pure assembly, practice comparison in
+Activities), stage 3 (one Knowledge tab), stage 4 (one reading pass for new sources).
+Snapshots of the workbench's database: `data/workbench/` (`workbench/snapshot.py`).
+
 ## Next steps
 
 1. Line banks: `tagus-export-banks DUMP_DIR <game>/content/narrative --include verified` writes

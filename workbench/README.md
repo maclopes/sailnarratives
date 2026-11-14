@@ -5,10 +5,14 @@ The tool's screens. Each is a single HTML page with no build step.
 - `intake.html`: step 0, materials intake. Records the project (audience, visit length,
   languages, goals, tone, simplifications) and its materials by kind (simulation, reference
   books, historical accounts, author documents, existing activities, people who can check).
-  Gives a readiness report per knowledge base from fixed, generic rules, an optional second look
-  by Claude (drafts), and exports the domain pack manifest (`domain.yaml`).
+  Tabs (from version 31): 1 Project, 2 Sources, 3 Concepts, 4 History, boats and places,
+  5 Situations, 6 Narrative, 7 Game report.
 
-  Tab 4, Concepts: the concepts base. For each chosen source with text (extracted from an
+  Tab 2, Sources (was Materials and Readiness): the source registry and, on the same tab, the
+  readiness report per knowledge base from fixed, generic rules, an optional second look by
+  Claude (drafts), and the domain pack manifest (`domain.yaml`).
+
+  Tab 3, Concepts: the concepts base. For each chosen source with text (extracted from an
   attached PDF in the page, or pasted), Claude lists candidate concepts in the source's own
   words; a second request groups them across sources and languages. The tool then gives each
   concept statuses with fixed rules: agreed, conflicting, term clash, variant difference,
@@ -21,7 +25,7 @@ The tool's screens. Each is a single HTML page with no build step.
   step, clarifications, gaps), which can be copied or downloaded as Markdown. Data: texts/,
   candidates/, concepts/current, summaries/concepts in the artifact database.
 
-  Tab 5, History: the history base. Claude reads each chosen historical source (licence shown;
+  Tab 4, History, boats and places: the history base. Claude reads each chosen historical source (licence shown;
   copyrighted or unknown-licence sources are flagged before sending) for practices, rules and
   events: who, boat, place, period, cargo, gear, conditions, numbers, location, as English
   paraphrase. They are grouped across sources in batches (decisions kept, resumable), with
@@ -29,8 +33,13 @@ The tool's screens. Each is a single HTML page with no build step.
   period, no concept. Each practice is linked to the concepts it exercises (an interpretation).
   A review sheet for one source lists every claim taken from it with its location and the
   questions raised, for a historian to mark. Data: practiceCands/, practices/current.
+  Boats and places (same tab): one card per boat type or place named in the practices or the
+  concept table, built by fixed rules with no Claude request (spellings, a generic "barco" in
+  front, "do Tejo" after, and the pack's other names in `aliases.yaml` are merged). The author
+  moves names between cards, sets the kind (boat, place, region) and a place's map area, renames,
+  or leaves a card out; rebuilding keeps those changes. Data: entities/current.
 
-  Tab 6, Situations: for each historical practice, proposes an activity from what the game can
+  Tab 5, Situations: for each historical practice, proposes an activity from what the game can
   simulate (its boats, areas and ports, and the concepts it shows): goal, measurable success
   rule, boat (with a substitution note when the historical boat is missing), area and route,
   concepts, level 1-3, minutes, simplifications, what the game would still need, feasibility
@@ -45,7 +54,7 @@ The tool's screens. Each is a single HTML page with no build step.
   them into issue drafts. Uses processed records only; no source is read again.
   Data: situations/current, situations/blind.
 
-  Tab 7, Narrative: for each of the game's mini-games, gathers the evidence behind it (the
+  Tab 6, Narrative: for each of the game's mini-games, gathers the evidence behind it (the
   practice its blind-comparison match came from, other practices with its boat, and their
   concepts, each with source and location), proposes a cast (fictional, per activity) and 4-6
   beats (trigger = a game moment, delivery = cue, story, reflection or curiosity), starting from
@@ -72,9 +81,10 @@ The tool's screens. Each is a single HTML page with no build step.
   places}`, and a coverage check lists options without a verified or approved setup or close
   line (the game would fall back to the shared lines there).
 
-  Tab 8, Game report: evaluates the game against the sources. Concepts are sorted by kind
-  (boat, place, sailing, boat part, practice, role, cargo, event, regulation, internal), then
-  boats and places are checked against the pack's game world list (area by area), sailing
+  Tab 7, Game report: evaluates the game against the sources. Concepts are sorted by kind
+  (sailing, boat part, practice, role, cargo, event, regulation, internal; only concepts not
+  sorted before), boats and places come from the Boats and places list (tab 4) and are checked
+  against the pack's game world list (area by area), sailing
   concepts against the simulation, and historical practices (from the History tab when it has run) against the game's activities.
   Every finding counts its sources; a threshold hides weak ones. It drafts one issue per
   finding for the game's developers (copy or download as Markdown) and keeps earlier reports,
@@ -100,7 +110,7 @@ and read) and stores the text for the concepts and history steps. Files stay in 
 The page cannot open other websites, so links are checked by a command run where there is
 internet (normally your own computer):
 
-1. In the intake, Readiness tab: Download (or Copy) `domain.yaml`.
+1. In the intake, Sources tab (Readiness, Domain pack manifest): Download (or Copy) `domain.yaml`.
 2. Run the check:
 
    ```bash
