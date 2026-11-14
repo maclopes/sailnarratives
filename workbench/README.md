@@ -79,7 +79,10 @@ The tool's screens. Each is a single HTML page with no build step.
   Every finding counts its sources; a threshold hides weak ones. It drafts one issue per
   finding for the game's developers (copy or download as Markdown) and keeps earlier reports,
   so a new game release shows what changed. The world list comes from
-  `domains/sailing/scripts/build_game_world.py` and is stored as world/game.
+  `domains/sailing/scripts/build_game_world.py` and is stored as world/game. Countries, seas and
+  regions are sorted apart; the area's own names (the river and its stretches, from the pack's
+  `aliases.yaml`) count as the area itself, not as missing places; spellings and translations of
+  one boat or place are merged; lists and routes are not counted as places.
 
   Published as a claude.ai artifact (private; it keeps its data in the artifact's database):
   https://claude.ai/artifact/28te1trNq5pVdem1xFzUD9

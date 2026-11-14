@@ -73,10 +73,16 @@ def main(root: Path) -> dict:
     if lm_file.exists():
         import yaml
         landmark_info = (yaml.safe_load(lm_file.read_text(encoding="utf-8")) or {}).get("landmarks", [])
+    al_file = Path(__file__).resolve().parent.parent / "aliases.yaml"
+    aliases = {}
+    if al_file.exists():
+        import yaml
+        aliases = yaml.safe_load(al_file.read_text(encoding="utf-8")) or {}
     commit = subprocess.run(["git", "-C", str(root), "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip()
     return {"game": "fragateiro", "commit": commit, "area_names": area_names, "map_files": {"tejo": "tagus"},
             "activities": activities, "landmark_info": landmark_info, "ports": areas, "extra_places": extra,
-            "landmarks": landmarks, "boats": boats, "map_places": map_places, "seamarks": seamarks}
+            "landmarks": landmarks, "boats": boats, "map_places": map_places, "seamarks": seamarks,
+            "aliases": aliases}
 
 
 if __name__ == "__main__":

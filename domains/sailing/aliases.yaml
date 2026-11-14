@@ -1,0 +1,12 @@
+# Other names of the game's areas and waters, used by the workbench's game report so that
+# "Tejo", "Tagus estuary" or "Tagus between Abrantes and Azambuja" count as the river itself,
+# not as a missing place. Author data for the sailing pack.
+areas:
+  tejo: [Tejo, Tagus, Rio Tejo, River Tagus, Estuário do Tejo, Tagus estuary, Baixo Tejo, Lower Tagus, Foz do Tejo, Tagus mouth]
+  medio: [Médio Tejo, Middle Tagus, Tejo, Tagus, Rio Tejo, Alto Tejo, Upper Tagus]
+  oeste: [Oeste]
+  aveiro: [Ria de Aveiro, Ria]
+  arcachon: [Bassin d'Arcachon, Arcachon Bay]
+  pasaia: [Pasaia, Pasajes, Pasaia bay]
+  azores: [Açores, Azores]
+  madeira: [Madeira]

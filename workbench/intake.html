@@ -308,7 +308,7 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":
 function toast(msg){const t=$("toast");t.textContent=msg;t.hidden=false;clearTimeout(toast.h);toast.h=setTimeout(()=>t.hidden=true,2600);}
 function setSave(msg){$("saveState").textContent=msg;}
 
-const BUILD="2026-11-14 · version 26";
+const BUILD="2026-11-14 · version 27";
 $("buildTag").textContent=BUILD;
 // ---------- tabs ----------
 function showTab(name){
@@ -1780,9 +1780,10 @@ $("nOut").addEventListener("click",async(ev)=>{ const d=curDoc(); const b=ev.tar
 
 // ---------- game report ----------
 const rstate={world:null, classes:{}, acts:{}, report:null, history:[], running:false};
-const RSTAT={"in game":"p-good","port":"p-good","landmark":"p-good","on map":"p-info","sea mark only":"p-warn","in development":"p-warn","shown":"p-good","covered":"p-good","partly":"p-warn","missing":"p-bad","not shown":"p-bad","outside the game's areas":"p-bad","area unknown":"p-info","out of scope":"p-info"};
+const RSTAT={"the river or area itself":"p-info","in game":"p-good","port":"p-good","landmark":"p-good","on map":"p-info","sea mark only":"p-warn","in development":"p-warn","shown":"p-good","covered":"p-good","partly":"p-warn","missing":"p-bad","not shown":"p-bad","outside the game's areas":"p-bad","area unknown":"p-info","out of scope":"p-info"};
 const srcTitle=(id)=>SHORT(state.materials.find(m=>m.id===id)||{title:id});
 function areaHelp(){ const w=rstate.world; return Object.entries(w.ports).map(([a,ps])=>`${a} (${w.area_names?.[a]||a}): ${ps.join(", ")}`).join("\n"); }
+const CLASS_V=2;
 function classifyPrompt(batch){
   return `You sort concepts gathered from sources about ${state.project.subject||"one subject"} into categories, to compare the sources with a game's simulation.
 Game areas (id, name: ports):
@@ -1790,14 +1791,15 @@ ${areaHelp()}
 
 Categories:
 - boat: a specific type of boat or vessel. Not generic words such as "boats" or "river craft".
-- place: a named place, body of water, quay, landmark or stretch of river. Not generic words such as "quay".
+- place: a named place, quay, landmark, bar, bank or named stretch of water. Not generic words such as "quay".
+- region: a country, a sea or ocean, a large region (for example a province), or a whole river or estuary taken as a whole.
 - sailing: something a sailor does or feels: points of sail, manoeuvres, sail handling, wind, current, tide, depth, drift.
 - hull: a part of a boat, its rig or its gear.
 - practice: a work routine or activity: a fishing method, a cargo run, a ferry crossing, towing, rafting timber.
 - role: a person's job or status. cargo: goods carried. event: a dated event or period. regulation: a rule, fee, tax or licence.
 - internal: a setting or parameter of the simulation or of a software tool, not something to learn.
 - other.
-For boat and place, give "name": the usual modern name; for places, the official place name (for example "Vila Nova da Barquinha" for "porto da Barquinha").
+For boat and place, give "name": the usual modern name, in the singular and in the sources' language; for places, the official place name (for example "Vila Nova da Barquinha" for "porto da Barquinha"); one name for one thing, so that spellings and translations of the same boat get the same name (for example "Vapor" for "steamboat", "steamer" and "barco a vapor"). An item naming several boats or places at once, or a route between two places ("Lisbon to Santarém"), is "other".
 For place, give "area": the id of the game area it lies in, "outside" if it lies in none of them, or "unknown".
 For sailing, hull and practice concepts with sim false, give "needs": at most 6 words saying what the simulation would need to show it (for example "tide and current", "water depth", "reefing control", "rowing"), or "out of scope".
 Return JSON only: {"items":[{"id":"","category":"","name":"","area":"","needs":""}]}
@@ -1823,9 +1825,22 @@ function matchPlace(name, area){
   if(eq(w.landmarks)||eq(w.extra_places)) return "landmark";
   if(area && w.map_places[mf] && eq(w.map_places[mf])) return "on map";
   if(area && w.seamarks[mf] && eq(w.seamarks[mf])) return "sea mark only";
+  if(isAreaItself(name)) return "the river or area itself";
   if(area==="outside") return "outside the game's areas";
   if(!area||area==="unknown"){ for(const [a,ps] of Object.entries(w.ports)) if(eq(ps)) return "port"; return "area unknown"; }
   return "missing";
+}
+// one key for spellings of one name: no accents or case, "d'água" = "de água", no plural s
+const spell=(t)=>norm(String(t||"").replace(/\bd['’]\s?/gi,"de "));
+const nameKey=(t)=>spell(t).replace(/s$/,"");
+const GENERIC=new Set("rio river estuario estuary foz mouth baixo lower alto upper medio middle vale valley margem margens margin margins riverbank riverbanks riverbed bank banks channel channels canal canais bacia basin leziria lezirias sul norte south north esteiros aguas waters of the do da de dos das em at ao a e and".split(" "));
+const STRETCH=new Set("between entre below above abaixo acima stretch troco from to ate desde".split(" "));
+function isAreaItself(name){
+  const w=rstate.world, k=" "+spell(name).replace(/[-–,;:()]/g," ").replace(/\s+/g," ")+" ";
+  const aliases=[...Object.values(w.aliases?.areas||{}).flat(), ...Object.values(w.area_names||{})].map(a=>spell(a)).filter(Boolean);
+  for(const a of aliases){ if(!k.includes(" "+a+" ")) continue; const rest=k.replace(" "+a+" "," ").trim().split(" ").filter(Boolean);
+    if(rest.every(t=>GENERIC.has(t)) || rest.some(t=>STRETCH.has(t))) return true; }
+  return false;
 }
 function matchBoat(name){
   const k=norm(name).replace(/s$/,""); const b=rstate.world.boats.find(b=>norm(b.name)===k || norm(b.name)===norm(name));
@@ -1846,16 +1861,18 @@ async function buildReport(){
     // boats and places named in the history's practices, sorted the same way
     const hidx0=hIndex(), named={};
     for(const p of (hstate.set?.practices||[]).filter(p=>p.decision!=="rejected")){ const srcs=[...new Set(p.members.map(id=>hidx0[id]?.sourceId).filter(Boolean))];
-      for(const [kind,list] of [["boat",p.boats||[]],["place",p.places||[]]]) for(const nm of list){ const k=(kind==="boat"?"hb:":"hp:")+norm(nm).slice(0,60); (named[k] ||= {id:k, label:nm, kind, srcs:new Set(), practices:[]}); srcs.forEach(x=>named[k].srcs.add(x)); named[k].practices.push(p.id); } }
+      for(const [kind,list] of [["boat",p.boats||[]],["place",p.places||[]]]) for(const nm of list.flatMap(x=>String(x).split(/\s*;\s*|\s+\/\s+/)).map(x=>x.trim()).filter(Boolean)){ const k=(kind==="boat"?"hb:":"hp:")+norm(nm).slice(0,60); (named[k] ||= {id:k, label:nm, kind, srcs:new Set(), practices:[]}); srcs.forEach(x=>named[k].srcs.add(x)); named[k].practices.push(p.id); } }
     const namedItems=Object.values(named).map(n=>({id:n.id, label:n.label, terms:[n.label], meaning:n.kind==="boat"?"a boat named in a historical source":"a place named in a historical source", sources:n.srcs.size, sim:false}));
-    let pending=[...info.filter(x=>!rstate.classes[x.c.id]).map(asItem), ...namedItems.filter(n=>!rstate.classes[n.id])];
+    // sort again what an older prompt put in boat, place or other (version 2 adds regions and one name per boat)
+    const stale=(id)=>{ const k=rstate.classes[id]; return !k || ((k.v||1)<CLASS_V && ["boat","place","other"].includes(k.category)); };
+    let pending=[...info.filter(x=>stale(x.c.id)).map(asItem), ...namedItems.filter(n=>stale(n.id))];
     const total=pending.length; let unsorted=0;
     for(const size of [40,15]){
       const left=[];
       for(let i=0;i<pending.length;i+=size){
         $("rState").textContent=`Sorting by kind: ${total-pending.length+i} of ${total}…`;
         const batch=pending.slice(i,i+size); const r=await ask(classifyPrompt(batch)); const got=new Set();
-        for(const it of (Array.isArray(r?.items)?r.items:[])) if(it?.id && batch.some(b=>b.id===it.id)){ rstate.classes[it.id]={category:String(it.category||"other").toLowerCase(), name:String(it.name||""), area:String(it.area||""), needs:String(it.needs||"")}; got.add(it.id); }
+        for(const it of (Array.isArray(r?.items)?r.items:[])) if(it?.id && batch.some(b=>b.id===it.id)){ rstate.classes[it.id]={category:String(it.category||"other").toLowerCase(), name:String(it.name||""), area:String(it.area||""), needs:String(it.needs||""), v:CLASS_V}; got.add(it.id); }
         left.push(...batch.filter(b=>!got.has(b.id)));
         await saveR("report/classes",{byConcept:rstate.classes, updatedAt:new Date().toISOString()});
       }
@@ -1867,12 +1884,17 @@ async function buildReport(){
     const group=(cat,keyf)=>{ const g={}; for(const x of info.filter(x=>cls(x).category===cat)){ const k=keyf(x); if(!k) continue; (g[k] ||= {xs:[]}).xs.push(x); } return Object.values(g); };
     // boats and places from the concepts and from the history's practices, merged by name
     const ents={};
-    const addEnt=(cat,c0,label,srcs,conceptId,evidence)=>{ const name=c0.name||label; const key=cat+"|"+norm(name).replace(/s$/,"")+(cat==="place"?"|"+c0.area:"");
+    const addEnt=(cat,c0,label,srcs,conceptId,evidence)=>{ const name=c0.name||label; const key=cat+"|"+nameKey(name)+(cat==="place"?"|"+c0.area:"");
       const e=(ents[key] ||= {cat, name, area:c0.area, sources:new Set(), concepts:[], evidence:[]}); srcs.forEach(x=>e.sources.add(x)); if(conceptId) e.concepts.push(conceptId); if(evidence) e.evidence.push(...evidence); };
-    for(const x of info){ const c0=cls(x); if(c0.category==="boat"||c0.category==="place") addEnt(c0.category,c0,x.c.label,x.srcs,x.c.id,null); }
-    for(const n of Object.values(named)){ const c0=rstate.classes[n.id]; if(!c0||(c0.category!=="boat"&&c0.category!=="place")) continue;
+    const isList=(t)=>/;/.test(t)||/^\S.* (to|a|até|->|–) \S/.test(String(t))&&!isAreaItself(t)&&/\b(to|até)\b|->|–/.test(String(t)); // lists and routes are not one place
+    for(const x of info){ const c0=cls(x); if((c0.category==="boat"||c0.category==="place")&&!isList(c0.name||x.c.label)) addEnt(c0.category,c0,x.c.label,x.srcs,x.c.id,null); }
+    for(const n of Object.values(named)){ const c0=rstate.classes[n.id]; if(!c0||(c0.category!=="boat"&&c0.category!=="place")||isList(c0.name||n.label)) continue;
       const ev=n.practices.slice(0,3).flatMap(pid=>{ const p=hstate.set.practices.find(q=>q.id===pid); const m0=p&&hidx0[p.members[0]]; return m0?[`- ${srcTitle(m0.sourceId)}${m0.location?" ("+m0.location+")":""}: ${m0.action}`]:[]; });
       addEnt(c0.category,c0,n.label,[...n.srcs],null,ev); }
+    for(const [k,e] of Object.entries(ents)){ if(e.cat!=="place"||!["","unknown","outside"].includes(e.area||"")) continue;
+      const other=Object.entries(ents).find(([k2,e2])=>k2!==k&&e2.cat==="place"&&nameKey(e2.name)===nameKey(e.name)&&!["","unknown"].includes(e2.area||"")&&!(e.area==="outside"&&e2.area==="outside"));
+      if(other){ const t=other[1]; e.sources.forEach(x=>t.sources.add(x)); t.concepts.push(...e.concepts); t.evidence.push(...e.evidence); delete ents[k]; } }
+    const regionNames=[...new Set([...info.filter(x=>cls(x).category==="region").map(x=>cls(x).name||x.c.label), ...Object.values(named).filter(n=>rstate.classes[n.id]?.category==="region").map(n=>rstate.classes[n.id].name||n.label)])].sort();
     const finish=(e)=>({name:e.name, area:e.area, sources:[...e.sources], concepts:[...new Set(e.concepts)], ...(e.concepts.length?{}:{evidence:e.evidence.slice(0,6)})});
     const boats=Object.values(ents).filter(e=>e.cat==="boat").map(e=>({...finish(e), status:matchBoat(e.name)}));
     const places=Object.values(ents).filter(e=>e.cat==="place").map(e=>({...finish(e), status:matchPlace(e.name,e.area)}));
@@ -1899,7 +1921,7 @@ async function buildReport(){
     const additions=gameAdditions().map(e=>({feature:e.feature, full:e.full, improves:e.acts.length-e.full, sources:e.sources, acts:e.acts.map(a=>a.title)}));
     const count=(xs,pred)=>xs.filter(pred).length;
     const report={createdAt:new Date().toISOString(), game:rstate.world.game, gameCommit:rstate.world.commit, conceptsAt:cstate.set.updatedAt||cstate.set.createdAt, sources:[...new Set(info.flatMap(x=>x.srcs))].length,
-      boats, places, physics, practices, conflicts, additions, anachronisms,
+      boats, places, physics, practices, conflicts, additions, anachronisms, regions:regionNames,
       counts:{boatsIn:count(boats,b=>b.status==="in game"), boatsMissing:count(boats,b=>b.status==="missing"), placesIn:count(places,p=>["port","landmark","on map"].includes(p.status)), placesMissing:count(places,p=>["missing","outside the game's areas","sea mark only"].includes(p.status)),
         physicsShown:count(physics,x=>x.status==="shown"), physicsNot:count(physics,x=>x.status==="not shown"), practicesCovered:count(practices,x=>x.status==="covered"), practicesPartly:count(practices,x=>x.status==="partly"), practicesMissing:count(practices,x=>x.status==="missing"), conflicts:conflicts.length}};
     const id="r"+report.createdAt.replace(/[^0-9]/g,"").slice(0,14);
@@ -1955,7 +1977,7 @@ function renderReport(){
       ${tile(c.conflicts,"conflicts between sources","conflicts",false)}
     </div>
     <div class="section"><h2>Boats</h2>${tbl(by(r.boats),[["Boat",x=>`<td>${esc(x.name)}</td>`],["Sources",nsrc],["In the game",x=>st(x.status)]])}</div>
-    <div class="section"><h2>Places</h2>${tbl(by(r.places),[["Place",x=>`<td>${esc(x.name)}</td>`],["Area",x=>`<td class="hint">${esc(rstate.world.area_names?.[x.area]||x.area||"")}</td>`],["Sources",nsrc],["In the game",x=>st(x.status)]])}</div>
+    <div class="section"><h2>Places</h2>${(r.regions||[]).length?`<p class="hint">Not counted as places: ${r.regions.length} countries, seas, regions and whole rivers (${esc(r.regions.slice(0,12).join(", "))}${r.regions.length>12?"…":""}).</p>`:""}${tbl(by(r.places.filter(p=>p.status!=="the river or area itself")),[["Place",x=>`<td>${esc(x.name)}</td>`],["Area",x=>`<td class="hint">${esc(rstate.world.area_names?.[x.area]||x.area||"")}</td>`],["Sources",nsrc],["In the game",x=>st(x.status)]])}</div>
     <div class="section"><h2>Sailing and the boat</h2>${tbl(by(r.physics),[["Concept",x=>`<td>${esc(x.name)}<div class="hint">${esc(x.kind==="hull"?"boat part or gear":"sailing")}</div></td>`],["Sources",nsrc],["Simulation",x=>st(x.status)],["Would need",x=>`<td class="hint">${esc(x.needs||"")}</td>`]])}</div>
     <div class="section"><h2>Historical practices and the game's activities</h2>${tbl(by(r.practices),[["Practice",x=>`<td>${esc(x.name)}</td>`],["Sources",nsrc],["In the game",x=>st(x.status)],["Closest activity",x=>`<td class="hint">${esc(x.activity||"")}${x.why?`<div>${esc(x.why)}</div>`:""}</td>`]])}</div>
     <div class="section"><h2>Conflicts between sources</h2>${tbl(r.conflicts.filter(f=>f.sources.length>=Math.min(min,2)),[["Concept",x=>`<td>${esc(x.name)}</td>`],["Type",x=>`<td><span class="pill p-bad">${esc(x.type)}</span></td>`],["What differs",x=>`<td>${esc(x.text)}</td>`]])}</div>

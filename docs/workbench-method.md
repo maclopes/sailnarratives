@@ -45,7 +45,7 @@ was done.
 | History | 283 practices, all linked to concepts | nothing |
 | Situations and blind comparison | 72 activities, all compared | nothing |
 | Narrative | Seaweed: 15 lines written, not checked; Cargo with the Fragata: planned, no lines | **Check lines** on Seaweed; **Write lines** on Cargo if wanted |
-| Game report | built today, but on the old world list of the game | I loaded the current world list (Oeste area, lighthouses, windmill) into the workbench; press **Build report** |
+| Game report | built today, but on the old world list and before the fixes of version 27 | the current world list is loaded; press **Build report** (it sorts the boats and places again, about 20 extra requests) |
 | Materials | 43 of 44 have no licence, none has a reliability grade; the moliceiro source has no language | fill in, in Materials |
 
 The results below are those of today's data; the game report figures will change slightly
@@ -511,11 +511,17 @@ findings with at least the chosen number of sources (default 2), most sources fi
 - *Game additions (activities unlocked / improved, sources):* new map area 15 / 4 (8 sources),
   new boat 14 / 2 (9), cargo loading and weight 12 / 18 (12), crew and tasks 8 / 5 (11).
 
-**Known noise in the report, to clean up:** the river itself ("Tejo", "Tagus", "Estuário do
-Tejo", "Rio Tejo") is counted as a missing place; the same thing appears under several names
-(*barco a vapor*, *vapor*, steam passenger boat; *barco d'água acima* twice); Santarém appears
-both "outside" and "area unknown". The real number of missing boats and places is therefore
-lower than 123 and 121. Anachronisms: none, because no narrative has a period set yet.
+**Noise in this report, fixed in workbench version 27:** the river itself ("Tejo", "Tagus",
+"Estuário do Tejo", "Tagus between Abrantes and Azambuja") was counted as a missing place; the
+same boat appeared under several names (*barco a vapor*, *vapor*, steam passenger boat;
+*barco d'água acima* twice); fields listing several places ("Peniche; Setúbal") and routes
+("Lisbon to Santarém") were counted as places; countries and seas (Spain, the Indian Ocean)
+were counted as places outside the maps. Version 27 counts the river and its stretches as the
+area itself (names from the pack's `aliases.yaml`), sorts countries, seas and regions apart,
+merges spellings and translations into one name, splits lists and leaves routes out. Tried on
+today's data, places missing or outside the maps fall from 121 to about 77 and boats missing
+from 123 to about 108, before Claude's new sorting merges the remaining spellings. Anachronisms:
+none, because no narrative has a period set yet.
 
 ---
 
@@ -578,5 +584,5 @@ disagree, 74 words used in two concepts, and 674 concepts with no European Portu
   author's moves and decisions are the reference.
 - Reading is slow (one request per piece of text, one at a time) and sends copyrighted text to
   Claude; the plan is to re-read on a local model.
-- The report counts the river's own name and spelling variants as separate places and boats
-  (see 8); merging them is the next improvement to the matching rules.
+- The report's merging of names depends on Claude giving one name per boat or place, and on the
+  pack's list of other names for each area (`domains/sailing/aliases.yaml`).
